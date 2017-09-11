@@ -1,19 +1,698 @@
-# project: cj7bhwued1f650194yu8128l7
-# version: 11
-
-type File implements Node {
-  contentType: String!
-  createdAt: DateTime!
-  id: ID! @isUnique
-  name: String!
-  secret: String! @isUnique
-  size: Int!
-  updatedAt: DateTime!
-  url: String! @isUnique
+schema {
+  query: Query
+  mutation: Mutation
 }
-
-type User implements Node {
-  createdAt: DateTime!
-  id: ID! @isUnique
-  updatedAt: DateTime!
+type Query {
+  # Available options for a given date and itinerary.
+  search: Search!
+  # Returns status of the search service.
+  searchStatusService: String!
+  quote: Quote!
+  quoteStatusService: String!
+  bookStatusService: String!
+}
+type Mutation {
+  hotelBook(input: HotelBookInput!, settings: SettingsInput): HotelBookPayload
+  hotelBook(input: HotelBookInput!, settings: SettingsInput): HotelBookPayload
+}
+# Filter that selects the accesses which will be used in the availability. You must choose one of them, include or
+ # exclude, or the other alternative isn't specified anything.
+ # If input both, you will receive a validation error that indicates this error.
+input AccessFilterInput {
+  # Indicates that accesses are used in this availability. Only will be used the accesses that are specified here.
+  includes: [String!]
+  # By default are used all the accesses configured for the hub user, except which are included in this field.
+  excludes: [String!]
+}
+# Access overwrites an existent access in our Back Office or creates a new
+ # one only for this availability. An access objetc contains its ow code, configuration and settings.
+input AccessInput {
+  # The code used to identify the existing access in our Back Office to
+   # overwrite it. Acts as an identifier in this avail existing or not in
+   # our Back Office.
+   # This information is mandatory.
+  code: String!
+  # Information required to access the supplier’s system.
+  configuration: ConfigurationInput
+  # You can configure an special settings for any access. This level overwrites the avail and supplier settings levels.
+  settings: SettingsBaseInput
+}
+# Data sent & received in the supplier’s native format.
+type AuditData {
+  # List of transactions data.
+  transactions: [Transactions!]
+  # TimeStamp
+  timeStamp: String!
+  # Process time in milliseconds
+  processTime: String!
+}
+# Contains information about a bed.
+type Bed {
+  # Specifies the bed type.
+   # This information is mandatory.
+  type: String!
+  # Description about the bed.
+   # This information is mandatory.
+  description: String!
+  # Indicates number of beds in the room.
+  count: Int
+  # Specifies if the bed is shared or not.
+  shared: Boolean
+}
+# Contains information about booking.
+type BookDetail {
+  # Booking ID in the Supplier´s system
+  reference: Reference!
+  # The possible values in status in response are Available (OK) or On Request (RQ).
+  status: Status!
+  # Specifies the prices (Gross, Net and Amount) of the option returned.
+  price: Price!
+  # Additional information about the book.
+  remarks: String
+  # Payable.
+  payable: String
+}
+# Input BookPax contains basic information abaout pax like name, surname and age.
+input BookPaxInput {
+  # Guest's name
+  name: String!
+  # Guest's last name
+  surname: String!
+  # Guest's age
+  age: Int!
+}
+# Input BookRoom contains list of pax and the room's reference.
+input BookRoomInput {
+  # Rooms reference in the booking
+  occupancyRefId: Int!
+  # Lists of paxes of the room
+  paxes: [BookPaxInput!]!
+}
+# List of business rules to filter the options that you are interested.
+input BusinessRulesInput {
+  # Options quota per avail. Numbers of options wanted by avail.
+  optionsQuota: Int
+  # Different business rules to filter the options that you are interested.
+  businessRulesType: BusinessRulesType
+}
+# Business rules type
+enum BusinessRulesType {
+  CHEAPER_AMOUNT
+  ROOM_TYPE
+}
+# Contains information about a cancel penalty.
+type CancelPenalty {
+  # Cancellation fees applicable x number of hours before the check in date.
+   # This information is mandatory.
+  hoursBefore: Int!
+  # Type of penalty. This can be Nights, Percent or Import.
+   # This information is mandatory.
+  penaltyType: CancelPenaltyType!
+  # Currency used in the cancel policy.
+   # This information is mandatory.
+  currency: String!
+  # Applied over. Possible type prices: Gross, Net or Amount.
+   # This information is mandatory.
+  appliedOver: PriceType!
+  # Value of the cancel policy.
+   # This information is mandatory.
+  value: Float!
+}
+# Options type
+enum CancelPenaltyType {
+  NIGHTS
+  PERCENT
+  IMPORT
+}
+# Contains information about a cancel policy.
+type CancelPolicy {
+  # Indicates if the option is refundable or not.
+   # This information is mandatory.
+  refundable: Boolean!
+  # List of cancel penalties.
+  cancelPenalties: [CancelPenalty!]
+}
+# Charge Type
+enum ChargeType {
+  INCLUDE
+  EXCLUDE
+}
+# Contains information about the commission price.
+type CommissionPrice {
+  # Specifies the currency.
+   # This information is mandatory.
+  currency: String!
+  # Specifies the import.
+   # This information is mandatory.
+  value: Float!
+  # If binding is set as true, then the client can’t sell the product for a lower
+   # price then the one set by the supplier. If it set as as false, the client can
+   # sell the product for a lower price.
+   # This information is mandatory.
+  binding: Boolean!
+  # Percentage of the commission applied to the amount.
+  commissionPercentage: Float
+  # Specifies the commission amount.
+  commissionAmount: Float
+}
+# The information required to access the supplier’s system.
+input ConfigurationInput {
+  # User code to connect to supplier.
+  user: String
+  # Password for the connection.
+  password: String
+  # Specific Url for Availability method.
+  availUrl: String
+  # Specific Url for Reservation method.
+  reservationUrl: String
+  # Specific Url for Valuation method.
+  valuationUrl: String
+  # Supplier URL used for multiple methods.
+  genericUrl: String
+  # List of parameters for additional information.
+  parameters: [ParameterInput!]
+  # Markets allowed for the access.
+  markets: [String!]
+}
+# Input creditCard, if the payment is done by credit card, is it mandatory to
+ # specify the payment type and the credit card information
+input CreditCardInput {
+  # Indicates the card type.
+  cardType: String!
+  # Contains owner's name
+  holder: HolderInput!
+  # Contains credit card number
+  number: String!
+  # Contains credit card CVC
+  CVC: String!
+  # Contains credit card expiration date
+  expire: ExpireDateInput!
+}
+# Criteria of quote contains the option reference id, blocks and language.
+input CriteriaQuoteInput {
+  # Identifier of the option chosen in the search.
+  optionRefId: String!
+  # Indicates if you want to block the option selected in search, as long as the supplier allows it in this method
+  block: Boolean
+  # Language to be used in request.
+  language: String
+}
+# Criteria of search contains destination, travel dates and the number of pax in each room.
+ # You must preload the other fields in our system by complete the fields absents.
+input CriteriaSearchInput {
+  # Check-in date for the booking.
+   # Format: yyyy-MM-dd
+   # This information is mandatory.
+  checkIn: String!
+  # Check-out, date for the booking.
+   # Format: yyyy-MM-dd
+   # This information is mandatory.
+  checkOut: String!
+  # Contains the list of hotels's ID.
+   # This information is mandatory.
+  hotels: [String!]!
+  # For multi room bookings, this array will contain multiple elements (rooms).
+   # For each room you have to specify its own occupancy.
+   # This information is mandatory.
+  occupancies: [RoomInput!]!
+  # Language to be used in request.
+  language: String
+  # Currency requested if supported by supplier.
+  currency: String
+  # Nationality of the guest (use ISO3166_1_alfa_2).
+  nationality: String
+  # Targeted zone, country or point of sale to be used in request.
+  markets: [String!]
+}
+# Input delta price, indicates price variation permitted by the client
+input DeltaPriceInput {
+  # Amount (in the currency returned into the option) that is accepted by the client to be higher than the valuation price.
+  amount: Float
+  # Percentage accepted by the client to be higher than the valuation price.
+  percent: Float
+  # Indicates that the range between valuation price and the new price does not
+   # exceed the amount and/or porcentage indicated by the client.
+  applyBoth: Boolean!
+}
+# Duration Type
+enum DurationType {
+  RANGE
+  OPEN
+}
+# Application errors
+type Error {
+  # Error code
+  code: String!
+  # Error type
+  type: String!
+  # Error description
+  description: String!
+}
+# Expire Date
+input ExpireDateInput {
+  # Month MM
+  month: Int!
+  # Year yy
+  year: Int!
+}
+# Filter that selects the filter criteria which will be used in this availability. Currently you can only choose the accesses.
+ # You must choose one of them, include or exclude, or the other alternative isn't specified anything.
+ # If input both, you will receive a validation error that indicates this error.
+input FilterInput {
+  # You can specify one of the filters or any of them. In this latter case, all the configurated accesses will be executed.
+   # This information is mandatory.
+  access: AccessFilterInput!
+}
+# Holder object that contains the pax name and surname.
+input HolderInput {
+  # Holder's name
+  name: String!
+  # Holder's surname
+  surname: String!
+}
+# Criteria of book.
+input HotelBookInput {
+  optionRefId: String!
+  language: String
+  clientReference: String!
+  deltaPrice: DeltaPriceInput
+  creditCard: CreditCardInput
+  remarks: String
+  holder: HolderInput!
+  rooms: [BookRoomInput!]!
+}
+type HotelBookPayload {
+  # Application stats in string format
+  stats(token: String!): String
+  # Data sent & received in the supplier’s native format.
+  auditData: [AuditData!]
+  # information about booking
+  bookDetail: BookDetail!
+  # Errors that will lead the service to abort
+  errors: [Error!]
+  # Potentially  harmful situations or errors that won't force the service to abort
+  warnings: [Warning!]
+}
+type HotelQuote {
+  # Application stats in string format
+  stats(token: String!): String
+  # Data sent & received in the supplier’s native format.
+  auditData: [AuditData!]
+  # Indicates the valuation key
+  optionRefId: String!
+  # The possible values in status in response are Available (OK) or On Request (RQ).
+  status: Status!
+  # Specifies the prices (Gross, Net and Amount) of the option returned.
+  price: Price!
+  # Specifies cancel policies of the option returned.
+  cancelPolicy: CancelPolicy
+  # Additional information about the option.
+  remarks: String
+  # List of surcharges of the option returned.
+  surcharges: [Surcharge!]
+  # List of credit cards
+  cardTypes: [String!]
+  # Errors that will lead the service to abort
+  errors: [Error!]
+  # Potentially  harmful situations or errors that won't force the service to abort
+  warnings: [Warning!]
+}
+# Results of Avail Hotel. Contains all the available options for a given date and itinerary.
+type HotelSearch {
+  # Indicates the context of the response.
+   # This information is mandatory.
+  context: String!
+  # Application stats in string format
+  stats(token: String!): String
+  # Data sent & received in the supplier’s native format.
+  auditData: [AuditData!]
+  # List of options returned according to the request.
+   # This information is mandatory.
+  options: [Option!]!
+  # Errors that will lead the service to abort
+  errors: [Error!]
+  # Potentially  harmful situations or errors that won't force the service to abort
+  warnings: [Warning!]
+}
+# Price taking any applicable discounts and surcharges into account.
+type NetPrice {
+  # Specifies the currency.
+   # This information is mandatory.
+  currency: String!
+  # Specifies the import.
+   # This information is mandatory.
+  value: Float!
+  # If binding is set as true, then the client can’t sell the product for a lower
+   # price then the one set by the supplier. If it set as as false, the client can
+   # sell the product for a lower price.
+   # This information is mandatory.
+  binding: Boolean!
+}
+# Information about occupancy.
+type Occupancy {
+  # Unique ID room in this option.
+   # This information is mandatory.
+  id: Int!
+  # List of pax of this occupancy.
+   # This information is mandatory.
+  paxes: [Pax!]!
+}
+# An option includes hotel information, meal plan, total price, conditions and room description.
+type Option {
+  # Supplier that offers this option.
+   # This information is mandatory.
+  supplier: String!
+  # Access code of this option.
+   # This information is mandatory.
+  access: String!
+  # Market of this option.
+   # This information is mandatory.
+  markets: [String!]!
+  # Code of the hotel in the context selected.
+   # This information is mandatory.
+  hotelCode: String!
+  # Name of the hotel.
+  hotelName: String
+  # Code of the board in the context selected.
+   # This information is mandatory.
+  boardCode: String!
+  # Indicates the payment type of the option returned. Possible options: Merchant,
+   # Direct, Card Booking, Card check in and Mixed.
+   # This information is mandatory.
+  paymentType: PaymentType!
+  # The possible values in status in response are Available (OK) or On Request (RQ).
+   # This information is mandatory.
+  status: Status!
+  # List of occupancies of the request.
+   # This information is mandatory.
+  occupancies: [Occupancy!]!
+  # List of rooms of the option returned.
+   # This information is mandatory.
+  rooms: [Room!]!
+  # Specifies the prices (Gross, Net and Amount) of the option returned.
+   # This information is mandatory.
+  price: Price!
+  # List of supplements of the option returned.
+  supplements: [Supplement!]
+  # List of surcharges of the option returned.
+  surcharges: [Surcharge!]
+  # Specifies rate rules of the option returned.
+  rateRules: [RateRules!]
+  # Specifies cancel policies of the option returned.
+  cancelPolicy: CancelPolicy
+  # Additional information about the option.
+  remarks: String
+  # Indicates the valuation key
+   # This information is mandatory.
+  id: String!
+}
+# Parameters for additional information for the supplier's configuration.
+input ParameterInput {
+  # Contains the keyword/Id to identify a parameter.
+   # This information is mandatory.
+  key: String!
+  # Contains the parameter values.
+   # This information is mandatory.
+  value: String!
+}
+# Specifies the age pax. The range of what is considered an adult, infant or baby is particular to each supplier.
+type Pax {
+  # Specifies the age pax.
+   # This information is mandatory.
+  age: Int!
+}
+# Pax object that contains the pax age.
+input PaxInput {
+  # Pax age.
+   # This information is mandatory.
+  age: Int!
+}
+# Options payment type
+enum PaymentType {
+  MERCHANT
+  DIRECT
+  CARD_BOOKING
+  CARD_CHECK_IN
+}
+# Price
+type Price {
+  # Price without taking any possible discounts and surcharges into account.
+  gross: CommissionPrice
+  # Price taking any applicable discounts and surcharges into account.
+  net: NetPrice
+  # Specifies the amount.
+  amount: CommissionPrice
+}
+# Information about daily price.
+type PriceBreakdown {
+  # Start date in which the price becomes effective.
+   # This information is mandatory.
+  effectiveDate: String!
+  # Expire date of price.
+   # This information is mandatory.
+  expireDate: String!
+  # Specifies the daily price.
+  price: Price
+}
+# Price Type
+enum PriceType {
+  GROSS
+  NET
+  AMOUNT
+}
+# Information about room promotions(offers).
+type Promotion {
+  # Specifies the promotion code.
+   # This information is mandatory.
+  code: String!
+  # Specifies the promotion name.
+   # This information is mandatory.
+  name: String!
+  # Promotion effective date.
+  effectiveDate: String
+  # Promotion expire date.
+  expireDate: String
+}
+# Returns the total price and cancellation policies of the Option selected in the previous step (Search).
+type Quote {
+  # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
+  hotel(criteria: CriteriaQuoteInput!, settings: SettingsInput): HotelQuote
+}
+# Information about the rate of the option returned.
+type RatePlan {
+  # Specifies the rate code.
+   # This information is mandatory.
+  code: String!
+  # Specifies the rate name.
+   # This information is mandatory.
+  name: String!
+  # Start date in which the rate becomes effective.
+  effectiveDate: String
+  # Expire date of the rate.
+  expireDate: String
+}
+# Rate Rules
+enum RateRules {
+  PACKAGE
+  OLDER55
+  OLDER60
+  OLDER65
+  CANARY_RESIDENT
+  BALEARIC_RESIDENT
+  LARGE_FAMILY
+  HONEYMOON
+  PUBLIC_SERVANT
+  UNEMPLOYED
+}
+# Contains reference codes.
+type Reference {
+  # Client reference booking
+  client: String!
+  # Provider reference booking
+  provider: String!
+}
+# Contains information about the Resort.
+type Resort {
+  # Specifies the resort code.
+   # This information is mandatory.
+  code: String!
+  # Specifies the resort name.
+  name: String
+  # Specifies the resort description.
+  description: String
+}
+# Contains the room information of the option returned.
+type Room {
+  # ID reference to the occupancy.
+   # This information is mandatory.
+  occupancyRefId: Int!
+  # Indicates the room code.
+   # This information is mandatory.
+  code: String!
+  # Description about the room.
+  description: String
+  # Identifies if the room is refundable or not.
+  refundable: Boolean
+  # Number of rooms available with the same type.
+  units: Int
+  # Specifies the room price.
+   # This information is mandatory.
+  roomPrice: RoomPrice!
+  # List of beds.
+  beds: [Bed!]
+  # Daily break downs rate plan.
+  ratePlans: [RatePlan!]
+  # Daily break downs promotions.
+  promotions: [Promotion!]
+}
+# Occupancy for a room. It contains a list of pax ages.
+input RoomInput {
+  # Array of pax ages. The number of items in the array will indicate the pax occupancy.
+   # This information is mandatory.
+  paxes: [PaxInput!]!
+}
+# Specifies the room price.
+type RoomPrice {
+  # Total price for all days.
+  price: Price!
+  # Daily break downs price.
+  breakdown: [PriceBreakdown!]
+}
+# Available options for a given date and itinerary. It does not filter different classes, times or
+ # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
+ # forward.
+type Search {
+  # Available options of an hotel for a given date and itinerary. It does not filter different classes, times or
+   # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
+   # forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
+   # But you must preload the other fields in our system by complete the fields absents.
+  hotel(criteria: CriteriaSearchInput!, settings: SettingsInput, filter: FilterInput): HotelSearch
+}
+# Service Type
+enum ServiceType {
+  SKI_PASS
+}
+# Contains the time out and business rules of a supplier or an access.
+input SettingsBaseInput {
+  # Milliseconds before the connection is closed.
+  timeout: Int
+  # Specifies if transactions exchanged with the supplier have to be logged or not.
+  auditTransactions: Boolean
+  # Business rules.
+  businessRules: BusinessRulesInput
+}
+# Settings that you can edit for this avail. Values are loaded by default in our Back Office.
+input SettingsInput {
+  # Indicates the context of the I/O codes (hotel, board, room and rates)
+  context: String
+  # Indicates if you want use context, or not, by default is true.
+  useContext: Boolean
+  # This field is got only if the authorization header is of the type JWT. It is used for to change the user that
+   # has been set by default in the preload.
+  user: String
+  # Milliseconds before the connection is closed.
+  timeout: Int
+  # Returns all the transactions exchanged with the supplier.
+  auditTransactions: Boolean
+  # Business rules.
+  businessRules: BusinessRulesInput
+  # Array of suppliers. Each one contains its own code, settings and accesses.
+  suppliers: [SupplierInput!]
+}
+# Options status
+enum Status {
+  OK
+  RQ
+}
+# Supplement that it can be added to the option returned. Contains all the information about the supplement.
+type Supplement {
+  # Specifies the supplement code.
+  code: String
+  # Specifies the supplement name.
+  name: String
+  # Specifies the supplement description.
+  description: String
+  # Indicates the supplement type. Possible types: Fee, Ski_pass, Lessons, Meals,
+   # Equipment, Ticket, Transfers, Gla, Activity or Null.
+   # This information is mandatory.
+  supplementType: SupplementType!
+  # Indicates the charge types. We need to know whether the supplements have to be
+   # paid when the consumer gets to the hotel or beforehand.
+   # Possible charge types: Include or Exclude.
+   # This information is mandatory.
+  chargeType: ChargeType!
+  # Indicates if the supplement is mandatory or not.
+   # This information is mandatory.
+  mandatory: Boolean!
+  # Specifies the duration type. Possible duration types: Range (specified dates) or Open. This field is mandatory for PDI.
+  durationType: DurationType
+  # Indicates the quantity of field in the element “unit”.
+  quantity: Int
+  # Indicates the unit type. Possible unit types: Day or Hour.
+  unit: UnitType
+  # Indicates the effective date of the supplement.
+  effectiveDate: String
+  # Indicates the expire date of the supplement.
+  expireDate: String
+  # Contains information about the resort
+  resort: Resort
+  # Indicates the supplement price.
+  price: Price
+}
+# Supplement Type
+enum SupplementType {
+  SKI_PASS
+  LESSONS
+  MEALS
+  EQUIPMENT
+  TICKET
+  TRANSFERS
+  GALA
+  ACTIVITY
+}
+# Supplier object. Contains its own settings, code and access.
+input SupplierInput {
+  # You can configure an special settings for any supplier. This level overwrites the avail settings level but not the
+   # access settings level.
+  settings: SettingsBaseInput
+  # Code that represents a supplier in our system.
+   # This information is mandatory.
+  code: String!
+  # Array of accesses that can overwrite an existing access information or include a new access for this avail.
+  accesses: [AccessInput!]
+}
+# Surcharge that it can be added to the option returned. Contains all the information about the surcharge.
+type Surcharge {
+  # Indicates the charge types. We need to know whether the supplements have to be
+   # paid when the consumer gets to the hotel or beforehand.
+   # Possible charge types: Include or Exclude.
+   # This information is mandatory.
+  chargeType: ChargeType!
+  # Indicates the surcharge price.
+  price: Price
+  # Specifies the surcharge description.
+  description: String
+}
+# Supplier transaction
+type Transactions {
+  # Transaction Request.
+  request: String!
+  # Transaction Response.
+  response: String!
+  # Time when the request has been processed.
+  timeStamp: String!
+}
+# Unit Type
+enum UnitType {
+  DAY
+  HOUR
+}
+# Application warnings
+type Warning {
+  # Warning code
+  code: String!
+  # Warning type
+  type: String!
+  # Warning description
+  description: String!
 }
