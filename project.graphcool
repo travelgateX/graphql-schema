@@ -1,19 +1,41 @@
+# project: cj7bhwued1f650194yu8128l7
+# version: 13
+
+type File implements Node {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type User implements Node {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  updatedAt: DateTime!
+}
+###Imported from Gateway:
 schema {
   query: Query
   mutation: Mutation
 }
 type Query {
   # Available options for a given date and itinerary.
-  search: Search!
+  search: Search! @relation(name:"QuerySearch")
   # Returns status of the search service.
   searchStatusService: String!
-  quote: Quote!
+  quote: Quote! @relation(name:"QueryOnQuote")
   quoteStatusService: String!
   bookStatusService: String!
+  query: Query @relation(name: "QueryQuery") ##Special
+  ##
+  query2:  Query  @relation(name: "QueryQuery")
 }
 type Mutation {
-  hotelBook(input: HotelBookInput!, settings: SettingsInput): HotelBookPayload
-  hotelBook(input: HotelBookInput!, settings: SettingsInput): HotelBookPayload
+  hotelBook(input: HotelBookInput!, settings: SettingsInput): HotelBookPayload @relation(name: "MutationHotelBookPayload") ##Special
 }
 # Filter that selects the accesses which will be used in the availability. You must choose one of them, include or
  # exclude, or the other alternative isn't specified anything.
@@ -40,11 +62,14 @@ input AccessInput {
 # Data sent & received in the supplier’s native format.
 type AuditData {
   # List of transactions data.
-  transactions: [Transactions!]
+  transactions: [Transactions!] @relation(name:"AuditDataTransactions")
   # TimeStamp
   timeStamp: String!
   # Process time in milliseconds
   processTime: String!
+  hotelQuote: HotelQuote @relation(name: "HotelQuoteAuditData")
+  hotelBookPayload: HotelBookPayload @relation(name: "HotelBookPayloadAuditData")
+  hotelSearch: HotelSearch @relation(name: "HotelSearchAuditData")
 }
 # Contains information about a bed.
 type Bed {
@@ -58,19 +83,22 @@ type Bed {
   count: Int
   # Specifies if the bed is shared or not.
   shared: Boolean
+  ##
+  room: Room @relation(name: "RoomBeds")
 }
 # Contains information about booking.
 type BookDetail {
   # Booking ID in the Supplier´s system
-  reference: Reference!
+  reference: Reference! @relation(name:"BookDetailReference")
   # The possible values in status in response are Available (OK) or On Request (RQ).
   status: Status!
   # Specifies the prices (Gross, Net and Amount) of the option returned.
-  price: Price!
+  price: Price! @relation(name:"BookDetailPrice")
   # Additional information about the book.
   remarks: String
   # Payable.
   payable: String
+  hotelBookPayload: HotelBookPayload  @relation(name: "HotelBookPayloadBookDetail")
 }
 # Input BookPax contains basic information abaout pax like name, surname and age.
 input BookPaxInput {
@@ -80,13 +108,15 @@ input BookPaxInput {
   surname: String!
   # Guest's age
   age: Int!
+  bookRoomInput: BookRoomInput @relation(name: "BookRoomInputBookPaxInput")
 }
 # Input BookRoom contains list of pax and the room's reference.
 input BookRoomInput {
   # Rooms reference in the booking
   occupancyRefId: Int!
   # Lists of paxes of the room
-  paxes: [BookPaxInput!]!
+  paxes: [BookPaxInput!]! @relation(name: "BookRoomInputBookPaxInput")
+  hotelBookInput: HotelBookInput @relation(name: "HotelBookInputBookRoomInput")
 }
 # List of business rules to filter the options that you are interested.
 input BusinessRulesInput {
@@ -117,6 +147,7 @@ type CancelPenalty {
   # Value of the cancel policy.
    # This information is mandatory.
   value: Float!
+  cancelPolicy: CancelPolicy @relation(name: "CancelPolicyCancelPenalty")
 }
 # Options type
 enum CancelPenaltyType {
@@ -130,7 +161,9 @@ type CancelPolicy {
    # This information is mandatory.
   refundable: Boolean!
   # List of cancel penalties.
-  cancelPenalties: [CancelPenalty!]
+  cancelPenalties: [CancelPenalty!] @relation(name: "CancelPolicyCancelPenalty")
+  hotelQuote:HotelQuote @relation(name: "HotelQuoteCancelPolicy")
+  option: Option @relation(name: "OptionCancelPolicy")
 }
 # Charge Type
 enum ChargeType {
@@ -154,6 +187,8 @@ type CommissionPrice {
   commissionPercentage: Float
   # Specifies the commission amount.
   commissionAmount: Float
+  price: Price @relation(name: "PriceCommissionPrice")
+  price2: Price @relation(name: "PriceCommissionPrice2")
 }
 # The information required to access the supplier’s system.
 input ConfigurationInput {
@@ -214,7 +249,7 @@ input CriteriaSearchInput {
   # For multi room bookings, this array will contain multiple elements (rooms).
    # For each room you have to specify its own occupancy.
    # This information is mandatory.
-  occupancies: [RoomInput!]!
+  occupancies: [RoomInput!]! @relation(name: "CriteriaSearchInputRoomInput")
   # Language to be used in request.
   language: String
   # Currency requested if supported by supplier.
@@ -247,6 +282,9 @@ type Error {
   type: String!
   # Error description
   description: String!
+  hotelBookPayload: HotelBookPayload @relation(name: "HotelBookPayloadError")
+  hotelQuote:HotelQuote @relation(name: "HotelQuoteError")
+  hotelSearch:HotelSearch @relation(name: "HotelSearchError")
 }
 # Expire Date
 input ExpireDateInput {
@@ -279,43 +317,47 @@ input HotelBookInput {
   creditCard: CreditCardInput
   remarks: String
   holder: HolderInput!
-  rooms: [BookRoomInput!]!
+  rooms: [BookRoomInput!]! @relation(name: "HotelBookInputBookRoomInput")
 }
 type HotelBookPayload {
   # Application stats in string format
   stats(token: String!): String
   # Data sent & received in the supplier’s native format.
-  auditData: [AuditData!]
+  auditData: [AuditData!]  @relation(name: "HotelBookPayloadAuditData")
   # information about booking
-  bookDetail: BookDetail!
+  bookDetail: BookDetail!  @relation(name: "HotelBookPayloadBookDetail")
   # Errors that will lead the service to abort
-  errors: [Error!]
+  errors: [Error!] @relation(name: "HotelBookPayloadError")
   # Potentially  harmful situations or errors that won't force the service to abort
-  warnings: [Warning!]
+  warnings: [Warning!] @relation(name: "HotelBookPayloadWarning")
+  ##
+  mutation: Mutation @relation(name: "MutationHotelBookPayload")
 }
 type HotelQuote {
   # Application stats in string format
   stats(token: String!): String
   # Data sent & received in the supplier’s native format.
-  auditData: [AuditData!]
+  auditData: [AuditData!] @relation(name: "HotelQuoteAuditData")
   # Indicates the valuation key
   optionRefId: String!
   # The possible values in status in response are Available (OK) or On Request (RQ).
   status: Status!
   # Specifies the prices (Gross, Net and Amount) of the option returned.
-  price: Price!
+  price: Price! @relation(name: "HotelQuotePrice")
   # Specifies cancel policies of the option returned.
-  cancelPolicy: CancelPolicy
+  cancelPolicy: CancelPolicy @relation(name: "HotelQuoteCancelPolicy")
   # Additional information about the option.
   remarks: String
   # List of surcharges of the option returned.
-  surcharges: [Surcharge!]
+  surcharges: [Surcharge!] @relation(name: "HotelQuoteSurcharge")
   # List of credit cards
   cardTypes: [String!]
   # Errors that will lead the service to abort
-  errors: [Error!]
+  errors: [Error!] @relation(name: "HotelQuoteError")
   # Potentially  harmful situations or errors that won't force the service to abort
-  warnings: [Warning!]
+  warnings: [Warning!] @relation(name: "HotelQuoteWarning")
+  ##
+  quote: Quote @relation(name: "QuoteHotelQuote")
 }
 # Results of Avail Hotel. Contains all the available options for a given date and itinerary.
 type HotelSearch {
@@ -325,14 +367,15 @@ type HotelSearch {
   # Application stats in string format
   stats(token: String!): String
   # Data sent & received in the supplier’s native format.
-  auditData: [AuditData!]
+  auditData: [AuditData!] @relation(name: "HotelSearchAuditData")
   # List of options returned according to the request.
    # This information is mandatory.
-  options: [Option!]!
+  options: [Option!]! @relation(name: "HotelSearchOption")
   # Errors that will lead the service to abort
-  errors: [Error!]
+  errors: [Error!] @relation(name: "HotelSearchError")
   # Potentially  harmful situations or errors that won't force the service to abort
-  warnings: [Warning!]
+  warnings: [Warning!] @relation(name: "HotelSearchWarning")
+  search: Search @relation(name: "SearchHotelSearch")
 }
 # Price taking any applicable discounts and surcharges into account.
 type NetPrice {
@@ -347,6 +390,7 @@ type NetPrice {
    # sell the product for a lower price.
    # This information is mandatory.
   binding: Boolean!
+  price: Price @relation(name: "PriceNetPrice")
 }
 # Information about occupancy.
 type Occupancy {
@@ -355,7 +399,8 @@ type Occupancy {
   id: Int!
   # List of pax of this occupancy.
    # This information is mandatory.
-  paxes: [Pax!]!
+  paxes: [Pax!]! @relation(name: "OccupancyPax")
+  option: Option @relation(name: "OptionOccupancy")
 }
 # An option includes hotel information, meal plan, total price, conditions and room description.
 type Option {
@@ -385,26 +430,27 @@ type Option {
   status: Status!
   # List of occupancies of the request.
    # This information is mandatory.
-  occupancies: [Occupancy!]!
+  occupancies: [Occupancy!]! @relation(name: "OptionOccupancy")
   # List of rooms of the option returned.
    # This information is mandatory.
-  rooms: [Room!]!
+  rooms: [Room!]! @relation(name: "OptionRoom")
   # Specifies the prices (Gross, Net and Amount) of the option returned.
    # This information is mandatory.
-  price: Price!
+  price: Price! @relation(name: "OptionPrice")
   # List of supplements of the option returned.
-  supplements: [Supplement!]
+  supplements: [Supplement!] @relation(name: "OptionSupplement")
   # List of surcharges of the option returned.
-  surcharges: [Surcharge!]
+  surcharges: [Surcharge!] @relation(name: "OptionSurcharge")
   # Specifies rate rules of the option returned.
   rateRules: [RateRules!]
   # Specifies cancel policies of the option returned.
-  cancelPolicy: CancelPolicy
+  cancelPolicy: CancelPolicy @relation(name: "OptionCancelPolicy")
   # Additional information about the option.
   remarks: String
   # Indicates the valuation key
    # This information is mandatory.
   id: String!
+  hotelSearch: HotelSearch @relation(name: "HotelSearchOption")
 }
 # Parameters for additional information for the supplier's configuration.
 input ParameterInput {
@@ -420,12 +466,14 @@ type Pax {
   # Specifies the age pax.
    # This information is mandatory.
   age: Int!
+  occupancy: Occupancy @relation(name: "OccupancyPax")
 }
 # Pax object that contains the pax age.
 input PaxInput {
   # Pax age.
    # This information is mandatory.
   age: Int!
+  roomInput: RoomInput @relation(name: "RoomInputPaxInput")
 }
 # Options payment type
 enum PaymentType {
@@ -437,11 +485,19 @@ enum PaymentType {
 # Price
 type Price {
   # Price without taking any possible discounts and surcharges into account.
-  gross: CommissionPrice
+  gross: CommissionPrice @relation(name: "PriceCommissionPrice")
   # Price taking any applicable discounts and surcharges into account.
-  net: NetPrice
+  net: NetPrice @relation(name: "PriceNetPrice")
   # Specifies the amount.
-  amount: CommissionPrice
+  amount: CommissionPrice @relation(name: "PriceCommissionPrice2")
+
+  bookDetail: BookDetail @relation(name:"BookDetailPrice")
+  hotelQuote: HotelQuote @relation(name: "HotelQuotePrice")
+  priceBreakdown: PriceBreakdown @relation(name: "PriceBreakdownPrice")
+  roomPrice: RoomPrice @relation(name: "RoomPricePrice")
+  supplement: Supplement @relation(name: "SupplementPrice")
+  surcharge: Surcharge @relation(name: "SurchargePrice")
+  option: Option @relation(name: "OptionPrice")
 }
 # Information about daily price.
 type PriceBreakdown {
@@ -452,7 +508,9 @@ type PriceBreakdown {
    # This information is mandatory.
   expireDate: String!
   # Specifies the daily price.
-  price: Price
+  price: Price @relation(name: "PriceBreakdownPrice")
+  ##
+  roomPrice: RoomPrice @relation(name: "RoomPricePriceBreakdown")
 }
 # Price Type
 enum PriceType {
@@ -472,11 +530,14 @@ type Promotion {
   effectiveDate: String
   # Promotion expire date.
   expireDate: String
+  ##
+  room: Room @relation(name: "RoomPromotion")
 }
 # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
 type Quote {
   # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
-  hotel(criteria: CriteriaQuoteInput!, settings: SettingsInput): HotelQuote
+  hotel(criteria: CriteriaQuoteInput!, settings: SettingsInput): HotelQuote  @relation(name: "QuoteHotelQuote")
+  query: Query @relation(name:"QueryOnQuote")
 }
 # Information about the rate of the option returned.
 type RatePlan {
@@ -490,6 +551,8 @@ type RatePlan {
   effectiveDate: String
   # Expire date of the rate.
   expireDate: String
+  ##
+  room: Room @relation(name: "RoomRatePlans")
 }
 # Rate Rules
 enum RateRules {
@@ -510,6 +573,7 @@ type Reference {
   client: String!
   # Provider reference booking
   provider: String!
+  bookDetail:BookDetail @relation(name:"BookDetailReference")
 }
 # Contains information about the Resort.
 type Resort {
@@ -520,6 +584,8 @@ type Resort {
   name: String
   # Specifies the resort description.
   description: String
+  ##
+  supplement: Supplement @relation(name: "SupplementResort")
 }
 # Contains the room information of the option returned.
 type Room {
@@ -537,26 +603,31 @@ type Room {
   units: Int
   # Specifies the room price.
    # This information is mandatory.
-  roomPrice: RoomPrice!
+  roomPrice: RoomPrice! @relation(name: "RoomPrice")
   # List of beds.
-  beds: [Bed!]
+  beds: [Bed!] @relation(name: "RoomBeds")
   # Daily break downs rate plan.
-  ratePlans: [RatePlan!]
+  ratePlans: [RatePlan!] @relation(name: "RoomRatePlans")
   # Daily break downs promotions.
-  promotions: [Promotion!]
+  promotions: [Promotion!] @relation(name: "RoomPromotion")
+  ##
+  option: Option @relation(name: "OptionRoom")
 }
 # Occupancy for a room. It contains a list of pax ages.
 input RoomInput {
   # Array of pax ages. The number of items in the array will indicate the pax occupancy.
    # This information is mandatory.
-  paxes: [PaxInput!]!
+  paxes: [PaxInput!]!  @relation(name: "RoomInputPaxInput")
+  criteriaSearchInput: CriteriaSearchInput @relation(name: "CriteriaSearchInputRoomInput")
 }
 # Specifies the room price.
 type RoomPrice {
   # Total price for all days.
-  price: Price!
+  price: Price! @relation(name: "RoomPricePrice")
   # Daily break downs price.
-  breakdown: [PriceBreakdown!]
+  breakdown: [PriceBreakdown!] @relation(name: "RoomPricePriceBreakdown")
+  ##
+  room: Room @relation(name: "RoomPrice")
 }
 # Available options for a given date and itinerary. It does not filter different classes, times or
  # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
@@ -566,7 +637,8 @@ type Search {
    # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
    # forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
    # But you must preload the other fields in our system by complete the fields absents.
-  hotel(criteria: CriteriaSearchInput!, settings: SettingsInput, filter: FilterInput): HotelSearch
+  hotel(criteria: CriteriaSearchInput!, settings: SettingsInput, filter: FilterInput): HotelSearch @relation(name: "SearchHotelSearch")
+  query: Query @relation(name:"QuerySearch")
 }
 # Service Type
 enum ServiceType {
@@ -635,9 +707,11 @@ type Supplement {
   # Indicates the expire date of the supplement.
   expireDate: String
   # Contains information about the resort
-  resort: Resort
+  resort: Resort @relation(name: "SupplementResort")
   # Indicates the supplement price.
-  price: Price
+  price: Price @relation(name: "SupplementPrice")
+  ##
+  option: Option @relation(name: "OptionSupplement")
 }
 # Supplement Type
 enum SupplementType {
@@ -669,9 +743,11 @@ type Surcharge {
    # This information is mandatory.
   chargeType: ChargeType!
   # Indicates the surcharge price.
-  price: Price
+  price: Price @relation(name: "SurchargePrice")
   # Specifies the surcharge description.
   description: String
+  option: Option @relation(name: "OptionSurcharge")
+  hotelQuote: HotelQuote @relation(name: "HotelQuoteSurcharge")
 }
 # Supplier transaction
 type Transactions {
@@ -681,6 +757,7 @@ type Transactions {
   response: String!
   # Time when the request has been processed.
   timeStamp: String!
+  auditData: AuditData @relation(name:"AuditDataTransactions")
 }
 # Unit Type
 enum UnitType {
@@ -695,4 +772,8 @@ type Warning {
   type: String!
   # Warning description
   description: String!
+  hotelBookPayload: HotelBookPayload@relation(name: "HotelBookPayloadWarning")
+  hotelQuote: HotelQuote @relation(name: "HotelQuoteWarning")
+  hotelSearch: HotelSearch@relation(name: "HotelSearchWarning")
+
 }
