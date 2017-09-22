@@ -22,4 +22,4 @@ github faker: https://github.com/APIs-guru/graphql-faker
 
 Open new terminal.
 
-2- graphql-faker -E http://localhost:9002/graphql -P 9003
+2- graphql-faker -e http://localhost:9002/graphql -p 9003
