@@ -1,5 +1,5 @@
 type Access {
-  active: Int!
+  active: Boolean!
   code: String!
   hubProvider: String!
 
