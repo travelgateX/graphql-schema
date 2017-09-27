@@ -1,52 +1,73 @@
+# In queries or mutations, DateTime fields have to be specified in ISO 8601 format with enclosing double quotes: datetime: "2015-11-22T13:57:31.123Z".
+scalar DateTime
+
+#In queries or mutations, Date fields have to be specified in ISO 8601 format with enclosing double quotes: datetime: "2015-11-22".
+scalar Date
+
+#An RFC 3986, RFC 3987, and RFC 6570 (level 4) compliant URI string.
+scalar URI
+
+#ISO 4217
+scalar Currency
+
+#ISO 3166-1 alpha-2
+scalar Language
+
+
 type Access {
   active: Boolean!
+  
+  id:ID!
+  
   code: String!
-  hubProvider: String!
+  
+  # The supplier used in access
+  supplierCode: String!
 
   # User code to connect to supplier.
-  user: String
+  username: String
 
   # Password for the connection.
   password: String
 
   # Specific Url for Availability method.
-  availUrl: String
-
-  # Specific Url for Reservation method.
-  reservationUrl: String
+  searchUrl: URI
 
   # Specific Url for Valuation method.
-  valuationUrl: String
+  quoteUrl: URI
 
+  # Specific Url for Reservation method.
+  bookUrl: URI
+  
   # Supplier URL used for multiple methods.
-  genericUrl: String
+  genericUrl: URI
 
-  # List of parameters for additional information.
+  # List of parameters for additional access information.
   parameters: [Parameter!]
 
   # Markets allowed for the access.
   markets: [String!]
+  
+  rateTypes:[RateRules!]
 }
+
 
 # Filter that selects the accesses which will be used in the availability. You must choose one of them, include or
 # exclude, or the other alternative isn't specified anything.
 # If input both, you will receive a validation error that indicates this error.
 input AccessFilterInput {
   # Indicates that accesses are used in this availability. Only will be used the accesses that are specified here.
-  includes: [String!]
+  includes: [ID!]
 
   # By default are used all the accesses configured for the hub user, except which are included in this field.
-  excludes: [String!]
+  excludes: [ID!]
 }
 
 # Access overwrites an existent access in our Back Office or creates a new
 # one only for this availability. An access objetc contains its ow code, configuration and settings.
 input AccessInput {
-  # The code used to identify the existing access in our Back Office to
-  # overwrite it. Acts as an identifier in this avail existing or not in
-  # our Back Office.
-  code: String!
-
+  accessId: ID!
+  
   # Information required to access the supplier’s system.
   configuration: ConfigurationInput
 
@@ -54,16 +75,17 @@ input AccessInput {
   settings: SettingsBaseInput
 }
 
+
 # Data sent & received in the supplier’s native format.
 type AuditData {
   # List of transactions data.
   transactions: [Transactions!]!
 
   # TimeStamp
-  timeStamp: String!
+  timeStamp: DateTime!
 
   # Process time in milliseconds (ms)
-  processTime: String!
+  processTime: Int!
 }
 
 # Contains information about a bed.
@@ -82,9 +104,9 @@ type Bed {
 }
 
 # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
-type Booking {
+type Book {
   # Returns detailed information about books, you can indicated a list of locators or a range date.
-  hotel(criteria: CriteriaBookingInput!, settings: SettingsInput): HotelBooking
+  hotel(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput): HotelBook
 }
 
 # Indicates the type of criteria in the request of the booking list
@@ -96,15 +118,15 @@ enum BookingCriteriaType {
 type BookingHotel {
   # Creation date of the booking.
   # Format: yyyy-MM-dd
-  creationDate: String
+  creationDate: Date
 
   # Check-in date for the booking.
   # Format: yyyy-MM-dd
-  checkIn: String
+  checkIn: Date
 
   # Check-out date for the booking.
   # Format: yyyy-MM-dd
-  checkOut: String
+  checkOut: Date
 
   # Code of the hotel in the context selected.
   hotelCode: String
@@ -148,13 +170,13 @@ input BookPaxInput {
   age: Int!
 }
 
-# Reference object that contains the client reference and/or provider reference.
+# Reference object that contains the client reference and/or supplier reference.
 input BookReferenceInput {
   # Client reference
   client: String
 
-  # Provider reference
-  provider: String
+  # Supplier reference
+  supplier: String
 }
 
 # Input BookRoom contains list of pax and the room's reference.
@@ -199,7 +221,7 @@ type CancelPenalty {
   penaltyType: CancelPenaltyType!
 
   # Currency used in the cancel policy.
-  currency: String!
+  currency: Currency!
 
   # Value of the cancel policy.
   value: Float!
@@ -232,7 +254,7 @@ enum ChargeType {
 type CommissionPrice {
   # Specifies the currency.
   # This information is mandatory.
-  currency: String!
+  currency: Currency!
 
   # Specifies the import.
   # This information is mandatory.
@@ -251,25 +273,28 @@ type CommissionPrice {
   commissionAmount: Float
 }
 
+
+
+
 # The information required to access the supplier’s system.
 input ConfigurationInput {
   # User code to connect to supplier.
-  user: String
+  username: String
 
   # Password for the connection.
   password: String
 
   # Specific Url for Availability method.
-  availUrl: String
+  searchUrl: URI
 
   # Specific Url for Reservation method.
-  reservationUrl: String
+  bookUrl: URI
 
   # Specific Url for Valuation method.
-  valuationUrl: String
+  quoteUrl: URI
 
   # Supplier URL used for multiple methods.
-  genericUrl: String
+  genericUrl: URI
 
   # List of parameters for additional information.
   parameters: [ParameterInput!]
@@ -278,10 +303,6 @@ input ConfigurationInput {
   markets: [String!]
 }
 
-type Context {
-  code: String!
-  hotels(codes: [String!]): [Entity!]!
-}
 
 # Input creditCard, if the payment is done by credit card, is it mandatory to
 # specify the payment type and the credit card information
@@ -309,20 +330,20 @@ input CriteriaBookingDatesInput {
 
   # Start date
   # Format: yyyy-MM-dd
-  start: String!
+  start: Date!
 
   # End date
   # Format: yyyy-MM-dd
-  end: String!
+  end: Date!
 }
 
 # Criteria of book contains basic information to find a book or books.
-input CriteriaBookingInput {
+input HotelCriteriaBookingInput {
   # Name of the access that have to use in the request.
-  access: String!
+  accessCode: String!
 
   # Language code.
-  language: String
+  language: Language
 
   # Criteria search type.
   typeSearch: BookingCriteriaType!
@@ -337,17 +358,17 @@ input CriteriaBookingInput {
 # Criteria by references
 input CriteriaBookingReferencesInput {
   # Hotel code.
-  hotel: String!
+  hotelCode: String!
 
   # Currency requested.
-  currency: String!
+  currency: Currency!
 
-  # Contains the client reference and/or provider reference.
+  # Contains the client reference and/or supplier reference.
   references: [BookReferenceInput!]!
 }
 
 # Criteria of quote contains the option reference id, blocks and language.
-input CriteriaQuoteInput {
+input HotelCriteriaQuoteInput {
   # Identifier of the option chosen in the search.
   optionRefId: String!
 
@@ -355,12 +376,12 @@ input CriteriaQuoteInput {
   block: Boolean
 
   # Language to be used in request.
-  language: String
+  language: Language
 }
 
 # Criteria of search contains destination, travel dates and the number of pax in each room.
 # You must preload the other fields in our system by complete the fields absents.
-input CriteriaSearchInput {
+input HotelCriteriaSearchInput {
   # Check-in date for the booking.
   # Format: yyyy-MM-dd
   checkIn: String!
@@ -377,10 +398,10 @@ input CriteriaSearchInput {
   occupancies: [RoomInput!]!
 
   # Language to be used in request.
-  language: String
+  language: Language
 
   # Currency requested if supported by supplier.
-  currency: String
+  currency: Currency
 
   # Nationality of the guest (use ISO3166_1_alfa_2).
   nationality: String
@@ -414,25 +435,27 @@ enum DurationType {
   OPEN
 }
 
-type EnabledHubProvider {
-  client: String!
-  active: Boolean!
-  hubProvider: String!
-}
 
-input EnabledHubProviderInput {
-  client: String!
-  active: Boolean!
-  hubProvider: String!
-}
+interface AdviseMessage{
+  # Error code
 
-type Entity {
   code: String!
-  maps(suppliers: [String!]): [Map!]!
+  type: String!
+  description: String!
 }
+
 
 # Application errors
-type Error {
+type Error implements AdviseMessage{
+  code: String!
+  # Error type
+  type: String!
+  # Error description
+  description: String!
+}
+
+
+type Warning implements AdviseMessage{
   # Error code
   code: String!
 
@@ -442,6 +465,7 @@ type Error {
   # Error description
   description: String!
 }
+
 
 # Expire Date
 input ExpireDateInput {
@@ -478,7 +502,7 @@ input HolderInput {
   surname: String!
 }
 
-type HotelBooking implements Response {
+type HotelBook implements Response {
   # Application stats in string format
   stats(token: String!): Stats!
 
@@ -492,7 +516,7 @@ type HotelBooking implements Response {
   errors: [Error!]
 
   # Potentially  harmful situations or errors that won't force the service to abort
-  warnings: [Error!]
+  warnings: [Warning!]
 }
 
 # Contains information about booking.
@@ -528,7 +552,7 @@ input HotelBookInput {
   optionRefId: String!
 
   # Language to be used in request.
-  language: String
+  language: Language
 
   # Booking ID in client’s system.
   clientReference: String!
@@ -563,7 +587,7 @@ type HotelBookPayload implements Response {
   errors: [Error!]
 
   # Potentially  harmful situations or errors that won't force the service to abort
-  warnings: [Error!]
+  warnings: [Warning!]
 }
 
 # Contains information about cancel
@@ -587,15 +611,15 @@ type HotelCancelDetail {
 # Criteria of Cancel.
 input HotelCancelInput {
   # Name of the access that have to use in the request.
-  access: String!
+  accessCode: String!
 
   # Language code.
-  language: String
+  language: Language
 
   # Hotel code.
-  hotel: String!
+  hotelCode: String!
 
-  # Contains the client reference and/or provider reference.
+  # Contains the client reference and/or supplier reference.
   # One of them is mandatory.
   reference: BookReferenceInput!
 }
@@ -614,7 +638,7 @@ type HotelCancelPayload implements Response {
   errors: [Error!]
 
   # Potentially  harmful situations or errors that won't force the service to abort
-  warnings: [Error!]
+  warnings: [Warning!]
 }
 
 # Contains information about quote.
@@ -655,7 +679,7 @@ type HotelQuote implements Response {
   errors: [Error!]
 
   # Potentially  harmful situations or errors that won't force the service to abort
-  warnings: [Error!]
+  warnings: [Warning!]
 }
 
 # Results of Avail Hotel. Contains all the available options for a given date and itinerary.
@@ -670,13 +694,13 @@ type HotelSearch implements Response {
   auditData: AuditData
 
   # List of options returned according to the request.
-  options: [Option!]
+  options: [HotelOptionSearch!]
 
   # Errors that will lead the service to abort
   errors: [Error!]
 
   # Potentially harmful situations or errors that won't force the service to abort
-  warnings: [Error!]
+  warnings: [Warning!]
 }
 
 input LoadFileInput {
@@ -687,28 +711,18 @@ type LoadFileResults {
   results: String!
 }
 
-type Map {
-  supplier: String!
-  codes: [String!]!
-}
-
-type Mapping {
-  contexts(contexts: [String!]): [Context!]!
-}
-
 type Mutation {
-  hotelCancel(input: HotelCancelInput!, settings: SettingsInput): HotelCancelPayload
   createAccess(input: AccessInput!): Access
   updateAccess(input: AccessInput!): Access
-  updateHubProvider(input: EnabledHubProviderInput!): EnabledHubProvider
   loadFile(input: LoadFileInput): LoadFileResults
-  hotelBook(input: HotelBookInput!, settings: SettingsInput): HotelBookPayload
+  hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
+  hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
 }
 
 # Price taking any applicable discounts and surcharges into account.
 type NetPrice {
   # Specifies the currency.
-  currency: String!
+  currency: Currency!
 
   # Specifies the import.
   value: Float!
@@ -728,13 +742,27 @@ type Occupancy {
   paxes: [Pax!]!
 }
 
-# An option includes hotel information, meal plan, total price, conditions and room description.
-type Option {
+
+interface BookableOptionSearch{
   # Supplier that offers this option.
-  supplier: String!
+  supplierCode: String!
 
   # Access code of this option.
-  access: String!
+  accessCode: String!
+  
+  # Indicates the quote key
+  id: String!
+}
+
+
+
+# An option includes hotel information, meal plan, total price, conditions and room description.
+type HotelOptionSearch implements BookableOptionSearch {
+  # Supplier that offers this option.
+  supplierCode: String!
+
+  # Access code of this option.
+  accessCode: String!
 
   # Market of this option.
   markets: [String!]
@@ -779,7 +807,7 @@ type Option {
   # Additional information about the option.
   remarks: String
 
-  # Indicates the valuation key
+  # Indicates the quote key
   id: String!
 }
 
@@ -869,30 +897,28 @@ type Promotion {
   expireDate: String
 }
 
-type ProviderAccess {
-  code: String!
-  active: Boolean!
-  accessesName: [String!]!
+
+type ServiceStatus{
+  status: String!
 }
+
 
 type Query {
   # Returns status of the book service.
-  cancelStatusService: String!
-  quote: Quote!
-  quoteStatusService: String!
-  booking: Booking
-  bookingStatusService: String!
   search: Search!
-  searchStatusService: String!
-  userAccess(user: String!): UserAccess!
-  mapping(company: String!): Mapping!
-  bookStatusService: String!
+  searchServiceStatus: ServiceStatus!
+  quote: Quote!
+  quoteServiceStatus: ServiceStatus!
+  book: Book
+  bookServiceStatus: ServiceStatus!
+  cancelServiceStatus: ServiceStatus!
+  
 }
 
 # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
 type Quote {
   # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
-  hotel(criteria: CriteriaQuoteInput!, settings: SettingsInput): HotelQuote
+  hotel(criteria: HotelCriteriaQuoteInput!, settings: HotelSettingsInput): HotelQuote
 }
 
 # Information about the rate of the option returned.
@@ -929,8 +955,8 @@ type Reference {
   # Client reference booking
   client: String
 
-  # Provider reference booking
-  provider: String
+  # Supplier reference booking
+  supplier: String
 }
 
 # Contains information about the Resort.
@@ -949,7 +975,7 @@ interface Response {
   stats(token: String!): Stats!
   auditData: AuditData
   errors: [Error!]
-  warnings: [Error!]
+  warnings: [Warning!]
 }
 
 # Contains the room information of the option returned.
@@ -1005,7 +1031,7 @@ type Search {
   # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
   # forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
   # But you must preload the other fields in our system by complete the fields absents.
-  hotel(criteria: CriteriaSearchInput!, settings: SettingsInput, filter: FilterInput): HotelSearch
+  hotel(criteria: HotelCriteriaSearchInput!, settings: HotelSettingsInput, filter: FilterInput): HotelSearch
 }
 
 # Service Type
@@ -1025,8 +1051,10 @@ input SettingsBaseInput {
   businessRules: BusinessRulesInput
 }
 
+
+
 # Settings that you can edit for this avail. Values are loaded by default in our Back Office.
-input SettingsInput {
+input HotelSettingsInput {
   # Indicates the context of the I/O codes (hotel, board, room and rates)
   context: String
 
@@ -1035,7 +1063,7 @@ input SettingsInput {
 
   # This field is got only if the authorization header is of the type JWT. It is used for to change the user that
   # has been set by default in the preload.
-  user: String
+  connectUser: String
 
   # Milliseconds before the connection is closed.
   timeout: Int
@@ -1052,13 +1080,11 @@ input SettingsInput {
 
 type Stat {
   # Start UTC
-  start: String!
+  start: DateTime!
 
   # End UTC
-  end: String!
-
-  # Difference between start and end in miliseconds
-  duration: String!
+  end: DateTime!
+ 
 }
 
 type StatAccess {
@@ -1091,6 +1117,7 @@ enum Status {
   OK
   RQ
 }
+
 
 # Supplement that it can be added to the option returned. Contains all the information about the supplement.
 type Supplement {
@@ -1125,10 +1152,10 @@ type Supplement {
   unit: UnitType
 
   # Indicates the effective date of the supplement.
-  effectiveDate: String
+  effectiveDate: Date
 
   # Indicates the expire date of the supplement.
-  expireDate: String
+  expireDate: Date
 
   # Contains information about the resort
   resort: Resort
@@ -1186,7 +1213,7 @@ type Transactions {
   response: String!
 
   # Time when the request has been processed.
-  timeStamp: String!
+  timeStamp: DateTime!
 }
 
 # Unit Type
@@ -1195,7 +1222,3 @@ enum UnitType {
   HOUR
 }
 
-type UserAccess {
-  accesses: [Access!]!
-  providerAccesses: [ProviderAccess!]!
-}
