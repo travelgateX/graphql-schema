@@ -37,7 +37,7 @@ type Access {
   quoteUrl: URI
 
   # Specific Url for Reservation method.
-  bookingUrl: URI
+  bookUrl: URI
   
   # Supplier URL used for multiple methods.
   genericUrl: URI
@@ -288,7 +288,7 @@ input ConfigurationInput {
   searchUrl: URI
 
   # Specific Url for Reservation method.
-  bookingUrl: URI
+  bookUrl: URI
 
   # Specific Url for Valuation method.
   quoteUrl: URI
