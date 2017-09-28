@@ -78,7 +78,7 @@ type Query {
  	# Returns status of the book service.
     	cancelStatusService: ServiceStatus!
 	# Returns status of the quote service.
-    	bookingStatusService: String!
+    	bookingStatusService: ServiceStatus!
 }
 
 # Filter that selects the accesses which will be used in the availability. You must choose one of them, include or
