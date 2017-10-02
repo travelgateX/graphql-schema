@@ -3,6 +3,15 @@ schema {
 	query: Query
 }
 
+interface Priceable {
+  # Specifies the currency.
+	currency: Currency!
+
+	# Specifies the import.
+	value: Float!
+
+}
+
 interface AdviseMessage {
     # Error code
     code: String!
@@ -53,6 +62,9 @@ scalar Currency
 
 #ISO 3166-1 alpha-2
 scalar Language
+
+#ISO 3166-1 alpha-2 
+scalar Country
 
 # The mutation type, represents all updates we can make to our data.
 type Mutation {
@@ -344,7 +356,7 @@ input HotelCriteriaSearchInput {
 	currency : Currency
 
 	# Nationality of the guest (use ISO3166_1_alfa_2).
-   	nationality : String
+   	nationality : Country
 
    	# Targeted zone, country or point of sale to be used in request.
    	markets : [String!]
@@ -514,7 +526,7 @@ type BookingRoom {
 }
 
 # Contains information about a cancel penalty.
-type CancelPenalty {
+type CancelPenalty implements Priceable{
 	# Cancellation fees applicable x number of hours before the check in date.
 	hoursBefore: Int!
 
@@ -539,7 +551,7 @@ type CancelPolicy {
 }
 
 # Contains information about the commission price.
-type CommissionPrice {
+type CommissionPrice implements Priceable{
 	# Specifies the currency.
 	# This information is mandatory.
 	currency: Currency!
@@ -563,11 +575,11 @@ type CommissionPrice {
 type CriteriaSearch {
 	# Check-in date for the booking.
 	# Format: yyyy-MM-dd
-	checkIn: String!
+	checkIn: Date!
 
 	# Check-out, date for the booking.
 	# Format: yyyy-MM-dd
-	checkOut: String!
+	checkOut: Date!
 
 	# Contains the list of hotels's ID.
 	hotels: [String!]!
@@ -583,7 +595,7 @@ type CriteriaSearch {
 	currency : String
 
 	# Nationality of the guest (use ISO3166_1_alfa_2).
-   	nationality : String
+   	nationality : Country
 
    	# Targeted zone, country or point of sale to be used in request.
    	markets : [String!]
@@ -781,7 +793,7 @@ type HotelOptionSearch implements BookableOptionSearch {
 	remarks: String
 
 	# Token for Deep Link
-	deepLink: String!
+	token: String!
 
 	# Indicates the quote key
 	id: String!
@@ -829,7 +841,7 @@ type HotelSearch implements Response {
 }
 
 # Price taking any applicable discounts and surcharges into account.
-type NetPrice {
+type NetPrice implements Priceable {
 	# Specifies the currency.
 	currency: Currency!
 
@@ -870,10 +882,10 @@ type Price {
 # Information about daily price.
 type PriceBreakdown {
 	# Start date in which the price becomes effective.
-	effectiveDate: String!
+	effectiveDate: Date!
 
 	# Expire date of price.
-	expireDate: String!
+	expireDate: Date!
 
 	# Specifies the daily price.
 	price: Price!
@@ -888,10 +900,10 @@ type Promotion {
 	name: String
 
 	# Promotion effective date.
-    effectiveDate: String
+    effectiveDate: Date
 
     # Promotion expire date.
-    expireDate: String
+    expireDate: Date
 }
 
 # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
@@ -910,10 +922,10 @@ type RatePlan {
     name: String
 
 	# Start date in which the rate becomes effective.
-    effectiveDate: String
+    effectiveDate: Date
 
     # Expire date of the rate.
-    expireDate: String
+    expireDate: Date
 }
 
 # Contains reference codes.
@@ -990,7 +1002,7 @@ type Search {
 	# fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
 	# forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
 	# But you must preload the other fields in our system by complete the fields absents.
-	hotel(deepLink: String, criteria: HotelCriteriaSearchInput, settings: HotelSettingsInput, filter: FilterInput): HotelSearch
+	hotel(token: String, criteria: HotelCriteriaSearchInput, settings: HotelSettingsInput, filter: FilterInput): HotelSearch
 }
 
 # Indicates the status of the service
