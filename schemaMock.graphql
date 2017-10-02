@@ -25,6 +25,15 @@ interface BookableOptionSearch {
     id: String!
 }
 
+interface Priceable {
+    # Specifies the currency.
+    currency: Currency!
+
+    # Specifies the import.
+    value: Float!
+
+}
+
 interface Response {
     # Application stats in string format
     stats(token: String!): RequestStats!
@@ -53,6 +62,9 @@ scalar Currency
 
 #ISO 3166-1 alpha-2
 scalar Language
+
+#ISO 3166-1 alpha-2 
+scalar Country
 
 # The mutation type, represents all updates we can make to our data.
 type Mutation {
@@ -155,7 +167,7 @@ input ConfigurationInput {
    	password: String
 
    	# Specific Url provider's service.
-    urls:           Url!
+    urls:           UrlInput!
 
    	# List of parameters for additional information.
    	parameters: [ParameterInput!]
@@ -276,7 +288,7 @@ input HotelBookInput {
 # Criteria of Cancel.
 input HotelCancelInput {
 	# Name of the access that have to use in the request.
-	access: String!
+	accessCode: String!
 
 	# Language code.
     language: Language
@@ -295,7 +307,7 @@ input HotelCriteriaBookingInput {
     accessCode: String!
 
     # Language code.
-    language: String
+    language: Language
 
     # Criteria search type.
     typeSearch: BookingCriteriaType!
@@ -344,7 +356,7 @@ input HotelCriteriaSearchInput {
 	currency : Currency
 
 	# Nationality of the guest (use ISO3166_1_alfa_2).
-   	nationality : String
+   	nationality : Country
 
    	# Targeted zone, country or point of sale to be used in request.
    	markets : [String!]
@@ -423,7 +435,7 @@ input SupplierInput {
 }
 
 # Url's
-input Url {
+input UrlInput {
     # Specific Url for Availability method.
     search:         URI
 
@@ -514,7 +526,7 @@ type BookingRoom {
 }
 
 # Contains information about a cancel penalty.
-type CancelPenalty {
+type CancelPenalty implements Priceable {
 	# Cancellation fees applicable x number of hours before the check in date.
 	hoursBefore: Int!
 
@@ -539,7 +551,7 @@ type CancelPolicy {
 }
 
 # Contains information about the commission price.
-type CommissionPrice {
+type CommissionPrice implements Priceable {
 	# Specifies the currency.
 	# This information is mandatory.
 	currency: Currency!
@@ -563,11 +575,11 @@ type CommissionPrice {
 type CriteriaSearch {
 	# Check-in date for the booking.
 	# Format: yyyy-MM-dd
-	checkIn: String!
+	checkIn: Date!
 
 	# Check-out, date for the booking.
 	# Format: yyyy-MM-dd
-	checkOut: String!
+	checkOut: Date!
 
 	# Contains the list of hotels's ID.
 	hotels: [String!]!
@@ -577,13 +589,13 @@ type CriteriaSearch {
 	occupancies: [RoomCriteria!]!
 
    	# Language to be used in request.
-   	language : String
+   	language : Language
 
 	# Currency requested if supported by supplier.
-	currency : String
+	currency : Currency
 
 	# Nationality of the guest (use ISO3166_1_alfa_2).
-   	nationality : String
+   	nationality : Country
 
    	# Targeted zone, country or point of sale to be used in request.
    	markets : [String!]
@@ -665,7 +677,7 @@ type HotelBookingDetail {
     remarks: String
 
 	# Booking Status.
-    status: BookStatus!
+    status: BookStatusType!
 
     # Payable.
     payable: String
@@ -680,7 +692,7 @@ type HotelCancelDetail {
     cancelReference: String
 
     # Booking Status.
-    status: BookStatus
+    status: BookStatusType
 
     # Specifies the prices (Gross, Net and Amount) of the cancellation.
     price: Price
@@ -712,7 +724,7 @@ type HotelOptionQuote {
     optionRefId: String!
 
     # The possible values in status in response are Available (OK) or On Request (RQ).
-    status: Status!
+    status: StatusType!
 
     # Specifies the prices (Gross, Net and Amount) of the option returned.
     price: Price!
@@ -754,7 +766,7 @@ type HotelOptionSearch implements BookableOptionSearch {
 	paymentType: PaymentType!
 
 	# The possible values in status in response are Available (OK) or On Request (RQ).
-	status: Status!
+	status: StatusType!
 
 	# List of occupancies of the request.
 	occupancies: [Occupancy!]!
@@ -772,7 +784,7 @@ type HotelOptionSearch implements BookableOptionSearch {
 	surcharges: [Surcharge!]
 
 	# Specifies rate rules of the option returned.
-	rateRules: [RateRules!]
+	rateRules: [RateRulesType!]
 
 	# Specifies cancel policies of the option returned.
 	cancelPolicy: CancelPolicy
@@ -829,7 +841,7 @@ type HotelSearch implements Response {
 }
 
 # Price taking any applicable discounts and surcharges into account.
-type NetPrice {
+type NetPrice implements Priceable {
 	# Specifies the currency.
 	currency: Currency!
 
@@ -870,10 +882,10 @@ type Price {
 # Information about daily price.
 type PriceBreakdown {
 	# Start date in which the price becomes effective.
-	effectiveDate: String!
+	effectiveDate: Date!
 
 	# Expire date of price.
-	expireDate: String!
+	expireDate: Date!
 
 	# Specifies the daily price.
 	price: Price!
@@ -888,10 +900,10 @@ type Promotion {
 	name: String
 
 	# Promotion effective date.
-    effectiveDate: String
+    effectiveDate: Date
 
     # Promotion expire date.
-    expireDate: String
+    expireDate: Date
 }
 
 # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
@@ -910,10 +922,10 @@ type RatePlan {
     name: String
 
 	# Start date in which the rate becomes effective.
-    effectiveDate: String
+    effectiveDate: Date
 
     # Expire date of the rate.
-    expireDate: String
+    expireDate: Date
 }
 
 # Contains reference codes.
@@ -990,7 +1002,7 @@ type Search {
 	# fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
 	# forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
 	# But you must preload the other fields in our system by complete the fields absents.
-	hotel(deepLink: String, criteria: HotelCriteriaSearchInput, settings: HotelSettingsInput, filter: FilterInput): HotelSearch
+	hotel(token: String, criteria: HotelCriteriaSearchInput, settings: HotelSettingsInput, filter: FilterInput): HotelSearch
 }
 
 # Indicates the status of the service
@@ -1071,7 +1083,7 @@ type Supplement {
     quantity: Int
 
     # Indicates the unit type. Possible unit types: Day or Hour.
-    unit: UnitType
+    unit: UnitTimeType
 
     # Indicates the effective date of the supplement.
     effectiveDate: Date
@@ -1124,7 +1136,7 @@ type Warning implements AdviseMessage {
 }
 
 # Book status
-enum BookStatus {
+enum BookStatusType {
 	# The status of the booking is available
 	OK
 
@@ -1228,7 +1240,7 @@ enum PriceType {
 }
 
 # Rate Rules
-enum RateRules {
+enum RateRulesType {
 	# The product can’t be sold separately from another product attached to it, such as a flight.
 	PACKAGE
 
@@ -1267,7 +1279,7 @@ enum ServiceType {
 }
 
 # Options status
-enum Status {
+enum StatusType {
 	# The status of the avail is available
 	OK
 
@@ -1303,8 +1315,8 @@ enum SupplementType {
 }
 
 
-# Unit Type
-enum UnitType {
+# Unit Time Type
+enum UnitTimeType {
    	# Day
    	DAY
 
