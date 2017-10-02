@@ -3,6 +3,15 @@ schema {
 	query: Query
 }
 
+interface Priceable {
+  # Specifies the currency.
+	currency: Currency!
+
+	# Specifies the import.
+	value: Float!
+
+}
+
 interface AdviseMessage {
     # Error code
     code: String!
@@ -793,7 +802,7 @@ type HotelOptionSearch implements BookableOptionSearch {
 	remarks: String
 
 	# Token for Deep Link
-	deepLink: String!
+	token: String!
 
 	# Indicates the quote key
 	id: String!
