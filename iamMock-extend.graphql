@@ -1,0 +1,99 @@
+# This is sample IDL schema for GraphQL Faker in extend mode.
+#
+# In this mode Faker leverages IDL extend keyword.
+# Also you can use following two directives to enhance fake data:
+#   - @fake
+#   - @examples
+#
+# Press save or Cmd+Enter to apply the changes and update server. Switch to GraphiQL
+# on the left panel to immediately test your changes.
+#
+# Developed with ❤️ by APIs.guru | https://github.com/APIs-guru/graphql-faker
+
+interface Node {
+  code: ID!
+  error: [Error!]
+}
+
+enum GroupType {
+  ROOT
+  ORG
+  PROFILE
+  GROUP
+  TEAM
+}
+
+
+extend type Query{
+  node(code: ID!): Node
+  member (code: ID!): Member
+  # groupBranch (code: ID!): Branch
+  
+  user: Member
+  ak: Member
+  
+}
+
+type Member implements Node{
+  code: ID!
+  error: [Error!]
+  memberData: MemberData
+}
+type MemberData{
+  id: ID!
+  code: ID!
+  groups: GroupConnection
+}
+
+type Group implements Node{
+  code: ID!
+  error: [Error!]
+  groupData: GroupData
+}
+
+type GroupData{
+  id: ID!
+  code: ID!
+  type: GroupType!
+  parent: ID!
+  members: MemberConnection
+  groups: GroupConnection
+
+}
+
+type GroupConnection{
+  edges: [GroupEdge]
+  pageInfo: PageInfo!
+}
+
+type GroupEdge {
+  cursor: String!
+  node: Group
+}
+
+type MemberConnection{
+  edges: [MemberEdge]
+  pageInfo: PageInfo!
+}
+
+type MemberEdge {
+  cursor: String!
+  node: Member
+}
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type API implements Node{
+  code: ID!
+  error: [Error!]
+
+}
+
+type Resource implements Node{
+  code: ID!
+  error: [Error!]
+}
