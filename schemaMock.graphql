@@ -1006,8 +1006,15 @@ type Search {
 }
 
 # Indicates the status of the service
-type ServiceStatus {
-    status: String!
+type ServiceStatus implements AdviseMessage {
+    # Status code
+    code: String!
+
+    # Status type
+    type: String!
+
+    # Status description
+    description : String!
 }
 
 type Stat {
