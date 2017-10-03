@@ -17,12 +17,16 @@ interface Node {
 
 enum GroupType {
   ROOT
-  ORG
+  ORGANIZATION
   PROFILE
   GROUP
   TEAM
 }
 
+enum MemberType {
+  USER
+  SERVICE_ACCOUNT
+}
 
 extend type Query{
   node(code: ID!): Node
@@ -30,7 +34,7 @@ extend type Query{
   # groupBranch (code: ID!): Branch
   
   user: Member
-  ak: Member
+  service_account: Member
   
 }
 
@@ -42,7 +46,11 @@ type Member implements Node{
 type MemberData{
   id: ID!
   code: ID!
+  memberType: MemberType
+  roles: RolConnection
   groups: GroupConnection
+  
+  access: AccessConnection
 }
 
 type Group implements Node{
@@ -51,13 +59,16 @@ type Group implements Node{
   groupData: GroupData
 }
 
-type GroupData{
+interface GroupData{
   id: ID!
   code: ID!
   type: GroupType!
   parent: ID!
   members: MemberConnection
   groups: GroupConnection
+  apis: APIConnection
+  
+  access: AccessConnection
 
 }
 
@@ -80,6 +91,17 @@ type MemberEdge {
   cursor: String!
   node: Member
 }
+
+type APIConnection{
+  edges: [APIEdge]
+  pageInfo: PageInfo!
+}
+
+type APIEdge {
+  cursor: String!
+  node: API
+}
+
 type PageInfo {
   hasNextPage: Boolean!
   hasPreviousPage: Boolean!
@@ -90,10 +112,96 @@ type PageInfo {
 type API implements Node{
   code: ID!
   error: [Error!]
+  apiData: APIData
 
+}
+
+type APIData{
+  id: ID!
+  code: ID!
+  groups: GroupConnection
+  resources: ResourceConnection
+
+}
+
+type ResourceConnection{
+  edges: [ResourceEdge]
+  pageInfo: PageInfo!
+}
+
+type ResourceEdge {
+  cursor: String!
+  node: Resource
 }
 
 type Resource implements Node{
   code: ID!
   error: [Error!]
+  resourceData: ResourceData
 }
+
+type ResourceData{
+  id: ID!
+  code: ID!
+  api: APIConnection
+  roles: RolConnection
+}
+
+type RolConnection{
+  edges: [RolEdge]
+  pageInfo: PageInfo!
+}
+
+type RolEdge {
+  cursor: String!
+  node: Rol
+}
+
+type Rol implements Node{
+  code: ID!
+  error: [Error!]
+  rolData: RolData
+}
+
+type RolData{
+  id: ID!
+  code: ID!
+  label: String!
+  isCreate: Boolean!
+  isRead: Boolean!
+  isUpdate: Boolean!
+  isDelete: Boolean!
+  isEnable: Boolean!
+  isExecutable: Boolean!
+  isEspecial: Boolean!
+  especial: String
+  resource: ResourceConnection
+}
+
+type Organization implements Node{
+  code: ID!
+  error: [Error!]
+  organizationData: OrcanizationData  
+}
+
+type OrcanizationData implements GroupData{
+  id: ID!
+  code: ID!
+  type: GroupType!
+  parent: ID!
+  members: MemberConnection
+  groups: GroupConnection
+  apis: APIConnection
+  
+  access: AccessConnection
+}
+type AccessConnection{
+  edges: [AccessEdge]
+  pageInfo: PageInfo!
+}
+
+type AccessEdge {
+  cursor: String!
+  node: Access
+}
+
