@@ -34,6 +34,15 @@ interface BookableOptionSearch {
     id: String!
 }
 
+interface Priceable {
+    # Specifies the currency.
+    currency: Currency!
+
+    # Specifies the import.
+    value: Float!
+
+}
+
 interface Response {
     # Application stats in string format
     stats(token: String!): RequestStats!
@@ -167,7 +176,7 @@ input ConfigurationInput {
    	password: String
 
    	# Specific Url provider's service.
-    urls:           Url!
+    urls:           UrlInput!
 
    	# List of parameters for additional information.
    	parameters: [ParameterInput!]
@@ -288,7 +297,7 @@ input HotelBookInput {
 # Criteria of Cancel.
 input HotelCancelInput {
 	# Name of the access that have to use in the request.
-	access: String!
+	accessCode: String!
 
 	# Language code.
     language: Language
@@ -307,7 +316,7 @@ input HotelCriteriaBookingInput {
     accessCode: String!
 
     # Language code.
-    language: String
+    language: Language
 
     # Criteria search type.
     typeSearch: BookingCriteriaType!
@@ -435,7 +444,7 @@ input SupplierInput {
 }
 
 # Url's
-input Url {
+input UrlInput {
     # Specific Url for Availability method.
     search:         URI
 
@@ -526,7 +535,7 @@ type BookingRoom {
 }
 
 # Contains information about a cancel penalty.
-type CancelPenalty implements Priceable{
+type CancelPenalty implements Priceable {
 	# Cancellation fees applicable x number of hours before the check in date.
 	hoursBefore: Int!
 
@@ -551,7 +560,7 @@ type CancelPolicy {
 }
 
 # Contains information about the commission price.
-type CommissionPrice implements Priceable{
+type CommissionPrice implements Priceable {
 	# Specifies the currency.
 	# This information is mandatory.
 	currency: Currency!
@@ -589,10 +598,10 @@ type CriteriaSearch {
 	occupancies: [RoomCriteria!]!
 
    	# Language to be used in request.
-   	language : String
+   	language : Language
 
 	# Currency requested if supported by supplier.
-	currency : String
+	currency : Currency
 
 	# Nationality of the guest (use ISO3166_1_alfa_2).
    	nationality : Country
@@ -677,7 +686,7 @@ type HotelBookingDetail {
     remarks: String
 
 	# Booking Status.
-    status: BookStatus!
+    status: BookStatusType!
 
     # Payable.
     payable: String
@@ -692,7 +701,7 @@ type HotelCancelDetail {
     cancelReference: String
 
     # Booking Status.
-    status: BookStatus
+    status: BookStatusType
 
     # Specifies the prices (Gross, Net and Amount) of the cancellation.
     price: Price
@@ -724,7 +733,7 @@ type HotelOptionQuote {
     optionRefId: String!
 
     # The possible values in status in response are Available (OK) or On Request (RQ).
-    status: Status!
+    status: StatusType!
 
     # Specifies the prices (Gross, Net and Amount) of the option returned.
     price: Price!
@@ -766,7 +775,7 @@ type HotelOptionSearch implements BookableOptionSearch {
 	paymentType: PaymentType!
 
 	# The possible values in status in response are Available (OK) or On Request (RQ).
-	status: Status!
+	status: StatusType!
 
 	# List of occupancies of the request.
 	occupancies: [Occupancy!]!
@@ -784,7 +793,7 @@ type HotelOptionSearch implements BookableOptionSearch {
 	surcharges: [Surcharge!]
 
 	# Specifies rate rules of the option returned.
-	rateRules: [RateRules!]
+	rateRules: [RateRulesType!]
 
 	# Specifies cancel policies of the option returned.
 	cancelPolicy: CancelPolicy
@@ -1090,7 +1099,7 @@ type Supplement {
     quantity: Int
 
     # Indicates the unit type. Possible unit types: Day or Hour.
-    unit: UnitType
+    unit: UnitTimeType
 
     # Indicates the effective date of the supplement.
     effectiveDate: Date
@@ -1143,7 +1152,7 @@ type Warning implements AdviseMessage {
 }
 
 # Book status
-enum BookStatus {
+enum BookStatusType {
 	# The status of the booking is available
 	OK
 
@@ -1247,7 +1256,7 @@ enum PriceType {
 }
 
 # Rate Rules
-enum RateRules {
+enum RateRulesType {
 	# The product can’t be sold separately from another product attached to it, such as a flight.
 	PACKAGE
 
@@ -1286,7 +1295,7 @@ enum ServiceType {
 }
 
 # Options status
-enum Status {
+enum StatusType {
 	# The status of the avail is available
 	OK
 
@@ -1322,8 +1331,8 @@ enum SupplementType {
 }
 
 
-# Unit Type
-enum UnitType {
+# Unit Time Type
+enum UnitTimeType {
    	# Day
    	DAY
 
