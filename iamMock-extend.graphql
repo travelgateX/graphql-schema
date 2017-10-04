@@ -1,15 +1,3 @@
-# This is sample IDL schema for GraphQL Faker in extend mode.
-#
-# In this mode Faker leverages IDL extend keyword.
-# Also you can use following two directives to enhance fake data:
-#   - @fake
-#   - @examples
-#
-# Press save or Cmd+Enter to apply the changes and update server. Switch to GraphiQL
-# on the left panel to immediately test your changes.
-#
-# Developed with ❤️ by APIs.guru | https://github.com/APIs-guru/graphql-faker
-
 interface Node {
   code: ID!
   error: [Error!]
@@ -28,15 +16,15 @@ enum MemberType {
   SERVICE_ACCOUNT
 }
 
-extend type Query{
-  node(code: ID!): Node
-  member (code: ID!): Member
-  # groupBranch (code: ID!): Branch
+# extend type Query{
+#   node(code: ID!): Node
+#   member (code: ID!): Member
+#   # groupBranch (code: ID!): Branch
   
-  user: Member
-  service_account: Member
+#   user: Member
+#   service_account: Member
   
-}
+# }
 
 type Member implements Node{
   code: ID!
@@ -181,10 +169,10 @@ type RolData{
 type Organization implements Node{
   code: ID!
   error: [Error!]
-  organizationData: OrcanizationData  
+  organizationData: OrganizationData  
 }
 
-type OrcanizationData implements GroupData{
+type OrganizationData implements GroupData{
   id: ID!
   code: ID!
   type: GroupType!
@@ -193,6 +181,7 @@ type OrcanizationData implements GroupData{
   groups: GroupConnection
   apis: APIConnection
   
+  products: ProductConnection
   access: AccessConnection
 }
 type AccessConnection{
@@ -205,3 +194,35 @@ type AccessEdge {
   node: Access
 }
 
+type Product implements Node{
+  code: ID!
+  error: [Error!]
+  product: ProductData
+}
+
+type ProductData {
+  id: ID!
+  code: ID!
+  apis: APIConnection
+  organizations: OrganizationConnection
+}
+
+type OrganizationConnection{
+  edges: [OrganizationEdge]
+  pageInfo: PageInfo!
+}
+
+type OrganizationEdge {
+  cursor: String!
+  node: Organization
+}
+
+type ProductConnection{
+  edges: [ProductEdge]
+  pageInfo: PageInfo!
+}
+
+type ProductEdge {
+  cursor: String!
+  node: Product
+}
