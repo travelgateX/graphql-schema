@@ -16,21 +16,22 @@ enum MemberType {
   SERVICE_ACCOUNT
 }
 
-# extend type Query{
-#   node(code: ID!): Node
-#   member (code: ID!): Member
-#   # groupBranch (code: ID!): Branch
+extend type Query{
+  node(code: ID!): Node
+  member (code: ID!): Member
+  # groupBranch (code: ID!): Branch
   
-#   user: Member
-#   service_account: Member
+  user: Member
+  service_account: Member
   
-# }
+}
 
 type Member implements Node{
   code: ID!
   error: [Error!]
   memberData: MemberData
 }
+
 type MemberData{
   id: ID!
   code: ID!
