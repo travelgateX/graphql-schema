@@ -117,7 +117,21 @@ query IntrospectionQuery {
       }
     }
   }
+https://apis.guru/graphql-voyager/
 ```
+
+### Graph Viewer
+```
+https://apis.guru/graphql-voyager/
+
+Process
+
+1 - Copy introspection query into GraphQL-Faker and execute query
+2 - Go to graph-voyager and paste the response into Custom Schema and press "Change Schema"
+
+```
+
+
 ### Get gateway schema Introspection
 ```sh
 curl 
