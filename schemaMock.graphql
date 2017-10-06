@@ -3,15 +3,6 @@ schema {
 	query: Query
 }
 
-interface Priceable {
-  # Specifies the currency.
-	currency: Currency!
-
-	# Specifies the import.
-	value: Float!
-
-}
-
 interface AdviseMessage {
     # Error code
     code: String!
@@ -40,12 +31,11 @@ interface Priceable {
 
     # Specifies the import.
     value: Float!
-
 }
 
 interface Response {
     # Application stats in string format
-    stats(token: String!): RequestStats!
+    stats(token: String!): RequestStats
 
     # Data sent & received in the supplier’s native format.
     auditData: AuditData
@@ -72,7 +62,7 @@ scalar Currency
 #ISO 3166-1 alpha-2
 scalar Language
 
-#ISO 3166-1 alpha-2 
+#ISO 3166-1 alpha-2
 scalar Country
 
 # The mutation type, represents all updates we can make to our data.
@@ -176,31 +166,13 @@ input ConfigurationInput {
    	password: String
 
    	# Specific Url provider's service.
-    urls:           UrlInput!
+        urls:           UrlsInput!
 
    	# List of parameters for additional information.
    	parameters: [ParameterInput!]
 
    	# Markets allowed for the access.
    	markets: [String!]
-}
-
-# Input creditCard, if the payment is done by credit card, is it mandatory to specify the payment type and the credit card information
-input CreditCardInput {
-    # Indicates the card type.
-    cardType: String!
-
-    # Contains owner's name
-    holder: HolderInput!
-
-    # Contains credit card number
-    number: String!
-
-    # Contains credit card CVC
-    CVC: String!
-
-    # Contains credit card expiration date
-    expire: ExpireDateInput!
 }
 
 # Criteria by dates
@@ -282,7 +254,7 @@ input HotelBookInput {
     deltaPrice: DeltaPriceInput
 
     # If the payment is done by credit card, is it mandatory to specify the payment type and the credit card information
-    creditCard: CreditCardInput
+    paymentCard: PaymentCardInput
 
     # Any customer comments for the supplier to consider
     remarks: String
@@ -411,6 +383,24 @@ input PaxInput {
 	age: Int!
 }
 
+# Input PaymentCard, if the payment is done by credit card, is it mandatory to specify the payment type and the credit card information
+input PaymentCardInput {
+    # Indicates the card type.
+    cardType: String!
+
+    # Contains owner's name
+    holder: HolderInput!
+
+    # Contains credit card number
+    number: String!
+
+    # Contains credit card CVC
+    CVC: String!
+
+    # Contains credit card expiration date
+    expire: ExpireDateInput!
+}
+
 # Occupancy for a room. It contains a list of pax ages.
 input RoomInput {
 	# Array of pax ages. The number of items in the array will indicate the pax occupancy.
@@ -444,16 +434,13 @@ input SupplierInput {
 }
 
 # Url's
-input UrlInput {
+input UrlsInput {
     # Specific Url for Availability method.
     search:         URI
-
     # Specific Url for Reservation method.
     quote:          URI
-
     # Specific Url for Valuation method.
     book:           URI
-
     # Supplier URL used for multiple methods.
     generic:        URI
 }
@@ -633,7 +620,7 @@ type Holder {
 
 type HotelBookPayload implements Response {
     # Application stats in string format
-    stats(token: String!): RequestStats!
+    stats(token: String!): RequestStats
 
     # Data sent & received in the supplier’s native format.
     auditData: AuditData
@@ -650,7 +637,7 @@ type HotelBookPayload implements Response {
 
 type HotelBooking implements Response {
     # Application stats in string format
-    stats(token: String!): RequestStats!
+    stats(token: String!): RequestStats
 
     # Data sent & received in the supplier’s native format.
     auditData: AuditData
@@ -712,7 +699,7 @@ type HotelCancelDetail {
 
 type HotelCancelPayload implements Response {
     # Application stats in string format
-    stats(token: String!): RequestStats!
+    stats(token: String!): RequestStats
 
     # Data sent & received in the supplier’s native format.
     auditData: AuditData
@@ -810,7 +797,7 @@ type HotelOptionSearch implements BookableOptionSearch {
 
 type HotelQuote implements Response {
     # Application stats in string format
-    stats(token: String!): RequestStats!
+    stats(token: String!): RequestStats
 
     # Data sent & received in the supplier’s native format.
     auditData: AuditData
@@ -831,7 +818,7 @@ type HotelSearch implements Response {
 	context: String
 
 	# Application stats in string format
-    stats(token: String!): RequestStats!
+    stats(token: String!): RequestStats
 
     # Data sent & received in the supplier’s native format.
     auditData: AuditData
@@ -1015,7 +1002,7 @@ type Search {
 }
 
 # Indicates the status of the service
-type ServiceStatus implements AdviseMessage {
+type ServiceStatus implements AdviseMessage  {
     # Status code
     code: String!
 
@@ -1029,10 +1016,8 @@ type ServiceStatus implements AdviseMessage {
 type Stat {
     # Start UTC
     start:      DateTime!
-
     # End UTC
     end:        DateTime!
-
     # Difference between start and end in miliseconds
     duration:   Float
 }
