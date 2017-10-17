@@ -37,7 +37,7 @@ interface Response {
     # Application stats in string format
     stats(token: String!): RequestStats
 
-    # Data sent & received in the supplier’s native format.
+    # Data sent & received in the supplierâ€™s native format.
     auditData: AuditData
 
     # Errors that will lead the service to abort
@@ -64,6 +64,9 @@ scalar Language
 
 #ISO 3166-1 alpha-2
 scalar Country
+
+#json structure
+scalar JSON
 
 # The mutation type, represents all updates we can make to our data.
 type Mutation {
@@ -111,7 +114,7 @@ input AccessInput {
 	# our Back Office.
 	accessId: ID!
 
-   	# Information required to access the supplier’s system.
+   	# Information required to access the supplierâ€™s system.
    	configuration: ConfigurationInput
 
    	# You can configure an special settings for any access. This level overwrites the avail and supplier settings levels.
@@ -157,7 +160,7 @@ input BusinessRulesInput {
    	businessRulesType: BusinessRulesType
 }
 
-# The information required to access the supplier’s system.
+# The information required to access the supplierâ€™s system.
 input ConfigurationInput {
    	# User code to connect to supplier.
    	username: String
@@ -247,7 +250,7 @@ input HotelBookInput {
     # Language to be used in request.
     language: Language
 
-    # Booking ID in client’s system.
+    # Booking ID in clientâ€™s system.
     clientReference: String!
 
     # Indicates price variation permitted by the client.
@@ -445,7 +448,13 @@ input UrlsInput {
     generic:        URI
 }
 
-# Data sent & received in the supplier’s native format.
+# Extra information about the option.
+type AddOns {
+    # Extra information from the distribution layer
+    distribute: JSON
+}
+
+# Data sent & received in the supplierâ€™s native format.
 type AuditData {
     # List of transactions data.
     transactions:    [Transactions!]!
@@ -556,7 +565,7 @@ type CommissionPrice implements Priceable {
 	# This information is mandatory.
 	value: Float!
 
-	# If binding is set as true, then the client can’t sell the product for a lower price then the one set by the supplier. If it set as as false, the client can sell the product for a lower price.
+	# If binding is set as true, then the client canâ€™t sell the product for a lower price then the one set by the supplier. If it set as as false, the client can sell the product for a lower price.
 	# This information is mandatory.
 	binding: Boolean!
 
@@ -622,7 +631,7 @@ type HotelBookPayload implements Response {
     # Application stats in string format
     stats(token: String!): RequestStats
 
-    # Data sent & received in the supplier’s native format.
+    # Data sent & received in the supplierâ€™s native format.
     auditData: AuditData
 
     # Information about booking
@@ -639,7 +648,7 @@ type HotelBooking implements Response {
     # Application stats in string format
     stats(token: String!): RequestStats
 
-    # Data sent & received in the supplier’s native format.
+    # Data sent & received in the supplierâ€™s native format.
     auditData: AuditData
 
     # Details about booking
@@ -654,7 +663,7 @@ type HotelBooking implements Response {
 
 # Contains information about booking.
 type HotelBookingDetail {
-	# Booking ID in the Supplier´s system
+	# Booking ID in the SupplierÂ´s system
 	reference: Reference!
 
 	# Holder's name and surname
@@ -681,10 +690,10 @@ type HotelBookingDetail {
 
 # Contains information about cancel
 type HotelCancelDetail {
-    # Booking ID in the Supplier´s system
+    # Booking ID in the SupplierÂ´s system
     reference: Reference
 
-    # Cancellation ID in the Supplier´s system
+    # Cancellation ID in the SupplierÂ´s system
     cancelReference: String
 
     # Booking Status.
@@ -701,7 +710,7 @@ type HotelCancelPayload implements Response {
     # Application stats in string format
     stats(token: String!): RequestStats
 
-    # Data sent & received in the supplier’s native format.
+    # Data sent & received in the supplierâ€™s native format.
     auditData: AuditData
 
     #Information about cancel
@@ -788,6 +797,9 @@ type HotelOptionSearch implements BookableOptionSearch {
 	# Additional information about the option.
 	remarks: String
 
+	# Extra information about the option.
+	addOns: AddOns
+
 	# Token for Deep Link
 	token: String!
 
@@ -799,7 +811,7 @@ type HotelQuote implements Response {
     # Application stats in string format
     stats(token: String!): RequestStats
 
-    # Data sent & received in the supplier’s native format.
+    # Data sent & received in the supplierâ€™s native format.
     auditData: AuditData
 
     # Information about quote.
@@ -820,7 +832,7 @@ type HotelSearch implements Response {
 	# Application stats in string format
     stats(token: String!): RequestStats
 
-    # Data sent & received in the supplier’s native format.
+    # Data sent & received in the supplierâ€™s native format.
     auditData: AuditData
 
     # Request Criteria
@@ -844,7 +856,7 @@ type NetPrice implements Priceable {
 	# Specifies the import.
 	value: Float!
 
-	# If binding is set as true, then the client can’t sell the product for a lower price then the one set by the supplier. If it set as as false, the client can sell the product for a lower price.
+	# If binding is set as true, then the client canâ€™t sell the product for a lower price then the one set by the supplier. If it set as as false, the client can sell the product for a lower price.
 	binding: Boolean!
 }
 
@@ -863,15 +875,17 @@ type Pax {
 	age: Int!
 }
 
-# Price
+# A price represented in different ways
 type Price {
-	# Price without taking any possible discounts and surcharges into account.
+	# The value of this price includes the comission that the seller will earn.
+	# Doesn't take any possible discounts and surcharges into account.
 	gross: CommissionPrice
 
-	# Price taking any applicable discounts and surcharges into account.
+	# Net Price is the amount to pay to the supplier,
+	# Takes any applicable discounts and surcharges into account.
 	net: NetPrice
 
-	# Specifies the amount.
+	# A price in which is not know if it is net or gross. It is defined by contract between the seller and the supplier.
 	amount: CommissionPrice
 }
 
@@ -1080,7 +1094,7 @@ type Supplement {
     # Specifies the duration type. Possible duration types: Range (specified dates) or Open. This field is mandatory for PDI.
     durationType: DurationType
 
-    # Indicates the quantity of field in the element “unit”.
+    # Indicates the quantity of field in the element â€œunitâ€.
     quantity: Int
 
     # Indicates the unit type. Possible unit types: Day or Hour.
@@ -1242,7 +1256,7 @@ enum PriceType {
 
 # Rate Rules
 enum RateRulesType {
-	# The product can’t be sold separately from another product attached to it, such as a flight.
+	# The product canâ€™t be sold separately from another product attached to it, such as a flight.
 	PACKAGE
 
 	# Options that can only be sold to people who are 55 and older.
