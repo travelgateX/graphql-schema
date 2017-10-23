@@ -320,7 +320,7 @@ input DefaultSettingsInput {
     nationality : Country!
 
     # Targeted zone, country or point of sale to be used in request.
-    markets : [String!]
+    market : String!
 
     # Group of timeouts to be used in the differents services
     timeout : TimeoutInput!
@@ -440,9 +440,6 @@ input HotelCriteriaQuoteInput {
 	# Identifier of the option chosen in the search.
 	optionRefId: String!
 
-	# Indicates if you want to block the option selected in search, as long as the supplier allows it in this method
-	block: Boolean
-
    	# Language to be used in request.
    	language : Language
 }
@@ -475,7 +472,7 @@ input HotelCriteriaSearchInput {
    	nationality : Country
 
    	# Targeted zone, country or point of sale to be used in request.
-   	markets : [String!]
+   	market : String
 }
 
 # Settings that you can edit for this avail. Values are loaded by default in our Back Office.
@@ -803,7 +800,7 @@ type CriteriaSearch {
    	nationality : Country
 
    	# Targeted zone, country or point of sale to be used in request.
-   	markets : [String!]
+   	market : String!
 }
 
 type DefaultSettings {
@@ -824,7 +821,7 @@ type DefaultSettings {
     nationality : Country!
 
     # Targeted zone, country or point of sale to be used in request.
-    markets : [String!]
+    market : String!
 
     # Group of timeouts to be used in the differents services
     timeouts : Timeout!
@@ -988,15 +985,15 @@ type HotelOptionSearch implements BookableOptionSearch {
 	supplierCode: String!
 
 	# Access code of this option.
-    accessCode: String!
+    	accessCode: String!
 
    	# Market of this option.
-    markets: [String!]
+    	market: String!
 
-    # Code of the hotel in the context selected.
+    	# Code of the hotel in the context selected.
 	hotelCode: String!
 
-    # Name of the hotel.
+    	# Name of the hotel.
 	hotelName: String
 
 	# Code of the board in the context selected.
