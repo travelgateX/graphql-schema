@@ -72,6 +72,28 @@ scalar JSON
 type Mutation {
     	hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
 	hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
+
+	# Creates accesses
+	# If groups are sent in input, every access will be assigned to them.
+    	createAccess(input: GroupAccessInput!): GroupAccess
+    	# Updates existing accesses. Assigment/dissociation of groups will be done depening of the 'groups' input.
+    	# Note that if 'groups' is sent as empty, these accesses will be dissociated from all groups.
+    	updateAccess(input: IdGroupAccessInput!): GroupAccess
+    	# Deletes accesses and their relation with groups. Accesses Id are expected as input.
+    	deleteAccesses(input: [String!]!): [GroupAccess!]
+    	# Creates a defaultSettings for a given group
+    	createDefaultSettings(input: DefaultSettingsInput!): DefaultSettings
+    	# Updates a defaultSettings for a given group
+    	updateDefaultSettings(input: DefaultSettingsInput!): DefaultSettings
+    	# Deletes a defaultSettings for a given group
+    	deleteDefaultSettings(input: String!): Boolean!
+    	# Updates existing suppliers. Assigment/dissociation of groups cannot be done.
+    	updateSupplier(input: AccessSupplierInput!): Supplier
+    	# Updates existing connectUser. Assigment/dissociation of groups cannot be done.
+    	updateConnectUser(input: AccessConnectUserInput!): ConnectUser
+
+	# Load mapping files for a group.
+    	loadFile(input: String!): String!
 }
 
 # The query type, represents all of the entry points into our object graph.
@@ -82,6 +104,27 @@ type Query {
 	quote: Quote!
 	# Returns detailed information about books.
 	booking: Booking
+
+	# Returns accesses grouped by 'groups'.
+	# If access identifiers 'ids' are sent, only those accesses will be read.
+    	# If 'groupsCodes' are sent, only accesses for these groups will be read
+    	# Requesting this query without any of these filters will provide all requestor accesses
+    	access(ids: [String!], groupCodes: [String!]): [GroupAccess!]
+    	# Reads defaultSettings of the given group
+    	defaultSettings(groupCode: String!): DefaultSettings
+    	# Returns suppliers and their groups.
+    	# If supplier identifiers 'ids' are sent, only those  will be read.
+    	# If 'groupsCodes' are sent, only suppliers for these groups will be read
+    	# Requesting this query without any of these filters will provide all requestor suppliers
+    	supplier(ids: [String!], groupCodes: [String!]): [Supplier!]
+    	# Returns connect users and their groups.
+    	# If connect user identifiers 'ids' are sent, only those  will be read.
+    	# If 'groupsCodes' are sent, only connect user for these groups will be read
+    	# Requesting this query without any of these filters will provide all requestor connect users
+    	connectUser(ids: [String!], groupCodes: [String!]): [ConnectUser!]
+	
+	# Returns the mapping for a group, is necessary specify the group.
+    	mapping(groupCode: String!): Mapping!
 	
 	# Returns status of the search service.
     	searchStatusService: ServiceStatus!
@@ -93,6 +136,28 @@ type Query {
     	cancelStatusService: ServiceStatus!
 	# Returns status of the quote service.
     	bookingStatusService: ServiceStatus!
+}
+
+# The information required to access the supplier’s system.
+input AccessConfigurationInput {
+    # Indicates if the access is active.
+    isActive: Boolean!
+    # Arbitrary not unique identifier
+    code: String!
+    # Supplier to which this access belongs
+    supplier: String!
+    # Information required to access the supplier’s system.
+    configuration: ConfigurationInput
+}
+
+# Connect user input for data access management API
+input AccessConnectUserInput {
+    # connect user code
+    code: String!
+    # Indicates if the connect user is active.
+    isActive: Boolean!
+    # groups related to this connect user
+    groups: [ConnectUserGroupInput!]
 }
 
 # Filter that selects the accesses which will be used in the availability. You must choose one of them, include or
@@ -107,7 +172,7 @@ input AccessFilterInput {
 }
 
 # Access overwrites an existent access in our Back Office or creates a new
-# one only for this availability. An access objetc contains its ow code, configuration and settings.
+# one only for this availability. An access objetc contains its own code, configuration and settings.
 input AccessInput {
    	# The accessID used to identify the existing access in our Back Office to
    	# overwrite it. Acts as an identifier in this avail existing or not in
@@ -119,6 +184,18 @@ input AccessInput {
 
    	# You can configure an special settings for any access. This level overwrites the avail and supplier settings levels.
    	settings: SettingsBaseInput
+}
+
+# Supplier input for data access management API
+input AccessSupplierInput {
+    # supplier code
+    code: String!
+    # supplier instance
+    dll: String!
+    # Indicates if the supplier is active.
+    isActive: Boolean!
+    # groups related to this supplier
+    groups: [SupplierGroupInput!]
 }
 
 # Input BookPax contains basic information abaout pax like name, surname and age.
@@ -178,6 +255,15 @@ input ConfigurationInput {
    	markets: [String!]
 }
 
+
+# group related to a connect user
+input ConnectUserGroupInput {
+    # group code of the group related to this connect user
+    groupCode: String!
+    # Indicates if the connect user is active for its connect user
+    isActive: Boolean!
+}
+
 # Criteria by dates
 input CriteriaBookingDatesInput {
     # Indicates the type of dates
@@ -202,6 +288,45 @@ input CriteriaBookingReferencesInput {
 
     # Contains the client reference and/or supplier reference.
     references: [BookReferenceInput!]!
+}
+
+# List of business rules to filter the options that you are interested.
+input DefaultSettingsBusinessRulesInput {
+    # Options quota per avail. Numbers of options wanted by avail.
+    optionsQuota: Int!
+
+    # Different business rules to filter the options that you are interested.
+    businessRulesType: BusinessRulesType!
+}
+
+input DefaultSettingsInput {
+    # Unique Id
+    groupCode : String!
+
+    # This field is got only if the authorization header is of the type JWT. It is used for to change the user that
+    # has been set by default in the preload.
+    connectUser: String!
+
+    # Indicates the context of the I/O codes (hotel, board, room and rates)
+    context: String
+
+    # Language to be used in request.
+    language : Language!
+
+    # Currency requested if supported by supplier.
+    currency : Currency!
+
+    # Nationality of the guest (use ISO3166_1_alfa_2).
+    nationality : Country!
+
+    # Targeted zone, country or point of sale to be used in request.
+    market : String!
+
+    # Group of timeouts to be used in the differents services
+    timeout : TimeoutInput!
+
+    # Business rules.
+    businessRules: DefaultSettingsBusinessRulesInput!
 }
 
 # Input delta price, indicates price variation permitted by the client
@@ -231,6 +356,13 @@ input ExpireDateInput{
 input FilterInput {
    	# You can specify one of the filters or any of them. In this latter case, all the configurated accesses will be executed.
    	access: AccessFilterInput!
+}
+
+input GroupAccessInput {
+    # groups identifiers in which the access will be associated
+    groupCodes: [String!]
+    # access related data
+    accesses: [AccessConfigurationInput!]!
 }
 
 # Holder object that contains the pax name and surname.
@@ -308,9 +440,6 @@ input HotelCriteriaQuoteInput {
 	# Identifier of the option chosen in the search.
 	optionRefId: String!
 
-	# Indicates if you want to block the option selected in search, as long as the supplier allows it in this method
-	block: Boolean
-
    	# Language to be used in request.
    	language : Language
 }
@@ -343,7 +472,7 @@ input HotelCriteriaSearchInput {
    	nationality : Country
 
    	# Targeted zone, country or point of sale to be used in request.
-   	markets : [String!]
+   	market : String
 }
 
 # Settings that you can edit for this avail. Values are loaded by default in our Back Office.
@@ -369,6 +498,26 @@ input HotelSettingsInput {
 
    	# Array of suppliers. Each one contains its own code, settings and accesses.
    	suppliers: [SupplierInput!]
+}
+
+input IdAccessConfigurationInput {
+    # access unique identifier
+    id: ID!
+    # Indicates if the access is active.
+    isActive: Boolean!
+    # Arbitrary not unique identifier
+    code: String!
+    # Supplier to which this access belongs
+    supplier: String!
+    # Information required to access the supplier’s system.
+    configuration: ConfigurationInput
+}
+
+input IdGroupAccessInput {
+    # identifier of the groups in which the access will be associated
+    groupCodes: [String!]
+
+    accesses: [IdAccessConfigurationInput!]!
 }
 
 # Parameters for additional information for the supplier's configuration.
@@ -422,6 +571,14 @@ input SettingsBaseInput {
    	businessRules: BusinessRulesInput
 }
 
+# group related to a supplier
+input SupplierGroupInput {
+    # group code of the group related to this supplier
+    groupCode: String!
+    # Indicates if the supplier is active for its supplier
+    isActive: Boolean!
+}
+
 # Supplier object. Contains its own settings, code and access.
 input SupplierInput {
    	# You can configure an special settings for any supplier. This level overwrites the avail settings level but not the
@@ -436,6 +593,17 @@ input SupplierInput {
    	accesses: [AccessInput!]
 }
 
+input TimeoutInput {
+    # Milliseconds before the search connection is closed.
+    search: Int!
+
+    # Milliseconds before the quote connection is closed.
+    quote: Int!
+
+    # Milliseconds before the book connection is closed.
+    book: Int!
+}
+
 # Url's
 input UrlsInput {
     # Specific Url for Availability method.
@@ -446,6 +614,29 @@ input UrlsInput {
     book:           URI
     # Supplier URL used for multiple methods.
     generic:        URI
+}
+
+type Access {
+    # Indicates if the access is active.
+    isActive: Boolean!
+    # Unique AccessConfiguration identifier
+    id: ID!
+    # Access code.
+    code: String!
+    # supplier for this access.
+    supplier: String!
+    # User code to connect to supplier.
+    user: String
+    # Password for the connection.
+    password: String
+    # Specific Urls
+    urls: Urls!
+    # List of parameters for additional information.
+    parameters: [Parameter!]
+    # Markets allowed for the access.
+    markets: [String!]
+    # Business rules types for the access.
+    rateRules: [RateRulesType!]
 }
 
 # Extra information about the option.
@@ -530,6 +721,15 @@ type BookingRoom {
     price: Price
 }
 
+# List of business rules to filter the options that you are interested.
+type BusinessRules {
+    # Options quota per avail. Numbers of options wanted by avail.
+    optionsQuota: Int!
+
+    # Different business rules to filter the options that you are interested.
+    businessRulesType: BusinessRulesType!
+}
+
 # Contains information about a cancel penalty.
 type CancelPenalty implements Priceable {
 	# Cancellation fees applicable x number of hours before the check in date.
@@ -553,6 +753,24 @@ type CancelPolicy {
 
 	# List of cancel penalties.
 	cancelPenalties: [CancelPenalty!]
+}
+
+# data related to a connect user and its groups
+type ConnectUser {
+    # unique connect user of a supplier
+    code: String!
+    # indicates whether a connect user is active
+    isActive: Boolean!
+    # connect user's related data of its groups
+    connectUserGroups: [ConnectUserGroup!]
+}
+
+# group related to a connect user
+type ConnectUserGroup {
+    # group code of the group related to this connect user
+    groupCode: String!
+    # Indicates if the connect user is active for its connect user
+    isActive: Boolean!
 }
 
 # Criteria of search contains destination, travel dates and the number of pax in each room.
@@ -582,7 +800,34 @@ type CriteriaSearch {
    	nationality : Country
 
    	# Targeted zone, country or point of sale to be used in request.
-   	markets : [String!]
+   	market : String!
+}
+
+type DefaultSettings {
+    # This field is got only if the authorization header is of the type JWT. It is used for to change the user that
+    # has been set by default in the preload.
+    connectUser: String!
+
+    # Indicates the context of the I/O codes (hotel, board, room and rates)
+    context: String
+
+    # Language to be used in request.
+    language : Language!
+
+    # Currency requested if supported by supplier.
+    currency : Currency!
+
+    # Nationality of the guest (use ISO3166_1_alfa_2).
+    nationality : Country!
+
+    # Targeted zone, country or point of sale to be used in request.
+    market : String!
+
+    # Group of timeouts to be used in the differents services
+    timeouts : Timeout!
+
+    # Business rules.
+    businessRules: BusinessRules!
 }
 
 # Application errors
@@ -595,6 +840,14 @@ type Error implements AdviseMessage {
 
     # Error description
     description : String!
+}
+
+# Pair of groups and accesses. All accesses returned will belong to all the groups in groupCodes
+type GroupAccess {
+    # group identifiers
+    groupCodes: [String!]!
+
+    accesses: [Access!]
 }
 
 # Holder object that contains the pax name and surname.
@@ -732,15 +985,15 @@ type HotelOptionSearch implements BookableOptionSearch {
 	supplierCode: String!
 
 	# Access code of this option.
-    accessCode: String!
+    	accessCode: String!
 
    	# Market of this option.
-    markets: [String!]
+    	market: String!
 
-    # Code of the hotel in the context selected.
+    	# Code of the hotel in the context selected.
 	hotelCode: String!
 
-    # Name of the hotel.
+    	# Name of the hotel.
 	hotelName: String
 
 	# Code of the board in the context selected.
@@ -827,6 +1080,42 @@ type HotelSearch implements Response {
     warnings: [Warning!]
 }
 
+# Map codes.
+type Map {
+    # Supplier code.
+    supplierCode: String!
+    # Equivalences of the supplier for the client code.
+    codes: [String!]
+}
+
+# Returns the mapping for a group.
+type Mapping {
+    # Returns the differents group contexts, you can filter by some contexts.
+    contexts(contextCodes: [String!], supplierCodes: [String!]): [MappingContext!]
+}
+
+# Returns the differents group contexts
+type MappingContext {
+    # Code of the context
+    contextCode: String!
+    # Mapping of hotels. Filter by hotel code.
+    hotels(hotelCodes: [String!]): [MappingEntity!]
+    # Mapping of rooms. Filter by room code.
+    rooms(roomCodes: [String!]): [MappingEntity!]
+    # Mapping of rates. Filter by rate code.
+    rates(rateCodes: [String!]): [MappingEntity!]
+    # Mapping of boards. Filter by board code.
+    boards(BoardCodes: [String!]): [MappingEntity!]
+}
+
+# Mapping about client codes with the equivalence per supplier.
+type MappingEntity {
+    # Client code
+    code: String!
+    # Supplier code. Filter by supplier.
+    maps: [Map!]
+}
+
 # Information about occupancy.
 type Occupancy {
 	# Unique ID room in this option.
@@ -834,6 +1123,16 @@ type Occupancy {
 
 	# List of pax of this occupancy.
 	paxes: [Pax!]!
+}
+
+# Parameters for additional information for the supplier's configuration.
+type Parameter {
+    # Contains the keyword/Id to identify a parameter.
+    # This information is mandatory.
+    key: String!
+    # Contains the parameter values.
+    # This information is mandatory.
+    value: String!
 }
 
 # Specifies the age pax. The range of what is considered an adult, infant or baby is particular to each supplier.
@@ -1095,6 +1394,26 @@ type Supplement {
     price: Price
 }
 
+# data related to a supplier and its groups
+type Supplier {
+    # unique identifier of a supplier
+    code: String!
+    # indicates whether a supplier is active
+    isActive: Boolean!
+    # instance to which this supllier is connected
+    dll: String!
+    # supplier's related data of its groups
+    supplierGroups: [SupplierGroup!]
+}
+
+# group related to a supplier
+type SupplierGroup {
+    # group code of the group related to this supplier
+    groupCode: String!
+    # Indicates if the supplier is active for its supplier
+    isActive: Boolean!
+}
+
 # Surcharge that it can be or it is already added to the option returned. Contains all the information about the surcharge.
 type Surcharge {
     # Indicates the charge types. We need to know whether the supplements have to be paid when the consumer gets to the hotel or beforehand.
@@ -1114,6 +1433,17 @@ type Surcharge {
     description: String
 }
 
+type Timeout {
+    # Milliseconds before the search connection is closed.
+    search: Int!
+
+    # Milliseconds before the quote connection is closed.
+    quote: Int!
+
+    # Milliseconds before the book connection is closed.
+    book: Int!
+}
+
 # Supplier transaction
 type Transactions {
     # Transaction Request.
@@ -1124,6 +1454,18 @@ type Transactions {
 
 	# Time when the request has been processed.
 	timeStamp:      DateTime!
+}
+
+# Url's
+type Urls {
+    # Specific Url for Availability method.
+    search:         URI
+    # Specific Url for Reservation method.
+    quote:          URI
+    # Specific Url for Valuation method.
+    book:           URI
+    # Supplier URL used for multiple methods.
+    generic:        URI
 }
 
 # Application warnings
@@ -1173,7 +1515,6 @@ enum BusinessRulesType {
 
    	# Groups the option by room type without exceeding the optionsQuota limit.
    	ROOM_TYPE
-
 }
 
 # Options type
@@ -1326,4 +1667,5 @@ enum UnitTimeType {
    	# Hour
    	HOUR
 }
+
 
