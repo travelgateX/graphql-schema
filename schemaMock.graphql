@@ -15,10 +15,14 @@ interface Node {
 }
 
 interface AdviseMessage {
-    # Error code
+    # TODO:
+    # Error code: The following codes can be returned:
+    # XXX: XXXXXXXXX XXXXXX
     code: String!
 
-    # Error type
+    # TODO:
+    # Error type: The following types are valid:
+    # XXX: asd asdñoajskd lña ld 
     type: String!
 
     # Error description
@@ -32,29 +36,31 @@ interface BookableOptionSearch {
     # Access code of this option.
     accessCode: String!
 
-    # Indicates the quote key
+    # Indicates the id to be used on Quote as key
     id: String!
 }
 
 interface Priceable {
-    # Specifies the currency.
+    # TODO:
+    # Specifies the currency. ISO 4217 format, example: GBP or USD
     currency: Currency!
 
-    # Specifies the import.
+    # Specifies the amount.
     value: Float!
 }
 
 interface Response {
-    # Application stats in string format
+    # TODO:
+    # Application stats in string format => que formato?
     stats(token: String!): RequestStats
 
-    # Data sent & received in the supplier’s native format.
+    # Data sent & received in the supplier’s original format.
     auditData: AuditData
 
-    # Errors that will lead the service to abort
+    # Errors that lead the service to stop
     errors: [Error!]
 
-    # Potentially harmful situations or errors that won't force the service to abort
+    # Potentially harmful situations or errors that do not stop the service
     warnings: [Warning!]
 }
 
@@ -79,9 +85,11 @@ scalar Country
 #json structure
 scalar JSON
 
-# The mutation type, represents all updates we can make to our data.
+# Mutations are operations that change or update data in the server.
 type Mutation {
+  # Creates a new hotel booking consisting of an option of 1 or more rooms.
   hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
+  # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
 	hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
 
   # Create member. If the code is specified, it creates User, if not, it creates Apikey/Service Account
@@ -116,7 +124,7 @@ type Mutation {
     	loadFile(input: String!): String!
 }
 
-# The query type, represents all of the entry points into our object graph.
+# A Query is an entry point into the object graph.
 type Query {
 	# Available options for a given date and itinerary.
 	search: Search!
@@ -158,62 +166,39 @@ type Query {
     	mapping(groupCode: String!): Mapping!
 	
 	# Returns status of the search service.
-    	searchStatusService: ServiceStatus!
+        searchStatusService: ServiceStatus!
 	# Returns status of the quote service.
-    	quoteStatusService: ServiceStatus!
-	# Returns status of the book service.
-    	bookStatusService: ServiceStatus!
- 	# Returns status of the book service.
-    	cancelStatusService: ServiceStatus!
-	# Returns status of the quote service.
-    	bookingStatusService: ServiceStatus!
+        quoteStatusService: ServiceStatus!
+	# Returns status of the new booking service.
+        bookStatusService: ServiceStatus!
+ 	# Returns status of the cancellation service.
+        cancelStatusService: ServiceStatus!
+        # TODO: me no understand...
+	# Returns status of the booking service.
+        bookingStatusService: ServiceStatus!
 }
 
-# The information required to access the supplier’s system.
-input AccessConfigurationInput {
-    # Indicates if the access is active.
-    isActive: Boolean!
-    # Arbitrary not unique identifier
-    code: String!
-    # Supplier to which this access belongs
-    supplier: String!
-    # Information required to access the supplier’s system.
-    configuration: ConfigurationInput
-}
-
-# Connect user input for data access management API
-input AccessConnectUserInput {
-    # connect user code
-    code: String!
-    # Indicates if the connect user is active.
-    isActive: Boolean!
-    # groups related to this connect user
-    groups: [ConnectUserGroupInput!]
-}
-
-# Filter that selects the accesses which will be used in the availability. You must choose one of them, include or
-# exclude, or the other alternative isn't specified anything.
-# If input both, you will receive a validation error that indicates this error.
+# Include *OR* exclude accesses in this specific search query. If not specified, default accesses will be used.
+# Only one list (includes or excludes) *MUST* be used.
 input AccessFilterInput {
-   	# Indicates that accesses are used in this availability. Only will be used the accesses that are specified here.
+   	# These Access IDs will overwrite the default configuration. Only the IDs on this list will be used in the search query.
    	includes: [ID!]
 
-   	# By default are used all the accesses configured for the hub user, except which are included in this field.
+   	# These Access IDs will overwrite the default configuration. The IDs on this list will be excluded from the search query.
    	excludes: [ID!]
 }
 
-# Access overwrites an existent access in our Back Office or creates a new
-# one only for this availability. An access objetc contains its own code, configuration and settings.
+# AccessInput overwrites an existent access in our Back Office or creates a new
+# one to be used in this search query only. An access object contains its own code, configuration and settings.
 input AccessInput {
-   	# The accessID used to identify the existing access in our Back Office to
-   	# overwrite it. Acts as an identifier in this avail existing or not in
-	# our Back Office.
-	accessId: ID!
+   	# The accessID used to identify the existing access in our Back Office in order to
+   	# overwrite it. Acts as an identifier in this search. It can either exist or not.
+	  accessId: ID!
 
    	# Information required to access the supplier’s system.
    	configuration: ConfigurationInput
 
-   	# You can configure an special settings for any access. This level overwrites the avail and supplier settings levels.
+   	# You can configure an special settings for any access. This level overwrites the search and supplier settings levels.
    	settings: SettingsBaseInput
 }
 
@@ -229,60 +214,60 @@ input AccessSupplierInput {
     groups: [SupplierGroupInput!]
 }
 
-# Input BookPax contains basic information abaout pax like name, surname and age.
+# Input BookPax contains basic information abaout pax such as name, surname and age.
 input BookPaxInput {
-    # Guest's name
-	name: String!
+    # The guest's first  name
+	  name: String!
 
-	# Guest's last name
-	surname: String!
+	  # The guest's last name
+	  surname: String!
 
-	# Guest's age
-	age: Int!
+    # The guest's age
+	  age: Int!
 }
 
-# Reference object that contains the client reference and/or supplier reference.
+# Reference object that contains the client's reference and/or supplier reference.
 input BookReferenceInput {
-	# Client reference
+	# The client's reference
 	client: String
 
-	# Supplier reference
+	# The Supplier's reference
 	supplier: String
 }
 
 # Input BookRoom contains list of pax and the room's reference.
 input BookRoomInput {
-    # Rooms reference in the booking
+    # The room's reference in the booking
     occupancyRefId: Int!
 
-    # Lists of paxes of the room
+    # The list or lists of paxes of the room
 	paxes: [BookPaxInput!]!
 }
 
-# List of business rules to filter the options that you are interested.
+# List of business rules to use as filter on the options.
 input BusinessRulesInput {
-   	# Options quota per avail. Numbers of options wanted by avail.
+   	# Options quota per search. Maximum numbers of options to be returned by the search query.
    	optionsQuota: Int
 
-   	# Different business rules to filter the options that you are interested.
+   	# Different business rules to filter the returned options.
    	businessRulesType: BusinessRulesType
 }
 
-# The information required to access the supplier’s system.
+# The information and credentials required to access the supplier’s system.
 input ConfigurationInput {
-   	# User code to connect to supplier.
+   	# User name for the connection.
    	username: String
 
    	# Password for the connection.
    	password: String
 
-   	# Specific Url provider's service.
-    	urls:           UrlsInput!
+   	# Url or endpoint for the connection.
+    	urls: UrlsInput!
 
-   	# List of parameters for additional information.
+   	# List of parameters with additional required information.
    	parameters: [ParameterInput!]
 
-   	# Markets allowed for the access.
+   	# Source markets allowed for the access.
    	markets: [String!]
 }
 
@@ -297,31 +282,32 @@ input ConnectUserGroupInput {
 
 # Criteria by dates
 input CriteriaBookingDatesInput {
-    # Indicates the type of dates
+    # Type of date. Can be Arrival or Booking date.
     dateType: DateType!
 
-    # Start date
-    # Format: yyyy-MM-dd
+    # Start date.
+    # Format: yyyy-MM-dd.
     start: Date!
 
-    # End date
-    # Format: yyyy-MM-dd
+    # End date.
+    # Format: yyyy-MM-dd.
     end: Date!
 }
 
-# Criteria by references
+# Criteria by references.
+#TODO: No entiendo para q sirve
 input CriteriaBookingReferencesInput {
-    # Hotel code.
+    # The hotel code.
     hotelCode: String!
 
-    # Currency requested.
+    # The requested currency. The API will convert to this currency if supplier returns a different one. TODO: ES CORRECTO?
     currency : Currency!
 
     # Contains the client reference and/or supplier reference.
     references: [BookReferenceInput!]!
 }
 
-# List of business rules to filter the options that you are interested.
+# Input delta price, indicates the price variation permitted by the client before failing the booking.
 input DefaultSettingsBusinessRulesInput {
     # Options quota per avail. Numbers of options wanted by avail.
     optionsQuota: Int!
@@ -362,17 +348,18 @@ input DefaultSettingsInput {
 
 # Input delta price, indicates price variation permitted by the client
 input DeltaPriceInput {
-	# Amount (in the currency returned into the option) that is accepted by the client to be higher than the valuation price.
-	amount: Float
+    # The amount in the currency returned by the option that will be accepted by the client to be higher than the valuation price.
+    amount: Float
 
-    # Percentage accepted by the client to be higher than the valuation price.
+    # The percentage accepted by the client to be higher than the valuation price.
     percent: Float
 
     # Indicates that the range between valuation price and the new price does not exceed the amount and/or porcentage indicated by the client.
     applyBoth: Boolean!
 }
 
-# Expire Date
+# The card expiration date
+# TODO: yo lo cambiaria a ExpirationDateInput
 input ExpireDateInput{
     # Month MM
     month: Int!
@@ -397,11 +384,12 @@ input GroupAccessInput {
 }
 
 # Holder object that contains the pax name and surname.
+# TODO: yo lo cambiaria a CardHolder o es BookingHolder
 input HolderInput {
-	# Holder's name
+	# The card holder's name
 	name: String!
 
-	# Holder's surname
+	# The card holder's surname
 	surname: String!
 }
 
@@ -419,10 +407,10 @@ input HotelBookInput {
     # Indicates price variation permitted by the client.
     deltaPrice: DeltaPriceInput
 
-    # If the payment is done by credit card, is it mandatory to specify the payment type and the credit card information
+    # If the payment is done by credit card, it's mandatory to specify the payment type and the credit card information.
     paymentCard: PaymentCardInput
 
-    # Any customer comments for the supplier to consider
+    # Any customer comments for the supplier to consider.
     remarks: String
 
     # Holder's basic information
@@ -432,15 +420,15 @@ input HotelBookInput {
     rooms: [BookRoomInput!]!
 }
 
-# Criteria of Cancel.
+# Cancellation Criteria.
 input HotelCancelInput {
-	# Name of the access that have to use in the request.
+    # The name of the access to use in the request.
 	accessCode: String!
 
-	# Language code.
+	# The language code.
     language: Language
 
-    # Hotel code.
+	# The hotel code.
     hotelCode: String!
 
     # Contains the client reference and/or supplier reference.
@@ -453,26 +441,29 @@ input HotelCriteriaBookingInput {
 	# Name of the access that have to use in the request.
     accessCode: String!
 
-    # Language code.
+    # The language code.
     language: Language
 
-    # Criteria search type.
+    # The search type criteria.
     typeSearch: BookingCriteriaType!
 
-    # Criteria by references
+    # The references criteria.
     references: CriteriaBookingReferencesInput
 
-    # Criteria by dates
+    # The dates criteria.
     dates: CriteriaBookingDatesInput
 }
 
-# Criteria of quote contains the option reference id, blocks and language.
+# The quote criteria contains the option reference id, block and language.
 input HotelCriteriaQuoteInput {
 	# Identifier of the option chosen in the search.
 	optionRefId: String!
 
-   	# Language to be used in request.
-   	language : Language
+	# Indicates if you want to block the option selected in search, as long as the supplier allows it in this method
+	block: Boolean
+
+	# Language to be used in request.
+	language : Language
 }
 
 # Criteria of search contains destination, travel dates and the number of pax in each room.
@@ -493,17 +484,18 @@ input HotelCriteriaSearchInput {
 	# For each room you have to specify its own occupancy.
 	occupancies: [RoomInput!]!
 
-   	# Language to be used in request.
-   	language : Language
+	# Language to be used in request.
+	language : Language
 
 	# Currency requested if supported by supplier.
 	currency : Currency
 
 	# Nationality of the guest (use ISO3166_1_alfa_2).
-   	nationality : Country
+	nationality : Country
 
-   	# Targeted zone, country or point of sale to be used in request.
-   	market : String
+	# Targeted zone, country or point of sale to be used in request.
+	# TODO: que formato?
+	markets : [String!]
 }
 
 # Settings that you can edit for this avail. Values are loaded by default in our Back Office.
@@ -1066,15 +1058,15 @@ type HotelOptionSearch implements BookableOptionSearch {
 	supplierCode: String!
 
 	# Access code of this option.
-    	accessCode: String!
+	accessCode: String!
 
    	# Market of this option.
-    	market: String!
+	markets: [String!]
 
-    	# Code of the hotel in the context selected.
+	# Code of the hotel in the context selected.
 	hotelCode: String!
 
-    	# Name of the hotel.
+	# Name of the hotel.
 	hotelName: String
 
 	# Code of the board in the context selected.
