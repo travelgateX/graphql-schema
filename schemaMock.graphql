@@ -3,17 +3,6 @@ schema {
 	query: Query
 }
 
-interface Node {
-  # ID code
-  code: ID!
-  # Errors that will lead the service to abort
-  error: [Error!]
-  # Create date 
-  createdAt: DateTime!
-  # Update date
-  updatedAt: DateTime!
-}
-
 interface AdviseMessage {
     # TODO:
     # Error code: The following codes can be returned:
@@ -87,22 +76,12 @@ scalar JSON
 
 # Mutations are operations that change or update data in the server.
 type Mutation {
-  # Creates a new hotel booking consisting of an option of 1 or more rooms.
-  hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
-  # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
+  	# Creates a new hotel booking consisting of an option of 1 or more rooms.
+  	hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
+  	# Cancels an existing hotel booking consisting of an option of 1 or more rooms.
 	hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
-
-  # Create member. If the code is specified, it creates User, if not, it creates Apikey/Service Account
-  createMember(member: MemberInput!) : Member!
-  # Create group.
-  createGroup(group: GroupCreate!): Group!
-  # Add member to a given group.
-  assignMemberGroup(memberGroup: MemberGroup!): Member!
-  # Add api to a given group.
-  assignApiGroup(apiGroup: ApiGroup!): API!
-  
-	# Creates accesses
-	# If groups are sent in input, every access will be assigned to them.
+  	# Creates accesses
+ 	 # If groups are sent in input, every access will be assigned to them.
     	createAccess(input: GroupAccessInput!): GroupAccess
     	# Updates existing accesses. Assigment/dissociation of groups will be done depening of the 'groups' input.
     	# Note that if 'groups' is sent as empty, these accesses will be dissociated from all groups.
@@ -131,19 +110,7 @@ type Query {
 	# Returns the total price and cancellation policies of the Option selected in the previous step (Search).
 	quote: Quote!
 	# Returns detailed information about books.
-	booking: Booking
-
-  # Returns member by code or all in case of not sending codes.
-  getMembers(codes:[String!],first: Int, Last: Int, before: String, after:String) : MemberConnection!
-  # Returns group by code or all in case of not sending codes.
-  getGroups(codes:[String!],first: Int, Last: Int, before: String, after:String) : GroupConnection!
-  # Returns api by code or all in case of not sending codes.
-  getApis(codes:[String!],first: Int, Last: Int, before: String, after:String) : APIConnection!
-  # Returns resource by code or all in case of not sending codes.
-  getResources(codes:[String!],first: Int, Last: Int, before: String, after:String) : ResourceConnection!
-  # Returns role by code or all in case of not sending codes.
-  getRoles(codes:[String!],first: Int, Last: Int, before: String, after:String) : RoleConnection!
-  
+	booking: Booking 
 	# Returns accesses grouped by 'groups'.
 	# If access identifiers 'ids' are sent, only those accesses will be read.
     	# If 'groupsCodes' are sent, only accesses for these groups will be read
@@ -637,56 +604,6 @@ input UrlsInput {
     book:           URI
     # Supplier URL used for multiple methods.
     generic:        URI
-}
-
-input MemberGroup{
-  	# Group Code
-    groupCode: ID!
-  	# Member Code
-    memberCode: ID!
-  	# Role Code
-    roleCode:   ID!
-}
-
-input ApiGroup {
-  	# Group Code
-    groupCode: ID!
-  	# Api Code
-    apiCode: ID!
-}
-
-input GroupCreate{
-    GroupCreateData: GroupCreateData!
-}
-
-input GroupCreateData{
-  	# Group Code
-    code: String!
-  	# Group Type
-    type: String!
-  	# Group Info
-    info: String
-  	# Group Parent
-    parent: ID!
-}
-
-input MemberInput{
-    memberInputData: MemberInputData!
-}
-
-input MemberInputData{
-  	# Member Code
-    code: String
-  	# Member Info
-    info: String
-  	# Member Type
-    type: MemberType!
-  	# Group Code to which member is added
-    groupCode : String!
-  	# Member Roles
-    roles:  [String!]!
-  	# Resource to which member have new access/roles
-    resource:  String!
 }
 
 type Access {
@@ -1553,208 +1470,6 @@ type Warning implements AdviseMessage {
     description : String!
 }
 
-type Member implements Node{
-  # Member Code
-  code: ID!
-  # Member Data
-  memberData: MemberData
-  # Errors
-  error:   [Error!]
-  # Member Active
-  isActive: Boolean!
-  # Create date 
-  createdAt: DateTime!
-  # Update date
-  updatedAt: DateTime!
-}
-
-type MemberData {
-  # Member ID
-  id: ID!
-  # Member Code
-  code: ID!
-  # Member Roles
-  roles: String
-  # Member Type
-  memberType: String
-  # Member Groups
-  groups(first: Int, Last: Int, before: String, after:String, codes: [String!]): GroupConnection
-}
-
-type Group implements Node{
-  # Group Code
-  code: ID!
-  # Errors
-  error: [Error!]
-  # Group Data
-  groupData: GroupData
-  # Create date 
-  createdAt: DateTime!
-  # Update date
-  updatedAt: DateTime!
-}
-
-type GroupData{
-  # Group ID
-  id: ID!
-  # Group Code
-  code: ID!
-  # Group Type
-  type: GroupType!
-  # Group Parent ID
-  parent: Int!
-  # Group Members
-  members(first: Int, Last: Int, before: String, after:String, codes: [String!]): MemberConnection
-  # Group Apis
-  apis(first: Int, Last: Int, before: String, after:String, codes: [String!]): APIConnection
-}
-
-type API implements Node{
-  # Api Code
-  code: ID!
-  # Errors
-  error: [Error!]
-  # Api Data
-  apiData: APIData
-  # Create date 
-  createdAt: DateTime!
-  # Update date
-  updatedAt: DateTime!
-}
-
-type APIData{
-  # Api ID
-  id: ID!
-  # Api Code
-  code: ID!
-  # Api Groups
-  groups(first: Int, Last: Int, before: String, after:String, codes: [String!]): GroupConnection
-  # Api Resources
-  resources(first: Int, Last: Int, before: String, after:String, codes: [String!]): ResourceConnection
-}
-
-type Resource implements Node{
-  # Resource Code
-  code: ID!
-  # Errors
-  error: [Error!]
-  # Resource Data
-  resourceData: ResourceData
-  # Create date 
-  createdAt: DateTime!
-  # Update date
-  updatedAt: DateTime!
-}
-
-type ResourceData{
-  # Resource ID
-  id: ID!
-  # Reosurce Code
-  code: ID!
-  # Resource Apis
-  apis(first: Int, Last: Int, before: String, after:String, codes: [String!]): APIConnection
-  # Resource Roles
-  roles(first: Int, Last: Int, before: String, after:String, codes: [String!]): RoleConnection
-}
-
-type Role implements Node{
-  # Role Code
-  code: ID!
-  # Errors
-  error: [Error!]
-  # Role Data
-  roleData: RoleData
-  # Create date 
-  createdAt: DateTime!
-  # Update date
-  updatedAt: DateTime!
-}
-
-type RoleData{
-  # Role ID
-  id: ID!
-  # Role Code
-  code: ID!
-  # Role Label
-  label: String!
-  # Create Permission
-  isCreate: Boolean!
-  # Read Permission
-  isRead: Boolean!
-  # Update Permission
-  isUpdate: Boolean!
-  # Delete Permission
-  isDelete: Boolean!
-  # Enable Permission
-  isEnable: Boolean!
-  # Exacutable Permission
-  isExecutable: Boolean!
-  # Especial Permission
-  isEspecial: Boolean!
-  # Especial Permission
-  especial: String
-  # Role Resources
-  resources(first: Int, Last: Int, before: String, after:String, codes: [String!]): ResourceConnection
-}
-
-type MemberConnection{
-  edges: [MemberEdge]
-  pageInfo: PageInfo!
-  
-}
-
-type MemberEdge {
-  cursor: String!
-  node: Member
-}
-
-type GroupConnection{
-  edges: [GroupEdge]
-  pageInfo: PageInfo!
-}
-
-type GroupEdge {
-  cursor: String!
-  node: Group
-}
-
-type APIConnection{
-  edges: [APIEdge]
-  pageInfo: PageInfo!
-}
-
-type APIEdge {
-  cursor: String!
-  node: API
-}
-
-type ResourceConnection{
-  edges: [ResourceEdge]
-  pageInfo: PageInfo!
-}
-
-type ResourceEdge {
-  cursor: String!
-  node: Resource
-}
-
-type RoleConnection{
-  edges: [RoleEdge]
-  pageInfo: PageInfo!
-}
-
-type RoleEdge {
-  cursor: String!
-  node: Role
-}
-
-type PageInfo {
-  hasNextPage: Boolean!
-  hasPreviousPage: Boolean!
-  startCursor: String!
-  endCursor: String!
-}
-
 # Book status
 enum BookStatusType {
 	# The status of the booking is available
@@ -1941,31 +1656,4 @@ enum UnitTimeType {
 
    	# Hour
    	HOUR
-}
-
-# Group type
-enum GroupType{
-  # Root Group
-  ROOT
-  
-  # Organization Group
-  ORG
-  
-  # General Group
-  GROUP
-  
-  # Profile Group
-  PROFILE
-  
-  # Team Group
-  TEAM
-}
-
-# Member Type
-enum MemberType {
-  # User type
-  USER
-  
-  # Service Account Type
-  SERVICE_ACCOUNT
 }
