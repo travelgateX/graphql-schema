@@ -30,17 +30,24 @@ interface BookableOptionSearch {
 }
 
 interface Priceable {
-    # TODO:
     # Specifies the currency. ISO 4217 format, example: GBP or USD
     currency: Currency!
 
-    # Specifies the amount.
-    value: Float!
+    # Is binding.
+    binding: Boolean!
+
+    # Specifies the import net.
+    net: Float!
+
+    # Specifies the import gross.
+    gross: Float
+
+    # Specifies the exchange.
+    exchange: Exchange!
 }
 
 interface Response {
-    # TODO:
-    # Application stats in string format => que formato?
+    # Application stats in string format
     stats(token: String!): RequestStats
 
     # Data sent & received in the supplier’s original format.
@@ -81,7 +88,7 @@ type Mutation {
   	# Cancels an existing hotel booking consisting of an option of 1 or more rooms.
 	hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
   	# Creates accesses
- 	 # If groups are sent in input, every access will be assigned to them.
+ 	# If groups are sent in input, every access will be assigned to them.
     	createAccess(input: GroupAccessInput!): GroupAccess
     	# Updates existing accesses. Assigment/dissociation of groups will be done depening of the 'groups' input.
     	# Note that if 'groups' is sent as empty, these accesses will be dissociated from all groups.
@@ -143,6 +150,29 @@ type Query {
         # TODO: me no understand...
 	# Returns status of the booking service.
         bookingStatusService: ServiceStatus!
+}
+
+
+# The information required to access the supplier’s system.
+input AccessConfigurationInput {
+    # Indicates if the access is active.
+    isActive: Boolean!
+    # Arbitrary not unique identifier
+    code: String!
+    # Supplier to which this access belongs
+    supplier: String!
+    # Information required to access the supplier’s system.
+    configuration: ConfigurationInput
+}
+
+# Connect user input for data access management API
+input AccessConnectUserInput {
+    # connect user code
+    code: String!
+    # Indicates if the connect user is active.
+    isActive: Boolean!
+    # groups related to this connect user
+    groups: [ConnectUserGroupInput!]
 }
 
 # Include *OR* exclude accesses in this specific search query. If not specified, default accesses will be used.
@@ -262,7 +292,6 @@ input CriteriaBookingDatesInput {
 }
 
 # Criteria by references.
-#TODO: No entiendo para q sirve
 input CriteriaBookingReferencesInput {
     # The hotel code.
     hotelCode: String!
@@ -426,9 +455,6 @@ input HotelCriteriaQuoteInput {
 	# Identifier of the option chosen in the search.
 	optionRefId: String!
 
-	# Indicates if you want to block the option selected in search, as long as the supplier allows it in this method
-	block: Boolean
-
 	# Language to be used in request.
 	language : Language
 }
@@ -460,9 +486,8 @@ input HotelCriteriaSearchInput {
 	# Nationality of the guest (use ISO3166_1_alfa_2).
 	nationality : Country
 
-	# Targeted zone, country or point of sale to be used in request.
-	# TODO: que formato?
-	markets : [String!]
+   	# Targeted zone, country or point of sale to be used in request.
+   	market : String
 }
 
 # Settings that you can edit for this avail. Values are loaded by default in our Back Office.
@@ -721,7 +746,7 @@ type BusinessRules {
 }
 
 # Contains information about a cancel penalty.
-type CancelPenalty implements Priceable {
+type CancelPenalty {
 	# Cancellation fees applicable x number of hours before the check in date.
 	hoursBefore: Int!
 
@@ -830,6 +855,15 @@ type Error implements AdviseMessage {
 
     # Error description
     description : String!
+}
+
+# Informs about the currency of origin, and the rate applied over result returned by the supplier.
+type Exchange {
+    # Informs about the currency of origin.
+    currency: Currency!
+
+    # Informs about the rate applied over result.
+    rate: Float!
 }
 
 # Pair of groups and accesses. All accesses returned will belong to all the groups in groupCodes
@@ -975,15 +1009,15 @@ type HotelOptionSearch implements BookableOptionSearch {
 	supplierCode: String!
 
 	# Access code of this option.
-	accessCode: String!
+    accessCode: String!
 
    	# Market of this option.
-	markets: [String!]
+    market: String!
 
-	# Code of the hotel in the context selected.
+    # Code of the hotel in the context selected.
 	hotelCode: String!
 
-	# Name of the hotel.
+    # Name of the hotel.
 	hotelName: String
 
 	# Code of the board in the context selected.
@@ -1106,6 +1140,32 @@ type MappingEntity {
     maps: [Map!]
 }
 
+# Informs markup applied over supplier price.
+type Markup implements Priceable {
+    # channel that apply the markup.
+    channel: String!
+
+    # Currency code indicating which currency should be paid.
+    # This information is mandatory.
+    currency: Currency!
+
+    # It indicates if the price indicated in the gross must be respected.
+    # That is, the customer can not sell the room / option at a price lower than that established by the supplier.
+    # This information is mandatory.
+    binding: Boolean!
+
+    # Indicates the net price that the customer must pay to the supplier plus the markup.
+    # This information is mandatory.
+    net: Float!
+
+    # Indicates the retail price that the supplier sells to the customer plus the markup.
+    gross: Float
+
+    # Informs about the currency of origin, and the rate applied over result.
+    # This information is mandatory.
+    exchange: Exchange!
+}
+
 # Information about occupancy.
 type Occupancy {
 	# Unique ID room in this option.
@@ -1133,7 +1193,7 @@ type Pax {
 
 # Price indicates the value of the room/option.
 # Supplements and/or surcharges could be or not included into the price, will be verified with the nodes Supplements/Surcharges.
-type Price {
+type Price implements Priceable {
 	# Currency code indicating which currency should be paid.
 	# This information is mandatory.
 	currency: Currency!
@@ -1143,18 +1203,19 @@ type Price {
 	# This information is mandatory.
 	binding: Boolean!
 
-	# It indicates the commission in percentage that the supplier gives the client.
-	# In case the provider does not indicate this commission in its response will be used the value of commission configured in the aggregator.
-	# This information is mandatory.
-	commissionPercentage: Float!
-
 	# Indicates the net price that the customer must pay to the supplier.
 	# This information is mandatory.
 	net: Float!
 
 	# Indicates the retail price that the supplier sells to the customer.
-	# This price is already calculated from the commissionPercentage, and is the one established by contract.
 	gross: Float
+
+	# Informs about the currency of origin, and the rate applied over result returned by the supplier.
+	# This information is mandatory.
+	exchange: Exchange!
+
+	# Informs markup applied over supplier price.
+	markups: [Markup!]
 }
 
 # Information about daily price.
