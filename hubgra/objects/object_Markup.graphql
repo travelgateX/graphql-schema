@@ -1,0 +1,25 @@
+# Informs markup applied over supplier price.
+type Markup implements Priceable {
+    # channel that apply the markup.
+    channel: String!
+
+    # Currency code indicating which currency should be paid.
+    # This information is mandatory.
+    currency: Currency!
+
+    # It indicates if the price indicated in the gross must be respected.
+    # That is, the customer can not sell the room / option at a price lower than that established by the supplier.
+    # This information is mandatory.
+    binding: Boolean!
+
+    # Indicates the net price that the customer must pay to the supplier plus the markup.
+    # This information is mandatory.
+    net: Float!
+
+    # Indicates the retail price that the supplier sells to the customer plus the markup.
+    gross: Float
+
+    # Informs about the currency of origin, and the rate applied over result.
+    # This information is mandatory.
+    exchange: Exchange!
+}

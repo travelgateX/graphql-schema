@@ -1,0 +1,9 @@
+# data related to a connect user and its groups
+type ConnectUser {
+    # unique connect user of a supplier
+    code: String!
+    # indicates whether a connect user is active
+    isActive: Boolean!
+    # connect user's related data of its groups
+    connectUserGroups: [ConnectUserGroup!]
+}

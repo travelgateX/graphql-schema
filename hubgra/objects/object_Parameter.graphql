@@ -1,0 +1,9 @@
+# Parameters for additional information for the supplier's configuration.
+type Parameter {
+    # Contains the keyword/Id to identify a parameter.
+    # This information is mandatory.
+    key: String!
+    # Contains the parameter values.
+    # This information is mandatory.
+    value: String!
+}

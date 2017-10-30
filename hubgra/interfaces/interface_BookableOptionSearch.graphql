@@ -1,0 +1,10 @@
+interface BookableOptionSearch {
+    # Supplier that offers this option.
+    supplierCode: String!
+
+    # Access code of this option.
+    accessCode: String!
+
+    # Indicates the id to be used on Quote as key
+    id: String!
+}

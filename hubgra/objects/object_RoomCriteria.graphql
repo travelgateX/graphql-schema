@@ -1,0 +1,5 @@
+# Occupancy for a room. It contains a list of pax ages.
+type RoomCriteria {
+	# Array of pax ages. The number of items in the array will indicate the pax occupancy.
+	paxes: [Pax!]!
+}

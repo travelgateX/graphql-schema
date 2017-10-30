@@ -1,0 +1,11 @@
+# Url's
+input UrlsInput {
+    # Specific Url for Availability method.
+    search:         URI
+    # Specific Url for Reservation method.
+    quote:          URI
+    # Specific Url for Valuation method.
+    book:           URI
+    # Supplier URL used for multiple methods.
+    generic:        URI
+}
