@@ -1,7 +1,7 @@
 # Available options for a given date and itinerary. It does not filter different classes, times or
 # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
 # forward.
-extend type Search {
+type Search {
 	# Available options of an hotel for a given date and itinerary. It does not filter different classes, times or
 	# fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
 	# forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
