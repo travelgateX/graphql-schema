@@ -1,0 +1,45 @@
+# Hotel data
+type HotelData {
+    # Internal code to perform availability and/or supplier code.
+    code: ID!
+    suppliers:[Supplier!]!
+    codeInSupplier(code:ID!): ID!
+
+
+
+    # Internal code established by the supplier (see StaticConfiguration).
+    providerCode(supplier:ID!): [String!]
+    supplierCode:
+    supplier
+
+
+    # Giata System ID.
+    giataID: GiataID!
+
+    # Name.
+    name: String
+
+    # Address
+    address: Address
+
+    # Avail Destination (will only be returned if requested in availability, and the type is CTY).
+    availDestination: Destination!
+
+    # Geographic Destination
+    geographicDestination: Destination
+
+    # Geocode
+    geocode: Geocode!
+
+    # Contact
+    contact: Contact!
+
+    # Type of payment types allowed by the supplier.
+    paymentOptions: PaymentOptions!
+
+    # Indicates that the Hotel has an Exclusive Deal.
+    exclusiveDeal: Boolean!
+
+    # Hotel's property type. Similar to , but on supplier's side.
+    propertyCategory: PropertyCategory!
+}

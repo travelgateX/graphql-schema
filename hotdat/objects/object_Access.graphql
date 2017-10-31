@@ -1,0 +1,10 @@
+type Access implements Node{
+    code: ID!
+    accessData: AccessData!
+    
+    # Create date 
+    createdAt: DateTime!
+    
+    # Update date
+    updatedAt: DateTime!
+}

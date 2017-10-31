@@ -1,0 +1,8 @@
+# Hotel type
+type Hotel implements Node {
+    # Hotel ID
+    code: ID!
+
+    # Hotel data
+    hotelData: HotelData
+}

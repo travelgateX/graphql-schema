@@ -1,0 +1,8 @@
+# Giata System ID.
+type GiataID {
+    # Giata url.
+    source: String!
+
+    # Giata code
+    code: String
+}

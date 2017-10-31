@@ -1,0 +1,8 @@
+# PropertyCategory type
+type PropertyCategory {
+    # Supplier's property code
+    code: String
+
+    # Supplier's property name
+    name: String
+}

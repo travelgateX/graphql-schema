@@ -1,0 +1,8 @@
+# Query type
+type Query {
+    # Query to obtain a Hotel List
+    hotelList(first: Int, Last: Int, before: String, after: String, codes: [ID!], access:[ID!]): HotelConnection!
+    getSupplier(code: ID!): Supplier!
+    hotelCodeInSupplier(hotel:ID!,supplier:ID!): ID!
+
+}

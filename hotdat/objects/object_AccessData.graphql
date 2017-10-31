@@ -1,0 +1,9 @@
+type AccessData{
+    code: ID!
+    URL: Url!
+    user: String!
+    suppliers: Supplier!
+
+
+    # suppliers(first: Int, Last: Int, before: String, after:String, criterial: criterialInput): SupplierConnection
+}
