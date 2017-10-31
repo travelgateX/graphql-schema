@@ -4,26 +4,28 @@
 
 These instructions will help you to extend and modify the current gateway schema.
 
-### graphql-faker Instalation
-```sh
-yarn global add graphql-faker
-```
-github faker: https://github.com/APIs-guru/graphql-faker
+### graphql-moker Instalation
 
-## Use cases
+https://gitlab.xmltravelgate.com/graphql/graphql-mocker
 
-### Modify schema
-```sh
-graphql-faker schemaMock.graphql
-```
-### Extend schema
-```sh
-graphql-faker schemaMock.graphql
-```
-Open new terminal.
-```sh
-graphql-faker -e http://localhost:9002/graphql -p 9003
-```
+## Modify/extend your schema
+
+1. Create an issue + branch
+2. Mock your schema on graphql-faker editor: http://localhost:9003/editor
+    ```sh
+    yarn run mock /$HOME/projects/graphql/gateway-gql/ api-folder
+    ```
+    
+3. Split your mocked schema
+    ```sh
+    yarn run split /$HOME/projects/graphql/gateway-gql/api-folder/merged_schema.graphql /$HOME/projects/graphql/gateway-gql/api-folder 
+    ```
+
+4. Check yours changes
+5. Commit & Push in your branch
+6. Merge Request to master, close issue & del branch
+
+
 ## Introspection Query
 
 Graphql.js (Facebook): https://github.com/graphql/graphql-js/blob/master/src/utilities/introspectionQuery.js
