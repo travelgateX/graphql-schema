@@ -1,0 +1,5 @@
+# Returns detailed information about books.
+type Booking {
+  #TODO: Del
+  a:Boolean
+}
