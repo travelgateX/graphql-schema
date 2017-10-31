@@ -1,2 +1,5 @@
 #Ignore auto merged from mocker
 merged*
+
+#No more merge schemaMock.graphql 
+schemaMock.graphql 
