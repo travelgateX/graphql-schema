@@ -1,0 +1,6 @@
+type MediaData{
+  code: ID!
+  type: MediaType!
+  url: URI!
+
+}
