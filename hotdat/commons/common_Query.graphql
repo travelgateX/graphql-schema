@@ -1,8 +1,7 @@
 # Query type
 extend type Query {
-    # Query to obtain a Hotel List
-    hotelList(first: Int, Last: Int, before: String, after: String, codes: [ID!], access:[ID!]): HotelConnection!
-    getSupplier(code: ID!): Supplier!
-    hotelCodeInSupplier(hotel:ID!,supplier:ID!): ID!
+  # Query to obtain a Hotel List
+  hotelList(codes: [ID!], language: Language): HotelConnection!
+  #hotelList(first: Int, Last: Int, before: String, after: String, codes: [ID!], access:[ID!], language: Language): HotelConnection!
 
 }

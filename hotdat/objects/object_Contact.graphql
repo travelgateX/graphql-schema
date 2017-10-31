@@ -1,11 +1,11 @@
 # Contact type
 type Contact {
-    # Email.
-    email: String
+  # Email.
+  email: String
 
-    # Telephone.
-    telephone: String
+  # Telephone.
+  telephone: String
 
-    # Fax.
-    fax: String
+  # Fax.
+  fax: String
 }
