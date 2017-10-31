@@ -1,4 +1,0 @@
-type Supplier implements Node{
-    code: ID!
-    supplierData: SupplierData!
-}

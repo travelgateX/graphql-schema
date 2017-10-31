@@ -1,4 +1,10 @@
-type Access {
+type AccessData{
+    #code: ID!
+    #URL: Url!
+    #user: String!
+    suppliers: Supplier!
+    # suppliers(first: Int, Last: Int, before: String, after:String, criterial: criterialInput): SupplierConnection
+
     # Indicates if the access is active.
     isActive: Boolean!
     # Unique AccessConfiguration identifier
@@ -18,5 +24,6 @@ type Access {
     # Markets allowed for the access.
     markets: [String!]
     # Business rules types for the access.
-    rateRules: [RateRulesType!]
+    # rateRules: [RateRulesType!]
+
 }

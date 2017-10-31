@@ -1,5 +1,10 @@
-# data related to a supplier and its groups
-type Supplier {
+type SupplierData{
+    code: ID!
+    isActive: Boolean!
+    dll: ID! #Ver si es un recurso
+    #accesses(first: Int, Last: Int, before: String, after:String, criterial: criterialInput): AccessConnection
+    hotelCodes(hotel:ID!):ID!
+
     # unique identifier of a supplier
     code: String!
     # indicates whether a supplier is active
@@ -8,4 +13,6 @@ type Supplier {
     dll: String!
     # supplier's related data of its groups
     supplierGroups: [SupplierGroup!]
+
+
 }

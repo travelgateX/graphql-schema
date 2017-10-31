@@ -9,8 +9,7 @@ type HotelData {
 
     # Internal code established by the supplier (see StaticConfiguration).
     providerCode(supplier:ID!): [String!]
-    supplierCode:
-    supplier
+    supplierCode: Supplier
 
 
     # Giata System ID.
