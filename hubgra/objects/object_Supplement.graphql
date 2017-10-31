@@ -1,0 +1,45 @@
+# Supplement that it can be or its already added to the option returned. Contains all the information about the supplement.
+type Supplement {
+    # Specifies the supplement code.
+    code: String!
+
+    # Specifies the supplement name.
+    name: String
+
+    # Specifies the supplement description.
+    description: String
+
+    # Indicates the supplement type. Possible types: Fee, Ski_pass, Lessons, Meals, Equipment, Ticket, Transfers, Gla, Activity or Null.
+    supplementType: SupplementType!
+
+    # Indicates the charge types. We need to know whether the supplements have to be paid when the consumer gets to the hotel or beforehand.
+    # Possible charge types: Include or Exclude.
+    # when include: this supplement is mandatory and included in the option's price
+    # when exclude: this supplement is not included in the option's price
+    chargeType: ChargeType!
+
+    # Indicates if the supplement is mandatory or not. If mandatory, this supplement will be applied to this option
+    # if the chargeType is excluded the customer will have to pay it directly at the hotel
+    mandatory: Boolean!
+
+    # Specifies the duration type. Possible duration types: Range (specified dates) or Open. This field is mandatory for PDI.
+    durationType: DurationType
+
+    # Indicates the quantity of field in the element “unit”.
+    quantity: Int
+
+    # Indicates the unit type. Possible unit types: Day or Hour.
+    unit: UnitTimeType
+
+    # Indicates the effective date of the supplement.
+    effectiveDate: Date
+
+    # Indicates the expire date of the supplement.
+    expireDate: Date
+
+    # Contains information about the resort
+    resort: Resort
+
+    # Indicates the supplement price.
+    price: Price
+}

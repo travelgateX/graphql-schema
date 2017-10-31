@@ -1,0 +1,5 @@
+# Returns the total price and cancellation policies of the Option selected in the previous step (Search).
+extend type Quote {
+    # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
+    hotel(criteria: HotelCriteriaQuoteInput!, settings: HotelSettingsInput): HotelQuote
+}

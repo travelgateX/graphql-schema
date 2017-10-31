@@ -1,0 +1,14 @@
+# Information about the rate of the option returned.
+type RatePlan {
+    # Specifies the rate code.
+    code: String!
+
+    # Specifies the rate name.
+    name: String
+
+	# Start date in which the rate becomes effective.
+    effectiveDate: Date
+
+    # Expire date of the rate.
+    expireDate: Date
+}

@@ -1,0 +1,17 @@
+# Book status
+enum BookStatusType {
+	# The status of the booking is available
+	OK
+
+	# The status of the booking is KO
+	KO
+
+	# The status of the booking is on request
+	ON_REQUEST
+
+	# The status of the booking is cancelled
+	CANCELLED
+
+	# The status of the booking is unknown
+	UNKNOWN
+}

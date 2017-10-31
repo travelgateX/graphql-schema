@@ -1,0 +1,5 @@
+# Mutations are operations that change or update data in the server.
+type Mutation {
+  #TODO: Del
+  a:Boolean 
+}

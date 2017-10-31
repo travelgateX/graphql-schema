@@ -1,0 +1,2 @@
+#In queries or mutations, Date fields have to be specified in ISO 8601 format with enclosing double quotes: datetime: "2015-11-22".
+scalar Date

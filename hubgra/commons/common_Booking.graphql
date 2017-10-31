@@ -1,0 +1,5 @@
+# Returns detailed information about books.
+extend type Booking {
+    # Returns detailed information about books, you can indicated a list of locators or a range date.
+    hotel(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput): HotelBooking
+}

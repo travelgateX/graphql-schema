@@ -1,0 +1,11 @@
+# Supplier transaction
+type Transactions {
+    # Transaction Request.
+    request:        String!
+
+    # Transaction Response.
+	response:       String!
+
+	# Time when the request has been processed.
+	timeStamp:      DateTime!
+}

@@ -1,0 +1,8 @@
+# Charge Type
+enum ChargeType {
+   	# The charge is included.
+   	INCLUDE
+
+   	# The charge is excluded.
+   	EXCLUDE
+}

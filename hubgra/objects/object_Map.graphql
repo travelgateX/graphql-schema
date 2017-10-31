@@ -1,0 +1,7 @@
+# Map codes.
+type Map {
+    # Supplier code.
+    supplierCode: String!
+    # Equivalences of the supplier for the client code.
+    codes: [String!]
+}
