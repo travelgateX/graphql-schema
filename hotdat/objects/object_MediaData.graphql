@@ -1,6 +1,6 @@
 type MediaData{
   code: ID!
-  type: MediaType!
+  type: ApplicationArea!
   url: URI!
 
 }

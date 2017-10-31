@@ -1,5 +1,0 @@
-enum MediaType{
-  IMG
-  VID
-  undefined
-}

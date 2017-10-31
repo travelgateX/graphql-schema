@@ -1,7 +1,7 @@
 # Location
 type Location {
   # Street Address
-  address: String!
+  address: String
 
   # City
   city: String!

@@ -5,20 +5,23 @@ type HotelData {
   
   # Name.
   name: String
-  categoryCode: String
+  
+  # Hotel category (for example number of stars).
+  categoryCode: String!
   
   # Indicates that the Hotel has an Exclusive Deal.
   exclusiveDeal: Boolean!
   
-  medias(type: MediaType): MediaConnection
+  medias(type: ApplicationArea): MediaConnection
   amenities(language: Language):AmenityConnection
   additionalInformation(language: Language): Information!
   generalDescription(language: Language): Information!
   location: Location!
-  #TODO: Ask hubteam 
+  
+  # Contact information.
   contact: Contact! 
-  # Giata System ID.
-  giataID: GiataID!
+
+  # Destination information.
   destination: Destination!
  
 }

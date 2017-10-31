@@ -1,6 +1,6 @@
 type AmenityData{
   code: ID!
   information: Information!
-  type: AmenityType!
+  type: ApplicationArea!
 
 }

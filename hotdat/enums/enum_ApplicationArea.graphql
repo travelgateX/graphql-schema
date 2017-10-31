@@ -1,0 +1,7 @@
+# Indicates a place
+enum ApplicationArea {
+  GENERAL
+  HOTEL
+  ROOM
+  SERVICE
+}
