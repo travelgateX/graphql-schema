@@ -1,0 +1,4 @@
+interface Information{
+  description: String!
+  language: Language!
+}

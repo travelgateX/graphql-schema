@@ -1,0 +1,8 @@
+# Specifies the room price.
+type RoomPrice {
+    # Total price for all days.
+    price: Price!
+
+    # Daily break downs price.
+    breakdown: [PriceBreakdown!]
+}

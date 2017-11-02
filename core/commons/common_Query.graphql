@@ -1,0 +1,5 @@
+# A Query is an entry point into the object graph.
+type Query {
+  #TODO: Del
+  a:Boolean 
+}

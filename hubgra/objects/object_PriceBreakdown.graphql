@@ -1,0 +1,11 @@
+# Information about daily price.
+type PriceBreakdown {
+	# Start date in which the price becomes effective.
+	effectiveDate: Date!
+
+	# Expire date of price.
+	expireDate: Date!
+
+	# Specifies the daily price.
+	price: Price!
+}

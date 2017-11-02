@@ -1,0 +1,6 @@
+input GroupAccessInput {
+    # groups identifiers in which the access will be associated
+    groupCodes: [String!]
+    # access related data
+    accesses: [AccessConfigurationInput!]!
+}

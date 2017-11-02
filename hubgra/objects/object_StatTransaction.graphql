@@ -1,0 +1,7 @@
+type StatTransaction {
+    reference:              String!
+    total:                  Stat!
+    buildRequest:           Stat!
+    workerCommunication:    Stat!
+    parseResponse:          Stat!
+}

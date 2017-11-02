@@ -1,0 +1,41 @@
+# A Query is an entry point into the object graph.
+extend type Query {
+	# Available options for a given date and itinerary.
+	search: Search!
+	# Returns the total price and cancellation policies of the Option selected in the previous step (Search).
+	quote: Quote!
+	# Returns detailed information about books.
+	booking: Booking 
+	# Returns accesses grouped by 'groups'.
+	# If access identifiers 'ids' are sent, only those accesses will be read.
+    	# If 'groupsCodes' are sent, only accesses for these groups will be read
+    	# Requesting this query without any of these filters will provide all requestor accesses
+    	access(ids: [String!], groupCodes: [String!]): [GroupAccess!]
+    	# Reads defaultSettings of the given group
+    	defaultSettings(groupCode: String!): DefaultSettings
+    	# Returns suppliers and their groups.
+    	# If supplier identifiers 'ids' are sent, only those  will be read.
+    	# If 'groupsCodes' are sent, only suppliers for these groups will be read
+    	# Requesting this query without any of these filters will provide all requestor suppliers
+    	supplier(ids: [String!], groupCodes: [String!]): [Supplier!]
+    	# Returns connect users and their groups.
+    	# If connect user identifiers 'ids' are sent, only those  will be read.
+    	# If 'groupsCodes' are sent, only connect user for these groups will be read
+    	# Requesting this query without any of these filters will provide all requestor connect users
+    	connectUser(ids: [String!], groupCodes: [String!]): [ConnectUser!]
+	
+	# Returns the mapping for a group, is necessary specify the group.
+    	mapping(groupCode: String!): Mapping!
+	
+	# Returns status of the search service.
+        searchStatusService: ServiceStatus!
+	# Returns status of the quote service.
+        quoteStatusService: ServiceStatus!
+	# Returns status of the new booking service.
+        bookStatusService: ServiceStatus!
+ 	# Returns status of the cancellation service.
+        cancelStatusService: ServiceStatus!
+        # TODO: me no understand...
+	# Returns status of the booking service.
+        bookingStatusService: ServiceStatus!
+}

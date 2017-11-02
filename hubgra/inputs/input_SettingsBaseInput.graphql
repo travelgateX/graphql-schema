@@ -1,0 +1,11 @@
+# Contains the time out and business rules of a supplier or an access.
+input SettingsBaseInput {
+   	# Milliseconds before the connection is closed.
+   	timeout: Int
+
+   	# Specifies if transactions exchanged with the supplier have to be logged or not.
+   	auditTransactions: Boolean
+
+   	# Business rules.
+   	businessRules: BusinessRulesInput
+}

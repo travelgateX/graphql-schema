@@ -1,0 +1,11 @@
+# Data sent & received in the supplier’s native format.
+type AuditData {
+    # List of transactions data.
+    transactions:    [Transactions!]!
+
+    # TimeStamp
+    timeStamp:       DateTime!
+
+    # Process time in milliseconds (ms)
+    processTime:     Float!
+}

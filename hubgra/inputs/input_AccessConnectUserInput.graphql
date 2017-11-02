@@ -1,0 +1,9 @@
+# Connect user input for data access management API
+input AccessConnectUserInput {
+    # connect user code
+    code: String!
+    # Indicates if the connect user is active.
+    isActive: Boolean!
+    # groups related to this connect user
+    groups: [ConnectUserGroupInput!]
+}

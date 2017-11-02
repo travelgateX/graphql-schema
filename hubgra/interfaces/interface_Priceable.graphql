@@ -1,0 +1,16 @@
+interface Priceable {
+    # Specifies the currency. ISO 4217 format, example: GBP or USD
+    currency: Currency!
+
+    # Is binding.
+    binding: Boolean!
+
+    # Specifies the import net.
+    net: Float!
+
+    # Specifies the import gross.
+    gross: Float
+
+    # Specifies the exchange.
+    exchange: Exchange!
+}

@@ -1,0 +1,26 @@
+# Contains information about booking.
+type HotelBookingDetail {
+	# Booking ID in the Supplier´s system
+	reference: Reference!
+
+	# Holder's name and surname
+	holder: Holder
+
+	# Information about the hotel.
+	hotel: BookingHotel
+
+    # Specifies the prices (Gross, Net and Amount) of the option returned.
+    price: Price
+
+    # Specifies cancel policies of the book returned.
+	cancelPolicy: CancelPolicy
+
+    # Additional information about the book.
+    remarks: String
+
+	# Booking Status.
+    status: BookStatusType!
+
+    # Payable.
+    payable: String
+}
