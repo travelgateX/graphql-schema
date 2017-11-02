@@ -1,0 +1,11 @@
+type OrganizationData implements GroupData{
+  id: ID!
+  code: ID!
+  type: GroupType!
+  parent: Int!
+  members(first: Int, Last: Int, before: String, after:String, codes: [String!]): MemberConnection
+  apis(first: Int, Last: Int, before: String, after:String, codes: [String!]): APIConnection
+  products(first: Int, Last: Int, before: String, after:String, codes: [String!]): ProductConnection
+  owner:Member!
+  # proyects(first: Int, Last: Int, before: String, after:String, codes: [String!]): ProjectConnection
+}
