@@ -1,0 +1,5 @@
+input InputMemberData {
+    isuser: Boolean!
+    apikey: String!
+    json: String!
+}

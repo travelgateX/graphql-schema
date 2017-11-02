@@ -1,0 +1,9 @@
+extend type Mutation{
+  createMember(member: MemberInput!) : Member!
+  createGroup(group: GroupCreate!): Group!
+  assignMemberGroup(memberGroup: MemberGroup!): Member!
+  assignApiGroup(apiGroup: ApiGroup!): API!
+
+  #updateMember(member: MemberInput!) : Member!
+  #addMemberRole() : Member!
+}

@@ -1,0 +1,6 @@
+input GroupCreateData{
+    code: String!
+    type: String!
+    info: String
+    parent: ID!
+}

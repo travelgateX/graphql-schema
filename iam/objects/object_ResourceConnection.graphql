@@ -1,0 +1,4 @@
+type ResourceConnection{
+  edges: [ResourceEdge]
+  pageInfo: PageInfo!
+}
