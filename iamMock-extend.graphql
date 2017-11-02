@@ -1,13 +1,18 @@
 interface Node {
   code: ID!
   error: [Error!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }
 
-enum GroupType {
+# In queries or mutations, DateTime fields have to be specified in ISO 8601 format with enclosing double quotes: datetime: "2015-11-22T13:57:31.123Z".
+scalar DateTime
+
+enum GroupType{
   ROOT
-  ORGANIZATION
-  PROFILE
+  ORG
   GROUP
+  PROFILE
   TEAM
 }
 
@@ -16,59 +21,48 @@ enum MemberType {
   SERVICE_ACCOUNT
 }
 
-extend type Query{
-  node(code: ID!): Node
-  member (code: ID!): Member
-  # groupBranch (code: ID!): Branch
-  
-  user: Member
-  service_account: Member
-  
+enum SearchType{
+  MEMBER
+}
+
+schema{
+    query: Query
+    mutation: Mutation
+}
+
+union SearchResultItemConnection = GroupConnection
+
+union test1 = Member | Group
+
+type Query{
+
+  #search(first: Int, after: String, last: Int, before: String, codes: [String!], type: SearchType!): SearchResultItemConnection!
+
+  getMembers(codes:[String!],first: Int, Last: Int, before: String, after:String) : MemberConnection!
+  getGroups(codes:[String!],first: Int, Last: Int, before: String, after:String) : GroupConnection!
+  getApis(codes:[String!],first: Int, Last: Int, before: String, after:String) : APIConnection!
+  getResources(codes:[String!],first: Int, Last: Int, before: String, after:String) : ResourceConnection!
+  getRoles(codes:[String!],first: Int, Last: Int, before: String, after:String) : RoleConnection!
+
 }
 
 type Member implements Node{
   code: ID!
-  error: [Error!]
   memberData: MemberData
+  error:   [Error!]
+  isActive: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }
 
-type MemberData{
+type MemberData {
   id: ID!
   code: ID!
-  memberType: MemberType
-  roles: RolConnection
-  groups: GroupConnection
-  
-  access: AccessConnection
-}
-
-type Group implements Node{
-  code: ID!
-  error: [Error!]
-  groupData: GroupData
-}
-
-interface GroupData{
-  id: ID!
-  code: ID!
-  type: GroupType!
-  parent: ID!
-  members: MemberConnection
-  groups: GroupConnection
-  apis: APIConnection
-  
-  access: AccessConnection
-
-}
-
-type GroupConnection{
-  edges: [GroupEdge]
-  pageInfo: PageInfo!
-}
-
-type GroupEdge {
-  cursor: String!
-  node: Group
+  roles: String
+  memberType: String
+  groups(first: Int, Last: Int, before: String, after:String, codes: [String!]): GroupConnection
+  #roles: RoleConnection TODO
+  #access: AccessConnection TODO
 }
 
 type MemberConnection{
@@ -81,6 +75,41 @@ type MemberEdge {
   node: Member
 }
 
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String!
+  endCursor: String!
+}
+
+type Group implements Node{
+  code: ID!
+  error: [Error!]
+  groupData: GroupData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+interface GroupData{
+  id: ID!
+  code: ID!
+  type: GroupType!
+  parent: Int!
+  members(first: Int, Last: Int, before: String, after:String, codes: [String!]): MemberConnection
+  apis(first: Int, Last: Int, before: String, after:String, codes: [String!]): APIConnection
+  #access: AccessConnection
+}
+
+type GroupConnection{
+  edges: [GroupEdge]
+  pageInfo: PageInfo!
+}
+
+type GroupEdge {
+  cursor: String!
+  node: Group
+}
+
 type APIConnection{
   edges: [APIEdge]
   pageInfo: PageInfo!
@@ -91,26 +120,19 @@ type APIEdge {
   node: API
 }
 
-type PageInfo {
-  hasNextPage: Boolean!
-  hasPreviousPage: Boolean!
-  startCursor: String
-  endCursor: String
-}
-
 type API implements Node{
   code: ID!
   error: [Error!]
   apiData: APIData
-
+    createdAt: DateTime!
+  updatedAt: DateTime!
 }
 
 type APIData{
   id: ID!
   code: ID!
-  groups: GroupConnection
-  resources: ResourceConnection
-
+  groups(first: Int, Last: Int, before: String, after:String, codes: [String!]): GroupConnection
+  resources(first: Int, Last: Int, before: String, after:String, codes: [String!]): ResourceConnection
 }
 
 type ResourceConnection{
@@ -127,32 +149,36 @@ type Resource implements Node{
   code: ID!
   error: [Error!]
   resourceData: ResourceData
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }
 
 type ResourceData{
   id: ID!
   code: ID!
-  api: APIConnection
-  roles: RolConnection
+  apis(first: Int, Last: Int, before: String, after:String, codes: [String!]): APIConnection
+  roles(first: Int, Last: Int, before: String, after:String, codes: [String!]): RoleConnection
 }
 
-type RolConnection{
-  edges: [RolEdge]
+type RoleConnection{
+  edges: [RoleEdge]
   pageInfo: PageInfo!
 }
 
-type RolEdge {
+type RoleEdge {
   cursor: String!
-  node: Rol
+  node: Role
 }
 
-type Rol implements Node{
+type Role implements Node{
   code: ID!
   error: [Error!]
-  rolData: RolData
+  roleData: RoleData
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }
 
-type RolData{
+type RoleData{
   id: ID!
   code: ID!
   label: String!
@@ -164,66 +190,130 @@ type RolData{
   isExecutable: Boolean!
   isEspecial: Boolean!
   especial: String
-  resource: ResourceConnection
+  resources(first: Int, Last: Int, before: String, after:String, codes: [String!]): ResourceConnection
 }
 
-type Organization implements Node{
-  code: ID!
-  error: [Error!]
-  organizationData: OrganizationData  
+
+
+type Mutation{
+  createMember(member: MemberInput!) : Member!
+  createGroup(group: GroupCreate!): Group!
+  createApi(api: ApiInput!): API!
+  createResource(resource: ResourceInput!): Resource!
+  assignMemberGroup(memberGroup: MemberGroup!): Member!
+  assignApiGroup(apiGroup: ApiGroup!): API!
+  #updateMember(member: MemberInput!) : Member!
+
+   createRole(role: RoleInput!) : Role!
+   #updateRole(role: RoleInput!) : Role!
+   #deleteRole(role: RoleInput!) : Role!
+
+   refreshToken(apikeys: [String!]!): Token!
+   updateToken(memberData: [InputMemberData!]!): Token!
+   createToken(memberData: [InputMemberData!]!): Token!
+   #deleteToken(apikeys: [String!]!): Token!
+
+
+  #addMemberRole() : Member!
 }
 
-type OrganizationData implements GroupData{
-  id: ID!
-  code: ID!
-  type: GroupType!
-  parent: ID!
-  members: MemberConnection
-  groups: GroupConnection
-  apis: APIConnection
-  
-  products: ProductConnection
-  access: AccessConnection
-}
-type AccessConnection{
-  edges: [AccessEdge]
-  pageInfo: PageInfo!
+input InputMemberData {
+    isuser: Boolean!
+    apikey: String!
+    json: String!
 }
 
-type AccessEdge {
-  cursor: String!
-  node: Access
+input RoleInput {
+    roleInputData: RoleInputData!
 }
 
-type Product implements Node{
-  code: ID!
-  error: [Error!]
-  product: ProductData
+input RoleInputData {
+    code: ID!
+    resourceId: ID!
+    label : String!
+    permission:  String!
 }
 
-type ProductData {
-  id: ID!
-  code: ID!
-  apis: APIConnection
-  organizations: OrganizationConnection
+input MemberGroup{
+    groupCode: ID!
+    memberCode: ID!
+    roleCode:   ID!
 }
 
-type OrganizationConnection{
-  edges: [OrganizationEdge]
-  pageInfo: PageInfo!
+input ApiGroup {
+    groupCode: ID!
+    apiCode: ID!
 }
 
-type OrganizationEdge {
-  cursor: String!
-  node: Organization
+type Token {
+    code: ID!
+    status: String!
+    error: [Error!]
 }
 
-type ProductConnection{
-  edges: [ProductEdge]
-  pageInfo: PageInfo!
+input TokenFilter {
+    memberId: String!
+    groupId: String!
+    resourceId: [String!]!
 }
 
-type ProductEdge {
-  cursor: String!
-  node: Product
+input GroupCreate{
+    GroupCreateData: GroupCreateData!
 }
+
+input GroupCreateData{
+    code: String!
+    type: String!
+    info: String
+    parent: ID!
+}
+
+input MemberRoleAdd{
+    id : Int!
+    MemberRoleAddData: MemberRoleAddData!
+}
+
+input MemberRoleAddData{
+    roles: [String!]!
+}
+
+input MemberInput{
+    memberInputData: MemberInputData!
+}
+
+input MemberInputData{
+    code: String
+    info: String
+    type: MemberType!
+    groupCode : String!
+    roles:  [String!]!
+    resource:  String!
+}
+
+input ApiInput {
+    apiInputData: ApiInputData!
+}
+
+input ApiInputData {
+    code: ID!
+}
+
+input ResourceInput {
+    resourceInputData: ResourceInputData!
+}
+
+input ResourceInputData {
+    code: ID!
+    apiID: ID!
+}
+
+# Application errors
+type Error {
+    # error code
+    code: String!
+    # error type
+    type: String!
+    # error description
+    description : String!
+}
+
