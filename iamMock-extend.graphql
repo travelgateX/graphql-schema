@@ -1,13 +1,3 @@
-interface Node {
-  code: ID!
-  error: [Error!]
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-# In queries or mutations, DateTime fields have to be specified in ISO 8601 format with enclosing double quotes: datetime: "2015-11-22T13:57:31.123Z".
-scalar DateTime
-
 enum GroupType{
   ROOT
   ORG
@@ -34,7 +24,7 @@ union SearchResultItemConnection = GroupConnection
 
 union test1 = Member | Group
 
-type Query{
+extend type Query{
 
   #search(first: Int, after: String, last: Int, before: String, codes: [String!], type: SearchType!): SearchResultItemConnection!
 
@@ -75,12 +65,6 @@ type MemberEdge {
   node: Member
 }
 
-type PageInfo {
-  hasNextPage: Boolean!
-  hasPreviousPage: Boolean!
-  startCursor: String!
-  endCursor: String!
-}
 
 type Group implements Node{
   code: ID!
@@ -97,7 +81,6 @@ interface GroupData{
   parent: Int!
   members(first: Int, Last: Int, before: String, after:String, codes: [String!]): MemberConnection
   apis(first: Int, Last: Int, before: String, after:String, codes: [String!]): APIConnection
-  #access: AccessConnection
 }
 
 type GroupConnection{
@@ -195,7 +178,7 @@ type RoleData{
 
 
 
-type Mutation{
+extend type Mutation{
   createMember(member: MemberInput!) : Member!
   createGroup(group: GroupCreate!): Group!
   createApi(api: ApiInput!): API!
@@ -204,14 +187,14 @@ type Mutation{
   assignApiGroup(apiGroup: ApiGroup!): API!
   #updateMember(member: MemberInput!) : Member!
 
-   createRole(role: RoleInput!) : Role!
-   #updateRole(role: RoleInput!) : Role!
-   #deleteRole(role: RoleInput!) : Role!
+  createRole(role: RoleInput!) : Role!
+  #updateRole(role: RoleInput!) : Role!
+  #deleteRole(role: RoleInput!) : Role!
 
-   refreshToken(apikeys: [String!]!): Token!
-   updateToken(memberData: [InputMemberData!]!): Token!
-   createToken(memberData: [InputMemberData!]!): Token!
-   #deleteToken(apikeys: [String!]!): Token!
+  refreshToken(apikeys: [String!]!): Token!
+  updateToken(memberData: [InputMemberData!]!): Token!
+  createToken(memberData: [InputMemberData!]!): Token!
+  #deleteToken(apikeys: [String!]!): Token!
 
 
   #addMemberRole() : Member!
@@ -306,14 +289,3 @@ input ResourceInputData {
     code: ID!
     apiID: ID!
 }
-
-# Application errors
-type Error {
-    # error code
-    code: String!
-    # error type
-    type: String!
-    # error description
-    description : String!
-}
-
