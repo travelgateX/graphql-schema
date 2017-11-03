@@ -1,4 +1,5 @@
 input OrganizationInput {
-    code: ID!
-    owner: MemberInput!
+    code: [ID!]
+    owner: MemberInput
+  	member: MemberInput
 }
