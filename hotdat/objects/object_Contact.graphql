@@ -8,7 +8,7 @@ type Contact {
 
   # Fax.
   fax: String
-  
+
   # Web.
-  web: URI
+  web: URI!
 }
