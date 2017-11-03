@@ -1,8 +1,8 @@
 # Geocode type
 type Geocode {
   # Latitude
-  latitude: String
+  latitude: String!
 
   # Longitude
-  longitude: String
+  longitude: String!
 }
