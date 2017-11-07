@@ -1,4 +1,4 @@
 input HotelInput {
-    codes: [ID!]
-    language: Language
+  codes: [ID!]
+  language: Language
 }

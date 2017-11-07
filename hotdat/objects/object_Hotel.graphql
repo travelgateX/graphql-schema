@@ -2,16 +2,16 @@
 type Hotel implements Node {
   # Hotel ID
   code: ID!
-
+  
   # Hotel data
   hotelData: HotelData
-
+  
   # Errors that will lead the service to abort
   error: [Error!]
-
+  
   # Create date
   createdAt: DateTime!
-
+  
   # Update date
   updatedAt: DateTime!
 }

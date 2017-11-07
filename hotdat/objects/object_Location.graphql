@@ -2,16 +2,16 @@
 type Location {
   # Street Address
   address: String!
-
+  
   # City
   city: String!
-
+  
   # Zip Code
   zipCode: String!
-
+  
   # Country ISO Code
   country: Country!
-
+  
   # Geocode
-  #geocode: Geocode!
+  geocode: Geocode!
 }

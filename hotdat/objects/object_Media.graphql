@@ -1,7 +1,7 @@
 type Media implements Node{
   code: ID!
   mediaData: MediaData
-
+  
   #Errors that will lead the service to abort
   error: [Error!]
   # Create date

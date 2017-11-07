@@ -1,7 +1,7 @@
 type Amenity implements Node{
   code: ID!
   AmenityData: AmenityData
-
+  
   #Errors that will lead the service to abort
   error: [Error!]
   # Create date
