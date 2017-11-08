@@ -3,15 +3,15 @@ input HotelCriteriaBookingInput {
 	# Name of the access that have to use in the request.
     accessCode: String!
 
-    # The language code.
+    # Language code.
     language: Language
 
-    # The search type criteria.
+    # Criteria search type.
     typeSearch: BookingCriteriaType!
 
-    # The references criteria.
+    # Criteria by references
     references: CriteriaBookingReferencesInput
 
-    # The dates criteria.
+    # Criteria by dates
     dates: CriteriaBookingDatesInput
 }

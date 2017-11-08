@@ -5,6 +5,6 @@ interface BookableOptionSearch {
     # Access code of this option.
     accessCode: String!
 
-    # Indicates the id to be used on Quote as key
+    # Indicates the quote key
     id: String!
 }

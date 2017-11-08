@@ -12,10 +12,10 @@ input HotelBookInput {
     # Indicates price variation permitted by the client.
     deltaPrice: DeltaPriceInput
 
-    # If the payment is done by credit card, it's mandatory to specify the payment type and the credit card information.
+    # If the payment is done by credit card, is it mandatory to specify the payment type and the credit card information
     paymentCard: PaymentCardInput
 
-    # Any customer comments for the supplier to consider.
+    # Any customer comments for the supplier to consider
     remarks: String
 
     # Holder's basic information

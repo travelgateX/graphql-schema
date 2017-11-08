@@ -1,0 +1,8 @@
+# Plugin Step Type
+enum PluginStepType {
+    # Aggregate Access Response.
+    AGGREGATE_ACCESS
+
+    # Aggregate Response.
+    AGGREGATE
+}

@@ -1,0 +1,7 @@
+# Plugin to execute.
+input PluginStepInput {
+    # Indicates where the plugin will be executed.
+    step: PluginStepType!
+
+    plugins: [PluginsInput!]
+}

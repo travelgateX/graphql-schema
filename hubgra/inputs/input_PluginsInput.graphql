@@ -1,0 +1,8 @@
+# Plugin to execute.
+input PluginsInput {
+    # Name plugin to execute.
+    name: String!
+
+    # Plugin's parameters
+    parameters: [ParameterInput!]
+}
