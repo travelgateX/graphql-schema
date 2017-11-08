@@ -25,7 +25,7 @@ type Supplement {
     # Specifies the duration type. Possible duration types: Range (specified dates) or Open. This field is mandatory for PDI.
     durationType: DurationType
 
-    # Indicates the quantity of field in the element “unit”.
+    # Indicates the quantity of field in the element "unit".
     quantity: Int
 
     # Indicates the unit type. Possible unit types: Day or Hour.

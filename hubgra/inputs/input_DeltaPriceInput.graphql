@@ -1,9 +1,9 @@
 # Input delta price, indicates price variation permitted by the client
 input DeltaPriceInput {
-	# Amount (in the currency returned into the option) that is accepted by the client to be higher than the valuation price.
-	amount: Float
+    # The amount in the currency returned by the option that will be accepted by the client to be higher than the valuation price.
+    amount: Float
 
-    # Percentage accepted by the client to be higher than the valuation price.
+    # The percentage accepted by the client to be higher than the valuation price.
     percent: Float
 
     # Indicates that the range between valuation price and the new price does not exceed the amount and/or porcentage indicated by the client.

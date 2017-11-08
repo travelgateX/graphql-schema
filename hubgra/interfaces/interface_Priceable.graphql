@@ -2,7 +2,7 @@ interface Priceable {
     # Specifies the currency.
     currency: Currency!
 
-    # Specifies the binding.
+    # Is binding.
     binding: Boolean!
 
     # Specifies the import net.
