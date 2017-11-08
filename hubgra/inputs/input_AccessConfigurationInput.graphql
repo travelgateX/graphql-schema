@@ -1,4 +1,4 @@
-# The information required to access the supplierâ€™s system.
+# The information required to access the supplier’s system.
 input AccessConfigurationInput {
     # Indicates if the access is active.
     isActive: Boolean!
@@ -6,6 +6,6 @@ input AccessConfigurationInput {
     code: String!
     # Supplier to which this access belongs
     supplier: String!
-    # Information required to access the supplierâ€™s system.
+    # Information required to access the supplier’s system.
     configuration: ConfigurationInput
 }

@@ -1,4 +1,3 @@
 schema {
-    query: Query
-    mutation: Mutation
+	query: Query
 }

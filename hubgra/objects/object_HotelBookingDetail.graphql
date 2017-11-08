@@ -1,6 +1,6 @@
 # Contains information about booking.
 type HotelBookingDetail {
-	# Booking ID in the SupplierÂ´s system
+	# Booking ID in the Supplier´s system
 	reference: Reference!
 
 	# Holder's name and surname

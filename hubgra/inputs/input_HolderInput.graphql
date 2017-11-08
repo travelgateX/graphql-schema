@@ -1,8 +1,8 @@
 # Holder object that contains the pax name and surname.
 input HolderInput {
-	# The card holder's name
+	# Holder's name
 	name: String!
 
-	# The card holder's surname
+	# Holder's surname
 	surname: String!
 }

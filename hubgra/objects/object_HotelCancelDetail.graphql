@@ -1,9 +1,9 @@
 # Contains information about cancel
 type HotelCancelDetail {
-    # Booking ID in the SupplierÂ´s system
+    # Booking ID in the Supplier´s system
     reference: Reference
 
-    # Cancellation ID in the SupplierÂ´s system
+    # Cancellation ID in the Supplier´s system
     cancelReference: String
 
     # Booking Status.

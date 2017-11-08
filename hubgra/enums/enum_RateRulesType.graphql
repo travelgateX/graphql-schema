@@ -1,6 +1,6 @@
 # Rate Rules
 enum RateRulesType {
-	# The product canâ€™t be sold separately from another product attached to it, such as a flight.
+	# The product can’t be sold separately from another product attached to it, such as a flight.
 	PACKAGE
 
 	# Options that can only be sold to people who are 55 and older.
