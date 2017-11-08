@@ -7,6 +7,6 @@ input IdAccessConfigurationInput {
     code: String!
     # Supplier to which this access belongs
     supplier: String!
-    # Information required to access the supplier’s system.
+    # Information required to access the supplierâ€™s system.
     configuration: ConfigurationInput
 }

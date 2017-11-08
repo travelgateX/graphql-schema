@@ -6,7 +6,7 @@ type HotelSearch implements Response {
 	# Application stats in string format
     stats(token: String!): RequestStats
 
-    # Data sent & received in the supplier’s native format.
+    # Data sent & received in the supplierâ€™s native format.
     auditData: AuditData
 
     # Request Criteria

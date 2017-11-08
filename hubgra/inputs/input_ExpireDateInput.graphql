@@ -1,4 +1,4 @@
-# Expire Date
+# The card expiration date
 input ExpireDateInput{
     # Month MM
     month: Int!

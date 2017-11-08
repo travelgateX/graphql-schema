@@ -1,27 +1,27 @@
-# The mutation type, represents all updates we can make to our data.
+# Mutations are operations that change or update data in the server.
 extend type Mutation {
-  # Load mapping files for a group.
-  loadFile(input: String!): String!
-  # Creates a new hotel booking consisting of an option of 1 or more rooms.
-  hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
-  # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
-  hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
-  # Creates accesses
-  #If groups are sent in input, every access will be assigned to them.
-	createAccess(input: GroupAccessInput!): GroupAccess
-  # Updates existing accesses. Assigment/dissociation of groups will be done depening of the 'groups' input.
-  # Note that if 'groups' is sent as empty, these accesses will be dissociated from all groups.
-  updateAccess(input: IdGroupAccessInput!): GroupAccess
-  # Deletes accesses and their relation with groups. Accesses Id are expected as input.
-  deleteAccesses(input: [String!]!): [GroupAccess!]
-  # Creates a defaultSettings for a given group
-  createDefaultSettings(input: DefaultSettingsInput!): DefaultSettings
-  # Updates a defaultSettings for a given group
-  updateDefaultSettings(input: DefaultSettingsInput!): DefaultSettings
-  # Deletes a defaultSettings for a given group
-  deleteDefaultSettings(input: String!): Boolean!
-  # Updates existing suppliers. Assigment/dissociation of groups cannot be done.
-  updateSupplier(input: AccessSupplierInput!): Supplier
-  # Updates existing connectUser. Assigment/dissociation of groups cannot be done.
-  updateConnectUser(input: AccessConnectUserInput!): ConnectUser
+    # Load mapping files for a group.
+    loadFile(input: String!): String!
+    # Creates a new hotel booking consisting of an option of 1 or more rooms.
+    hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
+    # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
+    hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
+    # Creates accesses
+    #If groups are sent in input, every access will be assigned to them.
+    createAccess(input: GroupAccessInput!): GroupAccess
+    # Updates existing accesses. Assigment/dissociation of groups will be done depening of the 'groups' input.
+    # Note that if 'groups' is sent as empty, these accesses will be dissociated from all groups.
+    updateAccess(input: IdGroupAccessInput!): GroupAccess
+    # Deletes accesses and their relation with groups. Accesses Id are expected as input.
+    deleteAccesses(input: [String!]!): [GroupAccess!]
+    # Creates a defaultSettings for a given group
+    createDefaultSettings(input: DefaultSettingsInput!): DefaultSettings
+    # Updates a defaultSettings for a given group
+    updateDefaultSettings(input: DefaultSettingsInput!): DefaultSettings
+    # Deletes a defaultSettings for a given group
+    deleteDefaultSettings(input: String!): Boolean!
+    # Updates existing suppliers. Assigment/dissociation of groups cannot be done.
+    updateSupplier(input: AccessSupplierInput!): Supplier
+    # Updates existing connectUser. Assigment/dissociation of groups cannot be done.
+    updateConnectUser(input: AccessConnectUserInput!): ConnectUser
 }

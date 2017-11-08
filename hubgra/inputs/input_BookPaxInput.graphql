@@ -1,11 +1,11 @@
-# Input BookPax contains basic information abaout pax like name, surname and age.
+# Input BookPax contains basic information abaout pax suach as name, surname and age.
 input BookPaxInput {
-    # Guest's name
+    	# The guest's first  name
 	name: String!
 
-	# Guest's last name
+	# The guest's last name
 	surname: String!
 
-	# Guest's age
+	# The guest's age
 	age: Int!
 }

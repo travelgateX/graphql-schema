@@ -1,8 +1,8 @@
 # Input BookRoom contains list of pax and the room's reference.
 input BookRoomInput {
-    # Rooms reference in the booking
+    # The room's reference in the booking
     occupancyRefId: Int!
 
-    # Lists of paxes of the room
-	paxes: [BookPaxInput!]!
+    # The list or lists of paxes of the room
+    paxes: [BookPaxInput!]!
 }

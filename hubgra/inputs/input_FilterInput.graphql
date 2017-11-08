@@ -2,9 +2,9 @@
 # You must choose one of them, include or exclude, or the other alternative isn't specified anything.
 # If input both, you will receive a validation error that indicates this error.
 input FilterInput {
-   	# You can specify one of the filters or any of them. In this latter case, all the configurated accesses will be executed.
-   	access: AccessFilterInput
-
-	# If requested, only options with the specified rateRules will be returned
-	rateRules: RateRulesFilterInput
+  # You can specify one of the filters or any of them. In this latter case, all the configurated accesses will be executed.
+  access: AccessFilterInput
+  
+  # If requested, only options with the specified rateRules will be returned
+  rateRules: RateRulesFilterInput
 }
