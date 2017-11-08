@@ -1,17 +1,17 @@
 # Criteria of book contains basic information to find a book or books.
 input HotelCriteriaBookingInput {
-	# Name of the access that have to use in the request.
+    # Name of the access that have to use in the request.
     accessCode: String!
 
-    # Language code.
+    # The language code.
     language: Language
 
-    # Criteria search type.
+    # The search type criteria.
     typeSearch: BookingCriteriaType!
 
-    # Criteria by references
+    # The references criteria.
     references: CriteriaBookingReferencesInput
 
-    # Criteria by dates
+    # The dates criteria.
     dates: CriteriaBookingDatesInput
 }

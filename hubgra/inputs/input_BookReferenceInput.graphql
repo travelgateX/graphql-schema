@@ -1,8 +1,8 @@
 # Reference object that contains the client reference and/or supplier reference.
 input BookReferenceInput {
-	# Client reference
+	# The client's reference
 	client: String
 
-	# Supplier reference
+	# The Supplier's reference
 	supplier: String
 }
