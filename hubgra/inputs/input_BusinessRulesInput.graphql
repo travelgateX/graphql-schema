@@ -1,8 +1,8 @@
-# List of business rules to use as filter on the options.
+# List of business rules to filter the options that you are interested.
 input BusinessRulesInput {
-   	# Options quota per search. Maximum numbers of options to be returned by the search query.
+   	# Options quota per avail. Numbers of options wanted by avail.
    	optionsQuota: Int
 
-   	# Different business rules to filter the returned options.
+   	# Different business rules to filter the options that you are interested.
    	businessRulesType: BusinessRulesType
 }

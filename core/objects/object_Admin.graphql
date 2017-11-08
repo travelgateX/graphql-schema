@@ -1,5 +1,0 @@
-#Query collection for give Members(Users, Services Account), Organization, Products, Groups, API, Resources, Roles
-type Admin {
-  #TODO: Del
-  a:Boolean
-}

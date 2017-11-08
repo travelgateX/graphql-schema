@@ -1,8 +1,8 @@
 interface Priceable {
-    # Specifies the currency. ISO 4217 format, example: GBP or USD
+    # Specifies the currency.
     currency: Currency!
 
-    # Is binding.
+    # Specifies the binding.
     binding: Boolean!
 
     # Specifies the import net.

@@ -12,11 +12,17 @@ type HotelOptionSearch implements BookableOptionSearch {
     # Code of the hotel in the context selected.
 	hotelCode: String!
 
+	# Supplier's hotel code.
+	hotelCodeSupplier: String!
+
     # Name of the hotel.
 	hotelName: String
 
 	# Code of the board in the context selected.
 	boardCode: String!
+
+	# Supplier's board code.
+	boardCodeSupplier: String!
 
 	# Indicates the payment type of the option returned. Possible options: Merchant, Direct, Card Booking, Card check in and Mixed.
 	paymentType: PaymentType!
