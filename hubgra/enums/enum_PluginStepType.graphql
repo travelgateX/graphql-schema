@@ -5,4 +5,10 @@ enum PluginStepType {
 
     # Aggregate Response.
     AGGREGATE
+  
+    # Room code and descriptions mapping
+    MAPPING_ROOM
+
+    # Markup application
+    MARKUP
 }

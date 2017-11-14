@@ -1,6 +1,6 @@
 # Informs markup applied over supplier price.
 type Markup implements Priceable {
-    # channel that apply the markup.
+    #channel of markup application.
     channel: String!
 
     # Currency code indicating which currency should be paid.
@@ -22,4 +22,7 @@ type Markup implements Priceable {
     # Informs about the currency of origin, and the rate applied over result.
     # This information is mandatory.
     exchange: Exchange!
+  
+    # Breakdown of the applied rules for a markup
+    rules: [Rule!]!
 }
