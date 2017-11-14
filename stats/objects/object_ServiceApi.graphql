@@ -1,0 +1,9 @@
+# Refers to one of XTG available lines.
+# Hotel, Transportation, Car, Transfers, Activities, VirtualAccount, Payment and Package
+type ServiceApi {
+	# Service Api code.
+	code: String!
+
+	# List of service operations.
+	serviceOperations: [ServiceOperation!]
+}

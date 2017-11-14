@@ -1,0 +1,8 @@
+# Specific method of API used.
+type ServiceOperation {
+	# Service operation code.
+	code: String!
+
+	# List of users.
+	users: [User!]
+}

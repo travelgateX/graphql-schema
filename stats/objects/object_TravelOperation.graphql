@@ -1,0 +1,5 @@
+# The service used to access the stats of every connection that uses the HUB
+type TravelOperation {
+	# List of service apis.
+	serviceApis: [ServiceApi!]
+}

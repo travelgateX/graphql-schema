@@ -1,0 +1,8 @@
+# Source of request sent to HUB
+type User {
+	# User code.
+	code: String!
+
+	# List of users.
+	suppliers: [Supplier!]
+}

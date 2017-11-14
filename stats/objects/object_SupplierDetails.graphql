@@ -1,0 +1,29 @@
+# Details of an specific supplier
+type SupplierDetails {
+	# Supplier code.
+	code: String!
+
+	# Supplier name.
+	name: String!
+
+	# Total time.
+	ok: Int!
+
+	# Total time.
+	integrationError: Error!
+
+	# Total time.
+	providerError: Error!
+
+	# Total time.
+	communicationError: Error!
+
+	# Total time.
+	hubError: Error!
+
+	# Total hits.
+	hit: Int!
+
+	# Total time.
+	time: Int!
+}

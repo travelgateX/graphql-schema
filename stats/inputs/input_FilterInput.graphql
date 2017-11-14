@@ -1,0 +1,24 @@
+# Filters needed to do a search.
+# Users (List of users), Suppliers (List of suppliers), ServiceApis (List of service apis), From (Start date of search - YYYY-MM-DD HH:mm:ss), To (End date of search - YYYY-MM-DD HH:mm:ss)
+input FilterInput {
+	# List of users
+    users: [String!]
+
+	# List of suppliers
+    suppliers: [String!]
+	
+	# List of services apis
+    serviceApis: [ServiceApiType!]
+
+	# List of services operations
+	serviceOperations: [String!]
+
+	# From date of search
+    from: String!
+
+	# To date of search
+    to: String!
+
+	# Group all users
+    groupUsers: Boolean
+}

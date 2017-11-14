@@ -1,0 +1,34 @@
+input FilterAuditInput {
+	# Session Id
+    ids: [String!]
+
+	# List of users
+    users: [String!]
+
+	# List of suppliers
+    suppliers: [String!]
+	
+	# Services api
+    serviceApi: ServiceApiType!
+	
+	# Travel operation
+    travelOperation: TravelOperationType!
+
+	# List of services operations
+	serviceOperations: [String!]
+
+	# List of error codes
+	errorCodes: [String!]
+
+	# List of error types
+	errorTypes: [String!]
+
+	# HubStatus
+    hubStatus: String
+
+	# From date of search
+    from: String!
+
+	# To date of search
+    to: String!
+}

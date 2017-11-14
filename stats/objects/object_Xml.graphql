@@ -1,0 +1,34 @@
+type Xml {
+	# Session Id
+	id: String!
+
+	# User
+    user: String!
+
+	# Supplier
+    supplier: String!
+	
+	# Services api
+    serviceApi: ServiceApiType!
+
+	# Services operation
+	serviceOperation: String!
+
+	# Error code
+	errorCode: String!
+
+	# Error type
+	errorType: String!
+
+	# HubStatus
+    hubStatus: String!
+
+	# From date of search
+    startTime: String!
+
+	# To date of search
+    execTime: String!
+
+	# Url
+    url: String!
+}
