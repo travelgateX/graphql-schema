@@ -1,0 +1,8 @@
+type Member implements Node{
+  code: ID!
+  memberData: MemberData
+  error:   [Error!]
+  isActive: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

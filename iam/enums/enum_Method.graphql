@@ -1,0 +1,4 @@
+enum Method {
+  ADD
+  DEL
+}

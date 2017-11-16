@@ -1,0 +1,6 @@
+type APIData{
+  id: ID!
+  code: ID!
+  groups(first: Int, Last: Int, before: String, after:String, codes: [String!]): GroupConnection
+  resources(first: Int, Last: Int, before: String, after:String, codes: [String!]): ResourceConnection
+}

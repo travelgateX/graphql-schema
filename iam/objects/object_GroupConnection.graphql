@@ -1,0 +1,4 @@
+type GroupConnection{
+  edges: [GroupEdge]
+  pageInfo: PageInfo!
+}
