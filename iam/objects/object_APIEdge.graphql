@@ -1,0 +1,4 @@
+type APIEdge {
+  cursor: String!
+  node: API
+}

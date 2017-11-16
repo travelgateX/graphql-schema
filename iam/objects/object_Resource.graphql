@@ -1,0 +1,7 @@
+type Resource implements Node{
+  code: ID!
+  error: [Error!]
+  resourceData: ResourceData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

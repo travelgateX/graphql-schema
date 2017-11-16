@@ -1,0 +1,7 @@
+type Group implements Node{
+  code: ID!
+  error: [Error!]
+  groupData: GroupData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

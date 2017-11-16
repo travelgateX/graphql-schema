@@ -1,0 +1,7 @@
+type Role implements Node{
+  code: ID!
+  error: [Error!]
+  roleData: RoleData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

@@ -1,0 +1,8 @@
+input UpdateMemberInput{
+  code: String!
+  info: String
+  group : String!
+  roles:  [String!]!
+  resource:  String!
+  method: Method!
+}

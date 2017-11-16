@@ -1,0 +1,4 @@
+type RoleConnection{
+  edges: [RoleEdge]
+  pageInfo: PageInfo!
+}

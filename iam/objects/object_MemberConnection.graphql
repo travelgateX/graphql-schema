@@ -1,0 +1,4 @@
+type MemberConnection{
+  edges: [MemberEdge]
+  pageInfo: PageInfo!
+}
