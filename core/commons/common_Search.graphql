@@ -1,7 +1,0 @@
-# Available options for a given date and itinerary. It does not filter different classes, times or
-# fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
-# forward.
-type Search {
-  #TODO: Del
-  a:Boolean
-}

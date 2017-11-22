@@ -1,27 +1,17 @@
 # Mutations are operations that change or update data in the server.
 extend type Mutation {
-    # Load mapping files for a group.
-    loadFile(input: String!): String!
     # Creates a new hotel booking consisting of an option of 1 or more rooms.
-    hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
+    hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
     # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
-    hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
-    # Creates accesses
-    #If groups are sent in input, every access will be assigned to them.
-    createAccess(input: GroupAccessInput!): GroupAccess
-    # Updates existing accesses. Assigment/dissociation of groups will be done depening of the 'groups' input.
-    # Note that if 'groups' is sent as empty, these accesses will be dissociated from all groups.
-    updateAccess(input: IdGroupAccessInput!): GroupAccess
-    # Deletes accesses and their relation with groups. Accesses Id are expected as input.
-    deleteAccesses(input: [String!]!): [GroupAccess!]
+    hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
+    
+    # Load mapping files for a group.
+    loadFile(input: String!): String! @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
+    
     # Creates a defaultSettings for a given group
-    createDefaultSettings(input: DefaultSettingsInput!): DefaultSettings
+    createDefaultSettings(input: DefaultSettingsInput!): DefaultSettings @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
     # Updates a defaultSettings for a given group
-    updateDefaultSettings(input: DefaultSettingsInput!): DefaultSettings
+    updateDefaultSettings(input: DefaultSettingsInput!): DefaultSettings @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
     # Deletes a defaultSettings for a given group
-    deleteDefaultSettings(input: String!): Boolean!
-    # Updates existing suppliers. Assigment/dissociation of groups cannot be done.
-    updateSupplier(input: AccessSupplierInput!): Supplier
-    # Updates existing connectUser. Assigment/dissociation of groups cannot be done.
-    updateConnectUser(input: AccessConnectUserInput!): ConnectUser
+    deleteDefaultSettings(input: String!): Boolean! @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
 }
