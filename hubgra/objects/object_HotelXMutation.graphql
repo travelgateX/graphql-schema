@@ -1,0 +1,7 @@
+extend type HotelXMutation {
+  # Creates a new hotel booking consisting of an option of 1 or more rooms.
+  book(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload
+    
+  # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
+  cancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
+}
