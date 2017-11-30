@@ -22,6 +22,6 @@ input HotelSettingsInput {
    	# Array of suppliers. Each one contains its own code, settings and accesses.
    	suppliers: [SupplierInput!]
 
-	# Array of pluggins to execute.
+	# Array of plugins to execute.
 	plugins: [PluginStepInput!]
 }

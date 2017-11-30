@@ -1,6 +1,9 @@
 # Plugin to execute.
 input PluginsInput {
-    # Name plugin to execute.
+    # type of the plugins to execute
+    type: PluginType!
+
+    # name of plugin to execute
     name: String!
 
     # Plugin's parameters
