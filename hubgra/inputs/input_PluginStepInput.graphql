@@ -3,5 +3,5 @@ input PluginStepInput {
     # Indicates where the plugin will be executed.
     step: PluginStepType!
 
-    plugins: [PluginsInput!]
+    pluginsType: [PluginsInput!]
 }
