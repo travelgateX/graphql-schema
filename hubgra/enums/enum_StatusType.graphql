@@ -1,8 +1,8 @@
 # Options status
 enum StatusType {
-	# The status of the avail is available
-	OK
-
-	# The status of the avail is On request
-	RQ
+  # The status of the avail is available
+  OK
+  
+  # The status of the avail is On request
+  RQ
 }

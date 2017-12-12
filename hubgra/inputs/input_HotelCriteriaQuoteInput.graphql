@@ -1,8 +1,8 @@
 # The quote criteria contains the option reference id, block and language.
 input HotelCriteriaQuoteInput {
-	# Identifier of the option chosen in the search.
-	optionRefId: String!
-
-   	# Language to be used in request.
-   	language : Language
+  # Identifier of the option chosen in the search.
+  optionRefId: String!
+  
+  # Language to be used in request.
+  language : Language
 }

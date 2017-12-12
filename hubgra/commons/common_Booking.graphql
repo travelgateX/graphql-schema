@@ -1,5 +1,5 @@
 # Returns detailed information about books.
 type Booking {
-    # Returns detailed information about books, you can indicated a list of locators or a range date.
-    hotel(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput): HotelBooking @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
+  # Returns detailed information about books, you can indicated a list of locators or a range date.
+  hotel(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput): HotelBooking @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
 }

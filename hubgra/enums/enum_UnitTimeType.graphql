@@ -1,8 +1,8 @@
 # Unit Time Type
 enum UnitTimeType {
-   	# Day
-   	DAY
-
-   	# Hour
-   	HOUR
+  # Day
+  DAY
+  
+  # Hour
+  HOUR
 }

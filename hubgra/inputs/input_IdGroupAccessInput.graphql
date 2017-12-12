@@ -1,6 +1,6 @@
 input IdGroupAccessInput {
-    # identifier of the groups in which the access will be associated
-    groupCodes: [String!]
-
-    accesses: [IdAccessConfigurationInput!]!
+  # identifier of the groups in which the access will be associated
+  groupCodes: [String!]
+  
+  accesses: [IdAccessConfigurationInput!]!
 }

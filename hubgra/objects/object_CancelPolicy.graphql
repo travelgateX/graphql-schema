@@ -1,9 +1,9 @@
 # Contains information about a cancel policy.
 type CancelPolicy {
-	# Indicates if the option is refundable or not.
-	# This information is mandatory.
-	refundable: Boolean!
-
-	# List of cancel penalties.
-	cancelPenalties: [CancelPenalty!]
+  # Indicates if the option is refundable or not.
+  # This information is mandatory.
+  refundable: Boolean!
+  
+  # List of cancel penalties.
+  cancelPenalties: [CancelPenalty!]
 }

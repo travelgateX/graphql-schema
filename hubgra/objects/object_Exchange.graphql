@@ -1,8 +1,8 @@
 # Informs about the currency of origin, and the rate applied over result returned by the supplier.
 type Exchange {
-    # Informs about the currency of origin.
-    currency: Currency!
-
-    # Informs about the rate applied over result.
-    rate: Float!
+  # Informs about the currency of origin.
+  currency: Currency!
+  
+  # Informs about the rate applied over result.
+  rate: Float!
 }
