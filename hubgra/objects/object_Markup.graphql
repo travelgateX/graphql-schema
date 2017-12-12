@@ -1,7 +1,7 @@
 # Informs markup applied over supplier price.
 type Markup implements Priceable {
   #channel of markup application.
-  channel: String!
+  channel: String
   
   # Currency code indicating which currency should be paid.
   # This information is mandatory.
