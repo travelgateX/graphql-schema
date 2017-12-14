@@ -1,0 +1,8 @@
+input MemberInputData{
+    code: String
+    info: String
+    type: MemberType!
+    groupCode : String!
+    roles:  [String!]!
+    resource:  String!
+}

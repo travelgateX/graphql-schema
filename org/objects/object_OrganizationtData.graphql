@@ -1,0 +1,5 @@
+type OrganizationtData{
+  # ID code
+  code: ID!
+  apis(first: Int, Last: Int, before: String, after:String, codes: [String!]): APIConnection
+}

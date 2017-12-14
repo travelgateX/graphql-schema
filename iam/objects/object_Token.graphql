@@ -1,0 +1,5 @@
+type Token {
+    code: ID!
+    status: String!
+    error: [Error!]
+}
