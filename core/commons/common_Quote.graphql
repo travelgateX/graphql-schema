@@ -1,5 +1,0 @@
-# Returns the total price and cancellation policies of the Option selected in the previous step (Search).
-type Quote {
-  #TODO: Del
-  a:Boolean
-}

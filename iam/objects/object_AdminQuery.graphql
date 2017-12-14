@@ -1,0 +1,7 @@
+type AdminQuery{
+  members(codes:[String!],first: Int, Last: Int, before: String, after:String) : MemberConnection!
+  groups(codes:[String!],first: Int, Last: Int, before: String, after:String) : GroupConnection!
+  apis(codes:[String!],first: Int, Last: Int, before: String, after:String) : APIConnection!
+  resources(codes:[String!],first: Int, Last: Int, before: String, after:String) : ResourceConnection!
+  roles(codes:[String!],first: Int, Last: Int, before: String, after:String) : RoleConnection!
+}

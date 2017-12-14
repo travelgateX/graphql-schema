@@ -2,6 +2,6 @@ type API implements Node{
   code: ID!
   error: [Error!]
   apiData: APIData
-    createdAt: DateTime!
+  createdAt: DateTime!
   updatedAt: DateTime!
 }

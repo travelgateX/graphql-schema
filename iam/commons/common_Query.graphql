@@ -1,7 +1,3 @@
-extend type Query{
-  getMembers(codes:[String!],first: Int, Last: Int, before: String, after:String) : MemberConnection!
-  getGroups(codes:[String!],first: Int, Last: Int, before: String, after:String) : GroupConnection!
-  getApis(codes:[String!],first: Int, Last: Int, before: String, after:String) : APIConnection!
-  getResources(codes:[String!],first: Int, Last: Int, before: String, after:String) : ResourceConnection!
-  getRoles(codes:[String!],first: Int, Last: Int, before: String, after:String) : RoleConnection!
+extend type Query {
+  admin: Admin
 }

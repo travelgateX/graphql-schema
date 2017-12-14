@@ -1,26 +1,26 @@
 # Criteria of book.
 input HotelBookInput {
-	# Option ID
-    optionRefId: String!
-
-    # Language to be used in request.
-    language: Language
-
-    # Booking ID in client’s system.
-    clientReference: String!
-
-    # Indicates price variation permitted by the client.
-    deltaPrice: DeltaPriceInput
-
-    # If the payment is done by credit card, it's mandatory to specify the payment type and the credit card information.
-    paymentCard: PaymentCardInput
-
-    # Any customer comments for the supplier to consider.
-    remarks: String
-
-    # Holder's basic information
-    holder: HolderInput!
-
-    # Rooms within this option
-    rooms: [BookRoomInput!]!
+  # Option ID
+  optionRefId: String!
+  
+  # Language to be used in request.
+  language: Language
+  
+  # Booking ID in client's system.
+  clientReference: String!
+  
+  # Indicates price variation permitted by the client.
+  deltaPrice: DeltaPriceInput
+  
+  # If the payment is done by credit card, it's mandatory to specify the payment type and the credit card information.
+  paymentCard: PaymentCardInput
+  
+  # Any customer comments for the supplier to consider.
+  remarks: String
+  
+  # Holder's basic information.
+  holder: HolderInput!
+  
+  # Rooms within this option.
+  rooms: [BookRoomInput!]!
 }

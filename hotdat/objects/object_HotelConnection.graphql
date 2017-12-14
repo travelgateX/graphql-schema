@@ -1,5 +1,5 @@
-# HotelList definition 
+# HotelList definition
 type HotelConnection {
-    edges: [HotelEdge]
-    pageInfo: PageInfo!
+  edges: [HotelEdge]
+  pageInfo: PageInfo!
 }

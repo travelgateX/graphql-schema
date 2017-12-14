@@ -1,5 +1,5 @@
 # Pax object that contains the pax age.
 input PaxInput {
-	# Pax age.
-	age: Int!
+  # Pax age.
+  age: Int!
 }

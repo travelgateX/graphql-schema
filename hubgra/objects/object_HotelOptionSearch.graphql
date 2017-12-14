@@ -1,59 +1,65 @@
 # An option includes hotel information, meal plan, total price, conditions and room description.
 type HotelOptionSearch implements BookableOptionSearch {
-	# Supplier that offers this option.
-	supplierCode: String!
-
-	# Access code of this option.
-    accessCode: String!
-
-   	# Market of this option.
-    market: String!
-
-    # Code of the hotel in the context selected.
-	hotelCode: String!
-
-    # Name of the hotel.
-	hotelName: String
-
-	# Code of the board in the context selected.
-	boardCode: String!
-
-	# Indicates the payment type of the option returned. Possible options: Merchant, Direct, Card Booking, Card check in and Mixed.
-	paymentType: PaymentType!
-
-	# The possible values in status in response are Available (OK) or On Request (RQ).
-	status: StatusType!
-
-	# List of occupancies of the request.
-	occupancies: [Occupancy!]!
-
-	# List of rooms of the option returned.
-	rooms: [Room!]!
-
-	# Specifies the prices (Gross, Net and Amount) of the option returned.
-	price: Price!
-
-	# List of supplements of the option returned.
-	supplements: [Supplement!]
-
-	# List of surcharges of the option returned.
-	surcharges: [Surcharge!]
-
-	# Specifies rate rules of the option returned.
-	rateRules: [RateRulesType!]
-
-	# Specifies cancel policies of the option returned.
-	cancelPolicy: CancelPolicy
-
-	# Additional information about the option.
-	remarks: String
-
-	# Extra information about the option.
-	addOns: AddOns
-
-	# Token for Deep Link
-	token: String!
-
-	# Indicates the quote key
-	id: String!
+  # Supplier that offers this option.
+  supplierCode: String!
+  
+  # Access code of this option.
+  accessCode: String!
+  
+  # Market of this option.
+  market: String!
+  
+  # Code of the hotel in the context selected.
+  hotelCode: String!
+  
+  # Supplier's hotel code.
+  hotelCodeSupplier: String!
+  
+  # Name of the hotel.
+  hotelName: String
+  
+  # Code of the board in the context selected.
+  boardCode: String!
+  
+  # Supplier's board code.
+  boardCodeSupplier: String!
+  
+  # Indicates the payment type of the option returned. Possible options: Merchant, Direct, Card Booking, Card check in and Mixed.
+  paymentType: PaymentType!
+  
+  # The possible values in status in response are Available (OK) or On Request (RQ).
+  status: StatusType!
+  
+  # List of occupancies of the request.
+  occupancies: [Occupancy!]!
+  
+  # List of rooms of the option returned.
+  rooms: [Room!]!
+  
+  # Specifies the prices (Gross, Net and Amount) of the option returned.
+  price: Price!
+  
+  # List of supplements of the option returned.
+  supplements: [Supplement!]
+  
+  # List of surcharges of the option returned.
+  surcharges: [Surcharge!]
+  
+  # Specifies rate rules of the option returned.
+  rateRules: [RateRulesType!]
+  
+  # Specifies cancel policies of the option returned.
+  cancelPolicy: CancelPolicy
+  
+  # Additional information about the option.
+  remarks: String
+  
+  # Extra information about the option.
+  addOns: AddOns
+  
+  # Token for Deep Link
+  token: String!
+  
+  # Indicates the quote key
+  id: String!
 }

@@ -1,28 +1,28 @@
 type BookingHotel {
-    # Creation date of the booking.
-    # Format: yyyy-MM-dd
-    creationDate: Date
-
-    # Check-in date for the booking.
-    # Format: yyyy-MM-dd
-    checkIn: Date
-
-    # Check-out date for the booking.
-    # Format: yyyy-MM-dd
-    checkOut: Date
-
-    # Code of the hotel in the context selected.
-    hotelCode: String
-
-    # Name of the hotel.
-    hotelName: String
-
-    # Code of the board in the context selected.
-    boardCode: String
-
-    # List of occupancies of the request.
-    occupancies: [Occupancy!]
-
-    # List of rooms.
-    rooms: [BookingRoom!]
+  # Creation date of the booking.
+  # Format: yyyy-MM-dd
+  creationDate: Date
+  
+  # Check-in date for the booking.
+  # Format: yyyy-MM-dd
+  checkIn: Date
+  
+  # Check-out date for the booking.
+  # Format: yyyy-MM-dd
+  checkOut: Date
+  
+  # Code of the hotel in the context selected.
+  hotelCode: String
+  
+  # Name of the hotel.
+  hotelName: String
+  
+  # Code of the board in the context selected.
+  boardCode: String
+  
+  # List of occupancies of the request.
+  occupancies: [Occupancy!]
+  
+  # List of rooms.
+  rooms: [BookingRoom!]
 }

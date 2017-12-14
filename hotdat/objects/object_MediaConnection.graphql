@@ -1,4 +1,4 @@
 type MediaConnection{
   edges: [MediaEdge]
-  pageInfo: PageInfo! 
+  pageInfo: PageInfo!
 }

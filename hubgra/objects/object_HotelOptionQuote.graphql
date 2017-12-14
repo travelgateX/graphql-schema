@@ -1,23 +1,26 @@
 # Contains information about quote.
 type HotelOptionQuote {
-    # Indicates the valuation key
-    optionRefId: String!
-
-    # The possible values in status in response are Available (OK) or On Request (RQ).
-    status: StatusType!
-
-    # Specifies the prices (Gross, Net and Amount) of the option returned.
-    price: Price!
-
-    # Specifies cancel policies of the option returned.
-    cancelPolicy: CancelPolicy!
-
-    # Additional information about the option.
-    remarks: String
-
-    # List of surcharges of the option returned.
-    surcharges: [Surcharge!]
-
-    # List of credit cards
-    cardTypes: [String!]
+  # Indicates the valuation key
+  optionRefId: String!
+  
+  # The possible values in status in response are Available (OK) or On Request (RQ).
+  status: StatusType!
+  
+  # Specifies the prices (Gross, Net and Amount) of the option returned.
+  price: Price!
+  
+  # Specifies cancel policies of the option returned.
+  cancelPolicy: CancelPolicy!
+  
+  # Additional information about the option.
+  remarks: String
+  
+  # List of surcharges of the option returned.
+  surcharges: [Surcharge!]
+  
+  # List of credit cards
+  cardTypes: [String!]
+  
+  # Extra information about the option.
+  addOns: AddOns
 }

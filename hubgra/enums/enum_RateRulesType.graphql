@@ -1,32 +1,32 @@
 # Rate Rules
 enum RateRulesType {
-	# The product can’t be sold separately from another product attached to it, such as a flight.
-	PACKAGE
-
-	# Options that can only be sold to people who are 55 and older.
-	OLDER55
-
-	# Options that can only be sold to people who are 60 and older.
-	OLDER60
-
-	# Options that can only be sold to people who are 65 and older.
-	OLDER65
-
-	# The rate CanaryResident is applicable to Canary Islands residents only.
-	CANARY_RESIDENT
-
-	# The rate BalearicResident is applicable to Balearic Islands residents only.
-	BALEARIC_RESIDENT
-
-	# The rate largeFamily is applied to large families and is determined by each supplier
-	LARGE_FAMILY
-
-	# The rate honeymoon is applied to those who just got married and is determined by each supplier.
-	HONEYMOON
-
-    # The rate publicServant is applicable to public servants only.
-	PUBLIC_SERVANT
-
-	# The rate unemployed is applied to those without work.
-	UNEMPLOYED
+  # The product can't be sold separately from another product attached to it, such as a flight.
+  PACKAGE
+  
+  # Options that can only be sold to people who are 55 and older.
+  OLDER55
+  
+  # Options that can only be sold to people who are 60 and older.
+  OLDER60
+  
+  # Options that can only be sold to people who are 65 and older.
+  OLDER65
+  
+  # The rate CanaryResident is applicable to Canary Islands residents only.
+  CANARY_RESIDENT
+  
+  # The rate BalearicResident is applicable to Balearic Islands residents only.
+  BALEARIC_RESIDENT
+  
+  # The rate largeFamily is applied to large families and is determined by each supplier
+  LARGE_FAMILY
+  
+  # The rate honeymoon is applied to those who just got married and is determined by each supplier.
+  HONEYMOON
+  
+  # The rate publicServant is applicable to public servants only.
+  PUBLIC_SERVANT
+  
+  # The rate unemployed is applied to those without work.
+  UNEMPLOYED
 }

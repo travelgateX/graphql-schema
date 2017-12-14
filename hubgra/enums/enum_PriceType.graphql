@@ -1,11 +1,11 @@
 # Price Type
 enum PriceType {
-	# Price without deductions.
-	GROSS
-
-	# Price after deducting all discounts and rebates.
-	NET
-
-	# Final quantity. Sum of multiple quantities.
-	AMOUNT
+  # Price without deductions.
+  GROSS
+  
+  # Price after deducting all discounts and rebates.
+  NET
+  
+  # Final quantity. Sum of multiple quantities.
+  AMOUNT
 }

@@ -1,0 +1,8 @@
+input CreateMemberInput{
+  code: String
+  info: String
+  type: MemberType!
+  group : String!
+  roles:  [String!]!
+  resource:  String!
+}

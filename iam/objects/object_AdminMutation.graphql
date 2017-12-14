@@ -1,0 +1,10 @@
+type AdminMutation{
+  createMember(member: CreateMemberInput!) : Member!
+  createGroup(group: CreateGroupInput!): Group!
+  
+  updateMember(member: UpdateMemberInput!): Member!
+  updateGroup(group: UpdateGroupInput!): Group!
+  
+  deleteMember(member: [DeleteMemberInput!]!): Member!
+  deleteGroup(group: DeleteGroupInput!): Group!
+}
