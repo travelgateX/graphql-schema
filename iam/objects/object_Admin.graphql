@@ -1,4 +1,0 @@
-type Admin {
-  query: AdminQuery
-  mutation: AdminMutation
-}

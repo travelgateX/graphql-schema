@@ -1,5 +1,4 @@
 type AdminMutation{
-<<<<<<< HEAD
   # Create member. Requires specific group and role.
   createMember(member: CreateMemberInput!) : Member!
   # Create group. Group "owner" is optional.
@@ -13,14 +12,5 @@ type AdminMutation{
   # Delete member from specific group.
   deleteMember(member: [DeleteMemberInput!]!): Member!
   # Delete group and members from this group.
-=======
-  createMember(member: CreateMemberInput!) : Member!
-  createGroup(group: CreateGroupInput!): Group!
-  
-  updateMember(member: UpdateMemberInput!): Member!
-  updateGroup(group: UpdateGroupInput!): Group!
-  
-  deleteMember(member: [DeleteMemberInput!]!): Member!
->>>>>>> 243ca062c8df44d005e3d2566fb111bf510e24aa
   deleteGroup(group: DeleteGroupInput!): Group!
 }

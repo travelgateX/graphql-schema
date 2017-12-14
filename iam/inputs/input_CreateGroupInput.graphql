@@ -1,8 +1,4 @@
 input CreateGroupInput{
-<<<<<<< HEAD
-=======
-  user: String
->>>>>>> 243ca062c8df44d005e3d2566fb111bf510e24aa
   code: String!
   type: GroupType!
   info: String
