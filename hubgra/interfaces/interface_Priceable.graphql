@@ -1,16 +1,16 @@
 interface Priceable {
-    # Specifies the currency.
-    currency: Currency!
-
-    # Is binding.
-    binding: Boolean!
-
-    # Specifies the import net.
-    net: Float!
-
-    # Specifies the import gross.
-    gross: Float
-
-    # Specifies the exchange.
-    exchange: Exchange!
+  # Specifies the currency.
+  currency: Currency!
+  
+  # Is binding.
+  binding: Boolean!
+  
+  # Specifies the import net.
+  net: Float!
+  
+  # Specifies the import gross.
+  gross: Float
+  
+  # Specifies the exchange.
+  exchange: Exchange!
 }

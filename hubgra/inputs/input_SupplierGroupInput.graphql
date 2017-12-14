@@ -1,7 +1,7 @@
 # group related to a supplier
 input SupplierGroupInput {
-    # group code of the group related to this supplier
-    groupCode: String!
-    # Indicates if the supplier is active for its supplier
-    isActive: Boolean!
+  # group code of the group related to this supplier
+  groupCode: String!
+  # Indicates if the supplier is active for its supplier
+  isActive: Boolean!
 }

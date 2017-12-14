@@ -1,7 +1,7 @@
 enum MarkupRuleType {
-    # Indicates the percentage applied by a rule.
-    PERCENT
-
-    # Indicates the exact amount applied by a rule.
-    IMPORT
+  # Indicates the percentage applied by a rule.
+  PERCENT
+  
+  # Indicates the exact amount applied by a rule.
+  IMPORT
 }

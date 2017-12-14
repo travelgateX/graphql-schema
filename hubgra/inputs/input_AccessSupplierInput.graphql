@@ -1,11 +1,11 @@
 # Supplier input for data access management API
 input AccessSupplierInput {
-    # supplier code
-    code: String!
-    # supplier instance
-    dll: String!
-    # Indicates if the supplier is active.
-    isActive: Boolean!
-    # groups related to this supplier
-    groups: [SupplierGroupInput!]
+  # supplier code
+  code: String!
+  # supplier instance
+  dll: String!
+  # Indicates if the supplier is active.
+  isActive: Boolean!
+  # groups related to this supplier
+  groups: [SupplierGroupInput!]
 }

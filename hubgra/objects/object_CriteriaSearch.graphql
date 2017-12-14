@@ -1,29 +1,29 @@
 # Criteria of search contains destination, travel dates and the number of pax in each room.
 type CriteriaSearch {
-	# Check-in date for the booking.
-	# Format: yyyy-MM-dd
-	checkIn: Date!
-
-	# Check-out, date for the booking.
-	# Format: yyyy-MM-dd
-	checkOut: Date!
-
-	# Contains the list of hotels's ID.
-	hotels: [String!]!
-
-	# For multi room bookings, this array will contain multiple elements (rooms).
-	# For each room you have to specify its own occupancy.
-	occupancies: [RoomCriteria!]!
-
-   	# Language to be used in request.
-   	language : Language
-
-	# Currency requested if supported by supplier.
-	currency : Currency
-
-	# Nationality of the guest (use ISO3166_1_alfa_2).
-   	nationality : Country
-
-   	# Targeted zone, country or point of sale to be used in request.
-   	market : String!
+  # Check-in date for the booking.
+  # Format: yyyy-MM-dd
+  checkIn: Date!
+  
+  # Check-out, date for the booking.
+  # Format: yyyy-MM-dd
+  checkOut: Date!
+  
+  # Contains the list of hotels's ID.
+  hotels: [String!]!
+  
+  # For multi room bookings, this array will contain multiple elements (rooms).
+  # For each room you have to specify its own occupancy.
+  occupancies: [RoomCriteria!]!
+  
+  # Language to be used in request.
+  language : Language
+  
+  # Currency requested if supported by supplier.
+  currency : Currency
+  
+  # Nationality of the guest (use ISO3166_1_alfa_2).
+  nationality : Country
+  
+  # Targeted zone, country or point of sale to be used in request.
+  market : String!
 }

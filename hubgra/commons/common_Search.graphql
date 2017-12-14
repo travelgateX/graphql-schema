@@ -2,9 +2,9 @@
 # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
 # forward.
 type Search {
-	# Available options of an hotel for a given date and itinerary. It does not filter different classes, times or
-	# fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
-	# forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
-	# But you must preload the other fields in our system by complete the fields absents.
-	hotel(token: String, criteria: HotelCriteriaSearchInput, settings: HotelSettingsInput, filter: FilterInput): HotelSearch @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
+  # Available options of an hotel for a given date and itinerary. It does not filter different classes, times or
+  # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
+  # forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
+  # But you must preload the other fields in our system by complete the fields absents.
+  hotel(token: String, criteria: HotelCriteriaSearchInput, settings: HotelSettingsInput, filter: FilterInput): HotelSearch @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
 }

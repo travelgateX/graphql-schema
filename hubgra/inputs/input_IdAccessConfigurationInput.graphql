@@ -1,12 +1,12 @@
 input IdAccessConfigurationInput {
-    # access unique identifier
-    id: ID!
-    # Indicates if the access is active.
-    isActive: Boolean!
-    # Arbitrary not unique identifier
-    code: String!
-    # Supplier to which this access belongs
-    supplier: String!
-    # Information required to access the supplier's system.
-    configuration: ConfigurationInput
+  # access unique identifier
+  id: ID!
+  # Indicates if the access is active.
+  isActive: Boolean!
+  # Arbitrary not unique identifier
+  code: String!
+  # Supplier to which this access belongs
+  supplier: String!
+  # Information required to access the supplier's system.
+  configuration: ConfigurationInput
 }

@@ -1,8 +1,8 @@
 # Contains reference codes.
 type Reference {
-    # Client reference booking
-    client: String
-
-    # Supplier reference booking
-    supplier: String
+  # Client reference booking
+  client: String
+  
+  # Supplier reference booking
+  supplier: String
 }

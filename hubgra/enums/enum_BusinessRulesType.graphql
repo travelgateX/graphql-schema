@@ -1,8 +1,8 @@
 # Business rules type
 enum BusinessRulesType {
-   	# The cheapest options is returned without exceeding the optionsQuota limit.
-   	CHEAPER_AMOUNT
-
-   	# Groups the option by room type without exceeding the optionsQuota limit.
-   	ROOM_TYPE
+  # The cheapest options is returned without exceeding the optionsQuota limit.
+  CHEAPER_AMOUNT
+  
+  # Groups the option by room type without exceeding the optionsQuota limit.
+  ROOM_TYPE
 }

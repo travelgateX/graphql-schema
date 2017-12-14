@@ -1,17 +1,17 @@
 # Mutations are operations that change or update data in the server.
 extend type Mutation {
-    # Creates a new hotel booking consisting of an option of 1 or more rooms.
-    hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
-    # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
-    hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
-    
-    # Load mapping files for a group.
-    loadFile(input: String!): String! @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
-    
-    # Creates a defaultSettings for a given group
-    createDefaultSettings(input: DefaultSettingsInput!): DefaultSettings @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
-    # Updates a defaultSettings for a given group
-    updateDefaultSettings(input: DefaultSettingsInput!): DefaultSettings @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
-    # Deletes a defaultSettings for a given group
-    deleteDefaultSettings(input: String!): Boolean! @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
+  # Creates a new hotel booking consisting of an option of 1 or more rooms.
+  hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
+  # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
+  hotelCancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
+  
+  # Load mapping files for a group.
+  loadFile(input: String!): String! @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
+  
+  # Creates a defaultSettings for a given group
+  createDefaultSettings(input: DefaultSettingsInput!): DefaultSettings @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
+  # Updates a defaultSettings for a given group
+  updateDefaultSettings(input: DefaultSettingsInput!): DefaultSettings @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
+  # Deletes a defaultSettings for a given group
+  deleteDefaultSettings(input: String!): Boolean! @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
 }
