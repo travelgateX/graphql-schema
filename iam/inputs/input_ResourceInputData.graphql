@@ -1,4 +1,0 @@
-input ResourceInputData {
-    code: ID!
-    apiID: ID!
-}

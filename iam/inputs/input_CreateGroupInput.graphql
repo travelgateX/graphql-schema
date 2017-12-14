@@ -1,5 +1,4 @@
 input CreateGroupInput{
-  user: String
   code: String!
   type: GroupType!
   info: String

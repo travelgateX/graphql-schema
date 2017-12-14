@@ -1,7 +1,7 @@
-type API implements Node{
+type Product implements Node{
   code: ID!
+  productData: ProductData!
   error: [Error!]
-  apiData: APIData
   createdAt: DateTime!
   updatedAt: DateTime!
 }

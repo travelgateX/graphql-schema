@@ -1,4 +1,0 @@
-input ApiGroup {
-    groupCode: ID!
-    apiCode: ID!
-}

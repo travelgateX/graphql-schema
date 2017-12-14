@@ -1,6 +1,6 @@
 type APIData{
   id: ID!
   code: ID!
-  groups(first: Int, Last: Int, before: String, after:String, codes: [String!]): GroupConnection
-  resources(first: Int, Last: Int, before: String, after:String, codes: [String!]): ResourceConnection
+  groups(first: Int, last: Int, before: String, after:String, codes: [ID!]): GroupConnection
+  resources(first: Int, last: Int, before: String, after:String, codes: [ID!]): ResourceConnection
 }

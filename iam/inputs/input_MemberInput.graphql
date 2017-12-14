@@ -1,3 +1,0 @@
-input MemberInput{
-    memberInputData: MemberInputData!
-}

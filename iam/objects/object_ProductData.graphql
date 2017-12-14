@@ -1,0 +1,5 @@
+type ProductData{
+  id: ID!
+  code: ID!
+  apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
+}

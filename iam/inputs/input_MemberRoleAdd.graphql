@@ -1,4 +1,0 @@
-input MemberRoleAdd{
-    id : Int!
-    MemberRoleAddData: MemberRoleAddData!
-}

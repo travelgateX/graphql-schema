@@ -1,5 +1,0 @@
-input TokenFilter {
-    memberId: String!
-    groupId: String!
-    resourceId: [String!]!
-}

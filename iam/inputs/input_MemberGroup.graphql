@@ -1,5 +1,0 @@
-input MemberGroup{
-    groupCode: ID!
-    memberCode: ID!
-    roleCode:   ID!
-}
