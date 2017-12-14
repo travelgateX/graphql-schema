@@ -2,10 +2,8 @@
 type Destination {
   # Destination code.
   code: String
-  
   # Destination name.
   name: String
-  
   # Indicates if it is allowed in availability.
   avail: Boolean!
 }
