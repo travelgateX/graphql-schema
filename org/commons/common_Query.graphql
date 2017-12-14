@@ -1,4 +1,0 @@
-extend type Query {
-  organization(organization:OrganizationInput): OrganizationConnection!
-  catalog: ProductConnection!
-}

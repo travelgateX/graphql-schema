@@ -1,4 +1,0 @@
-type ProductConnection{
-  edges: [ProductEdge]
-  pageInfo: PageInfo!
-}

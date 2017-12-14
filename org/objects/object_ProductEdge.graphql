@@ -1,4 +1,0 @@
-type ProductEdge {
-  cursor: String!
-  node: Product
-}
