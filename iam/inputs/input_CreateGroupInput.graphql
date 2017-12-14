@@ -1,0 +1,6 @@
+input CreateGroupInput{
+  code: String!
+  type: GroupType!
+  info: String
+  parent: ID!
+}

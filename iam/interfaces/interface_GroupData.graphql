@@ -1,9 +1,0 @@
-interface GroupData{
-  id: ID!
-  code: ID!
-  type: GroupType!
-  parent: Int!
-  members(first: Int, Last: Int, before: String, after:String, codes: [String!]): MemberConnection
-  apis(first: Int, Last: Int, before: String, after:String, codes: [String!]): APIConnection
-  #access: AccessConnection
-}

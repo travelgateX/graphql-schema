@@ -1,3 +1,0 @@
-input RoleInput {
-    roleInputData: RoleInputData!
-}

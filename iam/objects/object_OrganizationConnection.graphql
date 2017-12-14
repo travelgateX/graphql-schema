@@ -1,0 +1,4 @@
+type OrganizationConnection{
+  edges: [OrganizationEdge]
+  pageInfo: PageInfo!
+}

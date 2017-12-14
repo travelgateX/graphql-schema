@@ -8,7 +8,7 @@ type RoleData{
   isDelete: Boolean!
   isEnable: Boolean!
   isExecutable: Boolean!
-  isEspecial: Boolean!
-  especial: String
-  resources(first: Int, Last: Int, before: String, after:String, codes: [String!]): ResourceConnection
+  isSpecial: Boolean!
+  special: String
+  resources(first: Int, last: Int, before: String, after:String, codes: [ID!]): ResourceConnection
 }

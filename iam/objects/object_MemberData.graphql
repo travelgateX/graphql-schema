@@ -3,7 +3,7 @@ type MemberData {
   code: ID!
   roles: String
   memberType: String
-  groups(first: Int, Last: Int, before: String, after:String, codes: [String!]): GroupConnection
+  groups(first: Int, last: Int, before: String, after:String, codes: [ID!]): GroupConnection
   #roles: RoleConnection TODO
   #access: AccessConnection TODO
 }

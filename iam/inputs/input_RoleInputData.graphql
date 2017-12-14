@@ -1,6 +1,0 @@
-input RoleInputData {
-    code: ID!
-    resourceId: ID!
-    label : String!
-    permission:  String!
-}

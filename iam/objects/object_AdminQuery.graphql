@@ -1,0 +1,16 @@
+type AdminQuery{
+  # Organizations list. Specify organization codes to filter organizations.
+  organizations(codes:[ID!],first: Int, last: Int, before: String, after:String): OrganizationConnection!
+  # Products list. Specify product codes to filter products.
+  products(codes:[ID!],first: Int, last: Int, before: String, after:String): ProductConnection!
+  # Members list. Specify member codes to filter members.
+  members(codes:[ID!],first: Int, last: Int, before: String, after:String) : MemberConnection!
+  # Groups list. Specify group codes to filter groups.
+  groups(codes:[ID!],first: Int, last: Int, before: String, after:String) : GroupConnection!
+  # Apis list. Specify api codes to filter apis.
+  apis(codes:[ID!],first: Int, last: Int, before: String, after:String) : APIConnection!
+  # Resources list. Specify resource codes to filter resources.
+  resources(codes:[ID!],first: Int, last: Int, before: String, after:String) : ResourceConnection!
+  # Roles list. Specify role codes to filter roles.
+  roles(codes:[ID!],first: Int, last: Int, before: String, after:String) : RoleConnection!
+}
