@@ -1,7 +1,5 @@
-# Query type
+# A Query is an entry point into the object graph.
 extend type Query {
-  # Query to obtain a Hotel List
-  hotelList(codes: [ID!], language: Language): HotelConnection!
-  #hotelList(first: Int, Last: Int, before: String, after: String, codes: [ID!], access:[ID!], language: Language): HotelConnection!
-
+  # Query to obtain Hotels
+  hotels(codes: [String!], language: String, first: Int, Last: Int, before: String, after:String): HotelConnection!
 }

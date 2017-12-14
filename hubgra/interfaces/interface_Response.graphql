@@ -1,13 +1,13 @@
 interface Response {
-    # Application stats in string format
-    stats(token: String!): RequestStats
-
-    # Data sent & received in the supplier’s original format.
-    auditData: AuditData
-
-    # Errors that lead the service to stop
-    errors: [Error!]
-
-    # Potentially harmful situations or errors that do not stop the service
-    warnings: [Warning!]
+  # Application stats in string format
+  stats(token: String!): RequestStats
+  
+  # Data sent & received in the supplier’s original format.
+  auditData: AuditData
+  
+  # Errors that lead the service to stop
+  errors: [Error!]
+  
+  # Potentially harmful situations or errors that do not stop the service
+  warnings: [Warning!]
 }

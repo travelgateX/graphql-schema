@@ -1,8 +1,8 @@
 # Indicates the type of criteria in the request of the booking list
 enum BookingCriteriaType {
-    # Search by date range
-    DATES
-
-    # Search by reference codes
-    REFERENCES
+  # Search by date range
+  DATES
+  
+  # Search by reference codes
+  REFERENCES
 }

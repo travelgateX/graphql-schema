@@ -1,29 +1,29 @@
 # Contains the room information of the option returned.
 type Room {
-	# ID reference to the occupancy.
-	occupancyRefId: Int!
-
-	# Indicates the room code.
-	code: String!
-
-	# Description about the room.
-	description: String
-
-	# Identifies if the room is refundable or not.
-	refundable: Boolean
-
-	# Number of rooms available with the same type.
-	units: Int
-
-	# Specifies the room price.
-	roomPrice: RoomPrice!
-
-	# List of beds.
-	beds: [Bed!]
-
-	# Daily break downs rate plan.
-    ratePlans: [RatePlan!]
-
-    # Daily break downs promotions.
-    promotions: [Promotion!]
+  # ID reference to the occupancy.
+  occupancyRefId: Int!
+  
+  # Indicates the room code.
+  code: String!
+  
+  # Description about the room.
+  description: String
+  
+  # Identifies if the room is refundable or not.
+  refundable: Boolean
+  
+  # Number of rooms available with the same type.
+  units: Int
+  
+  # Specifies the room price.
+  roomPrice: RoomPrice!
+  
+  # List of beds.
+  beds: [Bed!]
+  
+  # Daily break downs rate plan.
+  ratePlans: [RatePlan!]
+  
+  # Daily break downs promotions.
+  promotions: [Promotion!]
 }

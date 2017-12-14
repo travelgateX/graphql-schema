@@ -1,8 +1,0 @@
-# Giata System ID.
-type GiataID {
-  # Giata url.
-  # source: URI!
-  # Giata code
-  code: String
-  # supplier: Supplier!
-}

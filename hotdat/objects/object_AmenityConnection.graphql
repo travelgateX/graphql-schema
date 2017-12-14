@@ -1,4 +1,4 @@
 type AmenityConnection{
   edges: [AmenityEdge]
-  pageInfo: PageInfo! 
+  pageInfo: PageInfo!
 }

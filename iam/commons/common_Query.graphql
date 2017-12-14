@@ -1,3 +1,8 @@
 extend type Query {
+<<<<<<< HEAD
   admin: AdminQuery
 }
+=======
+  admin: Admin
+}
+>>>>>>> 243ca062c8df44d005e3d2566fb111bf510e24aa

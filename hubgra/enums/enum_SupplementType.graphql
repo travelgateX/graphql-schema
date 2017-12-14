@@ -1,26 +1,26 @@
 # Supplement Type
 enum SupplementType {
-	# A ticket or pass authorizing the holder to ski in a certain place or resort.
-	SKI_PASS
-
-	# Lessons of any type that the costumer can take.
-	LESSONS
-
-	# Supplement of a determined meal plan.
-	MEALS
-
-	# Extra equipment for a specific purpose.
-	EQUIPMENT
-
-	# Admission to some service.
-	TICKET
-
-	# Transfers used by the costumer.
-	TRANSFERS
-
-	# Gala: A festive occasion, celebration or special entertainment.
-	GALA
-
-	# Activities that the costumer can do.
-	ACTIVITY
+  # A ticket or pass authorizing the holder to ski in a certain place or resort.
+  SKI_PASS
+  
+  # Lessons of any type that the costumer can take.
+  LESSONS
+  
+  # Supplement of a determined meal plan.
+  MEALS
+  
+  # Extra equipment for a specific purpose.
+  EQUIPMENT
+  
+  # Admission to some service.
+  TICKET
+  
+  # Transfers used by the costumer.
+  TRANSFERS
+  
+  # Gala: A festive occasion, celebration or special entertainment.
+  GALA
+  
+  # Activities that the costumer can do.
+  ACTIVITY
 }

@@ -1,17 +1,20 @@
 # The information and credentials required to access the supplier’s system.
 input ConfigurationInput {
-   	# User name for the connection.
-   	username: String
-
-   	# Password for the connection.
-   	password: String
-
-   	# Url or endpoint for the connection.
-    	urls: UrlsInput!
-
-   	# List of parameters with additional required information.
-   	parameters: [ParameterInput!]
-
-   	# Source markets allowed for the access.
-   	markets: [String!]
+  # User name for the connection.
+  username: String
+  
+  # Password for the connection.
+  password: String
+  
+  # Url or endpoint for the connection.
+  urls:           UrlsInput!
+  
+  # List of parameters with additional required information.
+  parameters: [ParameterInput!]
+  
+  # Source markets allowed for the access.
+  markets: [String!]
+  
+  # RateRules allowed for the access.
+  rateRules: [RateRulesType!]
 }

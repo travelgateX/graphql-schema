@@ -1,17 +1,17 @@
 # Contains information about cancel
 type HotelCancelDetail {
-    # Booking ID in the Supplier´s system
-    reference: Reference
-
-    # Cancellation ID in the Supplier´s system
-    cancelReference: String
-
-    # Booking Status.
-    status: BookStatusType
-
-    # Specifies the prices (Gross, Net and Amount) of the cancellation.
-    price: Price
-
-    # Information about the booking.
-    booking: HotelBookingDetail
+  # Booking ID in the Supplier's system
+  reference: Reference
+  
+  # Cancellation ID in the Supplier's system
+  cancelReference: String
+  
+  # Booking Status.
+  status: BookStatusType
+  
+  # Specifies the prices (Gross, Net and Amount) of the cancellation.
+  price: Price
+  
+  # Information about the booking.
+  booking: HotelBookingDetail
 }

@@ -1,7 +1,7 @@
 # Pair of groups and accesses. All accesses returned will belong to all the groups in groupCodes
 type GroupAccess {
-    # group identifiers
-    groupCodes: [String!]!
-
-    accesses: [Access!]
+  # group identifiers
+  groupCodes: [String!]!
+  
+  accesses: [Access!]
 }

@@ -1,9 +1,8 @@
 # Holder object that contains the pax name and surname.
-# TODO: yo lo cambiaria a CardHolder o es BookingHolder
 input HolderInput {
-	# The card holder's name
-	name: String!
-
-	# The card holder's surname
-	surname: String!
+  # The card holder's name
+  name: String!
+  
+  # The card holder's surname
+  surname: String!
 }
