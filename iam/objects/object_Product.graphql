@@ -1,0 +1,7 @@
+type Product implements Node{
+  code: ID!
+  productData: ProductData!
+  error: [Error!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

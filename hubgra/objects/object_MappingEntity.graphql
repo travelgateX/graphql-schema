@@ -1,7 +1,7 @@
 # Mapping about client codes with the equivalence per supplier.
 type MappingEntity {
-    # Client code
-    code: String!
-    # Supplier code. Filter by supplier.
-    maps: [Map!]
+  # Client code
+  code: String!
+  # Supplier code. Filter by supplier.
+  maps: [Map!]
 }

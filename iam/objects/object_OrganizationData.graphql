@@ -1,0 +1,8 @@
+type OrganizationData implements GroupCommonData {
+  id: ID!
+  code: ID!
+  members(codes: [ID!], first: Int, last: Int, before: String, after:String): MemberConnection
+  apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
+  products(codes: [ID!], first: Int, last: Int, before: String, after:String): ProductConnection
+  owner: Member!
+}

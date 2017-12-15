@@ -1,0 +1,4 @@
+input DeleteMemberInput {
+  code: ID!
+  group: ID!
+}

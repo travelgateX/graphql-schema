@@ -1,0 +1,14 @@
+type RoleData{
+  id: ID!
+  code: ID!
+  label: String!
+  isCreate: Boolean!
+  isRead: Boolean!
+  isUpdate: Boolean!
+  isDelete: Boolean!
+  isEnable: Boolean!
+  isExecutable: Boolean!
+  isSpecial: Boolean!
+  special: String
+  resources(first: Int, last: Int, before: String, after:String, codes: [ID!]): ResourceConnection
+}

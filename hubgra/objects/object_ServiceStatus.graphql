@@ -1,11 +1,11 @@
 # Indicates the status of the service
 type ServiceStatus implements AdviseMessage  {
-    # Status code
-    code: String!
-
-    # Status type
-    type: String!
-
-    # Status description
-    description : String!
+  # Status code
+  code: String!
+  
+  # Status type
+  type: String!
+  
+  # Status description
+  description : String!
 }

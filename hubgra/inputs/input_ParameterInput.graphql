@@ -1,8 +1,8 @@
 # Parameters for additional information for the supplier's configuration.
 input ParameterInput {
-   	# Contains the keyword/Id to identify a parameter.
-   	key: String!
-
-   	# Contains the parameter values.
-   	value: String!
+  # Contains the keyword/Id to identify a parameter.
+  key: String!
+  
+  # Contains the parameter values.
+  value: String!
 }

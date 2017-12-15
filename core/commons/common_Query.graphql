@@ -1,5 +1,4 @@
-# A Query is an entry point into the object graph.
-type Query {
-  #To Del
-  a:Boolean
+type Query{
+  hotelX: HotelXQuery
+  admin: AdminQuery
 }

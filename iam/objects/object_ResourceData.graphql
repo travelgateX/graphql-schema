@@ -1,0 +1,6 @@
+type ResourceData{
+  id: ID!
+  code: ID!
+  apis(first: Int, last: Int, before: String, after:String, codes: [ID!]): APIConnection
+  roles(first: Int, last: Int, before: String, after:String, codes: [ID!]): RoleConnection
+}

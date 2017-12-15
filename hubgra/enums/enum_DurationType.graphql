@@ -1,8 +1,8 @@
 # Duration Type
 enum DurationType {
-	# Date range is set.
-	RANGE
-
-	# Not restricted by date.
-   	OPEN
+  # Date range is set.
+  RANGE
+  
+  # Not restricted by date.
+  OPEN
 }

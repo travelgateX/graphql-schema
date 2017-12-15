@@ -1,7 +1,7 @@
 type StatAccess {
-    name:                   String!
-    total:                  Stat!
-    staticConfiguration:    Stat
-    transactions:           [StatTransaction!]!
-    external:               String!
+  name:                   String!
+  total:                  Stat!
+  staticConfiguration:    Stat
+  transactions:           [StatTransaction!]!
+  external:               String!
 }

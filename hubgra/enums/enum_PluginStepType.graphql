@@ -1,8 +1,17 @@
 # Plugin Step Type
 enum PluginStepType {
-    # Aggregate Access Response.
-    AGGREGATE_ACCESS
-
-    # Aggregate Response.
-    AGGREGATE
+  # Plugins executed after Buyer requests message to HotelX
+  REQUEST
+  
+  # Plugins executed before sending request to Supplier using Access and after Accesses have been calculated
+  REQUEST_ACCESS
+  
+  # Plugins executed after Supplier responds message. For every option returned
+  RESPONSE_OPTION
+  
+  # Plugins executed after all Access options has been responded
+  RESPONSE_ACCESS
+  
+  # Plugins executed before HotelX responds message to to Buyer
+  RESPONSE
 }
