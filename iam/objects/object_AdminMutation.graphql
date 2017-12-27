@@ -1,4 +1,4 @@
-type AdminMutation{
+extend type AdminMutation{
   # Create member. Requires specific group and role.
   createMember(member: CreateMemberInput!) : Member!
   # Create group. Group "owner" is optional.

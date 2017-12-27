@@ -3,4 +3,5 @@ input CreateGroupInput{
   type: GroupType!
   info: String
   parent: ID!
+  template: Template
 }

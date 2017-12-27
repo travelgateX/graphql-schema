@@ -1,4 +1,4 @@
-type AdminQuery{
+extend type AdminQuery{
   # Organizations list. Specify organization codes to filter organizations.
   organizations(codes:[ID!],first: Int, last: Int, before: String, after:String): OrganizationConnection!
   # Products list. Specify product codes to filter products.
