@@ -1,11 +1,11 @@
 # Details of an specific error type
 type ErrorDetails {
-	# Error code.
-	code: String!
-
-	# Total hits.
-	hit: Int!
-
-	# Total time.
-	time: Int!
+  # Error code.
+  code: ID!
+  
+  # Total hits.
+  hit: Int!
+  
+  # Total time.
+  time: Int!
 }

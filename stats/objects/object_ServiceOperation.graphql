@@ -1,8 +1,16 @@
 # Specific method of API used.
-type ServiceOperation {
-	# Service operation code.
-	code: String!
-
-	# List of users.
-	users: [User!]
+type ServiceOperation implements Node{
+  # Service operation code.
+  code: ID!
+  
+  serviceOperationData:ServiceOperationData!
+  
+  # Errors that will lead the service to abort
+  error: [Error!]
+  
+  # Create date
+  createdAt: DateTime!
+  
+  # Update date
+  updatedAt: DateTime!
 }

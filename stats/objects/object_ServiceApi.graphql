@@ -1,9 +1,17 @@
 # Refers to one of XTG available lines.
 # Hotel, Transportation, Car, Transfers, Activities, VirtualAccount, Payment and Package
-type ServiceApi {
-	# Service Api code.
-	code: String!
-
-	# List of service operations.
-	serviceOperations: [ServiceOperation!]
+type ServiceApi implements Node{
+  # Service Api code.
+  code: ID!
+  
+  serviceApiData:ServiceApiData!
+  
+  # Errors that will lead the service to abort
+  error: [Error!]
+  
+  # Create date
+  createdAt: DateTime!
+  
+  # Update date
+  updatedAt: DateTime!
 }

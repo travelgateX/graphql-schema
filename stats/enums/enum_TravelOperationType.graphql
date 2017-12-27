@@ -1,5 +1,5 @@
 enum TravelOperationType {
-   	AVAIL
-   	RESERVATION
-   	BATCH
+  AVAIL
+  RESERVATION
+  BATCH
 }

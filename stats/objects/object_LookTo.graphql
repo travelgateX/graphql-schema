@@ -1,6 +1,6 @@
 # Details of look to quote and look to book.
 type LookTo {
-	quote: Int!
-
-	booking: Int!
+  quote: Int!
+  
+  booking: Int!
 }

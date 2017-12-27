@@ -1,0 +1,7 @@
+type ServiceOperationData{
+  # Service operation code.
+  code: ID!
+  
+  # List off Access
+  access: AccessConnection!
+}

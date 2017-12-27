@@ -1,5 +1,5 @@
-# Details of an specific supplier
-type SupplierDetails {
+# Destination of request sent by HUB
+type SupplierS {
   # Supplier code.
   code: ID!
   
@@ -26,4 +26,10 @@ type SupplierDetails {
   
   # Total time.
   time: Int!
+  
+  # Details of supplier.
+  details: [SupplierDetails!]
+  
+  # Details of look to quote and look to book.
+  lookTo: LookTo!
 }

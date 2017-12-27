@@ -1,0 +1,4 @@
+type ServiceOperationConnection{
+  edges: [ServiceOperationEdge]
+  pageInfo: PageInfo!
+}
