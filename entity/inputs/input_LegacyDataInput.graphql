@@ -1,0 +1,14 @@
+input LegacyDataInput {
+  # Service API
+  serviceApi: Int
+  # Is supplier public?
+  isPublic: Boolean
+  # Is supplier in development?
+  inDevelopment: Boolean
+  # GiataType
+  giataType: String
+  # Giata Code
+  giataCode: String
+  # Is suspplier deirect?
+  isDirect: Boolean
+}

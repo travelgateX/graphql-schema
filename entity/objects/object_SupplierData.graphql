@@ -1,18 +1,16 @@
 type SupplierData{
-  code: ID!
-  isActive: Boolean!
-  dll: ID! #Ver si es un recurso
-  #accesses(first: Int, Last: Int, before: String, after:String, criterial: criterialInput): AccessConnection
-  hotelCodes(hotel:ID!):ID!
-  
   # unique identifier of a supplier
-  code: String!
+  code: ID!
+  # Supplier complete name
+  name: String!
   # indicates whether a supplier is active
   isActive: Boolean!
   # instance to which this supllier is connected
   dll: String!
+  # Context where the Supplier belongs to
+  context: String!
   # supplier's related data of its groups
   supplierGroups: [SupplierGroup!]
-  
-  
+  # Information that will only be used by old aggregator
+  legacy: LegacyData
 }

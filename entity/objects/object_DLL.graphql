@@ -1,0 +1,7 @@
+# Temporary type to use only during SQL server's lifetime
+type DLL {
+  code: String!
+  name: String!
+  isActive: Boolean
+  isPublic: Boolean
+}

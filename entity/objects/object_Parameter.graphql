@@ -1,9 +1,14 @@
 # Parameters for additional information for the supplier's configuration.
-type Parameter {
-  # Contains the keyword/Id to identify a parameter.
-  # This information is mandatory.
-  key: String!
-  # Contains the parameter values.
-  # This information is mandatory.
-  value: String!
+type Parameter implements Node {
+  code: ID!
+  parameterData: ParameterData
+
+  # Errors that will lead the service to abort
+  error: [Error!]
+
+  # Create date
+  createdAt: DateTime!
+
+  # Update date
+  updatedAt: DateTime!
 }
