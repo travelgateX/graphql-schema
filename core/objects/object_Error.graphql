@@ -1,11 +1,11 @@
 # Application errors
 type Error implements AdviseMessage {
-    # Error code
-    code: String!
-
-    # Error type
-    type: String!
-
-    # Error description
-    description : String!
+  # Error code
+  code: String!
+  
+  # Error type
+  type: String!
+  
+  # Error description
+  description : String!
 }

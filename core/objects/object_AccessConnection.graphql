@@ -1,4 +1,4 @@
 type AccessConnection{
-    edges: [AccessEdge]
-    pageInfo: PageInfo!
+  edges: [AccessEdge]
+  pageInfo: PageInfo!
 }
