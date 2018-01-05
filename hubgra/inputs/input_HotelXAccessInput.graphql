@@ -1,13 +1,13 @@
 # AccessInput overwrites an existent access in our Back Office or creates a new
 # one to be used in this search query only. An access object contains its own code, configuration and settings.
-input AccessInput {
+input HotelXAccessInput {
   # The accessID used to identify the existing access in our Back Office in order to
   # overwrite it. Acts as an identifier in this search. It can either exist or not.
   accessId: ID!
-  
+
   # Information required to access the supplier's system.
   configuration: ConfigurationInput
-  
+
   # You can configure an special settings for any access. This level overwrites the search and supplier settings levels.
   settings: SettingsBaseInput
 }
