@@ -1,5 +1,11 @@
 # Returns the mapping for a group.
 type Mapping {
   # Returns the differents group contexts, you can filter by some contexts.
-  contexts(contextCodes: [String!], supplierCodes: [String!]): [MappingContext!]
+  contexts(codes: [String!]): [MappingContext!]
+
+  # Errors that will lead the service to abort
+  errors: [Error!]
+
+  # Potentially harmful situations or errors that won't force the service to abort
+  warnings: [Warning!]
 }

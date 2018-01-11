@@ -10,7 +10,7 @@ type HotelSearch implements Response {
   auditData: AuditData
   
   # Request Criteria
-  requestCriteria: CriteriaSearch!
+  requestCriteria: CriteriaSearch
   
   # List of options returned according to the request.
   options: [HotelOptionSearch!]
