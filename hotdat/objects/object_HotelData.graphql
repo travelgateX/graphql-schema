@@ -17,4 +17,5 @@ type HotelData {
   contact: Contact!
   # Destination information.
   destination: Destination!
+  rank: Rank!
 }
