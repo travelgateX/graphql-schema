@@ -4,4 +4,6 @@ extend type HotelXMutation {
     
   # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
   cancel(input: HotelCancelInput!, settings: HotelSettingsInput): HotelCancelPayload
+
+  loadFile(input: String!): String!
 }

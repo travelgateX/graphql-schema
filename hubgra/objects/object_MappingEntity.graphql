@@ -2,6 +2,6 @@
 type MappingEntity {
   # Client code
   code: String!
-  # Supplier code. Filter by supplier.
-  maps: [Map!]
+  # You can filter by output context.
+  contexts(codes: [String!]): [Map!]
 }
