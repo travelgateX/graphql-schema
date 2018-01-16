@@ -1,14 +1,13 @@
-# Parameters for additional information for the supplier's configuration.
 type Parameter implements Node {
   code: ID!
   parameterData: ParameterData
-
+  
   # Errors that will lead the service to abort
   error: [Error!]
-
+  
   # Create date
   createdAt: DateTime!
-
+  
   # Update date
   updatedAt: DateTime!
 }

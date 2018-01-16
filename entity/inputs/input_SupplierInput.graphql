@@ -10,8 +10,12 @@ input SupplierInput {
   isActive: Boolean
   # Supplier context
   context: String
-  # groups related to this supplier
-  # groups: [SupplierGroupInput!] TODO later
+  # Default group where the supplier will be visible.
+  group: ID
+  # Service API
+  serviceApi: Int
+  # Limit on DescriptiveInfo; 0 denotates no limit
+  descriptiveInfoLimit: Int
   # Information ONLY USED BY old aggregator
   legacy: LegacyDataInput
 }

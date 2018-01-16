@@ -11,7 +11,11 @@ extend type AdminMutation {
   # Updates an Access.
   updateAccess(input: AccessInput!): Access
   # Grants Access visibility to a group.
-  grantAccessToGroup(input: AccessGroupInput!): Access
+  grantAccessToGroup(input: GroupInput!): Access
   # Removes Access visibility to groups.
-  deleteAccessFromGroup(input: AccessGroupInput!): Access
+  deleteAccessFromGroup(input: GroupInput!): Access
+  # Grants Supplier visibility to a group.
+  grantSupplierToGroup(input: GroupInput!): Supplier
+  # Removes Supplier visibility to groups.
+  deleteSupplierFromGroup(input: GroupInput!): Supplier
 }
