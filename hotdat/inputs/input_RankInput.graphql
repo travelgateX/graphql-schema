@@ -1,6 +1,6 @@
 input RankInput {
-  rank1: Boolean!
-  rank2: Boolean!
-  rank3: Boolean!
-  rank4: Boolean!
+  rank1: Boolean
+  rank2: Boolean
+  rank3: Boolean
+  rank4: Boolean
 }
