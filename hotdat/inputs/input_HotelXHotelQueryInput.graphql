@@ -3,4 +3,5 @@ input HotelXHotelQueryInput {
   language: String
   access: ID
   supplier: ID
+  ranks: RankInput
 }
