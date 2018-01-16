@@ -1,0 +1,8 @@
+# A Query is an entry point into the object graph.
+extend type AdminQuery {
+  # Obtain a list of accesses for a filter.
+  accesses(first: Int, last: Int, before: String, after:String, filter: AccessFilter): AccessConnection
+
+  # Obtain all suppliers for a filter.
+  suppliers(first: Int, last: Int, before: String, after:String, filter: SupplierFilter): SupplierConnection
+}

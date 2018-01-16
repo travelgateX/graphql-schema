@@ -9,6 +9,6 @@ type SupplierData{
   hotelCodes(hotel:ID!):ID!
   # supplier's related data of its groups
   supplierGroups: [SupplierGroup!]
-  
-  
+  # Information that will only be used by old aggregator
+  legacy: LegacyData
 }

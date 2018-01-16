@@ -1,0 +1,17 @@
+# Supplier input for data access management API.
+input SupplierInput {
+  # supplier code
+  code: String!
+  # supplier name
+  name: String
+  # supplier instance
+  dll: String
+  # Indicates if the supplier is active.
+  isActive: Boolean
+  # Supplier context
+  context: String
+  # groups related to this supplier
+  # groups: [SupplierGroupInput!] TODO later
+  # Information ONLY USED BY old aggregator
+  legacy: LegacyDataInput
+}
