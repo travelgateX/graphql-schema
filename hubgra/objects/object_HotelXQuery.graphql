@@ -26,4 +26,6 @@ extend type HotelXQuery {
   # TODO: me no understand...
 	# Returns status of the booking service.
   bookingStatusService: ServiceStatus!
+
+  mapping(groupCode: String!): Mapping!
 }

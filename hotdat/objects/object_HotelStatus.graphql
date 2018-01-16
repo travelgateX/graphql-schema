@@ -1,0 +1,4 @@
+type HotelStatus {
+  status: StatusResponse!
+  errors: [Error!]
+}
