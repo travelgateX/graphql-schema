@@ -1,7 +1,6 @@
-type Access implements Node{
+# Context type, for now only Code is necessary
+type Context implements Node {
   code: ID!
-  
-  accessData: AccessData
   
   # Errors that will lead the service to abort
   error: [Error!]

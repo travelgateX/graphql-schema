@@ -14,6 +14,8 @@ input AccessInput {
   urls: UrlsInput
   # List of parameters for additional information.
   parameters: String
+  # Limit on DescriptiveInfo; 0 denotates no limit
+  descriptiveInfoLimit: Int
   # Markets allowed for the access.
   markets: [String!]
   # Business rules types for the access.

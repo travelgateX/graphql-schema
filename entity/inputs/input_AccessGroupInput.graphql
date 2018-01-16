@@ -1,7 +1,0 @@
-input AccessGroupInput {
-  # Access permissions to be granted.
-  access: ID!
-  
-  # Groups that will see this access.
-  groups: [ID]
-}

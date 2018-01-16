@@ -1,6 +1,4 @@
 type LegacyData {
-  # Service API
-  serviceApi: Int!
   # Is supplier public?
   isPublic: Boolean!
   # Is supplier in development?

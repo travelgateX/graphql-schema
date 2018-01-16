@@ -1,4 +1,4 @@
-type AccessEdge{
+type AccessEdge {
   cursor: String!
   node: Access
-}
+} 
