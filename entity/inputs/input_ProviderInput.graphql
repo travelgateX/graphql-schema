@@ -1,0 +1,7 @@
+# Temporary type to use only during SQL server's lifetime
+input ProviderInput {
+  code: ID!
+  name: String
+  isActive: Boolean
+  isPublic: Boolean
+}

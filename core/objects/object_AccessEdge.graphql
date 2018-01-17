@@ -1,4 +1,0 @@
-type AccessEdge{
-    cursor: String!
-    node: Supplier
-}

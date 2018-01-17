@@ -1,0 +1,6 @@
+input HotelXRelayInput {
+  first: Int
+  last: Int
+  before: String
+  after:String
+}

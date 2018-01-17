@@ -1,14 +1,14 @@
 interface AdviseMessage {
-    # TODO:
-    # Error code: The following codes can be returned:
-    # XXX: XXXXXXXXX XXXXXX
-    code: String!
-
-    # TODO:
-    # Error type: The following types are valid:
-    # XXX: asd asdñoajskd lña ld 
-    type: String!
-
-    # Error description
-    description: String!
+  # TODO:
+  # Error code: The following codes can be returned:
+  # XXX: XXXXXXXXX XXXXXX
+  code: String!
+  
+  # TODO:
+  # Error type: The following types are valid:
+  # XXX: asd asdñoajskd lña ld
+  type: String!
+  
+  # Error description
+  description: String!
 }

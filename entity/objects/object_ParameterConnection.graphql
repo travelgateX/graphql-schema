@@ -1,0 +1,5 @@
+# Unknown length list of parameters
+type ParameterConnection {
+  edges: [ParameterEdge]
+  pageInfo: PageInfo!
+}

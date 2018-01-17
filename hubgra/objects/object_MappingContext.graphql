@@ -1,13 +1,11 @@
 # Returns the differents group contexts
 type MappingContext {
   # Code of the context
-  contextCode: String!
-  # Mapping of hotels. Filter by hotel code.
-  hotels(hotelCodes: [String!]): [MappingEntity!]
-  # Mapping of rooms. Filter by room code.
-  rooms(roomCodes: [String!]): [MappingEntity!]
-  # Mapping of rates. Filter by rate code.
-  rates(rateCodes: [String!]): [MappingEntity!]
-  # Mapping of boards. Filter by board code.
-  boards(BoardCodes: [String!]): [MappingEntity!]
+  code: String!
+  # Mapping of hotels, you can filter by hotel code.
+  hotels(codes: [String!]): [MappingEntity!]
+  # Mapping of rooms, you can filter by room code.
+  rooms(codes: [String!]): [MappingEntity!]
+  # Mapping of boards, you can filter by board code.
+  boards(codes: [String!]): [MappingEntity!]
 }

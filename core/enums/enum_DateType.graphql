@@ -1,8 +1,8 @@
 # Indicates the type of dates
 enum DateType {
-    # Arrival Date
-    ARRIVAL
-
-    # Booking Creation
-    BOOKING
+  # Arrival Date
+  ARRIVAL
+  
+  # Booking Creation
+  BOOKING
 }

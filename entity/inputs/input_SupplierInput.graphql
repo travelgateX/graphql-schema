@@ -1,0 +1,21 @@
+# Supplier input for data access management API.
+input SupplierInput {
+  # supplier code
+  code: String!
+  # supplier name
+  name: String
+  # supplier instance
+  provider: ID
+  # Indicates if the supplier is active.
+  isActive: Boolean
+  # Supplier context
+  context: String
+  # Default group where the supplier will be visible.
+  group: ID
+  # Service API
+  serviceApi: Int
+  # Limit on DescriptiveInfo; 0 denotates no limit
+  descriptiveInfoLimit: Int
+  # Information ONLY USED BY old aggregator
+  legacy: LegacyDataInput
+}

@@ -1,4 +1,0 @@
-input HotelInput {
-  codes: [ID!]
-  language: Language
-}

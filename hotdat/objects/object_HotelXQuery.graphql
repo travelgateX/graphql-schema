@@ -1,5 +1,0 @@
-# A Query is an entry point into the object graph.
-extend type HotelXQuery {
-  # Query to obtain Hotels
-  hotels(codes: [String!], language: String, first: Int, last: Int, before: String, after:String): HotelConnection!
-}

@@ -1,0 +1,27 @@
+# Access input
+input AccessInput {
+  # Indicates if the access is active.
+  isActive: Boolean
+  # Access code.
+  code: ID
+  # supplier for this access.
+  supplier: String
+  # User code to connect to supplier.
+  user: String
+  # Password for the connection.
+  password: String
+  # Specific Urls
+  urls: UrlsInput
+  # List of parameters for additional information.
+  parameters: String
+  # Limit on DescriptiveInfo; 0 denotates no limit
+  descriptiveInfoLimit: Int
+  # Markets allowed for the access.
+  markets: [String!]
+  # Business rules types for the access.
+  rateRules: [RateRulesType!]
+  # Parent access if Shared access.
+  shared: String
+  # Default group where the access will be visible.
+  group: ID
+}

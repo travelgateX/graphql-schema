@@ -3,7 +3,7 @@ interface Node {
   code: ID!
   # Errors that will lead the service to abort
   error: [Error!]
-  # Create date 
+  # Create date
   createdAt: DateTime!
   # Update date
   updatedAt: DateTime!
