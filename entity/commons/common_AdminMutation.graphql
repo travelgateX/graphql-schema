@@ -1,11 +1,5 @@
 # Mutations are operations that change or update data in the server.
 extend type AdminMutation {
-  # Creates a supplier.
-  createSupplier(input: SupplierInput!): Supplier
-  # Updates existing suppliers. Assigment/dissociation of groups cannot be done.
-  updateSupplier(input: SupplierInput!): Supplier
-  # Creates a DLL (only for SQL Server).
-  createDLL(input: DLLInput!): DLL
   # Creates an Access.
   createAccess(input: AccessInput!): Access
   # Updates an Access.

@@ -5,7 +5,7 @@ input SupplierInput {
   # supplier name
   name: String
   # supplier instance
-  dll: String
+  provider: ID
   # Indicates if the supplier is active.
   isActive: Boolean
   # Supplier context
