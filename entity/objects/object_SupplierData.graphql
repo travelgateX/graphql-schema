@@ -6,11 +6,9 @@ type SupplierData{
   # indicates whether a supplier is active
   isActive: Boolean!
   # instance to which this supllier is connected
-  dll: String!
+  provider: Provider!
   # Context where the Supplier belongs to
   context: String!
-  # supplier's related data of its groups
-  supplierGroups: [SupplierGroup!]
   # Service API
   serviceApi: Int!
   # Information that will only be used by old aggregator
