@@ -1,0 +1,6 @@
+## MapProvider
+input MappeaXMapSupplierInput {
+  requestId: ID!
+  supplier: ID!
+  fileId: Int!
+}

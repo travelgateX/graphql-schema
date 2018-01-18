@@ -1,0 +1,5 @@
+type UploadFileResponse {
+  data: UploadFileData
+  error: Error
+  warnings: [Warning]
+}

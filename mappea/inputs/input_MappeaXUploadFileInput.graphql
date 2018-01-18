@@ -1,0 +1,7 @@
+### UploadFile
+input MappeaXUploadFileInput {
+  requestId: String!
+  fileName: String
+  delimiter: String!
+  fileContent: String!
+}

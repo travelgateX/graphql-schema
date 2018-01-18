@@ -1,0 +1,4 @@
+input MappeaXSupplierConfirmedInput {
+  code: ID!
+  supplier: ID!
+}
