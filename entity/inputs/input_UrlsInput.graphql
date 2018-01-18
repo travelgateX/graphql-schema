@@ -1,4 +1,4 @@
-# Url's
+# Url's Input
 input UrlsInput {
   # Specific Url for Availability method.
   search:         URI
