@@ -1,0 +1,5 @@
+type StatPlugin{
+  name: String!
+  dockerID: String!
+  total: Stat!
+}
