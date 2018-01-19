@@ -2,9 +2,7 @@
 extend type MappeaXQuery {
   confirmUpload(input: MappeaXConfirmUploadInput!): OnlyStatusResponse!
   getUploadedFiles: GetUploadedFilesResponse!
-  #interno
-  addOrganization(input: MappeaXAddOrganizationInput!): OnlyStatusResponse!
-  #interno
-  editOrganization(input: MappeaXEditOrganizationInput!): OnlyStatusResponse!
   getMappeaStats(input: MappeaXGetMappeaStatsInput!): GetMappeaStatsResponse!
+  #@intern
+  addOrganization(input: MappeaXAddOrganizationInput!): OnlyStatusResponse!
 }
