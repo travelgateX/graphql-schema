@@ -1,0 +1,16 @@
+# Contains internal information.
+type StatsRequest {
+  total:          Stat!
+  validation:     Stat!
+  process:        Stat!
+  config:					Stat!
+  rq:				Stat!
+  rs: Stat!
+  rqPlugin: StatPlugin
+  rsPlugin: StatPlugin
+  hotels: Int!
+  zones: Int!
+  cities: Int!
+  dockerID: String!
+  Accesses:       [StatAccess!]!
+}
