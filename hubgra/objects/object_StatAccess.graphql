@@ -2,6 +2,12 @@ type StatAccess {
   name:                   String!
   total:                  Stat!
   staticConfiguration:    Stat
+  hotels:                 Int!
+  zones:                  Int!
+  cities:                 Int!
+  dockerID:               String!
+  rqAccess:               StatPlugin
+  rsAccess:               StatPlugin
   transactions:           [StatTransaction!]!
-  external:               String!
+  plugins:               [StatPlugin!]
 }
