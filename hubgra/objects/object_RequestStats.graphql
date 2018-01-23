@@ -1,8 +1,0 @@
-# Contains internal information.
-type RequestStats {
-  total:          Stat!
-  validation:     Stat!
-  process:        Stat!
-  Accesses:       [StatAccess!]!
-  External:       String!
-}
