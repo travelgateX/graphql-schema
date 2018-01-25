@@ -1,7 +1,9 @@
 # Hotel data
 type HotelData {
-  # Internal code to perform availability and/or supplier code.
+  # Internal code to perform availability 
   code: ID!
+  # External Supplier code
+  supplierCode: String!
   # Name.
   name: String!
   # Hotel category (for example number of stars).
