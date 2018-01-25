@@ -13,4 +13,6 @@ type SupplierData{
   serviceApi: Int!
   # Information that will only be used by old aggregator
   legacy: LegacyData
+  # SupplierGroup
+  supplierGroup: ID
 }
