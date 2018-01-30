@@ -1,5 +1,5 @@
 input HotelXHotelDataInput {
-  # Internal code to perform availability and/or supplier code.
-  supplierCode: String!
+  # Code of the hotel in the Supplier selected.
+  hotelCode: String!
   rank: RankInput!
 }
