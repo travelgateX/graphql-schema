@@ -1,17 +1,19 @@
 # Book status
 enum BookStatusType {
-  # The status of the booking is available
+  # The reservation was completed with no problems
   OK
   
   # The status of the booking is KO
   KO
   
-  # The status of the booking is on request
+  # The reservation was completed but the product is still not available, so the reservation goes into a waiting list. 
+  # It is the client’s responsibility to check if the booking is OK
   ON_REQUEST
   
   # The status of the booking is cancelled
   CANCELLED
   
-  # The status of the booking is unknown
+  # The reservation was completed but due to a supplier error or a timeout, the reservation status is unknown. 
+  # It is the client’s responsibility to check if the booking is OK
   UNKNOWN
 }
