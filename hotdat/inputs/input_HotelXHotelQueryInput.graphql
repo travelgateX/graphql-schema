@@ -1,5 +1,5 @@
 input HotelXHotelQueryInput {
-  supplierCodes: [String!]
+  hotesCodes: [String!]
   language: String
   access: ID
   supplier: ID
