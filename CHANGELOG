@@ -1,0 +1,16 @@
+
+##2018-01-29
+
+⚠️  Input field `supplierCode` was added to input object type `HotelXHotelDataInput`
+⚠️  Input field `code` was removed from input object type `HotelXHotelDataInput`
+⚠️  Type for argument `relay` on field `HotelXMutation.updateHotel` changed from `HotelXRelayInput` to `RelayInput`
+⚠️  Input field `HotelXHotelQueryInput.language` changed type from `Language` to `String`
+⚠️  Input field `codes` was removed from input object type `HotelXHotelQueryInput`
+⚠️  Type for argument `language` on field `HotelData.generalDescription` changed from `Language` to `String`
+⚠️  Type for argument `language` on field `HotelData.additionalInformation` changed from `Language` to `String`
+⚠️  Type for argument `language` on field `HotelData.amenities` changed from `Language` to `String`
+⚠️  Type for argument `relay` on field `HotelXQuery.hotels` changed from `HotelXRelayInput` to `RelayInput`
+⚠️  `HotelXRelayInput` was removed
+✅  Input field `supplierCodes` was added to input object type `HotelXHotelQueryInput`
+✅  Field `supplierCode` was added to object type `HotelData`
+✅  Type `RelayInput` was added
