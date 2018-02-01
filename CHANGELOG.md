@@ -1,4 +1,3 @@
-
 ##2018-01-29
 
 ⚠️  Input field `supplierCode` was added to input object type `HotelXHotelDataInput`
