@@ -18,4 +18,6 @@ input SupplierInput {
   descriptiveInfoLimit: Int
   # Information ONLY USED BY old aggregator
   legacy: LegacyDataInput
+  # SupplierGroup
+  supplierGroup: ID
 }

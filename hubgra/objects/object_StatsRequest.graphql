@@ -1,16 +1,41 @@
 # Contains internal information.
 type StatsRequest {
+  # Total transaction time
   total:          Stat!
+  
+  # Request validation time
   validation:     Stat!
+  
+  # Process time. Contains communication time, parse time and plugin time.
   process:        Stat!
-  config:					Stat!
-  rq:				Stat!
-  rs: Stat!
-  rqPlugin: StatPlugin
-  rsPlugin: StatPlugin
-  hotels: Int!
-  zones: Int!
-  cities: Int!
-  dockerID: String!
+  
+  # Build access time
+  configuration:	Stat!
+  
+  # Request time
+  request:				Stat!
+  
+  # Response time
+  response:       Stat!
+  
+  # Plugin execution time
+  requestPlugin:  StatPlugin
+  
+  # Plugin execution time
+  responsePlugin: StatPlugin
+  
+  # Number of hotels
+  hotels:         Int!
+  
+  # Number of zones
+  zones:          Int!
+  
+  # Number of cities
+  cities:         Int!
+  
+  # Docker Id
+  dockerID:       String!
+  
+  # Detail access time
   Accesses:       [StatAccess!]!
 }

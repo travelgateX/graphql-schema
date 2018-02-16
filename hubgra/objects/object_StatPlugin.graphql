@@ -1,5 +1,7 @@
 type StatPlugin{
-  name: String!
-  dockerID: String!
-  total: Stat!
+  # Plugin name
+  name:     String!
+  
+  # total plugin time
+  total:    Stat!
 }

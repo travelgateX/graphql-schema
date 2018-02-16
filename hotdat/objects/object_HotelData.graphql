@@ -1,7 +1,9 @@
 # Hotel data
 type HotelData {
-  # Internal code to perform availability and/or supplier code.
+  # Internal code to perform availability
   code: ID!
+  # Code of the hotel in the Supplier selected.
+  hotelCode: String!
   # Name.
   name: String!
   # Hotel category (for example number of stars).
@@ -9,9 +11,9 @@ type HotelData {
   # Indicates that the Hotel has an Exclusive Deal.
   exclusiveDeal: Boolean!
   medias(type: ApplicationArea, first: Int, last: Int, before: String, after:String): MediaConnection
-  amenities(language: Language, first: Int, last: Int, before: String, after:String):AmenityConnection
-  additionalInformation(language: Language): Information!
-  generalDescription(language: Language): Information!
+  amenities(language: String, first: Int, last: Int, before: String, after:String):AmenityConnection
+  additionalInformation(language: String): Information!
+  generalDescription(language: String): Information!
   location: Location!
   # Contact information.
   contact: Contact!

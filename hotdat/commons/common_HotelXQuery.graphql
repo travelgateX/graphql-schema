@@ -1,5 +1,5 @@
 # A Query is an entry point into the object graph.
 extend type HotelXQuery {
   # Query to obtain Hotels
-  hotels(hotels: HotelXHotelQueryInput, relay: HotelXRelayInput): HotelConnection!
+  hotels(hotels: HotelXHotelQueryInput, relay: RelayInput): HotelConnection!
 }

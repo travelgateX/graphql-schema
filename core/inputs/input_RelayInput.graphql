@@ -1,4 +1,4 @@
-input HotelXRelayInput {
+input RelayInput {
   first: Int
   last: Int
   before: String
