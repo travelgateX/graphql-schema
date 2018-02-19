@@ -1,6 +1,5 @@
 # The query type, represents all of the entry points into our object graph
 extend type MappeaXQuery {
-  confirmUpload(input: MappeaXConfirmUploadInput!): OnlyStatusResponse!
   getUploadedFiles: GetUploadedFilesResponse!
   getMappeaStats(input: MappeaXGetMappeaStatsInput!): GetMappeaStatsResponse!
   #@intern
