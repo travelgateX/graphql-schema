@@ -24,10 +24,13 @@ type Xml {
   hubStatus: String!
   
   # From date of search
-  startTime: String!
+  from: DateTime!
   
   # To date of search
-  execTime: String!
+  to: DateTime!
+  
+  # To date of search
+  execTime: DateTime!
   
   # Url
   url: String!

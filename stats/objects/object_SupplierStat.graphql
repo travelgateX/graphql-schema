@@ -1,35 +1,13 @@
 # Destination of request sent by HUB
 type SupplierStat {
-  # Supplier code.
-  code: ID!
-  
-  # Supplier name.
-  name: String!
-  
-  # Total time.
-  ok: Int!
-  
-  # Total time.
-  integrationError: ErrorS!
-  
-  # Total time.
-  providerError: ErrorS!
-  
-  # Total time.
-  communicationError: ErrorS!
-  
-  # Total time.
-  hubError: ErrorS!
   
   # Total hits.
-  hit: Int!
-  
-  # Total time.
+  hits: Int!
+  # OKs responses
+  okHits: Int!
+  #Total time
   time: Int!
-  
-  # Details of supplier.
-  details: SupplierConnection!
-  
+  errors(type: StatsErrorType!, code:StatsCodeError): [StatsError!]
   # Details of look to quote and look to book.
   lookTo: LookTo!
 }

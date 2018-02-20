@@ -1,4 +1,4 @@
-input FilterAuditInput {
+input StatsXFilterAuditInput {
   # Session Id
   ids: [ID!]
   
@@ -27,8 +27,8 @@ input FilterAuditInput {
   hubStatus: String
   
   # From date of search
-  from: String!
+  from: DateTime!
   
   # To date of search
-  to: String!
+  to: DateTime!
 }

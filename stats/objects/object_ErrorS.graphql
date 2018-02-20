@@ -1,8 +1,0 @@
-# Details of an specific error
-type ErrorS {
-  # Total hits.
-  hit: Int!
-  
-  # Error codes details.
-  details: [ErrorDetails!]
-}

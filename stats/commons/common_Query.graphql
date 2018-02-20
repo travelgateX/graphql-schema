@@ -1,6 +1,0 @@
-# The query type, represents all of the entry points into our object graph
-extend type Query {
-  stats(filter: FilterInputS!): Stats!
-  errors(filter: FilterInputS!): Stats!
-  audit(filter: FilterAuditInput!): Xmls!
-}

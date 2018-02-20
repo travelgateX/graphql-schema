@@ -1,4 +1,0 @@
-type TravelOperationConnection{
-  edges: [TravelOperationEdge]
-  pageInfo: PageInfo!
-}

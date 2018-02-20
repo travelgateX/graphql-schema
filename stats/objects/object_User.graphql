@@ -4,5 +4,5 @@ type User {
   code: ID!
   
   # List of users.
-  suppliers: [SupplierS!]
+  # suppliers: [SupplierS!]
 }

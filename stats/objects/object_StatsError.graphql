@@ -1,0 +1,11 @@
+# Details of an specific error
+type StatsError {
+  code: StatsCodeError!
+  type: StatsErrorType!
+  description: String!
+  # Total hits.
+  hits: Int!
+  # Avg time (ms)
+  avgTime: Int!
+  
+}

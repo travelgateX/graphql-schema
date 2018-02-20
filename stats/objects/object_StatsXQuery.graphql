@@ -1,3 +1,0 @@
-extend type StatsXQuery{
-  report( filter: FilterInputS!,first: Int, last: Int, before: String, after:String):TravelOperationConnection!
-}

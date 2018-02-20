@@ -1,7 +1,0 @@
-type ServiceApiData{
-  # Service Api code.
-  code: ID!
-  
-  # List of service operations.
-  serviceOperations: ServiceOperationConnection!
-}

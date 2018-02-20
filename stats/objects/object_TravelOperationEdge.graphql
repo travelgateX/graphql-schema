@@ -1,4 +1,0 @@
-type TravelOperationEdge{
-  cursor: String!
-  node: TravelOperation
-}

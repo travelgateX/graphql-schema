@@ -1,4 +1,5 @@
 enum ReportType{
   STATS
   ERRORS
+  ALL
 }

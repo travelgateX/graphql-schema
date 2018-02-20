@@ -1,7 +1,0 @@
-type TravelOperationData{
-  code: ID!
-  type: TravelOperationType
-  operation: ServiceOperationType
-  # List of service apis.
-  serviceApis: ServiceApiConnection!
-}

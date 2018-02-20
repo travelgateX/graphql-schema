@@ -1,11 +1,14 @@
 # The service used to access the stats of every connection that uses the HUB
-type Stats {
-  # Search stats
-  search: TravelOperation!
+type Stats implements Node{
+  code: ID!
   
-  # Quote stats
-  quote: TravelOperation!
+  StatsData: StatsData!
+  # Errors that will lead the service to abort
+  error: [Error!]
   
-  # Booking stats
-  booking: TravelOperation!
+  # Create date
+  createdAt: DateTime!
+  
+  # Update date
+  updatedAt: DateTime!
 }

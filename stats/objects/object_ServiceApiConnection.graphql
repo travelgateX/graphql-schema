@@ -1,4 +1,0 @@
-type ServiceApiConnection{
-  edges: [ServiceApiEdge]
-  pageInfo: PageInfo!
-}

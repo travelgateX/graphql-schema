@@ -1,4 +1,0 @@
-type ServiceApiEdge{
-  cursor: String!
-  node: ServiceApi
-}
