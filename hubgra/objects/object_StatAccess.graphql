@@ -1,13 +1,31 @@
 type StatAccess {
+  # Access name
   name:                   String!
+  
+  # Total access time
   total:                  Stat!
+  
+  # Static configuration time
   staticConfiguration:    Stat
+  
+  # Number of hotels
   hotels:                 Int!
+  
+  # Number of zones
   zones:                  Int!
+  
+  # Number of cities
   cities:                 Int!
-  dockerID:               String!
-  rqAccess:               StatPlugin
-  rsAccess:               StatPlugin
+  
+  # Access request time
+  requestAccess:          StatPlugin
+  
+  # Access response time
+  responseAccess:         StatPlugin
+  
+  # Detail transaction time
   transactions:           [StatTransaction!]!
-  plugins:               [StatPlugin!]
+  
+  # Plugin execution time
+  plugins:                [StatPlugin!]
 }
