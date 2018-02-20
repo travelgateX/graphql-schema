@@ -1,0 +1,11 @@
+# Something, such as a swimming pool or shopping centre, that is intended to make life more pleasant or comfortable for the people.
+type Amenity {
+    # Code
+    code: String!
+
+    # Indicates the type of the amenity.
+    type: ApplicationAreaType!
+
+    # Contains the descriptive
+    texts(languages: [Language!]): [Text!]!
+}

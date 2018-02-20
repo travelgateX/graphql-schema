@@ -1,0 +1,11 @@
+# Category data
+type CategoryData {
+  # Internal code to perform availability.
+  code: ID!
+  
+  # Code of the hotel in the Supplier selected.
+  categoryCode: String!
+  
+  # Label
+  texts(languages: [Language!]): [Text!] 
+}

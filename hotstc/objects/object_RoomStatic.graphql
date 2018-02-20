@@ -1,0 +1,17 @@
+# Room Type
+type RoomStatic implements Node {
+  # Room ID
+  code: ID!
+  
+  # Room data
+  roomData: RoomData
+  
+  # Errors that will lead the service to abort
+  error: [Error!]
+  
+  # Create date
+  createdAt: DateTime!
+  
+  # Update date
+  updatedAt: DateTime!
+}

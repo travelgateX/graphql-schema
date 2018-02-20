@@ -1,0 +1,11 @@
+# Board data
+type BoardData {
+  # Internal code to perform availability.
+  code: ID!
+  
+  # Code of the hotel in the Supplier selected.
+  boardCode: String!
+  
+  # Label
+  texts(languages: [Language!]): [Text!] 
+}

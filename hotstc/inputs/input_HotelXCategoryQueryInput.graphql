@@ -1,0 +1,4 @@
+input HotelXCategoryQueryInput {
+  categoryCodes: [String!]
+  access: ID!
+}
