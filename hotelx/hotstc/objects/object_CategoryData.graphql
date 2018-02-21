@@ -7,5 +7,5 @@ type CategoryData {
   categoryCode: String!
   
   # Label
-  texts(languages: [Language!]): [Text!] 
+  texts(languages: [Language!]): [Text!]
 }

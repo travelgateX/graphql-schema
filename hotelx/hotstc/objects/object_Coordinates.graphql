@@ -1,8 +1,8 @@
 # Geographical coordinates corresponding to a location.
 type Coordinates {
-    # Latitude
-    latitude: Float!
-
-    # Longitude
-    longitude: Float!
+  # Latitude
+  latitude: Float!
+  
+  # Longitude
+  longitude: Float!
 }
