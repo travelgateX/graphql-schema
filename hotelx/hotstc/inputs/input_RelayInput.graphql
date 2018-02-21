@@ -1,6 +1,0 @@
-input RelayInput {
-  first: Int
-  last: Int
-  before: String
-  after:String
-}
