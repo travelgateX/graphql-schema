@@ -1,6 +1,0 @@
-# A Query is an entry point into the object graph.
-extend type HotelXQuery {
-  # Old Query to obtain Hotels for mapping
-  hotelsMap(hotels: HotelXHotelQueryInput, relay: RelayInput): HotelConnection! @deprecated(reason: "deprecated from 2018-02-21. You can find it in query at HotelX/hotels")
-}
- 

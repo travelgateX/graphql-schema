@@ -1,5 +1,0 @@
-input HotelXHotelMutationInput {
-  access: ID
-  supplier: ID
-  hotels: [HotelXHotelDataInput!]!
-}

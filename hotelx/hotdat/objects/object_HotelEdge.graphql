@@ -1,5 +1,0 @@
-# HotelList Edge definition
-type HotelEdge {
-  cursor: String!
-  node: Hotel
-}

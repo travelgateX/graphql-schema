@@ -1,5 +1,0 @@
-# HotelList Edge definition
-type AmenityEdge {
-  cursor: String!
-  node: Amenity
-}

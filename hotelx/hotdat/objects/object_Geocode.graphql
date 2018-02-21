@@ -1,7 +1,0 @@
-# Geocode type
-type Geocode {
-  # Latitude
-  latitude: Float!
-  # Longitude
-  longitude: Float!
-}
