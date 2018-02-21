@@ -1,0 +1,11 @@
+# Information about destinantion
+type Destination {
+    # Destination Code
+    code: String!
+
+    # Indicates if you can search by destination.
+    available: Boolean!
+
+    # Contains the destination name
+    texts(languages: [Language!]): [Text!]!
+}

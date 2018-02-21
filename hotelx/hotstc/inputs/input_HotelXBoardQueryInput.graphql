@@ -1,0 +1,4 @@
+input HotelXBoardQueryInput {
+  boardCodes: [String!]
+  access: ID!
+}

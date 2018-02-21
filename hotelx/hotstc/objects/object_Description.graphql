@@ -1,0 +1,8 @@
+# Object description indicates the type and the description about something.
+type Description {
+    # Indicates type of description
+    type: DescriptionType!
+
+    # Label
+    texts: [Text!]
+}

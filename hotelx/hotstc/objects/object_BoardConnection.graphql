@@ -1,0 +1,5 @@
+# BoardList definition
+type BoardConnection {
+  edges: [BoardEdge]
+  pageInfo: PageInfo!
+}
