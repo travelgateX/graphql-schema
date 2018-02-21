@@ -3,7 +3,7 @@ input HotelXHotelListInput {
     access:     ID!
 
     # Search by hotel codes
-    codes:      [String!]
+    hotelCodes:    [String!]
 
     # Search by hotel name and destination
     filter:     String
