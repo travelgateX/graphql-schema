@@ -1,6 +1,6 @@
 ## MapProvider
 input MappeaXMapSupplierInput {
   requestId: ID!
-  supplier: ID!
+  access: ID!
   fileId: Int!
 }
