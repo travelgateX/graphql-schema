@@ -1,0 +1,4 @@
+input ClientFilter {
+  clientID: [ID]
+  isActive: Boolean
+}

@@ -1,10 +1,14 @@
 type AccessData {
+  # Access descriptive name
+  name: String!
   # Indicates if the access is active.
   isActive: Boolean!
   # Unique AccessConfiguration identifier
   code: ID!
   # supplier for this access.
   supplier: Supplier!
+  # Indicates if this access can be used for testing or not
+  isTest: Boolean!
   # User code to connect to supplier.
   user: String
   # Password for the connection.
@@ -12,9 +16,7 @@ type AccessData {
   # Specific Urls
   urls: Urls
   # List of parameters for additional information.
-  parameters(first: Int, Last: Int, before: String, after:String): ParameterConnection
-  # Limit on DescriptiveInfo; 0 denotates no limit
-  descriptiveInfoLimit: Int!
+  parameters: [Parameter]
   # Markets allowed for the access.
   markets: [String!]
   # Business rules types for the access.

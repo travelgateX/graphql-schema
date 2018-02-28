@@ -1,0 +1,10 @@
+type ClientData {
+  # ID identifier of a Client
+  code: ID!
+  # Client complete name
+  name: String!
+  # Indicates whether a Client is active
+  isActive: Boolean!
+  # Accesses assigned to that Client
+  accesses: AccessConnection
+}
