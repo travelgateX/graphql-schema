@@ -1,6 +1,6 @@
-type Supplier implements Node{
+type Client implements Node{
   code: ID!
-  supplierData: SupplierData
+  clientData: ClientData
   # Errors that will lead the service to abort
   error: [Error!]
   # Create date

@@ -11,10 +11,8 @@ type SupplierData{
   context: String!
   # Service API
   serviceApi: Int!
-  # Information that will only be used by old aggregator
-  legacy: LegacyData
-  # SupplierGroup
+  # SupplierGroup Internal Supplier grouping
   supplierGroup: ID
-  # Accesses in a Supplier
-  accesses: AccessConnection!
+  # Accesses where the supplier is referenced
+  accesses: AccessConnection
 }
