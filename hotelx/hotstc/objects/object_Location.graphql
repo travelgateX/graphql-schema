@@ -16,5 +16,5 @@ type Location {
   coordinates: Coordinates
   
   # Closest destination
-  closestDestination: Destination!
+  closestDestination: DestinationData!
 }

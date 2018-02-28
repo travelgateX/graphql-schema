@@ -3,10 +3,10 @@ input HotelXHotelListInput {
   access:     ID!
   
   # Search by hotel codes
-  hotelCodes:    [String!]
+  hotelCodes:      [String!]
   
-  # Search by hotel name and destination
-  filter:     String
+  # Search by destination codes, only search by minimal destinations
+  destinationCodes: [String!]
   
   # Filter by supplier rank
   ranks:      [Int!]
