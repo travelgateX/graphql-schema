@@ -1,17 +1,17 @@
 extend type HotelXQuery {
   # Query to obtain Boards
   boards(criteria: HotelXBoardQueryInput!, relay: RelayInput!): BoardConnection!
-
+  
   # Query to obtain Categories
   categories(criteria: HotelXCategoryQueryInput!, relay: RelayInput!): CategoryConnection!
-
+  
   # Query to obtain rooms
   rooms(criteria: HotelXRoomQueryInput!, relay: RelayInput!): RoomConnection!
-
+  
   # Query to obtain Hotels
   hotels(criteria: HotelXHotelListInput!, relay: RelayInput!, token: String): HotelConnection!
   
-  # Query to obtain Destinations  
+  # Query to obtain Destinations
   destinations(criteria: HotelXDestinationListInput!, relay: RelayInput!, token: String): DestinationConnection!
   
   # Searcher web

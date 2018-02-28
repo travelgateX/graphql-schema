@@ -1,20 +1,20 @@
 # Indicates the location of the hotel.
 type Location {
-    # Contains Hotel Address 
-    address: String
-
-    # Contains the city
-    city: String
-
-    # Contains the zipCode.
-    zipCode: String
-
-    # Country where is the Hotel.
-    country: Country! 
-
-    # Geographical coordinates corresponding to a location. 
-    coordinates: Coordinates
-
-    # Closest destination
-    closestDestination: DestinationData!
+  # Contains Hotel Address
+  address: String
+  
+  # Contains the city
+  city: String
+  
+  # Contains the zipCode.
+  zipCode: String
+  
+  # Country where is the Hotel.
+  country: Country!
+  
+  # Geographical coordinates corresponding to a location.
+  coordinates: Coordinates
+  
+  # Closest destination
+  closestDestination: DestinationData!
 }

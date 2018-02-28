@@ -1,6 +1,6 @@
 # HotelList definition
 type HotelConnection {
   edges: [HotelEdge]
-  token: String!
+  token: String
   pageInfo: PageInfo!
 }
