@@ -1,11 +1,17 @@
-# Information about destinantion
-type Destination {
-  # Destination Code
-  code: String!
+# Destination Type
+type Destination implements Node {
+  # Destination ID
+  code: ID!
   
-  # Indicates if you can search by destination.
-  available: Boolean!
+  # Destination data
+  boardData: DestinationData
   
-  # Contains the destination name
-  texts(languages: [Language!]): [Text!]!
+  # Errors that will lead the service to abort
+  error: [Error!]
+  
+  # Create date
+  createdAt: DateTime!
+  
+  # Update date
+  updatedAt: DateTime!
 }

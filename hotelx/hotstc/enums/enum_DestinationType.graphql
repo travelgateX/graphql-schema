@@ -1,0 +1,8 @@
+# Indicates the type of destination
+enum DestinationType {
+    # Zone
+    ZONE
+
+    # City
+    CITY
+}

@@ -1,0 +1,5 @@
+# DestinationList definition
+type DestinationConnection {
+  edges: [DestinationEdge]
+  pageInfo: PageInfo!
+}
