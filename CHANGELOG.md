@@ -1,3 +1,149 @@
+## 2018-03-05
+
+⚠️  Input field `AccessInput.parameters` changed type from `String` to `[ParameterInput]`
+
+⚠️  Input field `name` was added to input object type `AccessInput`
+
+⚠️  Input field `descriptiveInfoLimit` was removed from input object type `AccessInput`
+
+⚠️  Input field `serviceAPI` was removed from input object type `SupplierFilter`
+
+⚠️  Input field `isActive` was removed from input object type `SupplierFilter`
+
+⚠️  Field `updatedAt` was removed from object type `Parameter`
+
+⚠️  Field `createdAt` was removed from object type `Parameter`
+
+⚠️  Field `error` was removed from object type `Parameter`
+
+⚠️  Field `parameterData` was removed from object type `Parameter`
+
+⚠️  Field `code` was removed from object type `Parameter`
+
+⚠️  `Parameter` object type no longer implements `Node` interface
+
+⚠️  Field `SupplierData.accesses` changed type from `AccessConnection!` to `AccessConnection`
+
+⚠️  Field `legacy` was removed from object type `SupplierData`
+
+⚠️  Argument `after: String` was removed from field `AccessData.parameters`
+
+⚠️  Argument `before: String` was removed from field `AccessData.parameters`
+
+⚠️  Argument `Last: Int` was removed from field `AccessData.parameters`
+
+⚠️  Argument `first: Int` was removed from field `AccessData.parameters`
+
+⚠️  Field `AccessData.parameters` changed type from `ParameterConnection` to `[Parameter]`
+
+⚠️  Field `descriptiveInfoLimit` was removed from object type `AccessData`
+
+⚠️  Input field `ParameterInput.key` changed type from `String!` to `ID!`
+
+⚠️  Input field `filter` was removed from input object type `HotelXHotelListInput`
+
+⚠️  Field `Destination.code` changed type from `String!` to `ID!`
+
+⚠️  Field `texts` was removed from object type `Destination`
+
+⚠️  Field `available` was removed from object type `Destination`
+
+⚠️  Field `Location.closestDestination` changed type from `Destination!` to `DestinationData!`
+
+⚠️  Field `HotelConnection.token` changed type from `String!` to `String`
+
+⚠️  `SupplierInput` was removed
+
+⚠️  `ProviderInput` was removed
+
+⚠️  `LegacyDataInput` was removed
+
+⚠️  `ParameterData` was removed
+
+⚠️  `ParameterEdge` was removed
+
+⚠️  `ParameterConnection` was removed
+
+⚠️  `LegacyData` was removed
+
+✅  `Destination` object implements `Node` interface
+
+✅  Input field `isTest` was added to input object type `AccessInput`
+
+✅  Field `updateClient` was added to object type `AdminMutation`
+
+✅  Field `createClient` was added to object type `AdminMutation`
+
+✅  Description `` on type `Parameter` has changed to `Parameters for additional information for the supplier's configuration.`
+
+✅  Field `value` was added to object type `Parameter`
+
+✅  Field `key` was added to object type `Parameter`
+
+✅  Description `XTG Platform API implementation` on type `Provider` has changed to `Temporary type to use only during SQL server's lifetime`
+
+✅  Field `SupplierData.accesses` description changed from `Accesses in a Supplier` to `Accesses where the supplier is referenced`
+
+✅  Field `SupplierData.supplierGroup` description changed from `SupplierGroup` to `SupplierGroup Internal Supplier grouping`
+
+✅  Field `isTest` was added to object type `AccessData`
+
+✅  Field `name` was added to object type `AccessData`
+
+✅  Field `clients` was added to object type `AdminQuery`
+
+✅  Description `Parameters for additional information for the supplier's configuration.` on type `ParameterInput` has changed to `Parameters Input.`
+
+✅  Input field `ParameterInput.value` description changed from `Contains the parameter values.` to `Contains the parameter values.
+
+This information is mandatory.`
+
+✅  Input field `ParameterInput.key` description changed from `Contains the keyword/Id to identify a parameter.` to `Contains the keyword/Id to identify a parameter.
+
+This information is mandatory.`
+
+✅  Description `Url's Input` on type `UrlsInput` has changed to `Urls Input`
+
+✅  Input field `destinationCodes` was added to input object type `HotelXHotelListInput`
+
+✅  Description `Information about destinantion` on type `Destination` has changed to `Destination Type`
+
+✅  Field `Destination.code` description changed from `Destination Code` to `Destination ID`
+
+✅  Field `updatedAt` was added to object type `Destination`
+
+✅  Field `createdAt` was added to object type `Destination`
+
+✅  Field `error` was added to object type `Destination`
+
+✅  Field `boardData` was added to object type `Destination`
+
+✅  Type `HotelXDestinationListInput` was added
+
+✅  Type `WebSearchResult` was added
+
+✅  Type `DestinationEdge` was added
+
+✅  Type `DestinationConnection` was added
+
+✅  Type `ClientInput` was added
+
+✅  Type `ClientFilter` was added
+
+✅  Type `ClientData` was added
+
+✅  Type `Client` was added
+
+✅  Type `ClientEdge` was added
+
+✅  Type `ClientConnection` was added
+
+✅  Type `DestinationType` was added
+
+✅  Type `DestinationData` was added
+
+
+
 ## 2018-02-21
 
 ⚠️  Field `updateHotel` was removed from object type `HotelXMutation`
