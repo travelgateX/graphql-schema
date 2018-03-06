@@ -1,0 +1,7 @@
+input HotelXDestinationSearcherInput {
+    # Indicates the access
+    access: ID!
+
+    # Search by hotel name or destination name
+    Text: String!
+}
