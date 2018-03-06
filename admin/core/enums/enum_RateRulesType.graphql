@@ -29,4 +29,10 @@ enum RateRulesType {
   
   # The rate unemployed is applied to those without work.
   UNEMPLOYED
+
+  #The rate normal refers to options without RateRule
+  NORMAL
+
+  #The rate non refundable is applied to non refundable options
+  NON_REFUNDABLE
 }
