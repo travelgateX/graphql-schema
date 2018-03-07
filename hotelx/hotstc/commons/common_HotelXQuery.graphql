@@ -15,5 +15,5 @@ extend type HotelXQuery {
   destinations(criteria: HotelXDestinationListInput!, relay: RelayInput!, token: String): DestinationConnection!
   
   # Returns hotels and destinations that contains the indicated text. 
-  DestinationSearcher(criteria: HotelXDestinationSearcherInput!): [WebSearchResult]!
+  destinationSearcher(criteria: HotelXDestinationSearcherInput!): [WebSearchResult]!
 }
