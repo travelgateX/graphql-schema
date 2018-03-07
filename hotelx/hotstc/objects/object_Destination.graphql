@@ -4,7 +4,7 @@ type Destination implements Node {
   code: ID!
   
   # Destination data
-  boardData: DestinationData
+  destinationData: DestinationData
   
   # Errors that will lead the service to abort
   error: [Error!]

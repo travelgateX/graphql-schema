@@ -3,7 +3,7 @@ input HotelXDestinationListInput {
   access:     ID!
   
   # Search by hotel codes
-  DestinationsCodes:      [String!]
+  destinationCodes:      [String!]
   
   # Maxium number of items per page
   maxSize:       Int
