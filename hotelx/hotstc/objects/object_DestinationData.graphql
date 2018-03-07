@@ -1,7 +1,7 @@
 # Information about destinantion
 type DestinationData {
   # Destination Code
-  code: String!
+  code: ID!
   
   # Indicates if you can search by destination.
   available: Boolean!
