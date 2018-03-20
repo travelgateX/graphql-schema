@@ -1,8 +1,10 @@
 ## 2018-03-20
+
 ✅  Input field `HotelSettingsInput.connectUser` description changed from `This field is got only if the authorization header is of the type JWT. It is used for to change the user that
 has been set by default in the preload.` to `This field is got only if the authorization header is of the type JWT. It is used for to change the user that
 has been set by default in the preload.
 @deprecated(reason: "deprecated from 2018-03-19. Redundant.")`
+
 ✅  Input field `client` was added to input object type `HotelSettingsInput`
 
 ## 2018-03-14
