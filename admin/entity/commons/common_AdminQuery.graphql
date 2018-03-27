@@ -2,10 +2,13 @@
 extend type AdminQuery {
   # Obtain a list of accesses for a filter.
   accesses(first: Int, Last: Int, before: String, after:String, filter: AccessFilter): AccessConnection
-  
+
   # Obtain all suppliers for a filter.
   suppliers(first: Int, Last: Int, before: String, after:String, filter: SupplierFilter): SupplierConnection
-  
+
   # Obtain all clients for a filter.
   clients(first: Int, Last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
+
+  # Obtain a ServiceApi
+ serviceApi(filter: ServiceApiFilter): ServiceApi
 }

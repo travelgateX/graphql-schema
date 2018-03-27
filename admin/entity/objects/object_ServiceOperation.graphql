@@ -1,0 +1,9 @@
+# Information related to an API operation
+type ServiceOperation {
+ # Service Operation ID
+ code: ID!
+ # Service Operation name
+ name: String!
+ # Service Operation type
+ type: String!
+}
