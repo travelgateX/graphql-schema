@@ -1,3 +1,20 @@
+## 2018-03-20
+
+✅  Input field `HotelSettingsInput.connectUser` description changed from `This field is got only if the authorization header is of the type JWT. It is used for to change the user that
+has been set by default in the preload.` to `This field is got only if the authorization header is of the type JWT. It is used for to change the user that
+has been set by default in the preload.
+@deprecated(reason: "deprecated from 2018-03-19. Redundant.")`
+
+✅  Input field `client` was added to input object type `HotelSettingsInput`
+
+## 2018-03-14
+
+✅  Deprecation reason on field `AddOns.distribute` has changed from `` to `deprecated from 2018-03-12. You can find it in distribution AddOn.`
+
+✅  Field `distribution` was added to object type `AddOns`
+
+✅  Type `AddOn` was added
+
 ## 2018-03-08
 
 ⚠️  Input field `DestinationsCodes` was removed from input object type `HotelXDestinationListInput`
