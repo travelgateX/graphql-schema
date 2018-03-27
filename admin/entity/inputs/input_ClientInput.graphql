@@ -5,6 +5,4 @@ input ClientInput {
   name: String
   # Indicates whether a Client is active
   isActive: Boolean
-  # Accesses assigned to that Client
-  accesses: [ID!]
 }

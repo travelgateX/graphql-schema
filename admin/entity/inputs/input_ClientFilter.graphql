@@ -1,4 +1,5 @@
 input ClientFilter {
   clientID: [ID]
+  groupID: [ID]
   isActive: Boolean
 }
