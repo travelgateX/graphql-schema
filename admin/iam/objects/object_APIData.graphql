@@ -3,4 +3,5 @@ type APIData{
   code: ID!
   groups(first: Int, last: Int, before: String, after:String, codes: [ID!]): GroupConnection
   resources(first: Int, last: Int, before: String, after:String, codes: [ID!]): ResourceConnection
+  operations(first: Int, last: Int, before: String, after:String, codes: [ID!]): OperationConnection
 }

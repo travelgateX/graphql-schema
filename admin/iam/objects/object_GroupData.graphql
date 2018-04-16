@@ -4,7 +4,7 @@ type GroupData implements GroupCommonData{
   type: GroupType!
   info: String
   parent: Group
-  children: GroupConnection
+  children(codes: [ID!], first: Int, last: Int, before: String, after:String): GroupConnection
   owner: Member
   isEditable: Boolean!
   productId: Int
