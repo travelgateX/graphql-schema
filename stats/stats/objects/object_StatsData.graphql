@@ -1,0 +1,12 @@
+type StatsData{
+  access: Access!
+  client: Client!
+  # From date of search
+  from: DateTime!
+  # To date of search
+  to: DateTime!
+  # Details of look to quote and look to book.
+  ratios: Ratios!
+  
+  operations(type:[ServiceOperationType!]):[OperationDetailed!]
+}

@@ -1,0 +1,7 @@
+enum ServiceOperationType {
+  ALL
+  SEARCH
+  QUOTE
+  BOOKING
+  OTHER
+}

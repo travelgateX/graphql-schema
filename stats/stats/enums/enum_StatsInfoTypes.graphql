@@ -1,0 +1,9 @@
+enum StatsInfoTypes{
+  ALL
+  OK
+  INTEGRATION
+  PROVIDER
+  COMMUNICATION
+  HUB
+  OTHER
+}

@@ -1,0 +1,14 @@
+type OperationDetailed{
+  operation: Operation
+  # operation: String!
+  # operationType: ServiceOperationType!
+  # List of service apis.
+  # serviceApis: ServiceApiConnection!
+  # Total hits.
+  totalHits: Int!
+  #Total time
+  # time: Time!
+  detailedHits(type: [StatsInfoTypes!], code:[Int!]): [StatsInfo!]
+  
+  cache: Boolean!
+}
