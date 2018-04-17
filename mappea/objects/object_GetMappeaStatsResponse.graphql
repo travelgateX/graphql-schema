@@ -1,0 +1,5 @@
+type GetMappeaStatsResponse {
+  data: [GetMappeaStatsData]
+  error: AdviseMessage
+  warnings: [AdviseMessage]
+}

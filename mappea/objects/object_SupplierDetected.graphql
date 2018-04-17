@@ -1,0 +1,5 @@
+type SupplierDetected {
+  code: ID!
+  supplier: Supplier
+  numberOfHotels: Int!
+}

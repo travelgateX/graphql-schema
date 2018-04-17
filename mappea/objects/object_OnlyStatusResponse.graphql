@@ -1,0 +1,4 @@
+type OnlyStatusResponse {
+  error: Error
+  warnings: [Warning]
+}

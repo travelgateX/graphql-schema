@@ -1,0 +1,5 @@
+## GetMappeaStats
+input MappeaXGetMappeaStatsInput {
+  organizationName: String!
+  supplierMapped: String
+}

@@ -2,5 +2,5 @@
 type Mutation {
   admin: AdminMutation
   hotelX: HotelXMutation
-  statsX: StatsMutation
+  stats: StatsMutation
 }
