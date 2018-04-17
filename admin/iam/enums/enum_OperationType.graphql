@@ -1,0 +1,13 @@
+enum OperationType{
+  SEARCH
+  QUOTE
+  BOOK
+  CANCEL
+  SCHEDULER
+  CREATE
+  READ
+  UPDATE
+  DELETE
+  EXECUTE
+  OTHER
+}
