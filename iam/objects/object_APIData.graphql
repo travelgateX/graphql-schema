@@ -1,6 +1,0 @@
-type APIData{
-  id: ID!
-  code: ID!
-  groups(first: Int, last: Int, before: String, after:String, codes: [ID!]): GroupConnection
-  resources(first: Int, last: Int, before: String, after:String, codes: [ID!]): ResourceConnection
-}

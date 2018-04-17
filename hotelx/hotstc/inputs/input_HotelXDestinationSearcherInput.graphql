@@ -1,0 +1,10 @@
+input HotelXDestinationSearcherInput {
+    # Indicates the access
+    access: ID!
+
+    # Search by hotel name or destination name
+    text: String!
+
+    # Maxium number of items per type
+    maxSize: Int
+}

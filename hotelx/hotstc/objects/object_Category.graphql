@@ -1,0 +1,17 @@
+# Category Type
+type Category implements Node {
+  # Category ID
+  code: ID!
+  
+  # Category data
+  categoryData: CategoryData
+  
+  # Errors that will lead the service to abort
+  error: [Error!]
+  
+  # Create date
+  createdAt: DateTime!
+  
+  # Update date
+  updatedAt: DateTime!
+}

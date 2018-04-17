@@ -1,7 +1,0 @@
-input GroupInput {
-  # Id of the resource permissions to be granted.
-  id: ID!
-  
-  # Groups that will see this resoruce.
-  groups: [ID]
-}

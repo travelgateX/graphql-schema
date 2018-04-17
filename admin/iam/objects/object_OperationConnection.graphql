@@ -1,0 +1,4 @@
+type OperationConnection{
+  edges: [OperationEdge]
+  pageInfo: PageInfo!
+}

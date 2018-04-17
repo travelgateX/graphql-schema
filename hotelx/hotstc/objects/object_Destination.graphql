@@ -1,0 +1,17 @@
+# Destination Type
+type Destination implements Node {
+  # Destination ID
+  code: ID!
+  
+  # Destination data
+  destinationData: DestinationData
+  
+  # Errors that will lead the service to abort
+  error: [Error!]
+  
+  # Create date
+  createdAt: DateTime!
+  
+  # Update date
+  updatedAt: DateTime!
+}

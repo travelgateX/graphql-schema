@@ -1,0 +1,8 @@
+# Extra information about the option.
+type AddOn {
+    # Contains the keyword/Id to identify the AddOn.
+    key: String!
+
+    # Contains the AddOn values.
+    value: JSON!
+}

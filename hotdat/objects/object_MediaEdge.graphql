@@ -1,5 +1,0 @@
-# HotelList Edge definition
-type MediaEdge {
-  cursor: String!
-  node: Media
-}

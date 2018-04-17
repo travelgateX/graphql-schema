@@ -1,0 +1,5 @@
+# RoomList definition
+type RoomConnection {
+  edges: [RoomEdge]
+  pageInfo: PageInfo!
+}

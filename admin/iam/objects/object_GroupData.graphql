@@ -1,0 +1,14 @@
+type GroupData implements GroupCommonData{
+  id: ID!
+  code: ID!
+  type: GroupType!
+  info: String
+  parent: Group
+  children(codes: [ID!], first: Int, last: Int, before: String, after:String): GroupConnection
+  owner: Member
+  isEditable: Boolean!
+  productId: Int
+  resourceId: Int
+  members(codes: [ID!], first: Int, last: Int, before: String, after:String): MemberConnection
+  apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
+}

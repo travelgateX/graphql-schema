@@ -1,0 +1,7 @@
+type Operation implements Node{
+  code: ID!
+  error: [Error!]
+  operationData: OperationData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

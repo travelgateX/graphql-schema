@@ -1,7 +1,0 @@
-# XTG Platform API implementation
-type Provider {
-  code: ID!
-  name: String!
-  isActive: Boolean
-  isPublic: Boolean
-}

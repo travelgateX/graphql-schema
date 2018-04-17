@@ -1,0 +1,4 @@
+input HotelXRoomQueryInput {
+  roomCodes: [String!]
+  access: ID!
+}

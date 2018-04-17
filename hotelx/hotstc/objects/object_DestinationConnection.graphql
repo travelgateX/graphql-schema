@@ -1,0 +1,6 @@
+# DestinationList definition
+type DestinationConnection {
+  edges: [DestinationEdge]
+  token: String!
+  pageInfo: PageInfo!
+}

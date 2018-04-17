@@ -1,4 +1,0 @@
-type ParameterEdge {
-  cursor: String!
-  node: Parameter
-}
