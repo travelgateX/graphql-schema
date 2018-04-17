@@ -1,4 +1,4 @@
-## MapProvider
+## MapSupplier
 input MappeaXMapSupplierInput {
   requestId: ID!
   access: ID!
