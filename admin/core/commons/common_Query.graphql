@@ -1,4 +1,5 @@
 type Query{
-  hotelX: HotelXQuery
   admin: AdminQuery
+  hotelX: HotelXQuery
+  stats: StatsQuery
 }
