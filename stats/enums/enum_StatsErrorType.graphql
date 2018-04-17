@@ -1,8 +1,0 @@
-enum StatsErrorType{
-  ALL
-  INTEGRATION
-  PROVIDER
-  COMUNICATION
-  HUB
-  OTHER
-}

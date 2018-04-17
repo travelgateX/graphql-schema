@@ -1,4 +1,0 @@
-type StatsConnection{
-  edges: [StatsEdge]
-  pageInfo: PageInfo!
-}

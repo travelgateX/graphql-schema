@@ -1,4 +1,0 @@
-type Xmls {
-  # List of Xmls
-  xml: [Xml!]
-}

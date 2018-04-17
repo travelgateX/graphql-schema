@@ -1,8 +1,0 @@
-# Source of request sent to HUB
-type User {
-  # User code.
-  code: ID!
-  
-  # List of users.
-  # suppliers: [SupplierS!]
-}

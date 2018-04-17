@@ -1,5 +1,0 @@
-enum TravelOperationType {
-  AVAIL
-  RESERVATION
-  BATCH
-}

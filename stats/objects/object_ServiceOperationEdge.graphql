@@ -1,4 +1,0 @@
-type ServiceOperationEdge{
-  cursor: String!
-  node: ServiceOperation
-}

@@ -1,5 +1,0 @@
-enum ServiceOperationType{
-  SEARCH
-  QUOTE
-  BOOKING
-}
