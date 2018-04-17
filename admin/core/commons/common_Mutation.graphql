@@ -1,6 +1,6 @@
 # Mutations are operations that change or update data in the server.
 type Mutation {
-  hotelX: HotelXMutation
-  mappeaX: MappeaXMutation
   admin: AdminMutation
+  hotelX: HotelXMutation
+  stats: StatsMutation
 }
