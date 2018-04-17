@@ -1,0 +1,4 @@
+extend type StatsQuery{
+  # The report query, represents all of the entry points into our object graph
+  report( filter: StatsFilterInput!, first: Int, last: Int, before: String, after: String): StatsConnection!
+}

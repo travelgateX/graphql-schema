@@ -1,6 +1,6 @@
 ### GetUploadedFiles
 type GetUploadedFilesResponse {
   data: GetUploadedFilesData
-  error: AdviseMessage
-  warnings: [AdviseMessage]
+  error: Error
+  warnings: [Warning]
 }
