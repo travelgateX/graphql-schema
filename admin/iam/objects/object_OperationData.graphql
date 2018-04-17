@@ -1,0 +1,6 @@
+type OperationData{
+  id: ID!
+  code: ID!
+  type: String!
+  api: API
+}

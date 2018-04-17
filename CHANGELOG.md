@@ -1,3 +1,500 @@
+## 2018-04-03
+
+⚠️  Input field `accesses` was removed from input object type `ClientInput`
+
+⚠️  Field `accesses` was removed from object type `ClientData`
+
+✅  Input field `groupID` was added to input object type `ClientFilter`
+
+✅  Field `serviceApi` was added to object type `AdminQuery`
+
+✅  Description for enum value `BookStatusType.UNKNOWN` changed from `The reservation was completed but due to a supplier error or a timeout, the reservation status is unknown.
+
+It is the clientâ€™s responsibility to check if the booking is OK` to `The reservation was completed but due to a supplier error or a timeout, the reservation status is unknown.
+
+It is the client’s responsibility to check if the booking is OK`
+
+✅  Description for enum value `BookStatusType.ON_REQUEST` changed from `The reservation was completed but the product is still not available, so the reservation goes into a waiting list.
+
+It is the clientâ€™s responsibility to check if the booking is OK` to `The reservation was completed but the product is still not available, so the reservation goes into a waiting list.
+
+It is the client’s responsibility to check if the booking is OK`
+
+✅  Description `The information and credentials required to access the supplierâ€™s system.` on type `ConfigurationInput` has changed to `The information and credentials required to access the supplier’s system.`
+
+✅  Description `Data sent & received in the supplierâ€™s native format.` on type `AuditData` has changed to `Data sent & received in the supplier’s native format.`
+
+✅  Field `Response.auditData` description changed from `Data sent & received in the supplierâ€™s original format.` to `Data sent & received in the supplier’s original format.`
+
+✅  Field `AdviseMessage.type` description changed from `TODO:
+
+Error type: The following types are valid:
+
+XXX: asd asdÃ±oajskd lÃ±a ld` to `TODO:
+
+Error type: The following types are valid:
+
+XXX: asd asdñoajskd lña ld`
+
+✅  Type `ServiceApiFilter` was added
+
+✅  Type `ServiceOperation` was added
+
+✅  Type `ServiceApi` was added
+
+## 2018-03-20
+
+✅  Input field `HotelSettingsInput.connectUser` description changed from `This field is got only if the authorization header is of the type JWT. It is used for to change the user that
+has been set by default in the preload.` to `This field is got only if the authorization header is of the type JWT. It is used for to change the user that
+has been set by default in the preload.
+@deprecated(reason: "deprecated from 2018-03-19. Redundant.")`
+
+✅  Input field `client` was added to input object type `HotelSettingsInput`
+
+## 2018-03-14
+
+✅  Deprecation reason on field `AddOns.distribute` has changed from `` to `deprecated from 2018-03-12. You can find it in distribution AddOn.`
+
+✅  Field `distribution` was added to object type `AddOns`
+
+✅  Type `AddOn` was added
+
+## 2018-03-08
+
+⚠️  Input field `DestinationsCodes` was removed from input object type `HotelXDestinationListInput`
+
+⚠️  Field `boardData` was removed from object type `Destination`
+
+⚠️  Input field `ParameterInput.key` changed type from `ID!` to `String!`
+
+⚠️  Field `DestinationData.code` changed type from `String!` to `ID!`
+
+⚠️  `WebSearchResult` was removed
+
+✅  Enum value `NON_REFUNDABLE` was added to enum `RateRulesType`
+
+✅  Enum value `NORMAL` was added to enum `RateRulesType`
+
+✅  Input field `destinationCodes` was added to input object type `HotelXDestinationListInput`
+
+✅  Field `token` was added to object type `DestinationConnection`
+
+✅  Field `destinationData` was added to object type `Destination`
+
+✅  Field `destinationSearcher` was added to object type `HotelXQuery`
+
+✅  Field `destinations` was added to object type `HotelXQuery`
+
+✅  Type `HotelXDestinationSearcherInput` was added
+
+✅  Type `DestinationSearchResult` was added
+
+## 2018-03-05
+
+⚠️  Input field `AccessInput.parameters` changed type from `String` to `[ParameterInput]`
+
+⚠️  Input field `name` was added to input object type `AccessInput`
+
+⚠️  Input field `descriptiveInfoLimit` was removed from input object type `AccessInput`
+
+⚠️  Input field `serviceAPI` was removed from input object type `SupplierFilter`
+
+⚠️  Input field `isActive` was removed from input object type `SupplierFilter`
+
+⚠️  Field `updatedAt` was removed from object type `Parameter`
+
+⚠️  Field `createdAt` was removed from object type `Parameter`
+
+⚠️  Field `error` was removed from object type `Parameter`
+
+⚠️  Field `parameterData` was removed from object type `Parameter`
+
+⚠️  Field `code` was removed from object type `Parameter`
+
+⚠️  `Parameter` object type no longer implements `Node` interface
+
+⚠️  Field `SupplierData.accesses` changed type from `AccessConnection!` to `AccessConnection`
+
+⚠️  Field `legacy` was removed from object type `SupplierData`
+
+⚠️  Argument `after: String` was removed from field `AccessData.parameters`
+
+⚠️  Argument `before: String` was removed from field `AccessData.parameters`
+
+⚠️  Argument `Last: Int` was removed from field `AccessData.parameters`
+
+⚠️  Argument `first: Int` was removed from field `AccessData.parameters`
+
+⚠️  Field `AccessData.parameters` changed type from `ParameterConnection` to `[Parameter]`
+
+⚠️  Field `descriptiveInfoLimit` was removed from object type `AccessData`
+
+⚠️  Input field `ParameterInput.key` changed type from `String!` to `ID!`
+
+⚠️  Input field `filter` was removed from input object type `HotelXHotelListInput`
+
+⚠️  Field `Destination.code` changed type from `String!` to `ID!`
+
+⚠️  Field `texts` was removed from object type `Destination`
+
+⚠️  Field `available` was removed from object type `Destination`
+
+⚠️  Field `Location.closestDestination` changed type from `Destination!` to `DestinationData!`
+
+⚠️  Field `HotelConnection.token` changed type from `String!` to `String`
+
+⚠️  `SupplierInput` was removed
+
+⚠️  `ProviderInput` was removed
+
+⚠️  `LegacyDataInput` was removed
+
+⚠️  `ParameterData` was removed
+
+⚠️  `ParameterEdge` was removed
+
+⚠️  `ParameterConnection` was removed
+
+⚠️  `LegacyData` was removed
+
+✅  `Destination` object implements `Node` interface
+
+✅  Input field `isTest` was added to input object type `AccessInput`
+
+✅  Field `updateClient` was added to object type `AdminMutation`
+
+✅  Field `createClient` was added to object type `AdminMutation`
+
+✅  Description `` on type `Parameter` has changed to `Parameters for additional information for the supplier's configuration.`
+
+✅  Field `value` was added to object type `Parameter`
+
+✅  Field `key` was added to object type `Parameter`
+
+✅  Description `XTG Platform API implementation` on type `Provider` has changed to `Temporary type to use only during SQL server's lifetime`
+
+✅  Field `SupplierData.accesses` description changed from `Accesses in a Supplier` to `Accesses where the supplier is referenced`
+
+✅  Field `SupplierData.supplierGroup` description changed from `SupplierGroup` to `SupplierGroup Internal Supplier grouping`
+
+✅  Field `isTest` was added to object type `AccessData`
+
+✅  Field `name` was added to object type `AccessData`
+
+✅  Field `clients` was added to object type `AdminQuery`
+
+✅  Description `Parameters for additional information for the supplier's configuration.` on type `ParameterInput` has changed to `Parameters Input.`
+
+✅  Input field `ParameterInput.value` description changed from `Contains the parameter values.` to `Contains the parameter values.
+
+This information is mandatory.`
+
+✅  Input field `ParameterInput.key` description changed from `Contains the keyword/Id to identify a parameter.` to `Contains the keyword/Id to identify a parameter.
+
+This information is mandatory.`
+
+✅  Description `Url's Input` on type `UrlsInput` has changed to `Urls Input`
+
+✅  Input field `destinationCodes` was added to input object type `HotelXHotelListInput`
+
+✅  Description `Information about destinantion` on type `Destination` has changed to `Destination Type`
+
+✅  Field `Destination.code` description changed from `Destination Code` to `Destination ID`
+
+✅  Field `updatedAt` was added to object type `Destination`
+
+✅  Field `createdAt` was added to object type `Destination`
+
+✅  Field `error` was added to object type `Destination`
+
+✅  Field `boardData` was added to object type `Destination`
+
+✅  Type `HotelXDestinationListInput` was added
+
+✅  Type `WebSearchResult` was added
+
+✅  Type `DestinationEdge` was added
+
+✅  Type `DestinationConnection` was added
+
+✅  Type `ClientInput` was added
+
+✅  Type `ClientFilter` was added
+
+✅  Type `ClientData` was added
+
+✅  Type `Client` was added
+
+✅  Type `ClientEdge` was added
+
+✅  Type `ClientConnection` was added
+
+✅  Type `DestinationType` was added
+
+✅  Type `DestinationData` was added
+
+
+
+## 2018-02-21
+
+⚠️  Field `updateHotel` was removed from object type `HotelXMutation`
+
+⚠️  Input field `SupplierFilter.serviceAPI` changed type from `Int` to `[Int]`
+
+⚠️  Field `avail` was removed from object type `Destination`
+
+⚠️  Field `name` was removed from object type `Destination`
+
+⚠️  Field `Contact.web` changed type from `URI!` to `URI`
+
+⚠️  Field `Location.zipCode` changed type from `String!` to `String`
+
+⚠️  Field `Location.city` changed type from `String!` to `String`
+
+⚠️  Field `Location.address` changed type from `String!` to `String`
+
+⚠️  Field `geocode` was removed from object type `Location`
+
+⚠️  Field `Amenity.code` changed type from `ID!` to `String!`
+
+⚠️  Field `updatedAt` was removed from object type `Amenity`
+
+⚠️  Field `createdAt` was removed from object type `Amenity`
+
+⚠️  Field `error` was removed from object type `Amenity`
+
+⚠️  Field `AmenityData` was removed from object type `Amenity`
+
+⚠️  `Amenity` object type no longer implements `Node` interface
+
+⚠️  Field `Media.code` changed type from `ID!` to `String`
+
+⚠️  Field `createdAt` was removed from object type `Media`
+
+⚠️  Field `error` was removed from object type `Media`
+
+⚠️  Field `mediaData` was removed from object type `Media`
+
+⚠️  `Media` object type no longer implements `Node` interface
+
+⚠️  Field `HotelData.rank` changed type from `Rank!` to `[Int!]!`
+
+⚠️  Field `HotelData.contact` changed type from `Contact!` to `Contact`
+
+⚠️  Argument `after: String` was removed from field `HotelData.amenities`
+
+⚠️  Argument `before: String` was removed from field `HotelData.amenities`
+
+⚠️  Argument `last: Int` was removed from field `HotelData.amenities`
+
+⚠️  Argument `first: Int` was removed from field `HotelData.amenities`
+
+⚠️  Argument `language: String` was removed from field `HotelData.amenities`
+
+⚠️  Field `HotelData.amenities` changed type from `AmenityConnection` to `[Amenity!]`
+
+⚠️  Argument `after: String` was removed from field `HotelData.medias`
+
+⚠️  Argument `before: String` was removed from field `HotelData.medias`
+
+⚠️  Argument `last: Int` was removed from field `HotelData.medias`
+
+⚠️  Argument `first: Int` was removed from field `HotelData.medias`
+
+⚠️  Argument `type: ApplicationArea` was removed from field `HotelData.medias`
+
+⚠️  Field `HotelData.medias` changed type from `MediaConnection` to `[Media!]`
+
+⚠️  Field `destination` was removed from object type `HotelData`
+
+⚠️  Field `generalDescription` was removed from object type `HotelData`
+
+⚠️  Field `additionalInformation` was removed from object type `HotelData`
+
+⚠️  Field `name` was removed from object type `HotelData`
+
+⚠️  Type for argument `relay` on field `HotelXQuery.hotels` changed from `RelayInput` to `RelayInput!`
+
+⚠️  Argument `criteria: HotelXHotelListInput!` added to field `HotelXQuery.hotels`
+
+⚠️  Argument `hotels: HotelXHotelQueryInput` was removed from field `HotelXQuery.hotels`
+
+⚠️  `StatusResponse` was removed
+
+⚠️  `HotelStatus` was removed
+
+⚠️  `GiataID` was removed
+
+⚠️  `HotelXHotelDataInput` was removed
+
+⚠️  `HotelXHotelMutationInput` was removed
+
+⚠️  `RankInput` was removed
+
+⚠️  `HotelXHotelQueryInput` was removed
+
+⚠️  `Rank` was removed
+
+⚠️  `Geocode` was removed
+
+⚠️  `Information` was removed
+
+⚠️  `AmenityData` was removed
+
+⚠️  `AmenityEdge` was removed
+
+⚠️  `AmenityConnection` was removed
+
+⚠️  `ApplicationArea` was removed
+
+⚠️  `MediaData` was removed
+
+⚠️  `MediaEdge` was removed
+
+⚠️  `MediaConnection` was removed
+
+✅  Field `accesses` was added to object type `SupplierData`
+
+✅  Description `Destination type` on type `Destination` has changed to `Information about destinantion`
+
+✅  Field `Destination.code` changed type from `String` to `String!`
+
+✅  Field `Destination.code` description changed from `Destination code.` to `Destination Code`
+
+✅  Field `texts` was added to object type `Destination`
+
+✅  Field `available` was added to object type `Destination`
+
+✅  Description `Contact type` on type `Contact` has changed to `Contact Data.`
+
+✅  Field `Contact.web` description changed from `Web.` to `Web`
+
+✅  Field `Contact.fax` description changed from `Fax.` to `Fax`
+
+✅  Field `Contact.telephone` description changed from `Telephone.` to `Telephone`
+
+✅  Field `Contact.email` description changed from `Email.` to `Email`
+
+✅  Description `Location` on type `Location` has changed to `Indicates the location of the hotel.`
+
+✅  Field `Location.country` description changed from `Country ISO Code` to `Country where is the Hotel.`
+
+✅  Field `Location.zipCode` description changed from `Zip Code` to `Contains the zipCode.`
+
+✅  Field `Location.city` description changed from `City` to `Contains the city`
+
+✅  Field `Location.address` description changed from `Street Address` to `Contains Hotel Address`
+
+✅  Field `closestDestination` was added to object type `Location`
+
+✅  Field `coordinates` was added to object type `Location`
+
+✅  Description `` on type `Amenity` has changed to `Something, such as a swimming pool or shopping centre, that is intended to make life more pleasant or comfortable for the people.`
+
+✅  Field `Amenity.code` description changed from `` to `Code`
+
+✅  Field `texts` was added to object type `Amenity`
+
+✅  Field `type` was added to object type `Amenity`
+
+✅  Description `` on type `Media` has changed to `Contains media information.`
+
+✅  Field `Media.updatedAt` description changed from `Update date` to `Update date.`
+
+✅  Field `Media.code` description changed from `` to `Code.`
+
+✅  Field `texts` was added to object type `Media`
+
+✅  Field `url` was added to object type `Media`
+
+✅  Field `type` was added to object type `Media`
+
+✅  Field `order` was added to object type `Media`
+
+✅  Field `HotelData.rank` description changed from `` to `Rank indicates the supplier categorization.`
+
+✅  Field `HotelData.contact` description changed from `Contact information.` to `Contact cotains information about hotel contact.`
+
+✅  Field `HotelData.location` description changed from `` to `Indicates the location of the hotel.`
+
+✅  Field `HotelData.amenities` description changed from `` to `Amenities`
+
+✅  Field `HotelData.medias` description changed from `` to `Medias`
+
+✅  Field `HotelData.hotelCode` description changed from `Code of the hotel in the Supplier selected.` to `Code to perform availability.`
+
+✅  Field `HotelData.code` description changed from `Internal code to perform availability` to `Internal code.`
+
+✅  Field `descriptions` was added to object type `HotelData`
+
+✅  Field `cardTypes` was added to object type `HotelData`
+
+✅  Field `chainCode` was added to object type `HotelData`
+
+✅  Field `property` was added to object type `HotelData`
+
+✅  Field `hotelName` was added to object type `HotelData`
+
+✅  Field `hotelCodeSupplier` was added to object type `HotelData`
+
+✅  Description `Hotel type` on type `Hotel` has changed to `Hotel Type`
+
+✅  Field `token` was added to object type `HotelConnection`
+
+✅  Argument `token: String` added to field `HotelXQuery.hotels`
+
+✅  Field `rooms` was added to object type `HotelXQuery`
+
+✅  Field `categories` was added to object type `HotelXQuery`
+
+✅  Field `boards` was added to object type `HotelXQuery`
+
+✅  Type `HotelXRoomQueryInput` was added
+
+✅  Type `RoomData` was added
+
+✅  Type `RoomStatic` was added
+
+✅  Type `RoomEdge` was added
+
+✅  Type `RoomConnection` was added
+
+✅  Type `HotelXHotelListInput` was added
+
+✅  Type `DescriptionType` was added
+
+✅  Type `Description` was added
+
+✅  Type `ApplicationAreaType` was added
+
+✅  Type `Coordinates` was added
+
+✅  Type `Property` was added
+
+✅  Type `HotelXCategoryQueryInput` was added
+
+✅  Type `CategoryData` was added
+
+✅  Type `Category` was added
+
+✅  Type `CategoryEdge` was added
+
+✅  Type `CategoryConnection` was added
+
+✅  Type `HotelXBoardQueryInput` was added
+
+✅  Type `Text` was added
+
+✅  Type `BoardData` was added
+
+✅  Type `Board` was added
+
+✅  Type `BoardEdge` was added
+
+✅  Type `BoardConnection` was added
+
+
+
 ## 2018-01-30
 
 ⚠️  Input field `hotelCode` was added to input object type `HotelXHotelDataInput`

@@ -1,0 +1,4 @@
+type OperationEdge {
+  cursor: String!
+  node: Operation
+}

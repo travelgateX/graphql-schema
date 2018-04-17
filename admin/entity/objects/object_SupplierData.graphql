@@ -1,0 +1,18 @@
+type SupplierData{
+  # unique identifier of a supplier
+  code: ID!
+  # Supplier complete name
+  name: String!
+  # indicates whether a supplier is active
+  isActive: Boolean!
+  # instance to which this supllier is connected
+  provider: Provider!
+  # Context where the Supplier belongs to
+  context: String!
+  # Service API
+  serviceApi: Int!
+  # SupplierGroup Internal Supplier grouping
+  supplierGroup: ID
+  # Accesses where the supplier is referenced
+  accesses: AccessConnection
+}

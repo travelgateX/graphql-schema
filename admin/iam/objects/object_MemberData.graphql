@@ -1,0 +1,8 @@
+type MemberData {
+  id: ID!
+  code: ID!
+  memberType: String
+  groups(first: Int, last: Int, before: String, after:String, codes: [ID!]): GroupConnection
+  roles(first: Int, last: Int, before: String, after:String, codes: [ID!]): RoleConnection
+  #access: AccessConnection TODO
+}

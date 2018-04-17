@@ -1,0 +1,9 @@
+# Parameters Input.
+input ParameterInput {  
+  # Contains the keyword/Id to identify a parameter.
+  # This information is mandatory.
+  key: String!
+  # Contains the parameter values.
+  # This information is mandatory.
+  value: String!
+}

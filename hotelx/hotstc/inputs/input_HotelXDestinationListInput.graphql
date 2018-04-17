@@ -1,0 +1,10 @@
+input HotelXDestinationListInput {
+  # Indicates the access
+  access:     ID!
+  
+  # Search by hotel codes
+  destinationCodes:      [String!]
+  
+  # Maxium number of items per page
+  maxSize:       Int
+}

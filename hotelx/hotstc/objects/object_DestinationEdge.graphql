@@ -1,0 +1,5 @@
+# DestinationList Edge definition
+type DestinationEdge {
+  cursor: String!
+  node: Destination
+}

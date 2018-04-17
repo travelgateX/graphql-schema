@@ -1,6 +1,0 @@
-input SupplierFilter {
-  supplierID: [ID]
-  accessID: [ID]
-  isActive: Boolean
-  serviceAPI: [Int]
-}

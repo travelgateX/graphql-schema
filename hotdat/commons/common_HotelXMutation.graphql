@@ -1,3 +1,0 @@
-extend type HotelXMutation {
-  updateHotel(hotels: HotelXHotelMutationInput!, relay: RelayInput): HotelConnection!
-}

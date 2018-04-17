@@ -1,0 +1,4 @@
+interface Text {
+  text: String!
+  language: Language!
+}

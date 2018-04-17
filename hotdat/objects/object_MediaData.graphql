@@ -1,4 +1,0 @@
-type MediaData{
-  type: ApplicationArea!
-  url: URI!
-}

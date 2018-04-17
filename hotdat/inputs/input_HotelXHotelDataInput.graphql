@@ -1,5 +1,0 @@
-input HotelXHotelDataInput {
-  # Code of the hotel in the Supplier selected.
-  hotelCode: String!
-  rank: RankInput!
-}

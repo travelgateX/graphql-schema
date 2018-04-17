@@ -1,5 +1,0 @@
-type StatusResponse implements AdviseMessage {
-  code: String!
-  type: String!
-  description: String!
-}

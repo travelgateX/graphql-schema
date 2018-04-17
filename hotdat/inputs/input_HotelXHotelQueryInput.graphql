@@ -1,7 +1,0 @@
-input HotelXHotelQueryInput {
-  hotelCodes: [String!]
-  language: String
-  access: ID
-  supplier: ID
-  ranks: RankInput
-}
