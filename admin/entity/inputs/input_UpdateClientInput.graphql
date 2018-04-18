@@ -1,4 +1,4 @@
-input ClientInput {
+input UpdateClientInput {
   # ID identifier of a Client
   code: ID!
   # Client complete name
