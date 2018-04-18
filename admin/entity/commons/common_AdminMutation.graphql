@@ -13,7 +13,7 @@ extend type AdminMutation {
   # Removes Supplier visibility to groups.
   deleteSupplierFromGroup(input: GroupInput!): Supplier
   # Creates a Client.
-  createClient(input: ClientInput!): Client
+  createClient(input: CreateClientInput!): Client
   # Updates a Client.
-  updateClient(input: ClientInput!): Client
+  updateClient(input: UpdateClientInput!): Client
 }

@@ -1,0 +1,8 @@
+input CreateClientInput {
+  # Client complete name
+  name: String!
+  # Indicates whether a Client is active
+  isActive: Boolean!
+  # Group where the client will be assigned at first
+	group: String!
+}
