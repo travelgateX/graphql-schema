@@ -1,5 +1,6 @@
 input ClientFilter {
   clientID: [ID]
+  name: [String!]
   groupID: [ID]
   isActive: Boolean
 }
