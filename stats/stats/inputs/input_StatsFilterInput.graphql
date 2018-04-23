@@ -8,7 +8,7 @@ input StatsFilterInput {
   serviceApis: [ServiceApiType!]
   
   # List of services operations
-  operation: [ServiceOperationType!]!
+  operation: [ServiceOperationType!]
   serviceOperations: [ID!]
   
   # From date of search
@@ -18,5 +18,5 @@ input StatsFilterInput {
   to: DateTime!
   
   # Group all users
-  groupUsers: Boolean
+  groupUsers: Boolean = false
 }
