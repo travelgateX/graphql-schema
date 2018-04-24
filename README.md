@@ -130,7 +130,6 @@ Process
 
 1 - Copy introspection query into GraphQL-Faker and execute query
 2 - Go to graph-voyager and paste the response into Custom Schema and press "Change Schema"
-
 ```
 
 
