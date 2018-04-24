@@ -16,7 +16,4 @@ input StatsFilterInput {
   
   # To date of search
   to: DateTime!
-  
-  # Group all users
-  groupUsers: Boolean = false
 }
