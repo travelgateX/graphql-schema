@@ -6,4 +6,6 @@ type ServiceApi {
  name: String!
  # Operations that a Service Api has
  operations: [ServiceOperation]
+ # Errors
+ error: [Error!]
 }
