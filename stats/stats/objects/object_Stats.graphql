@@ -2,7 +2,7 @@
 type Stats implements Node{
   code: ID! #GUID
   
-  StatsData: StatsData
+  statsData: StatsData
   # Errors that will lead the service to abort
   error: [Error!]
   
