@@ -19,5 +19,5 @@ type DestinationData {
   parent: String
   
   # Indicates destination type, zone or city.
-  type: DestinationType!
+  type: DestinationType
 }
