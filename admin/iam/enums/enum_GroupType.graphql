@@ -1,4 +1,5 @@
 enum GroupType{
+  ORG
   GROUP
   PROFILE
   TEAM
