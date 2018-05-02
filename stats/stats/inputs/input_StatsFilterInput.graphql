@@ -1,6 +1,9 @@
 # Filters needed to do a search.
 # Users (List of users), Suppliers (List of suppliers), ServiceApis (List of service apis), From (Start date of search - YYYY-MM-DD HH:mm:ss), To (End date of search - YYYY-MM-DD HH:mm:ss)
 input StatsFilterInput {
+  # List of accesses
+  accesses: [ID!]
+
   # List of suppliers
   suppliers: [ID!]
   
