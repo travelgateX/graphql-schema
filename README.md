@@ -6,7 +6,9 @@ These instructions will help you to extend and modify the current gateway schema
 
 ### graphql-moker Instalation
 
-https://gitlab.xmltravelgate.com/graphql/graphql-mocker
+```npm i graphql-mocker```
+
+https://github.com/travelgateX/graphql-mocker
 
 ## Modify/extend your schema
 
