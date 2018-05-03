@@ -1,8 +1,8 @@
 type MemberData {
   id: ID!
   code: ID!
-  memberType: String
-  groups(first: Int, last: Int, before: String, after:String, codes: [ID!]): GroupConnection
-  roles(first: Int, last: Int, before: String, after:String, codes: [ID!]): RoleConnection
-  #access: AccessConnection TODO
+  allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
+  accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
+  suppliers(codes:[ID!], accessID:[ID!], first: Int, last: Int, before: String, after:String): SupplierConnection
+  clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
 }

@@ -1,7 +1,7 @@
 enum OperationType{
   SEARCH
   QUOTE
-  BOOK
+  BOOKING
   CANCEL
   SCHEDULER
   CREATE

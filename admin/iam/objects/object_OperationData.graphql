@@ -1,6 +1,6 @@
 type OperationData{
   id: ID!
   code: ID!
-  type: [OperationType!]!
+  types: [OperationType!]!
   api: API
 }

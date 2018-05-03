@@ -6,7 +6,11 @@ type OrganizationData implements GroupCommonData {
   children(codes: [ID!], first: Int, last: Int, before: String, after:String): GroupConnection
   owner: Member
   isEditable: Boolean!
-  members(codes: [ID!], first: Int, last: Int, before: String, after:String): MemberConnection
+  members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
   products(codes: [ID!], first: Int, last: Int, before: String, after:String): ProductConnection
+  allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
+  accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
+  suppliers(codes:[ID!], accessID:[ID!], first: Int, last: Int, before: String, after:String): SupplierConnection
+  clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
 }
