@@ -1,0 +1,6 @@
+# Assert of an specific error
+type StatsAssert {
+  startTime: DateTime!
+  execTime: Int!
+  url: URI!
+}

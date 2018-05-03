@@ -6,4 +6,7 @@ type StatsInfo {
   hits: Int!
   # Total time (ms)
   time: Int!
+
+  asserts:[StatsAssert!]
+
 }
