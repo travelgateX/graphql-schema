@@ -2,7 +2,7 @@
 input AccessInput {
   # Access descriptive name
   name: String!
-  # Indicates if the access is active.
+  # Indicates if Access is active
   isActive: Boolean
   # Access code.
   code: ID
