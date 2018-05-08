@@ -1,4 +1,4 @@
-# An option includes hotel information, meal plan, total price, conditions and room description.
+# An option includes hotel information, meal plan, total price, conditions and room description
 type HotelOptionSearch implements BookableOptionSearch {
   # Supplier that offers this option.
   supplierCode: String!

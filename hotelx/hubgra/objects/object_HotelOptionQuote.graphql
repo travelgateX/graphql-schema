@@ -1,4 +1,4 @@
-# Contains information about quote.
+# Contains information about quote(s)
 type HotelOptionQuote {
   # Indicates the valuation key
   optionRefId: String!
