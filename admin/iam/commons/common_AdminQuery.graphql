@@ -1,18 +1,18 @@
 extend type AdminQuery{
-  # Organizations list. Specify organization codes to filter organizations.
+  # Organizations list; specify organization codes to filter organizations
   organizations(codes:[ID!],first: Int, last: Int, before: String, after:String): OrganizationConnection!
-  # Products list. Specify product codes to filter products.
+  # Members list; specify member codes to filter members
   products(codes:[ID!],first: Int, last: Int, before: String, after:String): ProductConnection!
-  # Members list. Specify member codes to filter members.
+  # Members list; specify member codes to filter members.
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection!
-  # Groups list. Specify group codes to filter groups.
+  # Groups list; specify group codes to filter groups.
   groups(codes:[ID!],type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection!
-  # Apis list. Specify api codes to filter apis.
+  # Apis list; specify api codes to filter apis.
   apis(codes:[ID!],first: Int, last: Int, before: String, after:String) : APIConnection!
-  # Resources list. Specify resource codes to filter resources.
+  # Resources list; specify resource codes to filter resources.
   resources(codes:[ID!],first: Int, last: Int, before: String, after:String) : ResourceConnection!
-  # Roles list. Specify role codes to filter roles.
+  # Roles list; specify role codes to filter roles.
   roles(codes:[ID!],first: Int, last: Int, before: String, after:String) : RoleConnection!
-  # Operations list. Specify operations codes to filter operations.
+  # Operations list; specify operations codes to filter operations.
   operations(codes: [ID!],type: OperationType, first: Int, last: Int, before: String, after:String): OperationConnection!
 }
