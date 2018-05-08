@@ -3,6 +3,6 @@ type AddOn {
     # Contains keyword/ID to identify the AddOn.
     key: String!
 
-    # Contains the AddOn values.
+    # Contains AddOn values.
     value: JSON!
 }
