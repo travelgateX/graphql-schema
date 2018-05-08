@@ -1,18 +1,18 @@
-# Mutations are operations that change or update data in the server.
+# Mutations are operations that change or update data on the server
 extend type AdminMutation {
-  # Creates an Access.
+  # Creates an Access
   createAccess(input: AccessInput!): Access
-  # Updates an Access.
+  # Updates an Access
   updateAccess(input: AccessInput!): Access
-  # Grants Access visibility to a group.
+  # Grants Access visibility to a group
   grantAccessToGroup(input: GroupInput!): Access
-  # Removes Access visibility to groups.
+  # Removes Access visibility to groups
   deleteAccessFromGroup(input: GroupInput!): Access
-  # Grants Supplier visibility to a group.
+  # Grants Supplier visibility to a group
   grantSupplierToGroup(input: GroupInput!): Supplier
-  # Removes Supplier visibility to groups.
+  # Removes Supplier visibility to groups
   deleteSupplierFromGroup(input: GroupInput!): Supplier
-  # Creates a Client.
+  # Creates a Client
   createClient(input: CreateClientInput!): Client
   # Updates a Client.
   updateClient(input: UpdateClientInput!): Client

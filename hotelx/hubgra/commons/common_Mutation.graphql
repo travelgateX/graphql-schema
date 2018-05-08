@@ -1,4 +1,4 @@
-# Mutations are operations that change or update data in the server.
+# Mutations are operations that change or update data on the server
 extend type Mutation {
   # Creates a new hotel booking consisting of an option of 1 or more rooms.
   hotelBook(input: HotelBookInput!, settings: HotelSettingsInput): HotelBookPayload @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
