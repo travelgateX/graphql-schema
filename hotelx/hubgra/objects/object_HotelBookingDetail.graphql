@@ -24,6 +24,6 @@ type HotelBookingDetail {
   # Payable.
   payable: String
   
-  # Extra information about the option.
+  # Additional information about the option
   addOns: AddOns
 }

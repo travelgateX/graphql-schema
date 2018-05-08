@@ -54,7 +54,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   # Additional information about the option.
   remarks: String
   
-  # Extra information about the option.
+  # Additional information about the option
   addOns: AddOns
   
   # Token for Deep Link

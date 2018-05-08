@@ -21,6 +21,6 @@ type HotelOptionQuote {
   # List of credit cards
   cardTypes: [String!]
   
-  # Extra information about the option.
+  # Additional information about the option
   addOns: AddOns
 }
