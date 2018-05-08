@@ -20,7 +20,7 @@ input AccessInput {
   parameters: [ParameterInput]
   # Markets allowed for the Access
   markets: [String!]
-  # Business rules types for the access.
+  # Business rule types for the Access
   rateRules: [RateRulesType!]
   # Parent access if Shared access.
   shared: String
