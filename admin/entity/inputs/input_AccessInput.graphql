@@ -12,7 +12,7 @@ input AccessInput {
   isTest: Boolean
   # User code to connect to supplier
   user: String
-  # Password for the connection.
+  # Password for the connection
   password: String
   # Specific Urls
   urls: UrlsInput

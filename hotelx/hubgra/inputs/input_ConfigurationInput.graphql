@@ -3,7 +3,7 @@ input ConfigurationInput {
   # User name for the connection.
   username: String
   
-  # Password for the connection.
+  # Password for the connection
   password: String
   
   # Url or endpoint for the connection.
