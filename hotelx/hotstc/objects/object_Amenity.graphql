@@ -3,7 +3,7 @@ type Amenity {
   # Code
   code: String!
   
-  # Indicates the type of the amenity.
+  # Indicates the type of Amenity.
   type: ApplicationAreaType!
   
   # Contains the descriptive
