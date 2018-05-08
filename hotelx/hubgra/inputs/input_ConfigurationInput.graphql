@@ -6,7 +6,7 @@ input ConfigurationInput {
   # Password for the connection
   password: String
   
-  # Url or endpoint for the connection.
+  # URL or endpoint for the connection.
   urls:           UrlsInput!
   
   # List of parameters with additional required information.

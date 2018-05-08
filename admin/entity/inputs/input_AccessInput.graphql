@@ -14,7 +14,7 @@ input AccessInput {
   user: String
   # Password for the connection
   password: String
-  # Specific Urls
+  # Specific URLs
   urls: UrlsInput
   # List of parameters for additional information.
   parameters: [ParameterInput]
