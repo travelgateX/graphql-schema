@@ -10,7 +10,7 @@ input AccessInput {
   supplier: String
   # Indicates if Access can be used for testing or not
   isTest: Boolean
-  # User code to connect to supplier.
+  # User code to connect to supplier
   user: String
   # Password for the connection.
   password: String
