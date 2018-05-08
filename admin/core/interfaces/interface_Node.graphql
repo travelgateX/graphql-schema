@@ -5,6 +5,6 @@ interface Node {
   error: [Error!]
   # Date created
   createdAt: DateTime!
-  # Update date
+  # Date updated
   updatedAt: DateTime!
 }

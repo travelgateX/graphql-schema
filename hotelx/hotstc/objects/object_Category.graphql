@@ -12,6 +12,6 @@ type Category implements Node {
   # Date created
   createdAt: DateTime!
   
-  # Update date
+  # Date updated
   updatedAt: DateTime!
 }
