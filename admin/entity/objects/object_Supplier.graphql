@@ -3,7 +3,7 @@ type Supplier implements Node{
   supplierData: SupplierData
   # Errors that abort services
   error: [Error!]
-  # Create date
+  # Date created
   createdAt: DateTime!
   # Update date
   updatedAt: DateTime!

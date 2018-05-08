@@ -3,7 +3,7 @@ type Access implements Node{
   accessData: AccessData
   # Errors that abort services
   error: [Error!]
-  # Create date
+  # Date created
   createdAt: DateTime!
   # Update date
   updatedAt: DateTime!

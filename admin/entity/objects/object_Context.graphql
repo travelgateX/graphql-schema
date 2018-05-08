@@ -5,7 +5,7 @@ type Context implements Node {
   # Errors that abort services
   error: [Error!]
   
-  # Create date
+  # Date created
   createdAt: DateTime!
   
   # Update date
