@@ -15,7 +15,7 @@ type AccessData {
   password: String
   # Specific URLs
   urls: Urls
-  # List of parameters for additional information.
+  # List of parameters for additional information
   parameters: [Parameter]
   # Markets allowed for the access.
   markets: [String!]
