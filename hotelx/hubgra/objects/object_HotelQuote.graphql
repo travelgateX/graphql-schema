@@ -8,7 +8,7 @@ type HotelQuote implements Response {
   # Information about quote.
   optionQuote: HotelOptionQuote
   
-  # Errors that will lead the service to abort
+  # Errors that abort services
   errors: [Error!]
   
   # Potentially  harmful situations or errors that won't force the service to abort

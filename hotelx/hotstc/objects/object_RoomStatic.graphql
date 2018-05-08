@@ -6,7 +6,7 @@ type RoomStatic implements Node {
   # Room data
   roomData: RoomData
   
-  # Errors that will lead the service to abort
+  # Errors that abort services
   error: [Error!]
   
   # Create date

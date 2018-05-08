@@ -1,7 +1,7 @@
 type Client implements Node{
   code: ID!
   clientData: ClientData
-  # Errors that will lead the service to abort
+  # Errors that abort services
   error: [Error!]
   # Create date
   createdAt: DateTime!

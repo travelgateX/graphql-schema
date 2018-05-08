@@ -6,7 +6,7 @@ type Board implements Node {
   # Board data
   boardData: BoardData
   
-  # Errors that will lead the service to abort
+  # Errors that abort services
   error: [Error!]
   
   # Create date

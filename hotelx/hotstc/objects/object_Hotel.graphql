@@ -6,7 +6,7 @@ type Hotel implements Node {
   # Hotel data
   hotelData: HotelData
   
-  # Errors that will lead the service to abort
+  # Errors that abort services
   error: [Error!]
   
   # Create date

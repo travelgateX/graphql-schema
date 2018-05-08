@@ -15,7 +15,7 @@ type HotelSearch implements Response {
   # List of options returned according to the request.
   options: [HotelOptionSearch!]
   
-  # Errors that will lead the service to abort
+  # Errors that abort services
   errors: [Error!]
   
   # Potentially harmful situations or errors that won't force the service to abort

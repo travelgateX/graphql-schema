@@ -3,7 +3,7 @@ type Stats implements Node{
   code: ID! #GUID
   
   statsData: StatsData
-  # Errors that will lead the service to abort
+  # Errors that abort services
   error: [Error!]
   
   # Create date
