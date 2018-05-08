@@ -22,7 +22,7 @@ input AccessInput {
   markets: [String!]
   # Business rule types for the Access
   rateRules: [RateRulesType!]
-  # Parent access if Shared access.
+  # Parent Access if Shared Access.
   shared: String
   # Default group where the access will be visible.
   group: ID
