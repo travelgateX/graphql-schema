@@ -6,7 +6,7 @@ input AccessInput {
   isActive: Boolean
   # Access code.
   code: ID
-  # supplier for this access.
+  # Supplier for this Access
   supplier: String
   # Indicates if this access can be used for testing or not
   isTest: Boolean

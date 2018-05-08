@@ -5,7 +5,7 @@ type AccessData {
   isActive: Boolean!
   # Unique AccessConfiguration identifier
   code: ID!
-  # supplier for this access.
+  # Supplier for this Access
   supplier: Supplier!
   # Indicates if this access can be used for testing or not
   isTest: Boolean!
