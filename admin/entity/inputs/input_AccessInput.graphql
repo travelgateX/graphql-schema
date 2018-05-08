@@ -8,7 +8,7 @@ input AccessInput {
   code: ID
   # Supplier for this Access
   supplier: String
-  # Indicates if this access can be used for testing or not
+  # Indicates if Access can be used for testing or not
   isTest: Boolean
   # User code to connect to supplier.
   user: String
