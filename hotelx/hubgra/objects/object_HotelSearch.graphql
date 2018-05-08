@@ -1,4 +1,4 @@
-# Results of Avail Hotel. Contains all the available options for a given date and itinerary.
+# Results from Avail Hotel; contains all the available options for a given date and itinerary
 type HotelSearch implements Response {
   # Indicates the context of the response.
   context: String
