@@ -17,7 +17,7 @@ type AccessData {
   urls: Urls
   # List of parameters for additional information
   parameters: [Parameter]
-  # Markets allowed for the access.
+  # Markets allowed for the Access
   markets: [String!]
   # Business rules types for the access.
   rateRules: [RateRulesType!]

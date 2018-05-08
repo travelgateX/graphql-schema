@@ -18,7 +18,7 @@ input AccessInput {
   urls: UrlsInput
   # List of parameters for additional information
   parameters: [ParameterInput]
-  # Markets allowed for the access.
+  # Markets allowed for the Access
   markets: [String!]
   # Business rules types for the access.
   rateRules: [RateRulesType!]
