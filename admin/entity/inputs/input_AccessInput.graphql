@@ -1,6 +1,6 @@
 # Access input
 input AccessInput {
-  # Access descriptive name
+  # Access descriptive unique name
   name: String!
   # Indicates if Access is active
   isActive: Boolean
