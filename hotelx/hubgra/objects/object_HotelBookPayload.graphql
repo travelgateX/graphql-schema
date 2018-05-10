@@ -11,6 +11,6 @@ type HotelBookPayload implements Response {
   # Errors that abort services
   errors: [Error!]
   
-  # Potentially  harmful situations or errors that won't force the service to abort
+  # Potentially harmful situations or errors, but ones that will not forcibly abort the service
   warnings: [Warning!]
 }
