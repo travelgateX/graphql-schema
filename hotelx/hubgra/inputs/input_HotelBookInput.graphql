@@ -3,7 +3,7 @@ input HotelBookInput {
   # Option ID
   optionRefId: String!
   
-  # Language to be used in request.
+  # Language to be used in request
   language: Language
   
   # Booking ID in client's system.

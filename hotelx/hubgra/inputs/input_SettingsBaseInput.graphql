@@ -6,6 +6,6 @@ input SettingsBaseInput {
   # Specifies if transactions exchanged with the supplier have to be logged or not.
   auditTransactions: Boolean
   
-  # Business rules.
+  # Business rules
   businessRules: BusinessRulesInput
 }
