@@ -3,7 +3,7 @@ type DestinationData {
   # Destination Code
   code: ID!
   
-  # Indicates if you can search by destination.
+  # Indicates if you can search by destination
   available: Boolean!
   
   # Returns destination leafs of the destination.
@@ -12,12 +12,12 @@ type DestinationData {
   # Contains the destination name
   texts(languages: [Language!]): [Text!]!
   
-  # Closest destinations, indicates the minimal destinations.
+  # Closest destinations, indicates destinations in proximity
   closestDestinations: [String!]
   
-  # Parent destination code.
+  # Parent destination code
   parent: String
   
-  # Indicates destination type, zone or city.
+  # Indicates destination type, zone or city
   type: DestinationType
 }
