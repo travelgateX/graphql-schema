@@ -1,9 +1,9 @@
 # Category data
 type CategoryData {
-  # Internal code to perform availability.
+  # Internal code for checking availability
   code: ID!
   
-  # Code of the hotel in the Supplier selected.
+  # Code of the hotel in the Supplier selected
   categoryCode: String!
   
   # Label
