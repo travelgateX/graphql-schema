@@ -1,18 +1,18 @@
-# Criteria of search contains destination, travel dates and the number of pax in each room.
+# Search criteria contains destination, travel dates and the number of pax in each room.
 # You must preload the other fields in our system by complete the fields absents.
 input HotelCriteriaSearchInput {
-  # Check-in date for the booking.
+  # Check-in date for booking
   # Format: YYYY-MM-DD
   checkIn: Date!
   
-  # Check-out, date for the booking.
+  # Check-out, booking date
   # Format: YYYY-MM-DD
   checkOut: Date!
   
-  # Contains the list of hotels's ID.
+  # Contains the list of hotels's ID
   hotels: [String!]!
   
-  # For multi room bookings, this array will contain multiple elements (rooms).
+  # For multi-room bookings, this array will contain multiple elements (rooms).
   # For each room you have to specify its own occupancy.
   occupancies: [RoomInput!]!
   
@@ -25,6 +25,6 @@ input HotelCriteriaSearchInput {
   # Nationality of the guest (use ISO3166_1_alfa_2).
   nationality : Country
   
-  # Targeted zone, country or point of sale to be used in request.
+  # Targeted zone, country or point-of-sale to be used in request.
   market : String
 }

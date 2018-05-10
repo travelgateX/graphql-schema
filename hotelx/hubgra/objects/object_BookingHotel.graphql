@@ -3,7 +3,7 @@ type BookingHotel {
   # Format: YYYY-MM-DD
   creationDate: Date
   
-  # Check-in date for the booking.
+  # Check-in date for booking
   # Format: YYYY-MM-DD
   checkIn: Date
   
