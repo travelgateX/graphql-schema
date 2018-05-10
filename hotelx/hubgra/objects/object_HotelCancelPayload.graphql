@@ -2,15 +2,15 @@ type HotelCancelPayload implements Response {
   # Application stats in string format
   stats(token: String!): StatsRequest
   
-  # Data sent & received in the supplier's native format.
+  # Data sent and received in the supplier's native format.
   auditData: AuditData
   
   #Information about cancel
   cancellation: HotelCancelDetail
   
-  # Errors that will lead the service to abort
+  # Errors that abort services
   errors: [Error!]
   
-  # Potentially  harmful situations or errors that won't force the service to abort
+  # Potentially harmful situations or errors, but ones that will not forcibly abort the service
   warnings: [Warning!]
 }

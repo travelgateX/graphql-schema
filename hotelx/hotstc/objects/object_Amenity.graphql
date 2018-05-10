@@ -1,11 +1,11 @@
-# Something, such as a swimming pool or shopping centre, that is intended to make life more pleasant or comfortable for the people.
+#An Amenity is defined as something intended to make life more pleasant or comfortable for people. Examples include: swimming pools, shopping centers, etc.
 type Amenity {
   # Code
   code: String!
-  
-  # Indicates the type of the amenity.
+
+  # Indicates the type of Amenity.
   type: ApplicationAreaType!
-  
+
   # Contains the descriptive
   texts(languages: [Language!]): [Text!]!
 }

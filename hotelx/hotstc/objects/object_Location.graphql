@@ -1,4 +1,4 @@
-# Indicates the location of the hotel.
+# Indicates the location of the hotel
 type Location {
   # Contains Hotel Address
   address: String

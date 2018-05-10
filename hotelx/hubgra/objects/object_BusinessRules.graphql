@@ -1,8 +1,8 @@
-# List of business rules to filter the options that you are interested.
+# LList of business rules for filtering options based on your interests.
 type BusinessRules {
-  # Options quota per avail. Numbers of options wanted by avail.
+  # Options quota per availability; numbers of options based on availability
   optionsQuota: Int!
   
-  # Different business rules to filter the options that you are interested.
+  # Different business rules for filtering options that you are interested in
   businessRulesType: BusinessRulesType!
 }

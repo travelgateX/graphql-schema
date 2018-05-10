@@ -1,4 +1,4 @@
-# Contains information about booking.
+# Contains information about booking
 type HotelBookingDetail {
   # Booking ID in the Supplier's system
   reference: Reference!
@@ -24,6 +24,6 @@ type HotelBookingDetail {
   # Payable.
   payable: String
   
-  # Extra information about the option.
+  # Additional information about the option
   addOns: AddOns
 }

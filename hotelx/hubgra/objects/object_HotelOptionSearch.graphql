@@ -1,4 +1,4 @@
-# An option includes hotel information, meal plan, total price, conditions and room description.
+# An option includes hotel information, meal plan, total price, conditions and room description
 type HotelOptionSearch implements BookableOptionSearch {
   # Supplier that offers this option.
   supplierCode: String!
@@ -30,7 +30,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   # The possible values in status in response are Available (OK) or On Request (RQ).
   status: StatusType!
   
-  # List of occupancies of the request.
+  # List of occupancies for the request
   occupancies: [Occupancy!]!
   
   # List of rooms of the option returned.
@@ -54,7 +54,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   # Additional information about the option.
   remarks: String
   
-  # Extra information about the option.
+  # Additional information about the option
   addOns: AddOns
   
   # Token for Deep Link

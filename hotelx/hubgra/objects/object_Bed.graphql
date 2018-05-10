@@ -1,14 +1,14 @@
 # Contains information about a bed.
 type Bed {
-  # Specifies the bed type.
+  # Specifies the bed type
   type: String
   
-  # Description about the bed.
+  # Description about the bed
   description: String
   
-  # Indicates number of beds in the room.
+  # Indicates number of beds in a room
   count: Int
   
-  # Specifies if the bed is shared or not.
+  # Specifies if the bed is shared or not
   shared: Boolean
 }

@@ -1,28 +1,28 @@
 # Access input
 input AccessInput {
-  # Access descriptive name
-  name: String
-  # Indicates if the access is active.
+  # Access descriptive unique name
+  name: String!
+  # Indicates if Access is active
   isActive: Boolean
   # Access code.
   code: ID
-  # supplier for this access.
+  # Supplier for this Access
   supplier: String
-  # Indicates if this access can be used for testing or not
+  # Indicates if Access can be used for testing or not
   isTest: Boolean
-  # User code to connect to supplier.
+  # User code to connect to supplier
   user: String
-  # Password for the connection.
+  # Password for the connection
   password: String
-  # Specific Urls
+  # Specific URLs
   urls: UrlsInput
-  # List of parameters for additional information.
+  # List of parameters for additional information
   parameters: [ParameterInput]
-  # Markets allowed for the access.
+  # Markets allowed for the Access
   markets: [String!]
-  # Business rules types for the access.
+  # Business rule types for the Access
   rateRules: [RateRulesType!]
-  # Parent access if Shared access.
+  # Parent Access if Shared Access.
   shared: String
   # Default group where the access will be visible.
   group: ID

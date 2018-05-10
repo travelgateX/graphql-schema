@@ -4,10 +4,10 @@ input CriteriaBookingDatesInput {
   dateType: DateType!
   
   # Start date.
-  # Format: yyyy-MM-dd.
+  # Format: YYYY-MM-DD.
   start: Date!
   
   # End date.
-  # Format: yyyy-MM-dd.
+  # Format: YYYY-MM-DD.
   end: Date!
 }

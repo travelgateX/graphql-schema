@@ -1,5 +1,5 @@
 # Price indicates the value of the room/option.
-# Supplements and/or surcharges could be or not included into the price, will be verified with the nodes Supplements/Surcharges.
+# Supplements and/or surcharges can be included into the price, and will be verified with nodes Supplements/Surcharges.
 type Price implements Priceable {
   # Currency code indicating which currency should be paid.
   # This information is mandatory.
@@ -17,7 +17,7 @@ type Price implements Priceable {
   # Indicates the retail price that the supplier sells to the customer.
   gross: Float
   
-  # Informs about the currency of origin, and the rate applied over result returned by the supplier.
+  # Provides information about the currency of original, and its rate applied over the results returned by the Supplier.
   # This information is mandatory.
   exchange: Exchange!
   

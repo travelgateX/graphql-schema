@@ -6,12 +6,12 @@ type Category implements Node {
   # Category data
   categoryData: CategoryData
   
-  # Errors that will lead the service to abort
+  # Errors that abort services
   error: [Error!]
   
-  # Create date
+  # Date created
   createdAt: DateTime!
   
-  # Update date
+  # Date updated
   updatedAt: DateTime!
 }

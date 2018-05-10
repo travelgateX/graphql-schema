@@ -605,7 +605,7 @@ This information is mandatory.`
 
 ✅  Field `Contact.email` description changed from `Email.` to `Email`
 
-✅  Description `Location` on type `Location` has changed to `Indicates the location of the hotel.`
+✅  Description `Location` on type `Location` has changed to `Indicates the location of the hotel`
 
 ✅  Field `Location.country` description changed from `Country ISO Code` to `Country where is the Hotel.`
 
@@ -645,7 +645,7 @@ This information is mandatory.`
 
 ✅  Field `HotelData.contact` description changed from `Contact information.` to `Contact cotains information about hotel contact.`
 
-✅  Field `HotelData.location` description changed from `` to `Indicates the location of the hotel.`
+✅  Field `HotelData.location` description changed from `` to `Indicates the location of the hotel`
 
 ✅  Field `HotelData.amenities` description changed from `` to `Amenities`
 

@@ -24,7 +24,7 @@ type HotelData {
   # Indicates that the Hotel has an Exclusive Deal.
   exclusiveDeal: Boolean!
   
-  # Indicates the location of the hotel.
+  # Indicates the location of the hotel
   location: Location!
   
   # Contact cotains information about hotel contact.

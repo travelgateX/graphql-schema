@@ -9,7 +9,7 @@ type Media {
   # Indicates the type of the media.
   type: ApplicationAreaType!
   
-  # Update date.
+  # Date updated.
   updatedAt: DateTime!
   
   # Url.
