@@ -2,11 +2,11 @@
 # You must preload the other fields in our system by complete the fields absents.
 input HotelCriteriaSearchInput {
   # Check-in date for the booking.
-  # Format: yyyy-MM-dd
+  # Format: YYYY-MM-DD
   checkIn: Date!
   
   # Check-out, date for the booking.
-  # Format: yyyy-MM-dd
+  # Format: YYYY-MM-DD
   checkOut: Date!
   
   # Contains the list of hotels's ID.
