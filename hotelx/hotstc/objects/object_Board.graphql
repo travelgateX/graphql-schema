@@ -1,17 +1,17 @@
-# Board Type
+# Board type.
 type Board implements Node {
   # Board ID
   code: ID!
-  
+
   # Board data
   boardData: BoardData
-  
+
   # Errors that abort services
   error: [Error!]
-  
+
   # Date created
   createdAt: DateTime!
-  
+
   # Date updated
   updatedAt: DateTime!
 }
