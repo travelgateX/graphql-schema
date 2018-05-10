@@ -2,10 +2,10 @@
 type CategoryData {
   # Internal code for checking availability
   code: ID!
-  
-  # Code of the hotel in the Supplier selected
+
+  # Code of the hotel based on the Supplier selected
   categoryCode: String!
-  
+
   # Label
   texts(languages: [Language!]): [Text!]
 }
