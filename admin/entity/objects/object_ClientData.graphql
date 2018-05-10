@@ -3,6 +3,6 @@ type ClientData {
   code: ID!
   # Client complete name
   name: String!
-  # Indicates whether a Client is active
+  # Indicates whether a Client is active or inactive
   isActive: Boolean!
 }
