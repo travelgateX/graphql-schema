@@ -24,8 +24,8 @@ https://github.com/travelgateX/graphql-mocker
     ```
 
 4. Check yours changes
-5. Commit & Push in your branch
-6. Merge Request to master, close issue & del branch
+5. Commit and Push in your branch
+6. Merge Request to master, close issue and del branch
 
 
 ## Introspection Query
