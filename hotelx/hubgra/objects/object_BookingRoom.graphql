@@ -1,11 +1,11 @@
 type BookingRoom {
-  # ID reference to the occupancy.
+  # ID reference to the occupancy
   occupancyRefId: Int
   
-  # Indicates the room code.
+  # Indicates the room code
   code: String
   
-  # Description about the room.
+  # Description about the room
   description: String
   
   # Total price for all days.
