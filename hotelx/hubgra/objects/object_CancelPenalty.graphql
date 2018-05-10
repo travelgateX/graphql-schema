@@ -1,14 +1,14 @@
-# Contains information about a cancel penalty.
+# Contains information for cancellation penalities..
 type CancelPenalty {
-  # Cancellation fees applicable x number of hours before the check in date.
+  # Cancellation fees applicable X number of hours before the check-in date
   hoursBefore: Int!
   
-  # Type of penalty. This can be Nights, Percent or Import.
+  # Type of penalty; this can be Nights, Percent or Import
   penaltyType: CancelPenaltyType!
   
-  # Currency used in the cancel policy.
+  # Currency used in the cancellation policy
   currency: Currency!
   
-  # Value of the cancel policy.
+  # Value of the cancellation policy
   value: Float!
 }
