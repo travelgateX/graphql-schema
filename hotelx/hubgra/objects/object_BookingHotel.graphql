@@ -20,7 +20,7 @@ type BookingHotel {
   # Code of the board in the context selected.
   boardCode: String
   
-  # List of occupancies of the request.
+  # List of occupancies for the request
   occupancies: [Occupancy!]
   
   # List of rooms.

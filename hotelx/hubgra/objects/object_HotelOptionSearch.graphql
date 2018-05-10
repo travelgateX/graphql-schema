@@ -30,7 +30,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   # The possible values in status in response are Available (OK) or On Request (RQ).
   status: StatusType!
   
-  # List of occupancies of the request.
+  # List of occupancies for the request
   occupancies: [Occupancy!]!
   
   # List of rooms of the option returned.
