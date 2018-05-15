@@ -3,7 +3,7 @@ sudo: false
 node_js:
   - "10.0"
 install:
-  - npm install test
+  - npm install
 
 script:
   - npm test
