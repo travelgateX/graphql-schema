@@ -1,5 +1,5 @@
 ## MapSupplier
-input MappeaXMapSupplierInput {
+input MappeaMapSupplierInput {
   requestId: ID!
   access: ID!
   fileId: Int!

@@ -1,5 +1,5 @@
 ### UploadFile
-input MappeaXUploadFileInput {
+input MappeaUploadFileInput {
   requestId: String!
   fileName: String
   delimiter: String!

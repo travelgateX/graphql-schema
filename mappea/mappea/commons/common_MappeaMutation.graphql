@@ -1,5 +1,5 @@
 extend type MappeaMutation {
-  confirmUpload(input: MappeaXConfirmUploadInput!): OnlyStatusResponse!
-  uploadFile(input: MappeaXUploadFileInput!): UploadFileResponse!
-  mapSupplier(input: MappeaXMapSupplierInput!): OnlyStatusResponse!
+  confirmUpload(input: MappeaConfirmUploadInput!): OnlyStatusResponse!
+  uploadFile(input: MappeaUploadFileInput!): UploadFileResponse!
+  mapSupplier(input: MappeaMapSupplierInput!): OnlyStatusResponse!
 }

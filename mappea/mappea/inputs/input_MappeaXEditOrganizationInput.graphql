@@ -1,5 +1,5 @@
 ## EditOrganization
-input MappeaXEditOrganizationInput {
+input MappeaEditOrganizationInput {
   name: String!
   isActive : Boolean
   isTest: Boolean

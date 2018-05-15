@@ -1,5 +1,5 @@
 ## GetMappeaStats
-input MappeaXGetMappeaStatsInput {
+input MappeaGetMappeaStatsInput {
   organizationName: String!
   supplierMapped: String
 }

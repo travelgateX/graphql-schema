@@ -1,5 +1,5 @@
 ### ConfirmUpload
-input MappeaXConfirmUploadInput {
+input MappeaConfirmUploadInput {
   fileId: Int!
-  suppliers: [MappeaXSupplierConfirmedInput!]!
+  suppliers: [MappeaSupplierConfirmedInput!]!
 }
