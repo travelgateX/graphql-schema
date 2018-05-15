@@ -1,8 +1,8 @@
 # Additional information about the option
 type AddOns {
-    # Extra information from the distribution layer
-    distribute: JSON @deprecated(reason: "You can find it in distribution AddOn")
-
-    # Extra information from the distribution layer
-    distribution: [AddOn!]
+  # Extra information from the distribution layer
+  distribute: JSON @deprecated(reason: "You can find it in distribution AddOn")
+  
+  # Extra information from the distribution layer
+  distribution: [AddOn!]
 }
