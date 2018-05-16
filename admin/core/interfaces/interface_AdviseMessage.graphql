@@ -1,4 +1,4 @@
-interface AdviseMessage {
+nterface AdviseMessage {
   # TODO:
   # Error code: The following codes can be returned:
   # XXX: XXXXXXXXX XXXXXX
