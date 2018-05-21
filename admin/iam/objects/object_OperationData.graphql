@@ -1,6 +1,7 @@
 type OperationData{
   id: ID!
   code: ID!
+  label: String
   types: [OperationType!]!
   api: API
 }

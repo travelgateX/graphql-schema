@@ -1,7 +1,7 @@
 type RoleData{
   id: ID!
   code: ID!
-  label: String!
+  label: String
   isCreate: Boolean!
   isRead: Boolean!
   isUpdate: Boolean!

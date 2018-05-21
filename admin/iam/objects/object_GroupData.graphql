@@ -1,6 +1,7 @@
 type GroupData implements GroupCommonData{
   id: ID!
   code: ID!
+  label: String
   type: GroupType!
   info: String
   parent: Group
