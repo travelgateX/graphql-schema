@@ -6,7 +6,7 @@ schemaMock.graphql
 ## Ignore Visual Code files
 
 *.vscode
-*.graphql
+merged_schema.graphql
 test
 
 # Logs
