@@ -1,0 +1,3 @@
+enum OrganizationTemplate {
+  ORGANIZATION_DEFAULT
+}
