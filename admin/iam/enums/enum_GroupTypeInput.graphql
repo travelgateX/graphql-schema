@@ -1,0 +1,9 @@
+enum GroupTypeInput{
+  GROUP
+  PROFILE
+  TEAM
+  FOLDER
+  PRODUCT
+  RESOURCE
+  SPECIFIC_RESOURCE
+}
