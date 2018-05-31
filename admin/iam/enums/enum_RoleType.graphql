@@ -1,0 +1,7 @@
+enum RoleType {
+  VIEWER
+  EDITOR
+  ADMIN
+  EXECUTOR
+  SPECIFIC
+}
