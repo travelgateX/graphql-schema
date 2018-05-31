@@ -8,7 +8,7 @@ extend type AdminMutation{
   # Update member additions or remove roles
   updateMember(member: UpdateMemberInput!): Member!
   # Update group additions or remove APIs
-  updateGroup(group: UpdateGroupInput!): Group!
+  updateGroup(group: UpdateGroupInput!,method: Method!): Group!
   # Delete a member from specific group
   deleteMember(member: [DeleteMemberInput!]!): Member!
   # Delete group and members from this group

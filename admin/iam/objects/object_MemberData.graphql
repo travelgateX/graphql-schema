@@ -4,5 +4,5 @@ type MemberData {
   label: String
   type: MemberType!
   groups(codes:[ID!],type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection
-  roles(codes: [ID!], first: Int, last: Int, before: String, after:String): RoleConnection
+  roles(codes: [ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
 }

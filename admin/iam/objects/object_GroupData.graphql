@@ -5,15 +5,17 @@ type GroupData implements GroupCommonData{
   type: GroupType!
   info: String
   parent: Group
-  children(codes: [ID!], first: Int, last: Int, before: String, after:String): GroupConnection
+  children(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
   owner: Member
   isEditable: Boolean!
   productId: Int
   resourceId: Int
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
+  managedGroups(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
   allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
   suppliers(codes:[ID!], accessID:[ID!], first: Int, last: Int, before: String, after:String): SupplierConnection
   clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
+  roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
 }

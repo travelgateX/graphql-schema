@@ -1,6 +1,6 @@
 input CreateGroupInput{
-  code: String!
-  type: GroupType!
+  group: ID!
+  type: GroupTypeInput!
   info: String
   parent: ID!
   template: Template

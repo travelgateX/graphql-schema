@@ -1,7 +1,8 @@
 type ResourceData{
   id: ID!
   code: ID!
+  isEditable: Boolean!
   label: String
   apis(codes: [ID!],first: Int, last: Int, before: String, after:String): APIConnection
-  roles(codes: [ID!],first: Int, last: Int, before: String, after:String): RoleConnection
+  roles(codes: [ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
 }

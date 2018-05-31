@@ -1,6 +1,7 @@
 type APIData{
   id: ID!
   code: ID!
+  isEditable: Boolean!
   label: String
   groups(codes:[ID!],type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection
   resources(codes: [ID!], first: Int, last: Int, before: String, after:String): ResourceConnection

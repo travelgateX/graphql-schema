@@ -1,6 +1,5 @@
 input UpdateGroupInput{
-  api: String!
-  code: String!
+  api: ID!
+  group: ID!
   info: String
-  method: Method!
 }
