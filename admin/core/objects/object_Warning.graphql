@@ -1,11 +1,11 @@
 # Application warnings
-type Warning implements AdviseMessage {
+type Warning {
   # Warning code
   code: String!
-  
+
   # Warning type
   type: String!
-  
+
   # Warning description
   description : String!
 }
