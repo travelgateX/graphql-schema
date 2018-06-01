@@ -1,14 +1,14 @@
 interface AdviseMessage {
-  # TODO:
-  # Error code: The following codes can be returned:
-  # XXX: XXXXXXXXX XXXXXX
-  code: String!
-  
-  # TODO:
+  # AM code: The following codes can be returned:
+  code: ID!
   # Error type: The following types are valid:
-  # XXX: asd asdñoajskd lña ld
-  type: String!
-  
+  type: String! @deprecated(reason: "deprecated from 2018-06-01.")
   # Error description
   description: String!
+  # Indicates the level of importance of the message: Posible values ERROR WARN INFO
+  level: AdviseMessageLevel!
+  # Specify the external message.
+  external: ExternalMessage
+  # Identifier to be able to investigate the cause of the error
+  correlationID: ID!
 }
