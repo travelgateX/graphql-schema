@@ -9,8 +9,11 @@ input HotelCriteriaSearchInput {
   # Format: YYYY-MM-DD
   checkOut: Date!
   
-  # Contains the list of hotels's ID
-  hotels: [String!]!
+  # Hotel Codes.
+	hotels: [String!]
+
+	# Destination codes.
+	destinations: [String!]
   
   # For multi-room bookings, this array will contain multiple elements (rooms).
   # For each room you have to specify its own occupancy.
