@@ -31,4 +31,9 @@ input HotelSettingsInput {
   
   # Array of plugins to execute.
   plugins: [PluginStepInput!]
+
+  # Use test access
+  testMode: Boolean
+
+
 }
