@@ -1,0 +1,6 @@
+type ExternalMessage	{
+  # External Code
+  code: String
+  # External Message
+  message: String!
+}
