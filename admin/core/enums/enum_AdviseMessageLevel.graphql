@@ -1,0 +1,8 @@
+enum AdviseMessageLevel {
+  # Waringn message.
+  WARN
+  # Error message.
+  ERROR
+  # Info message.
+  INFO
+}
