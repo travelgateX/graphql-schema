@@ -1,3 +1,127 @@
+## 2018-06-01
+
+🛑  Input field `member` was added to input object type `DeleteMemberInput`
+
+🛑  Input field `code` was removed from input object type `DeleteMemberInput`
+
+🛑  Input field `UpdateGroupInput.api` changed type from `String!` to `ID!`
+
+🛑  Input field `group` was added to input object type `UpdateGroupInput`
+
+🛑  Input field `method` was removed from input object type `UpdateGroupInput`
+
+🛑  Input field `code` was removed from input object type `UpdateGroupInput`
+
+🛑  Input field `UpdateMemberInput.group` changed type from `String!` to `ID!`
+
+🛑  Input field `resources` was added to input object type `UpdateMemberInput`
+
+🛑  Input field `role` was added to input object type `UpdateMemberInput`
+
+🛑  Input field `member` was added to input object type `UpdateMemberInput`
+
+🛑  Input field `resource` was removed from input object type `UpdateMemberInput`
+
+🛑  Input field `roles` was removed from input object type `UpdateMemberInput`
+
+🛑  Input field `code` was removed from input object type `UpdateMemberInput`
+
+🛑  Input field `CreateGroupInput.type` changed type from `GroupType!` to `GroupTypeInput!`
+
+🛑  Input field `group` was added to input object type `CreateGroupInput`
+
+🛑  Input field `code` was removed from input object type `CreateGroupInput`
+
+🛑  Input field `CreateMemberInput.group` changed type from `String!` to `ID!`
+
+🛑  Input field `resources` was added to input object type `CreateMemberInput`
+
+🛑  Input field `role` was added to input object type `CreateMemberInput`
+
+🛑  Input field `resource` was removed from input object type `CreateMemberInput`
+
+🛑  Input field `roles` was removed from input object type `CreateMemberInput`
+
+🛑  Input field `code` was removed from input object type `CreateMemberInput`
+
+🛑  Input field `CreateOrganizationInput.user` changed type from `String!` to `ID!`
+
+🛑  Input field `organization` was added to input object type `CreateOrganizationInput`
+
+🛑  Input field `code` was removed from input object type `CreateOrganizationInput`
+
+🛑  Argument `method: Method!` added to field `AdminMutation.updateGroup`
+
+🛑  `Warning` object type no longer implements `AdviseMessage` interface
+
+🛑  Field `AdviseMessage.code` changed type from `String!` to `ID!`
+
+🛑  `Error` object type no longer implements `AdviseMessage` interface
+
+🛑  Field `error` was removed from object type `Node`
+
+✅  Input field `member` was added to input object type `CreateMemberInput`
+
+✅  Input field `testMode` was added to input object type `HotelSettingsInput`
+
+✅  Input field `HotelCriteriaSearchInput.hotels` changed type from `[String!]!` to `[String!]`
+
+✅  Input field `HotelCriteriaSearchInput.hotels` description changed from `Contains the list of hotels's ID` to `Hotel Codes.`
+
+✅  Input field `destinations` was added to input object type `HotelCriteriaSearchInput`
+
+✅  Field `isEditable` was added to object type `APIData`
+
+✅  Argument `type: RoleType` added to field `ResourceData.roles`
+
+✅  Field `isEditable` was added to object type `ResourceData`
+
+✅  Field `isEditable` was added to object type `RoleData`
+
+✅  Field `type` was added to object type `RoleData`
+
+✅  Argument `type: RoleType` added to field `MemberData.roles`
+
+✅  Argument `type: GroupType` added to field `GroupData.children`
+
+✅  Field `roles` was added to object type `GroupData`
+
+✅  Field `managedGroups` was added to object type `GroupData`
+
+✅  Deprecation reason on field `AdviseMessage.type` has changed from `` to `deprecated from 2018-06-01.`
+
+✅  Field `AdviseMessage.type` description changed from `TODO:
+
+Error type: The following types are valid:
+
+XXX: asd asdñoajskd lña ld` to `Error type: The following types are valid:`
+
+✅  Field `AdviseMessage.code` description changed from `TODO:
+
+Error code: The following codes can be returned:
+
+XXX: XXXXXXXXX XXXXXX` to `AM code: The following codes can be returned:`
+
+✅  Field `correlationID` was added to object type `AdviseMessage`
+
+✅  Field `external` was added to object type `AdviseMessage`
+
+✅  Field `level` was added to object type `AdviseMessage`
+
+✅  Argument `type: RoleType` added to field `AdminQuery.roles`
+
+✅  Deprecation reason on field `Query.mapping` has changed from `deprecated from 2017-11-21. You can find it in query at Admin` to `deprecated from 2017-11-21. You can find it in query at HotelX`
+
+✅  Deprecation reason on field `Query.defaultSettings` has changed from `deprecated from 2017-11-21. You can find it in query at Admin` to `deprecated from 2017-11-21. You can find it in query at HotelX`
+
+✅  Type `ExternalMessage` was added
+
+✅  Type `AdviseMessageLevel` was added
+
+✅  Type `GroupTypeInput` was added
+
+✅  Type `RoleType` was added
+
 ## 2018-05-21
 
 🛑  Input field `AccessInput.name` changed type from `String` to `String!`
