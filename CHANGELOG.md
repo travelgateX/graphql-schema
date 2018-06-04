@@ -1,3 +1,65 @@
+## 2018-05-16
+
+🛑  Type for argument `input` on field `MappeaMutation.mapSupplier` changed from `MappeaXMapSupplierInput!` to `MappeaMapSupplierInput!`
+
+🛑  Type for argument `input` on field `MappeaMutation.uploadFile` changed from `MappeaXUploadFileInput!` to `MappeaUploadFileInput!`
+
+🛑  Type for argument `input` on field `MappeaMutation.confirmUpload` changed from `MappeaXConfirmUploadInput!` to `MappeaConfirmUploadInput!`
+
+🛑  Type for argument `input` on field `MappeaQuery.getMappeaStats` changed from `MappeaXGetMappeaStatsInput!` to `MappeaGetMappeaStatsInput!`
+
+🛑  Field `RoleData.label` changed type from `String!` to `String`
+
+🛑  Type `MappeaXEditOrganizationInput` was removed
+
+🛑  Type `MappeaXAddOrganizationInput` was removed
+
+🛑  Type `MappeaXMapSupplierInput` was removed
+
+🛑  Type `MappeaXUploadFileInput` was removed
+
+🛑  Type `MappeaXSupplierConfirmedInput` was removed
+
+🛑  Type `MappeaXConfirmUploadInput` was removed
+
+🛑  Type `MappeaXGetMappeaStatsInput` was removed
+
+✅  Input field `AccessInput.name` changed type from `String!` to `String`
+
+✅  Field `deleteClientFromGroup` was added to object type `AdminMutation`
+
+✅  Field `grantClientToGroup` was added to object type `AdminMutation`
+
+✅  Field `label` was added to object type `ProductData`
+
+✅  Field `label` was added to object type `OperationData`
+
+✅  Field `label` was added to object type `APIData`
+
+✅  Field `label` was added to object type `ResourceData`
+
+✅  Field `label` was added to object type `MemberData`
+
+✅  Field `label` was added to object type `GroupData`
+
+✅  Field `label` was added to object type `GroupCommonData`
+
+✅  Field `label` was added to object type `OrganizationData`
+
+✅  Type `MappeaEditOrganizationInput` was added
+
+✅  Type `MappeaAddOrganizationInput` was added
+
+✅  Type `MappeaMapSupplierInput` was added
+
+✅  Type `MappeaUploadFileInput` was added
+
+✅  Type `MappeaSupplierConfirmedInput` was added
+
+✅  Type `MappeaConfirmUploadInput` was added
+
+✅  Type `MappeaGetMappeaStatsInput` was added
+
 ## 2018-05-03
 
 ✅  Field `asserts` was added to object type `StatsInfo`
