@@ -1,7 +1,7 @@
 type Query{
   admin: AdminQuery
   hotelX: HotelXQuery
-  stats: StatsQuery
   mappea: MappeaQuery
-
+  paymentX: PaymentXQuery
+  stats: StatsQuery
 }
