@@ -1,0 +1,6 @@
+type PointOfSaleData {
+  # POS Identifier
+  code: ID!
+  # POS Name
+  name: String
+}
