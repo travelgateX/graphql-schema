@@ -1,5 +1,6 @@
 # CategoryList definition
 type CategoryConnection {
   edges: [CategoryEdge]
+  # Indicates info about page
   pageInfo: PageInfo!
 }

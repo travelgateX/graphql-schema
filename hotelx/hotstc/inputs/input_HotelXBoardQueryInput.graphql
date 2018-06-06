@@ -1,4 +1,6 @@
 input HotelXBoardQueryInput {
+  # Indicates the board codes that you want filter.
   boardCodes: [String!]
+  # Indicates the access that you want use.
   access: ID!
 }

@@ -32,8 +32,6 @@ input HotelSettingsInput {
   # Array of plugins to execute.
   plugins: [PluginStepInput!]
 
-  # Use test access
+  # This flag allows only the accesses checked as test. By default is production.
   testMode: Boolean
-
-
 }
