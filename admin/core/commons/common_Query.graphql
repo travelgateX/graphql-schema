@@ -1,7 +1,12 @@
+# The query root of TravelgateX's GraphQL interface.
 type Query{
+  # The admin query root of TravelgateX's for implementing GraphQL mutations.
   admin: AdminQuery
+  # The hotelX product query root for implementing GraphQL mutations.
   hotelX: HotelXQuery
+  # The Stats product query root for implementing GraphQL mutations.
   stats: StatsQuery
+  # The Mappea product query root for implementing GraphQL mutations.
   mappea: MappeaQuery
 
 }

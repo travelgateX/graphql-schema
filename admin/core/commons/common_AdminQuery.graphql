@@ -1,3 +1,4 @@
+# The admin query root of TravelgateX's GraphQL interface.
 type AdminQuery{
   a:Boolean
 }
