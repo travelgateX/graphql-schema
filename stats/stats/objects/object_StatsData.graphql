@@ -1,12 +1,14 @@
 type StatsData{
+  # Owner access
   access: Access!
+  # Owner client
   client: Client!
   # From date of search
   from: DateTime!
   # To date of search
   to: DateTime!
-  # Details of look to quote and look to book.
+  # Ratios details
   ratios: Ratios!
-  
+  # Stats information per operation
   operations(type:[ServiceOperationType!]):[OperationDetailed!]
 }
