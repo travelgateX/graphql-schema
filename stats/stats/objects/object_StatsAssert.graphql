@@ -1,6 +1,9 @@
 # Assert of an specific error
 type StatsAssert {
+  # Start time of the request
   startTime: DateTime!
+  # Execution time of the request
   execTime: Int!
+  # Endpoint to download the full XML of the request with its response
   url: URI!
 }

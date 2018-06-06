@@ -1,14 +1,12 @@
 # The service used to access the stats of every connection that uses the HUB
-type Stats implements Node{
+type Stats implements Node {
   code: ID! #GUID
-  
+  #
   statsData: StatsData
-  # Errors that abort services
+  # Errors that will lead the service to abort
   error: [Error!]
-  
-  # Date created
+  # Create date
   createdAt: DateTime!
-  
-  # Date updated
+  # Update date
   updatedAt: DateTime!
 }

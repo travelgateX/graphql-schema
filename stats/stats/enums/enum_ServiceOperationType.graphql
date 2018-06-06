@@ -1,7 +1,11 @@
 enum ServiceOperationType {
   ALL
+  # When the type of the request is Search
   SEARCH
+  # When the type of the request is Quote
   QUOTE
+  # When the type of the request is Booking
   BOOKING
+  # When the type of the request is Other
   OTHER
 }
