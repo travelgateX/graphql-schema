@@ -1,12 +1,12 @@
 # Details of an specific error
 type StatsInfo {
   code: ID!
+  # Stats type
   type: StatsInfoTypes!
-  # Total hits.
+  # Total hits
   hits: Int!
-  # Total time (ms)
+  # Average time (ms)
   time: Int!
-
+  # Details about errors.
   asserts:[StatsAssert!]
-
 }

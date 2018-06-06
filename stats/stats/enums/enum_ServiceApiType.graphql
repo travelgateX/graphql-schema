@@ -1,11 +1,19 @@
 # Services Api available.
 enum ServiceApiType {
+  # When the request has been done against the Hotel API
   HOTEL
+  # When the request has been done against the Transportation API
   TRANSPORTATION
+  # When the request has been done against the Car API
   CAR
+  # When the request has been done against the Transfers API
   TRANSFERS
+  # When the request has been done against the Activities API
   ACTIVITIES
+  # When the request has been done against the Virtual Account API
   VIRTUALACCOUNT
+  # When the request has been done against the Payment API
   PAYMENT
+  # When the request has been done against the Package API
   PACKAGE
 }

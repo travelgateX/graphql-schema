@@ -1,9 +1,15 @@
 enum StatsInfoTypes{
   ALL
+  # Stats in OK state
   OK
+  # Stats in NOK state caused by integration issues
   INTEGRATION
+  # Stats in NOK state caused by supplier issues
   PROVIDER
+  # Stats in NOK state caused by Timeout
   COMMUNICATION
+  # Stats in NOK state caused by HUB issues
   HUB
+  # Stats in NOK state caused by other causes
   OTHER
 }
