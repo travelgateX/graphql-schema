@@ -5,17 +5,26 @@ type GroupData implements GroupCommonData{
   type: GroupType!
   info: String
   parent: Group
+  # Only responses children.(non-hierarchically)
   children(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
   owner: Member
   isEditable: Boolean!
   productId: Int
   resourceId: Int
+  # Only responses members in this group
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
+  #APIs assigned to this group. Products have APIs.
   apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
+  # Responses all groups in its group's childrens (hierarchically),
   managedGroups(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
+  # Response all members in this group's childrens (hierarchically),
   allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
+  # Access resources in a group
   accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
+  # Supplier resources in a group
   suppliers(codes:[ID!], accessID:[ID!], first: Int, last: Int, before: String, after:String): SupplierConnection
+  # Clients resources in a group
   clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
+  # You can grant roles to members, which define the roles catalog for a group.
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
 }

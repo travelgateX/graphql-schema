@@ -1,3 +1,4 @@
+# Groups are organized hierarchically.
 type Group implements Node{
   code: ID!
   groupData: GroupData

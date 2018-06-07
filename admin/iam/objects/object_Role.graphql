@@ -1,3 +1,4 @@
+# Permissions determine what operations are allowed on a resource
 type Role implements Node{
   code: ID!
   roleData: RoleData
