@@ -3,4 +3,5 @@ type Mutation {
   admin: AdminMutation
   hotelX: HotelXMutation
   mappea: MappeaMutation
+  paymentX: PaymentXMutation
 }

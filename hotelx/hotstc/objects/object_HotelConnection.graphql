@@ -2,5 +2,6 @@
 type HotelConnection {
   edges: [HotelEdge]
   token: String
+  # Indicates info about page
   pageInfo: PageInfo!
 }

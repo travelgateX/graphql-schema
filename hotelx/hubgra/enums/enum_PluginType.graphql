@@ -1,4 +1,4 @@
-# Plugin Type
+# Plugin Type. https://docs.travelgatex.com/hotelx/plugins/overview/
 enum PluginType {
   # PRE_STEP is the first plugin that a step will execute, allows a full range of operations:
   # split arrays, join arrays, modify object values, add or remove object instances

@@ -1,4 +1,4 @@
-# Plugin Step Type
+# Plugin Step Type. https://docs.travelgatex.com/hotelx/plugins/overview/
 enum PluginStepType {
   # Plugins executed after Buyer requests message to HotelX
   REQUEST

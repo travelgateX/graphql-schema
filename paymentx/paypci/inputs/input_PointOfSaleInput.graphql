@@ -1,0 +1,6 @@
+input PointOfSaleInput {
+  # POS Identifier
+  code: ID!
+  # POS Name
+  name: String!
+}

@@ -1,4 +1,6 @@
 input HotelXCategoryQueryInput {
+  # Indicates the category codes that you want filter.
   categoryCodes: [String!]
+  # Indicates the access that you want use.
   access: ID!
 }

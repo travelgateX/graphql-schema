@@ -1,5 +1,5 @@
 interface Response {
-  # Application stats in string format
+  # Application stats
   stats(token: String!): StatsRequest
   
   # Data sent and received in the supplier’s original format.

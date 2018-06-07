@@ -1,3 +1,4 @@
+# Indicates what type of value is the markup, by percentage or is an import.
 enum MarkupRuleType {
   # Indicates the percentage applied by a rule.
   PERCENT

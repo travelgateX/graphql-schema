@@ -1,0 +1,4 @@
+input PaymentXStoreCardInput {
+  bookingInfo: PaymentXBookingInfoInput!
+  card: PaymentCardInput!
+}
