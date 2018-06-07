@@ -1,7 +1,10 @@
 type Operation implements Node{
   code: ID!
-  error: [Error!]
   operationData: OperationData
+  # Errors that abort services
+  error: [Error!]
+  # Date created
   createdAt: DateTime!
+  # Date updated
   updatedAt: DateTime!
 }

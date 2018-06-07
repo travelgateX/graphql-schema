@@ -1,7 +1,10 @@
 type Group implements Node{
   code: ID!
-  error: [Error!]
   groupData: GroupData
+  # Errors that abort services
+  error: [Error!]
+  # Date created
   createdAt: DateTime!
+  # Date updated
   updatedAt: DateTime!
 }

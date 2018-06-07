@@ -1,8 +1,11 @@
 type Member implements Node{
   code: ID!
   memberData: MemberData
-  error:   [Error!]
+  # Errors that abort services
   isActive: Boolean!
+  error:   [Error!]
+  # Date created
   createdAt: DateTime!
+  # Date updated
   updatedAt: DateTime!
 }

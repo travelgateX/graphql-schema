@@ -1,7 +1,10 @@
 type Organization implements Node {
   code: ID!
   organizationData: OrganizationData
+  # Errors that abort services
   error: [Error!]
+  # Date created
   createdAt: DateTime!
+  # Date updated
   updatedAt: DateTime!
 }
