@@ -1,6 +1,9 @@
-# Details of look to quote and look to book.
+# Ratios details
 type Ratios {
+  # Searches needed to do a quote
   lookToQuote: Int!
+  # Searches needed to do a booking
   lookToBook: Int!
+  # Quotes needed to do a booking
   quoteToBook: Int!
 }
