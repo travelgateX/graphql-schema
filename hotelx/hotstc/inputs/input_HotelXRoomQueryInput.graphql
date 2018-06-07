@@ -1,4 +1,6 @@
 input HotelXRoomQueryInput {
+  # Indicates the room codes that you want filter.
   roomCodes: [String!]
+  # Indicates the access that you want use.
   access: ID!
 }

@@ -1,4 +1,4 @@
-# LList of business rules for filtering options based on your interests.
+# List of business rules for filtering options based on your interests.
 type BusinessRules {
   # Options quota per availability; numbers of options based on availability
   optionsQuota: Int!

@@ -2,5 +2,6 @@
 type DestinationConnection {
   edges: [DestinationEdge]
   token: String!
+  # Indicates info about page
   pageInfo: PageInfo!
 }
