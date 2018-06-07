@@ -1,0 +1,14 @@
+type StoredCard implements Node{
+  code: ID!
+  
+  storedCardData: StoredCardData
+  
+  # Create date
+  createdAt: DateTime!
+  
+  # Update date
+  updatedAt: DateTime!
+  
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

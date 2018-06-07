@@ -1,0 +1,4 @@
+type PointOfSaleConnection {
+  edges: [PointOfSaleEdge]
+  pageInfo: PageInfo!
+}

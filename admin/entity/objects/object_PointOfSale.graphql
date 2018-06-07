@@ -1,0 +1,13 @@
+type PointOfSale implements Node{
+  code: ID!
+  pointOfSaleData: PointOfSaleData
+
+  # Create date
+  createdAt: DateTime!
+
+  # Update date
+  updatedAt: DateTime!
+
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

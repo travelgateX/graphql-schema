@@ -1,0 +1,4 @@
+type StoredCardConnection{
+  edges: [StoredCardEdge]
+  pageInfo: PageInfo!
+}

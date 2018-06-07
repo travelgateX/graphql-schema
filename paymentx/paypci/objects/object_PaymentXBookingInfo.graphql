@@ -1,0 +1,17 @@
+type PaymentXBookingInfo{ 
+  
+  # Responsible organization of the booked property.
+  organization : String!
+  
+  pointOfSale : PointOfSale!
+  
+  # Indicates the referece of the booking
+  bookingReference: String!
+  
+  # Check-out, booking date Format: YYYY-MM-DD
+  checkOut : Date!
+  
+  # Check-in, booking date Format: YYYY-MM-DD
+  checkIn : Date!
+  
+}

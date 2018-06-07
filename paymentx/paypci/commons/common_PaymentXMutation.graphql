@@ -1,0 +1,7 @@
+# A Mutation is an entry point into the object graph.
+extend type PaymentXMutation {
+  # Store Card
+  storeCard(input: PaymentXStoreCardInput!): StoredCard!
+  # Delete Card
+  deleteCard(input: PaymentXBookingInfoDeleteInput!): StoredCard!
+}
