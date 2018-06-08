@@ -1,7 +1,12 @@
 enum RoleType {
+  # Allows a User to make Queries of resources, but not change any resource data
   VIEWER
+  # Allows a User to make Mutations (changes) to the resource data
   EDITOR
+  # Allows a User to make All (changes) to the resource
   ADMIN
+  # Allows a User to make use of reources only for extecutations queries.
   EXECUTOR
+  # Allows a User to make othen kind of operation with the resource. Defined by API.
   SPECIFIC
 }

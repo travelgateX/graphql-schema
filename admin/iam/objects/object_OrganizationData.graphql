@@ -4,14 +4,21 @@ type OrganizationData implements GroupCommonData {
   label: String
   type: GroupType!
   info: String
+  # Only responses folders.(non-hierarchically)
   children(codes: [ID!], first: Int, last: Int, before: String, after:String): GroupConnection
   owner: Member
   isEditable: Boolean!
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
+  #APIs assigned to this group. Products have APIs.
   apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
+  # Products asign to a organization
   products(codes: [ID!], first: Int, last: Int, before: String, after:String): ProductConnection
+  # Response all members in this group's childrens (hierarchically)
   allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
+  # Access resources in a organization
   accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
+  # Supplier resources in a organization
   suppliers(codes:[ID!], accessID:[ID!], first: Int, last: Int, before: String, after:String): SupplierConnection
+  # Clients resources in a organization
   clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
 }

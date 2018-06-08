@@ -1,7 +1,11 @@
+# Resources are those used in APIs and Products.
 type Resource implements Node{
   code: ID!
-  error: [Error!]
   resourceData: ResourceData
+  # Errors that abort services
+  error: [Error!]
+  # Date created
   createdAt: DateTime!
+  # Date updated
   updatedAt: DateTime!
 }

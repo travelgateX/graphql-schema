@@ -4,13 +4,22 @@ type RoleData{
   type: RoleType!
   isEditable: Boolean!
   label: String
+  # Has resource Create permission?
   isCreate: Boolean!
+  # Has resource Create permission?
   isRead: Boolean!
+  # Has resource Update permission?
   isUpdate: Boolean!
+  # Has resource Delete permission?
   isDelete: Boolean!
+  # Is role enabled or not?
   isEnable: Boolean!
+  # Has resource Executable permission?
   isExecutable: Boolean!
+  # Has any other non-basic permission/s?
   isSpecial: Boolean!
+  # Special permission
   special: String
+  # Resources used
   resources(codes:[ID!],first: Int, last: Int, before: String, after:String): ResourceConnection
 }

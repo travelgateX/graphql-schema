@@ -1,8 +1,14 @@
+# You grant access to members which can be either:
+# Users: A developer, administrator or any other person from your Organization who interacts with the TravelgateX Platform. An email address can be used as the identity of a User.
+# Service Accounts: An application (Client) instead of an individual User. If you prefer, you can create as many Service Accounts as needed to represent different logical components of your application.
 type Member implements Node{
   code: ID!
   memberData: MemberData
-  error:   [Error!]
+  # Errors that abort services
   isActive: Boolean!
+  error:   [Error!]
+  # Date created
   createdAt: DateTime!
+  # Date updated
   updatedAt: DateTime!
 }

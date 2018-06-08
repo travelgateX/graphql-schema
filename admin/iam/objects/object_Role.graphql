@@ -1,7 +1,11 @@
+# Permissions determine what operations are allowed on a resource
 type Role implements Node{
   code: ID!
-  error: [Error!]
   roleData: RoleData
+  # Errors that abort services
+  error: [Error!]
+  # Date created
   createdAt: DateTime!
+  # Date updated
   updatedAt: DateTime!
 }

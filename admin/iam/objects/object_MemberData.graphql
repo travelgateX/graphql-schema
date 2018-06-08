@@ -2,7 +2,10 @@ type MemberData {
   id: ID!
   code: ID!
   label: String
+  # Member Type
   type: MemberType!
+  # which groups the member is in?
   groups(codes:[ID!],type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection
+  # which roles the member has in?
   roles(codes: [ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
 }
