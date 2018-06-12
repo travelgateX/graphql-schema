@@ -8,4 +8,6 @@ extend type AdminQuery {
   clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
   # Obtain a ServiceAPI
   serviceApi(filter: ServiceApiFilter): ServiceApi
+  # Obtain all Points of Sale for the filters
+  pointsOfSale(filter: PointOfSaleFilter): PointOfSaleConnection
 }
