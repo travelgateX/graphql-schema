@@ -1,11 +1,11 @@
-+++
-  title: "Reference",
-  pagetitle: "Reference Documentation",
-  description: "Reference Documentation",
-  weight: 2,
-  icon: "fa-book",
-  alwaysopen: false
-+++
+{
+  "title": "Reference",
+  "pagetitle": "Reference Documentation",
+  "description": "Reference Documentation",
+  "weight": 2,
+  "icon": "fa-book",
+  "alwaysopen": false
+}
 Our reference pages explain all aspects of our GraphQL schema.
 
 These pages are divided into the following sections:
@@ -18,7 +18,7 @@ These pages are divided into the following sections:
 
 **Scalars**: A complete list of the types of objects that are available in our schema (such as `String` or `Integer`). By defining scalars we make sure you can only enter or receive data that fits the objects in our data model.
 
-**Interfaces**: An abstract type that includes a certain set of fields that a type must include. For example, our `AdviseMessage` interface requires the error code, error type and error description fields to be used together.  
+**Interfaces**: An abstract type that includes a certain set of fields that a type must include. For example, our `AdviseMessage` interface requires the error code, error type and error description fields to be used together.
 
 **Input Objects**: Similar to an `Interface`, this is an abstract type that includes a set of fields that can be used together when making a query. For example our `HotelCriteriaSearchInput` lists which fields must be completed to filter search results for a hotel booking. In this case, it is mandatory to include checkin and checkout dates, the number of hotel options you want to receive, and the number of rooms you need. There are also non-mandatory fields that can be included such as currency for prices, and the nationality of traveler.
 
