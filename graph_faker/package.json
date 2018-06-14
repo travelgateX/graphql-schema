@@ -1,0 +1,16 @@
+{
+  "name": "graphexplorer",
+  "version": "1.0.0",
+  "description": "Testing graph explorer",
+  "main": "index.js",
+  "keywords": [
+    "graph",
+    "explorer",
+    "schema"
+  ],
+  "author": "ngonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "node-cmd": "^3.0.0"
+  }
+}
