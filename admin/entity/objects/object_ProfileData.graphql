@@ -1,0 +1,9 @@
+# Profile data
+type ProfileData {
+  # Profile Identifier
+  code: ID!
+  # Profile label
+  label: String
+  # Profile Entities (suppliers/clients)
+  entities: EntityConnection
+}

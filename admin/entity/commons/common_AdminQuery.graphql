@@ -10,4 +10,6 @@ extend type AdminQuery {
   serviceApi(filter: ServiceApiFilter): ServiceApi
   # Obtain all Points of Sale for the filters
   pointsOfSale(filter: PointOfSaleFilter): PointOfSaleConnection
+  # Obtain all Profiles for the filters
+  profiles(filter: ProfileFilter): ProfileConnection
 }
