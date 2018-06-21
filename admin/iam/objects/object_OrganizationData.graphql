@@ -5,7 +5,7 @@ type OrganizationData implements GroupCommonData {
   type: GroupType!
   info: String
   # Only responses folders.(non-hierarchically)
-  children(codes: [ID!], first: Int, last: Int, before: String, after:String): GroupConnection
+  children(codes: [ID!], first: Int, last: Int, before: String, after:String, type: GroupType, codeStartsWith: String): GroupConnection
   owner: Member
   isEditable: Boolean!
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection

@@ -6,7 +6,7 @@ type GroupData implements GroupCommonData{
   info: String
   parent: Group
   # Only responses children.(non-hierarchically)
-  children(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
+  children(codes: [ID!], first: Int, last: Int, before: String, after:String, after:String, type: GroupType, codeStartsWith: String): GroupConnection
   owner: Member
   isEditable: Boolean!
   productId: Int
