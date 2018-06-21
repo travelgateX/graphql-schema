@@ -1,0 +1,1 @@
+union EntityData = ClientData | SupplierData | AccessData

@@ -1,0 +1,10 @@
+type Entity implements Node{
+  code: ID!
+  entity: EntityData
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  # Date created
+  createdAt: DateTime!
+  # Date updated
+  updatedAt: DateTime!
+}
