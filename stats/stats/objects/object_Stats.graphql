@@ -1,7 +1,7 @@
 # The service used to access the stats of every connection that uses the HUB
 type Stats implements Node {
   code: ID! #GUID
-  # The data returned by a `Stats` query.
+  # The data returned by a Stats query.
   statsData: StatsData
   # Errors that will lead the service to abort
   error: [Error!]
