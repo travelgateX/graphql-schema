@@ -1,3 +1,4 @@
+# By default: Logical AND on all given filters.
 input HotelXHotelFilter {
   # Logical AND on all given filters.
   AND: [HotelXHotelFilter!]
