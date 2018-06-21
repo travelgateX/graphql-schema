@@ -1,3 +1,412 @@
+## 2018-06-21
+
+🛑  Field `group` was removed from object type `PointOfSaleData`
+
+✅  Field `Stats.statsData` description changed from `GUID
+The data returned by a \`Stats\` query.` to `GUID
+The data returned by a Stats query.`
+
+✅  Argument `codeStartsWith: String` added to field `OrganizationData.children`
+
+✅  Argument `type: GroupType` added to field `OrganizationData.children`
+
+✅  Argument `codeStartsWith: String` added to field `GroupData.children`
+
+✅  Field `profiles` was added to object type `AdminQuery`
+
+✅  Type `ProfileFilter` was added
+
+✅  Type `EntityData` was added
+
+✅  Type `Entity` was added
+
+✅  Type `EntityEdge` was added
+
+✅  Type `EntityConnection` was added
+
+✅  Type `ProfileData` was added
+
+✅  Type `Profile` was added
+
+✅  Type `ProfileEdge` was added
+
+✅  Type `ProfileConnection` was added
+
+## 2018-06-12
+
+🛑  Input field `group` was added to input object type `DeleteGroupInput`
+
+🛑  Input field `code` was removed from input object type `DeleteGroupInput`
+
+🛑  Type `LegacyData` was removed
+
+✅  Description `Input delta price, indicates price variation permitted by the client` on type `DeltaPriceInput` has changed to `Input delta price, indicates price variation permitted by the client
+An error will be returned if the new price does not abide to DeltaPrice. If DeltaPrice is not sent and the integration implements it, we assume that the price range is 0 and the process will continue
+(price is lower or equal to the price showed in valuation).
+This field is implemented if it’s native to the supplier or if another availability/valuation request needs to be done in Reservation. In case the supplier blocks the option in valuation, reservation
+will be done automatically in reservation method.`
+
+✅  Input field `DeltaPriceInput.applyBoth` description changed from `Indicates that the range between valuation price and the new price does not exceed the amount and/or porcentage indicated by the client.` to `Depending on the value of applyBoth:
+applyBoth = false: Indicates that one of the conditions (amount or percentage) has to meet the criteria before reservation.
+applyBoth = true: Indicates that the new price cannot exceed the amount or percentage indicated by the client.`
+
+✅  Deprecation reason on field `HotelXMutation.loadFile` has changed from `` to `deprecated from 2018-06-06`
+
+✅  Description `` on type `AdminMutation` has changed to `The admin query root of TravelgateX's for implementing GraphQL mutations.`
+
+✅  Description `Mutations are operations that change or update data on the server` on type `Mutation` has changed to `The root query for implementing GraphQL mutations. Mutations are operations that change or update data on the server`
+
+✅  Field `paymentX` was added to object type `Mutation`
+
+✅  Description `LList of business rules for filtering options based on your interests.` on type `BusinessRules` has changed to `List of business rules for filtering options based on your interests.`
+
+✅  Description for enum value `ServiceApiType.PACKAGE` changed from `` to `When the request has been done against the Package API`
+
+✅  Description for enum value `ServiceApiType.PAYMENT` changed from `` to `When the request has been done against the Payment API`
+
+✅  Description for enum value `ServiceApiType.VIRTUALACCOUNT` changed from `` to `When the request has been done against the Virtual Account API`
+
+✅  Description for enum value `ServiceApiType.ACTIVITIES` changed from `` to `When the request has been done against the Activities API`
+
+✅  Description for enum value `ServiceApiType.TRANSFERS` changed from `` to `When the request has been done against the Transfers API`
+
+✅  Description for enum value `ServiceApiType.CAR` changed from `` to `When the request has been done against the Car API`
+
+✅  Description for enum value `ServiceApiType.TRANSPORTATION` changed from `` to `When the request has been done against the Transportation API`
+
+✅  Description for enum value `ServiceApiType.HOTEL` changed from `` to `When the request has been done against the Hotel API`
+
+✅  Description for enum value `ServiceOperationType.OTHER` changed from `` to `When the type of the request is Other`
+
+✅  Description for enum value `ServiceOperationType.BOOKING` changed from `` to `When the type of the request is Booking`
+
+✅  Description for enum value `ServiceOperationType.QUOTE` changed from `` to `When the type of the request is Quote`
+
+✅  Description for enum value `ServiceOperationType.SEARCH` changed from `` to `When the type of the request is Search`
+
+✅  Field `StatsAssert.url` description changed from `` to `Endpoint to download the full XML of the request with its response`
+
+✅  Field `StatsAssert.execTime` description changed from `` to `Execution time of the request`
+
+✅  Field `StatsAssert.startTime` description changed from `` to `Start time of the request`
+
+✅  Description for enum value `StatsInfoTypes.OTHER` changed from `` to `Stats in NOK state caused by other causes`
+
+✅  Description for enum value `StatsInfoTypes.HUB` changed from `` to `Stats in NOK state caused by HUB issues`
+
+✅  Description for enum value `StatsInfoTypes.COMMUNICATION` changed from `` to `Stats in NOK state caused by Timeout`
+
+✅  Description for enum value `StatsInfoTypes.PROVIDER` changed from `` to `Stats in NOK state caused by supplier issues`
+
+✅  Description for enum value `StatsInfoTypes.INTEGRATION` changed from `` to `Stats in NOK state caused by integration issues`
+
+✅  Description for enum value `StatsInfoTypes.OK` changed from `` to `Stats in OK state`
+
+✅  Field `StatsInfo.asserts` description changed from `` to `Details about errors.`
+
+✅  Field `StatsInfo.time` description changed from `Total time (ms)` to `Average time (ms)`
+
+✅  Field `StatsInfo.hits` description changed from `Total hits.` to `Total hits`
+
+✅  Field `StatsInfo.type` description changed from `` to `Stats type`
+
+✅  Description `` on type `OperationDetailed` has changed to `Stats information per operation`
+
+✅  Field `OperationDetailed.cache` description changed from `` to `Responsible for the execution of the this stats. If TRUE then cache, else client`
+
+✅  Field `OperationDetailed.detailedHits` description changed from `Total time
+time: Time!` to `Hits grouped depending on their status`
+
+✅  Field `OperationDetailed.totalHits` description changed from `operation: String!
+operationType: ServiceOperationType!
+List of service apis.
+serviceApis: ServiceApiConnection!
+Total hits.` to `Total hits.`
+
+✅  Field `OperationDetailed.operation` changed type from `Operation` to `Operation!`
+
+✅  Field `OperationDetailed.operation` description changed from `` to `Operation information`
+
+✅  Description `Details of look to quote and look to book.` on type `Ratios` has changed to `Ratios details`
+
+✅  Field `Ratios.quoteToBook` description changed from `` to `Quotes needed to do a booking`
+
+✅  Field `Ratios.lookToBook` description changed from `` to `Searches needed to do a booking`
+
+✅  Field `Ratios.lookToQuote` description changed from `` to `Searches needed to do a quote`
+
+✅  Field `StatsData.operations` description changed from `` to `Stats information per operation`
+
+✅  Field `StatsData.ratios` description changed from `Details of look to quote and look to book.` to `Ratios details`
+
+✅  Field `StatsData.client` description changed from `` to `Owner client`
+
+✅  Field `StatsData.access` description changed from `` to `Owner access`
+
+✅  Field `Stats.updatedAt` description changed from `Date updated` to `Update date`
+
+✅  Field `Stats.createdAt` description changed from `Date created` to `Create date`
+
+✅  Field `Stats.error` description changed from `Errors that abort services` to `Errors that will lead the service to abort`
+
+✅  Field `Stats.statsData` description changed from `` to `GUID
+The data returned by a \`Stats\` query.`
+
+✅  Description `Plugin Type` on type `PluginType` has changed to `Plugin Type. /hotelx/plugins/overview/`
+
+✅  Description `Plugin Step Type` on type `PluginStepType` has changed to `Plugin Step Type. /hotelx/plugins/overview/`
+
+✅  Input field `PluginStepInput.pluginsType` description changed from `` to `Indicates the plugin that will be executed.`
+
+✅  Input field `HotelSettingsInput.testMode` description changed from `Use test access` to `This flag allows only the accesses checked as test. By default is production.`
+
+✅  Description `` on type `MarkupRuleType` has changed to `Indicates what type of value is the markup, by percentage or is an import.`
+
+✅  Description `Options status` on type `StatusType` has changed to `Indicartes options status`
+
+✅  Field `Response.stats` description changed from `Application stats in string format` to `Application stats`
+
+✅  Field `DestinationConnection.pageInfo` description changed from `` to `Indicates info about page`
+
+✅  Field `HotelConnection.pageInfo` description changed from `` to `Indicates info about page`
+
+✅  Input field `HotelXRoomQueryInput.access` description changed from `` to `Indicates the access that you want use.`
+
+✅  Input field `HotelXRoomQueryInput.roomCodes` description changed from `` to `Indicates the room codes that you want filter.`
+
+✅  Field `RoomConnection.pageInfo` description changed from `` to `Indicates info about page`
+
+✅  Input field `HotelXCategoryQueryInput.access` description changed from `` to `Indicates the access that you want use.`
+
+✅  Input field `HotelXCategoryQueryInput.categoryCodes` description changed from `` to `Indicates the category codes that you want filter.`
+
+✅  Field `CategoryConnection.pageInfo` description changed from `` to `Indicates info about page`
+
+✅  Input field `HotelXBoardQueryInput.access` description changed from `` to `Indicates the access that you want use.`
+
+✅  Input field `HotelXBoardQueryInput.boardCodes` description changed from `` to `Indicates the board codes that you want filter.`
+
+✅  Field `BoardConnection.pageInfo` description changed from `` to `Indicates info about page`
+
+✅  Field `HotelXQuery.mapping` description changed from `` to `Returns map codes of a group. You can get hotel map, room map, and board map.`
+
+✅  Field `HotelXQuery.bookingStatusService` description changed from `TODO: me no understand...
+Returns status of the booking service.` to `Returns status of the booking service.`
+
+✅  Field `ProductData.apis` description changed from `` to `A Product has many APIs`
+
+✅  Description `` on type `Product` has changed to `An APIs collection.`
+
+✅  Field `Product.updatedAt` description changed from `` to `Date updated`
+
+✅  Field `Product.createdAt` description changed from `` to `Date created`
+
+✅  Field `Product.error` description changed from `` to `Errors that abort services`
+
+✅  Field `Operation.updatedAt` description changed from `` to `Date updated`
+
+✅  Field `Operation.createdAt` description changed from `` to `Date created`
+
+✅  Field `Operation.error` description changed from `` to `Errors that abort services`
+
+✅  Description `` on type `APIData` has changed to ``
+
+✅  Field `APIData.operations` description changed from `` to `which operations are asigned this API?`
+
+✅  Field `APIData.resources` description changed from `` to `which resources are asigned this API?`
+
+✅  Field `APIData.groups` description changed from `` to `which groups are asigned this API?`
+
+✅  Field `APIData.label` description changed from `` to `API label`
+
+✅  Field `APIData.isEditable` description changed from `` to `Is API Editable or not.`
+
+✅  Field `APIData.code` description changed from `` to `API Code`
+
+✅  Field `APIData.id` description changed from `` to `API ID`
+
+✅  Field `API.updatedAt` description changed from `` to `Date updated`
+
+✅  Field `API.createdAt` description changed from `` to `Date created`
+
+✅  Field `API.error` description changed from `` to `Errors that abort services`
+
+✅  Field `ResourceData.roles` description changed from `` to `which roles are asigned or are possibles in this resource?`
+
+✅  Field `ResourceData.apis` description changed from `` to `which API have asigned this resource?`
+
+✅  Description `` on type `Resource` has changed to `Resources are those used in APIs and Products.`
+
+✅  Field `Resource.updatedAt` description changed from `` to `Date updated`
+
+✅  Field `Resource.createdAt` description changed from `` to `Date created`
+
+✅  Field `Resource.error` description changed from `` to `Errors that abort services`
+
+✅  Description for enum value `RoleType.SPECIFIC` changed from `` to `Allows a User to make othen kind of operation with the resource. Defined by API.`
+
+✅  Description for enum value `RoleType.EXECUTOR` changed from `` to `Allows a User to make use of reources only for extecutations queries.`
+
+✅  Description for enum value `RoleType.ADMIN` changed from `` to `Allows a User to make All (changes) to the resource`
+
+✅  Description for enum value `RoleType.EDITOR` changed from `` to `Allows a User to make Mutations (changes) to the resource data`
+
+✅  Description for enum value `RoleType.VIEWER` changed from `` to `Allows a User to make Queries of resources, but not change any resource data`
+
+✅  Field `RoleData.resources` description changed from `` to `Resources used`
+
+✅  Field `RoleData.special` description changed from `` to `Special permission`
+
+✅  Field `RoleData.isSpecial` description changed from `` to `Has any other non-basic permission/s?`
+
+✅  Field `RoleData.isExecutable` description changed from `` to `Has resource Executable permission?`
+
+✅  Field `RoleData.isEnable` description changed from `` to `Is role enabled or not?`
+
+✅  Field `RoleData.isDelete` description changed from `` to `Has resource Delete permission?`
+
+✅  Field `RoleData.isUpdate` description changed from `` to `Has resource Update permission?`
+
+✅  Field `RoleData.isRead` description changed from `` to `Has resource Create permission?`
+
+✅  Field `RoleData.isCreate` description changed from `` to `Has resource Create permission?`
+
+✅  Description `` on type `Role` has changed to `Permissions determine what operations are allowed on a resource`
+
+✅  Field `Role.updatedAt` description changed from `` to `Date updated`
+
+✅  Field `Role.createdAt` description changed from `` to `Date created`
+
+✅  Field `Role.error` description changed from `` to `Errors that abort services`
+
+✅  Field `MemberData.roles` description changed from `` to `which roles the member has in?`
+
+✅  Field `MemberData.groups` description changed from `` to `which groups the member is in?`
+
+✅  Field `MemberData.type` description changed from `` to `Member Type`
+
+✅  Description `` on type `Member` has changed to `You grant access to members which can be either:
+Users: A developer, administrator or any other person from your Organization who interacts with the TravelgateX Platform. An email address can be used as the identity of a User.
+Service Accounts: An application (Client) instead of an individual User. If you prefer, you can create as many Service Accounts as needed to represent different logical components of your application.`
+
+✅  Field `Member.updatedAt` description changed from `` to `Date updated`
+
+✅  Field `Member.createdAt` description changed from `` to `Date created`
+
+✅  Field `Member.isActive` description changed from `` to `Errors that abort services`
+
+✅  Field `GroupData.roles` description changed from `` to `You can grant roles to members, which define the roles catalog for a group.`
+
+✅  Field `GroupData.clients` description changed from `` to `Clients resources in a group`
+
+✅  Field `GroupData.suppliers` description changed from `` to `Supplier resources in a group`
+
+✅  Field `GroupData.accesses` description changed from `` to `Access resources in a group`
+
+✅  Field `GroupData.allMembers` description changed from `` to `Response all members in this group's childrens (hierarchically),`
+
+✅  Field `GroupData.managedGroups` description changed from `` to `Responses all groups in its group's childrens (hierarchically),`
+
+✅  Field `GroupData.apis` description changed from `` to `APIs assigned to this group. Products have APIs.`
+
+✅  Field `GroupData.members` description changed from `` to `Only responses members in this group`
+
+✅  Field `GroupData.children` description changed from `` to `Only responses children.(non-hierarchically)`
+
+✅  Description `` on type `Group` has changed to `Groups are organized hierarchically.`
+
+✅  Field `Group.updatedAt` description changed from `` to `Date updated`
+
+✅  Field `Group.createdAt` description changed from `` to `Date created`
+
+✅  Field `Group.error` description changed from `` to `Errors that abort services`
+
+✅  Field `OrganizationData.clients` description changed from `` to `Clients resources in a organization`
+
+✅  Field `OrganizationData.suppliers` description changed from `` to `Supplier resources in a organization`
+
+✅  Field `OrganizationData.accesses` description changed from `` to `Access resources in a organization`
+
+✅  Field `OrganizationData.allMembers` description changed from `` to `Response all members in this group's childrens (hierarchically)`
+
+✅  Field `OrganizationData.products` description changed from `` to `Products asign to a organization`
+
+✅  Field `OrganizationData.apis` description changed from `` to `APIs assigned to this group. Products have APIs.`
+
+✅  Field `OrganizationData.children` description changed from `` to `Only responses folders.(non-hierarchically)`
+
+✅  Description `` on type `Organization` has changed to `Organization node is the root node in the hierarachy, the folders are the children of the organization and the products are the children of the folders.`
+
+✅  Field `Organization.updatedAt` description changed from `` to `Date updated`
+
+✅  Field `Organization.createdAt` description changed from `` to `Date created`
+
+✅  Field `Organization.error` description changed from `` to `Errors that abort services`
+
+✅  Description `` on type `Client` has changed to `Client identifies who is making the request and holds the configuration assigned to it.`
+
+✅  Description `` on type `Supplier` has changed to `A Supplier is a Partner who is connected to TravelgateX on the supply side in order to sell their product to connected Buyers`
+
+✅  Description `` on type `Access` has changed to `An Access is a set of credentials and configuration in order to access the system of a Supplier.`
+
+✅  Description `` on type `AdminQuery` has changed to `The admin query root of TravelgateX's GraphQL interface.`
+
+✅  Field `pointsOfSale` was added to object type `AdminQuery`
+
+✅  Description `` on type `Query` has changed to `The query root of TravelgateX's GraphQL interface.`
+
+✅  Field `Query.mappea` description changed from `` to `The Mappea product query root for implementing GraphQL query.`
+
+✅  Field `Query.stats` description changed from `` to `The Stats product query root for implementing GraphQL query.`
+
+✅  Field `Query.hotelX` description changed from `` to `The hotelX product query root for implementing GraphQL query.`
+
+✅  Field `Query.admin` description changed from `` to `The admin query root of TravelgateX's for implementing GraphQL query.`
+
+✅  Field `paymentX` was added to object type `Query`
+
+✅  Type `PaymentXBookingInfoDeleteInput` was added
+
+✅  Type `PointOfSaleInput` was added
+
+✅  Type `PaymentXBookingInfoInput` was added
+
+✅  Type `PaymentXStoreCardInput` was added
+
+✅  Type `PaymentXMutation` was added
+
+✅  Type `PaymentXBookingInfoFilterInput` was added
+
+✅  Type `ExpireDate` was added
+
+✅  Type `CVC` was added
+
+✅  Type `CardNumber` was added
+
+✅  Type `PaymentCard` was added
+
+✅  Type `PaymentXBookingInfo` was added
+
+✅  Type `StoredCardData` was added
+
+✅  Type `StoredCard` was added
+
+✅  Type `StoredCardEdge` was added
+
+✅  Type `StoredCardConnection` was added
+
+✅  Type `PaymentXQuery` was added
+
+✅  Type `PointOfSaleFilter` was added
+
+✅  Type `PointOfSaleData` was added
+
+✅  Type `PointOfSale` was added
+
+✅  Type `PointOfSaleEdge` was added
+
+✅  Type `PointOfSaleConnection` was added
+
 ## 2018-06-01
 
 🛑  Input field `member` was added to input object type `DeleteMemberInput`
@@ -292,13 +701,13 @@ Format: yyyy-MM-dd.` to `Start date.
 
 Format: YYYY-MM-DD.`
 
-✅  Description for enum value `BookStatusType.UNKNOWN` changed from `The reservation was completed but due to a supplier error or a timeout, the reservation status is unknown. 
+✅  Description for enum value `BookStatusType.UNKNOWN` changed from `The reservation was completed but due to a supplier error or a timeout, the reservation status is unknown.
 
 It is the client’s responsibility to check if the booking is OK` to `The reservation was completed but due to a supplier error or a timeout, the reservation status is unknown.
 
 It is the client’s responsibility to check if the booking is OK`
 
-✅  Description for enum value `BookStatusType.ON_REQUEST` changed from `The reservation was completed but the product is still not available, so the reservation goes into a waiting list. 
+✅  Description for enum value `BookStatusType.ON_REQUEST` changed from `The reservation was completed but the product is still not available, so the reservation goes into a waiting list.
 
 It is the client’s responsibility to check if the booking is OK` to `The reservation was completed but the product is still not available, so the reservation goes into a waiting list.
 
@@ -1473,11 +1882,11 @@ This information is mandatory.`
 
 ⚠️  Field `supplierCode` was removed from object type `HotelData`
 
-✅  Description for enum value `BookStatusType.UNKNOWN` changed from `The status of the booking is unknown` to `The reservation was completed but due to a supplier error or a timeout, the reservation status is unknown. 
+✅  Description for enum value `BookStatusType.UNKNOWN` changed from `The status of the booking is unknown` to `The reservation was completed but due to a supplier error or a timeout, the reservation status is unknown.
 
 It is the client's responsibility to check if the booking is OK`
 
-✅  Description for enum value `BookStatusType.ON_REQUEST` changed from `The status of the booking is on request` to `The reservation was completed but the product is still not available, so the reservation goes into a waiting list. 
+✅  Description for enum value `BookStatusType.ON_REQUEST` changed from `The status of the booking is on request` to `The reservation was completed but the product is still not available, so the reservation goes into a waiting list.
 
 It is the client's responsibility to check if the booking is OK`
 
