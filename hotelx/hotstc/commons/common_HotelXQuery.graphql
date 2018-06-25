@@ -9,7 +9,7 @@ extend type HotelXQuery {
   rooms(criteria: HotelXRoomQueryInput!, relay: RelayInput!): RoomConnection!
 
   # Query to obtain Hotels
-  hotels(criteria: HotelXHotelListInput!, relay: RelayInput!, token: String, filter: HotelXHotelFilter): HotelConnection!
+  hotels(criteria: HotelXHotelListInput!, relay: RelayInput!, token: String, filter: HotelXHotelFilterInput): HotelConnection!
 
   # Query to obtain Destinations
   destinations(criteria: HotelXDestinationListInput!, relay: RelayInput!, token: String): DestinationConnection!
