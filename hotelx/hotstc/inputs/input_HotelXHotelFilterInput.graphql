@@ -1,0 +1,31 @@
+# By default: Logical AND on all given filters.
+input HotelXHotelFilterInput {
+  # Logical AND on all given filters.
+  AND: [HotelXHotelFilter!]
+  # Logical OR on all given filters.
+  OR: [HotelXHotelFilter!]
+  # All values that are contained in given list.
+  createdAt_in: [DateTime!]
+  # All values that are not contained in given list.
+  createdAt_not_in: [DateTime!]
+  # All values less than the given value.
+  createdAt_lt: DateTime
+  # All values less than or equal the given value.
+  createdAt_lte: DateTime
+  # All values greater than the given value.
+  createdAt_gt: DateTime
+  # All values greater than or equal the given value.
+  createdAt_gte: DateTime
+  # All values that are contained in given list.
+  updatedAt_in: [DateTime!]
+  # All values that are not contained in given list.
+  updatedAt_not_in: [DateTime!]
+  # All values less than the given value.
+  updatedAt_lt: DateTime
+  # All values less than or equal the given value.
+  updatedAt_lte: DateTime
+  # All values greater than the given value.
+  updatedAt_gt: DateTime
+  # All values greater than or equal the given value.
+  updatedAt_gte: DateTime
+}
