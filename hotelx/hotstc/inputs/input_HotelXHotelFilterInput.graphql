@@ -1,5 +1,5 @@
 # By default: Logical AND on all given filters.
-input HotelXHotelFilter {
+input HotelXHotelFilterInput {
   # Logical AND on all given filters.
   AND: [HotelXHotelFilter!]
   # Logical OR on all given filters.
