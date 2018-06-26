@@ -1,0 +1,5 @@
+#Contain IATA code near the hotel
+type Airport{
+  # IATA code
+  IATACode: String!
+}
