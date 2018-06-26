@@ -17,4 +17,7 @@ type Location {
   
   # Closest destination
   closestDestination: DestinationData!
+
+  #Airports
+  airports:[Airport!]
 }
