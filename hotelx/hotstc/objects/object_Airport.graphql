@@ -1,5 +1,18 @@
-#Contain IATA code near the hotel
-type Airport{
-  # IATA code
-  IATACode: String!
+# Airport Type
+type Airport implements Node{
+    # Airport ID
+    code: ID!
+
+    # Airport data
+    airportData: AirportData
+
+    # Errors that abort services
+    error: [Error!]
+
+    # Date created
+    createdAt: DateTime!
+
+    # Date updated
+    updatedAt: DateTime!
+
 }
