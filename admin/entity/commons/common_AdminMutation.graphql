@@ -20,4 +20,12 @@ extend type AdminMutation {
   createClient(input: CreateClientInput!): Client
   # Updates a Client.
   updateClient(input: UpdateClientInput!): Client
+    # Creates a Profile.
+  createProfile(input: CreateProfileInput!): Profile
+  # Updates a Profile.
+  updateProfile(input: UpdateProfileInput!): Profile
+  # Adds entities to a Profile.
+  addEntitiesToProfile(input: UpdateEntitiesInput!): Profile
+  # Removes entities from a Profile.
+  removeEntitiesFromProfile(input: UpdateEntitiesInput!): Profile
 }

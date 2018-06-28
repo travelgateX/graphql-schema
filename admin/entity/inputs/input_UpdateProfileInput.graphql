@@ -1,0 +1,6 @@
+input UpdateProfileInput {
+  # Profile Code
+  code: ID!
+  # Label of the Profile
+  label: String!
+}

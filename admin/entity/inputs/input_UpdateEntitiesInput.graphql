@@ -1,0 +1,6 @@
+input UpdateEntitiesInput {
+  # Profile Code
+  code: ID!
+  # Entities to add/remove
+  entities: EntitiesInput
+}
