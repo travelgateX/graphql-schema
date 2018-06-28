@@ -25,7 +25,7 @@ extend type AdminMutation {
   # Updates a Profile.
   updateProfile(input: UpdateProfileInput!): Profile
   # Adds entities to a Profile.
-  addEntitiesToProfile(input: UpdateEntities): Profile
+  addEntitiesToProfile(input: UpdateEntitiesInput): Profile
   # Removes entities from a Profile.
-  removeEntitiesFromProfile(input: UpdateEntities): Profile
+  removeEntitiesFromProfile(input: UpdateEntitiesInput): Profile
 }
