@@ -1,9 +1,9 @@
 # By default: Logical AND on all given filters.
 input HotelXHotelFilterInput {
   # Logical AND on all given filters.
-  AND: [HotelXHotelFilter!]
+  AND: [HotelXHotelFilterInput!]
   # Logical OR on all given filters.
-  OR: [HotelXHotelFilter!]
+  OR: [HotelXHotelFilterInput!]
   # All values that are contained in given list.
   createdAt_in: [DateTime!]
   # All values that are not contained in given list.
