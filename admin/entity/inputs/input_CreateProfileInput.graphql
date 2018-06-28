@@ -1,0 +1,8 @@
+input CreateProfileInput {
+  # Label of the Profile
+  label: String!
+  # Group where Profile has to be placed
+  group: String!
+  # Entities of the Profile
+  entities: EntitiesInput
+}
