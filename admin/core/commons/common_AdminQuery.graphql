@@ -1,4 +1,5 @@
 # The admin query root of TravelgateX's GraphQL interface.
 type AdminQuery{
-  a:Boolean
+  # Get JSON Web Token (JWT) linked to Member
+  jwt: JWT
 }
