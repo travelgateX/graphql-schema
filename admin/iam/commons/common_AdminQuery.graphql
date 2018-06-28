@@ -15,4 +15,6 @@ extend type AdminQuery{
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String) : RoleConnection!
   # Operations list; specify operations codes to filter operations.
   operations(codes: [ID!],type: OperationType, first: Int, last: Int, before: String, after:String): OperationConnection!
+  # Get my bearer linked to my apikey
+  getMyBearer: Bearer!
 }
