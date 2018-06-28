@@ -1,0 +1,5 @@
+input EntitiesInput {
+  suppliers: [ID!]
+  clients: [ID!]
+  access: [ID!]
+}
