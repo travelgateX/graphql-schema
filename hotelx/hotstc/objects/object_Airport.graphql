@@ -1,0 +1,18 @@
+# Airport Type
+type Airport implements Node{
+    # Airport ID
+    code: ID!
+
+    # Airport data
+    airportData: AirportData
+
+    # List of messages
+    adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
+    # Date created
+    createdAt: DateTime!
+
+    # Date updated
+    updatedAt: DateTime!
+
+}
