@@ -6,8 +6,8 @@ type Airport implements Node{
     # Airport data
     airportData: AirportData
 
-    # Errors that abort services
-    error: [Error!]
+    # List of messages
+    adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 
     # Date created
     createdAt: DateTime!
