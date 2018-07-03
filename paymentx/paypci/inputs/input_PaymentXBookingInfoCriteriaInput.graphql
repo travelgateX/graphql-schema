@@ -9,9 +9,6 @@ input PaymentXBookingInfoFilterInput {
   # Indicates the referece of the booking
   bookingReference: String
 
-  # Customer Name
-  customerName: String
-
-  # Customer Surname
-  customerSurname : String
+  # Contains owner's name
+  holder: HolderInput!
 }

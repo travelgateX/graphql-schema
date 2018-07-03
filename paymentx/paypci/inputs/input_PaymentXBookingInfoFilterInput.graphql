@@ -7,7 +7,7 @@ input PaymentXBookingInfoFilterInput {
   pointOfSaleCode: ID @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
   
   # Indicates the referece of the booking
-  bookingReference: String ID @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
+  bookingReference: String @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
 
 
   # Logical AND on all given filters.
