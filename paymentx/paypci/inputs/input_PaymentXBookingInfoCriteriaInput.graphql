@@ -1,4 +1,4 @@
-input PaymentXBookingInfoFilterInput {
+input PaymentXBookingInfoCriteriaInput {
   
   # Responsible organization of the booked property.
   organization : String!

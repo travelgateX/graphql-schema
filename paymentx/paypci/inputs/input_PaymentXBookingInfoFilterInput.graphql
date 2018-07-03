@@ -1,13 +1,13 @@
 input PaymentXBookingInfoFilterInput {
   
-  # Responsible organization of the booked property.
-  organization : String @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
+  # Responsible organization of the booked property. @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
+  organization : String 
   
-  # Indicates the code of the booked property
-  pointOfSaleCode: ID @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
+  # Indicates the code of the booked property. @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
+  pointOfSaleCode: ID 
   
-  # Indicates the referece of the booking
-  bookingReference: String @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
+  # Indicates the referece of the booking. @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
+  bookingReference: String 
 
 
   # Logical AND on all given filters.

@@ -3,5 +3,5 @@ extend type PaymentXQuery {
   # Returns status of the search service.
   vaultStatusService: ServiceStatus!
   
-  cards(bookingInfo: PaymentXBookingInfoFilterInput!): StoredCardConnection!
+  cards(bookingInfo: PaymentXBookingInfoFilterInput!, bookingInfoCriteria: PaymentXBookingInfoCriteriaInput): StoredCardConnection!
 }
