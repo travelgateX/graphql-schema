@@ -1,12 +1,42 @@
 input PaymentXBookingInfoFilterInput {
   
   # Responsible organization of the booked property.
-  organization : String!
+  organization : String @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
   
   # Indicates the code of the booked property
-  pointOfSaleCode: ID!
+  pointOfSaleCode: ID @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
   
   # Indicates the referece of the booking
-  bookingReference: String!
+  bookingReference: String @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
+
+
+  # Logical AND on all given filters.
+  AND: [PaymentXBookingInfoFilterInput!]
+  # Logical OR on all given filters.
+  OR: [PaymentXBookingInfoFilterInput!]
+  # All values that are contained in given list.
+  checkIn_in: [DateTime!]
+  # All values that are not contained in given list.
+  checkIn_not_in: [DateTime!]
+  # All values less than the given value.
+  checkIn_lt: DateTime
+  # All values less than or equal the given value.
+  checkIn_lte: DateTime
+  # All values greater than the given value.
+  checkIn_gt: DateTime
+  # All values greater than or equal the given value.
+  checkIn_gte: DateTime
+  # All values that are contained in given list.
+  checkOut_in: [DateTime!]
+  # All values that are not contained in given list.
+  checkOut_not_in: [DateTime!]
+  # All values less than the given value.
+  checkOut_lt: DateTime
+  # All values less than or equal the given value.
+  checkOut_lte: DateTime
+  # All values greater than the given value.
+  checkOut_gt: DateTime
+  # All values greater than or equal the given value.
+  checkOut_gte: DateTime
   
 }
