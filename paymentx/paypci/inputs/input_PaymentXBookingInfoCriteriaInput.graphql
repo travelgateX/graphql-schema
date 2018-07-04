@@ -1,0 +1,14 @@
+input PaymentXBookingInfoCriteriaInput {
+  
+  # Responsible organization of the booked property.
+  organization : String!
+  
+  # Indicates the code of the booked property
+  pointOfSaleCode: ID
+  
+  # Indicates the referece of the booking
+  bookingReference: String
+
+  # Contains owner's name
+  holder: HolderInput!
+}
