@@ -10,5 +10,5 @@ input PaymentXBookingInfoCriteriaInput {
   bookingReference: String
 
   # Contains owner's name
-  holder: HolderInput!
+  holder: HolderInput
 }
