@@ -1,17 +1,17 @@
 # Destination Type
 type Destination implements Node {
-  # Destination ID
-  code: ID!
-  
-  # Destination data
-  destinationData: DestinationData
-  
-  # Errors that abort services
-  error: [Error!]
-  
-  # Date created
-  createdAt: DateTime!
-  
-  # Date updated
-  updatedAt: DateTime!
+    # Destination ID
+    code: ID!
+
+    # Destination data
+    destinationData: DestinationData
+
+    # Errors that abort services
+    error: [AdviseMessage!]
+
+    # Date created
+    createdAt: DateTime!
+
+    # Date updated
+    updatedAt: DateTime!
 }

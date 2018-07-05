@@ -1,16 +1,18 @@
 input HotelXHotelListInput {
-  # Indicates the access
-  access:     ID!
-  
-  # Search by hotel codes
-  hotelCodes:      [String!]
-  
-  # Search by destination codes, only search by minimal destinations
-  destinationCodes: [String!]
-  
-  # Filter by supplier rank
-  ranks:      [Int!]
-  
-  # Maxium number of items per page
-  maxSize:       Int
+    # Indicates the access
+    access:     ID
+
+    # Search by hotel codes
+    hotelCodes:      [String!]
+
+    # Search by destination codes, only search by minimal destinations
+    destinationCodes: [String!]
+
+    # Filter by supplier rank
+    ranks:      [Int!]
+
+    # Maxium number of items per page
+    maxSize:       Int
+
+    group:        ID
 }
