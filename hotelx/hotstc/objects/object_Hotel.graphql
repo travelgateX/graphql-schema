@@ -7,7 +7,7 @@ type Hotel implements Node {
   hotelData: HotelData
   
   # Errors that abort services
-  error: [Error!]
+  error: [AdviseMessage!]
   
   # Date created
   createdAt: DateTime!
