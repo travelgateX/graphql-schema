@@ -1,6 +1,10 @@
 input HotelXRoomQueryInput {
-  # Indicates the room codes that you want filter.
-  roomCodes: [String!]
-  # Indicates the access that you want use.
-  access: ID!
+  # Indicates the access
+  access:     ID!
+  
+  # Search by room codes
+  roomCodes:      [String!]
+  
+  # Maxium number of items per page
+  maxSize:       Int
 }
