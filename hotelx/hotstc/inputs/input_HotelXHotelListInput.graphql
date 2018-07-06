@@ -14,5 +14,6 @@ input HotelXHotelListInput {
   # Maxium number of items per page
   maxSize:       Int
 
+  # The supplier's group. Only available if all permissions allowed
   group:        ID
 }
