@@ -1,5 +1,0 @@
-# Mutations are operations that change or update data on the server
-extend type Mutation {
-  # Load mapping files for a group.
-  loadFile(input: String!): String! @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at Admin")
-}
