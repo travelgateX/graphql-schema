@@ -3,7 +3,7 @@
   "pagetitle": null,
   "description": "",
   "weight": 6,
-  "icon": null,
+  "icon": "fa-list-ul",
   "alwaysopen": false
 }
 Enums are a particular type of `Scalar` that works like a drop-down, single selection menu. Each type of `Enum` has a number of choices defined, and users must select one of the choices when querying the `Enum`.
