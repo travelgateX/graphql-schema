@@ -3,7 +3,7 @@
   "pagetitle": null,
   "description": "",
   "weight": 5,
-  "icon": null,
+  "icon": "fa-keyboard-o",
   "alwaysopen": false
 }
 {{% wip %}}

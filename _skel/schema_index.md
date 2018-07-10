@@ -3,7 +3,7 @@
   "pagetitle": null,
   "description": "",
   "weight": 1,
-  "icon": null,
+  "icon": "fa-th-list",
   "alwaysopen": false
 }
 The TravelgateX GraphQL API Schema is a powerful way to access all of our functionalities as you need them. GraphQL allows you to ask for the exact information you need, so that you get responses that can be used in your clients (applications, websites and other interfaces) directly, without having to parse information from long-winded or cluttered API responses.

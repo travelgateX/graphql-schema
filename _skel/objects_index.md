@@ -3,7 +3,7 @@
   "pagetitle": null,
   "description": "",
   "weight": 2,
-  "icon": null,
+  "icon": "fa-object-ungroup",
   "alwaysopen": false
 }
 Our `Object` pages describe every single resource, and field in our schema.

@@ -3,7 +3,7 @@
   "pagetitle": null,
   "description": "",
   "weight": 4,
-  "icon": null,
+  "icon": "fa-window-restore",
   "alwaysopen": false
 }
 Interfaces are an abstract type that includes a certain set of fields that are grouped together. For example, our `AdviseMessage` interface requires the error code, error type and error description fields to be used together.

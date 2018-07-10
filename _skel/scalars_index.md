@@ -3,7 +3,7 @@
   "pagetitle": null,
   "description": "",
   "weight": 3,
-  "icon": null,
+  "icon": "fa-list-ol",
   "alwaysopen": false
 }
 Scalars are _types_ of objects that are available in our schema (such as `String` or `Integer`). By defining scalars we make sure you can only enter or receive data that fits the objects in our data model.
