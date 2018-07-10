@@ -5,15 +5,17 @@ extend type HotelXQuery {
   # Query to obtain Categories
   categories(criteria: HotelXCategoryQueryInput!, relay: RelayInput!): CategoryConnection!
 
-  # Query to obtain rooms
-  rooms(criteria: HotelXRoomQueryInput!, relay: RelayInput!): RoomConnection!
-
+  
   # Query to obtain Hotels
   hotels(criteria: HotelXHotelListInput!, relay: RelayInput!, token: String, filter: HotelXHotelFilterInput): HotelConnection!
+
+  # Query to obtain rooms
+  rooms(criteria: HotelXRoomQueryInput!, relay: RelayInput!, token: String): RoomConnection!
 
   # Query to obtain Destinations
   destinations(criteria: HotelXDestinationListInput!, relay: RelayInput!, token: String): DestinationConnection!
 
+  
   # Returns hotels and destinations that contains the indicated text.
   destinationSearcher(criteria: HotelXDestinationSearcherInput!): [DestinationSearchResult]!
 }
