@@ -3,7 +3,7 @@ type Stats implements Node {
   code: ID! #GUID
   # The data returned by a Stats query.
   statsData: StatsData
-  # Errors that will lead the service to abort
+  # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Create date
   createdAt: DateTime!
