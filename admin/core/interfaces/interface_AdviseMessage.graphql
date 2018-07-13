@@ -1,3 +1,4 @@
+# List of advise messages.
 interface AdviseMessage {
   # AM code: The following codes can be returned:
   code: ID!
