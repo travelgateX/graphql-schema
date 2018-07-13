@@ -8,6 +8,6 @@ type PointOfSale implements Node{
   # Update date
   updatedAt: DateTime!
 
-  # List of messages
+  # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
