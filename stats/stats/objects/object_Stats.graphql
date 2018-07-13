@@ -4,7 +4,7 @@ type Stats implements Node {
   # The data returned by a Stats query.
   statsData: StatsData
   # Errors that will lead the service to abort
-  error: [Error!]
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Create date
   createdAt: DateTime!
   # Update date
