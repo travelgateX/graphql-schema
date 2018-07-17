@@ -4,4 +4,7 @@ extend type PaymentXQuery {
   vaultStatusService: ServiceStatus!
   
   cards(bookingInfo: PaymentXBookingInfoFilterInput!, bookingInfoCriteria: PaymentXBookingInfoCriteriaInput): StoredCardConnection!
+    
+  allStoredCards(filter: PaymentXBookingInfoFilterInput!, criteria: PaymentXBookingInfoCriteriaInput!): StoredCardConnection!
+  storedCard(ID: PaymentXStoredCardID!): StoredCard!
 }
