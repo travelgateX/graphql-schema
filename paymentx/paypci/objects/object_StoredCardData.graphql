@@ -1,4 +1,4 @@
 type StoredCardData { 
   bookingInfo: PaymentXBookingInfo!
-  card: PaymentCard!
+  card: PaymentCard
 }
