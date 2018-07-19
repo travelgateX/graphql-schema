@@ -1,7 +1,7 @@
 input PaymentXBookingInfoCriteriaInput {
   
   # Responsible organization of the booked property.
-  organization : String!
+  organization : String
   
   # Indicates the code of the booked property
   pointOfSaleCode: ID
