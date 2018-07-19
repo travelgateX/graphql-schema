@@ -1,6 +1,9 @@
 type StoredCard implements Node{
-  code: ID!
   
+  # Stored card ID
+  code: ID!
+
+  # Stored card information
   storedCardData: StoredCardData
   
   # Create date

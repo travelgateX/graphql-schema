@@ -3,6 +3,7 @@ type PaymentXBookingInfo{
   # Responsible organization of the booked property.
   organization : String!
   
+  # Physical point of sale where the card was registered.
   pointOfSale : PointOfSale!
   
   # Indicates the referece of the booking

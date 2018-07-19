@@ -3,8 +3,12 @@ extend type PaymentXQuery {
   # Returns status of the search service.
   vaultStatusService: ServiceStatus!
   
+  # Used to get the stored cards. Deprecated(Reason: deprecated from 2018-07-19)
   cards(bookingInfo: PaymentXBookingInfoFilterInput!, bookingInfoCriteria: PaymentXBookingInfoCriteriaInput): StoredCardConnection!
-    
+
+  # Returns the stored card list. For security, this query never will return clear card information. 
   allStoredCards(filter: PaymentXBookingInfoFilterInput!, criteria: PaymentXBookingInfoCriteriaInput!): StoredCardConnection!
+
+  # Returns a stored card information. 
   storedCard(ID: PaymentXStoredCardID!): StoredCard!
 }

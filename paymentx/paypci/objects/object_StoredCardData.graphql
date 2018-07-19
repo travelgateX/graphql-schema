@@ -1,4 +1,6 @@
 type StoredCardData { 
+  # Meta card info. This information is stored to make searches.
   bookingInfo: PaymentXBookingInfo!
+  # Clear card info. 
   card: PaymentCard
 }
