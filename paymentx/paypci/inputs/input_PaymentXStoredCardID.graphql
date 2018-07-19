@@ -1,12 +1,14 @@
 input PaymentXStoredCardID {
   
   # Responsible organization of the booked property.
-  organization : String!
+  organization : String
   
   # Indicates the code of the booked property
-  pointOfSaleCode: String!
+  pointOfSaleCode: String
   
   # Indicates the referece of the booking
-  bookingReference: String!
+  bookingReference: String
 
+  # Stored card ID returned in allStoredCards query
+  code: ID
 }

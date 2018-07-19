@@ -1,7 +1,7 @@
 # A Query is an entry point into the object graph.
 extend type PaymentXQuery {
-  # Returns status of the search service.
-  vaultStatusService: ServiceStatus!
+  # Returns status of the vault service.
+  vaultStatusService: AdviseMessage!
   
   # Used to get the stored cards. Deprecated(Reason: deprecated from 2018-07-19)
   cards(bookingInfo: PaymentXBookingInfoFilterInput!, bookingInfoCriteria: PaymentXBookingInfoCriteriaInput): StoredCardConnection!
@@ -10,5 +10,5 @@ extend type PaymentXQuery {
   allStoredCards(filter: PaymentXBookingInfoFilterInput!, criteria: PaymentXBookingInfoCriteriaInput!): StoredCardConnection!
 
   # Returns a stored card information. 
-  storedCard(ID: PaymentXStoredCardID!): StoredCard!
+  storedCard(criteria: PaymentXStoredCardID!): StoredCard!
 }
