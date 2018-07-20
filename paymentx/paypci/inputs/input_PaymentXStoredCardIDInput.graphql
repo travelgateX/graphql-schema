@@ -1,7 +1,7 @@
 input PaymentXStoredCardIDInput {
   
   # Asigned instance of PaymentX of the booked property.
-  group : ID
+  instance : ID
   
   # Indicates the code of the booked property
   pointOfSaleCode: ID
