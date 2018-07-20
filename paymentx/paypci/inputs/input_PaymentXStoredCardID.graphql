@@ -1,7 +1,7 @@
 input PaymentXStoredCardID {
   
-  # Responsible organization of the booked property.
-  organization : String
+  # Asigned instance of PaymentX of the booked property.
+  group : ID
   
   # Indicates the code of the booked property
   pointOfSaleCode: String
