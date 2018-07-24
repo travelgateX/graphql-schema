@@ -34,4 +34,7 @@ input HotelSettingsInput {
 
   # This flag allows only the accesses checked as test. By default is production.
   testMode: Boolean
+
+  # Used to identify the origin of the request, this is only used in plugins.
+  clientTokens: [String!] 
 }
