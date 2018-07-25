@@ -1,3 +1,13 @@
+## 2018-07-25
+
+🛑  Input field `HotelSettingsInput.group` changed type from `String` to `ID`
+
+🛑  Input field `HotelSettingsInput.client` changed type from `String` to `ID`
+
+✅  Input field `HotelSettingsInput.client` description changed from `This field is occurs only if the authorization header is of the type JWT.. It is used to change the user that has been set by default in the preload.` to `Client name, this field is occurs only if the authorization header is of the type JWT.. It is used to change the user that has been set by default in the preload.`
+
+✅  Input field `clientTokens` was added to input object type `HotelSettingsInput`
+
 ## 2018-07-16
 
 🛑  Input field `organizations` was removed from input object type `StatsFilterInput`
