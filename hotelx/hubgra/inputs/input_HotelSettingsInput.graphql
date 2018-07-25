@@ -12,10 +12,10 @@ input HotelSettingsInput {
   connectUser: String
   
   # This field is occurs only if the authorization header is of the type JWT.. It is used to change the user that has been set by default in the preload.
-  client: String
+  client: ID
   
   # Group whose resources want to be used
-  group: String
+  group: ID
   
   # Milliseconds before the connection is closed.
   timeout: Int
@@ -35,6 +35,6 @@ input HotelSettingsInput {
   # This flag allows only the accesses checked as test. By default is production.
   testMode: Boolean
 
-  # Used to identify the origin of the request, this is only used in plugins.
+  # Used to identify the origin of the request, this is only used in plugins. 
   clientTokens: [String!] 
 }
