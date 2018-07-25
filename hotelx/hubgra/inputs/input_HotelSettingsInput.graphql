@@ -11,7 +11,7 @@ input HotelSettingsInput {
   #@deprecated(reason: "deprecated from 2018-03-19. Redundant.")
   connectUser: String
   
-  # This field is occurs only if the authorization header is of the type JWT.. It is used to change the user that has been set by default in the preload.
+  # Client name, this field is occurs only if the authorization header is of the type JWT.. It is used to change the user that has been set by default in the preload.
   client: ID
   
   # Group whose resources want to be used
