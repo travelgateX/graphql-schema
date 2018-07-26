@@ -1,4 +1,5 @@
 enum GroupTypeInput{
+  ROOT
   GROUP
   PROFILE
   TEAM
