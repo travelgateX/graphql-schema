@@ -1,0 +1,4 @@
+type PaymentXStoredCardConnection{
+  edges: [PaymentXStoredCardEdge]
+  pageInfo: PageInfo!
+}

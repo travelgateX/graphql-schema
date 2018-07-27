@@ -1,19 +1,8 @@
-input PaymentXBookingInfoFilterInput {
-  
-  # Responsible organization of the booked property. @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
-  organization : String 
-  
-  # Indicates the code of the booked property. @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
-  pointOfSaleCode: ID 
-  
-  # Indicates the referece of the booking. @deprecated(reason: "deprecated from 2018-08-03. Please use PaymentXBookingInfoCriteriaInput")
-  bookingReference: String 
-
-
+input PaymentXStoredCardFilterInput {
   # Logical AND on all given filters.
-  AND: [PaymentXBookingInfoFilterInput!]
+  AND: [PaymentXStoredCardFilterInput!]
   # Logical OR on all given filters.
-  OR: [PaymentXBookingInfoFilterInput!]
+  OR: [PaymentXStoredCardFilterInput!]
   # All values that are contained in given list.
   checkIn_in: [DateTime!]
   # All values that are not contained in given list.
@@ -39,4 +28,6 @@ input PaymentXBookingInfoFilterInput {
   # All values greater than or equal the given value.
   checkOut_gte: DateTime
   
+  # All values with holder like the given value.
+  holder_like: HolderInput
 }

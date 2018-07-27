@@ -1,4 +1,0 @@
-type StoredCardEdge{
-  cursor: String!
-  node: StoredCard
-}

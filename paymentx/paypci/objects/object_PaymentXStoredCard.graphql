@@ -1,10 +1,10 @@
-type StoredCard implements Node{
+type PaymentXStoredCard implements Node{
   
   # Stored card ID
   code: ID!
 
   # Stored card information
-  storedCardData: StoredCardData
+  storedCardData: PaymentXStoredCardData
   
   # Create date
   createdAt: DateTime!
