@@ -12,4 +12,6 @@ extend type AdminQuery {
   pointsOfSale(filter: PointOfSaleFilter): PointOfSaleConnection
   # Obtain all Profiles for the filters
   profiles(filter: ProfileFilter): ProfileConnection
+  # Obtain a set of entities
+  entities(filter: EntityFilter): EntityConnection
 }
