@@ -4,7 +4,7 @@ extend type PaymentXQuery {
   vaultStatusService: AdviseMessage!
 
   # Returns the stored card list. For security, this query never will return clear card information. 
-  allStoredCards(filter:  PaymentXStoredCardFilterInput): PaymentXStoredCardConnection!
+  allStoredCards(filter:  PaymentXStoredCardFilterInput!): PaymentXStoredCardConnection!
 
   # Returns a stored card information. 
   storedCard(criteria:  PaymentXStoredCardIDInput!): PaymentXStoredCard!

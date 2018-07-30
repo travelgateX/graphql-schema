@@ -3,5 +3,5 @@ extend type PaymentXMutation {
   # Store Card
   storeCard(input:  PaymentXStoreCardInput!):  PaymentXStoredCard!
   # Delete Card
-  deleteCard(input:  PaymentXStoredCardIDInput!):  PaymentXStoredCard!
+  deleteStoredCard(criteria:  PaymentXStoredCardIDInput!):  PaymentXStoredCard!
 }
