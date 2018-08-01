@@ -7,6 +7,8 @@ type GroupData implements GroupCommonData{
   parent: Group
   # Only responses children.(non-hierarchically)
   children(codes: [ID!], first: Int, last: Int, before: String, after:String, after:String, type: GroupType, codeStartsWith: String): GroupConnection
+  # Recursive call with all ascendant parents tree
+  parents(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
   owner: Member
   isEditable: Boolean!
   productId: Int
