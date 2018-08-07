@@ -7,5 +7,5 @@ type ProfileData {
   # Profile Entities (suppliers/clients)
   entities: EntityConnection
   # Indicates the group where the Client belongs
-  group: Group!
+  group: Group
 }
