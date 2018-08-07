@@ -16,5 +16,5 @@ type SupplierData{
   # Accesses where the supplier is referenced
   accesses: AccessConnection
   # Groups where access belongs
-  groups(first: Int, last: Int, before: String, after:String): GroupConnection!
+  groups(first: Int, last: Int, before: String, after:String): GroupConnection
 }
