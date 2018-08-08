@@ -3,12 +3,8 @@ enum BookStatusType {
   # The reservation was completed with no problems
   OK 
   
-  # The status of the booking is Not OK
-  NOK
-  
   # The status of the booking is KO
-  KO @deprecated(reason: "deprecated from 2018-07-04. Not accepted acronim. Use NOK. Related issue: https://github.com/travelgateX/Issue-tracker/issues/15")
-
+  KO
   
   # The reservation was completed but the product is still not available, so the reservation goes into a waiting list.
   # It is the client’s responsibility to check if the booking is OK
