@@ -1,0 +1,4 @@
+input EntityFilter {
+  codes: [ID!]
+  groups: [ID!]
+}

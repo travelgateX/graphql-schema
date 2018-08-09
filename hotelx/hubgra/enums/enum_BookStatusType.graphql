@@ -1,7 +1,7 @@
 # Book status
 enum BookStatusType {
   # The reservation was completed with no problems
-  OK
+  OK 
   
   # The status of the booking is KO
   KO

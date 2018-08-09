@@ -23,5 +23,6 @@ type AccessData {
   rateRules: [RateRulesType!]
   # Parent Access if Shared Access
   shared: Access
-  
+  # Groups where access belongs
+  groups(first: Int, last: Int, before: String, after:String): GroupConnection
 }

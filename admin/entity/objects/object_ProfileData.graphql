@@ -6,4 +6,6 @@ type ProfileData {
   label: String
   # Profile Entities (suppliers/clients)
   entities: EntityConnection
+  # Indicates the group where the Client belongs
+  group: Group
 }

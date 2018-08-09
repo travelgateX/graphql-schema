@@ -5,4 +5,6 @@ type ClientData {
   name: String!
   # Indicates whether a Client is active or inactive
   isActive: Boolean!
+  # Indicates the group where the Client belongs
+  group: Group
 }

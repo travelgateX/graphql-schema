@@ -8,4 +8,7 @@ input SettingsBaseInput {
   
   # Business rules
   businessRules: BusinessRulesInput
+
+  # The currency
+  currency: Currency
 }

@@ -1,4 +1,5 @@
 enum GroupType{
+  ROOT
   ORG
   GROUP
   PROFILE
