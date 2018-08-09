@@ -1,0 +1,7 @@
+type ManagedGroupData{
+  code: ID!
+  group: Group!
+  api: API!
+  resource: Resource!
+  roles: Role!
+}

@@ -1,0 +1,10 @@
+type ManagedGroup implements Node{
+  code: ID!
+  managedGroupData: ManagedGroupData
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  # Date created
+  createdAt: DateTime!
+  # Date updated
+  updatedAt: DateTime!
+}
