@@ -1,5 +1,5 @@
 # DestinationList Edge definition
 type DestinationEdge {
-  cursor: String!
   node: Destination
+  cursor: String!
 }

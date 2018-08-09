@@ -1,4 +1,4 @@
 type EntityEdge {
-  cursor: String!
   node: Entity
+  cursor: String!
 }

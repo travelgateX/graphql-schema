@@ -1,4 +1,4 @@
 type GroupEdge {
-  cursor: String!
   node: Group
+  cursor: String!
 }

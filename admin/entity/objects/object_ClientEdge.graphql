@@ -1,4 +1,4 @@
 type ClientEdge {
-  cursor: String!
   node: Client
+  cursor: String!
 }

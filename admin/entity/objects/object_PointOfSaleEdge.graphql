@@ -1,4 +1,4 @@
 type PointOfSaleEdge {
-  cursor: String!
   node: PointOfSale
+  cursor: String!
 }

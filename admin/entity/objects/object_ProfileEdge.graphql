@@ -1,4 +1,4 @@
 type ProfileEdge {
-  cursor: String!
   node: Profile
+  cursor: String!
 }
