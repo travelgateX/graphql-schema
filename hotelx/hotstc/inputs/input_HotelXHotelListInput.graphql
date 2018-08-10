@@ -8,6 +8,9 @@ input HotelXHotelListInput {
   # Search by destination codes, only search by minimal destinations
   destinationCodes: [String!]
 
+  # Filter by country
+  countries: [Country!]
+
   # Filter by supplier rank
   ranks:      [Int!]
 
