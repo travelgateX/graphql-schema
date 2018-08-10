@@ -1,0 +1,6 @@
+input PluginFilterInput{
+  # Plugins to include (only these plugins will be executed)
+  includes: [FilterPluginTypeInput!]
+  # Plugins to exclude
+  excludes: [FilterPluginTypeInput!]
+}
