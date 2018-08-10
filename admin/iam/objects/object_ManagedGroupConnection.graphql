@@ -1,0 +1,4 @@
+type ManagedGroupConnection{
+  edges: [ManagedGroupEdge]
+  pageInfo: PageInfo!
+}

@@ -1,5 +1,5 @@
 # BoardList Edge definition
 type BoardEdge {
-  cursor: String!
   node: Board
+  cursor: String!
 }

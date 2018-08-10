@@ -1,5 +1,5 @@
 # RoomList Edge definition
 type RoomEdge {
-  cursor: String!
   node: RoomStatic
+  cursor: String!
 }

@@ -1,4 +1,4 @@
 type RoleEdge {
-  cursor: String!
   node: Role
+  cursor: String!
 }

@@ -1,5 +1,5 @@
 # CategoryList Edge definition
 type CategoryEdge {
-  cursor: String!
   node: Category
+  cursor: String!
 }
