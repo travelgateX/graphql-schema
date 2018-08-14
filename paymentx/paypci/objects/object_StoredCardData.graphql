@@ -1,4 +1,0 @@
-type StoredCardData { 
-  bookingInfo: PaymentXBookingInfo!
-  card: PaymentCard!
-}
