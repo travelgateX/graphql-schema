@@ -1,0 +1,4 @@
+type ManagedGroupEdge {
+  node: ManagedGroup
+  cursor: String!
+}

@@ -1,4 +1,4 @@
 type MemberEdge {
-  cursor: String!
   node: Member
+  cursor: String!
 }

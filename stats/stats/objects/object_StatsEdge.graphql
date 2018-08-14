@@ -1,4 +1,4 @@
 type StatsEdge{
-  cursor: String!
   node: Stats
+  cursor: String!
 }
