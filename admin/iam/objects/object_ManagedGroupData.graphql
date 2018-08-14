@@ -3,5 +3,5 @@ type ManagedGroupData{
   group: Group!
   api: API!
   resource: Resource!
-  roles: Role!
+  role: Role!
 }
