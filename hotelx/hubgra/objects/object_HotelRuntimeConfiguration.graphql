@@ -1,0 +1,16 @@
+type HotelRuntimeConfiguration implements Response {
+  # Application stats in string format
+  stats(token: String!): StatsRequest
+
+  # Data sent and received in native format.
+  auditData: AuditData
+
+  # configuration template
+  configuration: RuntimeConfiguration!
+
+  # Errors that abort services
+  errors: [Error!]
+
+  # Potentially harmful situations or errors, but ones that will not forcibly abort the service
+  warnings: [Warning!]
+}
