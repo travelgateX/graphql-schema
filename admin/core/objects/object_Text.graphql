@@ -1,4 +1,4 @@
-interface Text {
+type Text {
   text: String!
   language: Language!
 }
