@@ -1,0 +1,13 @@
+type HotelRuntimeConfiguration {
+  # Application stats in string format
+  stats(token: String!): StatsRequest
+
+  # Data sent and received in native format.
+  auditData: AuditData
+
+  # configuration template
+  configuration: RuntimeConfiguration!
+
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}
