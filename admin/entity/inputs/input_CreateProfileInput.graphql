@@ -5,4 +5,6 @@ input CreateProfileInput {
   group: String!
   # Entities of the Profile
   entities: EntitiesInput
+  # Profile owner
+  owner: String
 }

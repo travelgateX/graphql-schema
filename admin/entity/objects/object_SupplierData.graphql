@@ -15,6 +15,8 @@ type SupplierData{
   supplierGroup: ID
   # Accesses where the supplier is referenced
   accesses: AccessConnection
+  # Supplier owner
+  owner: String
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
 }
