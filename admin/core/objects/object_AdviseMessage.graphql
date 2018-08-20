@@ -1,5 +1,5 @@
 # List of advise messages.
-interface AdviseMessage {
+type AdviseMessage {
   # AM code: The following codes can be returned:
   code: ID!
   # Error type: The following types are valid:
