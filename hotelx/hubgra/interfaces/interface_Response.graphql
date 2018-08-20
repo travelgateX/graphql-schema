@@ -6,8 +6,11 @@ interface Response {
   auditData: AuditData
   
   # Errors that lead the service to stop
-  errors: [Error!]
+  errors: [Error!] @deprecated(reason: "deprecated from 2018-08-20. Sustituted by adviseMessage")
   
   # Potentially harmful situations or errors that do not stop the service
-  warnings: [Warning!]
+  warnings: [Warning!] @deprecated(reason: "deprecated from 2018-08-20. Sustituted by adviseMessage")
+  
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
