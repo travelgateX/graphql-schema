@@ -24,7 +24,7 @@ type AccessData {
   # Parent Access if Shared Access
   shared: Access
   # Access owner
-  owner: String
+  owner: [Group!]
   # True if scheduler is active
   isShedulerActive: Boolean
   # Groups where access belongs

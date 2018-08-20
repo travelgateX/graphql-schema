@@ -27,5 +27,5 @@ input AccessInput {
   # Default group where the access will be visible.
   group: ID
   # Access owner
-  owner: String
+  owner: ID
 }

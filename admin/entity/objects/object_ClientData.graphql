@@ -8,5 +8,5 @@ type ClientData {
   # Indicates the group where the Client belongs
   group: Group
   # Client owner
-  owner: String
+  owner: [Group!]
 }
