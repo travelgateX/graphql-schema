@@ -8,4 +8,6 @@ type ProfileData {
   entities: EntityConnection
   # Indicates the group where the Client belongs
   group: Group
+  # Profile owner
+  owner: [Group!]
 }

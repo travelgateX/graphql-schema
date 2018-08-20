@@ -7,4 +7,6 @@ type ClientData {
   isActive: Boolean!
   # Indicates the group where the Client belongs
   group: Group
+  # Client owner
+  owner: [Group!]
 }

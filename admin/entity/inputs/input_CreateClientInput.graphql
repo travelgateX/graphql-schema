@@ -5,4 +5,6 @@ input CreateClientInput {
   isActive: Boolean!
   # Group where the client will be assigned at first
 	group: String!
+  # Client owner
+  owner: ID
 }

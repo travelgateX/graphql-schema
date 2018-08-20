@@ -26,4 +26,6 @@ input AccessInput {
   shared: String
   # Default group where the access will be visible.
   group: ID
+  # Access owner
+  owner: ID
 }

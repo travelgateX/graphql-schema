@@ -3,4 +3,6 @@ type PointOfSaleData {
   code: ID!
   # POS Name
   name: String
+  # POS owner
+  owner: [Group!]
 }
