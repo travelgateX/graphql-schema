@@ -4,5 +4,5 @@ type PointOfSaleData {
   # POS Name
   name: String
   # POS owner
-  owners: GroupConnection
+  owner: Organization
 }
