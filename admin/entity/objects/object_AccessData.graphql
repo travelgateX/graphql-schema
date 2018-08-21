@@ -29,4 +29,6 @@ type AccessData {
   isShedulerActive: Boolean
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
+  # Is scheduler active?
+  isShedulerActive: Boolean
 }
