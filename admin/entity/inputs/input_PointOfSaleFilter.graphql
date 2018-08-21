@@ -1,5 +1,5 @@
 input PointOfSaleFilter {
   code: [ID]
   groupID: [ID]
+  owner: [ID!]
 }
-

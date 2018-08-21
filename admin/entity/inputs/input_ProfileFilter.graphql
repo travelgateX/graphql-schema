@@ -1,4 +1,5 @@
 input ProfileFilter {
   profileIDs: [ID]
   groupIDs: [ID]
+  owner: [ID!]
 }

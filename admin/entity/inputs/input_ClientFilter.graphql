@@ -3,4 +3,5 @@ input ClientFilter {
   name: [String!]
   groupID: [ID]
   isActive: Boolean
+  owner: [ID!]
 }
