@@ -1,0 +1,25 @@
+#template of all fields used by the supplier
+type RuntimeParameter {
+
+  TagRuntime: TagRuntimeType!
+
+  ProviderTagName: String!
+
+  Show: Boolean!
+
+  Pattern: String
+
+  Description: String!
+
+  Type: MetaDataType!
+
+  Key: String
+
+  DefaultValue: String
+
+  ExampleValue: String
+
+  ApplyMethods: [MethodType]!
+
+  PossibleValues: [String]!
+}

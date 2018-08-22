@@ -30,5 +30,5 @@ extend type HotelXQuery {
   mapping(groupCode: String!): Mapping!
 
   # Returns a configuration teamplate of the supplier
-  runtimeConfiguration(code: String!): HotelRuntimeConfiguration
+  runtimeConfiguration(supplierCode: String!): HotelRuntimeConfiguration
 }

@@ -1,0 +1,12 @@
+# Indicates value type of current paramter
+enum MetadataType {
+  eString
+
+  eNumeric
+
+  eBoolean
+
+  eXml
+
+  eUri
+}
