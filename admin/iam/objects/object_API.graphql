@@ -2,7 +2,9 @@ type API implements Node{
   code: ID!
   apiData: APIData
   # Errors that abort services
-  error: [Error!]
+  error: [Error!] @deprecated(reason: "deprecated from 2018-08-22. Sustituted by adviseMessage")
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Date created
   createdAt: DateTime!
   # Date updated
