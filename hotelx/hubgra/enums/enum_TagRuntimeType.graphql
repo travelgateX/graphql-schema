@@ -1,16 +1,16 @@
 # Indicates xml tag used by the current parameter
 enum TagRunTimeType {
-  User
+  USER
 
-  Password
+  PASSWORD
 
-  UrlAvail
+  URLAVAIL
 
-  UrlValuation
+  URLVALUATION
 
-  UrlReservation
+  URLRESERVATION
 
-  UrlGeneric
+  URLGENERIC
 
-  Parameter
+  PARAMETER
 }

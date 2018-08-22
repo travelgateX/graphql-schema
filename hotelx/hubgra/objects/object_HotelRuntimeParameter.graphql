@@ -1,5 +1,5 @@
 #template of all fields used by the supplier
-type RuntimeParameter {
+type HotelRuntimeParameter {
 
   TagRuntime: TagRuntimeType!
 
@@ -18,8 +18,6 @@ type RuntimeParameter {
   DefaultValue: String
 
   ExampleValue: String
-
-  ApplyMethods: [MethodType]!
 
   PossibleValues: [String]!
 }

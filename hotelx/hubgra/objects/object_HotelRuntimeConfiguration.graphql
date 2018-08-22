@@ -1,17 +1,18 @@
-type HotelRuntimeConfiguration  {
+type HotelRuntimeConfiguration implements Node{
 
-  # Application stats in string format
-  stats(token: String!): StatsRequest
+  # Stored card ID
+  code: ID!
 
-  # Data sent and received in native format.
-  auditData: AuditData
+  # HotelRuntimeConfigurationData information
+  hotelRuntimeConfigurationData: HotelRuntimeConfigurationData
 
-  # Specifies whether the method has been implemented for current supplier
-  OperationImplemented: Boolean!
+  # Create date
+  createdAt: DateTime!
 
-  # List of parameters object
-  RuntimeParameters: [RuntimeParameter]!
+  # Update date
+  updatedAt: DateTime!
 
-  # List of advise messages.
+  # List of messages
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
 }
