@@ -1,23 +1,23 @@
 #template of all fields used by the supplier
 type HotelRuntimeParameter {
 
-  TagRuntime: TagRuntimeType!
+  tagRuntime: TagRuntimeType!
 
-  ProviderTagName: String!
+  providerTagName: String!
 
-  Show: Boolean!
+  show: Boolean!
 
-  Pattern: String
+  pattern: String
 
-  Description: String!
+  description: String!
 
-  Type: MetaDataType!
+  type: MetaDataType!
 
-  Key: String
+  key: String
 
-  DefaultValue: String
+  defaultValue: String
 
-  ExampleValue: String
+  exampleValue: String
 
-  PossibleValues: [String]!
+  possibleValues: [String]!
 }
