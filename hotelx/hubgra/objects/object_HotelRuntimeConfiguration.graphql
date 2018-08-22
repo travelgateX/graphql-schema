@@ -1,0 +1,17 @@
+type HotelRuntimeConfiguration  {
+
+  # Application stats in string format
+  stats(token: String!): StatsRequest
+
+  # Data sent and received in native format.
+  auditData: AuditData
+
+  # Specifies whether the method has been implemented for current supplier
+  OperationImplemented: Boolean!
+
+  # List of parameters object
+  RuntimeParameters: [RuntimeParameter]!
+
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

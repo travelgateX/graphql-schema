@@ -1,0 +1,40 @@
+# Indicates the type of request that can be applied for current parameter
+enum MethodType {
+  Avail
+
+  AvailDestinationTree
+
+  Cancel
+
+  CategoryList
+
+  CurrencyList
+
+  DescriptiveInfo
+
+  HotelList
+
+  MarketList
+
+  DescriptiveInfoExtended
+
+  GeographicDestinationTree
+
+  MealPlanList
+
+  MetaData
+
+  ModifyReservation
+
+  ModifyValuation
+
+  Reservation
+
+  ReservationList
+
+  ReservationRead
+
+  RoomList
+
+  Valuation
+}
