@@ -23,6 +23,10 @@ type AccessData {
   rateRules: [RateRulesType!]
   # Parent Access if Shared Access
   shared: Access
+  # Access owner
+  owner: Organization
+  # True if scheduler is active
+  isShedulerActive: Boolean
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
 }
