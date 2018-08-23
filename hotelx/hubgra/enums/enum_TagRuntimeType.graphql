@@ -1,5 +1,5 @@
 # Indicates xml tag used by the current parameter
-enum TagRunTimeType {
+enum TagRuntimeType {
   USER
 
   PASSWORD

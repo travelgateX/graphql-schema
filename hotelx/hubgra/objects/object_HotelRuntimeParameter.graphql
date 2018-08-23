@@ -11,7 +11,7 @@ type HotelRuntimeParameter {
 
   description: String!
 
-  type: MetaDataType!
+  type: MetadataType!
 
   key: String
 
