@@ -1,0 +1,6 @@
+input CommonSettingsDataInput{
+  currency: Currency!
+  businessRules: BusinessRulesInput!
+  timeout: TimeoutInput!
+  audit: AuditInput!
+}

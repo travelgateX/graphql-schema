@@ -1,0 +1,5 @@
+type Audit{
+  audit: Int
+  registerTransactions: Int
+  ratio: Int
+}

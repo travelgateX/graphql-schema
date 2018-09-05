@@ -1,0 +1,10 @@
+type UpdateStatus{
+  # New value set
+  data: UpdateStatusData
+
+  # Errors that abort services
+  errors: [Error!]
+
+  # Potentially harmful situations or errors, but ones that will not forcibly abort the service
+  warnings: [Warning!]
+}

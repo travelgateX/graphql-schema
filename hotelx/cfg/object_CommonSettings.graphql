@@ -1,0 +1,5 @@
+type CommonSettings{
+  settings: CommonSettingsData
+  warnings: [Warning!]
+  errors: [Error!]
+}

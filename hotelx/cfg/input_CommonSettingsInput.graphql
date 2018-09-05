@@ -1,0 +1,6 @@
+input CommonSettingsInput{
+  group: ID!
+  access: ID
+  supplier: ID
+  settings: CommonSettingsDataInput!
+}

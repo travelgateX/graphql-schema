@@ -1,0 +1,8 @@
+input DefaultSettingsInput {
+  # Indicates the group where you will set the default settings
+  group: String!
+  # Indicates to the client where you will set the default settings, it's optional because you can set settings only to the group level.
+  client: String
+  # Default Settings
+  settings: DefaultSettingsDataInput!
+}

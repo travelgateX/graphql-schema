@@ -1,0 +1,4 @@
+type UpdateStatusData{
+  code: ID!
+  isActive: Boolean!
+}

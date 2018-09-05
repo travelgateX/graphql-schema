@@ -1,0 +1,7 @@
+input UpdateStatusInput{
+  group: ID!
+  access: ID
+  supplier: ID
+  client: ID
+  isActive: Boolean!
+}
