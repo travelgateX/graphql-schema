@@ -1,0 +1,18 @@
+type HotelRuntimeConfiguration implements Node{
+
+  # Stored card ID
+  code: ID!
+
+  # HotelRuntimeConfigurationData information
+  hotelRuntimeConfigurationData: HotelRuntimeConfigurationData
+
+  # Create date
+  createdAt: DateTime!
+
+  # Update date
+  updatedAt: DateTime!
+
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
+}
