@@ -1,5 +1,6 @@
 input EntityFilter {
   codes: [ID!]
   groups: [ID!]
+  isActive: Boolean
   owner: [ID!]
 }
