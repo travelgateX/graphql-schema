@@ -4,4 +4,5 @@ input SupplierFilter {
   groupID: [ID]
   isActive: Boolean
   serviceAPI: [Int]
+  owner: [ID!]
  }

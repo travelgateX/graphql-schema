@@ -6,5 +6,5 @@ input CreateProfileInput {
   # Entities of the Profile
   entities: EntitiesInput
   # Profile owner
-  owner: String
+  owner: ID
 }

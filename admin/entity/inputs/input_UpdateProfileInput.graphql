@@ -4,5 +4,5 @@ input UpdateProfileInput {
   # Label of the Profile
   label: String!
   # Profile owner
-  owner: String
+  owner: ID
 }

@@ -3,29 +3,32 @@ extend type HotelXQuery {
   # fares. It will always retrieve all results returned by the suppliers. The availability request is very straight
   # forward. It only requires the criteria of search (destination, travel dates and the number of pax in each room).
   # But you must preload the other fields in our system by complete the fields absents.
-  search(token: String, criteria: HotelCriteriaSearchInput, settings: HotelSettingsInput, filter: FilterInput): HotelSearch
-  
+  search(token: String, criteria: HotelCriteriaSearchInput, settings: HotelSettingsInput, filter: FilterInput, filterSearch: HotelXFilterSearchInput): HotelSearch
+
   # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
-  quote(criteria: HotelCriteriaQuoteInput!, settings: HotelSettingsInput): HotelQuote
-  
+  quote(criteria: HotelCriteriaQuoteInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelQuote
+
   # Returns detailed information about books, you can indicated a list of locators or a range date.
-  booking(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput): HotelBooking
-  
+  booking(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelBooking
+
   # Returns status of the search service.
   searchStatusService: ServiceStatus!
-  
+
   # Returns status of the quote service.
   quoteStatusService: ServiceStatus!
-  
+
   # Returns status of the new booking service.
   bookStatusService: ServiceStatus!
-  
+
   # Returns status of the cancellation service.
   cancelStatusService: ServiceStatus!
-  
+
   # Returns status of the booking service.
   bookingStatusService: ServiceStatus!
-  
+
   # Returns map codes of a group. You can get hotel map, room map, and board map.
   mapping(groupCode: String!): Mapping!
+
+  # Returns a configuration teamplate of the supplier
+  runtimeConfiguration(supplierCode: ID!): HotelRuntimeConfiguration
 }

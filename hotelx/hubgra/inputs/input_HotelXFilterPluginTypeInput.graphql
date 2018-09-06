@@ -1,0 +1,8 @@
+input HotelXFilterPluginTypeInput{
+  # The Step of the plugin to filter
+  step: PluginStepType!
+  # The Type of the plugin to filter
+  type: String!
+  # The Name of the plugin to filter
+  name: String!
+}

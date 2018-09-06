@@ -1,0 +1,6 @@
+type HotelRuntimeConfigurationData {
+
+    # List of parameters object
+    hotelRuntimeParameters: [HotelRuntimeParameter!]!
+
+}
