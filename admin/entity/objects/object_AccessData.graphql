@@ -26,7 +26,7 @@ type AccessData {
   # Access owner
   owner: Organization
   # True if scheduler is active
-  isShedulerActive: Boolean
+  isSchedulerActive: Boolean
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
 }
