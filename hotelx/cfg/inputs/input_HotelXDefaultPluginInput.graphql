@@ -1,4 +1,4 @@
-input DefaultPluginInput {
+input HotelXDefaultPluginInput {
   step: PluginStepType!
   type: PluginType!
   name: String!

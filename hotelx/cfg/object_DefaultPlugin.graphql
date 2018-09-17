@@ -1,7 +1,0 @@
-type DefaultPlugin {
-  step: PluginStepType!
-  type: PluginType!
-  name: String!
-  run: [Parameter!]
-  init: [Parameter!]
-}

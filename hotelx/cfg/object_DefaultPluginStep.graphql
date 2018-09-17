@@ -1,4 +1,0 @@
-type DefaultPluginStep {
-  step: String!
-  plugins: [DefaultPlugin!]!
-}

@@ -1,4 +1,4 @@
-input DefaultSettingsDataInput {
+type HotelXDefaultSettingsData {
   # Indicates the client that do the transaction.
   client: String!
   # Indicates the context of the I/O codes (hotel, board, room and rates)
@@ -12,11 +12,13 @@ input DefaultSettingsDataInput {
   # Targeted zone, country or point of sale to be used in request.
   market : String!
   # Group of timeouts to be used in the differents services
-  timeout : TimeoutInput!
+  timeout : Timeout!
   # Business rules.
-  businessRules: BusinessRulesInput!
-  # Indicates the default accesses that will added to access list in the Query
-  defaultAccesses: [ID!]
-  # Indica
-  defaultPlugins: [DefaultPluginStepInput!]
+  businessRules: BusinessRules!
+  # Default acceses
+  accesses: [String!]
+  # Cache accesses
+  cache: [String!]
+  # Default plugins
+  plugins: [HotelXDefaultPluginStep!]
 }

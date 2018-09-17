@@ -1,8 +1,8 @@
-type DefaultSettings {
+type HotelXDefaultSettings {
   # Data
-  settings: DefaultSettingsData
+  settings: HotelXDefaultSettingsData
   # Errors that will lead the service to abort
-  errors: [Error!]
+  errors: [AdviseMessage!]
   # Potentially  harmful situations or errors that won't force the service to abort
-  warnings: [Warning!]
+  warnings: [AdviseMessage!]
 }

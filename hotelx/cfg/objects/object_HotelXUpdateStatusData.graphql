@@ -1,4 +1,4 @@
-type UpdateStatusData{
+type HotelXUpdateStatusData{
   code: ID!
   isActive: Boolean!
 }

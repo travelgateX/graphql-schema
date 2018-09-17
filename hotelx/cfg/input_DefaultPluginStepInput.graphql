@@ -1,4 +1,0 @@
-input DefaultPluginStepInput{
-  step: PluginStepType!
-  plugins: [DefaultPluginInput!]!
-}

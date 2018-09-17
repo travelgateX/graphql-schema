@@ -1,10 +1,10 @@
-type UpdateStatus{
+type HotelXUpdateStatus implements Node{
   # New value set
-  data: UpdateStatusData
+  data: HotelXUpdateStatusData
 
   # Errors that abort services
-  errors: [Error!]
+  errors: [AdviseMessage!]
 
   # Potentially harmful situations or errors, but ones that will not forcibly abort the service
-  warnings: [Warning!]
+  warnings: [AdviseMessage!]
 }

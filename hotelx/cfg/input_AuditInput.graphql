@@ -1,6 +1,0 @@
-input AuditInput{
-  audit: Int!
-  registerTransactions: Int!
-  # Ratio of audit in ms
-  ratio: Int!
-}

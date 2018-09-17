@@ -1,4 +1,4 @@
-input UpdateStatusInput{
+input HotelXUpdateStatusInput{
   group: ID!
   access: ID
   supplier: ID

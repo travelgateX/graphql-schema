@@ -1,6 +1,6 @@
-type CommonSettingsData{
+type HotelXCommonSettingsData{
   currency: Currency
   businessRules: BusinessRules
   timeout: Timeout
-  audit: Audit
+  audit: HotelXAudit
 }
