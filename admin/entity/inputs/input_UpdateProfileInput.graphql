@@ -2,7 +2,11 @@ input UpdateProfileInput {
   # Profile Code
   code: ID!
   # Label of the Profile
-  label: String!
+  label: String
   # Profile owner
   owner: ID
+  # Active profile
+  isActive: Boolean
+  # Profile is published
+  isPublished: Boolean 
 }

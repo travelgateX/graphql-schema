@@ -10,4 +10,8 @@ type ProfileData {
   group: Group
   # Profile owner
   owner: Organization
+  # Active profile
+  isActive: Boolean
+  # Profile is published
+  isPublished: Boolean
 }

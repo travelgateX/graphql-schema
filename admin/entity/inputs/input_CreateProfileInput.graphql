@@ -7,4 +7,8 @@ input CreateProfileInput {
   entities: EntitiesInput
   # Profile owner
   owner: ID
+  # Active profile
+  isActive: Boolean
+  # Profile is published
+  isPublished: Boolean 
 }
