@@ -2,7 +2,7 @@ type ClientData {
   # ID identifier of a Client
   code: ID!
   # Client complete name
-  name: String!
+  name: ID!
   # Indicates whether a Client is active or inactive
   isActive: Boolean!
   # Indicates the group where the Client belongs
