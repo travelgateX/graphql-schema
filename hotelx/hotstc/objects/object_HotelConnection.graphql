@@ -1,6 +1,7 @@
 # HotelList definition
 type HotelConnection {
   edges: [HotelEdge]
+  # Identifies the total count of items in the connection.
   count: Int!
   token: String
   # Indicates info about page
