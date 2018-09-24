@@ -1,0 +1,13 @@
+extend type HotelXQuery {
+  # Returns status of the hotelX configuration service.
+  hotelConfigurationStatusService: ServiceStatus!
+
+  # Obtains the default settings of a group or of the client in the group.
+  defaultSettings(group: ID!, clientName: ID): HotelXDefaultSettings
+
+  commonSettings(group: ID!, access: ID, supplier: ID): HotelXCommonSettings
+
+  downloadRooms(accessCode: ID!): String!
+
+  downloadHotels(accessCode: ID!): String!
+}

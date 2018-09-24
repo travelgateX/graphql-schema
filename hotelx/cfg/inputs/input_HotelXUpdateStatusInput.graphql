@@ -2,6 +2,6 @@ input HotelXUpdateStatusInput{
   group: ID!
   access: ID
   supplier: ID
-  client: ID
+  clientName: ID
   isActive: Boolean!
 }

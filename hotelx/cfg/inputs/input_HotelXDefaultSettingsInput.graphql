@@ -1,8 +1,8 @@
 input HotelXDefaultSettingsInput {
   # Indicates the group where you will set the default settings
-  group: String!
+  group: ID!
   # Indicates to the client's name where you will set the default settings, it's optional because you can set settings only to the group level.
-  clientName: String
+  clientName: ID
   # Default Settings
   settings: HotelXDefaultSettingsDataInput!
 }
