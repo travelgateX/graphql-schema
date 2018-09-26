@@ -10,6 +10,12 @@ input StatsFilterInput {
   # List of suppliers
   suppliers: [ID!]
   
+  # List of clients
+  clients: [ID!]
+  
+  # Buyer or Seller
+  mode: ModeType!
+  
   # List of services apis
   serviceApis: [ServiceApiType!]
   
