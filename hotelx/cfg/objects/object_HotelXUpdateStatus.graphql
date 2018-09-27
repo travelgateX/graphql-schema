@@ -2,11 +2,14 @@ type HotelXUpdateStatus implements Node{
   code: ID!
 
   # New value set
-  data: HotelXUpdateStatusData
+  hotelXUpdateStatusData: HotelXUpdateStatusData
 
-  # Errors that abort services
-  errors: [AdviseMessage!]
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 
-  # Potentially harmful situations or errors, but ones that will not forcibly abort the service
-  warnings: [AdviseMessage!]
+  # Date created
+  createdAt: DateTime!
+
+  # Date updated
+  updatedAt: DateTime!
 }
