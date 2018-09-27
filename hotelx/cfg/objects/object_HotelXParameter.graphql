@@ -1,0 +1,4 @@
+type HotelXParameter {
+  key: String!
+  value: String!
+}

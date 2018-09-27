@@ -28,7 +28,4 @@ extend type HotelXQuery {
 
   # Returns map codes of a group. You can get hotel map, room map, and board map.
   mapping(groupCode: String!): Mapping!
-
-  # Returns a configuration teamplate of the supplier
-  runtimeConfiguration(supplierCode: ID!): HotelRuntimeConfiguration
 }

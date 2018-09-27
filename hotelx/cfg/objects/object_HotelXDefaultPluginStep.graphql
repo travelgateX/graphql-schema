@@ -1,0 +1,4 @@
+type HotelXDefaultPluginStep {
+  step: String!
+  plugins: [HotelXDefaultPlugin!]!
+}
