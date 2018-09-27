@@ -1,0 +1,5 @@
+type HotelXCommonSettings{
+  settings: HotelXCommonSettingsData
+  warnings: [AdviseMessage!]
+  errors: [AdviseMessage!]
+}
