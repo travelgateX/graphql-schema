@@ -1,0 +1,7 @@
+type HotelXDefaultPlugin {
+  step: PluginStepType!
+  type: PluginType!
+  name: String!
+  run: [HotelXParameter!]
+  init: [HotelXParameter!]
+}

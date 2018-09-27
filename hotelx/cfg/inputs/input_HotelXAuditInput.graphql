@@ -1,0 +1,6 @@
+input HotelXAuditInput{
+  audit: Boolean!
+  register: Boolean!
+  # Ratio of audit in ms
+  ratio: Int!
+}

@@ -1,0 +1,12 @@
+type HotelXUpdateStatus implements Node{
+  code: ID!
+
+  # New value set
+  data: HotelXUpdateStatusData
+
+  # Errors that abort services
+  errors: [AdviseMessage!]
+
+  # Potentially harmful situations or errors, but ones that will not forcibly abort the service
+  warnings: [AdviseMessage!]
+}
