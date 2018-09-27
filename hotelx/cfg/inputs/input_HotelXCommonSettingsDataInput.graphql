@@ -1,6 +1,6 @@
 input HotelXCommonSettingsDataInput{
   currency: Currency!
-  businessRules: HotelXBusinessRulesInput!
+  businessRules: BusinessRulesType!
   timeout: TimeoutInput!
   audit: HotelXAuditInput!
 }
