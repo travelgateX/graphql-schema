@@ -4,6 +4,8 @@ type ProfileData {
   code: ID!
   # Profile label
   label: String
+  # Profile type
+  type: ProfileType
   # Profile Entities (suppliers/clients)
   entities: EntityConnection
   # Indicates the group where the Client belongs
