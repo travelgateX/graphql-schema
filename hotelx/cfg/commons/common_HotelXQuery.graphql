@@ -6,8 +6,4 @@ extend type HotelXQuery {
   defaultSettings(group: ID!, clientName: ID): HotelXDefaultSettings
 
   commonSettings(group: ID!, access: ID, supplier: ID): HotelXCommonSettings
-
-  downloadRooms(accessCode: ID!): String!
-
-  downloadHotels(accessCode: ID!): String!
 }
