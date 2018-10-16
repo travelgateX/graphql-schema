@@ -2,6 +2,8 @@ type MemberData {
   id: ID!
   code: ID!
   label: String
+  # Can members does queries in the platform?
+  isActive: Boolean!
   # Member Type
   type: MemberType!
   # which groups the member is in?
