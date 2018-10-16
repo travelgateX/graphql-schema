@@ -1,0 +1,17 @@
+# HotelDestination type.
+type HotelDestination implements Node {
+  # Hotel Destination ID
+  code: ID!
+
+  # Hotel Destination data
+  hotelDestinationData: HotelDestinationData
+
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
+  # Date created
+  createdAt: DateTime!
+
+  # Date updated
+  updatedAt: DateTime!
+}

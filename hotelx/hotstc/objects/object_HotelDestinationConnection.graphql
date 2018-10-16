@@ -1,0 +1,6 @@
+# Hotel destination list definition
+type HotelDestinationConnection {
+  edges: [HotelDestinationEdge]
+  # Indicates info about page
+  pageInfo: PageInfo!
+}

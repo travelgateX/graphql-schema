@@ -1,0 +1,6 @@
+# SourceDestination contain detail infomation of hotel location
+type SourceDestination {
+
+  # Contain destination hierarchy data of hotel
+  geoname : Geoname!
+}

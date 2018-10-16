@@ -11,7 +11,7 @@ type Location {
   
   # Country where is the Hotel.
   country: Country!
-  
+
   # Geographical coordinates corresponding to a location.
   coordinates: Coordinates
   
@@ -20,4 +20,7 @@ type Location {
 
   #Airports
   airports:[Airport!]
+
+  # Detailed information about the destinations
+  sourceDestination: SourceDestination!
 }
