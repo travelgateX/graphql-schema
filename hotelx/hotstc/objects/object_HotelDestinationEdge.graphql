@@ -1,0 +1,5 @@
+# HotelDestinations Edge definition
+type HotelDestinationEdge {
+  node: HotelDestination
+  cursor: String!
+}

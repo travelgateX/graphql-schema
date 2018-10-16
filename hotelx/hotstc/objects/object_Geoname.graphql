@@ -1,0 +1,6 @@
+# Geoname contain destination hierarchy data
+type Geoname{
+    edges: [HotelDestinationEdge]
+    # Indicates info about page
+    pageInfo: PageInfo!
+}
