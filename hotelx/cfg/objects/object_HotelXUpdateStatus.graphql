@@ -1,0 +1,15 @@
+type HotelXUpdateStatus implements Node{
+  code: ID!
+
+  # New value set
+  hotelXUpdateStatusData: HotelXUpdateStatusData
+
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
+  # Date created
+  createdAt: DateTime!
+
+  # Date updated
+  updatedAt: DateTime!
+}

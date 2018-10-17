@@ -1,0 +1,14 @@
+extend type HotelXMutation {
+  # Saves defaults settings to HotelX
+  createDefaultSettings(group: ID!, clientName: ID, settings: HotelXDefaultSettingsDataInput!): HotelXDefaultSettings
+
+  # Updates defaults settings to HotelX
+  updateDefaultSettings(group: ID!, clientName: ID, settings: HotelXDefaultSettingsDataInput!): HotelXDefaultSettings
+
+  # Updates status of an entity of HotelX
+  updateStatus(group: ID!, access: ID, supplier: ID, clientName: ID, isActive: Boolean!): HotelXUpdateStatus
+
+  createCommonSettings(group: ID!, access: ID, supplier: ID settings:HotelXCommonSettingsDataInput!): HotelXCommonSettings
+
+  updateCommonSettings(group: ID!, access: ID, supplier: ID, settings: HotelXCommonSettingsDataInput!): HotelXCommonSettings
+}

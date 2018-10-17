@@ -1,0 +1,5 @@
+type HotelXCommonSettings{
+  settings: HotelXCommonSettingsData
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

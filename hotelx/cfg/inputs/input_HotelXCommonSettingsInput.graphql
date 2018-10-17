@@ -1,0 +1,6 @@
+input HotelXCommonSettingsInput{
+  group: ID!
+  access: ID
+  supplier: ID
+  settings: HotelXCommonSettingsDataInput!
+}
