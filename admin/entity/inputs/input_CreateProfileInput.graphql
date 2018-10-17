@@ -3,6 +3,8 @@ input CreateProfileInput {
   label: String!
   # Group where Profile has to be placed
   group: String!
+  # Profile type
+  type: ProfileType!
   # Entities of the Profile
   entities: EntitiesInput
   # Profile owner

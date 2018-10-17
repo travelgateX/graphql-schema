@@ -3,6 +3,8 @@ input UpdateProfileInput {
   code: ID!
   # Label of the Profile
   label: String
+  # Profile type
+  type: ProfileType
   # Profile owner
   owner: ID
   # Active profile
