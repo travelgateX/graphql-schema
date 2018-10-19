@@ -1,13 +1,13 @@
-# Hotel Destination data
-type HotelDestinationData {
-  # destination code
+# Geoname data, which contain a reference to his parent location
+type GeonameData {
+  # location code
   code: ID!
 
-  # name of destination
-  naem: String!
+  # name of location
+  name: String!
 
-  # Parent destination
-  parent: HotelDestination
+  # Parent location
+  parent: Geoname
 
   # Indicates destination type, zone, city or country
   type: DestinationType

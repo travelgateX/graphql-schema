@@ -1,0 +1,5 @@
+# Geoname list edge definition
+type GeonameEdge {
+  node: GeonameData
+  cursor: String!
+}

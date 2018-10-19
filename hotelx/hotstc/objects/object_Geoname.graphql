@@ -1,6 +1,17 @@
-# Geoname contain destination hierarchy data
-type Geoname{
-    edges: [HotelDestinationEdge]
-    # Indicates info about page
-    pageInfo: PageInfo!
+# Geoname type
+type Geoname implements Node {
+  # Hotel Destination ID
+  code: ID!
+
+  # geoname data
+  geonameData: GeonameData
+
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
+  # Date created
+  createdAt: DateTime!
+
+  # Date updated
+  updatedAt: DateTime!
 }
