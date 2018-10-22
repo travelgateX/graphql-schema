@@ -78,15 +78,25 @@ for path_file in recursive_glob(os.path.join(os.path.abspath("."), path_search),
     for gist in gist_file.get_all_gists():
         logger.writeLog("\n")
         gobject = gist_file.extract_function_gist(gist)
+
         if utils.getVerbose:
             logger.writeLog("Checking gist: " + gist.gid)
             logger.writeLog(str(gist))
             if gist.type == utils.GIST_TYPE.DOC:
                 logger.writeLog("Avoid this gist cause is a Documentation gist")
                 continue
+        if "404: Not Found" in gobject.query:
+            logger.writeLog("Error downloading gist from GitHub with id " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+            continue
         if gist.check_type == utils.GIST_CHECK_TYPE.JSON:
+            if "404: Not Found" in gobject.result:
+                logger.writeLog("Error downloading gist from GitHub with id " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+                continue
             check = graphql_client.check_result(gobject.query, gobject.result)
         else:
+            if "404: Not Found" in gobject.callback:
+                logger.writeLog("Error downloading gist from GitHub with id " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+                continue
             check = call_callback(gobject, logger, gist)
                 
         logger.writeLog("Gist: " + gist.gid + " Passed: " + str(check))
