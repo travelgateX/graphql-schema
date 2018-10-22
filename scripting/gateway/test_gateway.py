@@ -63,7 +63,7 @@ if not path_search:
     sys.exit(-1)
 
 # Initialize graphql client
-graphql_client = GraphQLClient(utils.GRAPH_URL_IAM)
+graphql_client = GraphQLClient(utils.GRAPH_URL)
 graphql_client.inject_token(utils.GRAPH_TOKEN)
 
 # Clean cache
