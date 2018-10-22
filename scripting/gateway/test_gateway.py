@@ -18,6 +18,9 @@ from logger import LogClient
 from gists import GistFile, GObject
 from graphql_client import GraphQLClient
 
+class CallbackException(Exception):
+    pass
+
 def recursive_glob(rootdir='.', suffix=''):
     files = []
     for root, dirnames, filenames in os.walk(rootdir):
@@ -36,12 +39,19 @@ def call_callback(gobject, logger, gist):
         callback_module = __import__('callback')
         callback_method = getattr(callback_module, "callback")
         response_result = graphql_client.execute(gobject.query)
-        check = callback_method(gobject, response_result, logger)
-    except Exception, e:
-        print (e.message)
+        try:
+            check = callback_method(gobject, response_result, logger)
+        except Exception as e:
+            raise CallbackException(e.message)
+    except CallbackException as ex_callback:
+        logger.writeLog("Error into callback, error message: " + ex_callback.message, utils.LOG_LEVEL.ERROR)
+    except Exception as e:
+        logger.writeLog("Error importing callback or executing query: " + e.message, utils.LOG_LEVEL.ERROR)
     finally:
         del sys.modules['callback']
         os.remove(os.path.join(os.path.dirname(__file__), "callback.py"))
+        if os.path.exists(os.path.join(os.path.dirname(__file__), "callback.pyc")):
+            os.remove(os.path.join(os.path.dirname(__file__), "callback.pyc"))
     return check
 
 parser = OptionParser()
