@@ -8,6 +8,15 @@
             "level": 2,
             "type": 0,
             "check-type": 1
-		}
+		},
+        {
+            "id": 2,
+            "user": "amian84",
+            "gist-id": "843c6d156e2586bca00f36f9461618b8",
+            "gist-bck": "843c6d156e2586bca00f36f9461618b8",
+            "level": 2,
+            "type": 0,
+            "check-type": 0
+        }
     ]
 }
