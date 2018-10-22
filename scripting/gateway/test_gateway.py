@@ -69,8 +69,9 @@ parser.add_option("-v", "--verbose", action="store_true", default=False, dest="v
 
 (options, args) = parser.parse_args()
 # Initialize Logger
-logger = LogClient(os.path.join(os.path.dirname(__file__),datetime.datetime.now().strftime("%Y%m%d-%H%M")))
-
+#logger = LogClient(os.path.join(os.path.dirname(__file__),datetime.datetime.now().strftime("%Y%m%d")))
+logger = LogClient(os.path.join(os.path.dirname(__file__),"logger"))
+logger.rotateLogs()
 # Store arguments and check them
 path_search = options.path_search
 utils.setVerbose(options.verbose)
