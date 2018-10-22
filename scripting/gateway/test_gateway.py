@@ -54,6 +54,13 @@ def call_callback(gobject, logger, gist):
             os.remove(os.path.join(os.path.dirname(__file__), "callback.pyc"))
     return check
 
+def check_404(downloaded_str, logger, gobject):
+    if "404: Not Found" in downloaded_str:
+        logger.writeLog("Error downloading gist from GitHub with id " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+        logger.writeResult(gobject.gist_info.gid, check, gobject.gist_info.level)
+        return True
+    return False
+
 parser = OptionParser()
 parser.add_option("-p", "--path", dest="path_search",
                   help="Specify the PATH relative to graphql-schema repo dir", metavar="PATH")
@@ -88,29 +95,27 @@ for path_file in recursive_glob(os.path.join(os.path.abspath("."), path_search),
     for gist in gist_file.get_all_gists():
         logger.writeLog("\n")
         gobject = gist_file.extract_function_gist(gist)
-
-        if utils.getVerbose:
+        check = False
+        if utils.getVerbose():
             logger.writeLog("Checking gist: " + gist.gid)
             logger.writeLog(str(gist))
             if gist.type == utils.GIST_TYPE.DOC:
                 logger.writeLog("Avoid this gist cause is a Documentation gist")
                 continue
-        if "404: Not Found" in gobject.query:
-            logger.writeLog("Error downloading gist from GitHub with id " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+        if check_404(gobject.query, logger, gobject):
             continue
         if gist.check_type == utils.GIST_CHECK_TYPE.JSON:
-            if "404: Not Found" in gobject.result:
-                logger.writeLog("Error downloading gist from GitHub with id " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+            if check_404(gobject.result, logger, gobject):
                 continue
             check = graphql_client.check_result(gobject.query, gobject.result)
         else:
-            if "404: Not Found" in gobject.callback:
-                logger.writeLog("Error downloading gist from GitHub with id " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+            if check_404(gobject.callback, logger, gobject):
                 continue
             check = call_callback(gobject, logger, gist)
                 
         logger.writeLog("Gist: " + gist.gid + " Passed: " + str(check))
         logger.writeLog("\n")
+        logger.writeResult(gist.gid, check, gist.level)
     logger.writeLog("===================================================")
 
 
