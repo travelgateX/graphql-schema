@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-__author__ = "David Amian <damian@xmltravelgate.com>"
-__copyright__ = "Copyright (C) 2018, TravelgateX"
-__license__ = "GPL-2"
-
 import os
 import graphql
 import sys
@@ -12,14 +8,19 @@ import glob
 import datetime
 import utils
 import tempfile
-import urllib
 from optparse import OptionParser
 from logger import LogClient
 from gists import GistFile, GObject
 from graphql_client import GraphQLClient
 
+__author__ = "David Amian <damian@xmltravelgate.com>"
+__copyright__ = "Copyright (C) 2018, TravelgateX"
+__license__ = "GPL-2"
+
+
 class CallbackException(Exception):
     pass
+
 
 def recursive_glob(rootdir='.', suffix=''):
     files = []
@@ -27,10 +28,11 @@ def recursive_glob(rootdir='.', suffix=''):
         files.extend(glob.glob(root + "/*" + suffix))
     return files
 
+
 def call_callback(gobject, logger, gist):
-    with open(os.path.join(os.path.dirname(__file__), "callback.py"), "w") as temp_file:
+    callback_file = os.path.join(os.path.dirname(__file__), "callback.py")
+    with open(callback_file, "w") as temp_file:
         temp_file.write(gobject.callback)
-    
     check = False
     try:
         if utils.getVerbose():
@@ -44,39 +46,67 @@ def call_callback(gobject, logger, gist):
         except Exception as e:
             raise CallbackException(e.message)
     except CallbackException as ex_callback:
-        logger.writeLog("Error into callback, error message: " + ex_callback.message, utils.LOG_LEVEL.ERROR)
+        logger.writeLog(
+            "Error into callback, error message: " + ex_callback.message,
+            utils.LOG_LEVEL.ERROR
+        )
     except Exception as e:
-        logger.writeLog("Error importing callback or executing query: " + e.message, utils.LOG_LEVEL.ERROR)
+        logger.writeLog(
+            "Error importing callback or executing query: " + e.message,
+            utils.LOG_LEVEL.ERROR
+        )
     finally:
         del sys.modules['callback']
-        os.remove(os.path.join(os.path.dirname(__file__), "callback.py"))
-        if os.path.exists(os.path.join(os.path.dirname(__file__), "callback.pyc")):
-            os.remove(os.path.join(os.path.dirname(__file__), "callback.pyc"))
+        os.remove(callback_file)
+        if os.path.exists(callback_file + "c"):
+            os.remove(callback_file + "c")
     return check
+
 
 def check_404(downloaded_str, logger, gobject):
     if "404: Not Found" in downloaded_str:
-        logger.writeLog("Error downloading gist from GitHub with id " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
-        logger.writeResult(gobject.gist_info.gid, check, gobject.gist_info.level)
+        logger.writeLog(
+            "Error downloading gist from GitHub with id " + gobject.gist_info.gid,
+            utils.LOG_LEVEL.ERROR)
+        logger.writeResult(
+            gobject.gist_info.gid,
+            check,
+            gobject.gist_info.level)
         return True
     return False
 
 parser = OptionParser()
-parser.add_option("-p", "--path", dest="path_search",
-                  help="Specify the PATH relative to graphql-schema repo dir", metavar="PATH")
-parser.add_option("-v", "--verbose", action="store_true", default=False, dest="verbose", help="Show more output message")
+parser.add_option(
+    "-p", "--path",
+    dest="path_search",
+    help="Specify the PATH relative to graphql-schema repo dir",
+    metavar="PATH"
+)
+parser.add_option(
+    "-v",
+    "--verbose",
+    action="store_true",
+    default=False,
+    dest="verbose",
+    help="Show more output message"
+)
 
 
 (options, args) = parser.parse_args()
 # Initialize Logger
-#logger = LogClient(os.path.join(os.path.dirname(__file__),datetime.datetime.now().strftime("%Y%m%d")))
-logger = LogClient(os.path.join(os.path.dirname(__file__),"logger"))
+# logger = LogClient(
+#                    os.path.join(os.path.dirname(__file__),
+#                    datetime.datetime.now().strftime("%Y%m%d")))
+logger = LogClient(os.path.join(os.path.dirname(__file__), "logger"))
 logger.rotateLogs()
 # Store arguments and check them
 path_search = options.path_search
 utils.setVerbose(options.verbose)
 if not path_search:
-    logger.writeLog ("ERROR: Wrong argument for microservice path", utils.LOG_LEVEL.ERROR)
+    logger.writeLog(
+        "ERROR: Wrong argument for microservice path",
+        utils.LOG_LEVEL.ERROR
+    )
     parser.print_help()
     sys.exit(-1)
 
@@ -111,10 +141,7 @@ for path_file in recursive_glob(os.path.join(os.path.abspath("."), path_search),
             if check_404(gobject.callback, logger, gobject):
                 continue
             check = call_callback(gobject, logger, gist)
-                
         logger.writeLog("Gist: " + gist.gid + " Passed: " + str(check))
         logger.writeLog("\n")
         logger.writeResult(gist.gid, check, gist.level)
     logger.writeLog("===================================================")
-
-

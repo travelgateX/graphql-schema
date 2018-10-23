@@ -15,12 +15,14 @@ CALLBACK_FILE = "callback.py"
 BASE_URL = "https://gist.githubusercontent.com/$$USER$$/$$GID$$/"
 RAW = "raw/$$FILE$$"
 
+
 class GObject:
     def __init__(self, gist_info, query, result, callback):
         self.gist_info = gist_info
         self.query = query
         self.result = result
         self.callback = callback
+
 
 class GistFile:
     class __GistObject:
@@ -32,6 +34,7 @@ class GistFile:
             self.type = type_gist
             self.level = level
             self.check_type = ctype
+
         def __str__(self):
             return_str = """GIST INFO
             **************
@@ -44,22 +47,40 @@ class GistFile:
             CHECK_TYPE: {6}
             **************
             """
-            return return_str.format(self.idJson, self.user, self.gid, self.gidbk, self.type, self.level, self.check_type)
-
+            return return_str.format(
+                self.idJson,
+                self.user,
+                self.gid,
+                self.gidbk,
+                self.type,
+                self.level,
+                self.check_type
+            )
 
     def __init__(self, path):
         self.__gists = []
         with open(path) as f:
             data = json.load(f)
             for gist in data['gists']:
-                self.__gists.append(GistFile.__GistObject(gist['id'], gist['user'], gist['gist-id'], gist['gist-bck'], gist['type'], gist['level'], gist['check-type']))
+                self.__gists.append(
+                    GistFile.__GistObject(
+                        gist['id'],
+                        gist['user'],
+                        gist['gist-id'],
+                        gist['gist-bck'],
+                        gist['type'],
+                        gist['level'],
+                        gist['check-type']
+                    )
+                )
 
     def get_all_gists(self):
         return self.__gists
 
     def extract_function_gist(self, gistObject):
         logger = LogClient("")
-        url_base = BASE_URL.replace("$$USER$$", gistObject.user).replace("$$GID$$", gistObject.gid)
+        url_base = BASE_URL.replace("$$USER$$", gistObject.user)
+        url_base = url_base.replace("$$GID$$", gistObject.gid)
         url_query = url_base + RAW.replace("$$FILE$$", QUERY_FILE)
         url_result = url_base + RAW.replace("$$FILE$$", RESULT_FILE)
         url_callback = url_base + RAW.replace("$$FILE$$", CALLBACK_FILE)
@@ -80,9 +101,5 @@ class GistFile:
             logger.writeLog(result_str)
             logger.writeLog("Callback: ")
             logger.writeLog(callback_str)
-            
         logger.writeLog("Done.")
         return GObject(gistObject, query_file, result_file, callback_file)
-
-
-

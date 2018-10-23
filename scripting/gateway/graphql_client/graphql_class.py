@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import json
+from six.moves import urllib
+
 __author__ = "David Amian <damian@xmltravelgate.com>"
 __copyright__ = "Copyright (C) 2018, TravelgateX"
 __license__ = "GPL-2"
 
-import json
-from six.moves import urllib
 
 class GraphQLClient:
     """Class to use GraphQL on Python 3.6.
@@ -30,7 +31,9 @@ class GraphQLClient:
         if self.token is not None:
             headers['Authorization'] = '{}'.format(self.token)
 
-        data_str = json.dumps(data).replace('"%false%"', 'false').replace('"%true%"', 'true').replace('"%null%"', 'null').encode('utf-8')
+        data_str = json.dumps(data).replace('"%false%"', 'false')
+        data_str = data_str.replace('"%true%"', 'true')
+        data_str = data_str.replace('"%null%"', 'null').encode('utf-8')
         req = urllib.request.Request(self.endpoint, data_str, headers)
 
         try:
@@ -40,11 +43,12 @@ class GraphQLClient:
         except urllib.error.HTTPError as e:
             print((e.read()))
             raise e
-    
+
     def check_result(self, query, result):
         result_json = self._send(query, None)
         expected_result_json = json.loads(result.decode('utf-8'))
-        if json.dumps(result_json, sort_keys=True) == json.dumps(expected_result_json, sort_keys=True):
+        sort_result = json.dumps(result_json, sort_keys=True)
+        sort_expected_result = json.dumps(expected_result_json, sort_keys=True)
+        if sort_result == sort_expected_result:
             return True
         return False
-         
