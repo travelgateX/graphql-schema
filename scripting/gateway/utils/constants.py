@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 import requests
 
 __author__ = "David Amian <damian@xmltravelgate.com>"
@@ -22,29 +23,35 @@ class GIST_TYPE:
     DOC = 1
     BOTH = 2
 
+
 class GIST_CHECK_TYPE:
     JSON = 0
     CALLBACK = 1
+
 
 class GIST_LEVEL:
     CRITICAL = 2
     MEDIUM = 1
     LOW = 0
 
+
 class LOG_LEVEL:
     ERROR = "err"
     LOG = "log"
     WARN = "warn"
 
+
 def getVerbose():
     return VERBOSE
+
 
 def setVerbose(verbose_value):
     global VERBOSE
     VERBOSE = verbose_value
 
+
 def getStrContent(url):
     ret_value = None
     with requests.get(url, stream=True, headers={'Cache-Control':'no-cache'}) as resp:
         ret_value = resp.content
-    return ret_value
+    return str(ret_value)
