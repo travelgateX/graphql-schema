@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import json
-import urllib
 import utils
 from logger import LogClient
 
@@ -65,13 +64,13 @@ class GistFile:
         url_result = url_base + RAW.replace("$$FILE$$", RESULT_FILE)
         url_callback = url_base + RAW.replace("$$FILE$$", CALLBACK_FILE)
         logger.writeLog("Extracting gist object from: " + url_base)
-        query_file = urllib.urlopen(url_query).read()
+        query_file = utils.getStrContent(url_query)
         result_file = None
         callback_file = None
         if gistObject.check_type == utils.GIST_CHECK_TYPE.JSON:
-            result_file = urllib.urlopen(url_result).read()
+            result_file = utils.getStrContent(url_result)
         else:
-            callback_file = urllib.urlopen(url_callback).read()
+            callback_file = utils.getStrContent(url_callback)
         if utils.getVerbose():
             logger.writeLog("Query: ")
             logger.writeLog(query_file)

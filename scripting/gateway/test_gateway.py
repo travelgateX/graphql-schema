@@ -84,8 +84,6 @@ if not path_search:
 graphql_client = GraphQLClient(utils.GRAPH_URL)
 graphql_client.inject_token(utils.GRAPH_TOKEN)
 
-# Clean cache
-urllib.urlcleanup()
 
 # Get all gist for that direcotry and subdirs
 for path_file in recursive_glob(os.path.join(os.path.abspath("."), path_search), '.gist'):

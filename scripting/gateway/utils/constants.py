@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import requests
 
 __author__ = "David Amian <damian@xmltravelgate.com>"
 __copyright__ = "Copyright (C) 2018, TravelgateX"
@@ -41,3 +42,9 @@ def getVerbose():
 def setVerbose(verbose_value):
     global VERBOSE
     VERBOSE = verbose_value
+
+def getStrContent(url):
+    ret_value = None
+    with requests.get(url, stream=True, headers={'Cache-Control':'no-cache'}) as resp:
+        ret_value = resp.content
+    return ret_value
