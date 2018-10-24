@@ -10,9 +10,9 @@ type GeonameData {
   parent: Geoname!
 
   # Indicates destination type, zone, city or country
-  type: DestinationType
+  type: DestinationType!
 
   # Geographical coordinates corresponding to a location.
-  coordinates: Coordinates
+  coordinates: Coordinates!
 
 }
