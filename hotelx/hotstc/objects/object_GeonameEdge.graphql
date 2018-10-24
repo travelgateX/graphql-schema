@@ -1,5 +1,0 @@
-# Geoname list edge definition
-type GeonameEdge {
-  node: Geoname
-  cursor: String!
-}
