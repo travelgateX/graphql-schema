@@ -1,6 +1,0 @@
-# SourceDestination contain detail infomation of hotel's location
-type SourceDestination {
-
-  # Contain location hierarchy data of hotel
-  geonames : GeonameConnection!
-}
