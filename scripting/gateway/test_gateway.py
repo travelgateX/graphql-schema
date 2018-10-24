@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-import graphql
 import sys
 import glob
 import datetime
@@ -19,7 +18,8 @@ __license__ = "GPL-2"
 
 
 class CallbackException(Exception):
-    pass
+    def __init__(self, message):
+        super().__init__(message)
 
 
 def recursive_glob(rootdir='.', suffix=''):
@@ -44,15 +44,15 @@ def call_callback(gobject, logger, gist):
         try:
             check = callback_method(gobject, response_result, logger)
         except Exception as e:
-            raise CallbackException(e.message)
+            raise CallbackException(e)
     except CallbackException as ex_callback:
         logger.writeLog(
-            "Error into callback, error message: " + ex_callback.message,
+            "Error into callback, error message: " + str(ex_callback),
             utils.LOG_LEVEL.ERROR
         )
     except Exception as e:
         logger.writeLog(
-            "Error importing callback or executing query: " + e.message,
+            "Error importing callback or executing query: " + str(e),
             utils.LOG_LEVEL.ERROR
         )
     finally:
@@ -65,8 +65,10 @@ def call_callback(gobject, logger, gist):
 
 def check_404(downloaded_str, logger, gobject):
     if "404: Not Found" in downloaded_str:
+        err_message = "Error downloading gist from GitHub with id "
+        err_message += gobject.gist_info.gid
         logger.writeLog(
-            "Error downloading gist from GitHub with id " + gobject.gist_info.gid,
+            err_message,
             utils.LOG_LEVEL.ERROR)
         logger.writeResult(
             gobject.gist_info.gid,
@@ -97,7 +99,10 @@ parser.add_option(
 # logger = LogClient(
 #                    os.path.join(os.path.dirname(__file__),
 #                    datetime.datetime.now().strftime("%Y%m%d")))
-logger = LogClient(os.path.join(os.path.dirname(__file__), "logger"))
+logger = LogClient(os.path.join(
+                    os.path.dirname(os.path.abspath(__file__)),
+                    "logger"
+                    ))
 logger.rotateLogs()
 # Store arguments and check them
 path_search = options.path_search
@@ -116,7 +121,19 @@ graphql_client.inject_token(utils.GRAPH_TOKEN)
 
 
 # Get all gist for that direcotry and subdirs
-for path_file in recursive_glob(os.path.join(os.path.abspath("."), path_search), '.gist'):
+
+
+repository_path = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "..",
+    ".."
+)
+
+full_path_search = os.path.join(repository_path, path_search)
+
+gists_files = recursive_glob(full_path_search, '.gist')
+print (gists_files)
+for path_file in gists_files:
     logger.writeLog("===================================================")
     gist_file = GistFile(path_file)
     filename = os.path.basename(path_file)
