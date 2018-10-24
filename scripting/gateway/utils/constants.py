@@ -52,6 +52,9 @@ def setVerbose(verbose_value):
 
 def getStrContent(url):
     ret_value = None
-    with requests.get(url, stream=True, headers={'Cache-Control':'no-cache'}) as resp:
-        ret_value = resp.content
-    return str(ret_value)
+    with requests.get(
+        url,
+        headers={'Cache-Control': 'no-cache'}
+    ) as resp:
+        ret_value = resp.text
+    return ret_value
