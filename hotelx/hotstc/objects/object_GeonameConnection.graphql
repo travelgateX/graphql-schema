@@ -1,6 +1,0 @@
-# Geoname list definition
-type GeonameConnection{
-    edges: [GeonameEdge]
-    # Indicates info about page
-    pageInfo: PageInfo!
-}
