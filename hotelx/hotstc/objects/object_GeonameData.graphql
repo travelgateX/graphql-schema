@@ -7,7 +7,7 @@ type GeonameData {
   name: String!
 
   # Parent location code
-  parent: String
+  parent: Geoname!
 
   # Indicates destination type, zone, city or country
   type: DestinationType
