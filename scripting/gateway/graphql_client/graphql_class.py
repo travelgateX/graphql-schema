@@ -46,7 +46,7 @@ class GraphQLClient:
 
     def check_result(self, query, result):
         result_json = self._send(query, None)
-        expected_result_json = json.loads(result.decode('utf-8'))
+        expected_result_json = json.loads(result)
         sort_result = json.dumps(result_json, sort_keys=True)
         sort_expected_result = json.dumps(expected_result_json, sort_keys=True)
         if sort_result == sort_expected_result:
