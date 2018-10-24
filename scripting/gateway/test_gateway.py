@@ -85,6 +85,12 @@ parser.add_option(
     metavar="PATH"
 )
 parser.add_option(
+    "-f", "--file",
+    dest="file_gist",
+    help="FILE path of gist file relative to graphql-schema repodir",
+    metavar="FILE"
+)
+parser.add_option(
     "-v",
     "--verbose",
     action="store_true",
@@ -106,33 +112,35 @@ logger = LogClient(os.path.join(
 logger.rotateLogs()
 # Store arguments and check them
 path_search = options.path_search
+file_gist = options.file_gist
 utils.setVerbose(options.verbose)
-if not path_search:
+if not path_search and not file_gist:
     logger.writeLog(
-        "ERROR: Wrong argument for microservice path",
+        "ERROR: You must select path or filename to work",
         utils.LOG_LEVEL.ERROR
     )
     parser.print_help()
     sys.exit(-1)
 
+gists_files = []
+
 # Initialize graphql client
 graphql_client = GraphQLClient(utils.GRAPH_URL)
 graphql_client.inject_token(utils.GRAPH_TOKEN)
 
-
 # Get all gist for that direcotry and subdirs
-
-
 repository_path = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "..",
     ".."
 )
 
-full_path_search = os.path.join(repository_path, path_search)
+if path_search:
+    full_path_search = os.path.join(repository_path, path_search)
+    gists_files = recursive_glob(full_path_search, '.gist')
+else:
+    gists_files.append(os.path.join(repository_path, file_gist))
 
-gists_files = recursive_glob(full_path_search, '.gist')
-print (gists_files)
 for path_file in gists_files:
     logger.writeLog("===================================================")
     gist_file = GistFile(path_file)
@@ -146,7 +154,9 @@ for path_file in gists_files:
             logger.writeLog("Checking gist: " + gist.gid)
             logger.writeLog(str(gist))
             if gist.type == utils.GIST_TYPE.DOC:
-                logger.writeLog("Avoid this gist cause is a Documentation gist")
+                logger.writeLog(
+                    "Avoid this gist cause is a Documentation gist"
+                )
                 continue
         if check_404(gobject.query, logger, gobject):
             continue
