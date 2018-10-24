@@ -38,14 +38,15 @@ class LogClient:
                 if os.path.exists(max_filename):
                     os.remove(max_filename)
                 for x in range(MAX_LOGS-1):
-                    filename = self.logfile + ext_file + '.' + str(MAX_LOGS-1-x)
-                    destfile = self.logfile + ext_file + '.' + str(MAX_LOGS-x)
+                    log_file_extension = self.logfile + ext_file
+                    filename = log_file_extension + '.' + str(MAX_LOGS-1-x)
+                    destfile = log_file_extension + '.' + str(MAX_LOGS-x)
                     if os.path.exists(filename):
                         if os.path.exists(destfile):
                             os.remove(destfile)
                         os.rename(filename, destfile)
-                if os.path.exists(self.logfile + ext_file):
-                    os.rename(self.logfile + ext_file, self.logfile + ext_file + '.1')
+                if os.path.exists(log_file_extension):
+                    os.rename(log_file_extension, log_file_extension + '.1')
 
     instance = None
 
