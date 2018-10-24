@@ -21,6 +21,6 @@ type Location {
   #Airports
   airports:[Airport!]
 
-  # Detailed information about the destinations
-  sourceDestination: SourceDestination!
+  # Detailed information about the destinations geonames
+  geoNames:[Geoname!]!
 }
