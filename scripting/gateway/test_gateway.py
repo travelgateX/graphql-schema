@@ -112,10 +112,10 @@ logger = LogClient(os.path.join(
 logger.rotateLogs()
 
 check_bearer = (
-    not utils.GRAPH_TOKEN.startswith("Bearer") or
-    not utils.GRAPH_TOKEN.startswith("Apikey")
+    utils.GRAPH_TOKEN.startswith("Bearer") or
+    utils.GRAPH_TOKEN.startswith("Apikey")
     )
-if check_bearer:
+if not check_bearer:
     logger.writeLog(
         "Please configure your token into utils/constants.py file",
         utils.LOG_LEVEL.ERROR
