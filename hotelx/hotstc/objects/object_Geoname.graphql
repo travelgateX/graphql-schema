@@ -1,0 +1,17 @@
+# Geoname type
+type Geoname implements Node {
+  # Hotel Destination ID
+  code: ID!
+
+  # geoname data
+  geonameData: GeonameData
+
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
+  # Date created
+  createdAt: DateTime!
+
+  # Date updated
+  updatedAt: DateTime!
+}

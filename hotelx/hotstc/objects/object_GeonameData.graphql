@@ -1,0 +1,18 @@
+# Geoname data, which contain a reference to his parent location
+type GeonameData {
+  # location code
+  code: ID!
+
+  # name of location
+  name: String!
+
+  # Parent location, the top location is itself
+  parent: Geoname!
+
+  # Indicates destination type, zone, city or country
+  type: DestinationType!
+
+  # Geographical coordinates corresponding to a location.
+  coordinates: Coordinates!
+
+}
