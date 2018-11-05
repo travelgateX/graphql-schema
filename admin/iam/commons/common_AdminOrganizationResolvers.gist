@@ -7,7 +7,7 @@
 			"gist-bck" : "8be9ed34f8d994911099a3c47bdfe1c9",
             "level": 0,
             "type": 0,
-            "check-type": 0
+            "check-type": 1
 		}, 
         {
 			"id": 2,
@@ -28,19 +28,37 @@
             "check-type": 1
 		}, 
         {
-			"id": 3,
+			"id": 4,
 			"user": "slucea",
 			"gist-id": "3f81504d359f5090e07663b37e6cbdee",
 			"gist-bck" : "3f81504d359f5090e07663b37e6cbdee",
             "level": 1,
             "type": 0,
-            "check-type": 1
+            "check-type": 0
 		}, 
         {
-			"id": 4,
+			"id": 5,
 			"user": "slucea",
 			"gist-id": "789f5227179935edbf0865e5cf122180",
 			"gist-bck" : "789f5227179935edbf0865e5cf122180",
+            "level": 1,
+            "type": 0,
+            "check-type": 1
+		}, 
+        {
+			"id": 6,
+			"user": "slucea",
+			"gist-id": "4caae37df465d5dec81db4bcd4a2e6cf",
+			"gist-bck" : "4caae37df465d5dec81db4bcd4a2e6cf",
+            "level": 1,
+            "type": 0,
+            "check-type": 1
+		}, 
+        {
+			"id": 7,
+			"user": "slucea",
+			"gist-id": "cd16ebc2b6d021a228904495bdc10b45",
+			"gist-bck" : "cd16ebc2b6d021a228904495bdc10b45",
             "level": 1,
             "type": 0,
             "check-type": 1
