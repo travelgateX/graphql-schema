@@ -1,5 +1,5 @@
-# Assert of an specific error
-type StatsAssert {
+# Asset of an specific error
+type StatsAsset {
   # Start time of the request
   startTime: DateTime!
   # Execution time of the request

@@ -8,5 +8,5 @@ type StatsInfo {
   # Average time (ms)
   time: Int!
   # Details about errors.
-  asserts:[StatsAssert!]
+  assets:[StatsAsset!]
 }
