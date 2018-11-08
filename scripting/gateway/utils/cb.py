@@ -9,7 +9,6 @@ def callback(gistObject, result, logger):
     logger.writeLog("Checking pagination for organization list")
 
     query_name = re.search(r"^\{\s*?.*?\{\s*?(.*?)\(",gistObject.query)[1].strip()
-    query_name = get_query_name(gistObject.query)
 
     filters = get_filters(gistObject.query)
 
