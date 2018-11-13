@@ -8,6 +8,15 @@
             "level": 1,
             "type": 0,
             "check-type": 1
+		},
+        {
+			"id": 1,
+			"user": "slucea",
+			"gist-id": "e19ae7eec62e977d002f78baffca51ac",
+			"gist-bck" : "e19ae7eec62e977d002f78baffca51ac",
+            "level": 1,
+            "type": 0,
+            "check-type": 1
 		}
     ]
 }
