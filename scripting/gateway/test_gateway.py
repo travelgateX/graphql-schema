@@ -7,19 +7,61 @@ import glob
 import datetime
 import utils
 import tempfile
+import threading
+import traceback    
 from optparse import OptionParser
 from logger import LogClient
-from gists import GistFile, GObject
+from gists import GistFile, GObject, extract_function_gist, GistObject
 from graphql_client import GraphQLClient
+
 
 __author__ = "David Amian <damian@xmltravelgate.com>"
 __copyright__ = "Copyright (C) 2018, TravelgateX"
 __license__ = "GPL-2"
 
+LOCK = threading.Lock()
+
 
 class CallbackException(Exception):
     def __init__(self, message):
         super().__init__(message)
+
+
+def writeLogThreading(logger, message, level=utils.LOG_LEVEL.LOG):
+    LOCK.acquire()
+    logger.writeLog(message, level)
+    LOCK.release()
+
+
+def callback_stress(gobject, logger, gist):
+    check = True
+    result = graphql_client.execute(gobject.query)
+    try:
+        if utils.getVerbose():
+            
+            writeLogThreading(logger, "Executing callback")
+        if not result or "errors" in result:
+            #writeLogThreading(logger, "Error for gist: " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+            writeLogThreading(logger, "Error: " + str(result), utils.LOG_LEVEL.ERROR)
+            if utils.getVerbose():
+                writeLogThreading(logger, "With query: ", utils.LOG_LEVEL.ERROR)
+                writeLogThreading(logger, gobject.query, utils.LOG_LEVEL.ERROR)
+            check = False
+        else:
+            for org in result['data']['admin']['organizations']['edges']:
+                if org['node']['adviseMessage']:
+                    #writeLogThreading(logger, "Error for gist: " + gobject.gist_info.gid, utils.LOG_LEVEL.ERROR)
+                    writeLogThreading(logger, str(org['node']['adviseMessage'][0]['description']),utils.LOG_LEVEL.ERROR)
+                    check = False
+
+    except Exception as e:
+        writeLogThreading(logger, 
+            "Error into callback_stress or executing query: " + str(e),
+            utils.LOG_LEVEL.ERROR
+        )
+        
+        check = False
+    return check
 
 
 def recursive_glob(rootdir='.', suffix=''):
@@ -63,6 +105,26 @@ def call_callback(gobject, logger, gist):
     return check
 
 
+def stress_test(logger):
+    id_gist_stress = "0f584e164a99758ed61423ddd510928c"
+    user_stress = "amian84"
+    gist_object = GistObject(0, user_stress, id_gist_stress, id_gist_stress, 0, 2, 1)
+    gobject = extract_function_gist(gist_object)
+    threads = []
+    for i in range(500):
+        thread = threading.Thread(target=excute_stress_command, args=[i, gobject, logger, gist_object])
+        threads.append(thread)
+        thread.start()
+    for thread in threads:
+        thread.join()
+
+
+def excute_stress_command(t_id, gobject, logger, gist_object):
+    check = callback_stress(gobject, logger, gist_object)
+    logger.writeLog("Thread: " + str(t_id) + " Passed: " + str(check))
+    logger.writeLog("\n")
+
+
 def check_404(downloaded_str, logger, gobject):
     if "404: Not Found" in downloaded_str:
         err_message = "Error downloading gist from GitHub with id "
@@ -89,6 +151,12 @@ parser.add_option(
     dest="file_gist",
     help="FILE path of gist file relative to graphql-schema repodir",
     metavar="FILE"
+)
+parser.add_option(
+    "-s", "--stress",
+    action="store_true",
+    dest="stress",
+    help="Make a stress test"    
 )
 parser.add_option(
     "-v",
@@ -126,20 +194,27 @@ if not check_bearer:
 # Store arguments and check them
 path_search = options.path_search
 file_gist = options.file_gist
+stress_value = options.stress
 utils.setVerbose(options.verbose)
-if not path_search and not file_gist:
-    logger.writeLog(
-        "ERROR: You must select path or filename to work",
-        utils.LOG_LEVEL.ERROR
-    )
-    parser.print_help()
-    sys.exit(-1)
-
-gists_files = []
 
 # Initialize graphql client
 graphql_client = GraphQLClient(utils.GRAPH_URL)
 graphql_client.inject_token(utils.GRAPH_TOKEN)
+
+if not path_search and not file_gist:
+    if not stress_value:
+        logger.writeLog(
+            "ERROR: You must select path or filename to work",
+            utils.LOG_LEVEL.ERROR
+        )
+        parser.print_help()
+        sys.exit(-1)
+    else:
+        stress_test(logger)
+        sys.exit(0)
+
+gists_files = []
+
 
 # Get all gist for that direcotry and subdirs
 repository_path = os.path.join(
@@ -161,7 +236,7 @@ for path_file in gists_files:
     logger.writeLog("Checking Gists into file: " + filename)
     for gist in gist_file.get_all_gists():
         logger.writeLog("\n")
-        gobject = gist_file.extract_function_gist(gist)
+        gobject = extract_function_gist(gist)
         check = False
         if utils.getVerbose():
             logger.writeLog("Checking gist: " + gist.gid)
