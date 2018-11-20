@@ -9,6 +9,9 @@ type GeonameData {
   # Parent location, the top location is itself
   parent: Geoname!
 
+  # ISO 3166-1 alpha-2 format country code with enclosing double quotes "ES"
+  country: Country
+
   # Indicates destination type, zone, city or country
   type: DestinationType!
 
