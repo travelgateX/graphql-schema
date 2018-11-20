@@ -1,6 +1,6 @@
 input CreateOrganizationInput {
   user: ID!
   info: String
-  organization: ID!
+  organization: ID
   template: OrganizationTemplate!
 }
