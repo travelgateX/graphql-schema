@@ -17,42 +17,6 @@
             "level": 0,
             "type": 0,
             "check-type": 1
-		}, 
-        {
-			"id": 3,
-			"user": "slucea",
-			"gist-id": "777566251455526f238e788976592e5e",
-			"gist-bck" : "777566251455526f238e788976592e5e",
-            "level": 0,
-            "type": 0,
-            "check-type": 1
-		}, 
-        {
-			"id": 4,
-			"user": "slucea",
-			"gist-id": "04b6d9b263c72759adbda14e45b16433",
-			"gist-bck" : "04b6d9b263c72759adbda14e45b16433",
-            "level": 0,
-            "type": 0,
-            "check-type": 1
-		}, 
-        {
-			"id": 5,
-			"user": "slucea",
-			"gist-id": "8d7817cadb6258d28ccf7005bfe4f2de",
-			"gist-bck" : "8d7817cadb6258d28ccf7005bfe4f2de",
-            "level": 0,
-            "type": 0,
-            "check-type": 1
-		}, 
-        {
-			"id": 6,
-			"user": "slucea",
-			"gist-id": "36fdbca1afec6d75f4149955968cf795 ",
-			"gist-bck" : "36fdbca1afec6d75f4149955968cf795",
-            "level": 0,
-            "type": 0,
-            "check-type": 1
 		}
     ]
 }
