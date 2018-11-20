@@ -70,4 +70,4 @@ or
 $ py test_gateway --verbose --file=admin/iam/mutations/file.gist
 ```
 
-To know more about the gist files go to https://docs.google.com/document/d/1SOkaXjEBwgvj0jsITtHE6PTeJOhHsIqhrgaW7YF2Ut4/edit
+To know more about the gist files read the `graphql-schema/scripting/gateway/TestingGateway.md`
