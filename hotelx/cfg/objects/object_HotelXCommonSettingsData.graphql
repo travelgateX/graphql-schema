@@ -2,5 +2,4 @@ type HotelXCommonSettingsData{
   currency: Currency
   businessRules: BusinessRules
   timeout: Timeout
-  audit: HotelXAudit
 }
