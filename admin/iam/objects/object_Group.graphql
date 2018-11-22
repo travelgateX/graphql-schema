@@ -2,8 +2,6 @@
 type Group implements Node{
   code: ID!
   groupData: GroupData
-  # Errors that abort services
-  error: [Error!] @deprecated(reason: "deprecated from 2018-08-01. Sustituted by adviseMessage")
   # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Date created
