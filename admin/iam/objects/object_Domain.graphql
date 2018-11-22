@@ -1,7 +1,6 @@
 type Domain implements Node{
   code: ID!
   domainData: DomainData
-  error: [Error!] @deprecated(reason: "deprecated from 2018-08-01. Sustituted by adviseMessage")
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   createdAt: DateTime!
   updatedAt: DateTime!
