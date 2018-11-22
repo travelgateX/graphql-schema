@@ -42,6 +42,10 @@ Querys
 	* List org with filter code
 	* Delete org
 	* List org with filer code
+	* updateOrganizationDomain: ADD domain
+	* List domain: check existance
+	* updateOrganizationDomain: DEL domain
+	* List domain: check non-existance
 - Groups
 	* Create group (callback)
 	* List group with filter code (result)

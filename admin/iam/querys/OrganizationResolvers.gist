@@ -17,6 +17,15 @@
             "level": 1,
             "type": 0,
             "check-type": 0
+		},
+        {
+			"id": 3,
+			"user": "slucea",
+			"gist-id": "71d93ef62bdecacb601ec0f4e928b599",
+			"gist-bck" : "71d93ef62bdecacb601ec0f4e928b599",
+            "level": 1,
+            "type": 0,
+            "check-type": 0
 		}
     ]
 }
