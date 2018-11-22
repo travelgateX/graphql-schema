@@ -1,0 +1,5 @@
+type DomainData {
+  id: ID!
+  name: DomainName!
+  organization: Organization!
+}
