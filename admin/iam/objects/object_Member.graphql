@@ -4,8 +4,6 @@
 type Member implements Node{
   code: ID!
   memberData: MemberData
-  # Errors that abort services
-  error: [Error!] @deprecated(reason: "deprecated from 2018-08-22. Sustituted by adviseMessage")
   # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Date created
