@@ -25,5 +25,5 @@ type OrganizationData implements GroupCommonData {
   suppliers(codes:[ID!], accessID:[ID!], first: Int, last: Int, before: String, after:String): SupplierConnection
   # Clients resources in a organization
   clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
-
+  domains: [Domain]!
 }

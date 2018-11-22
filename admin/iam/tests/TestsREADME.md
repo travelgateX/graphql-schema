@@ -67,11 +67,11 @@ Querys
 At  `graphql-schema/scripting/gateway` directory run:
  
 ```bash
-$ py test_gateway --verbose --file=admin/iam/querys/file.gist
+$ py test_gateway --verbose --file=admin/iam/tests/querys/file.gist
 ```
 or
 ```bash
-$ py test_gateway --verbose --file=admin/iam/mutations/file.gist
+$ py test_gateway --verbose --file=admin/iam/tests/mutations/file.gist
 ```
 
 To know more about the gist files read the `graphql-schema/scripting/gateway/TestingGateway.md`
