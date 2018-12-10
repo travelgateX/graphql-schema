@@ -1,4 +1,4 @@
-type Jwt {
+type JWT {
   token: String
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
