@@ -1,0 +1,4 @@
+type Jwt {
+  token: String
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}
