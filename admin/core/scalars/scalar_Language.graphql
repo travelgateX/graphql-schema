@@ -1,3 +1,3 @@
 # The Language type represents Language values. A good example might be a Hotel Description Language.
-# In queries or mutations, Language fields have to be specified in ISO 3166-1 alpha-2 format with enclosing double quotes "es".
+# In queries or mutations, Language fields have to be specified in ISO 639-1 format with enclosing double quotes "en".
 scalar Language
