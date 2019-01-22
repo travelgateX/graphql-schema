@@ -10,4 +10,6 @@ type MemberData {
   groups(codes:[ID!],type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection
   # which roles the member has in?
   roles(codes: [ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
+  # get a bearer with the same persmissions as the member
+  impersonationJWT: JWT!
 }
