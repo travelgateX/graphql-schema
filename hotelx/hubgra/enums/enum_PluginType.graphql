@@ -25,4 +25,7 @@ enum PluginType {
   # POST_STEP is the last plugin that a step will execute, allows a full range of operations:
   # split arrays, join arrays, modify object values, add or remove object instances
   POST_STEP
+
+  # COMMISSION plugin allows the user to apply the rule to calculate the commission
+  COMMISSION
 }
