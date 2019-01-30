@@ -1,6 +1,4 @@
 type HotelXDefaultSettingsData {
-  # Indicates the client that do the transaction.
-  clientName: ID!
   # Indicates the context of the I/O codes (hotel, board, room and rates)
   context: String!
   # Language to be used in request.
