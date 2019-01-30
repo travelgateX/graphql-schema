@@ -1,4 +1,4 @@
-type JWT {
+type JWTImpersonation {
   token: String
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
