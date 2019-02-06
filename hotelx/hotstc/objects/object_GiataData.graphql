@@ -1,0 +1,12 @@
+# Hotel data obtained from Giata System.
+type GiataData {
+  
+  # Giata System ID.
+  id: ID!
+
+  # Giata URL for the hotels of the supplier.
+  source: URI! 
+
+  # Giata url for the hotel info. 
+  href : URI!
+}
