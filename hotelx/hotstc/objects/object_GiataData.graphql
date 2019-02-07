@@ -9,4 +9,7 @@ type GiataData {
 
   # Giata url for the hotel info. 
   href : URI!
+
+  # Date of last Giata update for this code. 
+  updatedAt: DateTime!
 }
