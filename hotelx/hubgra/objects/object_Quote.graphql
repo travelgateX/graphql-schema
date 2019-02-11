@@ -1,5 +1,0 @@
-# Returns the total price and cancellation policies of the Option selected in the previous step (Search).
-type Quote {
-  # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
-  hotel(criteria: HotelCriteriaQuoteInput!, settings: HotelSettingsInput): HotelQuote @deprecated(reason: "deprecated from 2017-11-21. You can find it in query at HotelX")
-}
