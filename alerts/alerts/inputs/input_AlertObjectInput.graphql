@@ -1,0 +1,6 @@
+input AlertObjectInput {
+  # object code
+  code: ID!
+  # to indicate if tráfic with the code object has to be checked or not for this alert
+  isInclusive: Boolean!
+} 

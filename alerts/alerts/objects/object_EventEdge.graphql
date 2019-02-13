@@ -1,0 +1,4 @@
+type EventEdge {
+  node: Event
+  cursor: String!
+}

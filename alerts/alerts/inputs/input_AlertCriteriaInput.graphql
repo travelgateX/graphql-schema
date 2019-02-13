@@ -1,0 +1,7 @@
+# Filters needed to do a search.
+input AlertCriteriaInput {
+  # List of alerts
+  alertCodes: [ID!]
+  #active or not
+  isActive: Boolean
+}

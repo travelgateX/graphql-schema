@@ -1,0 +1,5 @@
+enum unitTime{
+  MILISECOND
+  SECOND
+  MINUTE
+}

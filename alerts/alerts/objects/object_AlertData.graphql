@@ -1,0 +1,18 @@
+type AlertData {
+  # Code
+  code: ID!
+  # Name
+  name: String
+  # Description
+  description: String
+  # Configuration
+  configuration: AlertConfiguration!
+  # Active
+  isActive: Boolean!
+  # History
+  history( relay: RelayInput, filter: AlertFilterInput):AlertConnection!
+  #editor
+  editor: Member!
+  #event
+  events( relay: RelayInput, filter: AlertFilterInput):EventConnection!
+}

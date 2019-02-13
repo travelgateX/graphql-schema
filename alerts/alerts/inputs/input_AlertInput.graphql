@@ -1,0 +1,12 @@
+input AlertInput {
+  #name
+  name: String
+  #description
+  description: String
+  #configuration
+  configuration: AlertConfigurationInput!
+  #status
+  isActive: Boolean!
+  #editor
+  editor: Email!
+}

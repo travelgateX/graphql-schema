@@ -1,0 +1,6 @@
+type EventConnection {
+  edges: [EventEdge]
+  #Indicates info about page
+  pageInfo: PageInfo!
+  count: Int!
+}

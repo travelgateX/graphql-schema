@@ -1,0 +1,6 @@
+enum HubStatus{
+  OK
+  EXCEPTION
+  TIMEOUT
+  UNDEFINED
+}

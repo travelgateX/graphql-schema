@@ -1,0 +1,10 @@
+input AlertTypeConfigurationInput {
+  # minutes
+  historicalWindow: Int
+  #minutes
+  offset: Int
+  # Error codes to check and compare
+  errorRateCodes: [ErrorRateCodesInput!]
+  #maximum average time allowed
+  max_average: AverageTimeInput
+}

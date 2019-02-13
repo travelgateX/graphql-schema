@@ -1,0 +1,7 @@
+type AlertTypeConfiguration {
+  #Minutes
+  historicalWindow: Int
+  offset: Int
+  errorRateCodes(type: ErrorRateType): [Int!]
+  max_average: AverageTime
+}
