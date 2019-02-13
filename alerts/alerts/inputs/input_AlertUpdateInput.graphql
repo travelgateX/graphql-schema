@@ -1,0 +1,12 @@
+input AlertUpdateInput {
+  # alert name
+  name: String
+  # alert description
+  description: String
+  # alert configuration
+  configuration: AlertUpdateConfigurationInput
+  #status
+  isActive: Boolean
+  #editor ID
+  editor: ID!
+}

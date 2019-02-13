@@ -1,0 +1,12 @@
+type Alert implements Node {
+  # ID code
+  code: ID!
+  # Alert Data
+  alertData: AlertData
+  # Advise Message
+  adviseMessage(level: [AdviseMessageLevel]): AdviseMessage
+  # Created date
+  createdAt: DateTime!
+  # Updated date
+  updatedAt: DateTime!
+}

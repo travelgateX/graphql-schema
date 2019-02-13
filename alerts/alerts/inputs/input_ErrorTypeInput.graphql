@@ -1,0 +1,5 @@
+input ErrorTypeInput {
+  code: ErrorType!
+  # to indicate if tráfic with the error type code has to be checked or not for this alert
+  isInclusive: Boolean!
+}

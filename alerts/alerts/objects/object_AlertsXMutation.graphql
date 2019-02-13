@@ -1,0 +1,6 @@
+type AlertsXMutation {
+  #Mutation to create a new alert
+  createAlert(input: AlertInput!): Alert
+  #Mutation to update an existing alert
+  updateAlert(code:ID! input: AlertUpdateInput!): Alert
+}

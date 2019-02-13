@@ -1,0 +1,7 @@
+input AlertGroupInput {
+  code:ID!,
+  type: GroupType!
+  comercialType:  ComercialType!
+  # to indicate if tráfic with the code group has to be checked or not for this alert
+  isInclusive: Boolean!
+}

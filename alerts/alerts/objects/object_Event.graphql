@@ -1,0 +1,7 @@
+type Event implements Node{
+  code: ID!
+  eventData: EventData
+  adviseMessage(level:[AdviseMessageLevel]): AdviseMessage
+  createdAt: DateTime!
+  updatedAt:DateTime!
+}

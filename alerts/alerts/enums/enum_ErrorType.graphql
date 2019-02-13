@@ -1,0 +1,6 @@
+enum ErrorType{
+  OK
+  PROVIDER
+  TIMEOUT
+  INTEGRATION
+}

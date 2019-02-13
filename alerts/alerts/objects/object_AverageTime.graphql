@@ -1,0 +1,4 @@
+type AverageTime{
+  quantity: Int!
+  unit: unitTime!
+}
