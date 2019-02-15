@@ -3,8 +3,14 @@ input AlertInput {
   name: String
   #description
   description: String
-  #configuration
-  configuration: AlertConfigurationInput!
+  #no traffic configuration
+  configurationNoTraffic: AlertConfigurationInputNoTraffic
+  #error rate configuration
+  configurationErrorRate: AlertConfigurationInputErrorRate
+  #average time configuration
+  configurationAverageTime: AlertConfigurationInputAverageTime
+  #peak traffic configuration
+  configurationPeakTraffic: AlertConfigurationInputPeakTraffic
   #status
   isActive: Boolean!
   #editor
