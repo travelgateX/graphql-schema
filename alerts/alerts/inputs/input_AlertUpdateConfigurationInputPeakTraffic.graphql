@@ -1,23 +1,23 @@
-input AlertUpdateConfigurationInput {
-  # alert Type
-  alertType: AlertType
+input AlertUpdateConfigurationInputPeakTraffic {
+   # minutes
+  historicalWindow: Int
+  #minutes
+  offset: Int
   # Minutes
   periodicity: Int
-  # Minutes
+ 	# Minutes
   window: Int
   # The number of times the alert must be triggered in order to notify.
   timesToAlert: Int
-  #specific configuration according to the alert type
-  typeConfiguration: AlertTypeConfigurationInput
-  # true:	advise only if state change to KO.
+  # true:	advise only if state change to KO. 
   #false: advise if an alert change to OK state.
   noRecoveries: Boolean
-  # true: alert advice sent only if state has changed.
+  # true: alert advice sent only if state has changed.  
   #	false: alert advice always sent.
   stateChangesOnly: Boolean
   # minimum number of requests to be alert
   minNumberRequests: Int
-  # percentage (%)
+ 	# percentage (%)
   percentageToAlert: Int
   #email: Email!
   email: [EmailInput]
@@ -28,21 +28,21 @@ input AlertUpdateConfigurationInput {
   isFromTGX: Boolean
   # status returned by our Hub.
   hubStatus: [HubStatusInput!]
-  # error codes
+	# error codes
   errorCode: [Int!]
   # error types
   errorType: [AlertObjectInput!]
   # supplier codes
-  supplier:[AlertObjectInput!]
+	supplier:[AlertObjectInput!]
   # supplier codes
-  client:[AlertObjectInput!]
+	client:[AlertObjectInput!]
   # supplier codes
-  group:[AlertObjectInput!]
+	group:[AlertGroupInput!]
   # supplier codes
-  access:[AlertObjectInput!]
+	access:[AlertObjectInput!]
   # supplier codes
-  operation:[AlertObjectInput!]
-  # possibility of grouping.
+	operation:[AlertObjectInput!]
+  # possibility of grouping. 
   # For example: can group by Supplier, errorType or both
-  groupBy:[AlertGroups!]
+	groupBy:[AlertGroups!]
 }
