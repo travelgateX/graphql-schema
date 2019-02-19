@@ -1,3 +1,4 @@
+```maximum average time```
 input AverageTimeInput{
   # time quantity
   quantity: Int!

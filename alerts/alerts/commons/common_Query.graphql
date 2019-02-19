@@ -1,5 +1,5 @@
 # The query type, represents all of the entry points into our object graph
 extend type Query {     #extended
-  #The hotelX product query root for implementing GraphQL query.
+  #The alertsX product query root for implementing GraphQL query.
   alertsX: AlertsXQuery
 }
