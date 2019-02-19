@@ -1,7 +1,11 @@
+```Depending on the talert type, typeConfiguration will use some fields ```
 type AlertTypeConfiguration {
-  #Minutes
+  ```The time frame in minutes to be used to compare with the window time frame```
   historicalWindow: Int
+  ```Time frame in minutes to set the beginning of historicalWindow```
   offset: Int
+  ```Error codes to be checked and compared. By default: checked traffic will be all error codes except 0 and copmared traffic will be all error codes```
   errorRateCodes(type: ErrorRateType): [Int!]
+  ```maximum average time```
   max_average: AverageTime
 }
