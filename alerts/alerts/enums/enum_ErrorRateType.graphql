@@ -1,4 +1,0 @@
-enum ErrorRateType{
-  TO_CHECK
-  TO_COMPARE
-}

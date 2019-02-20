@@ -1,6 +1,0 @@
-input ErrorRateCodesInput {
-  #Error code
-  code: ID!
-  #Error type
-  Type: ErrorRateType!
-}

@@ -1,4 +1,4 @@
 enum EventType{
   OK
-  KO
+  ALERTING
 }
