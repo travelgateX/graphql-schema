@@ -1,7 +1,7 @@
 """
 Configuration for NO_TRAFFIC alert type. 
 No traffic alert is used to verify if there is traffic according to the parameters of the alert.
-""""
+"""
 input AlertConfigurationInputNoTraffic { 
   # Minutes
   "Frequency of time in which the alert will be reviewed"
