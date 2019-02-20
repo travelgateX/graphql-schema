@@ -1,69 +1,70 @@
-```
-Configuration update for error rate alert type. Error rate alert is used to verify traffic comparing its error codes. 
+"""
+Configuration update for error rate alert type. 
+Error rate alert is used to verify traffic comparing its error codes. 
 Ther are to options. 
 - OPTION 1: Can verify traffic of a time frame. Set window field higher than 0.
 - OPTION 2: Can verify traffic of a specific number of requests. Set window fild as 0 and minNumRequest higher than 0.
-```
+"""
 input AlertUpdateConfigurationInputErrorRate {
-  ```Error codes to be Checked. By default  all error codes excepts 0```
+  "Error codes to be Checked. By default  all error codes excepts 0"
 	toCheck: [Int!]
-  ```Error codes to be Compared with Checked codes. By default all error codes```
+  "Error codes to be Compared with Checked codes. By default all error codes"
   toCompare: [Int!]
   # Minutes
-  ```Frequency of time in which the alert will be reviewed```
+  "Frequency of time in which the alert will be reviewed"
   periodicity: Int
  	# Minutes
-  ```The time frame in minutes```
+  "The time frame in minutes"
   window: Int
   # The number of times the alert must be triggered in order to notify.
-  ```The number of times the alert must be triggered in order to notify```
+  "The number of times the alert must be triggered in order to notify"
   timesToAlert: Int
   # true:	advise only if state change to KO. 
   #false: advise if an alert change to OK state.
-  ```To allow recoveries notifications```
+  "To allow recoveries notifications"
   noRecoveries: Boolean
   # true: alert advice sent only if state has changed.  
   #	false: alert advice always sent.
-  ```To allow notifications only if the status change```
+  "To allow notifications only if the status change"
   stateChangesOnly: Boolean
   # minimum number of requests to be alert
-   ```
+  """
   OPTION 1: defines the minimum number of requests must be in our historical Data before cheking the alert. 
   OPTION 2: defines the minimum number of requests must be in the window time frame to check the alert.
-  ```
+  """
   minNumberRequests: Int
  	# percentage (%)
-  ```Minimum percentage of traffic with error codes(toCheck) compared to error codes(toCompare) in the window time frame to be considered status ALERTING```
+  "Minimum percentage of traffic with error codes(toCheck) compared to error codes(toCompare) in the window time frame to be considered status ALERTING"
   percentageToAlert: Int
   #email
-  ``````Email addresses to send notifications``````
+  "Email addresses to send notifications"
   email: [EmailInput]
   # status returned by our Hub
-  ```Possibility to filter traffic by hubStatus```
+  "Possibility to filter traffic by hubStatus"
   hubStatus: [HubStatusInput!]
 	# error codes
-  ```Possibility to filter traffic by errorCodes```
+  "Possibility to filter traffic by errorCodes"
   errorCode: [ErrorCodeInput!]
   # error types
-  ```Possibility to filter traffic by errorTypes```
+  "Possibility to filter traffic by errorTypes"
   errorType: [ErrorTypeInput!] 
   # supplier codes
-  ```Possibility to filter traffic by suppliers (hub provider)```
+  "Possibility to filter traffic by suppliers (hub provider)"
 	supplier:[AlertObjectInput!]
   # supplier codes
-  ```Possibility to filter traffic by clients (hub user)```
+  "Possibility to filter traffic by clients (hub user)"
 	client:[AlertObjectInput!]
   # supplier codes
-  ```Possibility to filter traffic by groups. It is mandatory to set an ORG group type. Only ORG, FOLDER and PRODUCT group types are allowed```
+  "Possibility to filter traffic by groups. It is mandatory to set an ORG group type. Only ORG, FOLDER and PRODUCT group types are allowed"
 	group:[AlertGroupInput!]
   # supplier codes
-  ```Possibility to filter traffic by accesses```
+  "Possibility to filter traffic by accesses"
 	access:[AlertObjectInput!]
   # supplier codes
-  ```Possibility to filter traffic by operations```
+  "Possibility to filter traffic by operations"
 	operation:[AlertObjectInput!]
   # possibility of grouping. 
   # For example: can group by Supplier, errorType or both
-  ```Possibility to group by traffic and calculate its parameters separately ```
+  "Possibility to group by traffic and calculate its parameters separately "
 	groupBy:[AlertGroups!]
 }

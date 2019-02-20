@@ -1,4 +1,4 @@
-```Alert list```
+"Alert list"
 type AlertConnection{
   edges: [AlertEdge]
   #Indicates info about page

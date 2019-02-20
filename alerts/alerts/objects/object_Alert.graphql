@@ -1,4 +1,4 @@
-``` Alert node```
+" Alert node"
 type Alert implements Node {
   # ID code
   code: ID!

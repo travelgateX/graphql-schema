@@ -1,19 +1,19 @@
-```Alert information. Only one configuration has to be set at once.```
+"Alert information. Only one configuration has to be set at once."
 input AlertInput {
-  ```Alert name```
+  "Alert name"
   name: String
-  ```Alert description```
+  "Alert description"
   description: String
-  ```No traffic configuration ```
+  "No traffic configuration "
   configurationNoTraffic: AlertConfigurationInputNoTraffic
-  ```Error rate configuration ```
+  "Error rate configuration "
   configurationErrorRate: AlertConfigurationInputErrorRate
-  ```Average time configuration ```
+  "Average time configuration "
   configurationAverageTime: AlertConfigurationInputAverageTime
-  ```Peak traffic configuration ```
+  "Peak traffic configuration "
   configurationPeakTraffic: AlertConfigurationInputPeakTraffic
-  ```To set alert active or not```
+  "To set alert active or not"
   isActive: Boolean!
-  ```Member editor```
+  "Member editor"
   editor: Email!
 }
