@@ -1,5 +1,5 @@
 input UpdateGroupInput{
-  api: ID!
+  api: [ID!]!
   group: ID!
   info: String
 }
