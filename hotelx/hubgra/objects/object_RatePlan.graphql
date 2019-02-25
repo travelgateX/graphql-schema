@@ -15,8 +15,10 @@ type RatePlan {
   expireDate: Date
 
   # Start date in which the rate becomes effective.
+  # Format: YYYY-MM-DD
   start: Date
   
   # Expire date of the rate.
+  # Format: YYYY-MM-DD
   end: Date
 }
