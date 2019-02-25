@@ -32,11 +32,19 @@ type Supplement {
   unit: UnitTimeType
   
   # Indicates the effective date of the supplement.
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   effectiveDate: Date
   
   # Indicates the expire date of the supplement.
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   expireDate: Date
+
+  # Indicates the effective date of the supplement.
+  start: Date
   
+  # Indicates the expire date of the supplement.
+  end: Date
+
   # Contains information about the resort
   resort: Resort
   
