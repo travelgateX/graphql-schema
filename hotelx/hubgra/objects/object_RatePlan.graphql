@@ -5,10 +5,18 @@ type RatePlan {
   
   # Specifies the rate name.
   name: String
-  
+
   # Start date in which the rate becomes effective.
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   effectiveDate: Date
   
   # Expire date of the rate.
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   expireDate: Date
+
+  # Start date in which the rate becomes effective.
+  start: Date
+  
+  # Expire date of the rate.
+  end: Date
 }
