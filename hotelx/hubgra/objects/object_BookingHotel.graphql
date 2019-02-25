@@ -1,16 +1,31 @@
 type BookingHotel {
   # Creation date of the booking.
   # Format: YYYY-MM-DD
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   creationDate: Date
   
   # Check-in date for booking
   # Format: YYYY-MM-DD
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   checkIn: Date
   
   # Check-out date for the booking.
   # Format: YYYY-MM-DD
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   checkOut: Date
+
+  # Creation date of the booking.
+  # Format: YYYY-MM-DD
+  bookingDate: Date
   
+  # Check-in date for booking
+  # Format: YYYY-MM-DD
+  start: Date
+  
+  # Check-out date for the booking.
+  # Format: YYYY-MM-DD
+  end: Date
+
   # Code of the hotel in the context selected.
   hotelCode: String
   
