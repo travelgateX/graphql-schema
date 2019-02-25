@@ -25,8 +25,16 @@ type AccessData {
   shared: Access
   # Access owner
   owner: Organization
+  # Refresh time to update Despriptive Info
+  updateDescriptiveInfo: Int!
+  # Limit on DescriptiveInfo; 0 denotates no limit
+  descriptiveInfoLimit: Int!
   # True if scheduler is active
   isSchedulerActive: Boolean
+  # Refresh time to update other batch lists
+  updateList: Int!
+  # Range on update date
+  updateDateRange: String!
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
 }
