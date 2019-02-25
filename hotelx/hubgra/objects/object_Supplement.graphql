@@ -40,9 +40,11 @@ type Supplement {
   expireDate: Date
 
   # Indicates the effective date of the supplement.
+  # Format: YYYY-MM-DD
   start: Date
   
   # Indicates the expire date of the supplement.
+  # Format: YYYY-MM-DD
   end: Date
 
   # Contains information about the resort
