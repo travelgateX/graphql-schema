@@ -9,9 +9,11 @@ type PriceBreakdown {
   expireDate: Date!
 
   # Start date in which the price becomes effective.
+  # Format: YYYY-MM-DD
   start: Date!
   
   # Expire date of price.
+  # Format: YYYY-MM-DD
   end: Date!
 
   # Specifies the daily price.
