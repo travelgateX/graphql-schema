@@ -1,11 +1,19 @@
 # Information about daily price.
 type PriceBreakdown {
   # Start date in which the price becomes effective.
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   effectiveDate: Date!
   
   # Expire date of price.
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   expireDate: Date!
+
+  # Start date in which the price becomes effective.
+  start: Date!
   
+  # Expire date of price.
+  end: Date!
+
   # Specifies the daily price.
   price: Price!
 }
