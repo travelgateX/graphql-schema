@@ -1,4 +1,4 @@
-```Event triggered```
+"Event triggered"
 type Event implements Node{
   code: ID!
   eventData: EventData

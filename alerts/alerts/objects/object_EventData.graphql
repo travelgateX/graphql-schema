@@ -1,4 +1,4 @@
-```Event data```
+"Event data"
 type EventData {
   code: ID!
   groupBy: String

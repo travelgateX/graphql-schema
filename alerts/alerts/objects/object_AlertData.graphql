@@ -1,17 +1,17 @@
 type AlertData {
   code: ID!
-  ```Alert name```
+  "Alert name"
   name: String
-  ```Alert description```
+  "Alert description"
   description: String
-  ```Alert configuration```
+  "Alert configuration"
   configuration: AlertConfiguration!
-  ```Indicates if the alert is being checked by the service.```
+  "Indicates if the alert is being checked by the service."
   isActive: Boolean!
-  ```Records of each update made of the alert```
+  "Records of each update made of the alert"
   history( relay: RelayInput, filter: AlertFilterInput):AlertConnection!
-  ```Member has edit the actual alert data```
+  "Member has edit the actual alert data"
   editor: Member!
-  ```Records of the last 10 events triggered```
+  "Records of the last 10 events triggered"
   events( relay: RelayInput, filter: AlertFilterInput):EventConnection!
 }

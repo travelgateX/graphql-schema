@@ -1,7 +1,0 @@
-```maximum average time```
-input AverageTimeInput{
-  # time quantity
-  quantity: Int!
-  # unit time
-  unit: unitTime!
-}

@@ -1,5 +1,0 @@
- ```maximum average time```
-type AverageTime{
-  quantity: Int!
-  unit: unitTime!
-}
