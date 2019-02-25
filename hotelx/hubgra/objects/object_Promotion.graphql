@@ -7,8 +7,16 @@ type Promotion {
   name: String
   
   # Promotion effective date.
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   effectiveDate: Date
   
   # Promotion expire date.
+  # @deprecated(reason: "deprecated from 2018-02-28. Wrong format date.")
   expireDate: Date
+
+  # Promotion effective date.
+  start: Date
+  
+  # Promotion expire date.
+  end: Date
 }
