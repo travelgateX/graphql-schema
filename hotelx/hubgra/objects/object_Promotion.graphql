@@ -15,8 +15,10 @@ type Promotion {
   expireDate: Date
 
   # Promotion effective date.
+  # Format: YYYY-MM-DD
   start: Date
   
   # Promotion expire date.
+  # Format: YYYY-MM-DD
   end: Date
 }
