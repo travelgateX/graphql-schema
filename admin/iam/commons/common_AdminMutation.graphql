@@ -15,4 +15,8 @@ extend type AdminMutation{
   deleteMember(member: [DeleteMemberInput!]!): Member!
   # Delete group and members from this group
   deleteGroup(group: DeleteGroupInput!): Group!
+  # Grant API to an existing group
+  grantApiToGroup(group: UpdateGroupAPISInput): Group!
+  # Remove API from an existing group
+  revokeApiFromGroup(group: UpdateGroupAPISInput): Group!
 }
