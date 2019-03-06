@@ -1,0 +1,5 @@
+input SuitOrganizationInput {
+    user: ID!
+    organization: ID!
+    template: OrganizationTemplate!
+}
