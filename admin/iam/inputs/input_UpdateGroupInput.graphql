@@ -1,6 +1,7 @@
 input UpdateGroupInput{
-  #@deprecated(reason: "deprecated from 2019-03-06. Use GrantAPIToGroup / RevokeAPIFromGroup to add or delete apis from groups")
-  api: [ID!]!
   group: ID!
-  info: String
+	owner:  ID
+  type: GroupTypeInput
+	info: String
+  label: String
 }
