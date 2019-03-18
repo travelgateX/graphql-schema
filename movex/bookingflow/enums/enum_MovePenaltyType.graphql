@@ -1,0 +1,5 @@
+enum MovePenaltyType {
+  PERCENTUAL
+  PER_DAY
+  TOTAL_AMOUNT
+}

@@ -1,0 +1,5 @@
+input MoveFlightInfoInput {
+  number: String!
+  departure: MoveFlightInfoLocationInput!
+  arrival: MoveFlightInfoLocationInput!
+}

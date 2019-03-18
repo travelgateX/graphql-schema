@@ -1,0 +1,5 @@
+input MoveJourneyInput {
+  id: ID!
+  origin: MoveLocationInput!
+  destination: MoveLocationInput!
+}

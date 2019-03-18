@@ -1,0 +1,5 @@
+type MoveSegmentReference {
+  itinerary: Int
+  journey: Int
+  segment: Int
+}

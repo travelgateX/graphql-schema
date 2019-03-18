@@ -1,0 +1,4 @@
+interface MoveReferences {
+  segments: [MoveSegmentReference!]
+  passengers: [Int!]
+}

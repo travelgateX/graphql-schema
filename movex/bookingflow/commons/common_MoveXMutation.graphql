@@ -1,0 +1,3 @@
+extend type MoveXMutation{
+  book(input: MoveBookInput!, operation: ConnectOperationExtendedInput!, client: ConnectClientInput!, accesses: ConnectAccessesInput, suppliers: ConnectSuppliersInput): MoveBook
+}

@@ -1,0 +1,13 @@
+type MoveOptionQuote implements MoveOption {
+  id: ID!
+  product: MoveProductType!
+  code: String
+  type: TravelType
+  carrier: String
+  hasCardFee: Boolean
+  bonuses: MoveBonuses
+  price: MovePriceBreakdown
+  passengers: [MovePassengerConfiguration!]!
+  policies: MovePolicies
+  journeys: [MoveJourney!]!
+}

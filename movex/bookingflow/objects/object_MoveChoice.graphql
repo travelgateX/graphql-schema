@@ -1,0 +1,8 @@
+type MoveChoice {
+  id: ID!
+  journeyRef: Int
+  providerCode: String
+  statusMessage: MoveMessage
+  segments: [MoveChoiceSegment!]!
+  supplementsAllowance: [MoveSupplementAllowance!]
+}

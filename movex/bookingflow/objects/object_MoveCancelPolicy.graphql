@@ -1,0 +1,6 @@
+type MoveCancelPolicy {
+  amount: Float!
+  dateFrom: DateTime
+  penaltyType: MovePenaltyType!
+  refundable: Boolean!
+}

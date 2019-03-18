@@ -1,0 +1,18 @@
+type MoveStop {
+
+  #location of stop
+
+  location: MoveLocation!
+
+  #arrival of stop
+
+  arrival: DateTime
+
+  #departure of stop
+
+  departure: DateTime
+
+  #Duration of stop in minutes
+
+  duration: Int
+}

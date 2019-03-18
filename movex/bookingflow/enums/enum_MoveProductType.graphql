@@ -1,0 +1,6 @@
+enum MoveProductType {
+  TRANSFER
+  FLIGHT
+  FERRY
+  TRAIN
+}

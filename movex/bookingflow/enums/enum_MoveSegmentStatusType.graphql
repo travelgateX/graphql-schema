@@ -1,0 +1,26 @@
+enum MoveSegmentStatusType {
+
+  #Ok
+
+  HK
+
+  #Change of programation
+
+  TK
+
+  #Unconfirmed
+
+  UC
+
+  #Unable
+
+  UN
+
+  #No action taken
+
+  NO
+
+  #Undefined
+
+  UD
+}

@@ -1,0 +1,5 @@
+type MoveXQuery {
+  #Available flight or transfer options of an itinerary
+  search(criteria: MoveCriteriaSearchInput!, operation: ConnectOperationExtendedInput!, client: ConnectClientInput!, accesses: ConnectAccessesInput, suppliers: ConnectSuppliersInput): MoveSearch
+  quote(criteria: MoveCriteriaQuoteInput!, operation: ConnectOperationExtendedInput!, client: ConnectClientInput!, accesses: ConnectAccessesInput, suppliers: ConnectSuppliersInput): MoveQuote
+}

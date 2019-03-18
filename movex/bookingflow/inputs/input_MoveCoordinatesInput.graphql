@@ -1,0 +1,4 @@
+input MoveCoordinatesInput {
+  latitude: Float!
+  longitude: Float!
+}

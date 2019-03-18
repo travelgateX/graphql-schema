@@ -1,0 +1,4 @@
+input MoveSpecialServiceRequestCharacteristicsInput {
+  measures: MoveMeasuresInput
+  ownTransportation: Boolean
+}

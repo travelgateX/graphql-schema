@@ -1,0 +1,5 @@
+type MovePassengerConfiguration {
+  id: ID!
+  type: MovePassengerType!
+  age: Int
+}

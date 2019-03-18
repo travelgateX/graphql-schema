@@ -1,0 +1,4 @@
+input ConnectSuppliersInput {
+  nodes: [ConnectSupplierInput!]!
+  filter: ConnectSupplierFilterInput
+}

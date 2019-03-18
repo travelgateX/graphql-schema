@@ -1,0 +1,6 @@
+type MoveLocation {
+  code: String!
+  name: String
+  terminal: String
+  coordinates: Coordinates
+}

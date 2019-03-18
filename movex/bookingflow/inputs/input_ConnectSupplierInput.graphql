@@ -1,0 +1,5 @@
+input ConnectSupplierInput {
+  code: ID!
+  operationSettings: ConnectOperationSettingsInput
+  accessBookingCriteria: ConnectAccessBookingCriteriaInput
+}

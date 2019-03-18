@@ -1,0 +1,4 @@
+input MoveCriteriaQuoteInput {
+  optionRefId: String!
+  preferences: MoveQuotePreferencesInput
+}

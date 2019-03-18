@@ -1,0 +1,7 @@
+type MoveChargeBreakdown {
+  type: String!
+  description: String
+  amount: Float!
+  included: Boolean
+  message: MoveMessage
+}

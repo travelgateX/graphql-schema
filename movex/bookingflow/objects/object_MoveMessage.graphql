@@ -1,0 +1,8 @@
+type MoveMessage {
+  type: String
+  id: String
+  carrier: String
+  language: Language
+  title: String
+  text: String
+}

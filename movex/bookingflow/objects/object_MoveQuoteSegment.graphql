@@ -1,0 +1,18 @@
+type MoveQuoteSegment implements MoveSegment {
+  status: SegmentStatusType
+  origin: MoveLocation!
+  destination: MoveLocation!
+  departure: DateTime!
+  arrival: DateTime!
+
+ # Duration of segment in minutes
+
+  duration: Int
+  vehicle: MoveVehicle
+  stops: [MoveStop!]
+  flight: MoveTransportation
+  transfer: MoveTransfer
+  familyFare: String
+  classes: [MoveSegmentClass!]
+  parameters: [Parameter!]
+}

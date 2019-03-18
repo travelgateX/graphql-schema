@@ -1,0 +1,4 @@
+type MoveSupplementWeightAllowance {
+  maxPerUnit: Int
+  maxTotal: Int
+}

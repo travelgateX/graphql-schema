@@ -1,0 +1,6 @@
+input MovePaymentData {
+  paymentType: MovePaymentType!
+  card: PaymentCardInput
+  instalmentsNumber: Int
+  amounts: [MoveAmountInput!]
+}

@@ -1,0 +1,8 @@
+enum MoveVehicleType {
+  CAR
+  BUS
+  TAXI
+  FERRY
+  PLANE
+  TRAIN
+}

@@ -1,0 +1,4 @@
+input ConnectAgencyInput {
+  code: ID!
+  language: Language!
+}

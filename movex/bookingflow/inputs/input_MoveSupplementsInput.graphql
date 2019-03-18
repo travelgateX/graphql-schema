@@ -1,0 +1,4 @@
+input MoveSupplementsInput {
+  specialServiceRequests: [MoveSpecialServiceRequestInput!]
+  seating: [MoveSeatInput!]
+}

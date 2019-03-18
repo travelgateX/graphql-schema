@@ -1,0 +1,4 @@
+input ConnectAccessesInput {
+  nodes: [ConnectAccessInput!]!
+  filter: ConnectAccessFilterInput
+}

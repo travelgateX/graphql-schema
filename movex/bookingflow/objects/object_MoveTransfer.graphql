@@ -1,0 +1,13 @@
+type MoveTransfer {
+ #  Transfer type
+
+  type: String
+  category: String
+  code: String
+  thirtPartyCode: String
+  name: String
+  frequency: Int
+  timeInAdvance: Int
+  messages: [MoveMessage!]
+  images: [String!]
+}

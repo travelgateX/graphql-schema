@@ -1,0 +1,6 @@
+input MoveAddressInput {
+  countryCode: Country!
+  zipCode: String
+  city: String
+  street: String
+}

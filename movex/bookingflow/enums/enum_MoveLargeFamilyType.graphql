@@ -1,0 +1,10 @@
+enum MoveLargeFamilyType {
+
+ # General large family
+
+  F1
+
+  #Special large family
+
+  F2
+}

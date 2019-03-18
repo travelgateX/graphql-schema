@@ -1,0 +1,8 @@
+type MoveSupplementCharge {
+  currency: Currency!
+  type: MoveAmountChargeType!
+  appliesTo: MoveChargeAppliesToType!
+  minAmount: Float
+  maxAmount: Float
+  totalAmount: Float
+}

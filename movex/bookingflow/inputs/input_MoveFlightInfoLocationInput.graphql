@@ -1,0 +1,4 @@
+input MoveFlightInfoLocationInput {
+  airport: IATAAirport!
+  date: DateTime!
+}

@@ -1,0 +1,7 @@
+type MoveSupplements {
+  paymentMethods: [MovePaymentMethod!]
+  paymentsByInstalments: [MovePaymentByInstalments!]
+  supplementsAllowance: [MoveSupplementAllowance!]
+  seatMap: MoveSeatMap
+  fareRules: [MoveMessage!]
+}

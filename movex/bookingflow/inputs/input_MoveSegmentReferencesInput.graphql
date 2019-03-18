@@ -1,0 +1,5 @@
+input MoveSegmentReferencesInput {
+  itineraryRef: Int
+  journeyRef: Int
+  segmentRef: Int
+}

@@ -1,0 +1,8 @@
+input MoveQuotePreferencesInput {
+  paymentMethods: Boolean
+  baggageInformation: Boolean
+  specialSupplements: Boolean
+  fareRules: Boolean
+  seating: Boolean
+  paymentByInstalments: Boolean
+}

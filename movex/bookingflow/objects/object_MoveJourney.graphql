@@ -1,0 +1,6 @@
+type MoveJourney {
+  id: ID!
+  provider: String!
+  statusMessage: MoveMessage
+  segments: [MoveQuoteSegment!]!
+}

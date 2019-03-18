@@ -1,0 +1,5 @@
+enum MovePaxType {
+  ADT
+  CHD
+  INF
+}

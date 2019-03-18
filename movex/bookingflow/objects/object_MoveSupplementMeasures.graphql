@@ -1,0 +1,6 @@
+type MoveSupplementMeasures {
+  weightAllowance: MoveSupplementWeightAllowance
+  height: Int
+  width: Int
+  length: Int
+}

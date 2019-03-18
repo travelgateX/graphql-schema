@@ -1,0 +1,10 @@
+enum MoveChargeAppliesToType {
+  RESERVATION
+  PASSENGER
+  SEGMENT
+  FARE_BASE
+  TAXES
+  FOR_ADULT
+  FOR_CHILD
+  FOR_INFANT
+}

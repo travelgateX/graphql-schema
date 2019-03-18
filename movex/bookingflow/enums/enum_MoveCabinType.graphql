@@ -1,0 +1,10 @@
+enum MoveCabinType {
+  #  Tourist
+  Y
+  # Business
+  C
+  #First
+  F
+  #Tourist Plus
+  YP
+}

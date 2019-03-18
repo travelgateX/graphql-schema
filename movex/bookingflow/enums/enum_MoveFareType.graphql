@@ -1,0 +1,6 @@
+enum MoveFareType {
+  PUB
+  PRI
+  NEGO
+  CORP
+}

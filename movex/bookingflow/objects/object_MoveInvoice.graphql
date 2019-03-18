@@ -1,0 +1,7 @@
+type MoveInvoice {
+  carrier: String!
+  agencyCode: String
+  instalmentsNumber: Int
+  lastTicketingDateUTC: Date
+  priceBreakdown: PriceBreakdown!
+}

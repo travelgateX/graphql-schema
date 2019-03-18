@@ -1,0 +1,6 @@
+input MoveSearchPreferencesInput {
+  cabin: MoveCabinPreferencesInput
+  fare: MoveFarePreferencesInput
+  bonuses: MoveBonusesPreferencesInput
+  transport: MoveTransportPreferencesInput
+}

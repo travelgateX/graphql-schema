@@ -1,0 +1,4 @@
+type MoveBlockRow {
+  number: String!
+  seats: [MoveBlockSeat!]!
+}

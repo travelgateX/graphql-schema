@@ -1,0 +1,6 @@
+input ConnectAccessConfiguration {
+  user: String!
+  password: String!
+  urls: ConnectUrlsInput!
+  parameters: [ParameterInput!]
+}

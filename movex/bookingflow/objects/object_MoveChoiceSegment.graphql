@@ -1,0 +1,6 @@
+type MoveChoiceSegment {
+  refSegment: Int
+  familyFare: String
+  classes: [MoveSegmentClass!]
+  parameters: [Parameter!]
+}

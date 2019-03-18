@@ -1,0 +1,4 @@
+input ConnectUrlsInput {
+  generic: URI
+  specifics: [ParameterUrlInput!]
+}

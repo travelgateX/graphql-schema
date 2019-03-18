@@ -1,0 +1,4 @@
+input MoveContactPhoneInput {
+  prefix: String!
+  number: String!
+}

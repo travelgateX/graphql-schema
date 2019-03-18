@@ -1,0 +1,8 @@
+type MovePaymentByInstalments {
+  instalmentsNumber: Int!
+  currency: Currency!
+  firstPaymentAmount: Float
+  remainingInstalmentAmount: Float
+  remainingInstalmentTotalAmount: Float
+  interestRate: Float
+}

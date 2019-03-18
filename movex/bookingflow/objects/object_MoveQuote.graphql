@@ -1,0 +1,6 @@
+type MoveQuote implements ConnectResponse {
+  auditData: AuditData
+  options: [MoveOptionQuote!]
+  supplements: MoveSupplements
+  adviseMessage: [AdviseMessage!]
+}

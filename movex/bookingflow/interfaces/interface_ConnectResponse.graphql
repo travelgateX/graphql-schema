@@ -1,0 +1,4 @@
+interface ConnectResponse {
+  auditData: AuditData
+  adviseMessage: [AdviseMessage!]
+}

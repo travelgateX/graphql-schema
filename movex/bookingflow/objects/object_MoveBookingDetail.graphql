@@ -1,0 +1,5 @@
+type MoveBookingDetail {
+  status: BookStatusType!
+  locators: [MoveLocator!]
+  invoice: MoveInvoice
+}

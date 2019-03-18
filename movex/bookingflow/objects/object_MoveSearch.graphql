@@ -1,0 +1,6 @@
+type MoveSearch implements ConnectResponse {
+  auditData: AuditData
+  segments: [MoveSegment!]
+  options: [MoveOptionSearch!]
+  adviseMessage: [AdviseMessage!]
+}

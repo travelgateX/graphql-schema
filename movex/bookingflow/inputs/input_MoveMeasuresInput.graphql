@@ -1,0 +1,6 @@
+input MoveMeasuresInput {
+  weight: Int
+  height: Int
+  width: Int
+  length: Int
+}

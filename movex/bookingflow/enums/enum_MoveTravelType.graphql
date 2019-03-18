@@ -1,0 +1,18 @@
+enum MoveTravelType {
+
+  #One Way. One journey. Origin and destination are different.
+
+  OW
+
+  #Round Trip. Outbound and inbound with same origin and destination.
+
+  RT
+
+  #Open Jaw. Outbound and inbound with diferent origin or destination
+
+  OJ
+
+  #Circle Trip. Round trip with multiple destinations.
+
+  CT
+}

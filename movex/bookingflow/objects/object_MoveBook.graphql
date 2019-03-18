@@ -1,0 +1,5 @@
+type MoveBook implements MoveResponse {
+  auditData: AuditData
+  booking: MoveBookingDetail
+  adviseMessage: [AdviseMessage!]
+}

@@ -1,0 +1,16 @@
+type MoveSearchSegment implements MoveSegment {
+  id: ID!
+  status: SegmentStatusType
+  origin: MoveLocation!
+  destination: MoveLocation!
+  departure: DateTime!
+  arrival: DateTime!
+
+ # Duration of segment in minutes
+
+  duration: Int
+  vehicle: MoveVehicle
+  stops: [MoveStop!]
+  flight: MoveTransportation
+  transfer: MoveTransfer
+}

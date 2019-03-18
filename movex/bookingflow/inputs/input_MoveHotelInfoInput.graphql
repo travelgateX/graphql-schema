@@ -1,0 +1,4 @@
+input MoveHotelInfoInput {
+  name: String!
+  address: String!
+}

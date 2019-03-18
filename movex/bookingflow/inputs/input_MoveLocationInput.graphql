@@ -1,0 +1,6 @@
+input MoveLocationInput {
+  code: String!
+  type: LocationCodeType!
+  coordinates: MoveCoordinatesInput
+  additionalInfo: MoveAdditionalLocationInfoInput
+}

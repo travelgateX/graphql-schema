@@ -1,0 +1,6 @@
+type MovePassengerBreakdown {
+  paxType: MovePaxType!
+  amount: Float!
+  taxes: [MoveTypifiedAmount!]
+  fees: [MoveTypifiedAmount!]
+}

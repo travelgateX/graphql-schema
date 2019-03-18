@@ -1,0 +1,4 @@
+enum MoveChargeAmountType {
+  PERCENTAGE
+  FIXED
+}

@@ -1,0 +1,5 @@
+input ConnectAccessInput {
+  code: ID!
+  accessBookingCriteria: ConnectAccessBookingCriteriaInput
+  operationSettings: ConnectOperationSettingsInput
+}

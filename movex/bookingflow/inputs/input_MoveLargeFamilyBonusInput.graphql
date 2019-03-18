@@ -1,0 +1,5 @@
+input MoveLargeFamilyBonusInput {
+  type: MoveLargeFamilyType!
+  cityCode: String!
+  code: String!
+}

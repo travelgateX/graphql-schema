@@ -1,0 +1,9 @@
+input MovePassengerBonusInput {
+  resident: MoveResidentBonusInput
+  largeFamily: MoveLargeFamilyBonusInput
+  dicountCards: [MoveDiscountCard!]
+
+  #Discount codes associated to passenger type
+
+  discountCodes: [String!]
+}

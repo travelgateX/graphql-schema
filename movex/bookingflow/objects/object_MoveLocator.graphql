@@ -1,0 +1,4 @@
+type MoveLocator {
+  id: ID!
+  type: MoveLocatorType!
+}

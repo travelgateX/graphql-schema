@@ -1,0 +1,9 @@
+input MoveCriteriaSearchInput {
+
+#  Journey's type
+
+  travelType: TravelType!
+  journeys: [MoveJourneyInput!]!
+  passengers: [PaxInput!]!
+  preferences: MoveSearchPreferencesInput
+}

@@ -1,0 +1,13 @@
+type MoveTransportation {
+ #  Transportation number
+
+  number: String!
+
+  #Company which operates this flight
+
+  operatingCarrier: String
+
+  #Company which comercializes this flight
+
+  marketingCarrier: String
+}

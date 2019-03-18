@@ -1,0 +1,12 @@
+type MoveSupplement {
+  id: ID!
+  type: String
+  quantity: Int
+  maxQuantity: Int
+  code: String
+  description: String
+  carrier: String
+  reservationToken: String
+  characteristics: MoveSupplementCharacteristics
+  charges: [MoveSupplementCharge!]
+}

@@ -1,0 +1,8 @@
+input MoveSpecialServiceRequestPassengerInput {
+  id: ID!
+  type: MoveSpecialServiceRequestType!
+  token: String
+  code: String
+  characteristics: MoveSpecialServiceRequestCharacteristicsInput
+  references: MoveReferencesSpecialServiceRequestPassengerInput!
+}

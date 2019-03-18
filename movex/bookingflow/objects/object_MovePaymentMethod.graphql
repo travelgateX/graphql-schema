@@ -1,0 +1,5 @@
+type MovePaymentMethod {
+  type: MovePaymentMethodType!
+  card: String
+  charges: [MoveCharge!]!
+}

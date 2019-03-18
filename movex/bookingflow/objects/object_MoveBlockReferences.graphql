@@ -1,0 +1,5 @@
+type MoveBlockReferences implements MoveReferences {
+  segments: [MoveSegmentReference!]
+  passengers: [Int!]
+  blockReferences: [Int!]!
+}

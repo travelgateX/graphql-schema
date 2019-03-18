@@ -1,0 +1,4 @@
+input MoveAdditionalLocationInfoInput {
+  flightInfo: MoveFlightInfoInput
+  hotelInfo: MoveHotelInfoInput
+}

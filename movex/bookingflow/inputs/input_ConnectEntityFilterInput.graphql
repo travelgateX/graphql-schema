@@ -1,0 +1,4 @@
+input ConnectEntityFilterInput {
+  include: [String!]
+  exclude: [String!]
+}

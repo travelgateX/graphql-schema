@@ -1,0 +1,4 @@
+type MoveSupplementReferences implements MoveReferences {
+  segments: [MoveSegmentReference!]
+  passengers: [Int!]
+}

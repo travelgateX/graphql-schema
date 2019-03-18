@@ -1,0 +1,26 @@
+enum MoveResidentType {
+
+  #Balearis Islands resident flying to mainland
+
+  BP
+
+  #Balearis Islands resident flying to another balearic island
+
+  BI
+
+  #Canarian Islands resident flying to another Canarian Island
+
+  DC
+
+  #Canarian Islands resident flying to mainland
+
+  RC
+
+  #Melilla resident
+
+  RM
+
+  #Ceuta resident
+
+  RE
+}

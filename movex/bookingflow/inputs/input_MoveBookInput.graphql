@@ -1,0 +1,7 @@
+input MoveBookInput {
+  optionRefId: String!
+  deltaPrice: DeltaPriceInput
+  passengers: [MovePassengerInput!]!
+  holder: MoveHolderInput
+  paymentsData: [MovePaymentData!]!
+}

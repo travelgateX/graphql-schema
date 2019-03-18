@@ -1,0 +1,6 @@
+enum MoveSupplementAppliesToType {
+  ALL
+  DEPARTURE
+  RETURN
+  REF
+}

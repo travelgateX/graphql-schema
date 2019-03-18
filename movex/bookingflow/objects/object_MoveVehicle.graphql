@@ -1,0 +1,22 @@
+type MoveVehicle {
+
+ # Vehicle type
+
+  type: VehicleType!
+
+  #Vehicle model
+
+  model: String
+
+  #Vehicle category
+
+  category: String
+
+  #Vehicle code
+
+  code: String
+
+  #Vehicle external code
+
+  externalCode: String
+}

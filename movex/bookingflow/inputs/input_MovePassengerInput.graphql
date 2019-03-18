@@ -1,0 +1,10 @@
+input MovePassengerInput {
+  title: MovePassengerTitleType!
+  name: String!
+  surname: String!
+  email: String
+  contactPhone: MoveContactPhoneInput
+  address: MoveAddressInput
+  bonuses: MovePassengerBonusInput
+  supplements: MoveSupplementsInput
+}

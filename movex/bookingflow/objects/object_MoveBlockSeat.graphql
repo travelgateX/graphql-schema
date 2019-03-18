@@ -1,0 +1,6 @@
+type MoveBlockSeat {
+  number: String!
+  reservationToken: String
+  isAvailable: Boolean!
+  characteristics: [MoveBlockSeatCharacteristicType!]
+}

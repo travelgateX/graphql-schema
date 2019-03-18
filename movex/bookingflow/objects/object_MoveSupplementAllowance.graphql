@@ -1,0 +1,5 @@
+type MoveSupplementAllowance {
+  appliesTo: MoveSupplementAppliesToType!
+  references: MoveSupplementReferences
+  supplements: [MoveSupplement!]
+}

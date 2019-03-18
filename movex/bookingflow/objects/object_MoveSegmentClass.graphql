@@ -1,0 +1,8 @@
+type MoveSegmentClass {
+  cabin: MoveCabinType
+  fareClass: String
+  paxRef: Int
+  fareType: MoveFareType
+  fareBasis: String
+  remainingSeats: Int
+}

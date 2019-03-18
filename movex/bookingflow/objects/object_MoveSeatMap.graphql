@@ -1,0 +1,4 @@
+type MoveSeatMap {
+  blockRules: [MoveBlockRule!]!
+  blocks: [MoveBlock!]!
+}
