@@ -6,7 +6,7 @@ extend type AdminQuery{
   # Members list; specify member codes to filter members.
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection!
   # Groups list; specify group codes to filter groups.
-  groups(codes:[ID!], codeStartsWith: String, type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection!
+  groups(codes:[ID!], codeStartsWith: String, type: GroupType,parent: String,first: Int, last: Int, before: String, after:String) : GroupConnection!
   # Apis list; specify api codes to filter apis.
   apis(codes:[ID!],first: Int, last: Int, before: String, after:String) : APIConnection!
   # Resources list; specify resource codes to filter resources.
