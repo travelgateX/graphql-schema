@@ -1,0 +1,9 @@
+# Posible source of ratios
+enum RatiosSource {
+    # Ratios calculated from buyer traffic
+    BASIC
+    # Ratios calculated from Speed traffic
+    SPEED
+    # Ratios calculated from both buyer and Speed traffic
+    BOTH
+}
