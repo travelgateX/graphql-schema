@@ -9,4 +9,6 @@ type ClientData {
   group: Group
   # Client owner
   owner: Organization
+  # Obtain all suppliers for a filter.
+  suppliers(first: Int, last: Int, before: String, after:String, filter: SupplierFilter): SupplierConnection
 }

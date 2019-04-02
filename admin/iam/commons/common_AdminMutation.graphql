@@ -1,6 +1,8 @@
 extend type AdminMutation{
   # Create organization. Require an user to be specified as the owner of the group.
   createOrganization(organization: CreateOrganizationInput!): Organization!
+  # Suit Organization. Requires an existing organization and a specific template.
+  suitOrganization(organization: SuitOrganizationInput!): Organization!
   # Create member; requires specific group and role
   createMember(member: CreateMemberInput!) : Member!
   # Create group; group "owner" is optional
@@ -8,9 +10,13 @@ extend type AdminMutation{
   # Update member additions or remove roles
   updateMember(member: UpdateMemberInput!): Member!
   # Update group additions or remove APIs
-  updateGroup(group: UpdateGroupInput!,method: Method!): Group!
+  updateGroup(group: UpdateGroupInput!): Group!
   # Delete a member from specific group
   deleteMember(member: [DeleteMemberInput!]!): Member!
   # Delete group and members from this group
   deleteGroup(group: DeleteGroupInput!): Group!
+  # Grant API to an existing group
+  grantApiToGroup(group: UpdateGroupAPISInput): Group!
+  # Remove API from an existing group
+  revokeApiFromGroup(group: UpdateGroupAPISInput): Group!
 }

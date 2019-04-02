@@ -18,6 +18,8 @@ input AccessInput {
   urls: UrlsInput
   # List of parameters for additional information
   parameters: [ParameterInput]
+  # Limit on DescriptiveInfo; 0 denotates no limit
+  descriptiveInfoLimit: Int
   # Markets allowed for the Access
   markets: [String!]
   # Business rule types for the Access
@@ -26,6 +28,12 @@ input AccessInput {
   shared: String
   # Default group where the access will be visible.
   group: ID
+  # Refresh time to update Despriptive Info
+  updateDescriptiveInfo: Int
+  # Refresh time to update other batch lists
+  updateList: Int
+  # Range on update date
+  updateDateRange: String
   # Access owner
   owner: ID
 }

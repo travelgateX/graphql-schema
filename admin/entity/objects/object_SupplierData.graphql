@@ -19,4 +19,6 @@ type SupplierData{
   owner: Organization
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
+  # Obtain all clients for a filter.
+  clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
 }
