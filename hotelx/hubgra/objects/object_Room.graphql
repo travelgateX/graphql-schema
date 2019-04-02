@@ -26,4 +26,7 @@ type Room {
   
   # Daily break downs promotions.
   promotions: [Promotion!]
+
+  # List of surcharges of the option returned.
+  surcharges: [Surcharge!]
 }
