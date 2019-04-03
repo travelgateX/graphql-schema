@@ -7,5 +7,7 @@ type OperationDetailed {
   # Hits grouped depending on their status
   detailedHits(type: [StatsInfoTypes!], code:[Int!]): [StatsInfo!]
   # Responsible for the execution of the this stats. If TRUE then cache, else client
-  cache: Boolean!
+  cache: Boolean! @deprecated(reason: "deprecated from 2019-04-03. Added new field trafficType.")
+  # Responsible for the execution of the this stats. If TRUE then cache, else client
+  trafficType: TrafficType!
 }
