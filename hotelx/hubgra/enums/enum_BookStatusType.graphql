@@ -3,7 +3,7 @@ enum BookStatusType {
   # The reservation was completed with no problems
   OK 
   
-  # The status of the booking is KO
+  # The status of the booking is NOT OK
   KO
   
   # The reservation was completed but the product is still not available, so the reservation goes into a waiting list.

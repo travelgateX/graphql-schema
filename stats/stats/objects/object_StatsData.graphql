@@ -8,7 +8,7 @@ type StatsData{
   # To date of search
   to: DateTime!
   # Ratios details
-  ratios(ratioSource:RatiosSource!): Ratios!
+  ratios(trafficType:TrafficType!): Ratios!
   # Stats information per operation
   operations(type:[ServiceOperationType!]):[OperationDetailed!]
 }
