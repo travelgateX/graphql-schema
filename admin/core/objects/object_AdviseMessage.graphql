@@ -2,7 +2,7 @@
 type AdviseMessage {
   # AM code: The following codes can be returned:
   code: ID!
-  # Error type: The following types are valid:
+  # Error type: The following types are valid:[type]
   type: String! @deprecated(reason: "deprecated from 2018-06-01.")
   # Error description
   description: String!
