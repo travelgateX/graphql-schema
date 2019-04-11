@@ -1,6 +1,9 @@
 # Filters needed to do a search.
 # Users (List of users), Suppliers (List of suppliers), ServiceApis (List of service apis), From (Start date of search - YYYY-MM-DD HH:mm:ss), To (End date of search - YYYY-MM-DD HH:mm:ss)
 input StatsFilterInput {
+  # List of owners
+  owners: [ID!]
+
   # Groups codes list
   groups: [ID!]
 
@@ -14,6 +17,7 @@ input StatsFilterInput {
   clients: [ID!]
   
   # Buyer or Seller
+  # @deprecated(reason: "deprecated from 2019-04-11. Superfluous field.")
   mode: ModeType!
   
   # List of services apis
