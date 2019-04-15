@@ -9,6 +9,10 @@ extend type AdminMutation{
   createGroup(group: CreateGroupInput!): Group!
   # Update member additions or remove roles
   updateMember(member: UpdateMemberInput!): Member!
+  # Grant permissions to member.
+  grantPermissions(member: GrantPermissionsInput!): Member!
+  # Revoke permissions to member.
+  revokePermissions(member: GrantPermissionsInput!): Member!
   # Clone member. Requires source and destination member.
   clonePermissions(member: ClonePermissionsInput!) : Member!
   # Update group additions or remove APIs
