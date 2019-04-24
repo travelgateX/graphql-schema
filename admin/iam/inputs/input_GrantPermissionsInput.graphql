@@ -1,0 +1,6 @@
+input GrantPermissionsInput{
+    member: ID!
+    group: ID!
+    role:  ID!
+    resources:  [ID!]!
+}
