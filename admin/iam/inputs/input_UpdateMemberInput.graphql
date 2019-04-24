@@ -1,8 +1,5 @@
 input UpdateMemberInput{
-  member: ID!
-  info: String
-  group: ID!
-  role:  ID!
-  resources:  [ID!]!
-  method: Method!
+   member: ID!
+   label: String!
+   isActive: Boolean!
 }
