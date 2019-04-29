@@ -28,4 +28,20 @@ input HotelXHotelFilterInput {
   updatedAt_gt: DateTime
   # All values greater than or equal the given value.
   updatedAt_gte: DateTime
+  # Country returned in Hotel
+  country_in: Boolean
+  # Category returned in Hotel
+  category_in: Boolean
+  # Destination returnd in Hotel
+  destination_in: Boolean
+  # Name returned in Hotel
+  name_in: Boolean
+  # Coordinates returned in Hotel
+  coordinates_in: Boolean
+  # IsoCode returned in Hotel
+  isoCode_in: Boolean
+  # All fields of basic info are filled
+  basicInfo_in: Boolean
+  # All fields of mandatory basic info are filled
+  basicInfoMandatory_in: Boolean
 }
