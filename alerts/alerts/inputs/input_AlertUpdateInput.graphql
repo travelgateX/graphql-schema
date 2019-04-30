@@ -13,6 +13,4 @@ input AlertUpdateInput {
   configurationPeakTraffic: AlertUpdateConfigurationInputPeakTraffic
   #status
   isActive: Boolean
-  #editor ID
-  editor: ID!
 }
