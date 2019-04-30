@@ -15,6 +15,8 @@ type GroupData implements GroupCommonData{
   isEditable: Boolean!
   productId: Int
   resourceId: Int
+  # Sibilings of the group
+  siblings(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String, codeStartsWith: String): GroupConnection
   # Only responses members in this group
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   #APIs assigned to this group. Products have APIs.
