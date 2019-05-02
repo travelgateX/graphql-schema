@@ -34,5 +34,5 @@ input StatsFilterInput {
   to: DateTime!
 
   # If true assets will be retrieved.
-  retrieveAssets: Boolean!
+  retrieveAssets: Boolean
 }
