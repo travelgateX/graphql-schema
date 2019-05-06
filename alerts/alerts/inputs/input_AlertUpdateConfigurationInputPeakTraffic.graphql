@@ -46,16 +46,16 @@ input AlertUpdateConfigurationInputPeakTraffic {
   # supplier codes
   "Possibility to filter traffic by suppliers (hub provider)"
 	supplier:[AlertObjectInput!]
-  # supplier codes
+  # client codes
   "Possibility to filter traffic by clients (hub user)"
 	client:[AlertObjectInput!]
-  # supplier codes
+  # group codes
   "Possibility to filter traffic by groups. It is mandatory to set an ORG group type. Only ORG, FOLDER and PRODUCT group types are allowed"
-	group:[AlertGroupInput!]
-  # supplier codes
+	group:AlertGroupInput
+  # access codes
   "Possibility to filter traffic by accesses"
 	access:[AlertObjectInput!]
-  # supplier codes
+  # operation codes
   "Possibility to filter traffic by operations"
 	operation:[AlertObjectInput!]
   # possibility of grouping. 

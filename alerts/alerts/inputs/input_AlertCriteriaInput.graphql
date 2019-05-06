@@ -4,4 +4,6 @@ input AlertCriteriaInput {
   alertCodes: [ID!]
   #active or not
   isActive: Boolean
+  #List of group codes where alerts are located
+  groups: [ID!]
 }
