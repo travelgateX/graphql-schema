@@ -15,5 +15,5 @@ input AlertInput {
   "To set alert active or not"
   isActive: Boolean!
   "Alert location group"
-  group: String!
+  group: ID!
 }
