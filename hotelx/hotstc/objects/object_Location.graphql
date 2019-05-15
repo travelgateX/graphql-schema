@@ -10,13 +10,13 @@ type Location {
   zipCode: String
   
   # Country where is the Hotel.
-  country: Country!
+  country: Country
 
   # Geographical coordinates corresponding to a location.
   coordinates: Coordinates
   
   # Closest destination
-  closestDestination: DestinationData!
+  closestDestination: DestinationData
 
   #Airports
   airports:[Airport!]

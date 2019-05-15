@@ -13,10 +13,10 @@ type HotelData {
   giataData: GiataData
   
   # Name of the hotel in the Supplier selected.
-  hotelName: String!
+  hotelName: String
   
   # Hotel category (for example number of stars).
-  categoryCode: String!
+  categoryCode: String
   
   # Indicates property type
   property: Property
