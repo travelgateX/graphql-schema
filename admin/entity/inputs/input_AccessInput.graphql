@@ -36,4 +36,6 @@ input AccessInput {
   updateDateRange: String
   # Access owner
   owner: ID
+  # True if scheduler is active
+  isSchedulerActive: Boolean
 }
