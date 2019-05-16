@@ -1,47 +1,41 @@
-# By default: Logical AND on all given filters.
+# By default: Logical AND on all given filters. only hotels that match condition are returned
 input HotelXHotelFilterInput {
   # Logical AND on all given filters.
   AND: [HotelXHotelFilterInput!]
   # Logical OR on all given filters.
   OR: [HotelXHotelFilterInput!]
-  # All values that are contained in given list.
+  # Return hotels with creation time in given list.
   createdAt_in: [DateTime!]
-  # All values that are not contained in given list.
+  # Return hotels with creation time that are not contained in given list.
   createdAt_not_in: [DateTime!]
-  # All values less than the given value.
+  # Return hotels with creation time less than the given value.
   createdAt_lt: DateTime
-  # All values less than or equal the given value.
+  #  Return hotels with creation time less than or equal the given value.
   createdAt_lte: DateTime
-  # All values greater than the given value.
+  # Return hotels with creation time greater than the given value.
   createdAt_gt: DateTime
-  # All values greater than or equal the given value.
+  #  Return hotels with creation time greater than or equal the given value.
   createdAt_gte: DateTime
-  # All values that are contained in given list.
+  #  Return hotels with update time that are contained in given list.
   updatedAt_in: [DateTime!]
-  # All values that are not contained in given list.
+  # Return hotels with update time that are not contained in given list.
   updatedAt_not_in: [DateTime!]
-  # All values less than the given value.
+  # Return hotels with update time less than the given value.
   updatedAt_lt: DateTime
-  # All values less than or equal the given value.
+  # Return hotels with update time less than or equal the given value.
   updatedAt_lte: DateTime
-  # All values greater than the given value.
+  # Return hotels with update time greater than the given value.
   updatedAt_gt: DateTime
-  # All values greater than or equal the given value.
+  # Return hotels with update time greater than or equal the given value.
   updatedAt_gte: DateTime
-  # Country returned in Hotel
+  # Hotel Country required for all Hotels
   country_in: Boolean
-  # Category returned in Hotel
+  # Hotel Category code required for all Hotels
   category_in: Boolean
-  # Destination returnd in Hotel
+  # Hotel destination required for all Hotels
   destination_in: Boolean
-  # Name returned in Hotel
+  # Hotel Name required for all Hotels
   name_in: Boolean
-  # Coordinates returned in Hotel
+  # Hotel Coordinates required for all Hotels
   coordinates_in: Boolean
-  # IsoCode returned in Hotel
-  isoCode_in: Boolean
-  # All fields of basic info are filled
-  basicInfo_in: Boolean
-  # All fields of mandatory basic info are filled
-  basicInfoMandatory_in: Boolean
 }
