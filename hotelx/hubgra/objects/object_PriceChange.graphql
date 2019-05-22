@@ -1,0 +1,11 @@
+# Contains the price of the previous operation
+type PriceChange {
+  # the currency of previous option
+  currency: String!
+  # the net value of previous option
+  net: Float!
+  # the gross value of previous option
+  gross: Float!
+  # Indicates if previous option price was binding or not
+  binding: Boolean!
+}
