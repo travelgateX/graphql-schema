@@ -8,7 +8,10 @@ type HotelOptionQuote {
   
   # Specifies the prices (Gross, Net and Amount) of the option returned.
   price: Price!
-  
+
+  # Specifies the price of the previous search option
+  searchPrice: PriceChange
+
   # Specifies cancel policies of the option returned.
   cancelPolicy: CancelPolicy!
   

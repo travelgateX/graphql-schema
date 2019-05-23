@@ -11,7 +11,10 @@ type HotelBookingDetail {
   
   # Specifies the prices (Gross, Net and Amount) of the option returned.
   price: Price
-  
+
+  # Specifies the price of the previous OptionQuote in Book service.
+  quotePrice: PriceChange
+
   # Specifies cancel policies of the book returned.
   cancelPolicy: CancelPolicy
   
