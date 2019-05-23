@@ -1,3 +1,3 @@
 type HotelXMutation{
-  a:Boolean
+
 }
