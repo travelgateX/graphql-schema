@@ -13,7 +13,7 @@ type GeonameData {
   country: Country
 
   # Indicates destination type, zone, city or country
-  type: DestinationType! @deprecated(reason: "Field is deprecated from 2019-04-30")
+  type: String!
 
   # Geographical coordinates corresponding to a location.
   coordinates: Coordinates!
