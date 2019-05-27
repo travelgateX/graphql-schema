@@ -13,7 +13,7 @@ type APIData{
   # which resources are asigned this API?
   resources(codes: [ID!], first: Int, last: Int, before: String, after:String): ResourceConnection
   # which operations are asigned this API?
-  operations(codes: [ID!],type: OperationType, first: Int, last: Int, before: String, after:String): OperationConnection
+  operations(codes: [ID!],type: [OperationType], first: Int, last: Int, before: String, after:String): OperationConnection
   # Advise messages catalog.
   adviseMessageCatalog(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
