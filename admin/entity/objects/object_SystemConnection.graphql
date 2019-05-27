@@ -1,0 +1,4 @@
+type SystemConnection {
+  edges: [SystemEdge]
+  pageInfo: PageInfo!
+}

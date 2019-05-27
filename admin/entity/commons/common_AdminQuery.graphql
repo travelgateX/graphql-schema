@@ -14,4 +14,6 @@ extend type AdminQuery {
   profiles(filter: ProfileFilter): ProfileConnection
   # Obtain a set of entities
   entities(filter: EntityFilter): EntityConnection
+  # Obtain all clients for a filter.
+  systems(first: Int, last: Int, before: String, after:String, filter: SystemFilter): SystemConnection
 }
