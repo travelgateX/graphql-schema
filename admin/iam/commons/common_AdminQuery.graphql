@@ -14,5 +14,5 @@ extend type AdminQuery{
   # Roles list; specify role codes to filter roles.
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String) : RoleConnection!
   # Operations list; specify operations codes to filter operations.
-  operations(codes: [ID!],type: OperationType, first: Int, last: Int, before: String, after:String): OperationConnection!
+  operations(codes: [ID!],types: [OperationType!], first: Int, last: Int, before: String, after:String): OperationConnection!
 }
