@@ -12,5 +12,5 @@ type StatsData{
   # Stats information per operation
   operations(type:[ServiceOperationType!]):[OperationDetailed!]
   # Summarized Stats
-  hits(trafficType:TrafficType!, statusType:StatsInfoTypes!, operationType:OperationType!): Int!
+  hits(trafficType:TrafficType!, statusType:StatsInfoTypes!, operationType:OperationType!): Int64!
 }

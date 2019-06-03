@@ -3,7 +3,7 @@ type OperationDetailed {
   # Operation information
   operation: Operation!
   # Total hits.
-  totalHits: Int!
+  totalHits: Int64!
   # Hits grouped depending on their status
   detailedHits(type: [StatsInfoTypes!], code:[Int!]): [StatsInfo!]
   # Responsible for the execution of the this stats. If TRUE then cache, else client
