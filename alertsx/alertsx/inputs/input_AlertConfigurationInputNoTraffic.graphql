@@ -36,10 +36,10 @@ input AlertConfigurationInputNoTraffic {
   "Possibility to filter traffic by errorTypes"
   errorType: [ErrorTypeInput!] 
   # supplier codes
-  "Possibility to filter traffic by suppliers (hub provider)"
+  "Possibility to filter traffic by suppliers"
 	supplier:[AlertObjectInput!]
   # client codes
-  "Possibility to filter traffic by clients (hub user)"
+  "Possibility to filter traffic by clients"
 	client:[AlertObjectInput!]
   # group codes
   "Must filter traffic by group. Only PRODUCT group type is allowed"
