@@ -4,7 +4,7 @@ type StatsInfo {
   # Stats type
   type: StatsInfoTypes!
   # Total hits
-  hits: Int!
+  hits: Int64!
   # Average time (ms)
   time: Int!
   # Details about errors.
