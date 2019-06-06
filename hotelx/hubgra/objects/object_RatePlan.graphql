@@ -2,7 +2,10 @@
 type RatePlan {
   # Specifies the rate code.
   code: String!
-  
+
+  # Supplier's rate code.
+  supplierCode: String!
+
   # Specifies the rate name.
   name: String
 

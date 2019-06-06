@@ -1,0 +1,5 @@
+# Feature of a room.
+type Feature {
+  # Feature code.
+  code: String!
+}
