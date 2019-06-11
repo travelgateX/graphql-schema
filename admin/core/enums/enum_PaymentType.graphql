@@ -11,4 +11,11 @@ enum PaymentType {
   
   # The payment is managed by the supplier. The payment is effectuated at check in in the hotel.
   CARD_CHECK_IN
+
+  # The payment is managed by TravelgateX.
+  # The client may use this payment type if he contracts the service of virtual card creation(VCC).
+  # This service allows Travelgate to manage the payments that require card data in the Booking process.
+  # There are two payment types that require card data: CARD_BOOKING and CARD_CHECK_IN.
+  # That way, TravelgateX generates the card with the net price that the client has to pay to the supplier.
+  PAYX
 }
