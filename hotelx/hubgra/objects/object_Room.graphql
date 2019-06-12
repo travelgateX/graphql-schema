@@ -6,6 +6,9 @@ type Room {
   # Indicates the room code
   code: String!
   
+  # Supplier's room code.
+  supplierCode: String!
+
   # Description about the room
   description: String
   
@@ -29,4 +32,7 @@ type Room {
 
   # List of surcharges of the option returned.
   surcharges: [Surcharge!]
+  
+  # List of features of this room 
+  features: [Feature!]
 }
