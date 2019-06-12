@@ -4,6 +4,8 @@ enum TrafficType {
     BASIC
     # Ratios calculated from traffic between buyer and Speed
     SPEED
-    # Ratios calculated from traffic between Speed and seller
+    # Ratios calculated from traffic between buyer and Static information cache
+    SCHEDULER
+    # Ratios calculated from traffic between TGX's caches and seller
     OPTIMIZED
 }
