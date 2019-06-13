@@ -24,6 +24,9 @@ type HotelBookingDetail {
   # Booking Status.
   status: BookStatusType!
   
+  # Supplier’s billing code. Will be returned if the supplier has different billing accounts and this is informed in the reservation.
+  billingSupplierCode: String
+
   # Payable.
   payable: String
   
