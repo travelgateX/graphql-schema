@@ -27,4 +27,6 @@ type OrganizationData implements GroupCommonData {
   clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
   domains: [Domain]!
   template: String
+  # Obtain all Profiles
+  profiles(filter: ProfileFilter): ProfileConnection
 }
