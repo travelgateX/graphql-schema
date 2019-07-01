@@ -5,4 +5,7 @@ type Reference {
   
   # Supplier reference booking
   supplier: String
+  
+  # Hotel reference booking
+  hotel: String
 }
