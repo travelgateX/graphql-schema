@@ -1,0 +1,9 @@
+# System input for UpdateSystem
+input UpdateSystemInput {
+  code: ID!
+  name: ID
+  isActive: Boolean
+  group: ID
+  owner: ID
+  suppliers: [ID]
+}
