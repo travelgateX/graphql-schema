@@ -31,5 +31,5 @@ extend type AdminMutation {
   # Creates a Client.
   createSystem(input: CreateSystemInput!): System
   # Updates a Client.
-  updateSystem(input: UpdateSystemInput!): Client
+  updateSystem(input: UpdateSystemInput!): System
 }
