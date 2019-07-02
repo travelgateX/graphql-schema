@@ -1,0 +1,4 @@
+input ErrorFilter {
+  type: StatsInfoTypes!
+  code: [ID!]
+}

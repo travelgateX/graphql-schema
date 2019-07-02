@@ -1,0 +1,8 @@
+type Environment {
+  code: EnvironmentName!
+  type: CloudEnvironment!
+  """
+  Return hubMachine
+  """
+  worker: Worker!
+}

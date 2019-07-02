@@ -1,0 +1,19 @@
+"""
+The service used to access the stats of every connection that uses the HUB
+"""
+type Logging implements Node {
+  code: ID!
+  LoggingData: LoggingData
+  """
+  Errors that will lead the service to abort
+  """
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  """
+  Create date
+  """
+  createdAt: DateTime!
+  """
+  Update date
+  """
+  updatedAt: DateTime!
+}

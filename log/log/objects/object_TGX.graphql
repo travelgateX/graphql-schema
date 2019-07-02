@@ -1,0 +1,12 @@
+type TGX {
+  member_id: ID!
+  layer: Int!
+  is_private: Boolean!
+  included_groups: [String!]!
+  excluded_groups: [String!]!
+  tgx_correlation_id: ID!
+  tgx_origin: ID!
+  tgx_origin_ip: ID!
+  gstorage_url: ID!
+  transaction_type: ID!
+}

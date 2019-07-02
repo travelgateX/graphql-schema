@@ -1,0 +1,4 @@
+type LoggingEdge {
+  cursor: String!
+  node: Logging
+}

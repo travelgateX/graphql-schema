@@ -1,0 +1,24 @@
+"""
+Filters needed to do a search.
+From (Start date of search - YYYY-MM-DD HH:mm:ss), To (End date of search - YYYY-MM-DD HH:mm:ss), Product (Ex. mappeaapi)
+"""
+input LoggingFilterInput {
+  """
+  From date of search
+  """
+  from: DateTime!
+  """
+  To date of search
+  """
+  to: DateTime!
+  """
+  Product to search
+  """
+  products: [String!]!
+  message: String
+  level: ID
+  """
+  TODO CHANGE STRING
+  """
+  dynamic_filter: String
+}

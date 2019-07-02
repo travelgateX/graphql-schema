@@ -1,0 +1,26 @@
+type LoggingData {
+  """
+  Index or Product of the Log
+  """
+  product: String!
+  """
+  Date of log
+  """
+  timestamp: DateTime!
+  """
+  Level of log
+  """
+  level: ID!
+  """
+  Message of log
+  """
+  message: String!
+  """
+  Mandatory fields of log
+  """
+  tgx: TGX!
+  """
+  Document JSON
+  """
+  document: String!
+}

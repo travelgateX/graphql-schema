@@ -1,0 +1,47 @@
+type LoggingLegacyData {
+  code: ID!
+  """
+  Date of search
+  """
+  timestamp: DateTime!
+  """
+  Return session id
+  """
+  sessionID: ID!
+  """
+  Owner access
+  """
+  access: Access!
+  """
+  Owner client
+  """
+  client: Client!
+  """
+  Return group operation
+  """
+  operation: Operation!
+  """
+  Responsible for the execution of the this stats. If TRUE then cache, else client
+  """
+  trafficType: TrafficType!
+  """
+  Return environment
+  """
+  cloudEnvironment: Environment!
+  """
+  return hub status
+  """
+  statusType: StatsInfoTypes!
+  """
+  Return if exist error code
+  """
+  errorCode: ID!
+  """
+  Return execTime
+  """
+  execTime: Int!
+  """
+  Return the URL to download
+  """
+  url: URI!
+}
