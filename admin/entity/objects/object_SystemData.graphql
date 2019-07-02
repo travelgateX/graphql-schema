@@ -1,0 +1,14 @@
+type SystemData {
+  # ID identifier of a System
+  code: ID!
+  # System complete name
+  name: ID!
+  # Indicates whether a System is active or inactive
+  isActive: Boolean!
+  # Indicates the group where the System belongs
+  group: Group
+  # System owner
+  owner: Organization
+  # Obtain all suppliers for a filter.
+  suppliers(filter: SupplierFilter): [Supplier]!
+}

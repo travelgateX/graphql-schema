@@ -28,4 +28,8 @@ extend type AdminMutation {
   addEntitiesToProfile(input: UpdateEntitiesInput!): Profile
   # Removes entities from a Profile.
   removeEntitiesFromProfile(input: UpdateEntitiesInput!): Profile
+  # Creates a System.
+  createSystem(input: CreateSystemInput!): System
+  # Updates a System.
+  updateSystem(input: UpdateSystemInput!): System
 }
