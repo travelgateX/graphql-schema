@@ -59,4 +59,8 @@ input LoggingLegacyFilterInput {
   List of error codes
   """
   errors: [ErrorFilter!]
+  """
+  Works like LIMIT of SQL
+  """
+  first: Int
 }
