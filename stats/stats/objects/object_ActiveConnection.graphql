@@ -1,0 +1,4 @@
+type ActiveConnection {
+    edges: [ActiveEdge]
+    pageInfo: PageInfo!
+}
