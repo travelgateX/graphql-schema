@@ -6,8 +6,11 @@ type Board implements Node {
   # Board data
   boardData: BoardData
 
-  # Errors that abort services
+  # Errors that abort services. @deprecated from 2019-07-03
   error: [Error!]
+
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 
   # Date created
   createdAt: DateTime!
