@@ -6,8 +6,8 @@ type Category implements Node {
   # Category data
   categoryData: CategoryData
   
-  # Errors that abort services @deprecated: deprecated from 2019-07-03
-  error: [Error!]
+  # Errors that abort services
+  error: [Error!] @deprecated(reason: "Deprecated from 2019-07-03")
 
   # List of messages
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]

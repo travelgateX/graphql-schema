@@ -6,8 +6,8 @@ type Destination implements Node {
   # Destination data
   destinationData: DestinationData
 
-  # Errors that abort services @deprecated from 2019-07-03
-  error: [AdviseMessage!]
+  # Errors that abort services
+  error: [AdviseMessage!] @deprecated(reason: "Deprecated from 2019-07-03")
 
   # List of messages
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
