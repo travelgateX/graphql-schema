@@ -1,4 +1,5 @@
 type ActiveConnection {
-    edges: [ActiveEdge]
-    pageInfo: PageInfo!
+    activeResponse: ActiveObjectsUnion
+    # Errors that will lead the service to abort
+    adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }

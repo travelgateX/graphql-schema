@@ -1,1 +1,1 @@
-union ActiveObjectsUnion = Access|Client
+union ActiveObjectsUnion = SupplierConnection|ClientConnection
