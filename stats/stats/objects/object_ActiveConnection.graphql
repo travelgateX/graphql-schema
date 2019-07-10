@@ -1,5 +1,2 @@
-type ActiveConnection {
-    activeResponse: ActiveObjectsUnion
-    # Errors that will lead the service to abort
-    adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
-}
+# The result could be one of these types
+union ActiveConnection = SupplierConnection|ClientConnection|AdviseMessage
