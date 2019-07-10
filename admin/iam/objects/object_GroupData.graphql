@@ -34,5 +34,5 @@ type GroupData implements GroupCommonData{
   # You can grant roles to members, which define the roles catalog for a group.
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
   # Obtain all Profiles
-  profiles(filter: ProfileFilter): ProfileConnection
+  profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
 }

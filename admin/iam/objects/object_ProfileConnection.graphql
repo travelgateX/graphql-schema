@@ -1,0 +1,4 @@
+type ProfileConnection {
+  edges: [ProfileEdge]
+  pageInfo: PageInfo!
+}
