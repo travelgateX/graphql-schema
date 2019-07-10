@@ -1,0 +1,16 @@
+type ProfileData {
+  # ID identifier of a Profile
+  code: ID!
+  # Profile label
+  label: String
+  # Group of a Profile
+  group: Group
+  # Owner of a profile
+  owner: Group
+  # Types of a profile
+  types: [String!]
+  # Profile active status
+  isActive: Boolean
+  # Profile published status
+  isPublished: Boolean
+}
