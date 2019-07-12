@@ -1,2 +1,0 @@
-# The result could be one of these types
-union ActiveConnection = SupplierConnection|ClientConnection|AdviseMessage

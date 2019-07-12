@@ -1,0 +1,4 @@
+input ReferenceFilter {
+  client: String
+  supplier: String
+}

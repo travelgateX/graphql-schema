@@ -1,0 +1,7 @@
+type ConnectionConnection {
+  edges: [ConnectionEdge]
+  pageInfo: PageInfo!
+  #List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}
+
