@@ -37,7 +37,7 @@ type HotelData {
   rank: [Int!]!
   
   # List of credit cards
-  cardTypes: [String!]
+  cardTypes: [PaymentCardType!]
   
   # Amenities
   amenities: [Amenity!]
