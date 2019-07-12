@@ -63,4 +63,8 @@ input LoggingLegacyFilterInput {
   Works like LIMIT of SQL
   """
   first: Int
+  """
+  Locator to search in Insights
+  """
+  reference: ReferenceFilter
 }

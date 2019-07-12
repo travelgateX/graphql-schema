@@ -1,0 +1,7 @@
+# Filters needed to do a search.
+input ActiveFilterInput {
+  # Buyer or Seller
+  requestMode: ModeType!
+  # List of suppliers or clients
+  codes: [ID!]
+}
