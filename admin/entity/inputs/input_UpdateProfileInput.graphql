@@ -5,8 +5,6 @@ input UpdateProfileInput {
   label: String
   # Profile type
   type: ProfileType
-  # Profile owner
-  owner: ID
   # Active profile
   isActive: Boolean
   # Profile is published
