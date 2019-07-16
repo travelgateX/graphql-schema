@@ -1,4 +1,6 @@
 type StatsConnection {
   edges: [StatsEdge]
   pageInfo: PageInfo!
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
