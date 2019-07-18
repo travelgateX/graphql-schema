@@ -4,4 +4,5 @@ type ProductData{
   label: String
   # A Product has many APIs
   apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
+  adviseMessageCatalog(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
