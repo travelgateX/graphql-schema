@@ -24,10 +24,14 @@ extend type AdminMutation {
   createProfile(input: CreateProfileInput!): Profile
   # Updates a Profile.
   updateProfile(input: UpdateProfileInput!): Profile
+  # Delete a Profile
+  deleteProfile(input: DeleteProfileInput!): Profile
   # Adds entities to a Profile.
   addEntitiesToProfile(input: UpdateEntitiesInput!): Profile
   # Removes entities from a Profile.
   removeEntitiesFromProfile(input: UpdateEntitiesInput!): Profile
+  # Grants Profile visibility to groups
+  grantProfileToGroup(input: GroupInput!): Profile
   # Creates a System.
   createSystem(input: CreateSystemInput!): System
   # Updates a System.
