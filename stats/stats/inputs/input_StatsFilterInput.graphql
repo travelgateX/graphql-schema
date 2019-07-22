@@ -36,7 +36,7 @@ input StatsFilterInput {
     to: DateTime 
 
     #Input time
-    timeRange: TimeRange
+    timeRange: TimeRangeInput
 
     # If true assets will be retrieved.
     retrieveAssets: Boolean
