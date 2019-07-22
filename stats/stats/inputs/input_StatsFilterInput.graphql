@@ -1,38 +1,43 @@
 # Filters needed to do a search.
 # Users (List of users), Suppliers (List of suppliers), ServiceApis (List of service apis), From (Start date of search - YYYY-MM-DD HH:mm:ss), To (End date of search - YYYY-MM-DD HH:mm:ss)
 input StatsFilterInput {
-  # List of owners
-  owners: [ID!]
+    # List of owners
+    owners: [ID!]
 
-  # Groups codes list
-  groups: [ID!]
+    # Groups codes list
+    groups: [ID!]
 
-  # List of accesses
-  accesses: [ID!]
+    # List of accesses
+    accesses: [ID!]
 
-  # List of suppliers
-  suppliers: [ID!]
-  
-  # List of clients
-  clients: [ID!]
-  
-  # Buyer or Seller
-  # @deprecated(reason: "deprecated from 2019-04-11. Superfluous field.")
-  mode: ModeType!
-  
-  # List of services apis
-  serviceApis: [ServiceApiType!]
-  
-  # List of services operations
-  operation: [ServiceOperationType!]
-  serviceOperations: [ID!]
-  
-  # From date of search
-  from: DateTime!
-  
-  # To date of search
-  to: DateTime!
+    # List of suppliers
+    suppliers: [ID!]
 
-  # If true assets will be retrieved.
-  retrieveAssets: Boolean
+    # List of clients
+    clients: [ID!]
+
+    # Buyer or Seller
+    #@deprecated(reason: "deprecated from 2019-04-11. Superfluous field.")
+    mode: ModeType! 
+
+    # List of services apis
+    serviceApis: [ServiceApiType!]
+
+    # List of services operations
+    operation: [ServiceOperationType!]
+    serviceOperations: [ID!]
+
+    # From date of search
+    # @deprecated(reason: "deprecated from 2019-07-19. Added new field timeRange.")
+    from: DateTime 
+
+    # To date of search
+    #@deprecated(reason: "deprecated from 2019-07-19. Added new field timeRange.")
+    to: DateTime 
+
+    #Input time
+    timeRange: TimeRange
+
+    # If true assets will be retrieved.
+    retrieveAssets: Boolean
 }
