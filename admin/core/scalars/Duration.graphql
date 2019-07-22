@@ -1,0 +1,2 @@
+# An integer literal followed immediately (with no spaces) by a duration unit following the ISO 8601 limited to Minutes(min), Hours(h), Days(d). ie: 3min, 2h, 1d.
+scalar Duration
