@@ -125,7 +125,6 @@ query IntrospectionQuery {
       }
     }
   }
-https://apis.guru/graphql-voyager/
 ```
 
 ### Graph Viewer
