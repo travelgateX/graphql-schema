@@ -8,4 +8,10 @@ type RoomData {
   
   # Label
   texts(languages: [Language!]): [Text!]
+
+  # Room source
+  source: RoomSource
+
+  # Room occupancies
+  occupancies: OccupancyStatic
 }
