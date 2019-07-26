@@ -47,4 +47,7 @@ type HotelData {
   
   # Descriptions
   descriptions(types: [DescriptionType!], languages: [Language!]): [Description!]
+
+  # Rooms
+  rooms: RoomConnection
 }

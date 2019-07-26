@@ -4,7 +4,7 @@ type Bed {
   type: String
   
   # Description about the bed
-  description: String
+  description: String @deprecated(reason: "Deprecated from 2019-07-29")
   
   # Indicates number of beds in a room
   count: Int
