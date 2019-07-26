@@ -10,7 +10,7 @@ type RoomData {
   texts(languages: [Language!]): [Text!]
 
   # Room source
-  source: RoomSource
+  source: String
 
   # Room occupancies
   occupancies: OccupancyStatic

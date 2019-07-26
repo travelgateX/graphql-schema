@@ -1,5 +1,0 @@
-# RoomSource Type.
-type RoomSource {
-  # Source code
-  code: String!
-}
