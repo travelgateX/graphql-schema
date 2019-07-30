@@ -1,7 +1,7 @@
 # Input PaymentCard, if the payment is done by credit card, is it mandatory to specify the payment type and the credit card information
 input PaymentCardInput {
-  # Indicates the card type.
-  cardType: String!
+  # Indicates the supported card type, the supported card for this option is shown in Quote step.
+  cardType: PaymentCardType!
   
   # Contains owner's name
   holder: HolderInput!

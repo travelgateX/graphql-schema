@@ -21,8 +21,8 @@ type HotelOptionQuote {
   # List of surcharges of the option returned.
   surcharges: [Surcharge!]
   
-  # List of credit cards
-  cardTypes: [String!]
+  # List of credit cards allowed for this option
+  cardTypes: [PaymentCardType!]
   
   # Additional information about the option
   addOns: AddOns
