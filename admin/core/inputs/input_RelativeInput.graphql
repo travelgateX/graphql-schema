@@ -1,6 +1,6 @@
 input RelativeInput {
-    # Duration ago from now() to set the `from` time
+    # Duration ago from now() to set the 'from' time
     from: Duration!
-    # Duration ago from now() to set the `to` time
+    # Duration ago from now() to set the 'to' time
     to: Duration!
 }
