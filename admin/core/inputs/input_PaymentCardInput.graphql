@@ -1,4 +1,4 @@
-# Input PaymentCard, if the payment is done by credit card, is it mandatory to specify the payment type and the credit card information
+# Input PaymentCard, if the payment type is DIRECT, CARD_BOOKING or CARD_CHECK_IN, then is mandatory to specify the payment card information
 input PaymentCardInput {
   # Indicates the supported card type, the supported card for this option is shown in Quote step.
   # @deprecated(reason: "deprecated from 2019-07-31. Please, use type")
