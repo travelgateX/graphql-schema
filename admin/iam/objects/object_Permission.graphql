@@ -1,0 +1,5 @@
+type Permission{
+  role: Role!
+  resource:Resource!
+  api: API!
+}

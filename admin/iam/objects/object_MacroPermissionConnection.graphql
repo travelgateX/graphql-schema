@@ -1,0 +1,4 @@
+type MacroPermissionsConnection {
+  edges: [MacroPermissionEdge]
+  pageInfo: PageInfo!
+}
