@@ -55,6 +55,9 @@ input AlertConfigurationInputPeakTraffic {
   # operation codes
   "Possibility to filter traffic by operations"
 	operation:[AlertObjectInput!]
+  # api codes
+  "Possibility to filter traffic by apis"
+  api:[AlertObjectInput!]
   # possibility of grouping. 
   # For example: can group by Supplier, errorType or both
   "Possibility to group by traffic and calculate its parameters separately "
