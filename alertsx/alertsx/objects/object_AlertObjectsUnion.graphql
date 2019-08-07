@@ -1,1 +1,1 @@
-union AlertObjectsUnion= Access|Client|Supplier|Operation|Group
+union AlertObjectsUnion= Access|Client|Supplier|Operation|Group|API
