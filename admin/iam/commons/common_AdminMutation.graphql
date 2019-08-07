@@ -25,4 +25,8 @@ extend type AdminMutation{
   grantApiToGroup(group: UpdateGroupAPISInput): Group!
   # Remove API from an existing group
   revokeApiFromGroup(group: UpdateGroupAPISInput): Group!
+  # Grant macro permission.
+  grantMacroPermissionsToMember(input: GrantMacroPermissionInput!): Member!
+  # Revoke macro permission
+  revokeMacroPermissionsFromMember(input: GrantMacroPermissionInput!): Member!
 }
