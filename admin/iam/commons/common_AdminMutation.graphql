@@ -3,6 +3,8 @@ extend type AdminMutation{
   createOrganization(organization: CreateOrganizationInput!): Organization!
   # Suit Organization. Requires an existing organization and a specific template.
   suitOrganization(organization: SuitOrganizationInput!): Organization!
+  # Suit folder.Requires an existing folder and a template
+  suitFolder(folder: SuitFolderInput!): Group!
   # Create member; requires specific group and role
   createMember(member: CreateMemberInput!) : Member!
   # Create group; group "owner" is optional
