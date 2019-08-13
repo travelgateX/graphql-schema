@@ -1,4 +1,4 @@
 input ReferenceFilter {
-  client: String
-  supplier: String
+  client: [String]
+  supplier: [String]
 }
