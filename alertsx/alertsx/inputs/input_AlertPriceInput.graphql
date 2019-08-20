@@ -1,0 +1,9 @@
+"Alert information. Only one configuration has to be set at once."
+input AlertPriceInput {
+  mode: ModePrice!
+  amount: Int
+  commission: Int
+  check: CheckPrice!
+  range: RangePrice!
+
+}
