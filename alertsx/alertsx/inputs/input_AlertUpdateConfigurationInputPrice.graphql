@@ -48,6 +48,6 @@ input AlertUpdateConfigurationInputPrice {
 	groupBy:[AlertGroups!]
   #price
   "Price values"
-  price: PriceUpdateInput
+  price: AlertPriceUpdateInput
 }
 
