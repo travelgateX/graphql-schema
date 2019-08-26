@@ -11,5 +11,5 @@ type AlertTypeConfiguration {
   "Error codes to be Compared with Checked codes. By default all error codes"
   toCompare: [Int!]
   "Price contains the specific configuration for Price alert Type"
-  price AlertPrice
+  price: AlertPrice
 }
