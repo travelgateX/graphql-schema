@@ -2,6 +2,9 @@
 type Room {
   # ID reference to the occupancy
   occupancyRefId: Int!
+
+  # Identifies the Legacy Room Id
+  legacyRoomId: String!
   
   # Indicates the room code
   code: String!
