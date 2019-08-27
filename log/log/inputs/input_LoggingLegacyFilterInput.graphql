@@ -6,11 +6,15 @@ input LoggingLegacyFilterInput {
   """
   From date of search
   """
-  from: DateTime!
+  from: DateTime
   """
   To date of search
   """
-  to: DateTime!
+  to: DateTime
+  """
+  Range of the time
+  """
+  timeRange: TimeRangeInput
   """
   Buyer or Seller
   """
