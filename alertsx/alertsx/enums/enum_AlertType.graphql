@@ -3,4 +3,5 @@ enum AlertType{
   AVERAGE_TIME
   NO_TRAFFIC
   PEAK_TRAFFIC
+  PRICE
 }
