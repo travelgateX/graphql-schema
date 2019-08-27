@@ -43,9 +43,9 @@ input AlertUpdateConfigurationInputPrice {
   "Possibility to filter traffic by apis"
   api:[AlertObjectInput!]
   # possibility of grouping. 
-  # For example: can group by Supplier, errorType or both
+  # For example: can group by Supplier, Client or both
   "Possibility to group by traffic and calculate its parameters separately "
-	groupBy:[AlertGroups!]
+	groupBy:[AlertGroupsInsights!]
   #price
   "Price values"
   price: AlertPriceUpdateInput
