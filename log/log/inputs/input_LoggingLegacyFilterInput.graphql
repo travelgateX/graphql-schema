@@ -60,6 +60,10 @@ input LoggingLegacyFilterInput {
   """
   supplierCodes: [ID!]
   """
+  List of groups
+  """
+  groups: [ID!]
+  """
   List of error codes
   """
   errors: [ErrorFilter!]
