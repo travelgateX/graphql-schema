@@ -8,6 +8,8 @@ input AlertConfigurationInputPrice {
   # The number of times the alert must be triggered in order to notify.
   "The number of times the alert must be triggered in order to notify"
   timesToAlert: Int!
+  "The number of times the alert must be recovered in order to notify"
+  timesToRecovery: Int
   # true:	advise only if state change to ALERTING. 
   #false: advise if an alert change to OK state.
   "To allow recoveries notifications"
