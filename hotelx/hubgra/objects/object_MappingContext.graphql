@@ -1,4 +1,5 @@
 # Returns the differents group contexts
+# @deprecated(reason: "deprecated from 2019-09-10. not operating or being used")
 type MappingContext {
   # Code of the context
   code: String!

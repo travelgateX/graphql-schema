@@ -1,4 +1,5 @@
 # Mapping about client codes with the equivalence per supplier.
+# @deprecated(reason: "deprecated from 2019-09-10. not operating or being used")
 type MappingEntity {
   # Client code
   code: String!

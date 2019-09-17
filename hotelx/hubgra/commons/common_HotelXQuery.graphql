@@ -27,8 +27,9 @@ extend type HotelXQuery {
   bookingStatusService: ServiceStatus!
 
   # Returns map codes of a group. You can get hotel map, room map, and board map.
+  # @deprecated(reason: "deprecated from 2019-09-10. not operating or being used")
   mapping(groupCode: String!): Mapping!
-  
+
   # Returns a configuration teamplate of the supplier
   runtimeConfiguration(supplierCode: ID!): HotelRuntimeConfiguration
 }
