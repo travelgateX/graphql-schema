@@ -1,5 +1,8 @@
 # Contains information for cancellation penalities..
 type CancelPenalty {
+  # Cancellation fees will be applicabled between this date and check-in date
+  deadline: DateTime!
+
   # Cancellation fees applicable X number of hours before the check-in date
   hoursBefore: Int!
   
