@@ -4,7 +4,7 @@ input UpdateProfileInput {
   # Label of the Profile
   label: String
   # Profile type
-  type: ProfileType
+  type: [ProfileType]
   # Active profile
   isActive: Boolean
   # Profile is published
