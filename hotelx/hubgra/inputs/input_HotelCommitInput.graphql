@@ -1,0 +1,10 @@
+input HotelCommitInput {
+  # The name of the access to use in the request.
+  accessCode: String!
+
+  # The language code.
+  language: Language
+
+  # Contains the commit reference that has been returned in Book response.
+  commitReference: String!
+}

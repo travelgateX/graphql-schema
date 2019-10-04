@@ -36,5 +36,8 @@ input HotelSettingsInput {
   testMode: Boolean
 
   # Used to identify the origin of the request, this is only used in plugins. 
-  clientTokens: [String!] 
+  clientTokens: [String!]
+
+  # Indicates if the book will be confirmed in 1 or 2 steps. It only should be used in Book.
+  commitRequired: Boolean
 }
