@@ -1,0 +1,7 @@
+type HotelCommitDetails{
+  # Booking identificators in client and provider systems
+  reference: Reference!
+
+  # Booking Status.
+  status: BookStatusType!
+}
