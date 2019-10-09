@@ -1,0 +1,4 @@
+enum SharedType{
+  TGX
+  GROUP
+}
