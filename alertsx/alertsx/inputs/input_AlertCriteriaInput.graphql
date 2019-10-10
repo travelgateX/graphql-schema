@@ -6,4 +6,6 @@ input AlertCriteriaInput {
   isActive: Boolean
   #List of group codes where alerts are located
   groups: [ID!]
+  #List of shared type  
+  shared: [SharedType!]
 }
