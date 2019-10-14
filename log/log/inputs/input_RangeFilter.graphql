@@ -1,0 +1,5 @@
+input RangeFilter {
+    term: TermTypes!
+    value: Int!
+    condition: ConditionTypes!
+}

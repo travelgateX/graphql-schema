@@ -1,0 +1,4 @@
+enum TermType {
+    # Total execution time
+    TEXECT
+}
