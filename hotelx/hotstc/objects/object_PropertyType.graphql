@@ -1,0 +1,6 @@
+type PropertyType{
+  # PropertyType code
+  code: String
+  # PropertyType name
+  name: String
+}

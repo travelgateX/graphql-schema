@@ -1,0 +1,7 @@
+type View {
+  # Contains the descriptive of view.
+  texts(languages: [Language!]): [Text!]
+
+  # Containg the view code
+  code: String!
+}

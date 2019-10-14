@@ -1,0 +1,8 @@
+type BedStatic {
+  # Specifies the bed type
+  type: String
+  # Indicates number of beds in a room
+  count: Int
+  # Specifies if the bed is shared or not
+  shared: Boolean
+}

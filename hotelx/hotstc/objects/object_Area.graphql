@@ -1,0 +1,6 @@
+type Area {
+  # Value of area
+  value: Int!
+  # Unit of measure of area
+  unit: SquareUnitType!
+}

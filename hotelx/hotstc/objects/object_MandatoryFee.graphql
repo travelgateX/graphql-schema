@@ -1,0 +1,16 @@
+type MandatoryFee {
+  # Fee duration
+  duration: String
+  # Fee code
+  code: String!
+  # Fee price
+  price: PriceStatic!
+  # The scope of the fee
+  scope: String
+  # the name of the fee
+  name: String
+  # Fee description
+  text: String
+  # Indicates if the fee is included in the price
+  included: Boolean!
+}
