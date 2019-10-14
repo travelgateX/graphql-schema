@@ -78,5 +78,5 @@ input LoggingLegacyFilterInput {
   """
   Filter of the execution time
   """
-  rangeFilters: RangeFilter
+  rangeFilters: [RangeFilter!]
 }
