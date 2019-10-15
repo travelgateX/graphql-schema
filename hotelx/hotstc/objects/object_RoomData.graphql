@@ -28,5 +28,5 @@ type RoomData {
   beds: [BedStatic!]
 
   # Room area in square meters.
-  area: String
+  area: Area
 }
