@@ -1,4 +1,0 @@
-enum SquareUnitType {
-  SQUARE_METERS
-  SQUARE_FEET
-}
