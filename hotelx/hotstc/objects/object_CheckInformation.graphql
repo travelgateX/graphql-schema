@@ -1,0 +1,13 @@
+type CheckInformation {
+  # CheckIn instructions
+  instructions(languages: [Language!]):[Text!]
+
+  # CheckIn special instructions
+  specialInstructions(languages: [Language!]):[Text!]
+
+  # Minimal age allowed for doing the checkin
+  minAge: Int
+
+  # The schedule of checkIn
+  schedule: TimeRange
+}
