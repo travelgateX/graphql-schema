@@ -25,5 +25,5 @@ type Location {
   geoNames:[Geoname!]!
 
   # the state/province of the property
-  state: String
+  state: State
 }

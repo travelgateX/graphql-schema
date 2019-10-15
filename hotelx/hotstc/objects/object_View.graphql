@@ -3,5 +3,5 @@ type View {
   texts(languages: [Language!]): [Text!]
 
   # Containg the view code
-  code: String!
+  viewCode: String!
 }

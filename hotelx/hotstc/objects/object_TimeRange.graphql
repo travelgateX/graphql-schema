@@ -1,6 +1,6 @@
 type TimeRange {
   # the start time of range
-  startTime: String!
+  startTime: Time!
   # the end time of range
-  endTime: String!
+  endTime: Time!
 }

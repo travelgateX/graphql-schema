@@ -17,14 +17,16 @@ type RoomData {
 
   # Room amenities
   amenities: [Amenity!]
+
   # Room views
   views: [View!]
+
   # Room medias
   medias: [Media!]
 
   # Room beds
   beds: [BedStatic!]
 
-  # Room area
-  area: Area
+  # Room area in square meters.
+  area: String
 }
