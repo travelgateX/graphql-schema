@@ -15,4 +15,6 @@ input AlertUpdateInput {
   configurationPrice: AlertUpdateConfigurationInputPrice
   #status
   isActive: Boolean
+  #delete
+  delete: Boolean
 }
