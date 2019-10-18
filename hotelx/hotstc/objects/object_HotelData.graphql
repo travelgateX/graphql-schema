@@ -40,7 +40,7 @@ type HotelData {
   cardTypes: [PaymentCardType!]
 
   # Amenities
-  amenities: [Amenity!]
+  amenities: [AmenityStatic!]
 
   # Medias
   medias: [Media!]

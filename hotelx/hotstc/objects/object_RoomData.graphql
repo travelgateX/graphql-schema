@@ -16,7 +16,7 @@ type RoomData {
   occupancies: OccupancyStatic
 
   # Room amenities
-  amenities: [Amenity!]
+  amenities: [AmenityStatic!]
 
   # Room views
   views: [View!]
