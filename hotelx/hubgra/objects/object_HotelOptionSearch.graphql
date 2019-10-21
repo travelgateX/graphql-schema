@@ -62,4 +62,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   
   # Indicates the quote key
   id: String!
+
+  # Option level amenities
+  amenities: [Amenity!]
 }

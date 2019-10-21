@@ -5,37 +5,39 @@ type Room {
 
   # Identifies the Legacy Room Id
   legacyRoomId: String!
-  
+
   # Indicates the room code
   code: String!
-  
+
   # Supplier's room code.
   supplierCode: String!
 
   # Description about the room
   description: String
-  
+
   # Identifies if the room is refundable or not.
   refundable: Boolean
-  
+
   # Number of rooms available with the same type.
   units: Int
-  
+
   # Specifies the room price.
   roomPrice: RoomPrice!
-  
+
   # List of beds.
   beds: [Bed!]
-  
+
   # Daily break downs rate plan.
   ratePlans: [RatePlan!]
-  
+
   # Daily break downs promotions.
   promotions: [Promotion!]
 
   # List of surcharges of the option returned.
   surcharges: [Surcharge!]
-  
+
   # List of features of this room 
   features: [Feature!]
+
+  amenities: [Amenity!]
 }

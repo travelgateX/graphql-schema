@@ -19,7 +19,7 @@ type HotelData {
   categoryCode: String
 
   # Indicates property type
-  property: Property
+  property: Property @deprecated(reason: "Deprecated from 2019-10-16. Redundant information")
 
   # Hotel chain code
   chainCode: String
@@ -40,7 +40,7 @@ type HotelData {
   cardTypes: [PaymentCardType!]
 
   # Amenities
-  amenities: [Amenity!]
+  amenities: [AmenityStatic!]
 
   # Medias
   medias: [Media!]
@@ -51,7 +51,7 @@ type HotelData {
   # Rooms
   rooms: RoomConnection
 
-  # Property information
+  # Indicates property type.
   propertyType: PropertyType
   
   # Mandatory fees of property
