@@ -15,7 +15,7 @@ type Price implements Priceable {
   net: Float!
   
   # Indicates the retail price that the supplier sells to the customer.
-  gross: Float
+  gross: Float!
   
   # Provides information about the currency of original, and its rate applied over the results returned by the Supplier.
   # This information is mandatory.
