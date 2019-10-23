@@ -2,13 +2,16 @@
 type Reference {
   # Client reference booking
   client: String
-  
+
   # Supplier reference booking
   supplier: String
-  
+
+  # Specifies commit identificator that will be sent in commit operation in order to confirm a reservation if two steps reservation has been chosen. Only will be filled in Book and Commit.
+  commit: String @deprecated(reason: "deprecated from 2018-10-21. Please, use SupplierReference")
+
   # Hotel reference booking
   hotel: String
 
-  # Specifies commit identificator that will be sent in commit operation in order to confirm a reservation if two steps reservation has been chosen. Only will be filled in Book and Commit.
-  commit: String
+
+
 }
