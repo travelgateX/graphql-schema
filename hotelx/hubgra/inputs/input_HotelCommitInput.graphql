@@ -6,5 +6,9 @@ input HotelCommitInput {
   language: Language
 
   # Contains the commit reference that has been returned in Book response.
-  commitReference: String!
+  # @deprecated(reason: "deprecated from 2018-10-21. Please, use reference")
+  commitReference: String
+
+  # Contains the supplier reference that has been returned in Book response.
+  reference: HotelXCommitReferenceInput
 }
