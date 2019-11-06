@@ -62,7 +62,4 @@ type HotelData {
 
   # CheckOut information
   checkOut: CheckInformation
-
-  # Amenities with mapping
-  allAmenities: HotelXAmenityConnection
 }
