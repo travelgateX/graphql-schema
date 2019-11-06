@@ -1,0 +1,17 @@
+type HotelXAmenity implements Node {
+  # Node Id
+  code: ID!
+
+  # Indicates data values of amenity
+  amenityData: HotelXAmenityData
+
+  # Indicates if an error has ocurred
+  error: [AdviseMessage!]
+
+  # Indicates the creation date of the node
+  createdAt: DateTime!
+
+  # Indicates the date of last update of the node
+  updatedAt: DateTime!
+}
+
