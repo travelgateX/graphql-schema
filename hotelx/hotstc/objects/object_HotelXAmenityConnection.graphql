@@ -1,0 +1,7 @@
+type HotelXAmenityConnection {
+  # Amenity edges of amenity connection
+  edges: [HotelXAmenityEdge!]
+
+  # Page info of the connection
+  pageInfo: PageInfo!
+}
