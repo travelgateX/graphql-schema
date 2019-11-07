@@ -5,7 +5,7 @@ type PaymentCard {
   type: PaymentCardType!
 
   # Contains owner's name
-  holder: HolderInput!
+  holder: Holder!
   
   # Contains credit card number
   number: String!
@@ -14,5 +14,5 @@ type PaymentCard {
   CVC: String!
   
   # Contains credit card expiration date
-  expire: ExpireDateInput!
+  expire: ExpireDate!
 }
