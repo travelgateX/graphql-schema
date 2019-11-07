@@ -1,0 +1,18 @@
+# PaymentCard generated at Book step
+type PaymentCard {
+
+  # Indicates the supported card type
+  type: PaymentCardType!
+
+  # Contains owner's name
+  holder: HolderInput!
+  
+  # Contains credit card number
+  number: String!
+  
+  # Contains credit card CVC
+  CVC: String!
+  
+  # Contains credit card expiration date
+  expire: ExpireDateInput!
+}
