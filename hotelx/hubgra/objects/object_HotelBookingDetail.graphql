@@ -12,7 +12,7 @@ type HotelBookingDetail {
   # Specifies the prices (Gross, Net and Amount) of the option returned.
   price: Price
 
-  # Specifies the price of the previous OptionQuote. Returned only if the shown Book price differs from the price shown at the Quote Option.
+  # Specifies the price of the previous OptionQuote. Returned only if the shown Book price differs from the price shown at the Quote Option. If the price does not change, this field will be returned Null.
   quotePrice: PriceChange
 
   # Specifies cancel policies of the book returned.
