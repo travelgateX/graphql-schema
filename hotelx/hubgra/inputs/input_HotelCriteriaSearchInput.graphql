@@ -29,7 +29,8 @@ input HotelCriteriaSearchInput {
   nationality: Country
   
   # Targeted zone, country or point-ofsale-to be used in request.
-  market: String @deprecated(reason: "deprecated from 2019-12-11.")
+  # @deprecated(reason: "deprecated from 2019-12-11.")
+  market: String
 
   # Targeted zones, countries or point-ofsale-to be used in request.
   markets: [String!]
