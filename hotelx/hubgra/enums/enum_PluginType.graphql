@@ -28,4 +28,7 @@ enum PluginType {
 
   # COMMISSION plugin allows the user to apply the rule to calculate the commission
   COMMISSION
+
+  # MARKETS_GROUP plugin allows the user to group the Search result by markets that share the same Options
+  MARKETS_GROUP
 }
