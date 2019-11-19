@@ -5,8 +5,8 @@ type HotelXAmenity implements Node {
   # Indicates data values of amenity
   amenityData: HotelXAmenityData
 
-  # Indicates if an error has ocurred
-  error: [AdviseMessage!]
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 
   # Indicates the creation date of the node
   createdAt: DateTime!
