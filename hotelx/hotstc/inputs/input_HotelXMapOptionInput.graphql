@@ -1,0 +1,4 @@
+input HotelXMapOptionInput {
+  group: String!
+  context: String!
+}

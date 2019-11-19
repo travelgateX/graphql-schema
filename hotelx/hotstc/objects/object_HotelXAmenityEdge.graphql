@@ -1,0 +1,7 @@
+type HotelXAmenityEdge {
+  # Amenity node
+  node: HotelXAmenity!
+
+  # Edge's cursor
+  cursor: String!
+}

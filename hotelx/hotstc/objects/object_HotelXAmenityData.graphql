@@ -1,0 +1,16 @@
+type HotelXAmenityData {
+  # Amenity code
+  code: String!
+
+  # Indicates the type of Amenity.
+  type: ApplicationAreaType!
+
+  # Contains the descriptive
+  texts(languages: [Language!]): [Text!]!
+
+  # Indicates the amenity's value in different languages
+  value(languages: [Language!]): [Text!]!
+
+  # Mappings of amenity codes in different contexts
+  mappings: [HotelXMappedCode!]
+}
