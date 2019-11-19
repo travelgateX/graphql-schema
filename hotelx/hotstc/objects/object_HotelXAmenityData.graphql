@@ -1,6 +1,9 @@
 type HotelXAmenityData {
   # Amenity code
-  code: String!
+  code: ID!
+
+  # External amenity code
+  amenityCode: String!
 
   # Indicates the type of Amenity.
   type: ApplicationAreaType!
