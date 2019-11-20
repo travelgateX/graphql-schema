@@ -8,10 +8,10 @@ type PaymentCard {
   holder: Holder!
   
   # Contains credit card number
-  number: String!
+  number: CardNumber!
   
   # Contains credit card CVC
-  CVC: String!
+  CVC: CVC!
   
   # Contains credit card expiration date
   expire: ExpireDate!
