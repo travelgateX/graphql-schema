@@ -1,8 +1,0 @@
-# The card expiration date
-type ExpireDate{
-  # Month MM
-  month: Int!
-  
-  # Year yy
-  year: Int!
-}

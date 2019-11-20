@@ -1,18 +1,19 @@
-# PaymentCard generated at Book step
-type PaymentCard {
+# PaymentCard
+type PaymentCard implements Node {
 
-  # Indicates the supported card type
-  type: PaymentCardType!
+  # Payment Card Unique id
+  code: ID!
 
-  # Contains owner's name
-  holder: Holder!
+  # Contains the information of the Payment Card
+  paymentCardData: PaymentCardData!
+
+  # Create date
+  createdAt: DateTime!
   
-  # Contains credit card number
-  number: CardNumber!
+  # Update date
+  updatedAt: DateTime!
   
-  # Contains credit card CVC
-  CVC: CVC!
-  
-  # Contains credit card expiration date
-  expire: ExpireDate!
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
 }

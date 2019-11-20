@@ -1,0 +1,23 @@
+# Contains the information of the Payment Card
+type PaymentCardData {
+    # Indicates the supported card type
+    type: PaymentCardType!
+
+    # Contains owner's name
+    holder: Holder!
+
+    # Contains credit card number
+    number: CardNumber!
+
+    # Contains credit card CVC
+    CVC: CVC!
+    
+    # Indicates the supplier or third party, responsible of the payment card's creation
+    supplier: Supplier!
+
+    # Contains the payment card expiration date
+    expire: Date!
+
+    # Contains the payment card activation date
+    active: Date!
+}
