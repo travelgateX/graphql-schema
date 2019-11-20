@@ -7,4 +7,10 @@ paymentCard: PaymentCard!
 # Indicates the supplier or third party, responsible of the payment card's creation
 supplier: Supplier!
 
+# Contains the payment card expiration date
+expire: Date!
+
+# Contains the payment card activation date
+active: Date!
+
 }
