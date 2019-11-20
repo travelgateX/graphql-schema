@@ -37,4 +37,6 @@ type AccessData {
   updateDateRange: String!
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
+  # Obtain all clients in the same groups for a filter.
+  clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
 }
