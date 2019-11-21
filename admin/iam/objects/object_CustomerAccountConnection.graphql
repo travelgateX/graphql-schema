@@ -1,0 +1,4 @@
+type CustomerAccountConnection{
+  edges: [CustomerAccountEdge]
+  pageInfo: PageInfo!
+}

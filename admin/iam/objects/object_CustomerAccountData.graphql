@@ -1,0 +1,10 @@
+type CustomerAccountData {
+  #cusXYZ..
+  code: ID!
+  name:String!
+  fiendlyName: String
+  contacts: MemberConnection
+  allOrganizations:OrganizationConnection
+  #tag:[String!]
+  #billingAccount:billingAccountConnection!
+}
