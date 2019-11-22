@@ -32,7 +32,4 @@ type HotelBookingDetail {
   
   # Additional information about the option
   addOns: AddOns
-
-  # Specifies the information of the payment card, and the source of it, that has been generated at Book step
-  generatedPaymentCard: GeneratedPaymentCard
 }
