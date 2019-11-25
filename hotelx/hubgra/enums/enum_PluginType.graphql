@@ -28,4 +28,7 @@ enum PluginType {
 
   # COMMISSION plugin allows the user to apply the rule to calculate the commission
   COMMISSION
+  
+  # AMENITY_MAP allows to match Seller and Buyer amenities codes based on contexts
+  AMENITY_MAP 
 }
