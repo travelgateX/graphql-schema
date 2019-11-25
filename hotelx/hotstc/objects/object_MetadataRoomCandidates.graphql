@@ -1,0 +1,27 @@
+# Contains information about the restrictions of the rooms.
+type RoomCandidates{
+    # Maximum number of room candidates that can be requested in the same search request.
+    maxNumberRoomCandidates:ReviewedInt!
+
+    # Contains information about the age restrictions of the guests in a room.
+    paxTypeRangeInRoomCandidates:PaxTypeRangeInRoomCandidates
+
+    # Maximum number paxs in same room that can be requested in the same search request.
+    maxPaxInRoomCandidates:ReviewedInt!
+
+    # Total amount of paxs that can be requested in the same search request.
+    maxPaxInAllRooms:ReviewedInt!
+
+    # Indicates whether all of the distributions must have the same configuration.
+    requiredRoomWithSamePaxConfiguration:RequiredRoomWithSamePaxConfiguration!
+
+    # List of rate rule types supported by the supplie
+    rateRules:[RateRule!]!
+
+    # Information about beds.
+    beds:Beds!
+
+    # The age range used by the supplier.
+    ageRange:AgeRange!
+
+}

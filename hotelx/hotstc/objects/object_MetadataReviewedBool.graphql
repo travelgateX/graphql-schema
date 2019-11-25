@@ -1,0 +1,6 @@
+# Contain bool value and review date
+type ReviewedBool{
+    reviewDate: Date!
+
+    value: Boolean!
+}

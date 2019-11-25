@@ -1,0 +1,9 @@
+# Contain age range of the passenger
+type Age{
+    # min age allowed
+    min: Int!
+    # max age allowed
+    max: Int!
+    
+    type: PaxType!
+}

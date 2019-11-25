@@ -1,0 +1,14 @@
+type Cancel{
+    # Informs if the supplier implements this method.
+    implemented:ReviewedBool!
+
+    # The supplier allows cancellation with provider locator.
+    allowsProvideLocator:ReviewedBool
+
+    # The supplier allows cancellation with client locator.
+    allowsClientLocator:ReviewedBool
+
+    # The supplier informs the cancellation price.
+    informPriceCancel:ReviewedBool
+
+}

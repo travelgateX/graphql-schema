@@ -1,0 +1,32 @@
+# Type of preference allowed
+enum PreferenceType {
+
+  SMOKER
+
+  NON_SMOKER
+
+  EXTRABED
+
+  CRADLE
+
+  DOUBLE_BED
+
+  TWIN_BEDS
+
+  CONTIGUOUS_ROOMS
+
+  WEDDING
+
+  LATE_ARRIVAL
+
+  LATE_CHECKOUT
+
+  EARLY_CHECKIN
+
+  GROUND_FLOOR
+
+  TOP_FLOR
+
+  WITHOUT_VOUCHER
+}
+

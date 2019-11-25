@@ -1,0 +1,8 @@
+# types of option accepted by the supplier.
+type OptionTypeInfo{
+
+    reviewDate:Date!
+    
+    value: OptionType!
+
+}

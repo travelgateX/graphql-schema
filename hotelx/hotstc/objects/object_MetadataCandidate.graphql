@@ -1,0 +1,12 @@
+# Guest restrictions for each candidate type in a room.
+type Candidate{
+    # Minimum required number of guest of this type.
+    min: Int!
+
+    # Maximum number of guest of this type allowed.
+    max: Int!
+
+    # Candidate classification type.(Adult, Child, Infant)
+    type:PaxType!
+
+}

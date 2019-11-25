@@ -1,0 +1,19 @@
+type BookingList {
+
+    # Informs if the supplier implements this method.
+    implemented: ReviewedBool!
+    # The supplier allows search by creation date.
+    allowsCreationDate: ReviewedBool
+
+    # The supplier allows search by check in date.
+    allowsCheckDate: ReviewedBool
+
+    # Informs if the supplier returns the property reservation number.
+    informPropertyReservationNumber: ReviewedBool
+
+    # Informs cancellation policies.
+    informCancelPolicies: ReviewedBool
+
+    # The supplier informs the cancellation price.
+    informPriceCancel: ReviewedBool
+}

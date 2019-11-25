@@ -1,0 +1,7 @@
+# Payment types accepted by the supplier.
+type PaymentTypeInfo{
+    reviewDate:Date!
+
+    # Indicates the types of payment suppoted
+    value: PaymentType!
+}

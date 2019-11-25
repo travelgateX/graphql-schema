@@ -1,0 +1,7 @@
+# Informs the static type.The possible values are: Offline, OfflineCompleted or NotImplemented.
+type StaticInfo{
+    languages: [ReviewedText!]!
+
+    staticTypeInfo: StaticTypeInfo!
+
+}

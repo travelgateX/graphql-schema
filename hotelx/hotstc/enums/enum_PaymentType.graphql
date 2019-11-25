@@ -1,0 +1,15 @@
+# Options payment type accepted by supplier
+enum PaymentType {
+  DIRECT
+
+  MERCHANT
+
+  MIXED_PAY
+
+  CARD_BOOKING
+
+  CARD_CHECK_IN
+
+  PAYX
+}
+

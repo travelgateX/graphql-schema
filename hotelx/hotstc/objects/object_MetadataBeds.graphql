@@ -1,0 +1,14 @@
+# Information about beds.
+type Beds{
+    # Indicates the number of units available per room.
+    informNumberOfUnits:ReviewedBool!
+
+    # Informs in Search response if beds in the room are shared.
+    informSharedBed:ReviewedBool!
+
+    # Informs if the supplier returns the beds types.
+    informBedType:ReviewedBool!
+
+    # Informs if the supplier returns the number of beds for each room.
+    informNumberOfBeds:ReviewedBool!
+}

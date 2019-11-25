@@ -1,0 +1,7 @@
+# Contain preferences information for book
+type AllowsPreferences{
+    reviewDate: Date!
+
+    preferences: [PreferenceInfo!]!
+
+}

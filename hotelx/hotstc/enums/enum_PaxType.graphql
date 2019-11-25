@@ -1,0 +1,9 @@
+# Indicates the type of destination
+enum PaxType {
+    ADULT
+
+    CHILD
+
+    INFANT
+}
+

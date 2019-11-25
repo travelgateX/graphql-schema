@@ -1,0 +1,27 @@
+# Indicates the type of destination
+enum RateRulesType {
+  NON_REFUNDABLE
+
+  OLDER55
+
+  OLDER60
+
+  OLDER65
+
+  PACKAGE
+
+  CANARY_RESIDENT
+
+  BALEARIC_RESIDENT
+
+  LARGE_FAMILY
+
+  HONEYMOON
+
+  PUBLIC_SERVANT
+
+  UNEMPLOYED
+
+  MOBILE
+}
+

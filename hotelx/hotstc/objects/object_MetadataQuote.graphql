@@ -1,0 +1,22 @@
+type Quote{
+    # Informs if the supplier can block the option.
+    allowsBlockOption: ReviewedBool!
+
+    # Informs if the price is binding in Quote response.
+    informBindingPrice: ReviewedBool!
+
+    # The supplier can inform in Quote if the rate is non-refundable.
+    informNRFRate: ReviewedBool!
+
+    # Returns remarks.
+    informRemarks: ReviewedBool!
+
+    # Informs cancellation policies.
+    informCancelPolicies: ReviewedBool!
+
+    # Specifies if the supplier informs the cancel policies in free text.
+    informCancelPoliciesDescription: ReviewedBool!
+
+    # Informs if the supplier returns fees.
+    informFees: ReviewedBool!
+}
