@@ -9,7 +9,7 @@ type HotelOptionQuote {
   # Specifies the prices (Gross, Net and Amount) of the option returned.
   price: Price!
 
-  # Specifies the price of the previous search option
+  # Specifies the price of the previous Search Option. Returned only if the shown Quote price differs from the price shown at the Search Option. If the price does not change, this field will be returned Null.
   searchPrice: PriceChange
 
   # Specifies cancel policies of the option returned.

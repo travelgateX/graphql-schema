@@ -29,4 +29,7 @@ type RoomData {
 
   # Room area in square meters.
   area: Area
+
+  # Amenities with mapping
+  allAmenities(mapOptions: [HotelXMapOptionInput!]): HotelXAmenityConnection
 }

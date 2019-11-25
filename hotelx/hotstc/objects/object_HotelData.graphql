@@ -53,7 +53,7 @@ type HotelData {
 
   # Indicates property type.
   propertyType: PropertyType
-  
+
   # Mandatory fees of property
   mandatoryFees: [MandatoryFee!]
 
@@ -64,5 +64,5 @@ type HotelData {
   checkOut: CheckInformation
 
   # Amenities with mapping
-  allAmenities: HotelXAmenityConnection
+  allAmenities(mapOptions: [HotelXMapOptionInput!]): HotelXAmenityConnection
 }
