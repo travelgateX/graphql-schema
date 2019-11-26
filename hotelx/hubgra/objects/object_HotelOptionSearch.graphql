@@ -7,7 +7,10 @@ type HotelOptionSearch implements BookableOptionSearch {
   accessCode: String!
   
   # Market of this option.
-  market: String!
+  market: String @deprecated(reason: "deprecated from 2019-12-11.")
+
+  # Markets of this option
+  markets: [String!]!
   
   # Code of the hotel in the context selected.
   hotelCode: String!
