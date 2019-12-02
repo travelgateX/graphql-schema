@@ -11,7 +11,7 @@ input HotelXDefaultSettingsDataInput {
   # @deprecated(reason: "deprecated from 2019-12-11.")
   market: String
   # Targeted zones, countries or point-ofsale-to be used in request.
-  markets: [String!]!
+  markets: [String!]
   # Group of timeouts to be used in the differents services
   timeout: TimeoutInput!
   # Business rules.
