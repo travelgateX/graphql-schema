@@ -1,0 +1,6 @@
+type PriceStatic {
+  # Net amount
+  amount: Float!
+  #Price curency
+  currency: Currency!
+}

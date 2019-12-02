@@ -1,0 +1,7 @@
+type HotelXMappedCode {
+  # Context of the mapped code
+  context: String!
+
+  # Code in context
+  code: String!
+}

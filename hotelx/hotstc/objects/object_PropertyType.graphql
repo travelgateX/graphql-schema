@@ -1,0 +1,6 @@
+type PropertyType {
+  # Native supplier property code.
+  propertyCode: String
+  # PropertyType name
+  name: String
+}

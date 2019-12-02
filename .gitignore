@@ -71,3 +71,8 @@ typings/
 
 # next.js build output
 .next
+/.idea/graphql-schema.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml

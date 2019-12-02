@@ -1,0 +1,6 @@
+type TimeRange {
+  # the start time of range
+  startTime: Time!
+  # the end time of range
+  endTime: Time!
+}

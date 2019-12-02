@@ -2,10 +2,10 @@
 type RoomData {
   # Internal code for checking availability
   code: ID!
-  
+
   # Code of the hotel in the Supplier selected
   roomCode: String!
-  
+
   # Label
   texts(languages: [Language!]): [Text!]
 
@@ -14,4 +14,22 @@ type RoomData {
 
   # Room occupancies
   occupancies: OccupancyStatic
+
+  # Room amenities
+  amenities: [AmenityStatic!]
+
+  # Room views
+  views: [View!]
+
+  # Room medias
+  medias: [Media!]
+
+  # Room beds
+  beds: [BedStatic!]
+
+  # Room area in square meters.
+  area: Area
+
+  # Amenities with mapping
+  allAmenities(mapOptions: [HotelXMapOptionInput!]): HotelXAmenityConnection
 }

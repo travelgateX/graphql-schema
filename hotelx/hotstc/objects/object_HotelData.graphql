@@ -2,52 +2,67 @@
 type HotelData {
   # Internal code.
   code: ID!
-  
+
   # Code to perform availability.
   hotelCode: String!
-  
+
   # Native supplier hotel code.
-  hotelCodeSupplier: String 
-  
+  hotelCodeSupplier: String
+
   # Giata data stored in giata.
   giataData: GiataData
-  
+
   # Name of the hotel in the Supplier selected.
   hotelName: String
-  
+
   # Hotel category (for example number of stars).
   categoryCode: String
-  
+
   # Indicates property type
-  property: Property
-  
+  property: Property @deprecated(reason: "Deprecated from 2019-10-16. Redundant information")
+
   # Hotel chain code
   chainCode: String
-  
+
   # Indicates that the Hotel has an Exclusive Deal.
   exclusiveDeal: Boolean!
-  
+
   # Indicates the location of the hotel
   location: Location!
-  
+
   # Contact cotains information about hotel contact.
   contact: Contact
-  
+
   # Rank indicates the supplier categorization.
   rank: [Int!]!
-  
+
   # List of credit cards
   cardTypes: [PaymentCardType!]
-  
+
   # Amenities
-  amenities: [Amenity!]
-  
+  amenities: [AmenityStatic!]
+
   # Medias
   medias: [Media!]
-  
+
   # Descriptions
   descriptions(types: [DescriptionType!], languages: [Language!]): [Description!]
 
   # Rooms
   rooms: RoomConnection
+
+  # Indicates property type.
+  propertyType: PropertyType
+
+  # Mandatory fees of property
+  mandatoryFees: [MandatoryFee!]
+
+  # CheckIn information
+  checkIn: CheckInformation
+
+  # CheckOut information
+  checkOut: CheckInformation
+
+  # Amenities with mapping
+  allAmenities(mapOptions: [HotelXMapOptionInput!]): HotelXAmenityConnection
 }

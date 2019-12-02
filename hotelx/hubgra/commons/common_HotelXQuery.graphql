@@ -25,6 +25,9 @@ extend type HotelXQuery {
 
   # Returns status of the booking service.
   bookingStatusService: ServiceStatus!
+  
+  # Returns status of the commit service.
+  commitStatusService: ServiceStatus!
 
   # Returns map codes of a group. You can get hotel map, room map, and board map.
   # @deprecated(reason: "deprecated from 2019-09-10. not operating or being used")

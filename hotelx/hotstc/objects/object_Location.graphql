@@ -23,4 +23,7 @@ type Location {
 
   # Detailed information about the destinations geonames
   geoNames:[Geoname!]!
+
+  # the state/province of the property
+  state: State
 }

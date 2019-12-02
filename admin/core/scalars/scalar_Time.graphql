@@ -1,0 +1,2 @@
+# Time in ISO 8601 format. hh:mm . 24h format.
+scalar Time
