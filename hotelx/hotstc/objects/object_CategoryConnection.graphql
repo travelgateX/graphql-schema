@@ -2,5 +2,5 @@
 type CategoryConnection {
   edges: [CategoryEdge]
   # Indicates info about page
-  pageInfo: PageInfo!
+  pageInfo: PageInfo! @deprecated(reason: "deprecated from 2019-12-04. non functional")
 }
