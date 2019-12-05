@@ -4,26 +4,26 @@ type MetadataData{
     supplierCode:ID!
 
     # Search medatadata
-    search:Search!
+    search:MetadataSearch!
 
     # Quote medatadata
-    quote:Quote!
+    quote:MetadataQuote!
 
     # Book medatadata
-    book:Book!
+    book:MetadataBook!
 
     # Booking medatadata
-    booking:Booking!
+    booking:MetadataBooking!
 
     # BookingList medatadata
-    bookingList:BookingList!
+    bookingList:MetadataBookingList!
 
     # Cancel medatadata
-    cancel:Cancel!
+    cancel:MetadataCancel!
 
     # Static content medatadata
-    content:Content!
+    content:MetadataContent!
 
     # Generic medatadata
-    generic:Generic!
+    generic:MetadataGeneric!
 }

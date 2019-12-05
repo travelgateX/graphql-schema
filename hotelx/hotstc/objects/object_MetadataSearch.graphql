@@ -1,6 +1,6 @@
-type Search{
+type MetadataSearch{
     # Contains information regarding the destinations
-    destinations:SearchDestinations!
+    destinations:MetadataSearchDestinations!
 
     # If true, it is possible to request the currency.
     allowsCurrency:ReviewedBool!
@@ -24,7 +24,7 @@ type Search{
     maxStay:ReviewedInt!
 
     # Contains information about the restrictions of the rooms.
-    roomCandidates:RoomCandidates!
+    roomCandidates:MetadataRoomCandidates!
 
     # Supplier returns binding PVPs.
     informBindingPrice:ReviewedBool!
@@ -38,11 +38,11 @@ type Search{
     # Space available for any remarks or comments aimed at the client.
     informRemarks:ReviewedBool!
 
-    # List of payment types accepted by the supplier.
-    paymentTypes:[PaymentTypeInfo!]!
+    # List of payment types accepted by the supplier with their reviewed date
+    paymentTypes:[ReviewedPaymentType!]!
 
     # List of option types accepted by the supplier.
-    optionTypes:[OptionTypeInfo!]!
+    optionTypes:[ReviewedHotelOptionType!]!
 
     # List of languages supported
     languages:[ReviewedText!]!

@@ -1,5 +1,6 @@
 # Payment types accepted by the supplier.
-type PaymentTypeInfo{
+type ReviewedPaymentType{
+    # Last reviewed date
     reviewDate:Date!
 
     # Indicates the types of payment suppoted

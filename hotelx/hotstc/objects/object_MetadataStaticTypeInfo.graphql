@@ -1,7 +1,0 @@
-# Informs the static type.The possible values are: Offline, OfflineCompleted or NotImplemented.
-type StaticTypeInfo{
-    reviewDate: Date!
-
-    implemented:Boolean!
-
-}

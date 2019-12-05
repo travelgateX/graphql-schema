@@ -1,5 +1,5 @@
 # Type of preference allowed
-enum PreferenceType {
+enum BookPreferenceType {
 
   SMOKER
 

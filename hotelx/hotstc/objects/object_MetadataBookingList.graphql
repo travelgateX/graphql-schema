@@ -1,4 +1,5 @@
-type BookingList {
+# Return information about list of booking
+type MetadataBookingList {
 
     # Informs if the supplier implements this method.
     implemented: ReviewedBool!

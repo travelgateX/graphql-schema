@@ -1,5 +1,5 @@
 # Return information about booking
-type Booking{
+type MetadataBooking{
     # Informs if the supplier implements this method.
     implemented: ReviewedBool!
 

@@ -1,5 +1,5 @@
 # Contains information regarding the destinations for Search request.
-type SearchDestinations{
+type MetadataSearchDestinations{
     # Maximum number of hotels that can be requested.
     maxNumberHotels: ReviewedInt!
 

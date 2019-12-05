@@ -1,4 +1,4 @@
-type Generic{
+type MetadataGeneric{
     # Informs if the supplier requires nationality in Search, Quote and Book.
     requiredNationality: ReviewedBool
 

@@ -1,5 +1,5 @@
-# Indicates the type of destination
-enum OptionType {
+# Indicates the type of option
+enum HotelOptionType {
 
   HOTEL
 

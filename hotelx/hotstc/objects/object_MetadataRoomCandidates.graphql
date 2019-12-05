@@ -1,10 +1,10 @@
 # Contains information about the restrictions of the rooms.
-type RoomCandidates{
+type MetadataRoomCandidates{
     # Maximum number of room candidates that can be requested in the same search request.
     maxNumberRoomCandidates:ReviewedInt!
 
     # Contains information about the age restrictions of the guests in a room.
-    paxTypeRangeInRoomCandidates:PaxTypeRangeInRoomCandidates
+    paxTypeRangeInRoomCandidates:ReviwedPaxTypeRangeInRoomCandidates
 
     # Maximum number paxs in same room that can be requested in the same search request.
     maxPaxInRoomCandidates:ReviewedInt!
@@ -16,12 +16,12 @@ type RoomCandidates{
     requiredRoomWithSamePaxConfiguration:RequiredRoomWithSamePaxConfiguration!
 
     # List of rate rule types supported by the supplie
-    rateRules:[RateRule!]!
+    rateRules:[ReviewedRateRule!]!
 
     # Information about beds.
-    beds:Beds!
+    beds:MetadataBeds!
 
     # The age range used by the supplier.
-    ageRange:AgeRange!
+    ageRange:ReviewedAgeRanges!
 
 }

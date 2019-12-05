@@ -1,5 +1,5 @@
 # Rate rules supported by the supplie
-type RateRule{
+type ReviewedRateRule{
     # Informs of the date when the field was last reviewed.
     reviewDate: Date!
 

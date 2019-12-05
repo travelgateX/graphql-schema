@@ -1,4 +1,4 @@
-type Cancel{
+type MetadataCancel{
     # Informs if the supplier implements this method.
     implemented:ReviewedBool!
 

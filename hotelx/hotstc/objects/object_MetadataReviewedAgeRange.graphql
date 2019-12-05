@@ -1,0 +1,9 @@
+# Contain age range information and the review date
+type ReviewedAgeRanges{
+    # Last reviewed date
+    reviewDate: Date!
+
+    # list of  type of passenger with the age range
+    ages: [AgeRange!]!
+
+}

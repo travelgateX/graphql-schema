@@ -1,4 +1,4 @@
-type Quote{
+type MetadataQuote{
     # Informs if the supplier can block the option.
     allowsBlockOption: ReviewedBool!
 

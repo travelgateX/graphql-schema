@@ -1,8 +1,9 @@
-# Contain age range information and the review date
+# Contain age range of the passenger
 type AgeRange{
-    reviewDate: Date!
-    
-    # list of  type of passenger with the age range
-    ages: [Age!]!
-
+    # min age allowed
+    min: Int!
+    # max age allowed
+    max: Int!
+    # PaxType
+    type: HotelPaxType!
 }

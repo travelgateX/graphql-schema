@@ -1,12 +1,12 @@
 # Each filter of preference and its values, indicates what types of preferences the provider allows at the hotel and / or room level.
-type PreferenceInfo{
+type BookPreferenceInfo{
     # Is at the option / general level.
     hotel: Boolean!
 
     # Is at the room level.
     room: Boolean!
 
-    preferenceType: PreferenceType!
+    preferenceType: BookPreferenceType!
 
-    value: PreferenceValue!
+    value: BookPreferenceValue!
 }

@@ -1,5 +1,5 @@
 # Guest restrictions for each candidate type in a room.
-type Candidate{
+type MetadataCandidate{
     # Minimum required number of guest of this type.
     min: Int!
 
@@ -7,6 +7,6 @@ type Candidate{
     max: Int!
 
     # Candidate classification type.(Adult, Child, Infant)
-    type:PaxType!
+    type:HotelPaxType!
 
 }

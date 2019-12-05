@@ -1,5 +1,5 @@
 # Information about beds.
-type Beds{
+type MetadataBeds{
     # Indicates the number of units available per room.
     informNumberOfUnits:ReviewedBool!
 
