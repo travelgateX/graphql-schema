@@ -1,5 +1,5 @@
 input LegacyLinkInput {
-  # Client Name
+  # Client ID
   hubUser:ID!
   # Supplier Code
   hubProvider:ID!
