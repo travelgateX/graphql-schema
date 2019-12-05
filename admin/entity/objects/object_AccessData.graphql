@@ -37,4 +37,6 @@ type AccessData {
   updateDateRange: String!
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
+  # Legacy HubUser#HubProvider relation
+  legacyLink:LegacyLink
 }
