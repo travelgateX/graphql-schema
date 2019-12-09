@@ -1,4 +1,4 @@
 input UpdateCustomerAccountInput{
-  name:String!
+  name:String
   fiendlyName: String
 }

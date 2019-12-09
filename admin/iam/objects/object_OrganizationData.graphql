@@ -17,7 +17,7 @@ type OrganizationData implements GroupCommonData {
   apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
   # Products asign to a organization
   products(codes: [ID!], first: Int, last: Int, before: String, after:String): ProductConnection
-  # Response all members in this group's childrens (hierarchically) 
+  # Response all members in this group's childrens (hierarchically)
   allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   # Access resources in a organization
   accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
@@ -29,4 +29,5 @@ type OrganizationData implements GroupCommonData {
   profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
   domains: [Domain]!
   template: String
+  customers(codes:[ID!],first: Int, last: Int, before: String, after:String): CustomerAccountConnection!
 }
