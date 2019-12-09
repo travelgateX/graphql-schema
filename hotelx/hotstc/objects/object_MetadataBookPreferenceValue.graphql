@@ -1,0 +1,9 @@
+# Definition of the value of preference.
+type BookPreferenceValue{
+    # If it is necessary to pass a value in the Preference tag in reservation request.
+    mandatory: Boolean!
+
+    # Type of the required value. (string, numeric, boolean)
+    type:   String!
+
+}

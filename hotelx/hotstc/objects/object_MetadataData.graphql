@@ -1,0 +1,29 @@
+# MetadataData provides information about the metadata of the supplier so that it can be effectively configured.
+type MetadataData{
+    #Requested supplier code
+    supplierCode:ID!
+
+    # Search medatadata
+    search:MetadataSearch!
+
+    # Quote medatadata
+    quote:MetadataQuote!
+
+    # Book medatadata
+    book:MetadataBook!
+
+    # Booking medatadata
+    booking:MetadataBooking!
+
+    # BookingList medatadata
+    bookingList:MetadataBookingList!
+
+    # Cancel medatadata
+    cancel:MetadataCancel!
+
+    # Static content medatadata
+    content:MetadataContent!
+
+    # Generic medatadata
+    generic:MetadataGeneric!
+}

@@ -1,0 +1,10 @@
+# Indicates whether all of the distributions must have the same configuration.
+type RequiredRoomWithSamePaxConfiguration{
+
+    # Indicates whether it is necessary that the number of guests be the same in all of the configurations.
+    samePaxNumber:ReviewedBool!
+
+    # Indicates whether all of the guests in a particular distribution must be the same age.
+    samePaxAge:ReviewedBool!
+
+}

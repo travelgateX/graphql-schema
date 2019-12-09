@@ -1,0 +1,6 @@
+# Contain text value and review date
+type ReviewedText{
+    reviewDate: Date!
+
+    value: String!
+}
