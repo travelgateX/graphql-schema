@@ -3,8 +3,8 @@ type CustomerAccountData {
   code: ID!
   name:String!
   fiendlyName: String
-  contacts: MemberConnection
-  allOrganizations:OrganizationConnection
+  organizations:OrganizationConnection
+  #contacts: MemberConnection
   #tag:[String!]
   #billingAccount:billingAccountConnection!
 }

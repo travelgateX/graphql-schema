@@ -1,7 +1,7 @@
 extend type AdminQuery{
   # Organizations list; specify organization codes to filter organizations
   organizations(codes:[ID!], domains:[DomainName!], label: String, contains: String, first: Int, last: Int, before: String, after:String): OrganizationConnection!
-  # Product catalog; specify products codes to filter 
+  # Product catalog; specify products codes to filter
   products(codes:[ID!],first: Int, last: Int, before: String, after:String): ProductConnection!
   # Members list; specify member codes to filter members.
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection!
@@ -15,4 +15,6 @@ extend type AdminQuery{
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String) : RoleConnection!
   # Operations list; specify operations codes to filter operations.
   operations(codes: [ID!],type: OperationType,types: [OperationType!], first: Int, last: Int, before: String, after:String): OperationConnection!
+  # Customer Acoounts
+  customers(codes:[ID!],first: Int, last: Int, before: String, after:String): CustomerAccountConnection!
 }
