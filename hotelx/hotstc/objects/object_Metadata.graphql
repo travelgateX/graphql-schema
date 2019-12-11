@@ -1,0 +1,17 @@
+# Metadata Type
+type Metadata implements Node {
+  # Metadata supplier ID
+  code: ID!
+  
+  # Metadata data
+  metadataData: MetadataData
+
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
+  # Date created
+  createdAt: DateTime!
+  
+  # Date updated
+  updatedAt: DateTime!
+}

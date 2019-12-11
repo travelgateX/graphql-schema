@@ -1,0 +1,8 @@
+# System input for CreateSystem
+input CreateSystemInput {
+  name: ID!
+  isActive: Boolean
+  group: ID!
+  owner: ID
+  suppliers: [ID]
+}

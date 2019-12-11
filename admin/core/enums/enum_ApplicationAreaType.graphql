@@ -1,14 +1,13 @@
-# Indicates where it applies
 enum ApplicationAreaType {
   # Apply at the hotel.
   HOTEL
-  
+
   # Apply in the hotel.
   ROOM
-  
+
   # Applies to a service.
   SERVICE
-  
+
   # Applies in general.
   GENERAL
 }

@@ -28,4 +28,10 @@ enum PluginType {
 
   # COMMISSION plugin allows the user to apply the rule to calculate the commission
   COMMISSION
+
+  # MARKETS_GROUP plugin allows the user to group the Search result by markets that share the same Options
+  MARKETS_GROUP
+  
+  # AMENITY_MAP allows to match Seller and Buyer amenities codes based on contexts
+  AMENITY_MAP 
 }

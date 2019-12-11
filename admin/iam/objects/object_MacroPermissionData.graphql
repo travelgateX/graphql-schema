@@ -1,0 +1,8 @@
+type MacroPermissionData {
+  id: ID!
+  code: ID!
+  productID: ID!
+  group: ID!
+  label: String
+  permissions: [Permission]
+}

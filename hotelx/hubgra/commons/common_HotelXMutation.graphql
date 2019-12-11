@@ -4,6 +4,9 @@ extend type HotelXMutation {
 
   # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
   cancel(input: HotelCancelInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelCancelPayload
+  
+  # Commits an existing booking
+  commit(input: HotelCommitInput!, settings: HotelSettingsInput): HotelCommitPayload
 
   loadFile(input: String!): String! @deprecated(reason: "deprecated from 2018-06-06")
 }

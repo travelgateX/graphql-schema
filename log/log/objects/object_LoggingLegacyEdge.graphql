@@ -1,0 +1,4 @@
+type LoggingLegacyEdge {
+  cursor: String!
+  node: LoggingLegacy
+}

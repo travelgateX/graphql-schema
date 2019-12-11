@@ -1,0 +1,7 @@
+enum CloudEnvironment {
+  AZURE
+  GOOGLE
+  HETZNER
+  TOTAL_UPTIME
+  BLUEKIRI
+}

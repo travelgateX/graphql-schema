@@ -1,0 +1,12 @@
+type TGXFilter {
+  member_id: ID
+  layer: Int
+  is_private: Boolean
+  included_groups: [String]
+  excluded_groups: [String]
+  tgx_correlation_id: ID
+  tgx_origin: ID
+  tgx_origin_ip: ID
+  transaction_type: String
+  gstorage_url: String
+}

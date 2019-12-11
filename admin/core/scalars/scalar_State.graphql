@@ -1,0 +1,2 @@
+# State code of Country. Only State letters of ISO 3166-2. e.g. US-AR -> AR
+scalar State

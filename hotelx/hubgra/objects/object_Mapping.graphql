@@ -1,4 +1,5 @@
 # Returns the mapping for a group.
+# @deprecated(reason: "deprecated from 2019-09-10. not operating or being used")
 type Mapping {
   # Returns the differents group contexts, you can filter by some contexts.
   contexts(codes: [String!]): [MappingContext!]

@@ -1,0 +1,6 @@
+input HotelXMetadataQueryInput {
+
+    # Indicates the supplier code
+    supplierCodes: [ID!]
+
+}

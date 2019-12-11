@@ -11,6 +11,10 @@ input AlertUpdateInput {
   configurationAverageTime: AlertUpdateConfigurationInputAverageTime
   #peak traffic configuration
   configurationPeakTraffic: AlertUpdateConfigurationInputPeakTraffic
+  #price configuration
+  configurationPrice: AlertUpdateConfigurationInputPrice
   #status
   isActive: Boolean
+  #delete
+  delete: Boolean
 }

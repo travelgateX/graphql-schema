@@ -1,0 +1,6 @@
+input HotelXCommitReferenceInput {
+  # Supplier reference returned in Book response
+  supplier: String
+  # Client reference sent in Book request
+  client: String
+}

@@ -1,0 +1,71 @@
+# List of credit card
+enum PaymentCardType {
+  # Visa
+  VI
+
+  # American Express
+  AX
+
+  # BC Card
+  BC
+
+  # MasterCard
+  CA
+
+  # Carte Blanche
+  CB
+
+  # China Union Pay
+  CU
+
+  # Discover
+  DS
+
+  # Diners Club
+  DC
+
+  # Carta Si
+  T
+
+  # Carte Bleue
+  R
+
+  # Dankort
+  N
+
+  # Delta
+  L
+
+  # Electron
+  E
+
+  # Japan Credit Bureau
+  JC
+
+  # Maestro
+  TO
+
+  # Switch
+  S
+
+  # Electronic Cash
+  EC
+
+  # EuroCard
+  EU
+
+  # universal air travel card
+  TP
+
+  # optima
+  OP
+
+  # Air Canada/RnRoute
+  ER
+
+  # access
+  XS
+
+  # others
+  O
+}

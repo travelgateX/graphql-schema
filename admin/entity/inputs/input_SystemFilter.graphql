@@ -1,0 +1,13 @@
+# System filter for "systems" query
+input SystemFilter {
+	# System ID
+	id: [ID]
+	# Systems that contain at least one of the following supplier ids
+	supplier: [ID]
+	# Systems belonging to this GroupIDs
+	group: [ID]
+	# isActive filter
+	isActive: Boolean
+	# Systems Owner filter
+	owner: [ID]
+}

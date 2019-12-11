@@ -4,11 +4,9 @@ input CreateProfileInput {
   # Group where Profile has to be placed
   group: String!
   # Profile type
-  type: ProfileType!
+  type: [ProfileType!]!
   # Entities of the Profile
   entities: EntitiesInput
-  # Profile owner
-  owner: ID
   # Active profile
   isActive: Boolean
   # Profile is published

@@ -7,6 +7,8 @@ type AlertConfiguration {
   window: Int
   "The number of times the alert must be triggered in order to notify"
   timesToAlert: Int!
+   "The number of times the alert must be recovered in order to notify"
+  timesToRecovery: Int!
   #specific configuration according to the alert type
   typeConfiguration: AlertTypeConfiguration
   # true:	advise only if state change to KO.
@@ -39,6 +41,9 @@ type AlertConfiguration {
   alertObjects(isInclusive:Boolean!): [AlertObjectsUnion]
   # possibility of grouping.
   # For example: can group by Supplier, errorType or both
-  "Group by traffic and calculate its parameters separately "
+  "Group by traffic and calculate its parameters separately"
   groupBy:[AlertGroups!]
+  # SELLER/BUYER
+  "Indicates if the group configuration is SELLER OR BUYER"
+  comercialType: ComercialType
 }

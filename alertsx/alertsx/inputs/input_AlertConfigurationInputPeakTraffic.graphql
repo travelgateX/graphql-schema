@@ -14,6 +14,8 @@ input AlertConfigurationInputPeakTraffic {
   window: Int!
   "The number of times the alert must be triggered in order to notify"
   timesToAlert: Int!
+  "The number of times the alert must be recovered in order to notify"
+  timesToRecovery: Int
   # true:	advise only if state change to KO. 
   #false: advise if an alert change to OK state.
   "To allow recoveries notifications"
@@ -55,6 +57,9 @@ input AlertConfigurationInputPeakTraffic {
   # operation codes
   "Possibility to filter traffic by operations"
 	operation:[AlertObjectInput!]
+  # api codes
+  "Possibility to filter traffic by apis"
+  api:[AlertObjectInput!]
   # possibility of grouping. 
   # For example: can group by Supplier, errorType or both
   "Possibility to group by traffic and calculate its parameters separately "

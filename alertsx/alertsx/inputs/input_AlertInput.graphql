@@ -12,6 +12,8 @@ input AlertInput {
   configurationAverageTime: AlertConfigurationInputAverageTime
   "Peak traffic configuration "
   configurationPeakTraffic: AlertConfigurationInputPeakTraffic
+  "Price Configuration"
+   configurationPrice: AlertConfigurationInputPrice
   "To set alert active or not"
   isActive: Boolean!
   "Alert location group"

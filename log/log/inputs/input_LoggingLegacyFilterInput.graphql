@@ -1,0 +1,82 @@
+"""
+Filters needed to do a search.
+From (Start date of search - YYYY-MM-DD HH:mm:ss), To (End date of search - YYYY-MM-DD HH:mm:ss), 
+"""
+input LoggingLegacyFilterInput {
+  """
+  From date of search
+  """
+  from: DateTime
+  """
+  To date of search
+  """
+  to: DateTime
+  """
+  Range of the time
+  """
+  timeRange: TimeRangeInput
+  """
+  Buyer or Seller
+  """
+  requestMode: ModeType!
+  """
+  To serch in Speed
+  """
+  trafficType: [TrafficType!]
+  """
+  List of environments
+  """
+  cloudEnvironments: [CloudEnvironment!]
+  """
+  List of API codes
+  """
+  apiCode: ID!
+  """
+  List of operation codes
+  """
+  operationCodes: [ID!]
+  """
+  List of operation types
+  """
+  operationTypes: [OperationType!]
+  """
+  List of sessions
+  """
+  sessionIDs: [String!]
+  """
+  List of access codes
+  """
+  accessCodes: [ID!]
+  """
+  List of client codes
+  """
+  clientCodes: [ID!]
+  """
+  List of client names
+  """
+  clientNames: [ID!]
+  """
+  List of supplier codes
+  """
+  supplierCodes: [ID!]
+  """
+  List of groups
+  """
+  groups: [ID!]
+  """
+  List of error codes
+  """
+  errors: [ErrorFilter!]
+  """
+  Works like LIMIT of SQL
+  """
+  first: Int
+  """
+  Locator to search in Insights
+  """
+  reference: ReferenceFilter
+  """
+  Filter of the execution time
+  """
+  rangeFilters: [RangeFilter!]
+}

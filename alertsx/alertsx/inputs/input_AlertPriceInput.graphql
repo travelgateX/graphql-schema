@@ -1,0 +1,17 @@
+"Price input"
+input AlertPriceInput {
+   """
+  UNIT: to be informed for each transaction that matches the amount / commission
+  PERCENTAGE: to be advise if a percentage of traffic matches the amount / commission
+  """
+  mode: ModePrice!
+  "Specify which field is going to be checked. Amount, commission or both"
+  check: CheckPrice!
+  "Low or greater values of amount/commission (value included) "
+  range: RangePrice!
+  "Value of amount price"
+  amount: Int 
+  "Value of commission price"
+  commission: Int
+
+}

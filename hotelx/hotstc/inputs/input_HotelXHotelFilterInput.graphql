@@ -1,4 +1,5 @@
-# By default: Logical AND on all given filters. only hotels that match condition are returned
+# By default: Logical AND on all given filters. Hotels data are returned
+# only if match condition
 input HotelXHotelFilterInput {
   # Logical AND on all given filters.
   AND: [HotelXHotelFilterInput!]
@@ -18,11 +19,11 @@ input HotelXHotelFilterInput {
   createdAt_gte: DateTime
   #  Return hotels with update time that are contained in given list.
   updatedAt_in: [DateTime!]
-  # Return hotels with update time that are not contained in given list.
+  #Return hotels with update time that are not contained in given list.
   updatedAt_not_in: [DateTime!]
   # Return hotels with update time less than the given value.
   updatedAt_lt: DateTime
-  # Return hotels with update time less than or equal the given value.
+  #Return hotels with update time less than or equal the given value.
   updatedAt_lte: DateTime
   # Return hotels with update time greater than the given value.
   updatedAt_gt: DateTime

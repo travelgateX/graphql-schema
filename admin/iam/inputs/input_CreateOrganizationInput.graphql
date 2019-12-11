@@ -3,4 +3,5 @@ input CreateOrganizationInput {
   info: String
   organization: ID
   template: OrganizationTemplate!
+  label: String
 }

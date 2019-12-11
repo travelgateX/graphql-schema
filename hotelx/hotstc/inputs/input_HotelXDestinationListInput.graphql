@@ -1,6 +1,9 @@
 input HotelXDestinationListInput {
   # Indicates the access
-  access:     ID!
+  access:     ID
+
+  # The supplier's group. Only available if all permissions allowed
+  group:        ID
   
   # Search by hotel codes
   destinationCodes:      [String!]

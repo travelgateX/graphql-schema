@@ -1,0 +1,4 @@
+type LoggingLegacyConnection {
+  edges: [LoggingLegacyEdge]
+  pageInfo: PageInfo!
+}

@@ -1,0 +1,7 @@
+type MacroPermission {
+  code: ID!
+  macroPermissionData: MacroPermissionData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

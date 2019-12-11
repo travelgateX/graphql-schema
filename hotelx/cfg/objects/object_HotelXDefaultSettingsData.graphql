@@ -2,15 +2,17 @@ type HotelXDefaultSettingsData {
   # Indicates the context of the I/O codes (hotel, board, room and rates)
   context: String!
   # Language to be used in request.
-  language : Language!
+  language: Language!
   # Currency requested if supported by supplier.
-  currency : Currency!
+  currency: Currency!
   # Nationality of the guest (use ISO3166_1_alfa_2).
-  nationality : Country!
+  nationality: Country!
   # Targeted zone, country or point of sale to be used in request.
-  market : String!
+  market: String @deprecated(reason: "deprecated from 2019-12-11.")
+  # Targeted zones, countries or point-ofsale-to be used in request.
+  markets: [String!]!
   # Group of timeouts to be used in the differents services
-  timeout : Timeout!
+  timeout: Timeout!
   # Business rules.
   businessRules: BusinessRules!
   # Default acceses

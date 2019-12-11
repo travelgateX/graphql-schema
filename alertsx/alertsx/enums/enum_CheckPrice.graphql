@@ -1,0 +1,5 @@
+enum CheckPrice {
+  AMOUNT
+  COMMISSION
+  ALL
+}
