@@ -38,4 +38,6 @@ input AccessInput {
   owner: ID
   # True if scheduler is active
   isSchedulerActive: Boolean
+  # Legacy HubUser#HubProvider relation
+  legacyLink: LegacyLinkInput
 }
