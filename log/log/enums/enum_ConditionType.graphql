@@ -1,10 +1,10 @@
 enum ConditionType {
-    # Greater-than or equal to
+    # >=
     GTE
-    # Greater-than
+    # >
     GT
-    # Less-than or equal to
+    # <=
     LTE
-    # Less-than
+    # <
     LT
 }
