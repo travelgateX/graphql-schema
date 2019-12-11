@@ -59,6 +59,9 @@ type HotelOptionSearch implements BookableOptionSearch {
   
   # Additional information about the option
   addOns: AddOns
+
+  # Token for Deep Link
+  token: String! @deprecated(reason: "deprecated from 2019-02-05.")
   
   # Indicates the quote key
   id: String!
