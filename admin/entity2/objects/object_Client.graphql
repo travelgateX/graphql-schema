@@ -1,0 +1,11 @@
+# Client identifies who is making the request and holds the configuration assigned to it.
+type Client implements Node{
+  code: ID!
+  clientData: ClientData
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  # Date created
+  createdAt: DateTime!
+  # Date updated
+  updatedAt: DateTime!
+}

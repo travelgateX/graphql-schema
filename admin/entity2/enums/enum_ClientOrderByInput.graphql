@@ -1,0 +1,10 @@
+enum ClientOrderByInput{
+  code_ASC
+  code_DESC
+  name_ASC
+  name_DESC
+  group_ASC
+  group_DESC
+  isActive_ASC
+  isActive_DESC
+}
