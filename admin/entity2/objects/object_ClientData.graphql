@@ -6,9 +6,9 @@ type ClientData {
   # Indicates whether a Client is active or inactive
   isActive: Boolean!
   # Indicates the group where the Client belongs
-  group: Group
+  group: Group!
   # Client owner
-  owner: Organization
+  owner: Organization!
   # Obtain all suppliers for a filter.
-  suppliers(first: Int, last: Int, before: String, after:String, filter: SupplierFilter): SupplierConnection
+  #suppliers(first: Int, last: Int, before: String, after:String, filter: SupplierFilter): SupplierConnection
 }
