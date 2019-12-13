@@ -1,0 +1,14 @@
+# Mutations are operations that change or update data on the server
+extend type AdminMutation {
+  # Creates a Client.
+  createClient(
+    input: CreateClientInput!
+    data: ClientCreateInput!
+    ): Client
+  # Grants Client visibility to a group.
+  grantClientToGroup(input: GroupInput!): Client
+  # Removes Client visibility to groups.
+  #deleteClientFromGroup(input: GroupInput!): Client
+  # Updates a Client.
+  #updateClient(input: UpdateClientInput!): Client
+}

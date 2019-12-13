@@ -1,0 +1,10 @@
+input ClientCreateInput {
+  # Client complete name
+  name: ID!
+  # Indicates whether a Client is active or inactive
+  isActive: Boolean!
+  # Group where the client will be assigned at first
+	group: ID!
+  # Client owner. Use Organization>code
+  # owner: ID!
+}
