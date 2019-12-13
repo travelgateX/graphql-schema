@@ -1,0 +1,4 @@
+input ClientWhereUniqueInput{
+  code:ID
+  name: ID
+}

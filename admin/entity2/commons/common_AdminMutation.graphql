@@ -4,6 +4,15 @@ extend type AdminMutation {
   createClient(
     data: ClientCreateInput!
     ): Client!
+    # Creates a Client.
+  updateClient(
+    data: ClientUpdateInput!
+    where: ClientWhereUniqueInput!
+    ): Client!
+  deleteClient(
+    where: ClientWhereUniqueInput!
+    ): Client!
+
   # Grants Client visibility to a group.
   #grantClientToGroup(input: GroupInput!): Client
   # Removes Client visibility to groups.

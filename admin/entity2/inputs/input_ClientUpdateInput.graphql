@@ -1,0 +1,6 @@
+input ClientUpdateInput {
+  # Client complete name
+  name: ID
+  # Indicates whether a Client is active or inactive
+  isActive: Boolean
+}
