@@ -2,11 +2,10 @@
 extend type AdminMutation {
   # Creates a Client.
   createClient(
-    input: CreateClientInput!
     data: ClientCreateInput!
-    ): Client
+    ): Client!
   # Grants Client visibility to a group.
-  grantClientToGroup(input: GroupInput!): Client
+  #grantClientToGroup(input: GroupInput!): Client
   # Removes Client visibility to groups.
   #deleteClientFromGroup(input: GroupInput!): Client
   # Updates a Client.
