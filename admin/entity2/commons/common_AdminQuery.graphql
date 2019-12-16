@@ -13,4 +13,10 @@ extend type AdminQuery {
       orderBy: SupplierOrderByInput
       relay: RelayInput
       ): SupplierConnection!
+  access(code:ID!):Supplier!
+  allAccesses(
+      where: AccessWhereInput
+      orderBy: AccessOrderByInput
+      relay: RelayInput
+      ): AccessConnection!
 }

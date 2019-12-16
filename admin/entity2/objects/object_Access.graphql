@@ -1,0 +1,11 @@
+# Access identifies who is making the request and holds the configuration assigned to it.
+type Access implements Node{
+  code: ID!
+  accessData: AccessData
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  # Date created
+  createdAt: DateTime!
+  # Date updated
+  updatedAt: DateTime!
+}

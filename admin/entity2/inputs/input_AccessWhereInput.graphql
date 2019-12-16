@@ -1,0 +1,19 @@
+input AccessWhereInput {
+  _search: String
+
+  #All values that are contained in given list.
+  code_in: [ID!]
+
+  #All values that are contained in given list.
+  group_in: [ID!]
+
+  #All values that are contained in given list.
+  owner_in: [ID!]
+
+  #All values that are contained in given list.
+  name_in: [String!]
+
+  isActive: Boolean
+  isTest: Boolean
+  isMaster: Boolean
+}

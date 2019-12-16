@@ -1,0 +1,46 @@
+type AccessData {
+  # Code ID identifier of a Access
+  code: ID!
+  # Access complete name
+  name: ID!
+  # Indicates whether a Access is active or inactive
+  isActive: Boolean!
+  # Supplier for this Access
+  supplier: Supplier!
+  # Indicates the group where the Access belongs
+  groups(relay:RelayInput): GroupConnection!
+  # Access owner
+  owner: Organization!
+  # Internal unique Primary Key value
+  id: Int!
+  # Indicates if Access can be used for testing or not
+  isTest: Boolean!
+  # User code to connect to supplier
+  user: String
+  # Password for the connection
+  password: String
+  # Specific URLs
+  urls: Urls
+  # List of parameters for additional information
+  parameters: [Parameter]
+  # Markets allowed for the Access
+  markets: [String!]
+  # Business rule types for the Access
+  rateRules: [RateRulesType!]
+  # Parent Access if Shared Access
+  shared: Access
+  # Master Parent Access.null=> master
+  master: Access
+  # Refresh time to update Despriptive Info
+  updateDescriptiveInfo: Int
+  # Limit on DescriptiveInfo; 0 denotates no limit
+  descriptiveInfoLimit: Int
+  # True if scheduler is active
+  isSchedulerActive: Boolean
+  # Refresh time to update other batch lists
+  updateList: Int!
+  # Range on update date
+  updateDateRange: String!
+  # Legacy HubUser#HubProvider relation
+  legacyLink:LegacyLink
+}
