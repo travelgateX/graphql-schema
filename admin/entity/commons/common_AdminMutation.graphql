@@ -12,15 +12,7 @@ extend type AdminMutation {
   grantSupplierToGroup(input: GroupInput!): Supplier
   # Removes Supplier visibility to groups
   deleteSupplierFromGroup(input: GroupInput!): Supplier
-  # Grants Client visibility to a group.
-  grantClientToGroup(input: GroupInput!): Client
-  # Removes Client visibility to groups.
-  deleteClientFromGroup(input: GroupInput!): Client
-  # Creates a Client.
-  createClient(input: CreateClientInput!): Client
-  # Updates a Client.
-  updateClient(input: UpdateClientInput!): Client
-    # Creates a Profile.
+  # Creates a Profile.
   createProfile(input: CreateProfileInput!): Profile
   # Updates a Profile.
   updateProfile(input: UpdateProfileInput!): Profile
