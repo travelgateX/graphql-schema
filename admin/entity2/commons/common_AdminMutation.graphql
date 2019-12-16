@@ -9,18 +9,32 @@ extend type AdminMutation {
     data: ClientUpdateInput!
     where: ClientWhereUniqueInput!
     ): Client!
+<<<<<<< HEAD
   # Delete a client, from all groups
   deleteClient(
     where: ClientWhereUniqueInput!
     ): Client!
   # Add Client to a group
   addClientToGroup(
+=======
+  #Delete a client, from all groups
+  deleteClient(
+    where: ClientWhereUniqueInput!
+    ): Client!
+  #Add Client to a group
+  addClientToGroup(
+    #data: ClientAddToGroupInput!
+>>>>>>> 7aa4ef12bcc7c811bff46810ab59be6875efb205
     #Group->Code
     group: ID!
     where: ClientWhereUniqueInput!
     ):Client!
   # Delete Client from a group
+<<<<<<< HEAD
   deleteClientFromGroup(
+=======
+  deleteClienteFromGroup(
+>>>>>>> 7aa4ef12bcc7c811bff46810ab59be6875efb205
     #Group->Code
     group: ID!
     where: ClientWhereUniqueInput!
