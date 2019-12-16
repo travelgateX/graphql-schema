@@ -1,14 +1,20 @@
 type ClientData {
-  # ID identifier of a Client
+  # Code ID identifier of a Client
   code: ID!
   # Client complete name
   name: ID!
   # Indicates whether a Client is active or inactive
   isActive: Boolean!
   # Indicates the group where the Client belongs
-  group: Group!
+  groups(relay:RelayInput): GroupConnection!
   # Client owner
   owner: Organization!
+  # Internal unique Primary Key value
+  id: Int!
   # Obtain all suppliers for a filter.
-  #suppliers(first: Int, last: Int, before: String, after:String, filter: SupplierFilter): SupplierConnection
+  suppliers(
+      where: SupplierWhereInput
+      orderBy: SupplierOrderByInput
+      relay: RelayInput
+      ): SupplierConnection!
 }

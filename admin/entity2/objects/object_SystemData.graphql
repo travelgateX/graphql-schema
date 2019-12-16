@@ -1,0 +1,18 @@
+type SystemData {
+  # ID identifier of a System EX. sys456
+  code: ID!
+  # System complete name
+  name: ID!
+  # Indicates whether a System is active or inactive
+  isActive: Boolean!
+  # Indicates the group where the System belongs
+  group: GroupConnection!
+  # System owner
+  owner: Organization!
+  # Obtain all suppliers for a filter.
+  suppliers(
+      where: SupplierWhereInput
+      orderBy: SupplierOrderByInput
+      relay: RelayInput
+      ): SupplierConnection!
+}

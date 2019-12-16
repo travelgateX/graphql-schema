@@ -1,0 +1,11 @@
+# A Supplier is a Partner who is connected to TravelgateX on the supply side in order to sell their product to connected Buyers
+type Supplier implements Node{
+  code: ID!
+  supplierData: SupplierData
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  # Date created
+  createdAt: DateTime!
+  # Date updated
+  updatedAt: DateTime!
+}

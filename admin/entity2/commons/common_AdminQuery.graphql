@@ -1,11 +1,16 @@
 # A Query is an entry point into the object graph.
 extend type AdminQuery {
   # Obtain all clients for a filter.
-  #clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
   client(code:ID!):Client!
   allClients(
       where: ClientWhereInput
       orderBy: ClientOrderByInput
       relay: RelayInput
       ): ClientConnection!
+  Supplier(code:ID!):Supplier!
+  allSuppliers(
+      where: SupplierWhereInput
+      orderBy: SupplierOrderByInput
+      relay: RelayInput
+      ): SupplierConnection!
 }

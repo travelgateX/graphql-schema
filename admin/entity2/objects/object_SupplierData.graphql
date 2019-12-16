@@ -1,0 +1,34 @@
+type SupplierData{
+  # unique identifier of a supplier
+  code: ID!
+  # Supplier complete name
+  name: String!
+  # indicates whether a supplier is active at the platform
+  isActive: Boolean!
+  # Supplier owner
+  owner: Organization!
+  # instance to which this supllier is connected
+  provider: Provider!
+  # Obtain its system.
+  system: System!
+  # Internal unique Primary Key value
+  id: Int!
+  # Context where the Supplier belongs to
+  context: String!
+  # Service API->id
+  #serviceApi: Int!
+  #Old Api field
+  api:API!
+  # SupplierGroup Internal Supplier grouping
+  # Groups
+  groups(relay:RelayInput): GroupConnection!
+  supplierGroup: ID
+  # Accesses where the supplier is referenced
+  #accesses(filter: AccessFilter, relay: RelayInput): AccessConnection
+  # Obtain all clients for a filter.
+  clients(
+      where: ClientWhereInput
+      orderBy: ClientOrderByInput
+      relay: RelayInput
+      ): ClientConnection!
+}
