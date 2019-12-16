@@ -1,0 +1,21 @@
+input SupplierCreateInput {
+  # Supplier complete name
+  name: String
+  # Indicates whether a Supplier is active or inactive
+  isActive: Boolean!
+  # Group where the Supplier will be assigned at first
+	group: ID!
+  provider: ID!
+  #Use API->id (Int) field
+  API: ID!
+  supplierGroup: ID
+  context: ID
+  #@internal
+  descriptiveInfoLimit: Int!
+  #@internal
+  updateDescriptiveInfo: Int!
+  #@internal
+  updateList: Int!
+  #@internal
+  legacy: LegacyDataInput
+}

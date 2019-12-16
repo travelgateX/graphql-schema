@@ -25,4 +25,32 @@ extend type AdminMutation {
     group: ID!
     where: ClientWhereUniqueInput!
     ):Client!
+  # Creates a Supplier.
+  #@internal
+  createSupplier(
+    data: SupplierCreateInput!
+    ): Supplier!
+  # Update a Supplier.
+  #@internal
+  updateSupplier(
+    data: SupplierUpdateInput!
+    where: SupplierWhereUniqueInput!
+    ): Supplier!
+  # Delete a Supplier, from all groups
+  #@internal
+  deleteSupplier(
+    where: SupplierWhereUniqueInput!
+    ): Supplier!
+  # Add Supplier to a group
+  addSupplierToGroup(
+    #Group->Code
+    group: ID!
+    where: SupplierWhereUniqueInput!
+    ):Supplier!
+  # Delete Supplier from a group
+  deleteSupplierFromGroup(
+    #Group->Code
+    group: ID!
+    where: SupplierWhereUniqueInput!
+    ):Supplier!
 }

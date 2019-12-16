@@ -1,4 +1,0 @@
-type ClientConnection {
-  edges: [ClientEdge]
-  pageInfo: PageInfo!
-}

@@ -19,6 +19,7 @@ input SupplierWhereInput {
   access_in: [ID!]
 
   #All values that are contained in given list. Use API->id (Int) field
-  API_in: [ID!]
-
+  api_in: [ID!]
+  #All values that are contained in given list. Use Context->code field
+  context_in: [ID!]
 }

@@ -1,0 +1,11 @@
+# Context identifies who is making the request and holds the configuration assigned to it.
+type Context implements Node{
+  code: ID!
+  ContextData: ContextData
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  # Date created
+  createdAt: DateTime!
+  # Date updated
+  updatedAt: DateTime!
+}

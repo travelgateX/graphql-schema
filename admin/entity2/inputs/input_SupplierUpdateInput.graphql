@@ -1,0 +1,19 @@
+input SupplierUpdateInput {
+  # Supplier complete name
+  name: String
+  # Indicates whether a Supplier is active or inactive
+  isActive: Boolean
+  provider: ID
+  #Use API->id (Int) field
+  API: ID
+  supplierGroup: ID
+  context: ID
+  #@internal
+  descriptiveInfoLimit: Int
+  #@internal
+  updateDescriptiveInfo: Int
+  #@internal
+  updateList: Int
+  #@internal
+  legacy: LegacyDataInput
+}

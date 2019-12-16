@@ -1,4 +1,0 @@
-type SystemEdge {
-  node: System
-  cursor: String!
-}

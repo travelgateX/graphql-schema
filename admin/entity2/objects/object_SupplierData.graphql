@@ -14,21 +14,35 @@ type SupplierData{
   # Internal unique Primary Key value
   id: Int!
   # Context where the Supplier belongs to
-  context: String!
+  context: Context!
   # Service API->id
   #serviceApi: Int!
   #Old Api field
   api:API!
   # SupplierGroup Internal Supplier grouping
   # Groups
-  groups(relay:RelayInput): GroupConnection!
+  groups(
+    relay:RelayInput
+    ): GroupConnection!
   supplierGroup: ID
-  # Accesses where the supplier is referenced
-  #accesses(filter: AccessFilter, relay: RelayInput): AccessConnection
+  # Obtain all Access where the supplier is referenced for a filter.
+  accesses(
+      where: AccessWhereInput
+      orderBy: AccessOrderByInput
+      relay: RelayInput
+      ): AccessConnection!
   # Obtain all clients for a filter.
   clients(
       where: ClientWhereInput
       orderBy: ClientOrderByInput
       relay: RelayInput
       ): ClientConnection!
+  #@internal
+  descriptiveInfoLimit: Int!
+  #@internal
+  updateDescriptiveInfo: Int!
+  #@internal
+  updateList: Int!
+  #@internal
+  legacy: LegacyData
 }

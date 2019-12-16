@@ -1,4 +1,0 @@
-type SupplierConnection{
-  edges: [SupplierEdge]
-  pageInfo: PageInfo!
-}

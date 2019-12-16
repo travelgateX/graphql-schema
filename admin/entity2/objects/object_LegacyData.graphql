@@ -1,0 +1,7 @@
+type LegacyData{
+  isPublic: Boolean!
+  inDevelopment: Boolean
+  giataType: String!
+  giataCode: String!
+  isDirect: Boolean!
+}

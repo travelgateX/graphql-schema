@@ -1,4 +1,0 @@
-type SupplierEdge {
-  node: Supplier
-  cursor: String!
-}

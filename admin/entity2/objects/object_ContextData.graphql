@@ -1,0 +1,10 @@
+type ContextData {
+  # Code ID identifier of a Context. EX ctxt456
+  code: ID!
+  # Context complete name, unique
+  name: ID!
+  # Context owner
+  owner: Organization!
+  # Internal unique Primary Key value
+  id: Int!
+}
