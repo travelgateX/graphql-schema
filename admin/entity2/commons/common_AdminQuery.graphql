@@ -7,7 +7,7 @@ extend type AdminQuery {
       orderBy: ClientOrderByInput
       relay: RelayInput
       ): ClientConnection!
-  Supplier(code:ID!):Supplier!
+  supplier(code:ID!):Supplier!
   allSuppliers(
       where: SupplierWhereInput
       orderBy: SupplierOrderByInput
