@@ -6,14 +6,19 @@ input AccessWhereInput {
 
   #All values that are contained in given list.
   group_in: [ID!]
-
+  #All values that are contained in given list.
+  supplier_in: [ID!]
   #All values that are contained in given list.
   owner_in: [ID!]
-
   #All values that are contained in given list.
   name_in: [String!]
-
+  #All values that are contained in given list.
+  master_in: [ID!]
+  #All values that are contained in given list.
+  shared_in: [ID!]
   isActive: Boolean
   isTest: Boolean
   isMaster: Boolean
+  # Legacy HubUser#HubProvider relation
+  legacyLink: LegacyLinkInput
 }

@@ -11,4 +11,10 @@ enum AccessOrderByInput{
   owner_DESC
   supplier_ASC
   supplier_DESC
+  master_ASC
+  master_DESC
+  shared_ASC
+  shared_DESC
+  isTest_ASC
+  isTest_DESC
 }
