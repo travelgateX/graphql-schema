@@ -17,6 +17,7 @@ input HotelXHotelFilterInput {
   createdAt_gt: DateTime
   #  Return hotels with creation time greater than or equal the given value.
   createdAt_gte: DateTime
+
   #  Return hotels with update time that are contained in given list.
   updatedAt_in: [DateTime!]
   #Return hotels with update time that are not contained in given list.
@@ -29,6 +30,20 @@ input HotelXHotelFilterInput {
   updatedAt_gt: DateTime
   # Return hotels with update time greater than or equal the given value.
   updatedAt_gte: DateTime
+
+  # Return hotels with delete time that are contained in given list.
+  deletedAt_in: [DateTime!]
+  # Return hotels with delete time that are not contained in given list.
+  deletedAt_not_in: [DateTime!]
+  # Return hotels with delete time less than the given value.
+  deletedAt_lt: DateTime
+  #Return hotels with delete time less than or equal the given value.
+  deletedAt_lte: DateTime
+  # Return hotels with delete time greater than the given value.
+  deletedAt_gt: DateTime
+  # Return hotels with delete time greater than or equal the given value.
+  deletedAt_gte: DateTime
+
   # Hotel Country required for all Hotels
   country_in: Boolean
   # Hotel Category code required for all Hotels
