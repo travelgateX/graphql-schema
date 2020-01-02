@@ -1,0 +1,6 @@
+input PaymentInfo {
+  amount: Float!
+  payer: Payer!
+  paymentMethod_in: [PaymentMethod!]
+  type: PaymentMethodCodeType!
+}

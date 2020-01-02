@@ -1,0 +1,4 @@
+type DatedMarketingSegmentType {
+  carrierDesigCode: String
+  MarketingCarrierFlightNumberText: String
+}

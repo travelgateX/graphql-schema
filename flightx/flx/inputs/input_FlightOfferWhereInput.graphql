@@ -1,0 +1,19 @@
+"""
+OfferWhereInput are the criteria we set for our query. All offers returned by Search will have those characteristics
+in case there are no offers that meet those requirements an error will be returned.
+"""
+input FlightOfferWhereInput {
+  AND: [FlightOfferWhereInput!]
+  OR: [FlightOfferWhereInput!]
+  NOT: [FlightOfferWhereInput!]
+  originDestCriteria_in: [FlightOriginDestCriteriaInput!]
+  supplierCode_in: [ID!]
+  """
+  accessCode_in:[ID!]
+  clientCode_in:[ID!]
+  """
+  age_in: [Int!]
+  discount_in: [Discount!]
+  timeout: Int
+  auditTransactions: Boolean
+}

@@ -1,0 +1,4 @@
+type FlightSurcharge {
+  totalAmount: AmountType
+  breakdown: [Fee]
+}

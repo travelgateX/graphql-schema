@@ -1,0 +1,5 @@
+type FlightXQuery {
+  search(where: FlightOfferWhereInput, orderBy: FlightOfferOrderByInput): FlightOfferConnection
+  audit(code: ID!): AuditData!
+  quote: FlightOffer
+}

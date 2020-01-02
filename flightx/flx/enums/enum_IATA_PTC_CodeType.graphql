@@ -1,0 +1,5 @@
+enum IATA_PTC_CodeType {
+  ADT
+  CHD
+  INF
+}

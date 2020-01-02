@@ -1,0 +1,4 @@
+type CarrierOffers {
+  carrier: String
+  offers: FlightOfferConnection
+}

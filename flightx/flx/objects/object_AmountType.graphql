@@ -1,0 +1,4 @@
+type AmountType {
+  amount: Float
+  curCode: String
+}

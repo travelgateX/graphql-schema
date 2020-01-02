@@ -1,0 +1,7 @@
+type FlightOffer implements Node {
+  code: ID!
+  flightOfferData: FlightOfferData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  adviseMessage(type: [AdviseMessageLevel]): [AdviseMessage]
+}

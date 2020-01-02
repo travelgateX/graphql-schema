@@ -1,0 +1,7 @@
+type FlightOfferItem implements Node {
+  code: ID!
+  offerItemData: [FlightOfferItemData]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  adviseMessage: [AdviseMessage]
+}

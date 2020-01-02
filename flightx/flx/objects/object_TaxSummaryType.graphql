@@ -1,0 +1,4 @@
+type TaxSummaryType {
+  totalTaxAmount: AmountType
+  tax: [TaxType]
+}

@@ -1,0 +1,7 @@
+type Individual implements Node {
+  code: ID!
+  individualData: [IndividualData]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  adviseMessage: [AdviseMessage]
+}

@@ -1,0 +1,4 @@
+type Fee {
+  amount: AmountType
+  descText: TextType
+}

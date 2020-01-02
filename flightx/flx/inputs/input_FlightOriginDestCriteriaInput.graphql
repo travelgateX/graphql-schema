@@ -1,0 +1,5 @@
+input FlightOriginDestCriteriaInput {
+  departure: Departure!
+  arrival: Arrival!
+  departureAt: DateTime!
+}

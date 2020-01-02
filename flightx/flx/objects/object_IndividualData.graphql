@@ -1,0 +1,7 @@
+type IndividualData {
+  code: ID!
+  name: ProperNameType
+  surname: ProperNameType!
+  birthDate: DateType
+  title: TitleNameType
+}

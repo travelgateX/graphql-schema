@@ -1,0 +1,8 @@
+"""
+PADIS NDC 19.1
+ MR
+ MRS
+ MISS
+ DR
+"""
+scalar TitleNameType

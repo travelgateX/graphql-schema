@@ -1,0 +1,16 @@
+type FlightService implements Node {
+  code: ID!
+  flightServiceData: FlightServiceData
+  """
+  List of advise messages.
+  """
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  """
+  Date created
+  """
+  createdAt: DateTime!
+  """
+  Date updated
+  """
+  updatedAt: DateTime!
+}

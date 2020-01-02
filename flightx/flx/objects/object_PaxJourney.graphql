@@ -1,0 +1,4 @@
+type PaxJourney {
+  paxJourneyID: ID!
+  paxSegmentRefID: [ID]
+}

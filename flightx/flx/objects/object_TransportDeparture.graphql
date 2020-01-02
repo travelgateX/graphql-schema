@@ -1,0 +1,4 @@
+type TransportDeparture {
+  location: LocationCode
+  AircraftScheduled: DateTime
+}

@@ -1,0 +1,5 @@
+type FlightPax {
+  age: Int!
+  type: PassengerTypeCode
+  paxID: ID!
+}
