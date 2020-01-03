@@ -4,5 +4,5 @@ input CreateOrganizationInput {
   organization: ID
   template: OrganizationTemplate!
   label: String
-  country:Country!
+  country:Country
 }

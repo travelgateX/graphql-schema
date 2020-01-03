@@ -31,4 +31,12 @@ type OrganizationData implements GroupCommonData {
   template: String
   # ISO 3166-1 alpha-2 format country code with enclosing double quotes "ES"
   country:Country!
+  # Access resources in this organization
+  allAccesses: AccessConnection
+  # Supplier resources in this organization
+  allSuppliers: SupplierConnection
+  # Clients resources in this organization
+  allClients: ClientConnection
+  # Profiles resources in this organization
+  allProfiles: ProfileConnection
 }
