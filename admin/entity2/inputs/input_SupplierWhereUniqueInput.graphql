@@ -1,3 +1,4 @@
 input SupplierWhereUniqueInput{
   code:ID
+  id: Int
 }

@@ -13,5 +13,8 @@ input ClientWhereInput {
   #All values that are contained in given list.
   name_in: [String!]
 
+  #All values that are contained in given list.
+  id_in: [Int!]
+
   isActive: Boolean
 }
