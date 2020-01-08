@@ -10,7 +10,9 @@ type OrganizationData implements GroupCommonData {
   descendents(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String, codeStartsWith: String): GroupConnection
   # Response all parents groups nodes for this group (nom-hierarchically)
   parents(codes: [ID!], type: GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
-  owner: Member
+  owner: Member!
+  #Differents contacts in a organization.
+  contacts:[OrganizationContact!]
   isEditable: Boolean!
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   # APIs assigned to this group. Products have APIs.
