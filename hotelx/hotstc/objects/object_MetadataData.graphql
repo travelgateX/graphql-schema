@@ -24,6 +24,4 @@ type MetadataData{
     # Static content medatadata
     content:MetadataContent!
 
-    # Generic medatadata
-    generic:MetadataGeneric!
 }

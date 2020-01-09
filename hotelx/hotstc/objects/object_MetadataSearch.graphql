@@ -41,9 +41,6 @@ type MetadataSearch{
     # List of payment types accepted by the supplier with their reviewed date
     paymentTypes:[ReviewedPaymentType!]!
 
-    # List of option types accepted by the supplier.
-    optionTypes:[ReviewedHotelOptionType!]!
-
     # List of languages supported
     languages:[ReviewedText!]!
 
