@@ -1,4 +1,5 @@
 # Indicates the type of criteria in the request of the booking list
+# @deprecated(reason: "deprecated from 2019-01-13. Booking will be replaced by new methods bookingByDate and bookingByReference")
 enum BookingCriteriaType {
   # Search by date range
   DATES
