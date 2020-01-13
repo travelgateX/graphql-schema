@@ -12,6 +12,9 @@ extend type HotelXQuery {
   # @deprecated(reason: "deprecated from 2019-01-13. Booking will be replaced by new methods bookingByDate and bookingByReference")
   booking(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelBooking
 
+  # Returns detailed information about books, indicating its range of created book dates or checkin dates.
+  bookingByDate(criteria: HotelCriteriaBookingByDateInput!, settings: HotelSettingsInput): HotelBooking
+
   # Returns status of the search service.
   searchStatusService: ServiceStatus!
 
