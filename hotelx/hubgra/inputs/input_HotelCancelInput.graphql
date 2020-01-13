@@ -7,9 +7,12 @@ input HotelCancelInput {
   language: Language
   
   # The hotel code.
-  hotelCode: String!
+  hotelCode: String
   
   # Contains the client reference and/or supplier reference.
-  # One of them is mandatory.
-  reference: BookReferenceInput!
+  # @deprecated(reason: "deprecated from 2019-01-13. Use bookingID instead")
+  reference: BookReferenceInput
+
+  # TravelgateX's booking reference
+  bookingID: String
 }

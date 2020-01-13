@@ -12,6 +12,7 @@ type Reference {
   # Hotel reference booking
   hotel: String
 
-
+  # TravelgateX's booking reference
+  bookingID: String
 
 }

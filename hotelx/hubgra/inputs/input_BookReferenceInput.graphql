@@ -1,4 +1,5 @@
 # Reference object that contains the client reference and/or supplier reference.
+# @deprecated(reason: "deprecated from 2019-01-13. Booking will be replaced by new methods bookingByDate and bookingByReference")
 input BookReferenceInput {
   # The client's reference
   client: String
