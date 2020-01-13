@@ -1,8 +1,8 @@
 enum OrganizationOrderByInput{
   code_ASC
   code_DESC
-  name_ASC
-  name_DESC
+  label_ASC
+  label_DESC
   owner_ASC
   owner_DESC
   domain_ASC
