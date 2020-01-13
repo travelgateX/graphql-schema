@@ -5,8 +5,6 @@ enum OrganizationOrderByInput{
   label_DESC
   owner_ASC
   owner_DESC
-  domain_ASC
-  domain_DESC
   country_ASC
   country_DESC
 }
