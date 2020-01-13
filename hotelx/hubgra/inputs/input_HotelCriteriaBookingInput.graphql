@@ -1,4 +1,5 @@
 # Criteria of book contains basic information to find a book or books.
+# @deprecated(reason: "deprecated from 2019-01-13. Booking will be replaced by new methods bookingByDate and bookingByReference")
 input HotelCriteriaBookingInput {
   # Name of the access that have to use in the request.
   accessCode: String!

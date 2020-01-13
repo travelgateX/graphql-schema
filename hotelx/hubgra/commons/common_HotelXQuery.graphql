@@ -9,6 +9,7 @@ extend type HotelXQuery {
   quote(criteria: HotelCriteriaQuoteInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelQuote
 
   # Returns detailed information about books, you can indicated a list of locators or a range date.
+  # @deprecated(reason: "deprecated from 2019-01-13. Booking will be replaced by new methods bookingByDate and bookingByReference")
   booking(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelBooking
 
   # Returns status of the search service.
