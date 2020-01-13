@@ -15,6 +15,9 @@ extend type HotelXQuery {
   # Returns detailed information about books, indicating its range of created book dates or checkin dates.
   bookingByDate(criteria: HotelCriteriaBookingByDateInput!, settings: HotelSettingsInput): HotelBooking
 
+  # Returns detailed information about books, indicating its TravelgateX locators.
+  bookingByReference(criteria: HotelCriteriaBookingByReferenceInput!, settings: HotelSettingsInput): HotelBooking
+
   # Returns status of the search service.
   searchStatusService: ServiceStatus!
 
