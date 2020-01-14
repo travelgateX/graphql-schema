@@ -1,8 +1,0 @@
-# types of option accepted by the supplier.
-type ReviewedHotelOptionType{
-    # Last reviewed date
-    reviewDate:Date!
-
-    value: HotelOptionType!
-
-}
