@@ -7,5 +7,8 @@ input HotelCriteriaBookingByDateInput {
   language: Language
   
   # The dates criteria.
-  dates: CriteriaBookingDatesInput
+  dates: CriteriaBookingDatesInput!
+
+  # Settings that you can edit for this query. Values are loaded by default in our Back Office.
+  settings: HotelSettingsInput
 }
