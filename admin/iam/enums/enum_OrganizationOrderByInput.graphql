@@ -7,4 +7,12 @@ enum OrganizationOrderByInput{
   owner_DESC
   country_ASC
   country_DESC
+  profiles_totalCount_ASC
+  profiles_totalCount_DESC
+  clients_totalCount_ASC
+  clients_totalCount_DESC
+  suppliers_totalCount_ASC
+  suppliers_totalCount_DESC
+  accesses_totalCount_ASC
+  accesses_totalCount_DESC
 }
