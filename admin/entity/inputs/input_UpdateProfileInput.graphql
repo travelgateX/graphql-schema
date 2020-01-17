@@ -5,8 +5,10 @@ input UpdateProfileInput {
   label: String
   # Profile type
   type: [ProfileType]
+  sellerCategory:[SellerCategory!]
+  buyerCategory:[BuyerCategory!]
   # Active profile
   isActive: Boolean
   # Profile is published
-  isPublished: Boolean 
+  isPublished: Boolean
 }

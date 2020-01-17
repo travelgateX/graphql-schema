@@ -5,10 +5,12 @@ input CreateProfileInput {
   group: String!
   # Profile type
   type: [ProfileType!]!
+  sellerCategory:[SellerCategory!]
+  buyerCategory:[BuyerCategory!]
   # Entities of the Profile
   entities: EntitiesInput
   # Active profile
   isActive: Boolean
   # Profile is published
-  isPublished: Boolean 
+  isPublished: Boolean
 }

@@ -1,0 +1,4 @@
+enum BuyerCategory {
+  PREMIUM
+  PREFERRED
+}
