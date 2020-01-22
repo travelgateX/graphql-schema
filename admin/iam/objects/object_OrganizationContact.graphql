@@ -1,0 +1,4 @@
+type OrganizationContact{
+  type:OrganizationContactType!
+  user:Member!
+}

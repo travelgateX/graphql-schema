@@ -1,0 +1,7 @@
+enum OrganizationContactType {
+  ADMIN
+  BILLING
+  SALES
+  TECHNICAL
+  OTHER
+}
