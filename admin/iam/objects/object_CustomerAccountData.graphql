@@ -2,8 +2,9 @@ type CustomerAccountData {
   #cusXYZ..
   code: ID!
   name:String!
-  fiendlyName: String
+  friendlyName: String
   organizations:OrganizationConnection
+  isActive: Boolean
   #contacts: MemberConnection
   #tag:[String!]
   #billingAccount:billingAccountConnection!

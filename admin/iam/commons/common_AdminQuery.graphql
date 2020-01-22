@@ -15,6 +15,11 @@ extend type AdminQuery{
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String) : RoleConnection!
   # Operations list; specify operations codes to filter operations.
   operations(codes: [ID!],type: OperationType,types: [OperationType!], first: Int, last: Int, before: String, after:String): OperationConnection!
-  # Customer Acoounts
-  customers(codes:[ID!],first: Int, last: Int, before: String, after:String): CustomerAccountConnection!
+  # Customer Accounts
+  customerAccount(code:ID!):CustomerAccount!
+  allCustomerAccounts(
+      where: CustomerAccountWhereInput
+      orderBy: CustomerAccountOrderByInput
+      relay: RelayInput
+      ): CustomerAccountConnection!
 }
