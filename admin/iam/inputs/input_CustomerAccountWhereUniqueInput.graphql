@@ -1,0 +1,5 @@
+input CustomerAccountUpdateInput{
+  name:String
+  fiendlyName: String
+  isActive:Boolean
+}

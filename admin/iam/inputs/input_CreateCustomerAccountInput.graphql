@@ -1,5 +1,0 @@
-input CreateCustomerAccountInput{
-  name:String!
-  fiendlyName: String
-  organizations:[ID!]
-}

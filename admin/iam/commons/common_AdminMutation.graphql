@@ -33,10 +33,35 @@ extend type AdminMutation{
   revokeMacroPermissionsFromMember(input: GrantMacroPermissionInput!): Member!
   addContact(organizationCode:ID!,type:OrganizationContactType!,user:ID!):Organization!
   deleteContact(organizationCode:ID!,user:ID!):Organization!
-  # Create customers
-  createCustomerAccount(customer: CreateCustomerAccountInput!): CustomerAccount!
-  # Update customer
-  updateCustomerAccount(customerAccountCode:ID!,input: UpdateCustomerAccountInput!): CustomerAccount!
-  addOrganizationToCustomerAccount(customerAccountCode:ID!,organization:[ID!]!): CustomerAccount!
-  deleteOrganizationFromCustomerAccount(customerAccountCode:ID!,organization:[ID!]!): CustomerAccount!
+  # Creates a CustomerAccount.
+  createCustomerAccount(
+    data: CustomerAccountCreateInput!
+    ): CustomerAccount!
+  # Update a CustomerAccount.
+  updateCustomerAccount(
+    data: CustomerAccountUpdateInput!
+    where: CustomerAccountWhereUniqueInput!
+    ): CustomerAccount!
+  # Delete a CustomerAccount, from all groups
+  deleteCustomerAccount(
+    where: CustomerAccountWhereUniqueInput!
+    ): CustomerAccount!
+  # Add CustomerAccount to a group
+  addCustomerAccountToOrganization(
+    #Organization->Code
+    organizationCode: ID!
+    where: CustomerAccountWhereUniqueInput!
+    ):CustomerAccount!
+  # Delete CustomerAccount from a group
+  deleteCustomerAccountFromOrganization(
+    #Organization->Code
+    organizationCode: ID!
+    where: CustomerAccountWhereUniqueInput!
+    ):CustomerAccount!
+  # set the primary CustomerAccount for an organizationCode
+  setPrimaryCustomerAccount(
+    #Organization->Code
+    organizationCode: ID!
+    where: CustomerAccountWhereUniqueInput!
+    ): CustomerAccount!
 }
