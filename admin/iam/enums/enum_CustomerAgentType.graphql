@@ -1,0 +1,6 @@
+enum CustomerAgentType {
+  KAM
+  TECH_KAM
+  CUSTOMER_CARE
+  OTHER
+}

@@ -64,4 +64,9 @@ extend type AdminMutation{
     organizationCode: ID!
     where: CustomerAccountWhereUniqueInput!
     ): CustomerAccount!
+  #@intern
+  addAgent(CustomerAccountCode:ID!,type:CustomerAgentType!,user:ID!):CustomerAccount!
+  #@intern
+  deleteAgent(CustomerAccountCode:ID!,user:ID!):CustomerAccount!
+
 }
