@@ -1,0 +1,68 @@
+type MetadataSearch{
+    # Contains information regarding the destinations
+    destinations:MetadataSearchDestinations!
+
+    # If true, it is possible to request the currency.
+    allowsCurrency:ReviewedBool!
+
+    # Specifies if this supplier allows businessrules.
+    allowsBusinessRules:ReviewedBool!
+
+    # Informs whether the integration allows room combination or not.
+    implementsCombination:ReviewedBool!
+
+    # Number of markets supported by the supplier in the same request.
+    numMarketsAllowed:ReviewedInt
+
+    # Minimum days required in between booking date and checking date ( days in advance ). If the value is zero then there is no limitation.
+    release:ReviewedInt!
+
+    # Minimum number of days required for booking. If the value is zero then there is no limitation.
+    minimumStay:ReviewedInt!
+
+    # Maximum number of days allowed for booking.
+    maxStay:ReviewedInt!
+
+    # Contains information about the restrictions of the rooms.
+    roomCandidates:MetadataRoomCandidates!
+
+    # Supplier returns binding PVPs.
+    informBindingPrice:ReviewedBool!
+
+    # Returns cancellation policies at search step
+    informCancelPolicies:ReviewedBool!
+
+    # Returns cancellation policies at room level.
+    informRoomCancelPolicies:ReviewedBool!
+
+    # Space available for any remarks or comments aimed at the client.
+    informRemarks:ReviewedBool!
+
+    # List of payment types accepted by the supplier with their reviewed date
+    paymentTypes:[ReviewedPaymentType!]!
+
+    # List of languages supported
+    languages:[ReviewedText!]!
+
+    # Informs if the supplier returns the daily price
+    informDailyPrice:ReviewedBool!
+
+    # Informs if the supplier returns the daily rate.
+    informDailyRatePlan:ReviewedBool!
+
+    # If true, the supplier returns the offers applied.
+    informOffers:ReviewedBool!
+
+    # The supplier can inform in Search if the room is non-refundable.
+    informNRFRateByRoom:ReviewedBool!
+
+    # Informs if the supplier returns fees.
+    informFees:ReviewedBool!
+
+    # Returns fees at room level.
+    informRoomFees:ReviewedBool!
+
+    # inform Hotel name at search step
+    informHotelName:ReviewedBool!
+
+}

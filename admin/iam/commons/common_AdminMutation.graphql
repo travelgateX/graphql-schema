@@ -31,6 +31,8 @@ extend type AdminMutation{
   grantMacroPermissionsToMember(input: GrantMacroPermissionInput!): Member!
   # Revoke macro permission
   revokeMacroPermissionsFromMember(input: GrantMacroPermissionInput!): Member!
+  addContact(organizationCode:ID!,type:OrganizationContactType!,user:ID!):Organization!
+  deleteContact(organizationCode:ID!,user:ID!):Organization!
   # Create customers
   createCustomerAccount(customer: CreateCustomerAccountInput!): CustomerAccount!
   # Update customer

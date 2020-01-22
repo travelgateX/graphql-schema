@@ -1,0 +1,4 @@
+type LegacyLink {
+  hubUser: Client!
+  hubProvider: Supplier!
+}

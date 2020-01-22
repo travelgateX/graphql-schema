@@ -10,7 +10,9 @@ type OrganizationData implements GroupCommonData {
   descendents(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String, codeStartsWith: String): GroupConnection
   # Response all parents groups nodes for this group (nom-hierarchically)
   parents(codes: [ID!], type: GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
-  owner: Member
+  owner: Member!
+  #Differents contacts in a organization.
+  contacts:[OrganizationContact!]
   isEditable: Boolean!
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   # APIs assigned to this group. Products have APIs.
@@ -29,5 +31,15 @@ type OrganizationData implements GroupCommonData {
   profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
   domains: [Domain]!
   template: String
+  # ISO 3166-1 alpha-2 format country code with enclosing double quotes "ES"
+  country:Country!
+  # Access resources in this organization
+  allAccesses: AccessConnection
+  # Supplier resources in this organization
+  allSuppliers: SupplierConnection
+  # Clients resources in this organization
+  allClients: ClientConnection
+  # Profiles resources in this organization
+  allProfiles: ProfileConnection
   customers(codes:[ID!],first: Int, last: Int, before: String, after:String): CustomerAccountConnection!
 }

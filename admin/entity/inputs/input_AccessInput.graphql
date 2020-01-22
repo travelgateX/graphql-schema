@@ -38,4 +38,8 @@ input AccessInput {
   owner: ID
   # True if scheduler is active
   isSchedulerActive: Boolean
+  # Legacy HubUser#HubProvider relation
+  legacyLink: LegacyLinkInput
+  #Set master Access if it it's not a master Access. Use Access->code
+  master: ID
 }
