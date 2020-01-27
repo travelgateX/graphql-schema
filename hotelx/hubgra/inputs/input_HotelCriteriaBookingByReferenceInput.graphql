@@ -1,8 +1,5 @@
 # Booking query criteria, which contains basic information in order to find a created book or books with our TravelgateX unique locator, bookingID.
-input HotelCriteriaBookingByReferenceInput {
+input HotelCriteriaBookingByReferenceInput {  
   # TravelgateX booking locators (bookingID).
-  reference_in: [ID!]!
-
-  # Settings that you can edit for this query. Values are loaded by default in our Back Office.
-  settings: HotelSettingsInput
+  reference: String!
 }

@@ -9,17 +9,14 @@ extend type HotelXQuery {
   quote(criteria: HotelCriteriaQuoteInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelQuote
 
   # Returns detailed information about books, you can indicated a list of locators or a range date.
-  booking(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelBooking @deprecated(reason: "deprecated from 2019-01-13. Booking will be replaced by new methods bookingByDate and bookingByReference")
+  # @deprecated(reason: "deprecated from 2019-01-13. Booking will be replaced by new methods bookingByDate and bookingByReference")
+  booking(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelBooking
 
   # Returns detailed information about books, indicating its range of created book dates or checkin dates.
-  bookingByDate(
-    where: HotelBookingByDateWhereInput!
-    ): HotelBooking!
+  bookingByDate(criteria: HotelCriteriaBookingByDateInput!, settings: HotelSettingsInput): HotelBooking
 
   # Returns detailed information about books, indicating its TravelgateX locators (bookingIDs).
-  bookingByReference(
-    where: HotelBookingByReferenceWhereInput!
-    ): HotelBooking!
+  bookingByReference(criteria: HotelCriteriaBookingByReferenceInput!, settings: HotelSettingsInput): HotelBooking
 
   # Returns status of the search service.
   searchStatusService: ServiceStatus!
