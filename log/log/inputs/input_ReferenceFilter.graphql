@@ -2,4 +2,6 @@ input ReferenceFilter {
   client: [String!]
   supplier: [String!]
   hotel: [String!]
+  quoteRequired: Boolean
+  cancelRequired: Boolean
 }
