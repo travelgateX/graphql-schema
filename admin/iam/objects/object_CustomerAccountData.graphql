@@ -2,10 +2,10 @@ type CustomerAccountData {
   #cusXYZ..
   code: ID!
   name:String!
+  isActive: Boolean
   friendlyName: String
   organizations:OrganizationConnection
-  isActive: Boolean
-  #Differents agents from TravelgateX
+  # Differents agents from TravelgateX
   agents:[CustomerAgent!]
   #contacts: MemberConnection
   #tag:[String!]
