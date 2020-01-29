@@ -1,0 +1,7 @@
+input AlertUpdateErrorRateComparativeConfigurationByTimeInput {
+  toCheck: [Int!]
+  toCompare: [Int!]
+  windowing: AlertCommonByTimeInput
+  common: AlertUpdateCommonConfigurationInput
+  comparative: AlertUpdateCommonComparativeInput
+}

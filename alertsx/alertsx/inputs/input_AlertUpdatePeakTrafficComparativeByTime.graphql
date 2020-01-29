@@ -1,0 +1,6 @@
+input AlertUpdatePeakTrafficComparativeByTimeInput {
+  name: String
+  description: String
+  configuration: AlertUpdatePeakTrafficComprarativeConfigurationByTimeInput
+  isActive: Boolean
+}

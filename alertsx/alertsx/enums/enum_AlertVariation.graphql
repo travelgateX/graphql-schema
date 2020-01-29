@@ -1,0 +1,5 @@
+enum AlertVariation{
+  INCREASE
+  DECREASE
+  BOTH
+}

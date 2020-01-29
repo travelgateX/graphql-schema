@@ -1,0 +1,4 @@
+input AlertCommonRelativeInput{
+   "percentage to be considered status ALERTING"
+   percentageToAlert: Int!
+}

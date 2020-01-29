@@ -1,0 +1,7 @@
+input AlertAverageTimeAbsoluteByRequestsInput {
+  name: String
+  description: String
+  configuration: AlertAverageTimeAbsoluteConfigurationByRequestsInput!
+  isActive: Boolean!
+  group: ID!
+}

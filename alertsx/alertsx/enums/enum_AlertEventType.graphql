@@ -1,0 +1,4 @@
+enum AlertEventType{
+  OK
+  ALERTING
+}

@@ -1,0 +1,9 @@
+input AlertAverageTimeRelativeConfigurationByTimeInput {
+  "Time not allowed in miliseconds."
+  maxTime:Int
+  "Average time not allowed in miliseconds."
+  maxAverageTime:Int
+  windowing: AlertCommonByTimeInput!
+  common: AlertCommonConfigurationInput!
+  relative: AlertCommonRelativeInput!
+}

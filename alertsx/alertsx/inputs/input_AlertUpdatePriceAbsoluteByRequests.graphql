@@ -1,0 +1,6 @@
+input AlertUpdatePriceAbsoluteByRequestsInput {
+  name: String
+  description: String
+  configuration: AlertUpdatePriceAbsoluteConfigurationByRequestsInput
+  isActive: Boolean
+}

@@ -13,5 +13,5 @@ type AlertData {
   "Member has edit the actual alert data"
   editor: Member!
   "Records of the last 10 events triggered"
-  events( relay: RelayInput, filter: AlertFilterInput):EventConnection!
+  events( relay: RelayInput, filter: AlertFilterInput):AlertEventConnection!
 }

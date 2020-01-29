@@ -1,0 +1,5 @@
+input AlertPriceAbsoluteConfigurationByRequestsInput {
+  price: AlertPriceInput!
+  windowing: AlertCommonByRequestsInput!
+  common: AlertCommonConfigurationInput!
+}

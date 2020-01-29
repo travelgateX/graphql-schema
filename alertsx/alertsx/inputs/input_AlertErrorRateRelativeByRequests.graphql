@@ -1,0 +1,7 @@
+input AlertErrorRateRelativeByRequestsInput {
+  name: String
+  description: String
+  configuration: AlertErrorRateRelativeConfigurationByRequestsInput!
+  isActive: Boolean!
+  group: ID!
+}

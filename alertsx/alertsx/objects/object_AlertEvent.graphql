@@ -1,0 +1,8 @@
+"Event triggered"
+type AlertEvent implements Node{
+  code: ID!
+  eventData: AlertEventData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime!
+  updatedAt:DateTime!
+}

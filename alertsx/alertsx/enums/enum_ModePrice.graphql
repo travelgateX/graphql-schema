@@ -1,4 +1,0 @@
-enum ModePrice{
-  UNIT
-  PERCENTAGE
-}

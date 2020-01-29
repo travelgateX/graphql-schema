@@ -1,0 +1,6 @@
+input AlertUpdateAverageTimeRelativeByTimeInput {
+  name: String
+  description: String
+  configuration: AlertUpdateAverageTimeRelativeConfigurationByTimeInput
+  isActive: Boolean
+}

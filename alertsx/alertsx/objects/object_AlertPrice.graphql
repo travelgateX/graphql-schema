@@ -1,16 +1,13 @@
  "Price contains the specific configuration for Price alert Type"
 type AlertPrice {
-  """
-  UNIT: to be informed for each transaction that matches the amount / commission
-  PERCENTAGE: to be advise if a percentage of traffic matches the amount / commission
-  """
-  mode: ModePrice!
   "Specify which field is goinf to be checked. Amount, commission or both"
-  check: CheckPrice!
+  check: AlertCheckPrice!
   "Low or greater values of amount/commission (value included) "
-  range: RangePrice!
+  range: AlertRangePrice!
   "Value of amount price"
   amount: Int 
   "Value of commission price"
   commission: Int
+  "Used for check amount"
+  amountBy: AlertAmountBy
 }

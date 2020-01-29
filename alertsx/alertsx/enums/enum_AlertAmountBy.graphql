@@ -1,0 +1,5 @@
+enum AlertCheckPrice {
+  AMOUNT
+  COMMISSION
+  BOTH
+}

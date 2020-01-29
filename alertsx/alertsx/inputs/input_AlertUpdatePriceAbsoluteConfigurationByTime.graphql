@@ -1,0 +1,5 @@
+input AlertUpdatePriceAbsoluteConfigurationByTimeInput {
+  price: AlertUpdatePriceInput
+  windowing: AlertUpdateCommonByTimeInput
+  common: AlertUpdateCommonConfigurationInput
+}

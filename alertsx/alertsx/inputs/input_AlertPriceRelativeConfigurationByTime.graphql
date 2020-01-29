@@ -1,0 +1,6 @@
+input AlertPriceRelativeConfigurationByTimeInput {
+  price: AlertPriceInput!
+  windowing: AlertCommonByTimeInput!
+  common: AlertCommonConfigurationInput!
+  relative: AlertCommonRelativeInput!
+}

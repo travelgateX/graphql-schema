@@ -1,15 +1,23 @@
 type AlertConfiguration {
   "alert type"
   alertType: AlertType!
+  "alert mode"
+  mode: AlertMode!
+  "window type"
+  windowType: AlertWindowType!
   "Frequency of time in which the alert will be reviewed"
   periodicity: Int
   "The time frame in minutes"
   window: Int
+   "The time frame in minutes to be used to compare with the window time frame"
+  historicalWindow: Int
+  "Time frame in minutes to set the beginning of historicalWindow"
+  offset: Int
   "The number of times the alert must be triggered in order to notify"
   timesToAlert: Int!
    "The number of times the alert must be recovered in order to notify"
   timesToRecovery: Int!
-  #specific configuration according to the alert type
+  "Specific configuration according to the alert type"
   typeConfiguration: AlertTypeConfiguration
   # true:	advise only if state change to KO.
   #false: advise if an alert change to OK state.
@@ -21,13 +29,16 @@ type AlertConfiguration {
   stateChangesOnly: Boolean!
   # minimum number of requests to be alert
   "Minimum number of requests should be in the window to check alert or Number of requests to be checked (According to configuration)"
-  minNumberRequests: Int!
+  minNumberRequests: Int
   # percentage (%)
-  "Minimum percentage to be considered status ALERTING "
+  "percentage to be considered status ALERTING"
   percentageToAlert: Int
+  #variation
+  "According to percentageToAlert value. Used on Comparative mode alerts"
+  variation: AlertVariation
   #email: Email!
   "Email addresses to send notifications"
-  email(type:EmailType): [Email]!
+  email(type:AlertEmailType): [AlertEmail]
   # status returned by our Hub.
   "Filter of hub status"
   hubStatus(isInclusive:Boolean!): [HubStatus!]

@@ -1,4 +1,0 @@
-input ErrorCodeInput {
-  code: Int!
-  isInclusive: Boolean!
-}

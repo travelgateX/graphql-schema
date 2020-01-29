@@ -1,0 +1,5 @@
+enum AlertMode{
+  RELATIVE 
+  ABSOLUTE 
+  COMPARATIVE 
+}

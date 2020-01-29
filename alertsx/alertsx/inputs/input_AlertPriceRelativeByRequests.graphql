@@ -1,0 +1,7 @@
+input AlertPriceRelativeByRequestsInput {
+  name: String
+  description: String
+  configuration: AlertPriceRelativeConfigurationByRequestsInput!
+  isActive: Boolean!
+  group: ID!
+}
