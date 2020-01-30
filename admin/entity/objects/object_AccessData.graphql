@@ -39,4 +39,6 @@ type AccessData {
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
   # Legacy HubUser#HubProvider relation
   legacyLink:LegacyLink
+  # Parent Master Access. null=>masterAccess, notNull=>slaveAccess
+  master: Access
 }

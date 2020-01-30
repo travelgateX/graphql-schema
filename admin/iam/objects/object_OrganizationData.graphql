@@ -10,14 +10,16 @@ type OrganizationData implements GroupCommonData {
   descendents(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String, codeStartsWith: String): GroupConnection
   # Response all parents groups nodes for this group (nom-hierarchically)
   parents(codes: [ID!], type: GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
-  owner: Member
+  owner: Member!
+  #Differents contacts in a organization.
+  contacts:[OrganizationContact!]
   isEditable: Boolean!
   members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   # APIs assigned to this group. Products have APIs.
   apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
   # Products asign to a organization
   products(codes: [ID!], first: Int, last: Int, before: String, after:String): ProductConnection
-  # Response all members in this group's childrens (hierarchically) 
+  # Response all members in this group's childrens (hierarchically)
   allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   # Access resources in a organization
   accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
@@ -29,4 +31,14 @@ type OrganizationData implements GroupCommonData {
   profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
   domains: [Domain]!
   template: String
+  # ISO 3166-1 alpha-2 format country code with enclosing double quotes "ES"
+  country:Country!
+  # Access resources in this organization
+  allAccesses: AccessConnection
+  # Supplier resources in this organization
+  allSuppliers: SupplierConnection
+  # Clients resources in this organization
+  allClients: ClientConnection
+  # Profiles resources in this organization
+  allProfiles: ProfileConnection
 }

@@ -1,4 +1,8 @@
 type MemberConnection{
   edges: [MemberEdge]
   pageInfo: PageInfo!
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  #Identifies the total count of items in the connection.
+  totalCount: Int!
 }

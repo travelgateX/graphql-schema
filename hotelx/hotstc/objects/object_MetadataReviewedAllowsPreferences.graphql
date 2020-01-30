@@ -1,8 +1,0 @@
-# Contain preferences information for book
-type ReviewedAllowsBookPreferences{
-    # Last reviewed date
-    reviewDate: Date!
-
-    preferences: [BookPreferenceInfo!]!
-
-}

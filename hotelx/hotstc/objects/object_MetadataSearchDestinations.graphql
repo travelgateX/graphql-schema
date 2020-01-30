@@ -3,20 +3,7 @@ type MetadataSearchDestinations{
     # Maximum number of hotels that can be requested.
     maxNumberHotels: ReviewedInt!
 
-    # Maximum number of cities that can be requested.
-    maxNumberCities: ReviewedInt!
-
-    # Maximum number of zones that can be requested.
-    maxNumberZones: ReviewedInt!
-
-    # Maximum number of GeoCodes that can be requested.
-    maxNumberGeoCodes: ReviewedInt!
-
-    # If the supplier allows the availability for N hotels, this tag indicates whether those hotels must be within the same destination.
-    hotelSameDestinationRestriction: ReviewedBool!
-
-    # If the supplier allows the search for N destinations, this tag indicates whether those destinations must be within the same country.
-    destinationSameCountryRestriction: ReviewedBool!
-
+    # Recomended number of hotels.
+    recommendedNumberHotels: ReviewedInt!
 
 }

@@ -9,9 +9,6 @@ type MetadataBook{
     # Informs if the supplier allows send remarks.
     allowsRemarks: ReviewedBool!
 
-    # Specifies if the supplier allows url card data encode when the paymente type is LaterPay.
-    allowsUrlCard: ReviewedBool!
-
     # Informs if the supplier returns the property reservation number.
     informBillingSupplier: ReviewedBool!
 
@@ -20,7 +17,4 @@ type MetadataBook{
 
     # The supplier informs the book price.
     informPrice: ReviewedBool!
-
-    # Preference filters allowed by the provider.
-    allowsPreferences: ReviewedAllowsBookPreferences
 }
