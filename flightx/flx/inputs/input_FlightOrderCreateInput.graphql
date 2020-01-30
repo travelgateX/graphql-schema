@@ -1,0 +1,4 @@
+input FlightOrderCreateInput {
+  selectedOffer_in: [SelectedOffer!]
+  paymentInfo: PaymentInfo!
+}

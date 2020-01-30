@@ -1,8 +1,0 @@
-input OrderWhereInput {
-  """
-  selectedOffer_in:[SelectedOffer!]
-  """
-  passenger_in: [OrderPassenger!]
-  registerTransaction: Boolean
-  paymentInfo: PaymentInfo!
-}

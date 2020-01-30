@@ -1,0 +1,7 @@
+type FlightOrder implements Node {
+  code: ID!
+  flightOrderData: [FlightOrderData]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  adviseMessage: [AdviseMessage]
+}

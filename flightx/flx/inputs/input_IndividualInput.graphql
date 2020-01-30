@@ -1,0 +1,6 @@
+input IndividualInput {
+  name: ProperNameType!
+  surname: ProperNameType!
+  birthDate: DateTime!
+  title: TitleNameType
+}

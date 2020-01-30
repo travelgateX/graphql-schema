@@ -1,6 +1,0 @@
-"""
-TODO fill payer info
-"""
-input Payer {
-  a: String
-}

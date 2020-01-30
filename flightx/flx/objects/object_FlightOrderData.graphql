@@ -1,0 +1,8 @@
+type FlightOrderData {
+  code: ID!
+  status: FlightTicketStatusCode!
+  tickets: [FlightTicket]
+  supplier: Supplier!
+  orderItems: [FlightOrderItem!]
+  totalPrice: FlightPrice!
+}

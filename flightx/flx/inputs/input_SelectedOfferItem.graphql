@@ -1,0 +1,4 @@
+input SelectedOfferItem {
+  offerItemCode: ID!
+  appliedPassengers: [IndividualInput!]
+}

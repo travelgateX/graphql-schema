@@ -1,0 +1,4 @@
+input SelectedOffer {
+  offerCode: ID!
+  selectedOfferItem_in: [SelectedOfferItem!]
+}

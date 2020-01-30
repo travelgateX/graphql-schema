@@ -1,6 +1,0 @@
-"""
-TODO fill order passengers info
-"""
-input OrderPassenger {
-  a: String
-}

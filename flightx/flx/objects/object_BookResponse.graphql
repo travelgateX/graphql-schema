@@ -1,4 +1,0 @@
-type BookResponse {
-  auditData: AuditData
-  done: Boolean
-}

@@ -2,6 +2,6 @@ type IndividualData {
   code: ID!
   name: ProperNameType
   surname: ProperNameType!
-  birthDate: DateType
+  birthDate: DateTime
   title: TitleNameType
 }

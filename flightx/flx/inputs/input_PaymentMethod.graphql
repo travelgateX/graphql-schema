@@ -1,6 +1,4 @@
-"""
-TODO fill payment method info
-"""
 input PaymentMethod {
-  a: String
+  cash: ClientWhereUniqueInput
+  card: PaymentCardInput
 }
