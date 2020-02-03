@@ -1,0 +1,13 @@
+type CustomerAccountData {
+  #cusXYZ..
+  code: ID!
+  name:String!
+  isActive: Boolean
+  friendlyName: String
+  organizations:OrganizationConnection
+  # Differents agents from TravelgateX
+  agents:[CustomerAgent!]
+  #contacts: MemberConnection
+  #tag:[String!]
+  #billingAccount:billingAccountConnection!
+}

@@ -1,0 +1,12 @@
+
+input CustomerAccountWhereInput {
+  _search: String
+
+  #All values that are contained in given list.
+  code_in: [ID!]
+
+  #All values that are contained in given list.
+  friendlyName_in: [String!]
+
+  isActive: Boolean
+}

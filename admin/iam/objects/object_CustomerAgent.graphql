@@ -1,0 +1,5 @@
+type CustomerAgent{
+  type:CustomerAgentType!
+  #user@xmltravelgate.com o user@travelgatex.com
+  user:Member!
+}
