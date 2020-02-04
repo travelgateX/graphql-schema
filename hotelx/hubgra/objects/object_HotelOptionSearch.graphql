@@ -48,7 +48,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   # List of surcharges of the option returned.
   surcharges: [Surcharge!]
   
-  # Specifies rate rules of the option returned.
+  # Specifies rate rules of the option returned. Note: If the option does not have any rate rule, then the option is NORMAL rate.
   rateRules: [RateRulesType!]
   
   # Specifies cancel policies of the option returned.
