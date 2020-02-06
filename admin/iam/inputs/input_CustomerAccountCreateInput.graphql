@@ -1,5 +1,4 @@
 input CustomerAccountCreateInput{
-  code:ID!
   name:String!
   fiendlyName: String
   #Default isActive=true
