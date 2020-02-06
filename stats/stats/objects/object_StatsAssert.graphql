@@ -6,4 +6,6 @@ type StatsAsset {
   execTime: Int!
   # Endpoint to download the full XML of the request with its response
   url: URI!
+  # Endpoint to download the full unencrypted XML of the request with its response
+  unencryptedURL: URI!
 }
