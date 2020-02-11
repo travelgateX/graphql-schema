@@ -1,6 +1,6 @@
 input CustomerAccountCreateInput{
   name:String!
-  fiendlyName: String
+  friendlyName: String
   #Default isActive=true
   isActive:Boolean
 }
