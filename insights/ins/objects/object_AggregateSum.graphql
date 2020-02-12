@@ -1,0 +1,7 @@
+type AggregateSum {
+  amount: Float
+  amountEur: Float
+  bookings: Int
+  nights: Int
+  bookingWindow: Int
+}

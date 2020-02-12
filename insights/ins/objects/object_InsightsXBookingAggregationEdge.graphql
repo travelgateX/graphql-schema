@@ -1,0 +1,4 @@
+type InsightsXBookingAggregationEdge {
+  node: InsightsXBookingAggregation
+  cursor: String!
+}

@@ -1,0 +1,10 @@
+extend type InsightsQuery {
+  """
+  ## Retrieve Bookings Details and Summary
+  """
+  bookingsReport(where: BookingsReportWhereInput, orderBy: BookingsReportOrderByInput, groupBy: [BookingsReportGroupByInput!], limit: Int, relay: RelayInput): InsightsXBookingReport
+  """
+  ## Retrieve Mapping Report for HotelX
+  """
+  hotelXMappingReport(where: HotelXMappingReportWhereInput!): HotelXMappingReportResponse!
+}

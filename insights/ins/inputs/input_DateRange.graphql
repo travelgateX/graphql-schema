@@ -1,0 +1,4 @@
+input DateRange {
+  lte: DateTime!
+  gte: DateTime!
+}

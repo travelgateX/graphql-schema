@@ -1,0 +1,7 @@
+"""
+## HOTELX MAPPING REPORT // Response
+"""
+type HotelXMappingReportResponse {
+  data: RetrieveHotelXMappingReport
+  error: [AdviseMessage]
+}

@@ -1,0 +1,5 @@
+type AmountCancelPenalty {
+  currency: String
+  amount: Float
+  amountEur: Float
+}
