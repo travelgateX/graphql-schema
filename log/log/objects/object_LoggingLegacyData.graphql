@@ -44,6 +44,7 @@ type LoggingLegacyData {
   Return the URL to download
   """
   url: URI!
+  """
   Return the unencrypted URL to download
   """
   unencryptedURL: URI!
