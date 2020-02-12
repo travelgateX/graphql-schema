@@ -1,4 +1,4 @@
-type BookingDetail implements HotelBookingDetail {
+type BookingDetail {
   """
   Booking ID in the Supplier's system
   """
