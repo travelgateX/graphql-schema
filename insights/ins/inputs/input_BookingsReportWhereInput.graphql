@@ -1,0 +1,27 @@
+"""
+## BOOKING REPORT // Where Input
+"""
+input BookingsReportWhereInput {
+  bookingAt: DateRange
+  checkInAt: DateRange
+  cancelAt: DateRange
+  reference: References
+  requestMode: ModeType!
+  ownerCode_in: [ID!]
+  groupCode_in: [ID!]
+  accessCode_in: [ID!]
+  supplierCode_in: [ID!]
+  clientCode_in: [ID!]
+  """
+  List of markets
+  """
+  marketCode_in: [String!]
+  """
+  List of destinations
+  """
+  countryCode_in: [String!]
+  """
+  List of booking status
+  """
+  bookingStatus_in: [BookStatusType!]
+}

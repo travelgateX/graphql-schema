@@ -1,0 +1,8 @@
+"""
+## BOOKING REPORT // Response
+"""
+type InsightsXBookingReport {
+  bookingsDetails: InsightsXBookingDetailConnection
+  bookingsAggregation: InsightsXBookingAggregationConnection
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

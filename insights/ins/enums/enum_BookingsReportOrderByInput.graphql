@@ -1,0 +1,15 @@
+"""
+## BOOKING REPORT // Order By Input
+"""
+enum BookingsReportOrderByInput {
+  bookingAt_ASC
+  checkInAt_ASC
+  cancelAt_ASC
+  numBookings_ASC
+  amountEur_ASC
+  bookingAt_DES
+  checkInAt_DES
+  cancelAt_DES
+  numBookings_DES
+  amountEur_DES
+}

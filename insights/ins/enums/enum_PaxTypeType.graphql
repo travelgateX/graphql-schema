@@ -1,0 +1,10 @@
+"""
+PaxType
+"""
+enum PaxTypeType {
+  SOLO
+  COUPLE
+  FAMILY
+  GROUP
+  OTHER
+}

@@ -1,0 +1,10 @@
+"""
+## HOTELX MAPPING REPORT // Where Input
+"""
+input HotelXMappingReportWhereInput {
+  requestDate: DateRange!
+  mappingReport: MappingType!
+  supplierCode_in: [ID!]
+  clientCode_in: [ID!]
+  accessCode_in: [ID!]
+}

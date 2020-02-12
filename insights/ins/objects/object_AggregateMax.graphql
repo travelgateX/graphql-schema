@@ -1,0 +1,4 @@
+type AggregateMax {
+  nights: Int
+  bookingWindow: Int
+}

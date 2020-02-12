@@ -1,0 +1,7 @@
+type InsightsXBookingAggregation implements Node {
+  code: ID!
+  InsightsXBookingAggregationData: BookingAggregation
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

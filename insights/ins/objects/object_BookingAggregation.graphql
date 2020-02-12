@@ -1,0 +1,20 @@
+type BookingAggregation {
+  status: BookStatusType
+  client: Client
+  supplier: Supplier
+  currency: String
+  bookingAt: Date
+  checkInAt: Date
+  cancelAt: Date
+  originMarket: String
+  destinationCountry: String
+  paxType: PaxTypeType
+  bookingWindow: BookingWindowType
+  lengthOfStay: Int
+  hotelName: String
+  amount: Float
+  amountEur: Float
+  amountCancelPenalties: [AmountCancelPenalty]
+  numBookings: Int
+  aggregate: Aggregate
+}
