@@ -16,4 +16,6 @@ extend type AdminQuery {
   entities(filter: EntityFilter): EntityConnection @deprecated(reason: "deprecated from 2019-08-21. Only for statsX product. Use client, supplier, accesess queries")
   # Obtain all clients for a filter.
   systems(first: Int, last: Int, before: String, after:String, filter: SystemFilter): SystemConnection
+  # Get supplier mantainer
+  getSupplierMaintainer(supplierID: ID!): Member
 }
