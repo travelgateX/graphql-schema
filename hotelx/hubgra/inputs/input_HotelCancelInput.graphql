@@ -16,6 +16,6 @@ input HotelCancelInput {
   # @deprecated(reason: "deprecated from 2019-01-13. Use bookingID instead")
   reference: BookReferenceInput
 
-  # TravelgateX's booking reference
+  # HotelX's booking reference
   bookingID: String
 }
