@@ -1,5 +1,0 @@
-# Booking query criteria, which contains basic information in order to find a created book or books with our HotelX unique locator, bookingID.
-input HotelCriteriaBookingByReferenceInput {  
-  # HotelX booking locators (bookingID).
-  reference: String!
-}

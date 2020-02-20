@@ -1,19 +1,19 @@
 # Cancellation Criteria.
 input HotelCancelInput {
   # The name of the access to use in the request.
-  # @deprecated(reason: "deprecated from 2019-01-13. Use bookingID instead")
+  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   accessCode: String
   
   # The language code.
-  # @deprecated(reason: "deprecated from 2019-01-13. Use bookingID instead")
+  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   language: Language
   
   # The hotel code.
-  # @deprecated(reason: "deprecated from 2019-01-13. Use bookingID instead")
+  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   hotelCode: String
   
   # Contains the client reference and/or supplier reference.
-  # @deprecated(reason: "deprecated from 2019-01-13. Use bookingID instead")
+  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   reference: BookReferenceInput
 
   # HotelX's booking reference

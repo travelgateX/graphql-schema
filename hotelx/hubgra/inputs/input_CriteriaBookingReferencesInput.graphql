@@ -1,5 +1,4 @@
 # Criteria by references
-# @deprecated(reason: "deprecated from 2019-01-13. Booking will be replaced by new methods bookingByDate and bookingByReference")
 input CriteriaBookingReferencesInput {
   # The hotel code.
   hotelCode: String!
