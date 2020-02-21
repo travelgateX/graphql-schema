@@ -38,4 +38,5 @@ extend type AdminMutation {
   updateSystem(input: UpdateSystemInput!): System
   # Set supplier mantainer
   setSupplierMaintainer(supplierID: ID!, maintainer: ID!): Member
+  setProviderMaintainer(providerID: ID!, maintainer: ID!): Member
 }

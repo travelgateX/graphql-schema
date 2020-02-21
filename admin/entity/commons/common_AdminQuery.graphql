@@ -18,4 +18,6 @@ extend type AdminQuery {
   systems(first: Int, last: Int, before: String, after:String, filter: SystemFilter): SystemConnection
   # Get supplier mantainer
   getSupplierMaintainer(supplierID: ID!): Member
+  # Get provider mantainer
+  getProviderMaintainer(providerID: ID!): Member
 }
