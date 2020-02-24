@@ -1,0 +1,8 @@
+"""
+The electronic or geographic address which a party has provided as the contact channel
+"""
+input ContactInfo {
+  email: String!
+  phone: Phone!
+  address: Address!
+}

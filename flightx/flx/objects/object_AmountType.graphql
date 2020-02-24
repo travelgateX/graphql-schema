@@ -1,3 +1,6 @@
+"""
+An amount is a number of monetary units specified in a currency.
+"""
 type AmountType {
   amount: Float
   curCode: String

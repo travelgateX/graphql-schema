@@ -1,3 +1,6 @@
+"""
+A compulsory contribution to state revenue, levied by the government on workers' income and business profits or added to the cost of some goods, services, and transactions.
+"""
 type TaxType {
   amount: AmountType
   descText: TextType

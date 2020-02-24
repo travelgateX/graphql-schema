@@ -1,6 +1,9 @@
+"""
+An individually priced item within an Order, made up of one or more Services.
+"""
 type FlightOrderItem implements Node {
   code: ID!
-  flightOrderData: [FlightOrderItemData]
+  flightOrderItemData: FlightOrderItemData
   createdAt: DateTime!
   updatedAt: DateTime!
   adviseMessage: [AdviseMessage]

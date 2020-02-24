@@ -1,0 +1,7 @@
+"""
+Telephone number with its dialing country code
+"""
+input Phone {
+  dialingCountryCode: String!
+  number: String!
+}

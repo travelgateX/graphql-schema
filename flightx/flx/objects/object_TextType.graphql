@@ -1,3 +1,6 @@
+"""
+Text is a character string such as a finite set of characters generally in the form of words of a language.
+"""
 type TextType {
   text: String
 }

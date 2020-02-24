@@ -1,3 +1,6 @@
+"""
+Information about a proposal to sell a specific set of products or Services under specific conditions, for a certain price.
+"""
 type FlightOffer implements Node {
   code: ID!
   flightOfferData: FlightOfferData

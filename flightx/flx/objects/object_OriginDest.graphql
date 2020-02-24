@@ -1,5 +1,0 @@
-type OriginDest {
-  origin: String
-  destination: String
-  paxJourneyList: [PaxJourney]
-}
