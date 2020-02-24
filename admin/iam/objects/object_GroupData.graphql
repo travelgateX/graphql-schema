@@ -26,11 +26,11 @@ type GroupData implements GroupCommonData{
   # Response all members in this group's childrens (hierarchically),
   allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
   # Access resources in a group
-  accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
+  accesses(accessID:[ID!],owner:[ID!],first: Int, last: Int, before: String, after:String): AccessConnection
   # Supplier resources in a group
-  suppliers(codes:[ID!], accessID:[ID!], first: Int, last: Int, before: String, after:String): SupplierConnection
+  suppliers(supplierID:[ID!], accessID:[ID!], owner:[ID!],serviceAPI:[ID!], isActive: Boolean, first: Int, last: Int, before: String, after:String): SupplierConnection
   # Clients resources in a group
-  clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
+  clients(clientID:[ID!],name:[ID!],owner:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
   # You can grant roles to members, which define the roles catalog for a group.
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
   # Obtain all Profiles
