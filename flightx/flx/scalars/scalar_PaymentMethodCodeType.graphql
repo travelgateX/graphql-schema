@@ -1,4 +1,0 @@
-"""
-The payment method type. Examples: Credit Card, Cash.
-"""
-scalar PaymentMethodCodeType

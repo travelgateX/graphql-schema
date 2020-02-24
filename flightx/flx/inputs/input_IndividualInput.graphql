@@ -1,6 +1,17 @@
+"""
+A single human being as distinct from a group, class, or family.
+"""
 input IndividualInput {
   name: ProperNameType!
   surname: ProperNameType!
   birthDate: DateTime!
   title: TitleNameType
+  IdentityDocID: String!
+  IdentityDocTypeCode: IdentityDocType!
+  CitizenshipCountryCode: CountryCodeType
+  ExpiryDate: DateTime 
+  IssueDate: DateTime
+  IssuingCountryCode: CountryCodeType 
+  ResidenceCountryCode: CountryCodeType
+}
 }

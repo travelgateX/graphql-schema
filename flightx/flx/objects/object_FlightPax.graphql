@@ -1,5 +1,8 @@
+"""
+Passenger information as age and passegner type
+"""
 type FlightPax {
   age: Int!
-  type: PassengerTypeCode
+  type: IATA_PTC_CodeType
   paxID: ID!
 }

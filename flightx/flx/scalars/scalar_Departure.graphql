@@ -1,4 +1,4 @@
 """
-IATA_location code iso123123
+IATA defined code identifying a city or station.
 """
 scalar Departure

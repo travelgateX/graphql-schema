@@ -1,6 +1,0 @@
-type PaxSegmentData {
-  paxSegmentID: ID!
-  MarketingCarrierInfo: DatedMarketingSegmentType
-  arrival: TransportArrival
-  dep: TransportDeparture
-}

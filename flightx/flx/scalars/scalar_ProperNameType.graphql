@@ -1,4 +1,4 @@
 """
-ISO3009 
+Value constraints for proper, regular names
 """
 scalar ProperNameType
