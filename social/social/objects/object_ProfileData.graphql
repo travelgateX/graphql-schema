@@ -1,0 +1,40 @@
+type ProfileData {
+  """
+  Profile Name
+  """
+  name: String!
+  """
+  Profile Slug
+  """
+  slug: String!
+  """
+  Profile Order
+  """
+  order: Int
+  """
+  Profile HeadQuarter
+  """
+  headquarter: Location
+  """
+  Profile offices
+  """
+  offices: [Location]!
+  """
+  Profile Logo Url
+  """
+  logoUrl: String
+  """
+  Profile Website
+  """
+  website: String
+  """
+  Indicates if Profile is a buyer
+  """
+  isBuyer: Boolean!
+  """
+  Indicates if Profile is a seller
+  """
+  isSeller: Boolean!
+  
+
+}
