@@ -14,4 +14,3 @@ input IndividualInput {
   IssuingCountryCode: CountryCodeType 
   ResidenceCountryCode: CountryCodeType
 }
-}
