@@ -1,0 +1,8 @@
+"""
+The Origin and Destination airport/city pair wich restrict a passenger journey or a flight.
+"""
+input FlightOriginDestCriteriaInput {
+  departure: Departure!
+  arrival: Arrival!
+  departureAt: DateTime!
+}

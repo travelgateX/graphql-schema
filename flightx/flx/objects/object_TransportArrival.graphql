@@ -1,0 +1,6 @@
+"""
+The action or process of arriving of a transport vehicle in any place or location.
+"""
+type TransportArrival {
+  location: LocationCode
+}

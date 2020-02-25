@@ -1,0 +1,4 @@
+"""
+    ISO Country Code.
+"""
+scalar CountryCodeType

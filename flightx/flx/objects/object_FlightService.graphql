@@ -1,0 +1,19 @@
+"""
+The instance of a specific flight or Service Definition as it has been offered (and eventually ordered and consumed) in the context of a specific Offer and/or Order.
+"""
+type FlightService implements Node {
+  code: ID!
+  flightServiceData: FlightServiceData
+  """
+  List of advise messages.
+  """
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  """
+  Date created
+  """
+  createdAt: DateTime!
+  """
+  Date updated
+  """
+  updatedAt: DateTime!
+}

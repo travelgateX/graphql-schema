@@ -1,0 +1,4 @@
+enum FlightOfferOrderByInput {
+  totalPrice_ASC
+  totalPrice_DESC
+}

@@ -1,0 +1,21 @@
+"""
+iso ND2113
+"""
+enum FlightTicketStatusCode {
+  """
+  open for use (O)
+  """
+  OPEN
+  """
+  checked in (C)
+  """
+  CHECKED_IN
+  """
+  void (V)
+  """
+  VOID
+  """
+  refunded (R)
+  """
+  REFUNDED
+}

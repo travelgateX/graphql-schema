@@ -1,0 +1,8 @@
+"""
+Information corresponding to a ticket for a single origin destination and a single passenger
+"""
+type FlightTicket {
+  passenger: Individual!
+  number: ID!
+  status: FlightTicketStatusCode!
+}

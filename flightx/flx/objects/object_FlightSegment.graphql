@@ -1,0 +1,9 @@
+"""
+Transportation of a passenger on a Dated Operating Segment
+"""
+type FlightSegment {
+  arrival: TransportArrival!
+  departure: TransportDeparture!
+  carrier: AirlineCode
+  flightNumber: FlightNumber
+}

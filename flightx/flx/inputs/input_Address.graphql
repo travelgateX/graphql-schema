@@ -1,0 +1,9 @@
+"""
+Natural or physical address used for postal service.
+"""
+input Address {
+  street: String!
+  postalCode: String!
+  city: String!
+  country: CountryCodeType!
+}

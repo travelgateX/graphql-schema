@@ -1,0 +1,10 @@
+"""
+Information about a priced grouping of one or more services within an Offer.
+"""
+type FlightOfferItem implements Node {
+  code: ID!
+  offerItemData: FlightOfferItemData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  adviseMessage: [AdviseMessage]
+}

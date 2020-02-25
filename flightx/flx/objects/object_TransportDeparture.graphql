@@ -1,0 +1,7 @@
+"""
+The action or process of leaving of a transport vehicle from any place or location.
+"""
+type TransportDeparture {
+  location: LocationCode
+  AircraftScheduled: DateTime
+}

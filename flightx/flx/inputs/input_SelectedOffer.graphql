@@ -1,0 +1,7 @@
+"""
+  Offer selected by the passenger for requesting an Order to be created.
+"""
+input SelectedOffer {
+  offerCode: ID!
+  selectedOfferItem_in: [SelectedOfferItem!]
+}
