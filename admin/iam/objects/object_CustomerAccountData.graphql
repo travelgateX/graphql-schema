@@ -1,4 +1,4 @@
-type CustomerAccountData {
+type PartnerData {
   #cusXYZ..
   code: ID!
   name:String!

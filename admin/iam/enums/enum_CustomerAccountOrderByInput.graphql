@@ -1,4 +1,4 @@
-enum CustomerAccountOrderByInput {
+enum PartnerOrderByInput {
   code_ASC
   code_DESC
   name_ASC

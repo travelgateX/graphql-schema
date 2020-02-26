@@ -1,5 +1,5 @@
 
-input CustomerAccountWhereInput {
+input PartnerWhereInput {
   _search: String
 
   #All values that are contained in given list.

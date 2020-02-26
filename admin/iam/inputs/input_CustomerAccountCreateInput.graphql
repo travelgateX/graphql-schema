@@ -1,4 +1,4 @@
-input CustomerAccountCreateInput{
+input PartnerCreateInput{
   name:String!
   friendlyName: String
   #Default isActive=true

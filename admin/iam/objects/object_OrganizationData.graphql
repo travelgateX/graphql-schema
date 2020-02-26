@@ -41,11 +41,11 @@ type OrganizationData implements GroupCommonData {
   allClients: ClientConnection
   # Profiles resources in this organization
   allProfiles: ProfileConnection
-  primaryCustomerAccount: CustomerAccount!
-  allCustomerAccounts(
-      where: CustomerAccountWhereInput
-      orderBy: CustomerAccountOrderByInput
+  primaryPartner: Partner!
+  allPartners(
+      where: PartnerWhereInput
+      orderBy: PartnerOrderByInput
       relay: RelayInput
-      ): CustomerAccountConnection!
+      ): PartnerConnection!
 
 }

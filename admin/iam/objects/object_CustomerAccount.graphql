@@ -1,6 +1,6 @@
-type CustomerAccount implements Node {
+type Partner implements Node {
   code: ID!
-  customerAccountData: CustomerAccountData
+  PartnerData: PartnerData
   # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Date created
