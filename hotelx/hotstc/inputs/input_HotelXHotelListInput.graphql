@@ -2,8 +2,11 @@ input HotelXHotelListInput {
   # Indicates the access
   access:     ID
 
-  # Search by hotel codes
+  # Search by hotel codes. These hotel codes are used to perform search.
   hotelCodes:      [String!]
+
+  # Search by hotel codes in supplier's context.
+  supplierHotelCodes: [String!]
 
   # Search by destination codes, only search by minimal destinations
   destinationCodes: [String!]

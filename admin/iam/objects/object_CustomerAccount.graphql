@@ -1,0 +1,10 @@
+type CustomerAccount implements Node {
+  code: ID!
+  customerAccountData: CustomerAccountData
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  # Date created
+  createdAt: DateTime!
+  # Date updated
+  updatedAt: DateTime!
+}

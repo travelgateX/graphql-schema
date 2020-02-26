@@ -1,0 +1,7 @@
+"""
+OfferItem selected by the Passenger for inclusion in the requested Order
+"""
+input SelectedOfferItem {
+  offerItemCode: ID!
+  appliedPassengers: [IndividualInput!]
+}

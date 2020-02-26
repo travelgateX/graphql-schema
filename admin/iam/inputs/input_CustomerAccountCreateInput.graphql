@@ -1,0 +1,6 @@
+input CustomerAccountCreateInput{
+  name:String!
+  friendlyName: String
+  #Default isActive=true
+  isActive:Boolean
+}

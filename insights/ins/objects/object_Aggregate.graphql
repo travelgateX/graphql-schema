@@ -1,0 +1,4 @@
+type Aggregate {
+  sum: AggregateSum
+  max: AggregateMax
+}

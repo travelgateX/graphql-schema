@@ -8,7 +8,7 @@ extend type HotelXQuery {
   # Returns the total price and cancellation policies of the Option selected in the previous step (Search).
   quote(criteria: HotelCriteriaQuoteInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelQuote
 
-  # Returns detailed information about books, you can indicated a list of locators or a range date.
+  # Returns detailed information about books, you can search this books by indicating a list of locators, our HotelX booking ID or a range dates.
   booking(criteria: HotelCriteriaBookingInput!, settings: HotelSettingsInput, filter: HotelXFilterInput): HotelBooking
 
   # Returns status of the search service.

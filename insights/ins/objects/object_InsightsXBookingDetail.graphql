@@ -1,0 +1,7 @@
+type InsightsXBookingDetail implements Node {
+  code: ID!
+  InsightsXBookingDetailData: BookingDetail
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

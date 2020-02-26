@@ -1,0 +1,18 @@
+input References {
+  """
+  Client reference booking
+  """
+  client: [String!]
+  """
+  Supplier reference booking
+  """
+  supplier: [String!]
+  """
+  Hotelier reference booking
+  """
+  hotel: [String!]
+  """
+  TGX reference booking
+  """
+  sessionID: [String!]
+}

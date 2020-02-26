@@ -1,0 +1,4 @@
+type CustomerAccountEdge {
+  node: CustomerAccount
+  cursor: String!
+}

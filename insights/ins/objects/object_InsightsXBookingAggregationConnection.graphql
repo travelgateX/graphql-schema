@@ -1,0 +1,8 @@
+"""
+## Booking Aggregation
+"""
+type InsightsXBookingAggregationConnection {
+  edges: [InsightsXBookingAggregationEdge]
+  pageInfo: PageInfo!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

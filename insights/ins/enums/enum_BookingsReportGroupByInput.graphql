@@ -1,0 +1,18 @@
+"""
+## BOOKING REPORT // Group By Input
+"""
+enum BookingsReportGroupByInput {
+  status
+  clientCode
+  supplierCode
+  currency
+  bookingAt
+  checkInAt
+  cancelAt
+  originMarket
+  destinationCountry
+  paxType
+  lengthOfStay
+  bookingWindow
+  hotel
+}

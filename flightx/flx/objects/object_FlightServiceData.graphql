@@ -1,0 +1,10 @@
+type FlightServiceData {
+  code: ID!
+  """
+  serviceDefinition
+  """
+  type: ID!
+  description: String!
+  pax: [FlightPax]!
+  segments(where: FlightSegmentWhereInput, orderBy: FlightSegmentOrderByInput): [FlightSegment!]!
+}

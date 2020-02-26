@@ -1,0 +1,7 @@
+"""
+Amount added on to a usual charge for a specific product, purpose, or service.
+"""
+type FlightSurcharge {
+  totalAmount: AmountType
+  breakdown: [Fee]
+}

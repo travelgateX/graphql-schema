@@ -1,0 +1,10 @@
+enum CustomerAccountOrderByInput {
+  code_ASC
+  code_DESC
+  name_ASC
+  name_DESC
+  friendlyName_ASC
+  friendlyName_DESC
+  isActive_ASC
+  isActive_DESC
+}

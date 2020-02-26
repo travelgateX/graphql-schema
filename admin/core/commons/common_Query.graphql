@@ -10,4 +10,6 @@ type Query{
   paymentX: PaymentXQuery
   # The Stats product query root for implementing GraphQL query.
   stats: StatsQuery
+  # The Insights product query root for implementing GraphQL query.
+  insights:InsightsQuery
 }

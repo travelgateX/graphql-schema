@@ -1,0 +1,7 @@
+"""
+A form of procedure for the payment
+"""
+input PaymentMethod {
+  cash: ClientWhereUniqueInput
+  card: PaymentCardInput
+}

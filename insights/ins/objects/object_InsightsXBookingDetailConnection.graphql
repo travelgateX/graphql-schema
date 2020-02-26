@@ -1,0 +1,8 @@
+"""
+## Booking Details
+"""
+type InsightsXBookingDetailConnection {
+  edges: [InsightsXBookingDetailEdge]
+  pageInfo: PageInfo!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

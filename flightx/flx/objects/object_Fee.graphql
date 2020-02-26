@@ -1,0 +1,7 @@
+"""
+Amount added on to a charge for a specific product, purpose, or service.
+"""
+type Fee {
+  amount: AmountType
+  descText: TextType
+}

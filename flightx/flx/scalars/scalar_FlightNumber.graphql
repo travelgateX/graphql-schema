@@ -1,0 +1,4 @@
+"""
+4 digits or less that are unique flight codes in this day 
+"""
+scalar FlightNumber

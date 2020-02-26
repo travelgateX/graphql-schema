@@ -1,0 +1,4 @@
+type FlightOfferEdge {
+  node: FlightOffer
+  cursor: String!
+}

@@ -21,12 +21,12 @@ type OrganizationData implements GroupCommonData {
   products(codes: [ID!], first: Int, last: Int, before: String, after:String): ProductConnection
   # Response all members in this group's childrens (hierarchically)
   allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
-  # Access resources in a organization
-  accesses(codes:[ID!], first: Int, last: Int, before: String, after:String): AccessConnection
-  # Supplier resources in a organization
-  suppliers(codes:[ID!], accessID:[ID!], first: Int, last: Int, before: String, after:String): SupplierConnection
-  # Clients resources in a organization
-  clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
+  # Access resources in a group
+  accesses(accessID:[ID!],owner:[ID!],first: Int, last: Int, before: String, after:String): AccessConnection
+  # Supplier resources in a group
+  suppliers(supplierID:[ID!], accessID:[ID!], owner:[ID!],serviceAPI:[ID!], isActive: Boolean, first: Int, last: Int, before: String, after:String): SupplierConnection
+  # Clients resources in a group
+  clients(clientID:[ID!],name:[ID!],owner:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
   # Obtain all profiles
   profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
   domains: [Domain]!
@@ -41,4 +41,11 @@ type OrganizationData implements GroupCommonData {
   allClients: ClientConnection
   # Profiles resources in this organization
   allProfiles: ProfileConnection
+  primaryCustomerAccount: CustomerAccount!
+  allCustomerAccounts(
+      where: CustomerAccountWhereInput
+      orderBy: CustomerAccountOrderByInput
+      relay: RelayInput
+      ): CustomerAccountConnection!
+
 }

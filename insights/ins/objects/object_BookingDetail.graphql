@@ -1,0 +1,70 @@
+type BookingDetail {
+  """
+  Booking ID in the Supplier's system
+  """
+  reference: Reference!
+  """
+  Holder's name and surname
+  """
+  holder: Holder
+  """
+  Information about the hotel.
+  """
+  hotel: BookingHotel
+  """
+  Specifies the prices (Gross, Net and Amount) of the option returned.
+  """
+  price: Price
+  """
+  Specifies cancel policies of the book returned.
+  """
+  cancelPolicy: CancelPolicy
+  """
+  Additional information about the book.
+  """
+  remarks: String
+  """
+  Booking Status.
+  """
+  status: BookStatusType!
+  """
+  Payable.
+  """
+  payable: String
+  """
+  Quote Session id 
+  """
+  sessionIdQuote: String
+  """
+  Booking Session id 
+  """
+  sessionIdBooking: String
+  """
+  Cancel Session id 
+  """
+  sessionIdCancel: String
+  """
+  Client Code
+  """
+  client: Client
+  """
+  Supplier Code
+  """
+  supplier: Supplier
+  """
+  Access ID
+  """
+  access: Access
+  """
+  Execution Time
+  """
+  executionTime: Int
+  """
+  Timeout
+  """
+  timeout: Int
+  """
+  Error Code
+  """
+  errorCode: String
+}
