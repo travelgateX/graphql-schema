@@ -14,4 +14,6 @@ type AlertData {
   editor: Member!
   "Records of the last 10 events triggered"
   events( relay: RelayInput, filter: AlertFilterInput):AlertEventConnection!
+   "Group where the alert is saved"
+   group: Group!
 }
