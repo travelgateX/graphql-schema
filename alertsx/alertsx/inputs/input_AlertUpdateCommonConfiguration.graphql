@@ -10,23 +10,23 @@ input AlertUpdateCommonConfigurationInput {
   "Email addresses to send notifications"
   email: [AlertEmailInput]
   "Possibility to filter traffic by hubStatus"
-  hubStatus: [AlertHubStatusInput!]
+  hubStatus: [AlertHubStatusInput]
   "Possibility to filter traffic by errorCodes"
-  errorCode: [AlertErrorCodeInput!]
+  errorCode: [AlertErrorCodeInput]
   "Possibility to filter traffic by errorTypes"
-  errorType: [AlertErrorTypeInput!] 
+  errorType: [AlertErrorTypeInput]
   "Possibility to filter traffic by suppliers"
-	supplier:[AlertObjectInput!]
+	supplier:[AlertObjectInput]
   "Possibility to filter traffic by clients"
-	client:[AlertObjectInput!]
+	client:[AlertObjectInput]
   "Must filter traffic by group. Only PRODUCT group type is allowed"
-	group:[AlertGroupInput!]
+	group:[AlertGroupInput]
   "Possibility to filter traffic by accesses"
-	access:[AlertObjectInput!]
+	access:[AlertObjectInput]
   "Possibility to filter traffic by operations"
-	operation:[AlertObjectInput!]
+	operation:[AlertObjectInput]
   "Possibility to filter traffic by apis"
-  api:[AlertObjectInput!]
+    api:[AlertObjectInput!]
   "Possibility to group by traffic and calculate its parameters separately"
-	groupBy:[AlertGroups!]
+	groupBy:[AlertGroups]
 }
