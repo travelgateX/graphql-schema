@@ -1,5 +1,4 @@
-enum AlertCheckPrice {
-  AMOUNT
-  COMMISSION
-  BOTH
+enum AlertAmountBy {
+  NIGHT
+  TOTAL
 }

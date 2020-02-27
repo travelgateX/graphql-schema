@@ -1,0 +1,7 @@
+"Traffic Bounds"
+type AlertBounds {
+  bound: AlertBound!
+  upperBound:Int
+  lowerBound:Int
+}
+

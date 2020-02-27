@@ -1,0 +1,7 @@
+input AlertPeakTrafficAbsoluteByTimeInput {
+  name: String
+  description: String
+  configuration: AlertPeakTrafficAbsoluteConfigurationByTimeInput!
+  isActive: Boolean!
+  group: ID!
+}

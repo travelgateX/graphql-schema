@@ -7,5 +7,5 @@ input AlertCriteriaInput {
   "Group codes"
   groups: [ID!]
   #List of shared type  
-  shared: [SharedType!]
+  shared: [AlertSharedType!]
 }
