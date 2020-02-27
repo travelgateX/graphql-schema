@@ -1,4 +1,4 @@
-type CustomerAccountEdge {
-  node: CustomerAccount
+type PartnerEdge {
+  node: Partner
   cursor: String!
 }

@@ -1,5 +1,5 @@
-type CustomerAccountConnection{
-  edges: [CustomerAccountEdge]
+type PartnerConnection{
+  edges: [PartnerEdge]
   pageInfo: PageInfo!
   # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]

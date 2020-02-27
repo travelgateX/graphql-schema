@@ -33,40 +33,40 @@ extend type AdminMutation{
   revokeMacroPermissionsFromMember(input: GrantMacroPermissionInput!): Member!
   addContact(organizationCode:ID!,type:OrganizationContactType!,user:ID!):Organization!
   deleteContact(organizationCode:ID!,user:ID!):Organization!
-  # Creates a CustomerAccount.
-  createCustomerAccount(
-    data: CustomerAccountCreateInput!
-    ): CustomerAccount!
-  # Update a CustomerAccount.
-  updateCustomerAccount(
-    data: CustomerAccountUpdateInput!
-    where: CustomerAccountWhereUniqueInput!
-    ): CustomerAccount!
-  # Delete a CustomerAccount, from all groups
-  deleteCustomerAccount(
-    where: CustomerAccountWhereUniqueInput!
-    ): CustomerAccount!
-  # Add CustomerAccount to a group
-  addCustomerAccountToOrganization(
+  # Creates a Partner.
+  createPartner(
+    data: PartnerCreateInput!
+    ): Partner!
+  # Update a Partner.
+  updatePartner(
+    data: PartnerUpdateInput!
+    where: PartnerWhereUniqueInput!
+    ): Partner!
+  # Delete a Partner, from all groups
+  deletePartner(
+    where: PartnerWhereUniqueInput!
+    ): Partner!
+  # Add Partner to a group
+  addPartnerToOrganization(
     #Organization->Code
     organizationCode: ID!
-    where: CustomerAccountWhereUniqueInput!
-    ):CustomerAccount!
-  # Delete CustomerAccount from a group
-  deleteCustomerAccountFromOrganization(
+    where: PartnerWhereUniqueInput!
+    ):Partner!
+  # Delete Partner from a group
+  deletePartnerFromOrganization(
     #Organization->Code
     organizationCode: ID!
-    where: CustomerAccountWhereUniqueInput!
-    ):CustomerAccount!
-  # set the primary CustomerAccount for an organizationCode
-  setPrimaryCustomerAccount(
+    where: PartnerWhereUniqueInput!
+    ):Partner!
+  # set the primary Partner for an organizationCode
+  setPrimaryPartner(
     #Organization->Code
     organizationCode: ID!
-    where: CustomerAccountWhereUniqueInput!
-    ): CustomerAccount!
+    where: PartnerWhereUniqueInput!
+    ): Partner!
   #@intern
-  addAgent(CustomerAccountCode:ID!,type:CustomerAgentType!,user:ID!):CustomerAccount!
+  addAgent(PartnerCode:ID!,type:CustomerAgentType!,user:ID!):Partner!
   #@intern
-  deleteAgent(CustomerAccountCode:ID!,user:ID!):CustomerAccount!
+  deleteAgent(PartnerCode:ID!,user:ID!):Partner!
 
 }

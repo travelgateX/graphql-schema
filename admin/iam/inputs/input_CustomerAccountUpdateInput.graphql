@@ -1,4 +1,4 @@
-input CustomerAccountUpdateInput {
+input PartnerUpdateInput {
   name:String
   friendlyName: String
   isActive:Boolean

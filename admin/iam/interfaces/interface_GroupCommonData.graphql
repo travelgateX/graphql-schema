@@ -11,5 +11,4 @@ interface GroupCommonData{
   accesses(accessID:[ID!],owner:[ID!],first: Int, last: Int, before: String, after:String): AccessConnection
   suppliers(supplierID:[ID!], accessID:[ID!], owner:[ID!],serviceAPI:[ID!], isActive: Boolean, first: Int, last: Int, before: String, after:String): SupplierConnection
   clients(clientID:[ID!],name:[ID!],owner:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
-  clients(codes:[ID!],name:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
 }
