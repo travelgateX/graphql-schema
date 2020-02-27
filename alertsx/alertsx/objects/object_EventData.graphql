@@ -1,9 +1,0 @@
-"Event data"
-type EventData {
-  code: ID!
-  groupBy: String
-  status: EventType!
-  details: String!
-  # History
-  history( relay: RelayInput, filter: AlertFilterInput):EventConnection!
-}

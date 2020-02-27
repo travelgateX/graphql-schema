@@ -1,0 +1,6 @@
+input AlertUpdateAverageTimeRelativeByRequestsInput {
+  name: String
+  description: String
+  configuration: AlertUpdateAverageTimeRelativeConfigurationByRequestsInput
+  isActive: Boolean
+}

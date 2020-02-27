@@ -1,0 +1,4 @@
+input AlertErrorCodeInput {
+  code: Int!
+  isInclusive: Boolean!
+}

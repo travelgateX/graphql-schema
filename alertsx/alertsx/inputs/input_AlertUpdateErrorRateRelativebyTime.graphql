@@ -1,0 +1,6 @@
+input AlertUpdateErrorRateRelativeByTimeInput {
+  name: String
+  description: String
+  configuration: AlertUpdateErrorRateRelativeConfigurationByTimeInput
+  isActive: Boolean
+}

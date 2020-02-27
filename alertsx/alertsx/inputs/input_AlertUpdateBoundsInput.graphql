@@ -1,0 +1,5 @@
+input AlertUpdateBoundsInput {
+  bound: AlertBound
+  upperBound: Int
+  lowerBound: Int
+}

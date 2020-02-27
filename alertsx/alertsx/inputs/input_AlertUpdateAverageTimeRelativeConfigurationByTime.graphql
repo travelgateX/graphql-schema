@@ -1,0 +1,7 @@
+input AlertUpdateAverageTimeRelativeConfigurationByTimeInput {
+  maxTime:Int
+  maxAverageTime:Int
+  windowing: AlertUpdateCommonByTimeInput
+  common: AlertUpdateCommonConfigurationInput
+  relative: AlertUpdateCommonRelativeInput
+}

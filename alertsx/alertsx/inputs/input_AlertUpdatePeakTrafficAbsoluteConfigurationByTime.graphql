@@ -1,0 +1,5 @@
+input AlertUpdatePeakTrafficAbsoluteConfigurationByTimeInput {
+  bounds: AlertBoundsUpdateInput
+  windowing: AlertUpdateCommonByTimeInput
+  common: AlertUpdateCommonConfigurationInput
+}

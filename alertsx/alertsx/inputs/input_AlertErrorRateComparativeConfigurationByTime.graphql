@@ -1,0 +1,9 @@
+input AlertErrorRateComparativeConfigurationByTimeInput {
+  "By default all error codes are checked"
+  toCheck: [Int!]
+  "By defaults all traffic is compared"
+  toCompare: [Int!]
+  windowing: AlertCommonByTimeInput!
+  common: AlertCommonConfigurationInput!
+  comparative: AlertCommonComparativeInput!
+}

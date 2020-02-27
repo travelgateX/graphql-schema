@@ -1,0 +1,7 @@
+input AlertErrorRateComparativeByTimeInput {
+  name: String
+  description: String
+  configuration: AlertErrorRateComparativeConfigurationByTimeInput!
+  isActive: Boolean!
+  group: ID!
+}

@@ -1,0 +1,7 @@
+input AlertPriceAbsoluteByRequestsInput {
+  name: String
+  description: String
+  configuration: AlertPriceAbsoluteConfigurationByRequestsInput!
+  isActive: Boolean!
+  group: ID!
+}

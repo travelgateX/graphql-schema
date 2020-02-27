@@ -1,7 +1,6 @@
 enum AlertType{
   ERROR_RATE
   AVERAGE_TIME
-  NO_TRAFFIC
   PEAK_TRAFFIC
   PRICE
 }

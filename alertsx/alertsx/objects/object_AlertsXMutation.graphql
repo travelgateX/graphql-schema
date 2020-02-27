@@ -1,6 +1,63 @@
 type AlertsXMutation {
-  "Mutation to create a new alert"
-  createAlert(input: AlertInput!): Alert
-  "Mutation to update an existing alert"
-  updateAlert(code:ID! input: AlertUpdateInput!): Alert
+
+  "Mutation to create a new alert type ErrorRate as Relative mode & Time Window"
+  createAlertErrorRateRelativeByTime(data: AlertErrorRateRelativeByTimeInput!): Alert
+  "Mutation to create a new alert type ErrorRate as Relative mode & Request Window"
+  createAlertErrorRateRelativeByRequests(data: AlertErrorRateRelativeByRequestsInput!): Alert
+  "Mutation to create a new alert type ErrorRate as Comparative mode & Time Window"
+  createAlertErrorRateComparativeByTime(data: AlertErrorRateComparativeByTimeInput!): Alert
+  "Mutation to create a new alert type AverageTime as Relative mode & Time Window"
+  createAlertAverageTimeRelativeByTime(data: AlertAverageTimeRelativeByTimeInput!): Alert
+  "Mutation to create a new alert type AverageTime as Relative mode & Request Window"
+  createAlertAverageTimeRelativeByRequests(data: AlertAverageTimeRelativeByRequestsInput!): Alert
+  "Mutation to create a new alert type AverageTime as Absolute mode & Time Window"
+  createAlertAverageTimeAbsoluteByTime(data: AlertAverageTimeAbsoluteByTimeInput!): Alert
+  "Mutation to create a new alert type AverageTime as Absolute mode & Requests Window"
+  createAlertAverageTimeAbsoluteByRequests(data: AlertAverageTimeAbsoluteByRequestsInput!): Alert
+  "Mutation to create a new alert type AverageTime as Comparative mode & Time Window"
+  createAlertAverageTimeComparativeByTime(data: AlertAverageTimeComparativeByTimeInput!): Alert
+  "Mutation to create a new alert type PeakTraffic as Absolute mode & Time Window"
+  createAlertPeakTrafficAbsoluteByTime(data: AlertPeakTrafficAbsoluteByTimeInput!): Alert
+  "Mutation to create a new alert type PeakTraffic as Comparative mode & Time Window"
+  createAlertPeakTrafficComparativeByTime(data: AlertPeakTrafficComparativeByTimeInput!): Alert
+  "Mutation to create a new alert type Price as Relative mode & Time Window"
+  createAlertPriceRelativeByTime(data: AlertPriceRelativeByTimeInput!): Alert
+  "Mutation to create a new alert type Price as Relative mode & Request Window"
+  createAlertPriceRelativeByRequests(data: AlertPriceRelativeByRequestsInput!): Alert
+  "Mutation to create a new alert type Price as Absolute mode & Time Window"
+  createAlertPriceAbsoluteByTime(data: AlertPriceAbsoluteByTimeInput!): Alert
+  "Mutation to create a new alert type Price as Absolute mode & Request Window"
+  createAlertPriceAbsoluteByRequests(data: AlertPriceAbsoluteByRequestsInput!): Alert
+
+  "Mutation to update an alert type ErrorRate as Relative mode & Time Window"
+  updateAlertErrorRateRelativeByTime(code:ID! data: AlertUpdateErrorRateRelativeByTimeInput!): Alert
+  "Mutation to update an alert type ErrorRate as Relative mode & Request Window"
+  updateAlertErrorRateRelativeByRequests(code:ID! data: AlertUpdateErrorRateRelativeByRequestsInput!): Alert
+  "Mutation to update an alert type ErrorRate as Comparative mode & Time Window"
+  updateAlertErrorRateComparativeByTime(code:ID! data: AlertUpdateErrorRateComparativeByTimeInput!): Alert
+  "Mutation to update an alert type AverageTime as Relative mode & Time Window"
+  updateAlertAverageTimeRelativeByTime(code:ID! data: AlertUpdateAverageTimeRelativeByTimeInput!): Alert
+  "Mutation to update an alert type AverageTime as Relative mode & Request Window"
+  updateAlertAverageTimeRelativeByRequests(code:ID! data: AlertUpdateAverageTimeRelativeByRequestsInput!): Alert
+  "Mutation to update an alert type AverageTime as Absolute mode & Time Window"
+  updateAlertAverageTimeAbsoluteByTime(code:ID! data: AlertUpdateAverageTimeAbsoluteByTimeInput!): Alert
+  "Mutation to update an alert type AverageTime as Absolute mode & Request Window"
+  updateAlertAverageTimeAbsoluteByRequests( code:ID! data: AlertUpdateAverageTimeAbsoluteByRequestsInput!): Alert
+  "Mutation to update an alert type AverageTime as Comparative mode & Time Window"
+  updateAlertAverageTimeComparativeByTime(code:ID! data: AlertUpdateAverageTimeComparativeByTimeInput!): Alert
+  "Mutation to update an alert type PeakTraffic as Absolute mode & Time Window"
+  updateAlertPeakTrafficAbsoluteByTime(code:ID! data: AlertUpdatePeakTrafficAbsoluteByTimeInput!): Alert
+  "Mutation to update an alert type PeakTraffic as Comparative mode & Time Window"
+  updateAlertPeakTrafficComparativeByTime(code:ID! data: AlertUpdatePeakTrafficComparativeByTimeInput!): Alert
+  "Mutation to update an alert type Price as Relative mode & Time Window"
+  updateAlertPriceRelativeByTime(code:ID! data: AlertUpdatePriceRelativeByTimeInput!): Alert
+  "Mutation to update an alert type Price as Relative mode & Requests Window"
+  updateAlertPriceRelativeByRequests(code:ID! data: AlertUpdatePriceRelativeByRequestsInput!): Alert
+  "Mutation to update an alert type Price as Absolute mode & Time Window"
+  updateAlertPriceAbsoluteByTime(code:ID! data: AlertUpdatePriceAbsoluteByTimeInput!): Alert
+  "Mutation to update an alert type Price as Absolute mode & Requests Window"
+  updateAlertPriceAbsoluteByRequests(code:ID! data: AlertUpdatePriceAbsoluteByRequestsInput!): Alert
+ 
+  "Mutation to delete an alert"
+  deleteAlert(code:ID!):Alert
 }

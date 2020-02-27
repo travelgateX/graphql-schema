@@ -1,0 +1,6 @@
+"Events list"
+type AlertEventConnection {
+  edges: [AlertEventEdge]
+  pageInfo: PageInfo!
+  totalCount: Int!
+}

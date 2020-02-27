@@ -1,7 +1,6 @@
 "Alert list"
 type AlertConnection{
   edges: [AlertEdge]
-  #Indicates info about page
   pageInfo: PageInfo!
-  count: Int!
+  totalCount: Int!
 }

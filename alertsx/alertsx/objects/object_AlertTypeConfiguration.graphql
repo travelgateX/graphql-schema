@@ -1,15 +1,17 @@
-"Depending on the talert type, typeConfiguration will use some fields "
+"Depending on the alert type, typeConfiguration will use some fields"
 type AlertTypeConfiguration {
-  "The time frame in minutes to be used to compare with the window time frame"
-  historicalWindow: Int
-  "Time frame in minutes to set the beginning of historicalWindow"
-  offset: Int
-  "maximum average time allowed in miliseconds"
-  max_average: Int
-  "Error codes to be Checked. By default  all error codes excepts 0"
+  "Average time not allowed in miliseconds.  Used for Average time alert type"
+  maxAverageTime: Int
+  "Time not allowed in miliseconds.  Used for Average time alert type"
+  maxTime:Int
+  "Requests vs total requests checked to consider alert in ALERTING status. Used for Average time alert type"
+  requestsToAlert: Int
+  "Error codes to be Checked. By default  all error codes excepts 0. Used for Error rate alert type"
 	toCheck: [Int!]
-  "Error codes to be Compared with Checked codes. By default all error codes"
+  "Error codes to be Compared with Checked codes. By default all error codes.  Used for Error rate alert type"
   toCompare: [Int!]
   "Price contains the specific configuration for Price alert Type"
   price: AlertPrice
+  "Bounds contains the specific configuration for Peak Traffic alert Type"
+  bounds: AlertBounds
 }

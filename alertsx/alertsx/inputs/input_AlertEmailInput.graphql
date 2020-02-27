@@ -1,0 +1,6 @@
+input AlertEmailInput {
+  # address ID
+  address: ID!
+  # email type
+  type: AlertEmailType!
+}

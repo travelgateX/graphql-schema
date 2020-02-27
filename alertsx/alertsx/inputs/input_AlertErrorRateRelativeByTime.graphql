@@ -1,0 +1,7 @@
+input AlertErrorRateRelativeByTimeInput {
+  name: String
+  description: String
+  configuration: AlertErrorRateRelativeConfigurationByTimeInput!
+  isActive: Boolean!
+  group: ID!
+}

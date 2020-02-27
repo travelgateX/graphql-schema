@@ -1,10 +1,10 @@
 # Filters needed to do a search.
 input AlertCriteriaInput {
-  # List of alerts
-  alertCodes: [ID!]
+  "Alert codes"
+  codes: [ID!]
   #active or not
   isActive: Boolean
-  #List of group codes where alerts are located
+  "Group codes"
   groups: [ID!]
   #List of shared type  
   shared: [SharedType!]

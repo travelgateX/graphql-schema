@@ -1,0 +1,10 @@
+input AlertUpdatePriceRelativeByTimeInput {
+  #name
+  name: String
+  #description
+  description: String
+   #configuration
+  configuration: AlertUpdatePriceRelativeConfigurationByTimeInput
+  #status
+  isActive: Boolean
+}

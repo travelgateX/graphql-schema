@@ -1,0 +1,10 @@
+input AlertCommonComparativeInput{
+   "The time frame in minutes to be used to compare with the window time frame"
+  historicalWindow: Int!
+  "Time frame in minutes to set the beginning of historicalWindow"
+  offset: Int!
+  "Percentage to be considered status ALERTING"
+  variation: AlertVariation!
+   "According to percentageToAlert value"
+  percentageToAlert: Int!
+}  

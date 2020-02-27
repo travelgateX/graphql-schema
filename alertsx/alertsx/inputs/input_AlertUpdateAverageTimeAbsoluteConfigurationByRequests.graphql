@@ -1,0 +1,7 @@
+input AlertUpdateAverageTimeAbsoluteConfigurationByRequestsInput {
+  maxTime:Int
+  maxAverageTime:Int
+  requestsToAlert: Int
+  windowing: AlertUpdateCommonByRequestsInput
+  common: AlertUpdateCommonConfigurationInput
+}

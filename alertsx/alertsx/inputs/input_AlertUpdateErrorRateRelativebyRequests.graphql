@@ -1,0 +1,6 @@
+input AlertUpdateErrorRateRelativeByRequestsInput {
+  name: String
+  description: String
+  configuration: AlertUpdateErrorRateRelativeConfigurationByRequestsInput
+  isActive: Boolean
+}

@@ -1,0 +1,7 @@
+input AlertAverageTimeComparativeByTimeInput {
+  name: String
+  description: String
+  configuration: AlertAverageTimeComparativeConfigurationByTimeInput!
+  isActive: Boolean!
+  group: ID!
+}

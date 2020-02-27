@@ -1,0 +1,11 @@
+"AlertEvent data"
+type AlertEventData {
+  code: ID!
+  groupBy: String
+  "Status event"
+  status: AlertEventType!
+  "Contains data in xml format encrypted"
+  details: String!
+  "Last 10 events of the alert/grouBy"
+  history( relay: RelayInput, filter: AlertFilterInput):AlertEventConnection!
+}

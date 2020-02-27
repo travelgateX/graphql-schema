@@ -1,0 +1,10 @@
+input AlertAverageTimeAbsoluteConfigurationByTimeInput {
+  "Time not allowed in miliseconds."
+  maxTime:Int
+  "Average time not allowed in miliseconds."
+  maxAverageTime:Int
+  "Requests vs total requests checked to consider alert in ALERTING status."
+  requestsToAlert: Int!
+  windowing: AlertCommonByTimeInput!
+  common: AlertCommonConfigurationInput!
+}

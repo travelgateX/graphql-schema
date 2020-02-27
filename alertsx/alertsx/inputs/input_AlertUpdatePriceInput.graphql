@@ -1,9 +1,9 @@
 "Price input"
 input AlertPriceInput {
   "Specify which field is going to be checked. Amount, commission or both"
-  check: AlertCheckPrice!
+  check: AlertCheckPrice
   "Low or greater values of amount/commission (value included) "
-  range: AlertRangePrice!
+  range: AlertRangePrice
   "Value of amount price"
   amount: Int 
   "Value of commission price"

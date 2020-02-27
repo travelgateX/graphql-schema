@@ -1,0 +1,4 @@
+input AlertHubStatusInput {
+  code: HubStatus!
+  isInclusive: Boolean!
+}

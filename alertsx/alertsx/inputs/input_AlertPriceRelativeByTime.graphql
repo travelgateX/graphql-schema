@@ -1,0 +1,7 @@
+input AlertPriceRelativeByTimeInput {
+  name: String
+  description: String
+  configuration: AlertPriceRelativeConfigurationByTimeInput!
+  isActive: Boolean!
+  group: ID!
+}

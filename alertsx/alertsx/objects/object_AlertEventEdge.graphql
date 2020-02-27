@@ -1,0 +1,4 @@
+type AlertEventEdge {
+  node: AlertEvent
+  cursor: String!
+}

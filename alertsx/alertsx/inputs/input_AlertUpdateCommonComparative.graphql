@@ -1,0 +1,6 @@
+input AlertUpdateCommonComparativeInput{
+  historicalWindow: Int
+  offset: Int
+  variation: AlertVariation
+  percentageToAlert: Int
+}

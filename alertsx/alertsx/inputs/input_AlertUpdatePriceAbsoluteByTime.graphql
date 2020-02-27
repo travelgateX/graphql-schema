@@ -1,0 +1,6 @@
+input AlertUpdatePriceAbsoluteByTimeInput {
+  name: String
+  description: String
+  configuration: AlertUpdatePriceAbsoluteConfigurationByTimeInput
+  isActive: Boolean
+}

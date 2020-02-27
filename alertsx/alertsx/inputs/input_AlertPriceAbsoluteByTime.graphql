@@ -1,0 +1,7 @@
+input AlertPriceAbsoluteByTimeInput {
+  name: String
+  description: String
+  configuration: AlertPriceAbsoluteConfigurationByTimeInput!
+  isActive: Boolean!
+  group: ID!
+}
