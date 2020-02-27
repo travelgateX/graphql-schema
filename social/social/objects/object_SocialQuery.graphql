@@ -2,5 +2,5 @@ type SocialQuery{
     """
     Get all profiles
     """
-    profiles(where:ProfilwWhereInput, first:Int, last: Int): ProfileConnection!
+    profiles(where:ProfileWhereInput, first:Int, last: Int): ProfileConnection!
 }

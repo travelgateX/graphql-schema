@@ -2,7 +2,13 @@
 The profile to use in XTG Platform
 """
 type Profile implements Node {
+  """
+  Unique profile code
+  """
   code: ID!
+  """
+  All profile data informations
+  """
   profileData: ProfileData
   """
   Errors that will lead the service to abort
