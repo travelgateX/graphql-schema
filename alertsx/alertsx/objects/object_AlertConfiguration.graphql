@@ -56,5 +56,5 @@ type AlertConfiguration {
   groupBy:[AlertGroups!]
   # SELLER/BUYER
   "Indicates if the group configuration is SELLER OR BUYER"
-  comercialType: ComercialType
+  comercialType: AlertComercialType
 }

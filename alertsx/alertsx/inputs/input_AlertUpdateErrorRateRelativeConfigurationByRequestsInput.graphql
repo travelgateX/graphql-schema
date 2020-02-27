@@ -1,0 +1,7 @@
+input AlertUpdateErrorRateRelativeConfigurationByRequestsInput {
+  toCheck: [Int!]
+  toCompare: [Int!]
+  windowing: AlertUpdateCommonByRequestsInput
+  common: AlertUpdateCommonConfigurationInput
+  relative: AlertUpdateCommonRelativeInput
+}
