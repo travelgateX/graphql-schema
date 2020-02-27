@@ -35,6 +35,40 @@ type ProfileData {
   Indicates if Profile is a seller
   """
   isSeller: Boolean!
-  
-
+  """
+  Profile Status
+  """
+  status: ProfileStatus!
+  """
+  Buyer categories
+  """
+  buyerCategory: ProfileB
+  """
+  Profile clients
+  """
+  clients: ClientConnection
+  """
+  Profile suppliers
+  """
+  suppliers: SupplierConnection
+  """
+  Indicates teh group where profile belongs
+  """
+  group: Group
+  """
+  Profile owner
+  """
+  owner: Organization
+  """
+  Create date
+  """
+  createdAt: DateTime!
+  """
+  Update date
+  """
+  updatedAt: DateTime!
+  """
+  List of messages
+  """
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
