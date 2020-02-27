@@ -6,4 +6,4 @@ input AlertErrorRateRelativeConfigurationByRequestsInput {
   windowing: AlertCommonByRequestsInput!
   common: AlertCommonConfigurationInput!
   relative: AlertCommonRelativeInput!
-}s
+}

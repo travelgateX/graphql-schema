@@ -6,4 +6,4 @@ input AlertErrorRateRelativeConfigurationByTimeInput {
   windowing: AlertCommonByTimeInput!
   common: AlertCommonConfigurationInput!
   relative: AlertCommonRelativeInput!
-}s
+}
