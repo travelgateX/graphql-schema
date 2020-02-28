@@ -20,7 +20,7 @@ type MetadataSearch{
     # Minimum number of days required for booking. If the value is zero then there is no limitation.
     minimumStay:ReviewedInt!
 
-    # Maximum number of days allowed for booking.
+    # Maximum number of days allowed for booking. -1 means there is no restriction
     maxStay:ReviewedInt!
 
     # Contains information about the restrictions of the rooms.
