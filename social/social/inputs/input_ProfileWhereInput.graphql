@@ -1,4 +1,6 @@
 input ProfileWhereInput {
+
+  _search: String
   """
   Logical AND on all given filters
   """
@@ -31,5 +33,6 @@ input ProfileWhereInput {
   Get all profiles by seller or not seller
   """
   isSeller: Boolean
-  
+  isActive: Boolean
+
 }

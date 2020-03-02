@@ -10,7 +10,7 @@ type ProfileData {
   """
   Profile Order
   """
-  order: Int
+  order: Int!
   """
   Profile HeadQuarter
   """
@@ -22,11 +22,11 @@ type ProfileData {
   """
   Profile Logo Url
   """
-  logoUrl: String
+  logoUrl: URI
   """
   Profile Website
   """
-  website: String
+  website: URI
   """
   Indicates if Profile is a buyer
   """
@@ -83,8 +83,4 @@ type ProfileData {
   Update date
   """
   updatedAt: DateTime!
-  """
-  List of messages
-  """
-  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }

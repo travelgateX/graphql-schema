@@ -1,6 +1,11 @@
 type SocialQuery{
-    """
-    Get all profiles
-    """
-    profiles(where:ProfileWhereInput, first:Int, last: Int): ProfileConnection!
+  profile(code:ID!):Profile!
+  """
+  Get all profiles
+  """
+  allProfiles(
+    where: ProfileWhereInput
+    orderBy: ProfileOrderByInput
+    relay: RelayInput
+    ): ProfileConnection!
 }
