@@ -22,11 +22,11 @@ type ProfileData {
   """
   Profile Logo Url
   """
-  logoUrl: URL
+  logoUrl: URI
   """
   Profile Website
   """
-  website: URL
+  website: URI
   """
   Indicates if Profile is a buyer
   """
