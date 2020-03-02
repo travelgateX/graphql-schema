@@ -5,8 +5,8 @@ input ProfileCreateInput{
     order:Int
     headquerter:LocationInput
     offices: ProfileCreateOfficeInput
-    logoUrl: String
-    website: String
+    logoUrl: URI
+    website: URI
     isSeller: Boolean!
     status: ProfileStatus!
     buyerCategory: ProfileBuyerCategory
