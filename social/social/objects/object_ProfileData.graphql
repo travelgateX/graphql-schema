@@ -67,8 +67,4 @@ type ProfileData {
   Update date
   """
   updatedAt: DateTime!
-  """
-  List of messages
-  """
-  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
