@@ -1,0 +1,14 @@
+type SocialMutation{
+    """
+    Create a profile
+    """
+    createProfile(data:ProfileCreateInput): Profile!
+    """
+    Add clients to profile
+    """
+    addClientsToProfile(where:ProfileWhereInput!, client:ID!)
+    """
+    Add suppliers to profile
+    """
+    addSuppliersToProfile(where:ProfileWhereInput!, supplier:ID!)
+}

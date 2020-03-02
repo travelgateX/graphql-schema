@@ -1,0 +1,14 @@
+type Location{
+    """
+    Country in ISO 3166-1 alpha-2
+    """
+    country: String!
+    """
+    Latitude
+    """
+    latitude: Float!
+    """
+    longuitude
+    """
+    longuitude: Float!
+}

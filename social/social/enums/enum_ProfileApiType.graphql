@@ -1,0 +1,9 @@
+enum ProfileApiType{
+    HOTEL
+    TRANSPORTATION
+    CAR
+    TRANSFER
+    ACTIVITIES
+    PAYMENT
+    PACKAGE
+}

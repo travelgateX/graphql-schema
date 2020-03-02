@@ -42,7 +42,23 @@ type ProfileData {
   """
   Buyer categories
   """
-  buyerCategory: ProfileB
+  buyerCategory: ProfileBuyerCategory
+  """
+  Seller categories
+  """
+  sellerCategory: ProfileSellerCategory
+  """
+  Profile Clasification
+  """
+  clasification: [ProfileClasification!]
+  """
+  Seller integration type
+  """
+  sellerIntegrationType: [SellerIntegrationType!]
+  """
+  Prfoile Api types
+  """
+  apiTypes: [ProfileApiType!]
   """
   Profile clients
   """
@@ -54,11 +70,11 @@ type ProfileData {
   """
   Indicates teh group where profile belongs
   """
-  group: Group
+  group: Group!
   """
   Profile owner
   """
-  owner: Organization
+  owner: Organization!
   """
   Create date
   """

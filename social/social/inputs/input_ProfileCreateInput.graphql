@@ -1,0 +1,21 @@
+input ProfileCreateInput{
+    code:ID!
+    name:String!
+    slug:String!
+    order:Int
+    headquerter:LocationInput
+    offices: ProfileCreateOfficeInput
+    logoUrl: String
+    website: String
+    isSeller: Boolean!
+    status: ProfileStatus!
+    buyerCategory: ProfileBuyerCategory
+    sellerCategory: ProfileSellerCategory
+    clasification: [ProfileClasification!]
+    sellerIntegrationType: [SellerIntegrationType!]
+    apiTypes: [ProfileApiType!]
+    clients: [ID!]
+    suppliers: [ID!]
+    group: ID!
+    owner: ID!
+}

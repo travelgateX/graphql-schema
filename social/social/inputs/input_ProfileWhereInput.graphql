@@ -1,0 +1,35 @@
+input ProfileWhereInput {
+  """
+  Logical AND on all given filters
+  """
+  AND: [ProfileWhereInput!]
+  """
+  Logical OR on all given filters
+  """
+  OR: [ProfileWhereInput!]
+  """
+  Logical NOT on all given filters combined by AND
+  """
+  NOT: [ProfileWhereInput!]
+  """
+  All values that are contained in given list.
+  """
+  code_in: [ID!]
+  """
+  All values that are contained in given list.
+  """
+  name_in: [String!]
+  """
+  All values that are contained in given list.
+  """
+  slug_in: [String!]
+  """
+  Profile Status
+  """
+  status: ProfileStatus
+  """
+  Get all profiles by seller or not seller
+  """
+  isSeller: Boolean
+  
+}
