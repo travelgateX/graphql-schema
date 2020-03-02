@@ -1,0 +1,20 @@
+input ProfileWhereInput {
+  _search: String
+
+  #All values that are contained in given list.
+  code_in: [ID!]
+
+  #All values that are contained in given list.
+  group_in: [ID!]
+
+  #All values that are contained in given list.
+  owner_in: [ID!]
+
+  #All values that are contained in given list.
+  name_in: [String!]
+
+  #All values that are contained in given list.
+  id_in: [Int!]
+
+  isActive: Boolean
+}

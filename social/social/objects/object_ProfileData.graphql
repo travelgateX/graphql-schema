@@ -10,7 +10,7 @@ type ProfileData {
   """
   Profile Order
   """
-  order: Int
+  order: Int!
   """
   Profile HeadQuarter
   """
@@ -22,11 +22,11 @@ type ProfileData {
   """
   Profile Logo Url
   """
-  logoUrl: String
+  logoUrl: URL
   """
   Profile Website
   """
-  website: String
+  website: URL
   """
   Indicates if Profile is a buyer
   """
@@ -54,11 +54,11 @@ type ProfileData {
   """
   Indicates teh group where profile belongs
   """
-  group: Group
+  group: Group!
   """
   Profile owner
   """
-  owner: Organization
+  owner: Organization!
   """
   Create date
   """
