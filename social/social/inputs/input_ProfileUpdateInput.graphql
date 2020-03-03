@@ -1,0 +1,13 @@
+input ProfileUpdateInput{
+    name:String
+    order:Int
+    headquerter:LocationInput
+    logoUrl: URI
+    website: URI
+    isSeller: Boolean
+    status: ProfileStatus
+    buyerCategory: ProfileBuyerCategory
+    sellerCategory: ProfileSellerCategory
+    group: ID
+    owner: ID
+}

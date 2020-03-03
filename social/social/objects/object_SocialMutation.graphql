@@ -11,4 +11,52 @@ type SocialMutation{
     Add supplier to profile
     """
     addSuppliersToProfile(where:ProfileWhereInput!, supplier:ID!)
+    """
+    Remove client from profile
+    """
+    removeClientsFromProfile(where:ProfileWhereInput!, client:ID!)
+    """
+    Remove supplier from profile
+    """
+    removeSuppliersFromProfile(where:ProfileWhereInput!, supplier:ID!)
+    """
+    Remove profile
+    """
+    removeProfile(code:ID!): Profile!
+    """
+    Update Profile
+    """
+    updateProfile(where:ProfileWhereInput!, data:ProfileUpdateInput): Profile!
+    """
+    Remove office from Profile
+    """
+    removeOfficeFromProfile(where:ProfileWhereInput!, data:LocationOffice!)
+    """
+    Add office to Profile
+    """
+    addOfficeToProfile(where:ProfileWhereInput!, data:LocationOffice!)
+    """
+    Remove classification from Profile
+    """
+    removeClassificationFromProfile(where:ProfileWhereInput!, data:ProfileClasification!)
+    """
+    Add classification to Profile
+    """
+    addClassificationToProfile(where:ProfileWhereInput!, data:ProfileClasification!)
+    """
+    Remove Api type from Profile
+    """
+    removeApiTypeFromProfile(where:ProfileWhereInput!, data:ProfileApiType!)
+    """
+    Add Api type to Profile
+    """
+    addApiTypeToProfile(where:ProfileWhereInput!, data:ProfileApiType!)
+    """
+    Remove Seller integration type from Profile
+    """
+    removeSellerIntegrationTypeFromProfile(where:ProfileWhereInput!, data:SellerIntegrationType!)
+    """
+    Add Seller integration type to Profile
+    """
+    addSellerIntegrationTypeToProfile(where:ProfileWhereInput!, data:SellerIntegrationType!)
 }

@@ -14,11 +14,11 @@ type ProfileData {
   """
   Profile HeadQuarter
   """
-  headquarter: Location
+  headquarter: LocationOffice
   """
   Profile offices
   """
-  offices: [Location]!
+  offices: [LocationOffice]!
   """
   Profile Logo Url
   """
