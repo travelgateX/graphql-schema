@@ -1,7 +1,7 @@
 input ProfileUpdateInput{
     name:String
     order:Int
-    headquerter:LocationInput
+    headquerter:LocationOffice
     logoUrl: URI
     website: URI
     isSeller: Boolean

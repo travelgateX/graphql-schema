@@ -3,8 +3,8 @@ input ProfileCreateInput{
     name:String!
     slug:String!
     order:Int
-    headquerter:LocationInput
-    offices: [LocationInput!]
+    headquerter:LocationOffice
+    offices: [LocationOffice!]
     logoUrl: URI
     website: URI
     isSeller: Boolean!
