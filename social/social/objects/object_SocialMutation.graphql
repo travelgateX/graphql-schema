@@ -6,57 +6,57 @@ type SocialMutation{
     """
     Add client to profile
     """
-    addClientsToProfile(where:ProfileWhereInput!, client:ID!)
+    addClientsToProfile(where:ProfileWhereInput!, client:ID!): ProfileConnection!
     """
     Add supplier to profile
     """
-    addSuppliersToProfile(where:ProfileWhereInput!, supplier:ID!)
+    addSuppliersToProfile(where:ProfileWhereInput!, supplier:ID!): ProfileConnection!
     """
     Remove client from profile
     """
-    removeClientsFromProfile(where:ProfileWhereInput!, client:ID!)
+    removeClientsFromProfile(where:ProfileWhereInput!, client:ID!): ProfileConnection!
     """
     Remove supplier from profile
     """
-    removeSuppliersFromProfile(where:ProfileWhereInput!, supplier:ID!)
+    removeSuppliersFromProfile(where:ProfileWhereInput!, supplier:ID!): ProfileConnection!
     """
     Remove profile
     """
-    removeProfile(code:ID!): Profile!
+    removeProfile(code:ID!): ProfileConnection!
     """
     Update Profile
     """
-    updateProfile(where:ProfileWhereInput!, data:ProfileUpdateInput): Profile!
+    updateProfile(where:ProfileWhereInput!, data:ProfileUpdateInput): ProfileConnection!
     """
     Remove office from Profile
     """
-    removeOfficeFromProfile(where:ProfileWhereInput!, data:LocationOffice!)
+    removeOfficeFromProfile(where:ProfileWhereInput!, data:LocationOffice!): ProfileConnection!
     """
     Add office to Profile
     """
-    addOfficeToProfile(where:ProfileWhereInput!, data:LocationOffice!)
+    addOfficeToProfile(where:ProfileWhereInput!, data:LocationOffice!): ProfileConnection!
     """
     Remove classification from Profile
     """
-    removeClassificationFromProfile(where:ProfileWhereInput!, data:ProfileClasification!)
+    removeClassificationFromProfile(where:ProfileWhereInput!, data:ProfileClasification!): ProfileConnection!
     """
     Add classification to Profile
     """
-    addClassificationToProfile(where:ProfileWhereInput!, data:ProfileClasification!)
+    addClassificationToProfile(where:ProfileWhereInput!, data:ProfileClasification!): ProfileConnection!
     """
     Remove Api type from Profile
     """
-    removeApiTypeFromProfile(where:ProfileWhereInput!, data:ProfileApiType!)
+    removeApiTypeFromProfile(where:ProfileWhereInput!, data:ProfileApiType!): ProfileConnection!
     """
     Add Api type to Profile
     """
-    addApiTypeToProfile(where:ProfileWhereInput!, data:ProfileApiType!)
+    addApiTypeToProfile(where:ProfileWhereInput!, data:ProfileApiType!): ProfileConnection!
     """
     Remove Seller integration type from Profile
     """
-    removeSellerIntegrationTypeFromProfile(where:ProfileWhereInput!, data:SellerIntegrationType!)
+    removeSellerIntegrationTypeFromProfile(where:ProfileWhereInput!, data:SellerIntegrationType!): ProfileConnection!
     """
     Add Seller integration type to Profile
     """
-    addSellerIntegrationTypeToProfile(where:ProfileWhereInput!, data:SellerIntegrationType!)
+    addSellerIntegrationTypeToProfile(where:ProfileWhereInput!, data:SellerIntegrationType!): ProfileConnection!
 }
