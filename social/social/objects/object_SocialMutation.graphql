@@ -1,4 +1,4 @@
-type SocialMutation{
+type SocialXMutation{
     """
     Create a profile
     """
@@ -58,6 +58,6 @@ type SocialMutation{
     """
     Add Seller integration type to Profile
     """
-    
+
     addSellerIntegrationTypeToProfile(where:ProfileWhereInput!, data:SellerIntegrationType!): ProfileConnection!
 }
