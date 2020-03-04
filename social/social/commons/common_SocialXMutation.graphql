@@ -1,4 +1,4 @@
-type SocialXMutation{
+extend type SocialXMutation{
     """
     Create a profile
     """

@@ -1,4 +1,4 @@
-type SocialXQuery{
+extend type SocialXQuery{
   profile(code:ID!):Profile!
   """
   Get all profiles

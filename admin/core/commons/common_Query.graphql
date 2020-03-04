@@ -12,4 +12,6 @@ type Query{
   stats: StatsQuery
   # The Insights product query root for implementing GraphQL query.
   insights:InsightsQuery
+  # The SocialX product query root for implementing GraphQL query.
+  socialX: SocialXQuery
 }
