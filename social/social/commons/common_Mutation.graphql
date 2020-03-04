@@ -1,3 +1,3 @@
 extend type Mutation {
-  socialX: SocialMutation
+  socialX: SocialXMutation
 }
