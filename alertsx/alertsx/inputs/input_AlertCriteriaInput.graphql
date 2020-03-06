@@ -2,10 +2,10 @@
 input AlertCriteriaInput {
   "Alert codes"
   codes: [ID!]
-  #active or not
+  "enabled or desabled alerts"
   isActive: Boolean
   "Group codes"
   groups: [ID!]
-  #List of shared type  
+  "shared alerts"
   shared: [AlertSharedType!]
 }

@@ -4,3 +4,4 @@ input AlertUpdatePriceAbsoluteByRequestsInput {
   configuration: AlertUpdatePriceAbsoluteConfigurationByRequestsInput
   isActive: Boolean
 }
+

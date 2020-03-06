@@ -1,6 +1,10 @@
 input AlertPriceRelativeConfigurationByTimeInput {
+  "Configuration of amount & commission values"
   price: AlertPriceInput!
+  "Common configuration for time window type"
   windowing: AlertCommonByTimeInput!
+  "Common configuration alert"
   common: AlertCommonConfigurationInput!
+  "Common configuration of relative mode type"
   relative: AlertCommonRelativeInput!
 }

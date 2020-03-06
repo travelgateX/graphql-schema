@@ -5,7 +5,7 @@ type AlertConfiguration {
   mode: AlertMode!
   "window type"
   windowType: AlertWindowType!
-  "Frequency of time in which the alert will be reviewed"
+  "Frequency of time in which the alert will be reviewed" 
   periodicity: Int
   "The time frame in minutes"
   window: Int

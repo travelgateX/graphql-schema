@@ -1,6 +1,10 @@
 input AlertUpdatePeakTrafficComprarativeConfigurationByTimeInput {
+  "Limits for number of requests"
   bounds: AlertUpdateBoundsInput
+  "Common configuration for time window type"
   windowing: AlertUpdateCommonByTimeInput
+  "Common configuration alert"
   common: AlertUpdateCommonConfigurationInput
+  "Common configuration of comparative mode type"
   comparative: AlertUpdateCommonComparativeInput
 }

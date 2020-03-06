@@ -1,11 +1,12 @@
 input AlertUpdatePriceInput {
-  "Value of amount price"
-  amount: Int
-  "Value of commission price"
-  commission: Int
   "Specify which field is going to be checked. Amount, commission or both"
   check: AlertCheckPrice
-  "Low or greater values of amount/commission (value included)"
+  "Low or greater values of amount/commission (value included) "
   range: AlertRangePrice
+  "Value of amount price"
+  amount: Int 
+  "Value of commission price"
+  commission: Int
+  "Amount can be checked by its total value or night"
   amountBy: AlertAmountBy
 }

@@ -1,5 +1,8 @@
 input AlertAverageTimeComparativeConfigurationByTimeInput {
+  "Common configuration for time window type."
   windowing: AlertCommonByTimeInput!
+  "Common configuration alert"
   common: AlertCommonConfigurationInput!
+  "Common configuration of comparative mode type"
   comparative: AlertCommonComparativeInput!
 }

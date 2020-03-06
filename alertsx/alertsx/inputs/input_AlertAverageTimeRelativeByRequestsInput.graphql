@@ -1,7 +1,12 @@
 input AlertAverageTimeRelativeByRequestsInput {
+  "Name of the alert"
   name: String
+  "Description of the alert"
   description: String
-  configuration: AlertAverageTimeRelativeConfigurationByRequestsInput!
+  "Configuration of the alert"
+   configuration: AlertAverageTimeRelativeConfigurationByRequestsInput!
+  "To enable or desable the alert"
   isActive: Boolean!
+  "groups where the alert is setted"
   group: ID!
 }

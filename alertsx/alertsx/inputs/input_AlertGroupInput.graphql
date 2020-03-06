@@ -1,6 +1,8 @@
 input AlertGroupInput {
+  "Group code"
   code:ID!
+  "SELLER or BUYER"
   comercialType:  AlertComercialType!
-  # to indicate if tráfic with the code group has to be checked or not for this alert
+  "Can be filtered traffic setting as inclusive or excludent"
   isInclusive: Boolean!
 }

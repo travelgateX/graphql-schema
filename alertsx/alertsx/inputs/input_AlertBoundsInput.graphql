@@ -1,5 +1,9 @@
+"Limit of requests to define"
 input AlertBoundsInput {
+  "Bound limits to be used"
   bound: AlertBound!
+  "Upper bound limit"
   upperBound: Int
+  "Lower bound limit"
   lowerBound: Int
 }

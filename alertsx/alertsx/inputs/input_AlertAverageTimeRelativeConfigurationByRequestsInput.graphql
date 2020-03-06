@@ -1,8 +1,12 @@
 input AlertAverageTimeRelativeConfigurationByRequestsInput {
-  "Time not allowed in miliseconds."
+  "Time not allowed in miliseconds"
   maxTime:Int
-  "Average time not allowed in miliseconds."
+  "Average time not allowed in miliseconds"
+  maxAverageTime:Int
+  "Common configuration for requests window type"
   windowing: AlertCommonByRequestsInput!
+  "Common configuration alert"
   common: AlertCommonConfigurationInput!
+  "Common configuration of relative mode type"
   relative: AlertCommonRelativeInput!
 }

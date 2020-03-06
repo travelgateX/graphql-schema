@@ -1,4 +1,4 @@
 input AlertCommonRelativeInput{
-   "percentage to be considered status ALERTING"
+   "percentage of traffic to be considered status ALERTING"
    percentageToAlert: Int!
 }
