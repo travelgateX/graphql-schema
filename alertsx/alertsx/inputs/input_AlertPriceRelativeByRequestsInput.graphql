@@ -1,7 +1,15 @@
 input AlertPriceRelativeByRequestsInput {
+  "Name of the alert"
   name: String
+  "Description of the alert"
   description: String
+  "Configuration of the alert"
   configuration: AlertPriceRelativeConfigurationByRequestsInput!
+  "To enable or desable the alert"
   isActive: Boolean!
+  "groups where the alert is setted"
   group: ID!
 }
+
+ 
+

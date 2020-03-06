@@ -1,6 +1,6 @@
 input AlertEmailInput {
-  # address ID
+  "Email address"
   address: ID!
-  # email type
+  "Destination email type"
   type: AlertEmailType!
 }

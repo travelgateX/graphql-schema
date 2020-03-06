@@ -1,7 +1,13 @@
 input AlertUpdateAverageTimeRelativeConfigurationByTimeInput {
+  "Time value not allowed in miliseconds"
   maxTime:Int
+  "Average time value not allowed in miliseconds"
   maxAverageTime:Int
+  "Common configuration for time window type"
   windowing: AlertUpdateCommonByTimeInput
+  "Common configuration alert"
   common: AlertUpdateCommonConfigurationInput
+  "Common configuration of relative mode type"
   relative: AlertUpdateCommonRelativeInput
 }
+

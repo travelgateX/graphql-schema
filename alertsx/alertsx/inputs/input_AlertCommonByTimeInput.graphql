@@ -3,6 +3,6 @@ input AlertCommonByTimeInput {
   periodicity: Int!
  	"The time frame in minutes"
   window: Int!
-  "minimum number of requests to check the alert"
+  "Minimum number of requests must be in window to check the alert"
   minNumberRequests: Int
 }

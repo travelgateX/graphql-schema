@@ -1,6 +1,0 @@
-input AlertUpdatePeakTrafficComprarativeConfigurationByTimeInput {
-  bounds: AlertUpdateBoundsInput
-  windowing: AlertUpdateCommonByTimeInput
-  common: AlertUpdateCommonConfigurationInput
-  comparative: AlertUpdateCommonComparativeInput
-}

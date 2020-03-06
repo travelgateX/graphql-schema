@@ -1,3 +1,4 @@
 input AlertUpdateCommonByRequestsInput{
+   "minimum number of requests to check the alert"
   minNumberRequests: Int
 }

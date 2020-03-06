@@ -1,5 +1,8 @@
 input AlertPriceAbsoluteConfigurationByTimeInput {
+  "Configuration of amount & commission values"
   price: AlertPriceInput!
+  "Common configuration for time window type"
   windowing: AlertCommonByTimeInput!
+  "Common configuration alert"
   common: AlertCommonConfigurationInput!
-}
+} 

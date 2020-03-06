@@ -1,6 +1,10 @@
 input AlertUpdateErrorRateRelativeByRequestsInput {
+  "Name of the alert"
   name: String
+  "Description of the alert"
   description: String
+  "Configuration of the alert"
   configuration: AlertUpdateErrorRateRelativeConfigurationByRequestsInput
+  "To enable or desable the alert"
   isActive: Boolean
 }

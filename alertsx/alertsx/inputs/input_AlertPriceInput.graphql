@@ -8,6 +8,6 @@ input AlertPriceInput {
   amount: Int 
   "Value of commission price"
   commission: Int
+  "Amount can be checked by its total value or night"
   amountBy: AlertAmountBy
-
 }

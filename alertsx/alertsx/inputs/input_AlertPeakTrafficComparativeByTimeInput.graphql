@@ -1,7 +1,12 @@
 input AlertPeakTrafficComparativeByTimeInput {
+ "Name of the alert"
   name: String
+  "Description of the alert"
   description: String
-  configuration: AlertPeakTrafficComprarativeConfigurationByTimeInput!
+  "Configuration of the alert"
+  configuration: AlertPeakTrafficComparativeConfigurationByTimeInput!
+  "To enable or desable the alert"
   isActive: Boolean!
+  "groups where the alert is setted"
   group: ID!
 }

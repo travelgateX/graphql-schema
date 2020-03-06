@@ -1,5 +1,8 @@
 input AlertPeakTrafficAbsoluteConfigurationByTimeInput {
+  "Limits for number of requests"
   bounds: AlertBoundsInput!
+  "Common configuration for requests window type"
   windowing: AlertCommonByTimeInput!
+  "Common configuration alert"
   common: AlertCommonConfigurationInput!
 }

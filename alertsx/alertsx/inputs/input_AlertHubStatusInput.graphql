@@ -1,4 +1,6 @@
 input AlertHubStatusInput {
+  "Hub status code"
   code: HubStatus!
+  "Can be filtered traffic setting as inclusive or excludent"
   isInclusive: Boolean!
 }

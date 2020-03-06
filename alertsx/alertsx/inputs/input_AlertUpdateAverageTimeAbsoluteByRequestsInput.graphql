@@ -1,6 +1,12 @@
 input AlertUpdateAverageTimeAbsoluteByRequestsInput {
+  "Name of the alert"
   name: String
+  "Description of the alert"
   description: String
+  "Configuration of the alert"
   configuration: AlertUpdateAverageTimeAbsoluteConfigurationByRequestsInput
+  "To enable or desable the alert"
   isActive: Boolean
 }
+
+ 

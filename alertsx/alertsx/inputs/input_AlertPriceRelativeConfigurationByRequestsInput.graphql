@@ -1,6 +1,11 @@
 input AlertPriceRelativeConfigurationByRequestsInput {
-  price:AlertPriceInput!
+  "Configuration of amount & commission values"
+  price: AlertPriceInput!
+  "Common configuration for requests window type"
   windowing: AlertCommonByRequestsInput!
+  "Common configuration alert"
   common: AlertCommonConfigurationInput!
+  "Common configuration of relative mode type"
   relative: AlertCommonRelativeInput!
 }
+

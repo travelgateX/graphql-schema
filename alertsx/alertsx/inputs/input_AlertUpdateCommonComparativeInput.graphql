@@ -1,6 +1,10 @@
 input AlertUpdateCommonComparativeInput{
+  "The time frame in minutes to be used to compare with the window time frame"
   historicalWindow: Int
+  "Time frame in minutes to set the beginning of historicalWindow"
   offset: Int
+  "According to percentageToAlert value"
   variation: AlertVariation
+  "Percentage of traffic to be considered status ALERTING"
   percentageToAlert: Int
 }

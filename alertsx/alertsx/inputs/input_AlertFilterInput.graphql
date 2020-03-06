@@ -1,6 +1,5 @@
 # Filters needed to do a search.  By default: Logical AND on all given filters.
 input AlertFilterInput {
-  
   # Logical AND on all given filters.
   AND: [AlertFilterInput!]
   # Logical OR on all given filters.

@@ -5,6 +5,8 @@ input AlertAverageTimeAbsoluteConfigurationByTimeInput {
   maxAverageTime:Int
   "Requests vs total requests checked to consider alert in ALERTING status."
   requestsToAlert: Int!
+  "Common configuration for time window type."
   windowing: AlertCommonByTimeInput!
+  "Common configuration alert"
   common: AlertCommonConfigurationInput!
 }
