@@ -3,7 +3,7 @@ input AlertUpdateErrorRateRelativeConfigurationByTimeInput {
   toCheck: [Int!]
   "Error codes to compare. By defaults all traffic is compared"
   toCompare: [Int!]
-  "Common configuration for requests window type"
+  "Common configuration for time window type"
    windowing: AlertUpdateCommonByTimeInput
   "Common configuration alert"
   common: AlertUpdateCommonConfigurationInput

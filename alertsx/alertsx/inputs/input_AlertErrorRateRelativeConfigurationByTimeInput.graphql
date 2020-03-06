@@ -6,7 +6,7 @@ input AlertErrorRateRelativeConfigurationByTimeInput {
   "Common configuration for requests window type"
   windowing: AlertCommonByTimeInput!
   "Common configuration alert"
-  common: AlertCommonConfigurationInput
+  common: AlertCommonConfigurationInput!
   "Common configuration of relative mode type"
   relative: AlertCommonRelativeInput!
 }

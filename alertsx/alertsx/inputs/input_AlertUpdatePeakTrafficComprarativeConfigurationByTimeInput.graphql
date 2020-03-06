@@ -1,4 +1,4 @@
-input AlertUpdatePeakTrafficComprarativeConfigurationByTimeInput {
+input AlertUpdatePeakTrafficComparativeConfigurationByTimeInput {
   "Limits for number of requests"
   bounds: AlertUpdateBoundsInput
   "Common configuration for time window type"
