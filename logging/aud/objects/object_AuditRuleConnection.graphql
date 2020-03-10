@@ -1,0 +1,5 @@
+type AuditRuleConnection {
+  edges: [AuditRuleEdge]
+  pageInfo: PageInfo!
+  AdviseMessage(level: [AdviseMessageLevel]): AdviseMessage
+}

@@ -1,0 +1,4 @@
+enum AuditRuleProductInput {
+  legacy
+  hotelX
+}

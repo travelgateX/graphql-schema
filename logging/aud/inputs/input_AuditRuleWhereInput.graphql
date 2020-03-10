@@ -1,0 +1,4 @@
+input AuditRuleWhereInput {
+  product: AuditRuleProductInput!
+  auditStatus: AuditRuleStatus!
+}

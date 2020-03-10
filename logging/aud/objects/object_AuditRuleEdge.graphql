@@ -1,0 +1,4 @@
+type AuditRuleEdge {
+  cursor: String!
+  node: AuditRule
+}

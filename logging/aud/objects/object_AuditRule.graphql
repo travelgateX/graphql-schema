@@ -1,0 +1,19 @@
+"""
+The service used to access the stats of every connection that uses the HUB
+"""
+type AuditRule implements Node {
+  code: ID!
+  auditRuleData: AuditRuleData
+  """
+  Errors that will lead the service to abort
+  """
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  """
+  Create date
+  """
+  createdAt: DateTime!
+  """
+  Update date
+  """
+  updatedAt: DateTime!
+}

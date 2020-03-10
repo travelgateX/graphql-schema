@@ -1,0 +1,14 @@
+input AuditRuleCreateInput {
+  group: ID
+  access: ID
+  clientName: ID
+  errorCode: ID
+  percentageToAudit: Int!
+  product: AuditRuleProductInput!
+  supplier: ID
+  ttl: Int!
+  """
+  If startTime is null, the audit initalization time will be te current time.
+  """
+  startTime: String
+}
