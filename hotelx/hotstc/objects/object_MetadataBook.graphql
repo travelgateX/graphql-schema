@@ -9,12 +9,15 @@ type MetadataBook{
     # Informs if the supplier allows send remarks.
     allowsRemarks: ReviewedBool!
 
-    # Informs if the supplier returns the property reservation number.
+    # Informs if the supplier billing code.
     informBillingSupplier: ReviewedBool!
 
-    # Informs if the supplier returns the property reservation number.
-    informPropertyReservationNumber: ReviewedBool!
+    # Informs if the supplier returns the hotel reference number.
+    informHotelReference: ReviewedBool!
 
     # The supplier informs the book price.
     informPrice: ReviewedBool!
+
+    # Informs if the supplier requires nationality
+    requiredNationality: ReviewedBool
 }
