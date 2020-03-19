@@ -1,4 +1,4 @@
-type LoggingQuery {
+extend type LoggingQuery {
   """
   retrieveLogsService(filter: LoggingFilterInput!): LoggingConnection!
   """
