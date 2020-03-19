@@ -1,6 +1,4 @@
 type MetadataQuote{
-    # Informs if the supplier can block the option.
-    allowsBlockOption: ReviewedBool!
 
     # Informs if the price is binding in Quote response.
     informBindingPrice: ReviewedBool!
@@ -17,6 +15,10 @@ type MetadataQuote{
     # Specifies if the supplier informs the cancel policies in free text.
     informCancelPoliciesDescription: ReviewedBool!
 
-    # Informs if the supplier returns fees.
-    informFees: ReviewedBool!
+    # Informs if the supplier returns surcharges.
+    informSurcharges: ReviewedBool!
+
+    # Informs if the supplier requires nationality
+    requiredNationality: ReviewedBool
+    
 }

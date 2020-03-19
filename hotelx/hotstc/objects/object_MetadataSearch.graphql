@@ -5,9 +5,6 @@ type MetadataSearch{
     # If true, it is possible to request the currency.
     allowsCurrency:ReviewedBool!
 
-    # Specifies if this supplier allows businessrules.
-    allowsBusinessRules:ReviewedBool!
-
     # Informs whether the integration allows room combination or not.
     implementsCombination:ReviewedBool!
 
@@ -20,7 +17,7 @@ type MetadataSearch{
     # Minimum number of days required for booking. If the value is zero then there is no limitation.
     minimumStay:ReviewedInt!
 
-    # Maximum number of days allowed for booking. -1 means there is no restriction
+    # Maximum number of days allowed for booking.
     maxStay:ReviewedInt!
 
     # Contains information about the restrictions of the rooms.
@@ -50,19 +47,22 @@ type MetadataSearch{
     # Informs if the supplier returns the daily rate.
     informDailyRatePlan:ReviewedBool!
 
-    # If true, the supplier returns the offers applied.
-    informOffers:ReviewedBool!
+    # If true, the supplier returns the promotions(offers) applied.
+    informPromotions:ReviewedBool!
 
     # The supplier can inform in Search if the room is non-refundable.
     informNRFRateByRoom:ReviewedBool!
 
-    # Informs if the supplier returns fees.
-    informFees:ReviewedBool!
+    # Informs if the supplier returns surcharges.
+    informSurcharges:ReviewedBool!
 
-    # Returns fees at room level.
-    informRoomFees:ReviewedBool!
+    # Returns surcharges at room level.
+    informRoomSurcharges:ReviewedBool!
 
     # inform Hotel name at search step
     informHotelName:ReviewedBool!
+
+    # Informs if the supplier requires nationality
+    requiredNationality: ReviewedBool
 
 }

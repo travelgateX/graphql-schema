@@ -1,35 +1,4 @@
-# Contnet static metadata information, allow you know if some static information or API it's supported by the supplier
+# Informs the  content information, return null if not implemented
 type MetadataContent{
-    # The supplier indicates if a Hotel is an Exclusive Deal in Hotels
-    informExclusiveDeal: ReviewedBool!
-
-    # Contains information regarding Hotels, Hotels returns a list of hotels all information available (code, name,
-    # address, phone, etc.) for each hotel
-    hotels: MetadataStatic
-
-    # Contains information regarding Destinations, Destinations returns the supplier's destination list
-    destinations: MetadataStatic
-
-    # Contains information regarding Rooms, RoomList aims to return a list of rooms, their codes as well as descriptions.
-    rooms: MetadataStatic
-
-    # Contains information regarding Boards, Boards aims to return a list of the search boards,
-    # which will be used in the Search response.
-    boards: MetadataStatic
-
-    # Contains information regarding Categories, Categories returns a list of categories (codes and descriptions)
-    # used in Hotels List.
-    categories: MetadataStatic
-
-
-    # Contains information regarding Markets, Markets return a list of the available Markets, which will be
-    # used in the Search request.
-    markets: MetadataStatic
-
-    # Contains information regarding Currencies, Currencies returns a list of currencies the supplier in booking flow
-    currencies: MetadataStatic
-
-    # Contains information regarding Amenities, Amenities is defined as something intended to make life more
-    # pleasant or comfortable for people, Examples include: swimming pools, shopping centers, etc.
-    amenities: MetadataStatic
+    languages: [ReviewedText!]!
 }
