@@ -20,4 +20,6 @@ type HotelRuntimeParameter {
   exampleValue: String
 
   possibleValues: [String]!
+
+  mandatory: Boolean!
 }
