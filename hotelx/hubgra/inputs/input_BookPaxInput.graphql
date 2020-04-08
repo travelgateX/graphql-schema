@@ -8,4 +8,7 @@ input BookPaxInput {
   
   # The guest's age
   age: Int!
+
+  # Pax title.
+  title: PersonalTitleType
 }

@@ -1,0 +1,11 @@
+#Constraint supplementary to a individual name.
+enum PersonalTitleType {
+  # To refer to a man. Is not possible know if it is married or single.
+  MR
+  # To refer to a married woman
+  MRS
+  # To refer to a single woman
+  MISS
+  # To refer to a woman. Is not possible know if it is married or single.
+  MS
+}
