@@ -1,5 +1,5 @@
 type PartnerData {
-  #cusXYZ..
+  #parXYZ..
   code: ID!
   name:String!
   isActive: Boolean
