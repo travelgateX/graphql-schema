@@ -16,7 +16,7 @@ extend type AdminQuery{
   # Operations list; specify operations codes to filter operations.
   operations(codes: [ID!],type: OperationType,types: [OperationType!], first: Int, last: Int, before: String, after:String): OperationConnection!
   # Partners
-  Partner(code:ID!):Partner!
+  partner(code:ID!):Partner!
   allPartners(
       where: PartnerWhereInput
       orderBy: PartnerOrderByInput
