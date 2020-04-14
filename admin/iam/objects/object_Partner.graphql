@@ -1,6 +1,6 @@
 type Partner implements Node {
   code: ID!
-  PartnerData: PartnerData
+  partnerData: PartnerData
   # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Date created
