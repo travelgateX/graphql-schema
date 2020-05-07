@@ -4,36 +4,9 @@
 [![Slack](https://slack.travelgatex.com/badge.svg)](https://slack.travelgatex.com)
 
 
-## Getting Started
 
-These instructions will help you to extend and modify the current gateway schema.
+### Schema Graph
 
-### graphql-moker Instalation
-
-```npm i graphql-mocker```
-
-https://github.com/travelgateX/graphql-mocker
-
-## Modify/extend your schema
-
-1. Create an issue + branch
-2. Mock your schema on graphql-faker editor: http://localhost:9003/editor
-    ```sh
-    yarn run mock /$HOME/projects/graphql/gateway-gql/ api-folder
-    ```
-    
-3. Split your mocked schema
-    ```sh
-    yarn run split /$HOME/projects/graphql/gateway-gql/api-folder/merged_schema.graphql /$HOME/projects/graphql/gateway-gql/api-folder 
-    ```
-
-4. Check yours changes
-5. Commit and Push in your branch
-6. Merge Request to master, close issue and del branch
-
-
-### Graph Viewer
-```
 https://api.travelgatex.com/voyager
 
 
