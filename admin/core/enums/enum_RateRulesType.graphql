@@ -37,7 +37,7 @@ enum RateRulesType {
   # NON_REFUNDABLE is applicable to non refundable options.
   NON_REFUNDABLE
   
-  # MOBILE is applicable to options booked by mobile.
+  # MOBILE are special rates confirmed by mobile phone.
   MOBILE
   
   # WARRANTY is applicable to options with cancellation warranty.
