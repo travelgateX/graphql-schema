@@ -5,4 +5,5 @@ input SupplierFilter {
   isActive: Boolean
   serviceAPI: [Int]
   owner: [ID!]
+  providerID:[ID]
  }
