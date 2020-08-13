@@ -3,4 +3,7 @@ input AccessFilter {
   group: [ID]
   owner: [ID!]
   hasMaster: Boolean
+  isActive: Boolean
+  supplierID: [ID]
+  providerID: [ID]
 }
