@@ -26,4 +26,7 @@ type HotelOptionQuote {
   
   # Additional information about the option
   addOns: AddOns
+
+  # List of rooms of the option quoted.
+  rooms: [Room!]
 }
