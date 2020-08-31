@@ -1,9 +1,9 @@
 type RoomOptionQuote {
   # ID reference to the occupancy
-  occupancyRefId: Int!
+  occupancyRefId: ID!
 
   # Identifies the Legacy Room Id
-  legacyRoomId: String!
+  legacyRoomId: ID!
 
   # Indicates the room code
   code: String!
