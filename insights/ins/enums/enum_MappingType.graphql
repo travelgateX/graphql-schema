@@ -7,4 +7,5 @@ enum MappingType {
   RATE
   ROOM
   ROOM_HOTEL
+  HOTEL_ROOM
 }
