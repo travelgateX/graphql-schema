@@ -47,5 +47,6 @@ type OrganizationData implements GroupCommonData {
       orderBy: PartnerOrderByInput
       relay: RelayInput
       ): PartnerConnection!
-
+  isBuyer: Boolean!
+  isSeller: Boolean!
 }
