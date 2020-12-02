@@ -6,7 +6,7 @@ type AggregateSum {
   bookingWindow: Int
   destinationCountry: Int
   supplierCode: Int
-  clientCode: nt
+  clientCode: Int
   supplierOrganization: Int
   clientOrganization: Int
 }
