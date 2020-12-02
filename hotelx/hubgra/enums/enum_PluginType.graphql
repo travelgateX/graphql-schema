@@ -34,4 +34,7 @@ enum PluginType {
   
   # AMENITY_MAP allows to match Seller and Buyer amenities codes based on contexts
   AMENITY_MAP 
+
+  # PROMOTION_MAP allows to match Seller and Buyer promotion codes based on contexts
+  PROMOTION_MAP
 }
