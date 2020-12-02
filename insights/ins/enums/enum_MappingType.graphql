@@ -6,6 +6,6 @@ enum MappingType {
   BOARD
   RATE
   ROOM
-  ROOM_HOTEL
+  PROMOTION
   HOTEL_ROOM
 }
