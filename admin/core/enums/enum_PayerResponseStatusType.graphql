@@ -1,0 +1,22 @@
+
+# Indicates the authentication status of the transaction
+enum PayerResponseStatusType{
+  # Successful Authentication 
+  Y
+
+  # Failed Authentication
+  N 
+
+  # Unable to Complete Authentication
+  U
+  
+  #Successful Attempts Transaction
+  A
+  
+  # Successful Attempts Transaction
+  B
+  
+  # Authentication Rejected (Merchant must not submit for authorisation)
+  R
+}
+

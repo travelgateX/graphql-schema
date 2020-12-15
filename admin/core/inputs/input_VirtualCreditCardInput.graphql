@@ -1,0 +1,14 @@
+# Virtual creadit card data
+input VirtualCreaditCardInput {
+  # The Date from when the card can be charged
+  Activation: Date
+
+  # The date from when the card will no longer be chargeable.
+  Deactivation: Date
+
+  # The amount which can be charged to the card. 
+  CurrentBalance: Float
+
+  # The ISO currency code of the CurrentBalance.
+  CurrencyCode: Currency
+}

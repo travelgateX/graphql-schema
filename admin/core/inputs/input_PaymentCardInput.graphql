@@ -18,4 +18,13 @@ input PaymentCardInput {
   
   # Contains credit card expiration date
   expire: ExpireDateInput!
+
+  # Is a virtual credit card
+  isVCC: Boolean
+
+  # Virtual Credit Card data
+  virtualCreditCard: VirtualCreditCardInput
+
+  # Three Domain Security data
+  threeDomainSecurityInput: ThreeDomainSecurityInput
 }

@@ -1,0 +1,8 @@
+
+enum ThreeDSSignatureStatusType{
+  # Signature of the payer response has been validated successfully
+  Y
+
+  # Payer response could not be validated
+  N
+}
