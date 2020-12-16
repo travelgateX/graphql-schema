@@ -1,12 +1,12 @@
 # Result of the service request
 enum ThreeDSCardEnrolledStatusType{
   # Card enrolled
-  Y
+  CardEnrrolled
   
   # Card not enrolled
-  N
+  CardNotEnrolled
   
-  # Cannot authenticate"
-  U
+  # Can not authenticate"
+  CantAuthenticate
 }
 

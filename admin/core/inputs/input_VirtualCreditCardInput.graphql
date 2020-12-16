@@ -1,10 +1,10 @@
 # Virtual creadit card data
 input VirtualCreaditCardInput {
   # The Date from when the card can be charged
-  Activation: Date
+  ActivationDate: Date
 
   # The date from when the card will no longer be chargeable.
-  Deactivation: Date
+  DeactivationDate: Date
 
   # The amount which can be charged to the card. 
   CurrentBalance: Float
