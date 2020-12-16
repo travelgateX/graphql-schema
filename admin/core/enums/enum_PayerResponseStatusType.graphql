@@ -11,7 +11,7 @@ enum PayerResponseStatusType{
   AuthenticationIncomplete
   
   #Successful Attempts Transaction
-  TransactionAttemptSuccess
+  TransactionAttemptSuccessA
   
   # Successful Attempts Transaction
   TransactionAttemptSuccessB
