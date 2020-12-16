@@ -26,5 +26,5 @@ input PaymentCardInput {
   virtualCreditCard: VirtualCreditCardInput
 
   # Three Domain Security data
-  threeDomainSecurityInput: ThreeDomainSecurityInput
+  threeDomainSecurity: ThreeDomainSecurityInput
 }
