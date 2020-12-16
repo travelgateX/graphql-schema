@@ -1,8 +1,8 @@
 
 enum ThreeDSSignatureStatusType{
   # Signature of the payer response has been validated successfully
-  SignatureValidated
+  SIGNATURE_VALIDATED
 
   # Signature of the payer response could not be validated
-  SignatureNotValidated
+  SIGNATURE_NOT_VALIDATED
 }
