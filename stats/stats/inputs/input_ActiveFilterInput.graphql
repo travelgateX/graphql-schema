@@ -4,4 +4,6 @@ input ActiveFilterInput {
   requestMode: ModeType!
   # List of suppliers or clients
   codes: [ID!]!
+  # ServiceApi
+  serviceApi: ServiceApiType
 }
