@@ -1,0 +1,4 @@
+type ActivationQuery{
+  # The Activation query root for implementing GraphQL query.
+  activations: ActivationConnection!
+}

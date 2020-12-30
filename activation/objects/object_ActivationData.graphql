@@ -1,0 +1,12 @@
+type ActivationData {
+  code: ID!
+  access: AccessData!
+  buyer: OrganizationData!
+  seller: OrganizationData!
+  requestor: RequestorInfo
+  status: ActivationStatus!
+  # Inform if the content information has been downloaded correctly
+  contentInfoDownloaded: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
