@@ -1,0 +1,7 @@
+# Input used in connect mutation. 
+input ConnectInput {
+  # Buyer's organization code
+  organizationBuyerCode: ID!
+  # Supplier configuration for this connection with buyer
+  accessConfiguration: AccessInput!
+}

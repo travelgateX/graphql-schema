@@ -5,4 +5,6 @@ type Mutation {
   mappea: MappeaMutation
   paymentX: PaymentXMutation
   logging: LoggingMutation
+  # Create an access and starts the process of an activation. 
+  activation: ActivationMutation
 }

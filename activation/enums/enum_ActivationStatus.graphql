@@ -1,0 +1,5 @@
+enum ActivationStatus {
+  PENDING
+  PROCESS
+  READY
+}
