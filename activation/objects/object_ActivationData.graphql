@@ -1,15 +1,10 @@
 type ActivationData {
   code : ID!
   access: AccessData!
-  # Buyer organization 
   buyer: OrganizationData!
-  # Seller organization 
   seller: OrganizationData!
-  # Email of activation requester 
-  email: String
-  # Generated issue code
-  issue: String
-  # Activation status 
+  requestor: OrganizationData!
+  memberData: MemberData
   status: ActivationStatus!
   createdAt: DateTime!
   updatedAt: DateTime!
