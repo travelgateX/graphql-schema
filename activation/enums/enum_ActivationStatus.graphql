@@ -1,5 +1,6 @@
 enum ActivationStatus {
-  PENDING
-  PROCESS
-  READY
+  PPENDING
+  AVAILABLE
+  VALIDATED
+  CERTIFIED
 }
