@@ -27,6 +27,9 @@ input StatsFilterInput {
     operation: [ServiceOperationType!]
     serviceOperations: [ID!]
 
+    # List of traffic types
+    trafficType: [TrafficType!]
+
     # From date of search
     # @deprecated(reason: "deprecated from 2019-07-19. Added new field timeRange.")
     from: DateTime 
