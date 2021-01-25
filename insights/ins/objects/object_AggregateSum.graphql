@@ -5,6 +5,7 @@ type AggregateSum {
   nights: Int
   bookingWindow: Int
   destinationCountry: Int
+  originMarket: Int
   supplierCode: Int
   clientCode: Int
   supplierOrganization: Int
