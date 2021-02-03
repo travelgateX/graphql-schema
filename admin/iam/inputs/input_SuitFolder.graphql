@@ -1,4 +1,4 @@
-input SuitFolderInput {
-  code: ID!
+input CreateFolderInput {
+  orgCode: ID!
   template: FolderTemplate! 
 }

@@ -1,3 +1,4 @@
 enum FolderTemplate {
-  FOLDER_DEFAULT
+  FOLDER_SELLER
+  FOLDER_BUYER
 }
