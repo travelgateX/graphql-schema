@@ -1,4 +1,0 @@
-input SuitFolderInput {
-  code: ID!
-  template: FolderTemplate! 
-}
