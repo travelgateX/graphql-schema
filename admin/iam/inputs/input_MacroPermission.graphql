@@ -1,0 +1,5 @@
+input MacroPermissionInput {
+  group: ID!
+  member: ID!
+  macroPermission: MacroPermissions!
+}

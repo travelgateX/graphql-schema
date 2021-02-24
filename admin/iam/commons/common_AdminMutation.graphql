@@ -28,9 +28,9 @@ extend type AdminMutation{
   # Remove API from an existing group
   revokeApiFromGroup(group: UpdateGroupAPISInput): Group!
   # Grant macro permission.
-  grantMacroPermissionsToMember(input: GrantMacroPermissionInput!): Member!
+  grantMacroPermissionsToMember(input: MacroPermissionInput!): Member!
   # Revoke macro permission
-  revokeMacroPermissionsFromMember(input: GrantMacroPermissionInput!): Member!
+  revokeMacroPermissionsFromMember(input: MacroPermissionInput!): Member!
   addContact(organizationCode:ID!,type:OrganizationContactType!,user:ID!):Organization!
   deleteContact(organizationCode:ID!,user:ID!):Organization!
   # Creates a Partner.

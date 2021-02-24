@@ -1,5 +1,0 @@
-input GrantMacroPermissionInput {
-  group: ID!
-  member: ID!
-  macroPermission: ID!
-}

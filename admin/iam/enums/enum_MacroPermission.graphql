@@ -1,0 +1,5 @@
+enum MacroPermissions {
+  STATS_BASIC
+  ALERTS_VIEWER
+  ALERTS_EDITOR
+}
