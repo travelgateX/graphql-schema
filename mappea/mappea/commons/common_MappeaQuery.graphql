@@ -1,5 +1,0 @@
-# The query type, represents all of the entry points into our object graph
-extend type MappeaQuery {
-  getUploadedFiles: GetUploadedFilesResponse!
-  getMappeaStats(input: MappeaGetMappeaStatsInput!): GetMappeaStatsResponse!
-}

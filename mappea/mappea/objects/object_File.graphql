@@ -1,5 +1,0 @@
-type File {
-  fileName: String!
-  fileId: Int!
-  uploadTime: String!
-}
