@@ -1,0 +1,6 @@
+input ActivationValidateInput {
+  # Access code to be validated
+  accessCode: ID!
+  # Client names of buyer organization to be validated
+  clientNames: [String!]!
+}

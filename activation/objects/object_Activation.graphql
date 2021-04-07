@@ -1,0 +1,7 @@
+type Activation implements Node {
+  code: ID!
+  activationData: ActivationData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  adviseMessage: [AdviseMessage]
+} 
