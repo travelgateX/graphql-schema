@@ -5,3 +5,4 @@ input ActivationConnectInput {
   # Supplier configuration for this connection with buyer
   accessConfiguration: AccessInput!
 }
+#zunorma
