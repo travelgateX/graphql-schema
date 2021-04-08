@@ -1,4 +1,5 @@
 enum ActivationStatus {
   PENDING
   AVAILABLE
+  MANUAL
 }
