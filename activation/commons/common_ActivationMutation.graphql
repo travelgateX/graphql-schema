@@ -1,0 +1,6 @@
+type ActivationMutation {
+  # Connect mutation allows to connect a buyer against a seller
+  connect(data: ActivationConnectInput!): Activation!
+  # Validate mutation allows to validate a connection between a buyer and a seller
+  validate(data: ActivationValidateInput!): Activation
+}

@@ -1,0 +1,8 @@
+input ActivationConnectInput {
+  # Buyer's organization code
+  organizationBuyerCode: ID
+  # Buyer's HotelX Instance code
+  group: ID
+  # Supplier configuration for this connection with buyer
+  accessConfiguration: AccessInput!
+} 

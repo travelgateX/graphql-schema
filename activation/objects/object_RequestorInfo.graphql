@@ -1,0 +1,4 @@
+type RequesterInfo {
+  organization: OrganizationData!
+  member: MemberData!
+} 
