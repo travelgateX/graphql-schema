@@ -8,6 +8,9 @@ input HotelXHotelListInput {
   # Search by hotel codes in supplier's context.
   supplierHotelCodes: [String!]
 
+  # Search by hotel name
+  hotelName: String
+
   # Search by destination codes, only search by minimal destinations
   destinationCodes: [String!]
 
