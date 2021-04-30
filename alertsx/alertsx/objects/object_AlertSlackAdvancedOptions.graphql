@@ -1,0 +1,8 @@
+type AlertSlackAdvancedOptions {
+    titles: AlertSlackTitles
+    short: Boolean
+    icon: String
+    channel: [ID!]
+}
+
+

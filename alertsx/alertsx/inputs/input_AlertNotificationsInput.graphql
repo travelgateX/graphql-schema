@@ -1,0 +1,6 @@
+input AlertNotificationsInput {
+    "Emails to send notifications"
+    emails: AlertEmailsInput
+    "Slack to send notificarions"
+    slack: AlertSlackInput
+}

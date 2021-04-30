@@ -1,0 +1,4 @@
+input AlertEmailsInput {
+    isActive: Boolean!
+    email:[AlertEmailInput!]!
+}
