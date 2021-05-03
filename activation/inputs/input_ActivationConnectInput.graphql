@@ -7,4 +7,4 @@ input ActivationConnectInput {
   notificationEmail : [Email!]!
   # Buyer's organization code
   organizationBuyerCode: ID!
-}  
+} 

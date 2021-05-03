@@ -4,6 +4,7 @@ type OrganizationData implements GroupCommonData {
   label: String
   type: GroupType!
   info: String
+  crmID: String
   # Only responses folders.(non-hierarchically)
   children(codes: [ID!], first: Int, last: Int, before: String, after:String, type: GroupType, codeStartsWith: String): GroupConnection
   # Response all descendents groups nodes in this group (nom-hierarchically)

@@ -17,7 +17,7 @@ input HotelSettingsInput {
   # Group whose resources want to be used
   group: ID
   
-  # Milliseconds before the connection is closed.
+  # Timeout in milliseconds that will be applied to the connection with supplier/s. If more than one supplier is requested, timeout will be applied to all suppliers and cut the connection with those suppliers that exceed this timeout. Travelgate will not close the connection with the client if this timeout is exceeded.
   timeout: Int
   
   # Returns all the transactions exchanged with the supplier.
