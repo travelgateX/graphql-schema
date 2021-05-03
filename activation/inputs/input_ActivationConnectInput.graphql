@@ -1,8 +1,10 @@
 input ActivationConnectInput {
-  # Buyer's organization code
-  organizationBuyerCode: ID
+  # Supplier configuration for this connection 
+  accessConfiguration: AccessInput!
   # Buyer's HotelX Instance code
   group: ID
-  # Supplier configuration for this connection with buyer
-  accessConfiguration: AccessInput!
-} 
+  # List of email addresses to send notifications when the activation has been done
+  notificationEmail : [Email!]
+  # Buyer's organization code
+  organizationBuyerCode: ID!
+}  
