@@ -38,7 +38,7 @@ type AlertConfiguration {
   variation: AlertVariation
   #email: Email!
   "Email addresses to send notifications"
-  email(type:AlertEmailType): [AlertEmail] @deprecated(reason: "deprecated from 2021-05-03.")
+  email(type:AlertEmailType): [AlertEmail] #@deprecated(reason: "deprecated from 2021-05-03.")
   "Emails & slack to send notifications"
   notifications: AlertNotifications
   # status returned by our Hub.

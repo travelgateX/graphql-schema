@@ -2,5 +2,6 @@ input AlertSlackAdvancedOptionsInput {
     titles: AlertSlackTitlesInput
     short: Boolean
     icon: String
+    username: String
     channel: [ID!]
 }
