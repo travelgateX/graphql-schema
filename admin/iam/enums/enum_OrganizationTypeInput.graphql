@@ -1,0 +1,5 @@
+enum OrganizationTypeInput {
+  BUYER
+  SELLER
+  BOTH
+}
