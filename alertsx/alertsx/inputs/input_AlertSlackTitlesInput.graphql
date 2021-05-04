@@ -1,0 +1,4 @@
+input AlertSlackTitlesInput {
+    ok: String
+    alerting: String
+}

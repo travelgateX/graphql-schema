@@ -1,0 +1,5 @@
+input AlertSlackInput {
+    isActive: Boolean!
+    webHook: String!
+    advancedOptions: AlertSlackAdvancedOptionsInput
+}

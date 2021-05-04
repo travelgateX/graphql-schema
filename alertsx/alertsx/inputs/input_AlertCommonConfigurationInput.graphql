@@ -8,7 +8,9 @@ input AlertCommonConfigurationInput {
   "To allow notifications only if the status change"
   stateChangesOnly: Boolean!
   "Email addresses to send notifications"
-  email: [AlertEmailInput]
+  email: [AlertEmailInput] #@deprecated(reason: "deprecated from 2021-05-03.")
+  "Emails & slack to send notifications"
+  notifications: AlertNotificationsInput
   "Possibility to filter traffic by hubStatus"
   hubStatus: [AlertHubStatusInput!]
   "Possibility to filter traffic by errorCodes"

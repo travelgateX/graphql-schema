@@ -1,0 +1,7 @@
+type AlertNotifications {
+    "emails"
+    emails: AlertEmails
+    "slack"
+    slack: AlertSlack
+}
+
