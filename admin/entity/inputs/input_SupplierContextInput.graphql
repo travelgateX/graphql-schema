@@ -1,0 +1,4 @@
+input SupplierContextInput {
+    supplier: ID!
+    context: String!
+}
