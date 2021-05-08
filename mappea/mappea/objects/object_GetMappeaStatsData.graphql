@@ -1,8 +1,0 @@
-type GetMappeaStatsData {
-  supplierMapped: String
-  startTime: String
-  endTime: String
-  organizationHotels: Int
-  contextHotels: Int
-  suggestedHotels: Int
-}

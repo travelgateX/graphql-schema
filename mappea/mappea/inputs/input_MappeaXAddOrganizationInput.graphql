@@ -1,6 +1,0 @@
-## AddOrganization
-input MappeaAddOrganizationInput {
-  name: String!
-  isActive : Boolean!
-  isTest: Boolean!
-}

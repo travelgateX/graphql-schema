@@ -1,5 +1,0 @@
-type GetMappeaStatsResponse {
-  data: [GetMappeaStatsData]
-  error: Error
-  warnings: [Warning]
-}

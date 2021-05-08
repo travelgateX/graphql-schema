@@ -1,6 +1,0 @@
-### GetUploadedFiles
-type GetUploadedFilesResponse {
-  data: GetUploadedFilesData
-  error: Error
-  warnings: [Warning]
-}

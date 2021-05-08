@@ -1,6 +1,0 @@
-type UploadFileData {
-  fileId: String!
-  suppliers: [SupplierDetected!]
-  numberOfLines: Int
-  numberOfHotels: Int
-}
