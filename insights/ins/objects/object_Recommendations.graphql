@@ -1,0 +1,12 @@
+type Recommendations implements Node {
+	# ID code
+	code: ID!
+	# Recommendations Data
+	recommendationsData: RecommendationsData
+	# List of advise messages
+	adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+	# Created date
+	createdAt: DateTime!
+	# Updated date
+	updatedAt: DateTime!
+}

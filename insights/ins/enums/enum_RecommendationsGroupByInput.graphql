@@ -1,0 +1,10 @@
+"""
+## RECOMMENDATIONS // Group By Input
+"""
+enum RecommendationsGroupByInput{
+	owner
+	originMarket
+	destinationCountry
+	destinationMainZone
+	criteria
+}

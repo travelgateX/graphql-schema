@@ -1,0 +1,10 @@
+"""
+## Recommendations Connection
+"""
+type RecommendationsConnection{
+	edges: [RecommendationsEdge]
+	#Indicates info about page
+	pageInfo: PageInfo!
+	#Identifies the total count of items in the connection.
+	totalCount: Int!
+}

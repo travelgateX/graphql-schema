@@ -1,0 +1,7 @@
+type RecommendationsData {
+	owner:                  Organization
+	originMarket:           String
+	destinationCountry:     String
+	destinationMainZone:    String
+	criteria:               CriteriaType
+}
