@@ -1,8 +1,8 @@
-type Recommendations implements Node {
+type Recommendation implements Node {
 	# ID code
 	code: ID!
-	# Recommendations Data
-	recommendationsData: RecommendationsData
+	# Recommendation Data
+	recommendationData: RecommendationData
 	# List of advise messages
 	adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 	# Created date
