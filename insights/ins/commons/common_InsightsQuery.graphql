@@ -13,4 +13,13 @@ extend type InsightsQuery {
   Retrieve Mapping Report for HotelX
   """
   hotelXMappingReport(where: HotelXMappingReportWhereInput!): HotelXMappingReportResponse!
+  """
+  Retrieve new organizations to connect
+  """
+  getRecommendations (
+	where:   RecommendationsWhereInput!
+	groupBy: [RecommendationsGroupByInput!]!
+	limit:   Int
+	relay:   RelayInput): RecommendationsConnection 
+  
 }
