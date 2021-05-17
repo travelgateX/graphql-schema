@@ -7,4 +7,6 @@ type RecommendationsConnection{
 	pageInfo: PageInfo!
 	#Identifies the total count of items in the connection.
 	totalCount: Int!
+	# List of advise messages
+	adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
