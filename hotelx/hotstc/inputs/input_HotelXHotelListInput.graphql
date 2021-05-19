@@ -25,4 +25,7 @@ input HotelXHotelListInput {
 
   # The supplier's group. Only available if all permissions allowed
   group:        ID
+
+  # The supplier's unique code
+  supplierCode: ID
 }
