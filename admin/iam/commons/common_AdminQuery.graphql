@@ -1,6 +1,6 @@
 extend type AdminQuery{
   # Organizations list; specify organization codes to filter organizations
-  organizations(codes: [ID!], domains: [DomainName!], label: String, contains: String, organizationType: OrganizationTypeInput, crmID: String, first: Int, last: Int, before: String, after: String, orderBy: OrganizationOrderByInput): OrganizationConnection!
+  organizations(codes: [ID!], domains: [DomainName!], label: String, contains: String, organizationType: OrganizationTypeInput, crmID: String, first: Int, last: Int, before: String, after: String, orderBy: OrganizationOrderByInput, isPublic: Boolean): OrganizationConnection!
   # Product catalog; specify products codes to filter
   products(codes:[ID!],first: Int, last: Int, before: String, after:String): ProductConnection!
   # Members list; specify member codes to filter members.

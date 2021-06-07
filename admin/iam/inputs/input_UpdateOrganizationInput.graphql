@@ -4,5 +4,6 @@ input UpdateOrganizationInput {
     owner: String
     crmID: String
     country: String
+    isPublic: Boolean
     info: String
 }
