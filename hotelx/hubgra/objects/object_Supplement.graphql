@@ -13,13 +13,13 @@ type Supplement {
   supplementType: SupplementType!
   
   # Indicates the charge types. We need to know whether the supplements have to be paid when the consumer gets to the hotel or beforehand.
-  # Possible charge types: Include or Exclude.
-  # when include: this supplement is mandatory and included in the option's price
-  # when exclude: this supplement is not included in the option's price
+  # Possible charge types: INCLUDE or EXCLUDE.
+  # when 'INCLUDE': this supplement is mandatory and included in the option's price
+  # when 'EXCLUDE': this supplement is not included in the option's price
   chargeType: ChargeType!
   
-  # Indicates if the supplement is mandatory or not. If mandatory, this supplement will be applied to this option
-  # if the chargeType is excluded the customer will have to pay it directly at the hotel
+  # Indicates if the supplement is mandatory or not. If mandatory, this supplement will be applied to this option.
+  # If the chargeType is 'EXCLUDE' the customer will have to pay it directly at the hotel
   mandatory: Boolean!
   
   # Specifies the duration type. Possible duration types: Range (specified dates) or Open. This field is mandatory for PDI.
