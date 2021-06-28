@@ -1,15 +1,15 @@
 type HotelRuntimeConfiguration implements Node{
 
-  # Stored card ID
+  # Internal TGX identificator
   code: ID!
 
-  # HotelRuntimeConfigurationData information
+  # HotelRuntimeConfigurationData information for one supplier
   hotelRuntimeConfigurationData: HotelRuntimeConfigurationData
 
-  # Create date
+  # Creation date of runtime configuration
   createdAt: DateTime!
 
-  # Update date
+  # Last time runtime of this supplier has been updated
   updatedAt: DateTime!
 
   # List of messages
