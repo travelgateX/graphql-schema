@@ -34,5 +34,9 @@ type HotelBookingDetail {
   addOns: AddOns
 
   # Specifies the information of the payment card, and the source of it, that has been generated at Book step
-  paymentCard: PaymentCard
+  paymentCard: PaymentCard #@deprecated(reason: "deprecated from 2021-06-21. Please use PaymentInfo instead")
+
+  # Specifies the information about the payment generated at Book step. 
+  paymentInfo: GeneratedPaymentInfo
+  
 }
