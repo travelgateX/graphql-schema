@@ -1,16 +1,16 @@
-# Surcharge that it can be or it is already added to the option returned. Contains all the information about the surcharge.
+# Indicates all the necessary information of the surcharge, which can be already added to the option returned or may be addded later in the booking step.
 type Surcharge {
   # Indicates the surcharge code
   code: String
 
-  # Indicates the charge types. We need to know whether the supplements have to be paid when the consumer gets to the hotel or beforehand.
-  # Possible charge types: Include or Exclude.
-  # when include: this surcharge is mandatory and included in the option's price
-  # when exclude: this surcharge is not included in the option's price
+  # Indicates the charge type. We need to know whether the supplements have to be paid when the consumer gets to the hotel or beforehand.
+  # Possible charge types: INCLUDE or EXCLUDE.
+  # when 'INCLUDE': this surcharge is mandatory and included in the option's price
+  # when 'EXCLUDE': this surcharge is not included in the option's price
   chargeType: ChargeType!
 
-  # Indicates if the surcharge is mandatory or not. If mandatory, this surcharge will be applied to this option
-  # if the chargeType is excluded the customer will have to pay it directly at the hotel
+  # Indicates if the surcharge is mandatory or not. If mandatory, this surcharge will be applied to this option.
+  # If the chargeType is 'EXCLUDE' the customer will have to pay it directly at the hotel.
   mandatory: Boolean!
 
   # Indicates the surcharge price.
