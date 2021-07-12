@@ -1,25 +1,27 @@
-#template of all fields used by the supplier
+#Indicates information about how this field must be filled/parameter.
 type HotelRuntimeParameter {
-
-  tagRuntime: TagRuntimeType!
-
-  providerTagName: String!
-
-  show: Boolean!
-
-  pattern: String
-
-  description: String!
-
-  type: MetadataType!
-
-  key: String
-
+  #Indicates the value used if no value is specified in connection configuration.
   defaultValue: String
-
+  #Specifies why and for what the parameter/field is necessary. If this field has a correlation in suppliers api, the description is gotten from the supplier documentation. Else this description shows a description set bu TGX.
+  description: String!
+  #Show an example value of the parameter.
   exampleValue: String
-
-  possibleValues: [String]!
-
+  #Field used to identify the parameter. It is unique in every connection.
+  key: String
+  #Indicates if the parameter/field is optional or mandatory. If is optional and no value is specified, our process uses the defaultValue.
   mandatory: Boolean!
+  #Regular expression to validate the parameter/field value.
+  pattern: String
+  #Description to translate a human lenguage the regular expression.
+  patternDescription: String!
+  #List of valid values when the parameter only accepts a little set of values.
+  possibleValues: [String!]
+  #Supplier's tag name that correlates with the parameter.
+  providerTagName: String
+  #Indicates if the parameter is public or for internal use of TGX.
+  show: Boolean!
+  #Indicates the parameter's correlation with connection configuration.
+  tagRuntime: TagRuntimeType!
+  #Indicates the parameter's value type.
+  type: MetadataType!
 }
