@@ -1,0 +1,44 @@
+type BookingHotelDetails {
+	# Creation date of the booking.
+	# Format: YYYY-MM-DD
+	creationDate: Date @deprecated(reason: "deprecated from 2018-02-28. Incorrect date format.")
+	
+	# Check-in date for booking
+	# Format: YYYY-MM-DD
+	checkIn: Date @deprecated(reason: "deprecated from 2018-02-28. Incorrect date format.")
+	
+	# Check-out date for the booking.
+	# Format: YYYY-MM-DD
+	checkOut: Date @deprecated(reason: "deprecated from 2018-02-28. Incorrect date format.")
+	
+	# Creation date of the booking.
+	# Format: YYYY-MM-DD
+	bookingDate: Date
+	
+	# Check-in date for booking
+	# Format: YYYY-MM-DD
+	start: Date
+	
+	# Check-out date for the booking.
+	# Format: YYYY-MM-DD
+	end: Date
+	
+	# Cancel date for the booking.
+	# Format: YYYY-MM-DD
+	cancelDate: Date
+	
+	# Code of the hotel in the context selected.
+	hotelCode: String
+	
+	# Name of the hotel.
+	hotelName: String
+	
+	# Code of the board in the context selected.
+	boardCode: String
+	
+	# List of occupancies for the request
+	occupancies: [Occupancy!]
+	
+	# List of rooms.
+	rooms: [BookingRoom!]
+}
