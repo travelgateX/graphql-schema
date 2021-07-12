@@ -1,5 +1,0 @@
-### Common Items
-type OnlyStatusResponse {
-  error: Error
-  warnings: [Warning]
-}

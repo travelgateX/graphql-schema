@@ -1,4 +1,0 @@
-input MappeaSupplierConfirmedInput {
-  code: ID!
-  supplier: ID!
-}

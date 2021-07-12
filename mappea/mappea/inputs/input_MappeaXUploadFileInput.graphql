@@ -1,7 +1,0 @@
-### UploadFile
-input MappeaUploadFileInput {
-  requestId: String!
-  fileName: String
-  delimiter: String!
-  fileContent: String!
-}
