@@ -1,18 +1,12 @@
-enum OrganizationOrderByInput{
+enum OrganizationOrderByInput {
   code_ASC
   code_DESC
   label_ASC
   label_DESC
+  created_at_ASC
+  created_at_DESC
   owner_ASC
   owner_DESC
   country_ASC
   country_DESC
-  profiles_totalCount_ASC
-  profiles_totalCount_DESC
-  clients_totalCount_ASC
-  clients_totalCount_DESC
-  suppliers_totalCount_ASC
-  suppliers_totalCount_DESC
-  accesses_totalCount_ASC
-  accesses_totalCount_DESC
 }
