@@ -63,7 +63,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   # Token for Deep Link
   token: String! @deprecated(reason: "deprecated from 2019-02-05.")
   
-  # Indicates the quote key
+  # It is an unique identifier for the option. The id is used to make the quote query, so it is important not to modify it by any reason.
   id: String!
 
   # Option level amenities
