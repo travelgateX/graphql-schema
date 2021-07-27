@@ -1,6 +1,6 @@
 # Contains information about quote(s)
 type HotelOptionQuote {
-  # Indicates the valuation key
+  # It is an unique identifier for the option. The id is used to make the book mutation, so it is important not to modify it by any reason.
   optionRefId: String!
   
   # The possible values in status in response are Available (OK) or On Request (RQ).

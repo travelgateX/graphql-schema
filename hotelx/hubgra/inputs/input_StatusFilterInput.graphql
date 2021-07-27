@@ -1,0 +1,8 @@
+# If requested, only options with the specified status will be returned. By default will return options with status OK and filter the RQ options.
+input StatusFilterInput {
+  # if includes not nil: only options with status found in includes will be returned
+  includes: [StatusType!]
+  
+  # if excludes not nil: only options without status found in includes will be returned 
+  excludes: [StatusType!]
+}
