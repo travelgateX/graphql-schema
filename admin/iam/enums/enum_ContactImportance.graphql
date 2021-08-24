@@ -1,0 +1,6 @@
+enum ContactImportance{
+  EXECUTION_LEVEL
+  DECISION_MAKER
+  PRIMARY
+  MINOR
+}

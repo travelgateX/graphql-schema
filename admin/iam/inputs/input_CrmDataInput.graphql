@@ -1,0 +1,5 @@
+input CrmDataInput{
+  crmID: String
+  contactImportance: ContactImportance
+  companyRole: CompanyRole
+}

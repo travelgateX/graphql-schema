@@ -6,6 +6,12 @@ type MemberData {
   isActive: Boolean!
   # Member Type
   type: MemberType!
+  # First Name
+  firstName: String
+  # Last Name
+  lastName: String
+  # CRM specific data
+  crmData: CrmData
   # which groups the member is in?
   groups(codes:[ID!],type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection
   # which roles the member has in?
