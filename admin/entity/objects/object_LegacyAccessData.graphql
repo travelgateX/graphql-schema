@@ -1,0 +1,8 @@
+type LegacyAccessData {
+  # HubUser code related to hubProvider
+  hubUser: String!
+  # HubProvider code related to HubUser
+  hubProvider: String!
+  # Indicates if the relation is active
+  isActive: Boolean!
+}

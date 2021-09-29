@@ -20,4 +20,6 @@ extend type AdminQuery {
   getSupplierMaintainer(supplierID: ID!): Member
   # Get provider mantainer
   getProviderMaintainer(providerID: ID!): Member
+  # Get HubUser/HubProvider relation
+  legacyAccesses(filter: LegacyAccessFilter): LegacyAccessConnection
 }

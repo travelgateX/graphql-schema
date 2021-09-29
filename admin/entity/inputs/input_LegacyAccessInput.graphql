@@ -1,0 +1,5 @@
+input LegacyAccessInput {
+  hubUser: String!
+  hubProvider: String!
+  isActive: Boolean!
+}
