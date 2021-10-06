@@ -1,0 +1,7 @@
+type Provider implements Node {
+  code: ID!
+  providerData: ProviderData
+  error: [Error!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
