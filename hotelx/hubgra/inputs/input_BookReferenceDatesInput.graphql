@@ -1,0 +1,14 @@
+# Specific dates of booking
+input BookReferenceDatesInput {
+  # Start or check-in booking date
+  # Format: YYYY-MM-DD
+  start: Date!
+  
+  # End or check-out booking date
+  # Format: YYYY-MM-DD
+  end: Date!
+
+  # Booking creation date
+  # Format: YYYY-MM-DD
+  creation: Date!
+}
