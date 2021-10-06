@@ -39,4 +39,6 @@ extend type AdminMutation {
   # Set supplier mantainer
   setSupplierMaintainer(supplierID: ID!, maintainer: ID!): Member
   setProviderMaintainer(providerID: ID!, maintainer: ID!): Member
+  # Update legacy access. HubUser HubProvider relation
+  updateLegacyAccess(input: LegacyAccessInput!): LegacyAccess
 }

@@ -1,0 +1,5 @@
+input LegacyAccessFilter {
+  hubUser: String
+  hubProvider: String
+  isActive: Boolean
+}

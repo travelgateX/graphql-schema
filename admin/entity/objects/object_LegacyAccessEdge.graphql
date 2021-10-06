@@ -1,0 +1,4 @@
+type LegacyAccessEdge {
+  node: LegacyAccess
+  cursor: String!
+}

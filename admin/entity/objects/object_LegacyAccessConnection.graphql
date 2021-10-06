@@ -1,0 +1,4 @@
+type LegacyAccessConnection {
+  edges: [LegacyAccessEdge]
+  pageInfo: PageInfo!
+}

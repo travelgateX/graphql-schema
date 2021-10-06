@@ -1,0 +1,6 @@
+type LegacyAccess {
+  code: ID!
+  legacyAccessData: LegacyAccessData
+  # Errors that will lead the service to abort
+  error: [Error!]
+}
