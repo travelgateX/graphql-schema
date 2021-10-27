@@ -1,25 +1,33 @@
 # Return information about booking
 type MetadataBooking{
 
-    # Specifies if booking can be permerformed using supplier reference.
+    # Specifies if booking can be performed using supplier reference.
     queryableBySupplierReference: ReviewedBool!
 
-    # Specifies if booking can be permerformed using client reference.
+    # Specifies if booking can be performed using client reference.
     queryableByClientReference: ReviewedBool!
 
-    # Specifies if booking can be permerformed using creation dates.
+    # Specifies if booking can be performed using creation dates.
     queryableByCreationDate: ReviewedBool!
 
-    # Specifies if booking can be permerformed using check in dates.
+    # Specifies if booking can be performed using check in dates.
     queryableByCheckinDate: ReviewedBool!
 
-    # Informs if the supplier returns the hotel reference number.
-    informHotelReference: ReviewedBool
+    # Specifies if the supplier informs about Hotel Confirmation Number (HCN).
+    informHotelReference: ReviewedBool!
 
-    # Informs the cancellation policies.
-    informCancelPolicies: ReviewedBool
+    # Specifies if the supplier informs about the cancellation policies.
+    informCancelPolicies: ReviewedBool!
 
-    # Informs the cancellation price.
-    informPriceCancel: ReviewedBool
+    # Specifies if the supplier informs about the cancellation price.
+    informPriceCancel: ReviewedBool!
 
+    # Specifies if the supplier requires check-in date in reference.
+    requiresCheckInDateInReferences: ReviewedBool!
+
+    # Specifies if the supplier requires check-out date in reference.
+    requiresCheckOutDateInReferences: ReviewedBool!
+
+    # Specifies if the supplier requires the reservation date in reference.
+    requiresReservationDateInReferences: ReviewedBool!
 }
