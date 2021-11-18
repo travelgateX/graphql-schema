@@ -1,9 +1,0 @@
-"""
-Information related to the settlement of a transaction through monetary compensation.
-"""
-input PaymentInfo {
-  payer: IndividualInput!
-  contact: ContactInfo!
-  paymentMethod_in: [PaymentMethod!]
-  type: PaymentMethodCodeType!
-}

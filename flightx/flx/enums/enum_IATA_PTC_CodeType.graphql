@@ -1,8 +1,0 @@
-"""
-Type code applying to the Passenger
-"""
-enum IATA_PTC_CodeType {
-  ADT
-  CHD
-  INF
-}

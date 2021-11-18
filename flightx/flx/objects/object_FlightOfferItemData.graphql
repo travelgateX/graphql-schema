@@ -1,8 +1,0 @@
-type FlightOfferItemData {
-  code: ID!
-  """
-  offerItemID:ID!
-  """
-  price: FlightPrice!
-  service: FlightService!
-}

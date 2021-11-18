@@ -1,9 +1,0 @@
-type FlightOfferData {
-  code: ID!
-  supplier: Supplier
-  """
-  supplierCode: String!
-  """
-  totalPrice: AmountType
-  offerItems: [FlightOfferItem]
-}
