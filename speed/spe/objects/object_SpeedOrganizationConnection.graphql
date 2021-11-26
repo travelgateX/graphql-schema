@@ -1,0 +1,8 @@
+type SpeedOrganizationConnection {
+	organization:   	Organization!
+	active:				Boolean!
+	access:         	[SpeedAccess!]!
+	historicalActions: 	[SpeedHistoricalAction!]!
+	ttl:                [TtlResponse!]
+	rqMode:             RQMode
+}

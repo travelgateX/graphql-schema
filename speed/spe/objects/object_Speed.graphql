@@ -1,0 +1,7 @@
+type Speed {
+	code: ID!
+	speedData: SpeedData
+	createdAt: DateTime!
+	updatedAt: DateTime!
+	adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

@@ -1,0 +1,4 @@
+ enum MemberType {
+     USER
+     SERVICE_ACCOUNT
+ }

@@ -1,0 +1,3 @@
+extend type SpeedQuery{
+  speed(data: SpeedQueryInput!): SpeedConnection!
+}

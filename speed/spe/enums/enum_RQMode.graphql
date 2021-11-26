@@ -1,0 +1,6 @@
+enum RQMode {
+    # If the response is not cached, the request will be sent against the provider and will wait for its response.
+    STANDARD
+    # If the response is not cached, the request will be sent against the provider and without waiting for its response a 204 will be returned.
+    FAST
+}

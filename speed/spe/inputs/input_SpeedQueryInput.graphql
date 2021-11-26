@@ -1,0 +1,6 @@
+input SpeedQueryInput{
+	orgBuyerCode: 	ID
+	orgSellerCode: 	ID
+	orgType:		OrganizationType!
+	access:			ID
+}

@@ -1,0 +1,7 @@
+type AdviseMessage {
+	code: ID!
+	description: String!
+	level: AdviseMessageLevel!
+	external: ExternalMessage
+	correlationID: ID!
+}

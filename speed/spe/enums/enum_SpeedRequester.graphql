@@ -1,0 +1,5 @@
+enum SpeedRequester{
+    BUYER 
+    SELLER
+    TGX
+}

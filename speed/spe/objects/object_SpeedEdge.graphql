@@ -1,0 +1,4 @@
+type SpeedEdge{
+	node: Speed
+	cursor: String!
+}

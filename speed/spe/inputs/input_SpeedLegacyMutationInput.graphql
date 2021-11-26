@@ -1,0 +1,9 @@
+input SpeedLegacyMutationInput{
+	orgBuyerCode: 	ID!
+	orgSellerCode: 	ID!
+	orgType:		OrganizationType!
+	providerId: 	ID!	
+	clientId: 		ID!
+	action:			SpeedActionType!
+  	requestedBy: 	SpeedRequester!
+}

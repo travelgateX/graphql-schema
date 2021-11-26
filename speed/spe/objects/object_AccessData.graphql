@@ -1,0 +1,5 @@
+type AccessData {
+  name: String!
+  code: ID!
+  supplier: Supplier!
+}
