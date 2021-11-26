@@ -1,0 +1,4 @@
+type Member {
+	code: ID!
+	memberData: MemberData
+}

@@ -1,0 +1,5 @@
+type SpeedData {
+	orgType: OrganizationType!
+	organization: Organization!
+	connections:  [SpeedOrganizationConnection!]!
+}

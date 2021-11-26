@@ -1,0 +1,6 @@
+extend type SpeedMutation{
+    speed(data: SpeedMutationInput!): Speed!
+    speedLegacy(data: SpeedLegacyMutationInput!): Speed!
+    updateTtl(data: SpeedMutationTtlInput!): Speed!
+    updateRqm(data: SpeedMutationRqmInput!): Speed!
+}

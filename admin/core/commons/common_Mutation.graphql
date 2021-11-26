@@ -6,4 +6,5 @@ type Mutation {
   paymentX: PaymentXMutation
   logging: LoggingMutation
   activation: ActivationMutation
+  speed: SpeedMutation
 }

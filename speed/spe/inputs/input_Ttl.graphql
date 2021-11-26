@@ -1,0 +1,5 @@
+input Ttl{	
+	value:	Int!
+	from:	Int!
+	to:		Int!
+}

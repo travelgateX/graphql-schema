@@ -1,0 +1,10 @@
+input SpeedMutationInput{
+	orgBuyerCode: 	ID!
+	orgSellerCode: 	ID!
+	orgType:		OrganizationType!
+	access:			ID!
+	providerId: 	ID!
+	group: 			ID!
+	action:			SpeedActionType!
+  	requestedBy: 	SpeedRequester!
+}

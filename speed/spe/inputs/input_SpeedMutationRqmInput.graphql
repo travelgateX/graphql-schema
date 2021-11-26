@@ -1,0 +1,9 @@
+input SpeedMutationRqmInput{
+	orgBuyerCode: 	ID!
+	orgSellerCode: 	ID!
+	orgType:		OrganizationType!
+	access:			ID
+	providerId: 	ID
+	rqMode:			RQMode!
+  	requestedBy: 	SpeedRequester!
+}

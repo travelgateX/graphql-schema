@@ -1,0 +1,7 @@
+type MemberData {
+	id: ID!
+	code: ID!
+	label: String
+	isActive: Boolean!
+	type: MemberType!
+}

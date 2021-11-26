@@ -1,0 +1,9 @@
+input SpeedMutationTtlInput{
+	orgBuyerCode: 	ID!
+	orgSellerCode: 	ID!
+	orgType:		OrganizationType!
+	access:			ID
+	providerId: 	ID
+	ttl: 			[Ttl!]!
+  	requestedBy: 	SpeedRequester!
+}

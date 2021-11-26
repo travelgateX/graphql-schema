@@ -1,0 +1,7 @@
+type SpeedAccess {
+	active:             Boolean!
+	access:             AccessData
+	ttl:                [TtlResponse!]
+	rqMode:             RQMode
+	historicalActions: 	[SpeedHistoricalAction!]!
+}
