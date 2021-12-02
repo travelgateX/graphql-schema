@@ -1,0 +1,7 @@
+type SpeedConnectionData{
+    code: ID!
+    buyer: SpeedOrganization! 
+    seller: SpeedOrganization! 
+    accesses: SpeedAccesses
+    configuration: SpeedConfiguration!
+}

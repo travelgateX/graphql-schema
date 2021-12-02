@@ -1,0 +1,5 @@
+type SpeedAccesses{
+	edges: [SpeedAccessEdge]
+	adviseMessage(level:[AdviseMessageLevel]): [AdviseMessage!]
+	totalCount: Int!
+}

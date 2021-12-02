@@ -1,0 +1,6 @@
+input SpeedConnectionsWhereInput{ 
+    code: [ID!]
+    orgBuyerCode: [ID!]
+	orgSellerCode: [ID!]
+    access: [ID!] 
+}

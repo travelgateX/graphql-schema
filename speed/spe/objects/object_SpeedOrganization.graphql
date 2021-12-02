@@ -1,0 +1,4 @@
+type SpeedOrganization {
+  code: ID!
+  organization: Organization!
+}

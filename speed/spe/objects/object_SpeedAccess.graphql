@@ -1,0 +1,7 @@
+type SpeedAccess{
+	code: ID!
+	speedAccessData: SpeedAccessData
+	createdAt: DateTime!
+	updatedAt: DateTime!
+	adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}
