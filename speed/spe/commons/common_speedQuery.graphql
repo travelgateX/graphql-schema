@@ -1,4 +1,4 @@
 type SpeedQuery{
-  SpeedConnetions(where: SpeedConnectionsWhereInput): SpeedConnections!
-  SpeedAccesses(where:SpeedAccessesWhereInput):SpeedAccesses!
+  speedConnetions(where: SpeedConnectionsWhereInput): SpeedConnections!
+  speedAccesses(where:SpeedAccessesWhereInput):SpeedAccesses!
 }
