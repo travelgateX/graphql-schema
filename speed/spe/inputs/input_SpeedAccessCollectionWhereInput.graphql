@@ -1,4 +1,4 @@
-input SpeedAccessesWhereInput{
+input SpeedAccessCollectionWhereInput{
     code: [ID!]
  	orgBuyerCode: [ID!]
 	orgSellerCode: [ID!]

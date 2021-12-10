@@ -1,4 +1,4 @@
-input SpeedConnectionsWhereInput{ 
+input SpeedCollectionWhereInput{ 
     code: [ID!]
     orgBuyerCode: [ID!]
 	orgSellerCode: [ID!]
