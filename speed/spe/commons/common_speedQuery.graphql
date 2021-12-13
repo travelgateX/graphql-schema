@@ -1,4 +1,4 @@
 type SpeedQuery{
-  speedCollection(where: SpeedCollectionWhereInput): speedCollection!
+  speedConnectionCollection(where: SpeedConnectionCollectionWhereInput): speedConnectionCollection!
   speedAccessCollection(where:SpeedAccessCollectionWhereInput):SpeedAccessCollection!
 }
