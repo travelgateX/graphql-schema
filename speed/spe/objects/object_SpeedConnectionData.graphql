@@ -2,6 +2,6 @@ type SpeedConnectionData{
     code: ID!
     buyer: SpeedOrganization! 
     seller: SpeedOrganization! 
-    accesses: SpeedAccesses
+    accesses: SpeedAccessCollection
     configuration: SpeedConfiguration!
 }
