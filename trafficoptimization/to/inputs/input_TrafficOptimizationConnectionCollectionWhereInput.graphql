@@ -1,0 +1,24 @@
+input TrafficOptimizationConnectionCollectionWhereInput {
+  # Buyer's organization code
+  organizationBuyerCode: ID
+
+  # Seller's organization code
+  organizationSellerCode: ID
+
+  # Seller or Buyer mode
+  mode: ModeType!
+
+  # Actions of the mutation
+  action: TrafficOptimizationActionType
+
+  # Traffic Optimization block traffic criteria
+  criterias: [TrafficOptimizationCriteriaType!]
+
+  active: Boolean
+
+  activeConnection: Boolean
+
+  activeAccess: Boolean
+
+  accessCode:[ID!]
+}
