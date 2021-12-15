@@ -1,0 +1,7 @@
+input SpeedConnectionCollectionWhereInput{ 
+    code: [ID!]
+    orgBuyerCode: [ID!]
+	orgSellerCode: [ID!]
+    access: [ID!] 
+    mode: ModeType!
+}
