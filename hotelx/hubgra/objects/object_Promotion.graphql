@@ -3,6 +3,9 @@ type Promotion {
   # Specifies the promotion code.
   code: String!
   
+  # Specifies the supplier's promotion code.
+  supplierCode: String!
+  
   # Specifies the promotion name.
   name: String
   

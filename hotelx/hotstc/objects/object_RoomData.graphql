@@ -15,7 +15,7 @@ type RoomData {
   # Room occupancies
   occupancies: OccupancyStatic
 
-  # Room amenities
+  # Room amenities @deprecated(reason: "deprecated from 2021-09-17. Please, use allAmenities")
   amenities: [AmenityStatic!]
 
   # Room views

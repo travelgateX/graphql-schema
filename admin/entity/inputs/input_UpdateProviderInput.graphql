@@ -1,0 +1,6 @@
+input ProviderInput {
+  code: String!
+  name: String
+  isActive: Boolean
+  isPublic: Boolean
+}

@@ -10,7 +10,7 @@ type BookingDetail {
   """
   Information about the hotel.
   """
-  hotel: BookingHotel
+  hotel: BookingHotelDetails
   """
   Specifies the prices (Gross, Net and Amount) of the option returned.
   """

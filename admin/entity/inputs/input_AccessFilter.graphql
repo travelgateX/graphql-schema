@@ -2,4 +2,8 @@ input AccessFilter {
   accessID: [ID]
   group: [ID]
   owner: [ID!]
+  hasMaster: Boolean
+  isActive: Boolean
+  supplierID: [ID]
+  providerID: [ID]
 }

@@ -6,7 +6,7 @@ type SupplierData{
   # indicates whether a supplier is active
   isActive: Boolean!
   # instance to which this supllier is connected
-  provider: Provider!
+  provider: ProviderData!
   # Context where the Supplier belongs to
   context: String!
   # Service API

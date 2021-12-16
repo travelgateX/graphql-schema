@@ -19,7 +19,7 @@ type PaymentCardData {
     number: CardNumber!
 
     # Indicates the supplier or third party, responsible of the payment card's creation
-    supplier: Supplier!
+    supplier: Supplier! #@deprecated(reason: "deprecated from 2021-06-21.")
 
     # Indicates the supported card type
     type: PaymentCardType!

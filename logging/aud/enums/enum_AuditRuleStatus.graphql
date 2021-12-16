@@ -1,0 +1,7 @@
+enum AuditRuleStatus {
+  Scheduled
+  InProcess
+  Finalized
+  Deleted
+  ALL
+}

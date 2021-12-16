@@ -4,7 +4,7 @@ extend type AdminMutation{
   # Suit Organization. Requires an existing organization and a specific template.
   suitOrganization(organization: SuitOrganizationInput!): Organization!
   # Suit folder.Requires an existing folder and a template
-  suitFolder(folder: SuitFolderInput!): Group!
+  createFolder(folder: CreateFolderInput!): Group!
   # Create member; requires specific group and role
   createMember(member: CreateMemberInput!) : Member!
   # Create group; group "owner" is optional
@@ -68,5 +68,6 @@ extend type AdminMutation{
   addAgent(PartnerCode:ID!,type:CustomerAgentType!,user:ID!):Partner!
   #@intern
   deleteAgent(PartnerCode:ID!,user:ID!):Partner!
-
+  # Sets FTP structure and send an email to the organization owner with the credentials.
+  initialOrganizationSetup(orgCode:ID!): Organization!
 }

@@ -5,4 +5,6 @@ input UpdateGroupInput{
 	info: String
   label: String
   country:Country
+  isBuyer: Boolean
+  isSeller: Boolean
 }

@@ -1,0 +1,5 @@
+type CrmData {
+  crmID: String
+  contactImportance: String
+  companyRole: String
+}

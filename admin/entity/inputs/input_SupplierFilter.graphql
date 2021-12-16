@@ -3,6 +3,8 @@ input SupplierFilter {
   accessID: [ID]
   groupID: [ID]
   isActive: Boolean
+  isPublic: Boolean
   serviceAPI: [Int]
   owner: [ID!]
+  providerID:[ID]
  }

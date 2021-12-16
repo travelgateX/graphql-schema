@@ -39,5 +39,7 @@ type Room {
   # List of features of this room 
   features: [Feature!]
 
+  # Room level amenities. Contains information regarding Amenities, Amenities is defined as something intended to make life more
+  # pleasant or comfortable for people, Examples include: swimming pools, shopping centers, etc.
   amenities: [Amenity!]
 }

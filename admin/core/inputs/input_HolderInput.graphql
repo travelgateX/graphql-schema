@@ -5,4 +5,7 @@ input HolderInput {
   
   # The card holder's surname
   surname: String!
+
+  # Holder’s title.
+  title: PersonalTitleType
 }

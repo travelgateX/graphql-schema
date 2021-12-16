@@ -1,0 +1,6 @@
+input ActivationReadInput {
+  # Buyer's organization code
+  organizationBuyerCode: ID
+  # Seller's organization code
+  organizationSellerCode: ID
+}

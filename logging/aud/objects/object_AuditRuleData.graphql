@@ -1,0 +1,11 @@
+type AuditRuleData {
+  product: Product!
+  group: Group
+  access: Access
+  client: Client
+  error: AdviseMessage
+  ttl: Int!
+  remainingTTL: Int!
+  percentageToAudit: Int!
+  auditStatus: AuditRuleStatus!
+}

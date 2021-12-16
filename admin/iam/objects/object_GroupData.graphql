@@ -35,4 +35,6 @@ type GroupData implements GroupCommonData{
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
   # Obtain all Profiles
   profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
+  isBuyer: Boolean!
+  isSeller: Boolean!
 }

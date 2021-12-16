@@ -1,0 +1,5 @@
+type SpeedTtl{	
+    value:	Int!
+	from:	Int! 
+	to:		Int!
+}

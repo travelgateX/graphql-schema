@@ -1,21 +1,33 @@
 # Return information about booking
 type MetadataBooking{
-    # Informs if the supplier implements this method.
-    implemented: ReviewedBool!
 
-    # The supplier allows query the Book with provider locator.
-    allowsProvideLocator: ReviewedBool
+    # Specifies if booking can be performed using supplier reference.
+    queryableBySupplierReference: ReviewedBool!
 
-    # The supplier allows query the Book with client locator.
-    allowsClientLocator: ReviewedBool
+    # Specifies if booking can be performed using client reference.
+    queryableByClientReference: ReviewedBool!
 
-    # Informs if the supplier returns the property reservation number.
-    informPropertyReservationNumber: ReviewedBool
+    # Specifies if booking can be performed using creation dates.
+    queryableByCreationDate: ReviewedBool!
 
-    # Informs cancellation policies.
-    informCancelPolicies: ReviewedBool
+    # Specifies if booking can be performed using check in dates.
+    queryableByCheckinDate: ReviewedBool!
 
-    # The supplier informs the cancellation price.
-    informPriceCancel: ReviewedBool
+    # Specifies if the supplier informs about Hotel Confirmation Number (HCN).
+    informHotelReference: ReviewedBool!
 
+    # Specifies if the supplier informs about the cancellation policies.
+    informCancelPolicies: ReviewedBool!
+
+    # Specifies if the supplier informs about the cancellation price.
+    informPriceCancel: ReviewedBool!
+
+    # Specifies if the supplier requires check-in date in reference.
+    requiresCheckInDateInReferences: ReviewedBool!
+
+    # Specifies if the supplier requires check-out date in reference.
+    requiresCheckOutDateInReferences: ReviewedBool!
+
+    # Specifies if the supplier requires the reservation date in reference.
+    requiresReservationDateInReferences: ReviewedBool!
 }

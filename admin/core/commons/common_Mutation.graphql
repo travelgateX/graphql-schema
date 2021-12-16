@@ -4,4 +4,6 @@ type Mutation {
   hotelX: HotelXMutation
   mappea: MappeaMutation
   paymentX: PaymentXMutation
+  logging: LoggingMutation
+  activation: ActivationMutation
 }

@@ -1,0 +1,7 @@
+type SpeedConnection{ 
+	code: ID!
+	speedConnectionData: SpeedConnectionData
+	createdAt: DateTime!
+	updatedAt: DateTime!
+	adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

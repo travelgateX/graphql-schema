@@ -39,7 +39,7 @@ type HotelData {
   # List of credit cards
   cardTypes: [PaymentCardType!]
 
-  # Amenities
+  # @deprecated(reason: "deprecated from 2021-09-17. Please, use allAmenities")
   amenities: [AmenityStatic!]
 
   # Medias

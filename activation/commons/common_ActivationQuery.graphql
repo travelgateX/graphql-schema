@@ -1,0 +1,4 @@
+type ActivationQuery{
+  # Activations query allows to return all activations filtered by input
+  activations(data: ActivationReadInput!): ActivationConnection!
+}

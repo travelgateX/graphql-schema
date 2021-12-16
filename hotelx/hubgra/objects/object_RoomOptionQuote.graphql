@@ -1,0 +1,19 @@
+type RoomOptionQuote {
+  # ID reference to the occupancy
+  occupancyRefId: ID!
+
+  # Identifies the Legacy Room Id
+  legacyRoomId: ID!
+
+  # Indicates the room code
+  code: String!
+
+  # Supplier's room code.
+  supplierCode: String!
+
+  # Description about the room
+  description: String
+
+  # Room features
+  features: [Feature!]
+}
