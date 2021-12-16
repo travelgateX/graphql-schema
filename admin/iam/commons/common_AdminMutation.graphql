@@ -68,5 +68,6 @@ extend type AdminMutation{
   addAgent(PartnerCode:ID!,type:CustomerAgentType!,user:ID!):Partner!
   #@intern
   deleteAgent(PartnerCode:ID!,user:ID!):Partner!
-
+  # Sets FTP structure and send an email to the organization owner with the credentials.
+  initialOrganizationSetup(orgCode:ID!): Organization!
 }
