@@ -1,14 +1,14 @@
-# Input BookPax contains basic information abaout pax suach as name, surname and age.
+# Input BookPax contains basic information about pax such as name, surname and age.
 input BookPaxInput {
-  # The guest's first  name
+  # Passenger first  name
   name: String!
   
-  # The guest's last name
+  # Passenger  last name
   surname: String!
   
-  # The guest's age
+  # Passenger age on the day of check-in
   age: Int!
 
-  # Pax title.
+  # Passenger title.
   title: PersonalTitleType
 }

@@ -1,5 +1,5 @@
 # Specifies the age pax. The range of what is considered an adult, infant or baby is particular to each supplier.
 type Pax {
-  # Specifies the age pax.
+  # Passenger age on the day of check-in
   age: Int!
 }
