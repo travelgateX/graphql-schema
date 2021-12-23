@@ -1,5 +1,7 @@
 type ClientData {
-  # ID identifier of a Client
+  # ID unique identifer of a Client
+  id: ID!
+  # Code identifier of a Client
   code: ID!
   # Client complete name
   name: ID!

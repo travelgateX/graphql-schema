@@ -1,0 +1,10 @@
+enum ClientOrderByInput {
+    code_ASC
+    code_DESC
+    name_ASC
+    name_DESC
+    created_at_ASC
+    created_at_DESC
+    updated_at_ASC
+    updated_at_DESC
+}
