@@ -1,0 +1,8 @@
+input ClientWhereInput {
+  _search: String
+  code_in: [ID!]
+  group_in: [ID!]
+  owner_in: [ID!]
+  name_in: [String!]
+  isActive: Boolean
+}

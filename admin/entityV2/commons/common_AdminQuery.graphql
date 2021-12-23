@@ -1,0 +1,7 @@
+# A Query is an entry point into the object graph.
+extend type AdminQuery {
+  # EntitiesV2 client query
+  client(where: ClientWhereUniqueInput!): Client
+  # EntitiesV2 allClients query
+  allClients(where: ClientWhereInput, orderBy: ClientOrderByInput): ClientConnection!
+}

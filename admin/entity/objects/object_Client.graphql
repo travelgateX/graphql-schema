@@ -4,6 +4,8 @@ type Client implements Node{
   clientData: ClientData
   # Errors that abort services
   error: [Error!]
+  # AdviseMessage object
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Date created
   createdAt: DateTime!
   # Date updated
