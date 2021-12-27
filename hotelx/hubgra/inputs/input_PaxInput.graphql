@@ -1,5 +1,5 @@
 # Pax object that contains the pax age.
 input PaxInput {
-  # Pax age.
+  # Passenger age on the day of check-in.
   age: Int!
 }
