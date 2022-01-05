@@ -3,5 +3,5 @@ input SpeedCreateAccessInput{
 	organizationBuyerCode: ID!
 	organizationSellerCode: ID! 
 	mode: ModeType!
-	requestedBy: 	SpeedRequester!
+	requestedBy: SpeedRequester!
 }
