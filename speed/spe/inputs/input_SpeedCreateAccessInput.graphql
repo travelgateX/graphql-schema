@@ -1,0 +1,7 @@
+input SpeedCreateAccessInput{
+	access: String!
+	organizationBuyerCode: String!
+	organizationSellerCode: String! 
+	mode: ModeType!
+	requestedBy: 	SpeedRequester!
+}

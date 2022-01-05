@@ -1,0 +1,5 @@
+type SpeedMutation{
+	CreateSpeedAccess(where: SpeedCreateAccessInput!): SpeedAccess  
+	ActivateSpeedAccess(where: SpeedUpdateAccessStatusInput!) :SpeedAccess  
+	DeactivateSpeedAccess(where: SpeedUpdateAccessStatusInput!) :SpeedAccess   
+}

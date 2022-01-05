@@ -1,0 +1,6 @@
+input SpeedUpdateAccessStatusInput{
+	access: String
+	code: String
+	mode: ModeType!
+	requestedBy: 	SpeedRequester!
+}

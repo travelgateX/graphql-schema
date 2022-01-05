@@ -1,0 +1,6 @@
+enum ModeType {
+    # When the request has been send as a buyer
+    BUYER
+    # When the request has been send as a seller
+    SELLER
+}
