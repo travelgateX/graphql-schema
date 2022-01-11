@@ -1,0 +1,5 @@
+type TrafficOptimizationOrganization {
+  code: ID!
+  organization: Organization!
+  configuration: TrafficOptimizationConfiguration!
+}

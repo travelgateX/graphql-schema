@@ -1,0 +1,5 @@
+type TrafficOptimizationConfiguration {
+  criterias: [TrafficOptimizationCriteriaType!]
+  isActive: Boolean!
+  isApplied: Boolean!
+}

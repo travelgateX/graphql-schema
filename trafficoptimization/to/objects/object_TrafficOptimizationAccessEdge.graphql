@@ -1,0 +1,4 @@
+type TrafficOptimizationAccessEdge {
+  node: TrafficOptimizationAccess
+  cursor: String!
+}

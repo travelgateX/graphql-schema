@@ -1,0 +1,4 @@
+type TrafficOptimizationConnectionEdge {
+  node: TrafficOptimizationConnection
+  cursor: String!
+}
