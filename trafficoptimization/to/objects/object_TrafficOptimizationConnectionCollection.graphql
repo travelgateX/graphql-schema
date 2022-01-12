@@ -1,4 +1,4 @@
-type TrafficOptimizationConnectionCollection {
+type TrafficOptimizationConnectionConnection {
   edges: [TrafficOptimizationConnectionEdge]
   # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]

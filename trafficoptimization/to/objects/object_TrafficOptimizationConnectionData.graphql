@@ -3,5 +3,5 @@ type TrafficOptimizationConnectionData {
   organizationBuyer: TrafficOptimizationOrganization!
   organizationSeller: TrafficOptimizationOrganization!
   configuration: TrafficOptimizationConfiguration!
-  accesses: TrafficOptimizationAccessCollection
+  accesses: TrafficOptimizationAccessConnection
 }

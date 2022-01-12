@@ -1,4 +1,4 @@
-type TrafficOptimizationAccessCollection {
+type TrafficOptimizationAccessConnection {
   edges: [TrafficOptimizationAccessEdge]
   # List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
