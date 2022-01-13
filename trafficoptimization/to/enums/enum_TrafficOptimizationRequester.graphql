@@ -1,0 +1,5 @@
+enum TrafficOptimizationRequester{
+    BUYER 
+    SELLER
+    TGX
+}
