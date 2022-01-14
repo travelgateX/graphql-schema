@@ -11,13 +11,10 @@ input TrafficOptimizationConnectionConnectionWhereInput {
   # Seller or Buyer mode
   mode: ModeType!
 
-  # Actions of the mutation
-  action: TrafficOptimizationActionType
-
   # Traffic Optimization block traffic criteria
   criterias: [TrafficOptimizationCriteriaType!]
 
-  isActive: Boolean
+  isActiveOrganization: Boolean
 
   isActiveConnection: Boolean
 

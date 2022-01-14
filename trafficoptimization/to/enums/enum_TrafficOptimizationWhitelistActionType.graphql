@@ -1,6 +1,0 @@
-enum TrafficOptimizationWhitelistActionType {
-  # Add hotels to whitelist
-  ADD 
-  # Delete hotels from whitelist
-  DELETE
-}

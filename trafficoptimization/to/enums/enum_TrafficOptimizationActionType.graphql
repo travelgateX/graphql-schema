@@ -4,7 +4,4 @@ enum TrafficOptimizationActionType {
 
   # DEACTIVATE traffic optimization.
   DEACTIVATE
-
-#  # Modify configuration
-#  UPDATE
 }

@@ -2,6 +2,6 @@ type TrafficOptimizationConnectionData {
   code: ID!
   organizationBuyer: TrafficOptimizationOrganization!
   organizationSeller: TrafficOptimizationOrganization!
-  configuration: TrafficOptimizationConfiguration!
+  configuration: TrafficOptimizationConnectionConfiguration!
   accesses: TrafficOptimizationAccessConnection
 }
