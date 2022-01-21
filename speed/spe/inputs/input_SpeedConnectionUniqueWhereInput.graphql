@@ -1,6 +1,6 @@
 input SpeedConnectionUniqueWhereInput{ 
     code: ID
-    orgBuyerCode: ID
-	orgSellerCode: ID
+    organizationBuyerCode: ID
+    organizationSellerCode: ID
     mode: ModeType!
 }

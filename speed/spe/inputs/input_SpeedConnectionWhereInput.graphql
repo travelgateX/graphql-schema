@@ -1,7 +1,7 @@
 input SpeedConnectionWhereInput{ 
     code: [ID!]
-    orgBuyerCode: [ID!]
-	orgSellerCode: [ID!]
+    organizationBuyerCode: [ID!]
+    organizationSellerCode: [ID!]
     access: [ID!] 
     mode: ModeType!
 }
