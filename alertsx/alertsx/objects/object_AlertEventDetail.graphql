@@ -1,5 +1,5 @@
 "AlertEvent Detail"
 type AlertEventDetail {
   name: String!
-  value: Float!
+  value: String!
 }
