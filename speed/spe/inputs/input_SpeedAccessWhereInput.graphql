@@ -1,0 +1,7 @@
+input SpeedAccessWhereInput{
+    code: [ID!]
+    organizationBuyerCode: [ID!]
+    organizationSellerCode: [ID!]
+    access: [ID!]
+    mode: ModeType!
+}
