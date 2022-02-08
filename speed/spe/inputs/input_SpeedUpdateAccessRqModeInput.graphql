@@ -1,0 +1,7 @@
+input SpeedUpdateAccessRqModeInput{
+    access: ID
+	code: ID
+	mode: ModeType!
+    rqMode:	SpeedRQMode!
+	requestedBy: SpeedRequester!
+}
