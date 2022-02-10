@@ -7,7 +7,7 @@ type AlertEventData {
   "Contains data in html format encrypted"
   details: String!
   "Contains events data"
-  detailsInfo: [AlertEventDetail!]!
+  detailsInfo: [AlertEventDetail]!
   "Last 10 events of the alert/grouBy"
   history( relay: RelayInput, filter: AlertFilterInput):AlertEventConnection!
 }
