@@ -1,0 +1,13 @@
+# data which can be grouped by to show stats data
+enum StatsGroupBy{ 
+  BUYER_ORGANIZATION
+  SELLER_ORGANIZATION
+  ACCESS
+  CLIENT
+  SUPPLIER
+  OPERATION
+  OPERATION_TYPE
+  TRAFFIC_TYPE
+  ERROR_CODE
+  ERROR_TYPE
+}

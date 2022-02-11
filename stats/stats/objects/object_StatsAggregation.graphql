@@ -1,0 +1,5 @@
+
+type StatsAggregation implements Node{
+  aggregationData: StatsAggregationData
+  adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
+}

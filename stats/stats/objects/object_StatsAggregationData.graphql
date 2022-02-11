@@ -1,0 +1,29 @@
+type StatsAggregationData {
+  # number of hits 
+  hits:Int!
+  # total time of hits 
+  totalTime: Int!
+  # buyer returned if you you group by BUYER_ORGANIZATION
+  buyer: Organization 
+  # seller returned if you group by SELLER_ORGANIZATION
+  seller: Organization 
+  # access returned if you group by ACCESS
+  access: Access 
+  # client returned if you group by CLIENT
+  client: Client
+  # supplier returned if you group by SUPPLIER
+  supplier: Supplier
+  # operation returned if you group by OPERATION
+  operation: Operation
+  # operationType returned if you group by OPERATION TYPE
+  operationType: OperationType
+   # error code returned if you group by ERROR CODE
+  errorCode: ID
+  # error type returned if you group by ERROR TYPE
+  errorType: ID
+  # traffic type returned if you group by TRAFFIC TYPE
+  trafficType: TrafficType
+  # returned time value if groupByTime is used
+  time: DateTime
+  # to get data deaggregate from this node
+  deaggregateData( where: StatsFilterv2Input!): StatsAggregationConnection

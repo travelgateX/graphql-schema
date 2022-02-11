@@ -1,0 +1,7 @@
+#Group data by time 
+enum StatsGroupByTime{ 
+	MINUTE
+  HOUR
+  DAY
+  MONTH
+}

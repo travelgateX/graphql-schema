@@ -1,0 +1,31 @@
+# Filters able to retrieve stats
+input StatsAggregationConnectionWhereInput{
+  # Retrieve data as a Buyer or Seller
+  mode: ModeType!
+  # Group by multiple data 
+  groupBy: [StatsGroupBy!]
+  # List of buyer codes
+  organizationBuyerCode:[ID!]
+  # List of seller codes
+  organizationSellerCode:[ID!]
+  # List of access codes
+  access:[ID!]
+  # List of client codes
+  client:[ID!] 
+  # List of supplier codes
+  supplier:[ID!]
+  # List of operation codes
+  operation:[ID!]
+  # List of operation types
+  operationType:[OperationType!] 
+  # List of error codes
+  errorCode:[ID!]
+  # List of error types
+  errorType:[ID!]
+  # List of Traffic Type
+  trafficType:[TrafficType!]
+  # Input time
+  timeRange: StatsAggregationTimeRangeInput!
+  # To group data by time 
+  groupByTime: StatsGroupByTime
+}

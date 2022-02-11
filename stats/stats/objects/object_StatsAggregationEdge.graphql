@@ -1,0 +1,5 @@
+type StatsAggregationConnection{
+  totalCount:Int!
+  edges :[StatsAggregationEdge!]
+  adviseMessage: [AdviseMessage!]
+}

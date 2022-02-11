@@ -3,4 +3,6 @@ extend type StatsQuery{
   report( filter: StatsFilterInput!, first: Int, last: Int, before: String, after: String): StatsConnection!
   # Returns the active connections between a Client and Supplier
   getActiveConnection(filter: ActiveFilterInput!): ConnectionConnection!
+  # Query to retrieve Stats Aggregated
+  getAggregationStats(where: StatsFilterInput!): StatsAggregationConnection!
 }
