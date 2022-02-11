@@ -27,3 +27,4 @@ type StatsAggregationData {
   time: DateTime
   # to get data deaggregate from this node
   deaggregateData( where: StatsFilterv2Input!): StatsAggregationConnection
+}
