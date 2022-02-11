@@ -26,5 +26,5 @@ type StatsAggregationData {
   # returned time value if groupByTime is used
   time: DateTime
   # to get data deaggregate from this node
-  deaggregateData( where: StatsFilterv2Input!): StatsAggregationConnection
+  deaggregateData( where: StatsAggregationConnectionWhereInput!): StatsAggregationConnection
 }
