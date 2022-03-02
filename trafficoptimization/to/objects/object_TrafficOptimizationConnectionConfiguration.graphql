@@ -1,4 +1,4 @@
-type TrafficOptimizationConnectionConfiguration implements TrafficOptimizationConfiguration {
+type TrafficOptimizationConnectionConfiguration {
   criterias: [TrafficOptimizationCriteriaType!]
   isActive: Boolean!
   isApplied: Boolean!
