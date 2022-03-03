@@ -1,5 +1,3 @@
-type StatsAggregationConnection{
-  totalCount:Int!
-  edges :[StatsAggregationEdge!]
-  adviseMessage: [AdviseMessage!]
+type StatsAggregationEdge{
+  node:StatsAggregation
 }
