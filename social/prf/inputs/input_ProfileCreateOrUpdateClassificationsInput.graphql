@@ -1,0 +1,3 @@
+input ProfileCreateOrUpdateClassificationsInput {
+  set: [ProfileClassification!]!
+}

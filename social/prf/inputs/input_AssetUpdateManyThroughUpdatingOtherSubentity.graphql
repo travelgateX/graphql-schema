@@ -1,0 +1,5 @@
+input AssetUpdateManyThroughUpdatingOtherSubentity {
+  create: [AssetCreateThroughCreatingOtherSubentity!]
+  delete: [AssetWhereUniqueInput!]
+  update: [AssetUpdateOneThroughUpdatingOTherSubentity!]
+}

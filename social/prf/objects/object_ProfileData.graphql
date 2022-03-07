@@ -1,0 +1,18 @@
+type ProfileData{
+  assets: [Asset!]
+  description: String
+  group: Group!
+  id: Int!
+  name: String!
+  order: Float!
+  owner: Organization!
+  slug: String!
+  types: [ProfileType!]
+
+  """*Synced in the CRM"""
+  classifications: [ProfileClassification!]
+  """*Synced in the CRM"""
+  status: Status!
+  """*Synced in the CRM"""
+  websiteUrl: String
+}
