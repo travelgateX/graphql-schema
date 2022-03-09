@@ -28,6 +28,8 @@ type OrganizationData implements GroupCommonData {
   suppliers(supplierID:[ID!], accessID:[ID!], owner:[ID!],serviceAPI:[ID!], isActive: Boolean, first: Int, last: Int, before: String, after:String): SupplierConnection
   # Clients resources in a group
   clients(clientID:[ID!],name:[ID!],owner:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
+    # Obtain all profiles
+  profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
   domains: [Domain]!
   template: String
   # ISO 3166-1 alpha-2 format country code with enclosing double quotes "ES"
@@ -38,6 +40,8 @@ type OrganizationData implements GroupCommonData {
   allSuppliers: SupplierConnection
   # Clients resources in this organization
   allClients: ClientConnection
+  # Profiles resources in this organization
+  allProfiles: ProfileConnection
   primaryPartner: Partner!
   allPartners(
       where: PartnerWhereInput

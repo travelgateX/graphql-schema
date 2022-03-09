@@ -1,0 +1,6 @@
+input ProfileFilter {
+  profileIDs: [ID]
+  groupIDs: [ID]
+  entityIDs: [ID]
+  owner: [ID!]
+}

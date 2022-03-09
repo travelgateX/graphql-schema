@@ -8,11 +8,7 @@ type ProfileData{
   owner: Organization!
   slug: String!
   types: [ProfileType!]
-
-  """*Synced in the CRM"""
   classifications: [ProfileClassification!]
-  """*Synced in the CRM"""
   status: Status!
-  """*Synced in the CRM"""
   websiteUrl: String
 }

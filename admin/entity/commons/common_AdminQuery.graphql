@@ -10,6 +10,8 @@ extend type AdminQuery {
   serviceApi(filter: ServiceApiFilter): ServiceApi
   # Obtain all Points of Sale for the filters
   pointsOfSale(filter: PointOfSaleFilter): PointOfSaleConnection
+  # Obtain all Profiles for the filters
+  profiles(filter: ProfileFilter): ProfileConnection
   # Obtain a set of entities
   entities(filter: EntityFilter): EntityConnection @deprecated(reason: "deprecated from 2019-08-21. Only for statsX product. Use client, supplier, accesess queries")
   # Obtain all clients for a filter.
