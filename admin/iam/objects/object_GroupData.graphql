@@ -33,7 +33,7 @@ type GroupData implements GroupCommonData{
   clients(clientID:[ID!],name:[ID!],owner:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
   # You can grant roles to members, which define the roles catalog for a group.
   roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
-    # Obtain all Profiles
+  # Obtain all Profiles
   profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
   isBuyer: Boolean!
   isSeller: Boolean!
