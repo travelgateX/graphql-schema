@@ -25,7 +25,7 @@ input StatsAggregationConnectionWhereInput{
   # List of Traffic Type
   trafficType:[TrafficType!]
   # Input time
-  timeRange: StatsAggregationTimeRangeInput!
+  timeRange: TimeRangeInput!
   # To group data by time 
   groupByTime: StatsGroupByTime
 }
