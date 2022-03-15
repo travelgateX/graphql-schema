@@ -1,0 +1,4 @@
+input SpeedAccessUniqueWhereInput{
+    code: ID
+    access: ID
+}
