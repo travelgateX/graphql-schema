@@ -1,0 +1,6 @@
+input ProfileWhereUniqueInput {
+  code: String
+  id: Int
+  name: String
+  slug: String
+}

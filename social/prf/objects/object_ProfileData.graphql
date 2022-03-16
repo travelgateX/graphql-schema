@@ -1,0 +1,14 @@
+type ProfileData{
+  assets: [Asset!]
+  description: String
+  group: Group!
+  id: Int!
+  name: String!
+  order: Float!
+  owner: Organization!
+  slug: String!
+  types: [ProfileType!]
+  classifications: [ProfileClassification!]
+  status: Status!
+  websiteUrl: String
+}
