@@ -2,6 +2,8 @@
 type Query{
   # The admin query root of TravelgateX's for implementing GraphQL query.
   admin: AdminQuery
+  # The admin "openData" (without permissions) query root of TravelgateX's for implementing GraphQL query
+  openData: OpenDataQuery  
   # The hotelX product query root for implementing GraphQL query.
   hotelX: HotelXQuery
   # The Mappea product query root for implementing GraphQL query.
@@ -16,6 +18,4 @@ type Query{
   activation: ActivationQuery
   # The Speed query root for implementing GraphQL query.
   speed: speedQuery
-  # The Social query root for implementing GraphQL query.
-  social: SocialQuery
 }

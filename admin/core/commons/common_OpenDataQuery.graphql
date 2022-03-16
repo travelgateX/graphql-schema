@@ -1,0 +1,4 @@
+# The admin query OpenData (no permissions required) root of TravelgateX's GraphQL interface.
+type OpenDataQuery{
+  organizations(codes:[ID!],label: String): OpenDataOrganizationConnection!
+}

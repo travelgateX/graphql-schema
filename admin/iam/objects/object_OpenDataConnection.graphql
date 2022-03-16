@@ -1,0 +1,6 @@
+type OpenDataOrganizationConnection{
+  edges: [OpenDataOrganizationEdge]
+  pageInfo: PageInfo!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  totalCount: Int!
+}
