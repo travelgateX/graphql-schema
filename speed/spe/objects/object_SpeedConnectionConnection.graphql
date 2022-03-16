@@ -1,5 +1,0 @@
-type SpeedConnectionConnection{
-	edges: [SpeedConnectionEdge]
-	adviseMessage(level:[AdviseMessageLevel]): [AdviseMessage!]
-	totalCount: Int!
-}

@@ -1,4 +1,4 @@
-type SpeedAccessConnection{
+type SpeedAccessCollection{
 	edges: [SpeedAccessEdge]
 	adviseMessage(level:[AdviseMessageLevel]): [AdviseMessage!]
 	totalCount: Int!
