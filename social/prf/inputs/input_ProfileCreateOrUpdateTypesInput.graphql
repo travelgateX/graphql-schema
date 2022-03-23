@@ -1,3 +1,0 @@
-input ProfileCreateOrUpdateTypesInput {
-  set: [ProfileType!]!
-}

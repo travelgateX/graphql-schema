@@ -9,6 +9,5 @@ input ProfileCreateInput {
   ownerCode: String!
   slug: String!
   status: Status!
-  types: ProfileCreateOrUpdateTypesInput!
   websiteUrl: String
 }
