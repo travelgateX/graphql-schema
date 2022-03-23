@@ -9,6 +9,6 @@ input ProfileUpdateInput {
   ownerCode: String
   slug: String
   status: Status
-  types: ProfileCreateOrUpdateTypesInput
+  types: ProfileCreateOrUpdateTypesInput @deprecated(reason: "use organization fields `isBuyer` and `isSeller`")
   websiteUrl: String
 }

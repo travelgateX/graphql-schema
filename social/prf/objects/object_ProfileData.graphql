@@ -7,7 +7,7 @@ type ProfileData{
   order: Float!
   owner: Organization!
   slug: String!
-  types: [ProfileType!]
+  types: [ProfileType!] @deprecated(reason: "use organization fields `isBuyer` and `isSeller`")
   classifications: [ProfileClassification!]
   status: Status!
   websiteUrl: String
