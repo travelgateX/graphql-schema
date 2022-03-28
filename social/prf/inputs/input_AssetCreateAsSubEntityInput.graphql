@@ -1,0 +1,3 @@
+input AssetCreateAsSubEntityInput {
+  create: AssetCreateThroughCreatingOtherSubentity!
+}

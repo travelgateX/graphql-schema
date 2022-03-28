@@ -1,0 +1,4 @@
+input AssetUpdateOneThroughUpdatingOTherSubentity {
+  data: AssetUpdateInput!
+  where: AssetWhereUniqueInput!
+}

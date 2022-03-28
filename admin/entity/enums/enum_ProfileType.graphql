@@ -1,6 +1,0 @@
-enum ProfileType {
-  # Buyer profile
-  BUYER
-  # Seller profile
-  SELLER
-}
