@@ -1,0 +1,8 @@
+enum HotelOptionRateRestrictionType {
+    # restrictions applied by company
+    COMPANY
+    # restrictions applied by market
+    MARKET
+    # other restrictions that not belong to previous
+    OTHERS
+}
