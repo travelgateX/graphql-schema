@@ -4,10 +4,10 @@ input ProfileCreateInput {
   classifications: ProfileCreateOrUpdateClassificationsInput
   description: String
   groupCode: String!
-  name: String!
-  order: Float!
+  name: String
+  order: Float
   ownerCode: String!
-  slug: String!
-  status: Status!
+  slug: String
+  status: Status
   websiteUrl: String
 }
