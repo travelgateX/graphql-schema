@@ -4,7 +4,7 @@ type HotelOptionRate {
     # rate code in supplier context
     supplierCode: String
     # rate description
-    description: String!
+    description: String
     # restrictions applied to the rate
     restrictions: [HotelOptionRateRestriction!]
 }
