@@ -1,0 +1,5 @@
+type TrafficOptimizationAccessData {
+  code: ID!
+  configuration: TrafficOptimizationConfiguration!
+  access: Access!
+}

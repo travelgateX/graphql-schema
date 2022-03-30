@@ -1,0 +1,6 @@
+type TrafficOptimizationConnectionConfiguration {
+  criterias: [TrafficOptimizationCriteriaType!]
+  isActive: Boolean!
+  isApplied: Boolean!
+  byAccess: Boolean!
+}
