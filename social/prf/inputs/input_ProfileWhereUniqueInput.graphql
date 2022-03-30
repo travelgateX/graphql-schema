@@ -3,4 +3,5 @@ input ProfileWhereUniqueInput {
   id: Int
   name: String
   slug: String
+  ownerCode: String
 }
