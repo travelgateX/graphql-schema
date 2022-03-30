@@ -1,0 +1,5 @@
+input AssetFilter {
+  every: AssetWhereInput
+  none: AssetWhereInput
+  some: AssetWhereInput
+}

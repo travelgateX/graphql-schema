@@ -1,0 +1,10 @@
+type SocialQuery {
+  profile(where: ProfileWhereUniqueInput!): Profile!
+  allProfiles(
+    cursor: ProfileWhereUniqueInput
+    orderBy: [ProfileOrderByInput!]
+    skip: Int
+    take: Int
+    where: ProfileWhereInput
+  ): [Profile!]!
+}

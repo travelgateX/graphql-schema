@@ -1,0 +1,13 @@
+"""ToDo: Add ProfileData to input"""
+input ProfileUpdateInput {
+  Asset: AssetUpdateManyThroughUpdatingOtherSubentity
+  classifications: ProfileCreateOrUpdateClassificationsInput
+  description: String
+  groupCode: String
+  name: String
+  order: Float
+  ownerCode: String
+  slug: String
+  status: Status
+  websiteUrl: String
+}

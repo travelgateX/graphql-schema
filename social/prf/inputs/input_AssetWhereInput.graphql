@@ -1,0 +1,18 @@
+input AssetWhereInput {
+  AND: [AssetWhereInput!]
+  NOT: [AssetWhereInput!]
+  OR: [AssetWhereInput!]
+  Profile: ProfileWhereInput
+  createdAt: DateTimeFilter
+  handle: NullableStringFilter
+  height: NullableFloatFilter
+  id: NullableIntFilter
+  mimeType: NullableStringFilter
+  name: NullableStringFilter
+  profile: NullableIntFilter
+  size: NullableFloatFilter
+  type: AssetType
+  updatedAt: DateTimeFilter
+  url: NullableStringFilter
+  width: NullableFloatFilter
+}

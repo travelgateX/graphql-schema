@@ -1,5 +1,0 @@
-# Delete profile input
-input DeleteProfileInput {
-  # Profile Code
-  code: ID!
-}
