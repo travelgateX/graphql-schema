@@ -1,0 +1,6 @@
+type TrafficOptimizationMutation{
+	createTrafficOptimizationAccess(where: TrafficOptimizationCreateAccessInput!): TrafficOptimizationAccess  
+	activateTrafficOptimizationAccess(where: TrafficOptimizationUpdateAccessStatusInput!): TrafficOptimizationAccess  
+	deactivateTrafficOptimizationAccess(where: TrafficOptimizationUpdateAccessStatusInput!): TrafficOptimizationAccess
+    updateTrafficOptimizationAccessCriteria(where: TrafficOptimizationUpdateAccessCriteriaInput!): TrafficOptimizationAccess
+}
