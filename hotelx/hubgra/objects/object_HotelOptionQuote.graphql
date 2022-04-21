@@ -29,4 +29,7 @@ type HotelOptionQuote {
 
   # List of rooms of the option quoted.
   rooms: [RoomOptionQuote!]
+  
+  # Indicates the payment type of the option quoted. Possible options: Merchant, Direct, Card Booking, Card check in and Mixed.
+  paymentType: PaymentType!
 }

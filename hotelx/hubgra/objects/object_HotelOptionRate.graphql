@@ -1,0 +1,10 @@
+type HotelOptionRate {
+    # the code that identifies the rate in request's context (if it is mapped). Otherwise is equal that supplierCode.
+    code: String
+    # rate code in supplier context
+    supplierCode: String
+    # rate description
+    description: String
+    # restrictions applied to the rate
+    restrictions: [HotelOptionRateRestriction!]
+}

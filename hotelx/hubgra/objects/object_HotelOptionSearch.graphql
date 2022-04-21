@@ -69,4 +69,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   # Option level amenities. Contains information regarding Amenities, Amenities is defined as something intended to make life more
   # pleasant or comfortable for people, Examples include: swimming pools, shopping centers, etc.
   amenities: [Amenity!]
+
+   # RateRules contains all the rules that will be applied to book the option.
+  rateRulesExtended: [HotelOptionRateRule!]
 }

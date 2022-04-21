@@ -45,4 +45,7 @@ enum RateRulesType {
   
   # ESSENTIAL_WORKER are special hotel rates for essential workers.
   ESSENTIAL_WORKER
+
+  # NEGOTIATED Special rates offered only to specific buyers.
+  NEGOTIATED
 }
