@@ -1,6 +1,6 @@
 enum MappingType {
   """
-  HOTEL - Comming soon
+  HOTEL - Coming soon
   """
   AMENITY
   BOARD
