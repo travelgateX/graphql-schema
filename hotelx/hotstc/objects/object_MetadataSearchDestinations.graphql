@@ -4,6 +4,8 @@ type MetadataSearchDestinations{
     maxNumberHotels: ReviewedInt!
 
     # Recomended number of hotels.
-    recommendedNumberHotels: ReviewedInt!
-
+    recommendedNumberHotels: ReviewedInt!   
+    
+    # Required all hotels from same destination
+    hotelSameDestinationRestriction: ReviewedBool!
 }
