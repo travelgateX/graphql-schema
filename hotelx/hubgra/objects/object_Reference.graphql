@@ -11,6 +11,9 @@ type Reference {
 
   # Hotel reference booking
   hotel: String
+  
+  # Process Status in order to obtain the hotel confirmation number. If this field is null or empty, means that the status is unknown
+  hotelConfirmationNumberStatus: String 
 
   # HotelX's booking reference. It is an unique identifier for the book. The id is used to make the cancel mutation and booking query, so it is important not to modify it by any reason.
   bookingID: String
