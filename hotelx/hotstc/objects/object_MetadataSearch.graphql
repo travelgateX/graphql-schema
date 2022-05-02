@@ -32,9 +32,6 @@ type MetadataSearch{
     # Returns cancellation policies at room level.
     informRoomCancelPolicies:ReviewedBool!
 
-    # Specifies the timezone in UTC in which the cancellation policies are located.
-    timeZone: TimeZoneType
-
     # Space available for any remarks or comments aimed at the client.
     informRemarks:ReviewedBool!
 
