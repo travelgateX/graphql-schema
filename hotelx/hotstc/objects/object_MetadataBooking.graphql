@@ -22,6 +22,9 @@ type MetadataBooking{
     # Specifies if the supplier informs about the cancellation price.
     informPriceCancel: ReviewedBool!
 
+    # Specifies the timezone in UTC in which the cancellation policies are located.
+    timeZone:ReviewedTimeZone!
+    
     # Specifies if the supplier requires check-in date in reference.
     requiresCheckInDateInReferences: ReviewedBool!
 
