@@ -1,4 +1,4 @@
-input TrafficOptimizationUpdateAccessCriteriaInput{
+input TrafficOptimizationUpdateAccessInput{
 	accessCode: ID!
 	mode: ModeType!
 	requestedBy: TrafficOptimizationRequester!

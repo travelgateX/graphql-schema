@@ -9,19 +9,44 @@ type TrafficOptimizationMutation{
   		Activates the Traffic Optimization Tool for a given access
   	"""  
 	activateTrafficOptimizationAccess(
-		where: TrafficOptimizationUpdateAccessStatusInput!
+		where: TrafficOptimizationUpdateAccessInput!
 	): TrafficOptimizationAccess
 	"""
   		Deactivates the Traffic Optimization Tool for a given access
   	"""    
 	deactivateTrafficOptimizationAccess(
-		where: TrafficOptimizationUpdateAccessStatusInput!
+		where: TrafficOptimizationUpdateAccessInput!
 	): TrafficOptimizationAccess
 	"""
   		Updates the Traffic Optimization criteria field for a given access
   	""" 	
     updateTrafficOptimizationAccessCriteria(
-		where: TrafficOptimizationUpdateAccessCriteriaInput!, 
+		where: TrafficOptimizationUpdateAccessInput!, 
 		criterias: [TrafficOptimizationCriteriaType!]
 	): TrafficOptimizationAccess
+	"""
+  		Creates a new Traffic Optimization configuration for all of the accesses of a given connection
+  	"""
+	createTrafficOptimizationAllAccesses(
+		where: TrafficOptimizationCreateAllAccessesInput!
+	): TrafficOptimizationConnection
+	"""
+  		Activates the Traffic Optimization Tool for all of the accesses of a given connection
+  	"""
+	activateTrafficOptimizationAllAccesses(
+		where: TrafficOptimizationUpdateAllAccessesInput!
+	): TrafficOptimizationConnection
+	"""
+  		Deactivates the Traffic Optimization Tool for all of the accesses of a given connection
+  	"""
+	deactivateTrafficOptimizationAllAccesses(
+		where: TrafficOptimizationUpdateAllAccessesInput!
+	): TrafficOptimizationConnection
+	"""
+  		Updates the Traffic Optimization criteria field for all of the accesses of a given connection
+  	""" 	
+    updateTrafficOptimizationAllAccessesCriteria(
+		where: TrafficOptimizationUpdateAllAccessesInput!, 
+		criterias: [TrafficOptimizationCriteriaType!]
+	): TrafficOptimizationConnection
 }

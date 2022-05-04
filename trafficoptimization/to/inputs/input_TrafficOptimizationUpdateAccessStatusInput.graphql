@@ -1,5 +1,0 @@
-input TrafficOptimizationUpdateAccessStatusInput{
-    accessCode: ID!
-	mode: ModeType!
-	requestedBy: TrafficOptimizationRequester!
-}
