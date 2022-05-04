@@ -1,6 +1,5 @@
 input TrafficOptimizationUpdateAccessStatusInput{
-    access: ID
-	code: ID
+    accessCode: ID!
 	mode: ModeType!
 	requestedBy: TrafficOptimizationRequester!
 }

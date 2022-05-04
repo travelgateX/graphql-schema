@@ -1,5 +1,5 @@
 input TrafficOptimizationCreateAccessInput{
-	access: ID!
+	accessCode: ID!
 	organizationBuyerCode: ID!
 	organizationSellerCode: ID! 
 	mode: ModeType!

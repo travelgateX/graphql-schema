@@ -1,6 +1,27 @@
 type TrafficOptimizationMutation{
-	createTrafficOptimizationAccess(where: TrafficOptimizationCreateAccessInput!): TrafficOptimizationAccess  
-	activateTrafficOptimizationAccess(where: TrafficOptimizationUpdateAccessStatusInput!): TrafficOptimizationAccess  
-	deactivateTrafficOptimizationAccess(where: TrafficOptimizationUpdateAccessStatusInput!): TrafficOptimizationAccess
-    updateTrafficOptimizationAccessCriteria(where: TrafficOptimizationUpdateAccessCriteriaInput!): TrafficOptimizationAccess
+	"""
+  		Creates a new Traffic Optimization configuration for a given access
+  	"""
+	createTrafficOptimizationAccess(
+		where: TrafficOptimizationCreateAccessInput!
+	): TrafficOptimizationAccess
+	"""
+  		Activates the Traffic Optimization Tool for a given access
+  	"""  
+	activateTrafficOptimizationAccess(
+		where: TrafficOptimizationUpdateAccessStatusInput!
+	): TrafficOptimizationAccess
+	"""
+  		Deactivates the Traffic Optimization Tool for a given access
+  	"""    
+	deactivateTrafficOptimizationAccess(
+		where: TrafficOptimizationUpdateAccessStatusInput!
+	): TrafficOptimizationAccess
+	"""
+  		Updates the Traffic Optimization criteria field for a given access
+  	""" 	
+    updateTrafficOptimizationAccessCriteria(
+		where: TrafficOptimizationUpdateAccessCriteriaInput!, 
+		criterias: [TrafficOptimizationCriteriaType!]
+	): TrafficOptimizationAccess
 }
