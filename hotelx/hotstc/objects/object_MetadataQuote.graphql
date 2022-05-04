@@ -20,5 +20,4 @@ type MetadataQuote{
 
     # Informs if the supplier requires nationality
     requiredNationality: ReviewedBool
-    
 }

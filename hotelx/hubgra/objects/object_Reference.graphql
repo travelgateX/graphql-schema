@@ -11,6 +11,16 @@ type Reference {
 
   # Hotel reference booking
   hotel: String
+  
+  # Process Status in order to obtain the hotel confirmation number. If this field is null or empty, means that the status is unknown. Possible values: 
+  # "P" => (pending): The booking hasn't been assinged to any operator yet, or it has, but the operator did not make the call yet
+  # "R" => (retrying): The operator tried to call the hotel, but for some reason, the call couldn't be completed because of external factors. This means the operator will try to call again later.
+  # "NA" => (no answer): The operator tried to call the hotel several times, but the hotel did not answer.
+  # "C" => (cancelled): The operator has been informed by the hotel, that the booking has been canceled.
+  # "DNE" => (does not exists): The operator has been informed by the hotel, that the booking does not exists
+  # "F" => (fetched): The operator called the hotel and got the hotel confirmation number (a trully succesfull call)
+  # "I" => (issued): The operator called the hotel, but there are issues. Maybe the hotel is closed, maybe natural disater situations are alerted for the check in date, etc.
+  hotelConfirmationNumberStatus: String 
 
   # HotelX's booking reference. It is an unique identifier for the book. The id is used to make the cancel mutation and booking query, so it is important not to modify it by any reason.
   bookingID: String
