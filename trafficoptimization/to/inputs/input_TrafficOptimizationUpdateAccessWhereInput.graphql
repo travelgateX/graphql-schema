@@ -1,0 +1,3 @@
+input TrafficOptimizationUpdateAccessWhereInput{
+	accessCode: ID!
+}
