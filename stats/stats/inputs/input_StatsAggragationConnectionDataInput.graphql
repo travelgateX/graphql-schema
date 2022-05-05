@@ -1,0 +1,9 @@
+""" Data able to retrieve stats """
+input StatsAggregationConnectionDataInput{
+  " Retrieve data as a Buyer or as a Seller "  
+  mode: ModeType!
+  " Group by multiple data "
+  groupBy: [StatsGroupBy!]
+  " To group data by time " 
+  timeGroupBy: StatsTimeGroupBy
+}

@@ -1,7 +1,7 @@
-# data which can be grouped by to show stats data
+""" List of fields which can be grouped to show stats data """
 enum StatsGroupBy{ 
-  BUYER_ORGANIZATION
-  SELLER_ORGANIZATION
+  BUYER
+  SELLER
   ACCESS
   CLIENT
   SUPPLIER

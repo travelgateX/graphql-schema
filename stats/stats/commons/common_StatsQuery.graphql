@@ -1,8 +1,8 @@
 extend type StatsQuery{
-  # The report query, represents all of the entry points into our object graph
+  """ The report query, represents all of the entry points into our object graph """
   report( filter: StatsFilterInput!, first: Int, last: Int, before: String, after: String): StatsConnection!
-  # Returns the active connections between a Client and Supplier
+  """ Returns the active connections between a Client and Supplier """
   getActiveConnection(filter: ActiveFilterInput!): ConnectionConnection!
-  # Query to retrieve Stats Aggregated
-  getAggregationStats(where: StatsAggregationConnectionWhereInput!): StatsAggregationConnection!
+  """ Query to retrieve Stats Aggregated """
+  getAggregationStats(where: StatsAggregationConnectionWhereInput! data:StatsAggregationConnectionDataInput!): StatsAggregationConnection!
 }
