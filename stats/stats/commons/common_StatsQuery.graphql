@@ -4,5 +4,5 @@ extend type StatsQuery{
   """ Returns the active connections between a Client and Supplier """
   getActiveConnection(filter: ActiveFilterInput!): ConnectionConnection!
   """ Query to retrieve Stats Aggregated """
-  getAggregationStats(where: StatsAggregationConnectionWhereInput! data:StatsAggregationConnectionDataInput!): StatsAggregationConnection!
+  getAggregationStats(where: StatsAggregationConnectionWhereInput! groupBy:StatsAggregationConnectionGroupByInput!): StatsAggregationConnection!
 }

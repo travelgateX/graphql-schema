@@ -1,5 +1,7 @@
 """ Filters able to retrieve stats """
 input StatsAggregationConnectionWhereInput{
+  " Retrieve data as a Buyer or as a Seller "  
+  mode: ModeType!
   " Input time "  
   timeRange: TimeRangeInput!
   " List of buyer codes "  

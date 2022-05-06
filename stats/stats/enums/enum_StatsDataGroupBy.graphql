@@ -1,5 +1,5 @@
 """ List of fields which can be grouped to show stats data """
-enum StatsGroupBy{ 
+enum StatsDataGroupBy{ 
   BUYER
   SELLER
   ACCESS

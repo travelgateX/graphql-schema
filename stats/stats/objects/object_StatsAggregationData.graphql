@@ -26,5 +26,5 @@ trafficType: TrafficType
 " returned time value if groupByTime is used "
 time: DateTime
 " to get data deaggregate from this node "
-deaggregateData( where: StatsAggregationConnectionWhereInput! data: StatsAggregationConnectionDataInput! ): StatsAggregationConnection
+deaggregateData( where: StatsAggregationConnectionWhereInput! groupBy: StatsAggregationConnectionGroupByInput! ): StatsAggregationConnection
 }
