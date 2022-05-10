@@ -1,6 +1,6 @@
 type TrafficOptimizationAccess {
   code: ID!
-  trafficOptimizationAccessData: TrafficOptimizationAccessData!
+  trafficOptimizationAccessData: TrafficOptimizationAccessData
   createdAt: DateTime!
   updatedAt: DateTime!
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
