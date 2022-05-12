@@ -1,0 +1,9 @@
+type HubUserData {
+  code: ID!
+  name: String!
+  password: String
+  isActive: Boolean!
+  giataActive: Boolean!
+  giataConfiguration: String
+  owner: Organization
+}

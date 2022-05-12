@@ -24,4 +24,8 @@ extend type AdminQuery {
   legacyAccesses(filter: LegacyAccessFilter): LegacyAccessConnection
   # Update provider is active field
   updateProvider(input: ProviderInput!): Provider
+  # Get HubUser
+  hubUsers(filter: HubUsersFilter): [HubUser!]
+
+
 }

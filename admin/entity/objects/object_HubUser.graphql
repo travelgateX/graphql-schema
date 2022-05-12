@@ -1,0 +1,7 @@
+type HubUser implements Node {
+  code: ID!
+  hubUserData: HubUserData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
