@@ -1,0 +1,12 @@
+input UpdateHubProviderInput {
+  # supplier code
+  code: ID!
+  # Is supplier in development?
+  inDevelopment: Boolean
+  # GiataType
+  giataType: String
+  # Giata Code
+  giataCode: String
+  # Is suspplier direct?
+  isDirect: Boolean
+}

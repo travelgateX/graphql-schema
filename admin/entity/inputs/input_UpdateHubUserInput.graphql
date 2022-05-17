@@ -1,0 +1,10 @@
+input UpdateHubUserInput {
+  # Client complete name
+  name: String!
+  # Client password
+  password: String
+  # Client giataCode
+  giataConfiguration: String
+  # Client giataType
+  giataActive: Boolean
+}

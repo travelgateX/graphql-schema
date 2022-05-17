@@ -35,6 +35,10 @@ extend type AdminMutation {
   setProviderMaintainer(providerID: ID!, maintainer: ID!): Member
   # Update legacy access. HubUser HubProvider relation
   updateLegacyAccess(input: LegacyAccessInput!): LegacyAccess
-    # Create legacy access. HubUser HubProvider relation
+  # Create legacy access. HubUser HubProvider relation
   createLegacyAccess(input: LegacyAccessInput!): LegacyAccess
+  # Updates a HubUser.
+  updateHubUser(input: UpdateHubUserInput!): HubUser
+  # Updates existing hubprovider. 
+  updateHubProvider(input: UpdateHubProviderInput!): HubProvider
 }

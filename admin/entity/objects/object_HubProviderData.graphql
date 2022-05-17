@@ -1,0 +1,12 @@
+type HubProviderData {
+  # unique identifier of a supplier
+  code: ID!
+  # Is supplier in development?
+  inDevelopment: Boolean
+  # GiataType
+  giataType: String
+  # Giata Code
+  giataCode: String
+  # Is supplier direct?
+  isDirect: Boolean
+}
