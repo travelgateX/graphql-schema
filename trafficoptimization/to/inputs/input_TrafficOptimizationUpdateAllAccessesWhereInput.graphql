@@ -1,6 +1,4 @@
 input TrafficOptimizationUpdateAllAccessesWhereInput{
     organizationBuyerCode: ID!
-	organizationSellerCode: ID! 
-	mode: ModeType!
-	requestedBy: TrafficOptimizationRequester!
+	organizationSellerCode: ID!
 }
