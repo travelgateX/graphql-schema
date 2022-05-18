@@ -24,7 +24,7 @@ type TrafficOptimizationMutation{
   	""" 	
     updateTrafficOptimizationAccessCriteria(
 		where: TrafficOptimizationUpdateAccessWhereInput!, 
-		data: TrafficOptimizationUpdateAccessCriteriaDataInput
+		data: TrafficOptimizationUpdateAccessCriteriaDataInput!
 	): TrafficOptimizationAccess
 	"""
   		Creates a new Traffic Optimization configuration for all of the accesses of a given connection
