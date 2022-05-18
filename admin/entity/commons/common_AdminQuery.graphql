@@ -26,6 +26,7 @@ extend type AdminQuery {
   updateProvider(input: ProviderInput!): Provider
   # Get HubUser
   hubUsers(filter: HubUsersFilter): [HubUser!]
-
+  # Get HubProvider
+  hubProviders(filter: HubProviderFilter): [HubProvider!]
 
 }
