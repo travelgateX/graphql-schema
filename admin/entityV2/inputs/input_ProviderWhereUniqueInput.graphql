@@ -1,0 +1,4 @@
+input ProviderWhereUniqueInput {
+    id: ID
+    code: ID
+}

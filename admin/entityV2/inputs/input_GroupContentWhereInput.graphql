@@ -1,0 +1,4 @@
+input GroupContentWhereInput {
+    groupContentCode: ID
+    contextCode: ID
+}

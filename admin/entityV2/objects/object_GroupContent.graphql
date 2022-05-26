@@ -1,0 +1,7 @@
+type GroupContent implements Node {
+  code: ID!
+  groupContentData: GroupContentData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: Time!
+  updatedAt: Time!
+}

@@ -1,0 +1,10 @@
+input SupplierCreateInput {
+    code: ID!
+    name: String!
+    provider: ID!
+    group: ID!
+    id: ID
+    serviceApi: ID = 1
+    isActive: Boolean = true
+    groupContent: ID
+}

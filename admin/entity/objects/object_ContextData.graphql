@@ -1,0 +1,4 @@
+type ContextData {
+  id: ID!
+  code: ID!
+}
