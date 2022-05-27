@@ -4,4 +4,18 @@ extend type AdminQuery {
   client(where: ClientWhereUniqueInput!): Client
   # EntitiesV2 allClients query
   allClients(where: ClientWhereInput, orderBy: ClientOrderByInput): ClientConnection!
+
+  """EntitiesV2 clientsByOwnerCode query"""
+  clientsByOwnerCode(code: ID!, orderBy: ClientOrderByInput): ClientConnection!
+  """EntitiesV2 clientsByGroupCode query"""
+  clientsByGroupCode(code: ID!, orderBy: ClientOrderByInput): ClientConnection!
+  """EntitiesV2 Get all providers"""
+  allProviders(where: ProviderWhereInput, orderBy: ProviderOrderByEnum): [Provider!]
+  """EntitiesV2 Get group contents"""
+  allGroupContents(where:GroupContentWhereInput): [GroupContent!]
+  """EntitiesV2 Get supplier"""
+  supplier(where: SupplierWhereUniqueInput!): Supplier
+  """EntitiesV2 Get all suppliers"""
+  allSuppliers(where: SupplierWhereInput orderBy: SupplierOrderByEnum): SupplierConnection!
+
 }
