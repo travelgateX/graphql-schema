@@ -1,0 +1,4 @@
+input SupplierUpdateInput {
+    name: String
+    serviceApi: ID
+}

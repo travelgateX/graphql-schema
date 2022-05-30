@@ -1,0 +1,4 @@
+input ProviderWhereUniqueInput {
+    search: ID!
+    searchBy: ProviderSearchByOptions!
+}

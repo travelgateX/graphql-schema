@@ -1,7 +1,8 @@
-# Temporary type to use only during SQL server's lifetime
-type Provider {
+type Provider implements Node {
   code: ID!
-  name: String!
-  isActive: Boolean
-  isPublic: Boolean
+  providerData: ProviderData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  error: [Error!] @deprecated(reason: "deprecated from 2019-01-01. Use adviseMessage instead")
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }

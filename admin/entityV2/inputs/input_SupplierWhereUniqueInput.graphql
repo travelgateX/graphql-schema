@@ -1,0 +1,4 @@
+input SupplierWhereUniqueInput {
+    search: ID!
+    searchBy: SupplierSearchByOptions!
+}

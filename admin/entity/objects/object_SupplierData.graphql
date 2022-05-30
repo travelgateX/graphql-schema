@@ -1,4 +1,5 @@
 type SupplierData{
+  id: ID!
   # unique identifier of a supplier
   code: ID!
   # Supplier complete name
@@ -8,19 +9,19 @@ type SupplierData{
   # instance to which this supllier is connected
   provider: ProviderData!
   # Context where the Supplier belongs to
-  context: String!
+  context: String
   # Service API
-  serviceApi: Int!
+  serviceApi: ID!
   # SupplierGroup Internal Supplier grouping
   supplierGroup: ID
   # Accesses where the supplier is referenced
-  accesses(first: Int, last: Int, before: String, after:String, filter: AccessFilter): AccessConnection
+  #accesses(first: Int, last: Int, before: String, after:String, filter: AccessFilter): AccessConnection
   # Supplier owner
-  owner: Organization!
+  owner: Organization
   # Groups where access belongs
   groups(first: Int, last: Int, before: String, after:String): GroupConnection
   # Obtain all clients for a filter.
-  clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
+  #clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
   # Obtain its system.
-  system: System!
+  #system: System!
 }

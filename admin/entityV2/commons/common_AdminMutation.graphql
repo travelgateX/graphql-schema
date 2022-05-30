@@ -1,0 +1,36 @@
+# Mutations are operations that change or update data on the server
+extend type AdminMutation {
+  """EntitiesV2 Create provider"""
+  createProvider(data:ProviderCreateInput!): Provider!
+  """EntitiesV2 Delete provider"""
+  deleteProvider(where: ProviderWhereUniqueInput!): Provider!
+  """EntitiesV2 Activate provider"""
+  activateProvider(where: ProviderWhereUniqueInput!): Provider!
+  """EntitiesV2 Deactivate provider"""
+  deactivateProvider(where: ProviderWhereUniqueInput!): Provider!
+  """EntitiesV2 Create group content"""
+  createGroupContent(data:GroupContentCreateInput!): GroupContent!
+  """EntitiesV2 Delete group content"""
+  deleteGroupContent(code:ID!): GroupContent!
+  """EntitiesV2 Create supplier"""
+  createSupplier(data: SupplierCreateInput!): Supplier!
+  """EntitiesV2 Grant supplier to group"""
+  grantSupplierToGroups(where: SupplierWhereUniqueInput!, groups: [ID!]): Supplier!
+  """EntitiesV2 Remove/Revoke supplier from group"""
+  revokeSupplierFromGroups(where: SupplierWhereUniqueInput!, groups: [ID!]): Supplier!
+  """EntitiesV2 Delete supplier"""
+  deleteSupplier(where: SupplierWhereUniqueInput!): Supplier!
+  """EntitiesV2 Update supplier"""
+  updateSupplier(where: SupplierWhereUniqueInput!, data: SupplierUpdateInput!): Supplier!
+  """EntitiesV2 Activate supplier"""
+  activateSupplier(where: SupplierWhereUniqueInput!): Supplier!
+  """EntitiesV2 Deactivate supplier"""
+  deactivateSupplier(where: SupplierWhereUniqueInput!): Supplier!
+  """EntitiesV2 set supplier owner"""
+  setSupplierOwner(where: SupplierWhereUniqueInput!, ownerCode: ID!): Supplier!
+  """EntitiesV2 set supplier provider"""
+  setSupplierProvider(where: SupplierWhereUniqueInput!, providerCode: ID!): Supplier!
+  """EntitiesV2 set supplier groupcontent"""
+  setSupplierGroupContent(where: SupplierWhereUniqueInput!, groupContentCode: ID!): Supplier!
+
+}

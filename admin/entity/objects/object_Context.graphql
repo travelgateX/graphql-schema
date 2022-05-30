@@ -1,13 +1,16 @@
 # Context type. Currently, only Code is necessary.
 type Context implements Node {
   code: ID!
-  
+
   # Errors that abort services
-  error: [Error!]
-  
+  error: [Error!] @deprecated(reason: "Should be replaced with adviseMessage.")
+
+  contextData: ContextData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+
   # Date created
   createdAt: DateTime!
-  
+
   # Date updated
   updatedAt: DateTime!
 }
