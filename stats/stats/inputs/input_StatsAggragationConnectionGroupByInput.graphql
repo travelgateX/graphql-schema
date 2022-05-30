@@ -1,0 +1,7 @@
+""" Data able to retrieve stats """
+input StatsAggregationConnectionGroupByInput{
+  " To group by data "
+  data: [StatsDataGroupBy!]
+  " To group data by time " 
+  time: StatsTimeGroupBy
+}
