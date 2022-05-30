@@ -1,0 +1,6 @@
+input AlertUpdateBusinessMetricRatioByTimeInput {
+  name: String
+  description: String
+  configuration: AlertUpdateBusinessMetricRatioConfigurationByTimeInput
+  isActive: Boolean
+}

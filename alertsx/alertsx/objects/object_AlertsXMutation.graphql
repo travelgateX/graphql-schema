@@ -28,6 +28,9 @@ type AlertsXMutation {
   createAlertPriceAbsoluteByTime(data: AlertPriceAbsoluteByTimeInput!): Alert
   "Mutation to create a new alert type Price as Absolute mode & Request Window"
   createAlertPriceAbsoluteByRequests(data: AlertPriceAbsoluteByRequestsInput!): Alert
+  "Mutation to create a new alert type BusinessMetric as Ratio mode & Time Window"
+  createAlertBusinessMetricRatioByTime(data: AlertBusinessMetricRatioByTimeInput!): Alert
+
 
   "Mutation to update an alert type ErrorRate as Relative mode & Time Window"
   updateAlertErrorRateRelativeByTime(code:ID! data: AlertUpdateErrorRateRelativeByTimeInput!): Alert
@@ -57,6 +60,9 @@ type AlertsXMutation {
   updateAlertPriceAbsoluteByTime(code:ID! data: AlertUpdatePriceAbsoluteByTimeInput!): Alert
   "Mutation to update an alert type Price as Absolute mode & Requests Window"
   updateAlertPriceAbsoluteByRequests(code:ID! data: AlertUpdatePriceAbsoluteByRequestsInput!): Alert
+  "Mutation to update an alert type BusinessMetric as Ratio mode & Time Window"
+  updateAlertBusinessMetricRatioByTime(code:ID! data: AlertUpdateBusinessMetricRatioByTimeInput!): Alert
+ 
  
   "Mutation to delete an alert"
   deleteAlert(code:ID!):Alert

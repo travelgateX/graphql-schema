@@ -1,0 +1,8 @@
+input AlertBusinessMetricRatioByTimeInput {
+  name: String
+  description: String
+  configuration: AlertBusinessMetricRatioConfigurationByTimeInput!
+  isActive: Boolean!
+  "group alertX product"
+  group: ID!
+}

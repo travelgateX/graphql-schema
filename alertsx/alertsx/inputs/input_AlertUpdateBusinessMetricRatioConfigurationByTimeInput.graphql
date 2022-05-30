@@ -1,0 +1,8 @@
+input AlertUpdateBusinessMetricRatioConfigurationByTimeInput {
+  "Specific configuration of business metric alert type"
+  ratios: AlertUpdateRatioInput
+  "Common configuration for time window type."
+  windowing: AlertUpdateCommonByTimeInput
+  "Common configuration alert"
+  common: AlertUpdateCommonConfigurationInput
+}

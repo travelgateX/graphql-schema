@@ -12,6 +12,8 @@ type AlertTypeConfiguration {
   toCompare: [Int!]
   "Price contains the specific configuration for Price alert Type"
   price: AlertPrice
-  "Bounds contains the specific configuration for Peak Traffic alert Type"
+  "Bounds contains the specific configuration for Peak Traffic alert type"
   bounds: AlertBounds
+  "Ratios contains the specific configuration for Business MEtric alert type"
+  ratios: AlertRatios
 }
