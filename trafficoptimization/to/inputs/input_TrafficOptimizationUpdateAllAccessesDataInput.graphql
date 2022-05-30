@@ -1,0 +1,4 @@
+input TrafficOptimizationUpdateAllAccessesDataInput{
+	mode: ModeType!
+	requestedBy: TrafficOptimizationRequester!
+}

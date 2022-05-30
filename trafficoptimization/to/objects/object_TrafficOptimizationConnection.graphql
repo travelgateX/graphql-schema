@@ -1,6 +1,6 @@
 type TrafficOptimizationConnection {
   code: ID!
-  trafficOptimizationConnectionData: TrafficOptimizationConnectionData!
+  trafficOptimizationConnectionData: TrafficOptimizationConnectionData
   createdAt: DateTime!
   updatedAt: DateTime!
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]

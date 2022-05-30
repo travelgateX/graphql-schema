@@ -7,4 +7,6 @@ type Mutation {
   logging: LoggingMutation
   activation: ActivationMutation
   social: SocialMutation
+  speed: SpeedMutation
+  trafficOptimization: TrafficOptimizationMutation
 }

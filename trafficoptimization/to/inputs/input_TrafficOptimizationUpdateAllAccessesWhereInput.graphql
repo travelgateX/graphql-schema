@@ -1,0 +1,4 @@
+input TrafficOptimizationUpdateAllAccessesWhereInput{
+    organizationBuyerCode: ID!
+	organizationSellerCode: ID!
+}

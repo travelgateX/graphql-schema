@@ -1,0 +1,5 @@
+input TrafficOptimizationUpdateAccessCriteriaDataInput{
+	mode: ModeType!
+	requestedBy: TrafficOptimizationRequester!
+    criterias: [TrafficOptimizationCriteriaType!]
+}
