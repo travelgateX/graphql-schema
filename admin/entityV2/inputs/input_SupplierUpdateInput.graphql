@@ -1,4 +1,7 @@
 input SupplierUpdateInput {
     name: String
+    providerCode: ID
     serviceApi: ID
+    groupContentCode: ID
+    ownerCode: ID
 }

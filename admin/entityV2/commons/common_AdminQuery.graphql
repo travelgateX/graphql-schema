@@ -15,7 +15,14 @@ extend type AdminQuery {
   allGroupContents(where:GroupContentWhereInput): [GroupContent!]
   """EntitiesV2 Get supplier"""
   supplier(where: SupplierWhereUniqueInput!): Supplier
+  """
+  EntitiesV2 Get suppliers by owner codes
+  """
+  suppliersByOwnerCodes(ownerCodes: [ID!]!, orderBy: SupplierOrderByEnum): SupplierConnection!
+  """
+  EntitiesV2 Get suppliers by group codes
+  """
+  suppliersByGroupCodes(groupCodes: [ID!]!, orderBy: SupplierOrderByEnum): SupplierConnection!
   """EntitiesV2 Get all suppliers"""
   allSuppliers(where: SupplierWhereInput orderBy: SupplierOrderByEnum): SupplierConnection!
-
 }

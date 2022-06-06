@@ -2,5 +2,5 @@ input ProviderCreateInput {
     id: ID
     code: ID!
     name: String!
-    isActive: Boolean
+    isActive: Boolean = true
 }
