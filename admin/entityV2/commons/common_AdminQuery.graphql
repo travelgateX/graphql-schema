@@ -1,10 +1,13 @@
 # A Query is an entry point into the object graph.
 extend type AdminQuery {
-  # EntitiesV2 client query
+  """EntitiesV2 client query"""
   client(where: ClientWhereUniqueInput!): Client
-  # EntitiesV2 allClients query
+  """EntitiesV2 allClients query"""
   allClients(where: ClientWhereInput, orderBy: ClientOrderByInput): ClientConnection!
-
+  """EntitiesV2 clientsByOwnerCodes query"""
+  clientsByOwnerCodes(ownerCodes: [ID!]!, orderBy: ClientOrderByInput): ClientConnection!
+  """EntitiesV2 clientsByGroupCodes query"""
+  clientsByGroupCodes(groupCodes: [ID!]!, orderBy: ClientOrderByInput): ClientConnection!
   """EntitiesV2 clientsByOwnerCode query"""
   clientsByOwnerCode(code: ID!, orderBy: ClientOrderByInput): ClientConnection!
   """EntitiesV2 clientsByGroupCode query"""
@@ -15,13 +18,9 @@ extend type AdminQuery {
   allGroupContents(where:GroupContentWhereInput): [GroupContent!]
   """EntitiesV2 Get supplier"""
   supplier(where: SupplierWhereUniqueInput!): Supplier
-  """
-  EntitiesV2 Get suppliers by owner codes
-  """
+  """EntitiesV2 Get suppliers by owner codes"""
   suppliersByOwnerCodes(ownerCodes: [ID!]!, orderBy: SupplierOrderByEnum): SupplierConnection!
-  """
-  EntitiesV2 Get suppliers by group codes
-  """
+  """EntitiesV2 Get suppliers by group codes"""
   suppliersByGroupCodes(groupCodes: [ID!]!, orderBy: SupplierOrderByEnum): SupplierConnection!
   """EntitiesV2 Get all suppliers"""
   allSuppliers(where: SupplierWhereInput orderBy: SupplierOrderByEnum): SupplierConnection!
