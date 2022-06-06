@@ -26,11 +26,4 @@ extend type AdminMutation {
   activateSupplier(where: SupplierWhereUniqueInput!): Supplier!
   """EntitiesV2 Deactivate supplier"""
   deactivateSupplier(where: SupplierWhereUniqueInput!): Supplier!
-  """EntitiesV2 set supplier owner"""
-  setSupplierOwner(where: SupplierWhereUniqueInput!, ownerCode: ID!): Supplier!
-  """EntitiesV2 set supplier provider"""
-  setSupplierProvider(where: SupplierWhereUniqueInput!, providerCode: ID!): Supplier!
-  """EntitiesV2 set supplier groupcontent"""
-  setSupplierGroupContent(where: SupplierWhereUniqueInput!, groupContentCode: ID!): Supplier!
-
 }
