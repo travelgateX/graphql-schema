@@ -4,10 +4,10 @@ extend type AdminQuery {
   client(where: ClientWhereUniqueInput!): Client
   """EntitiesV2 allClients query"""
   allClients(where: ClientWhereInput, orderBy: ClientOrderByInput): ClientConnection!
-  """EntitiesV2 clientsByOwnerCode query"""
-  clientsByOwnerCode(code: ID!, orderBy: ClientOrderByInput): ClientConnection!
-  """EntitiesV2 clientsByGroupCode query"""
-  clientsByGroupCode(code: ID!, orderBy: ClientOrderByInput): ClientConnection!
+  """EntitiesV2 clientsByOwnerCodes query"""
+  clientsByOwnerCodes(ownerCodes: [ID!]!, orderBy: ClientOrderByInput): ClientConnection!
+  """EntitiesV2 clientsByGroupCodes query"""
+  clientsByGroupCodes(groupCodes: [ID!]!, orderBy: ClientOrderByInput): ClientC
   """EntitiesV2 Get all providers"""
   allProviders(where: ProviderWhereInput, orderBy: ProviderOrderByEnum): [Provider!]
   """EntitiesV2 Get group contents"""
