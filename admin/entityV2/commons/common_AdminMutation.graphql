@@ -15,9 +15,9 @@ extend type AdminMutation {
   """EntitiesV2 Create supplier"""
   createSupplier(data: SupplierCreateInput!): Supplier!
   """EntitiesV2 Grant supplier to group"""
-  grantSupplierToGroups(where: SupplierWhereUniqueInput!, groups: [ID!]): Supplier!
+  grantSupplierToGroups(where: SupplierWhereUniqueInput!, groupCodes: [ID!]): Supplier!
   """EntitiesV2 Remove/Revoke supplier from group"""
-  revokeSupplierFromGroups(where: SupplierWhereUniqueInput!, groups: [ID!]): Supplier!
+  revokeSupplierFromGroups(where: SupplierWhereUniqueInput!, groupCodes: [ID!]): Supplier!
   """EntitiesV2 Delete supplier"""
   deleteSupplier(where: SupplierWhereUniqueInput!): Supplier!
   """EntitiesV2 Update supplier"""
