@@ -1,0 +1,4 @@
+input HotelXAppWhereUniqueInput {
+  # Code that identifies the app
+  code: ID!
+}
