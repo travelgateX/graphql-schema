@@ -1,0 +1,7 @@
+# Input that allows to send additional data to app
+input HotelXAppInput {
+    # Identifies the app
+    where: HotelXAppWhereUniqueInput!
+    # Data that will be sent to app
+    data: HotelXAppDataInput!
+}
