@@ -8,4 +8,7 @@ input HolderInput {
 
   # Holder’s title.
   title: PersonalTitleType
+  
+  # Holder's contact info
+  contactInfo: ContactInfoInput
 }
