@@ -4,3 +4,4 @@ input HotelXBoardQueryInput {
   # Indicates the access that you want use.
   access: ID!
 }
+
