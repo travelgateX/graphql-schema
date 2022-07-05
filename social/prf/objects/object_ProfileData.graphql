@@ -10,4 +10,6 @@ type ProfileData{
   classifications: [ProfileClassification!]
   status: Status!
   websiteUrl: String
+  buyerPartnerStatus: PartnerStatusType
+  sellerPartnerStatus: PartnerStatusType
 }

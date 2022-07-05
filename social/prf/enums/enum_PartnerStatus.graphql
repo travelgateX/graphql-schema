@@ -1,0 +1,6 @@
+# Type of group
+enum PartnerStatusType {
+  ACTIVE
+  PASSIVE
+  INACTIVE
+}
