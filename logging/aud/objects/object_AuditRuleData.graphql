@@ -2,7 +2,11 @@ type AuditRuleData {
   product: Product!
   group: Group
   access: Access
+  Owner: Organization
   client: Client
+  Supplier: Supplier
+	Buyer: Organization
+	Seller: Organization
   error: AdviseMessage
   ttl: Int!
   remainingTTL: Int!

@@ -6,7 +6,10 @@ input AuditRuleCreateInput {
   percentageToAudit: Int!
   product: AuditRuleProductInput!
   supplier: ID
-  ttl: Int!
+  ttl: Int!  
+	orgBuyer: ID
+	orgSeller: ID
+	mode: ModeType!
   """
   If startTime is null, the audit initalization time will be te current time.
   """
