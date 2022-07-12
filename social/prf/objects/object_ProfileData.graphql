@@ -12,4 +12,6 @@ type ProfileData{
   websiteUrl: String
   buyerPartnerStatus: PartnerStatusType
   sellerPartnerStatus: PartnerStatusType
+  buyerOnboardingStart: Date
+  buyerOnboardingEnd: Date
 }
