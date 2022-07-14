@@ -1,8 +1,0 @@
-# Mode to select which kind of stats do you want query
-enum ModeType {
-    # When the request has been send as a buyer
-    BUYER
-    
-    # When the request has been send as a seller
-    SELLER
-}
