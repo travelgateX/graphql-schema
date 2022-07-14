@@ -1,4 +1,5 @@
 input AuditRuleWhereInput {
   product: AuditRuleProductInput!
   auditStatus: AuditRuleStatus!
+  owner: ID
 }
