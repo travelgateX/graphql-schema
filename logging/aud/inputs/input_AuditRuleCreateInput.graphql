@@ -9,7 +9,7 @@ input AuditRuleCreateInput {
   ttl: Int!  
 	orgBuyer: ID
 	orgSeller: ID
-	mode: ModeType!
+	mode: ModeType
   """
   If startTime is null, the audit initalization time will be te current time.
   """
