@@ -48,4 +48,8 @@ enum RateRulesType {
 
   # NEGOTIATED Special rates offered only to specific buyers.
   NEGOTIATED
+
+  # CUSTOM Custom rates
+  CUSTOM
+
 }
