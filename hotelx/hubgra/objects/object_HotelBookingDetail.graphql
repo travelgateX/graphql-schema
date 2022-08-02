@@ -22,6 +22,9 @@ type HotelBookingDetail {
   remarks: String
   
   # Booking Status.
+  # The possible values for this field are specified in our knowledge base. Please visit www.knowledge.travelgatex.com if you have any doubt.
+  # Possible values for book mutation and booking query: https://knowledge.travelgatex.com/book-status
+  # Possible values for cancel mutation: https://knowledge.travelgatex.com/cancel-status
   status: BookStatusType!
   
   # Supplier’s billing code. Will be returned if the supplier has different billing accounts and this is informed in the reservation.
