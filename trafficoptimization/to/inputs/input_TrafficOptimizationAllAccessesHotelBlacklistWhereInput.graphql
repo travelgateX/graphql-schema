@@ -1,0 +1,8 @@
+input TrafficOptimizationAllAccessesHotelBlacklistWhereInput {
+  code_in:[ID!] 
+  mode: ModeType!
+  hotelCode_in:[ID!]
+  buyer_in:[ID!]
+  seller_in:[ID!] 
+  criterias_in:[TrafficOptimizationCriteriaType!]
+}

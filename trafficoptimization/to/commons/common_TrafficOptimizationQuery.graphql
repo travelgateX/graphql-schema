@@ -1,3 +1,26 @@
 extend type TrafficOptimizationQuery{
-  trafficOptimizationConnectionConnection(where: TrafficOptimizationConnectionConnectionWhereInput): TrafficOptimizationConnectionConnection!
+  """
+    Return traffic optimization configuration
+  """
+  trafficOptimizationConnectionConnection(
+    where: TrafficOptimizationConnectionConnectionWhereInput
+  ): TrafficOptimizationConnectionConnection!
+  
+  """
+    Return blacklist hotels of Accesses
+  """
+  allTrafficOptimizationAccessHotelBlacklist(
+    where:TrafficOptimizationAccessHotelBlacklistWhereInput 
+    first:Int 
+    after:String
+  ):TrafficOptimizationHotelBlacklistConnection!
+
+  """
+    Return blacklist hotels of Connections
+  """
+  allTrafficOptimizationAllAccessesHotelBlacklist(
+    where:TrafficOptimizationAllAccessesHotelBlacklistWhereInput 
+    first:Int 
+    after:String
+  ): TrafficOptimizationHotelBlacklistConnection!
 }

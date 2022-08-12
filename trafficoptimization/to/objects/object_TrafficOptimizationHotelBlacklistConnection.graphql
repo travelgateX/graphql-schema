@@ -1,0 +1,6 @@
+type TrafficOptimizationHotelBlacklistConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges:[TrafficOptimizationHotelBlacklistEdge]
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}
