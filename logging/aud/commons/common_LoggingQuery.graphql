@@ -1,3 +1,14 @@
 extend type LoggingQuery {
-  allAuditRules(where: AuditRuleWhereInput!): AuditRuleConnection!
+  	"""
+  		Return the entire set of audits, regardless of the requester type (connection, access, supplier...)
+  	"""
+  allAuditRules(
+    where: AuditRuleWhereInput!
+  ): AuditRuleConnection!
+  	"""
+  		Return the entire set of audits of a given connection between a buyer and a seller
+  	"""
+  allConnectionAuditRules(
+    where: AuditRuleConnectionWhereInput!
+  ): AuditRuleConnection!
 }
