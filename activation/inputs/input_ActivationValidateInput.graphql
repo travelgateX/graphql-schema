@@ -3,6 +3,6 @@ input ActivationValidateInput {
   accessCode: ID!
   # Client names of buyer organization to be validated
   clientNames: [ID!]!
-  # Indicates the search criteria that the validation process use to validate  activation
+  # Indicates the search criteria that the validation process use to validate the activation
   criteriaSearches: [HotelCriteriaSearchInput!]
 }  
