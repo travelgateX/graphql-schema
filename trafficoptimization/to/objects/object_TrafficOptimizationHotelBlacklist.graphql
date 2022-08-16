@@ -1,0 +1,7 @@
+type TrafficOptimizationHotelBlacklist {
+  code: ID!
+  trafficOptimizationHotelBlacklistData: TrafficOptimizationHotelBlacklistData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

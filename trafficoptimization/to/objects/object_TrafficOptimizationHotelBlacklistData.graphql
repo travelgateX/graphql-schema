@@ -1,0 +1,7 @@
+type TrafficOptimizationHotelBlacklistData {
+  code: ID!
+  hotel: Hotel!
+  criterias: [TrafficOptimizationCriteriaType!]!
+  isBlocked: Boolean!
+  supplier: Supplier!
+}

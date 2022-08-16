@@ -1,0 +1,10 @@
+input TrafficOptimizationAccessHotelBlacklistWhereInput {
+  # BL_buyerCode_sellerCode || BL_accessCode
+  code_in:[ID!] 
+  mode: ModeType!
+  hotelCode_in:[ID!]
+  buyer_in:[ID!]
+  seller_in:[ID!]
+  access_in:[ID!]
+  criterias_in:[TrafficOptimizationCriteriaType!]
+}
