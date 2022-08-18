@@ -14,8 +14,6 @@ input TrafficOptimizationConnectionConnectionWhereInput {
   # Traffic Optimization block traffic criteria
   criterias: [TrafficOptimizationCriteriaType!]
 
-  isActiveOrganization: Boolean
-
   isActiveConnection: Boolean
 
   isActiveAccess: Boolean
