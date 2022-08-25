@@ -14,4 +14,8 @@ input ProfileUpdateInput {
   sellerPartnerStatus: PartnerStatusType
   buyerOnboardingStart: Date
   buyerOnboardingEnd: Date
+  buyerFirstBooking: Date
+  buyerLastBooking: Date
+  sellerFirstBooking: Date
+  sellerLastBooking: Date
 }
