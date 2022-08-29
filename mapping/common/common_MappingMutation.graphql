@@ -1,4 +1,7 @@
 extend type MappingMutation {
-  inscribeMappingSet(data: InscribeSetMappingInput!): MappingInscription!
-  inscribeMappingDelete(data: InscribeDeleteMappingInput!): MappingInscription!
+  # Notifies to all TGX internal services that a list of mappings has to be added
+  inscribeSetMapping(data: InscribeSetMappingInput!): MappingInscription!
+
+  # Notifies to all TGX internal services that a list of mappings has to be deleted 
+  inscribeDeleteMapping(data: InscribeDeleteMappingInput!): MappingInscription!
 }
