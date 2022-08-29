@@ -1,0 +1,4 @@
+extend type MappingMutation {
+  inscribeMappingSet(data: InscribeSetMappingInput!): MappingInscription!
+  inscribeMappingDelete(data: InscribeDeleteMappingInput!): MappingInscription!
+}
