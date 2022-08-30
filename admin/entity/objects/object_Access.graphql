@@ -4,6 +4,8 @@ type Access implements Node{
   accessData: AccessData
   # Errors that abort services
   error: [Error!]
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Date created
   createdAt: DateTime!
   # Date updated

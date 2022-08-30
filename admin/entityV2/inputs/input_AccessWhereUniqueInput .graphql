@@ -1,0 +1,4 @@
+input AccessWhereUniqueInput {
+  search: ID!
+  searchBy: AccessSearchByOptions!
+}
