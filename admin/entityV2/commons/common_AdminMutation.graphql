@@ -26,4 +26,36 @@ extend type AdminMutation {
   activateSupplier(where: SupplierWhereUniqueInput!): Supplier!
   """EntitiesV2 Deactivate supplier"""
   deactivateSupplier(where: SupplierWhereUniqueInput!): Supplier!
+  """Deletes an Access"""
+  deleteAccess(where: AccessWhereUniqueInput!): Access!
+  """Clone an existing Access"""
+  cloneAccess(where: AccessWhereUniqueInput!, data: AccessCloneInput!): Access!
+  """Activate Access"""
+  activateAccess(where: AccessWhereUniqueInput!): Access!
+  """Desactivate Access"""
+  deactivateAccess(where: AccessWhereUniqueInput!): Access!
+  """Grants Access visibility to a group"""
+  grantAccessToGroups(where: AccessWhereUniqueInput!, groupCodes: [ID!]): Access!
+  """Revoke Access visibility to a group"""
+  revokeAccessFromGroups(where: AccessWhereUniqueInput!, groupCodes: [ID!]): Access!
+  """Set a shared Access"""
+  setAccessShared(where: AccessWhereUniqueInput!, sharedCode: ID!): Access!
+  """Remove a shared Access"""
+  removeAccessShared(where: AccessWhereUniqueInput!): Access!
+  """Set a master Access"""
+  setAccessMaster(where: AccessWhereUniqueInput!, masterCode: ID!): Access!
+  """Remove a master Access"""
+  removeAccessMaster(where: AccessWhereUniqueInput!): Access!
+  """Add a parameter into "parameters" of an Access"""
+  appendAccessParameters(where: AccessWhereUniqueInput!, data: [ParameterInput!]!): Access!
+  """Delete a parameter into "parameters" of an Access"""
+  deleteAccessParameters(where: AccessWhereUniqueInput!, keys: [ID!]!): Access!
+  """Add a market into "markets" of an Access"""
+  appendAccessMarkets(where: AccessWhereUniqueInput!, data: [String!]!): Access!
+  """Delete a market into "markets" of an Access"""
+  deleteAccessMarkets(where: AccessWhereUniqueInput!, data: [String!]!): Access!
+  """Add a RateRule into "RateRules" of an Access"""
+  appendAccessRateRules(where: AccessWhereUniqueInput!, data: [RateRulesType!]!): Access!
+  """Delete a RateRule into "RateRules" of an Access"""
+  deleteAccessRateRules(where: AccessWhereUniqueInput!, data: [RateRulesType!]!): Access!
 }
