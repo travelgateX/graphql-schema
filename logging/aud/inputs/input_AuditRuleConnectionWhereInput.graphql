@@ -1,5 +1,6 @@
 input AuditRuleConnectionWhereInput {
     product: AuditRuleProductInput!
     auditStatus: AuditRuleStatus!
-    owner: ID
+    owner: ID!
+    mode : ModeType!
 }
