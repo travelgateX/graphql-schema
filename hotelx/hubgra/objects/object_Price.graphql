@@ -23,4 +23,7 @@ type Price implements Priceable {
   
   # Informs markup applied over supplier price.
   markups: [Markup!]
+  
+  # Indicates the minimum selling price it can be sold (determined by the seller)
+  minimumSellingPrice: Float
 }
