@@ -30,7 +30,7 @@ type HotelData {
   # Indicates the location of the hotel
   location: Location!
 
-  # Contact cotains information about hotel contact.
+  # Contact contains information about hotel contact.
   contact: Contact
 
   # Rank indicates the supplier categorization.
@@ -65,4 +65,7 @@ type HotelData {
 
   # Amenities with mapping
   allAmenities(mapOptions: [HotelXMapOptionInput!]): HotelXAmenityConnection
+
+  # Mapping codes for this property in various contexts, e.g.: TGX, GIATA,...
+  mappings(contexts: [string!]): [HotelXMappedCode!]
 }
