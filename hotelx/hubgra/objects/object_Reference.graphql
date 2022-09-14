@@ -25,4 +25,7 @@ type Reference {
   # HotelX's booking reference. It is an unique identifier for the book. The id is used to make the cancel mutation and booking query, so it is important not to modify it by any reason.
   bookingID: String
 
+  # HotelX's amend booking reference
+  amendmentID: String
+
 }

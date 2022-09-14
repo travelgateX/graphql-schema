@@ -9,4 +9,7 @@ extend type HotelXMutation {
   commit(input: HotelCommitInput!, settings: HotelSettingsInput): HotelCommitPayload
 
   loadFile(input: String!): String! @deprecated(reason: "deprecated from 2018-06-06")
+
+  # Commits the previous quoted remarks amendment.
+  amendRemarks(input: HotelCriteriaAmendRemarksCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
 }
