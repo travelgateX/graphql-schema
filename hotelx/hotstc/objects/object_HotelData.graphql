@@ -67,5 +67,5 @@ type HotelData {
   allAmenities(mapOptions: [HotelXMapOptionInput!]): HotelXAmenityConnection
 
   # Mapping codes for this property in various contexts, e.g.: TGX, GIATA,...
-  mappings(contexts: [string!]): [HotelXMappedCode!]
+  mappings(contexts: [String!]): [HotelXMappedCode!]
 }
