@@ -3,7 +3,7 @@ input TrafficOptimizationAccessHotelBlacklistWhereInput {
   code_in:[ID!] 
   mode: ModeType!
   hotelCode_in:[ID!]
-  hotelName_in:[ID!]
+  hotelName_contains:[ID!]
   buyer_in:[ID!]
   seller_in:[ID!]
   access_in:[ID!]
