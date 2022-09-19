@@ -1,0 +1,4 @@
+# Status of the profile
+enum BuyerTechSolutionCompanyType {
+  Tech_Platform
+}

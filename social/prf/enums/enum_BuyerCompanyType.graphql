@@ -1,0 +1,12 @@
+# Status of the profile
+enum BuyerCompanyType {
+  Bedbank_wholesaler
+  Vacation_Rentals
+  OTA__Online_Travel_Agency_
+  Tour_Operator
+  Travel_Agency
+  Travel_Group
+  DMC__Destination_Management_Company_
+  Hotel_Chain
+  Independent_Hotel
+}
