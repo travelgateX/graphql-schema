@@ -18,4 +18,10 @@ type ProfileData{
   buyerLastBooking: Date
   sellerFirstBooking: Date
   sellerLastBooking: Date
+  seller_integration_type: SellerIntegrationType
+  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
+  sellerOrgType: SellerCompanyType
+  buyer_integration_type: BuyerIntegrationType
+  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
+  buyerOrgType: BuyerCompanyType
 }
