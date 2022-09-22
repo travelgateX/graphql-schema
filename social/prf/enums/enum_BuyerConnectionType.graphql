@@ -1,7 +1,8 @@
 # Status of the profile
 enum BuyerConnectionType {
 Legacy
-Hotel_X
-Channel_X
+HotelX
+ChannelX
 B2B__Virtual_Agency_Tool_
+EasyConnect
 }

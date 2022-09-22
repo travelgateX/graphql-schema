@@ -9,4 +9,5 @@ enum SellerCompanyType {
   DMC__Destination_Management_Company_
   Hotel_Chain
   Independent_Hotel
+  Content_Provider
 }

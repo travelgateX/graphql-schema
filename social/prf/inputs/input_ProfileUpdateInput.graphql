@@ -18,10 +18,10 @@ input ProfileUpdateInput {
   buyerLastBooking: Date
   sellerFirstBooking: Date
   sellerLastBooking: Date
-  seller_integration_type: SellerIntegrationType,
+  sellerIntegrationType: SellerIntegrationType,
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType,
   sellerOrgType: SellerCompanyType,
-  buyer_integration_type: BuyerConnectionType,
+  buyerIntegrationType: BuyerConnectionType,
   buyerTechPlatformOrgType: BuyerTechSolutionCompanyType,
   buyerOrgType: BuyerCompanyType,
 }
