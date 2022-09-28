@@ -38,4 +38,7 @@ extend type HotelXQuery {
 
   # Returns detailed information about booking remarks amendment.
   amendRemarks(criteria: HotelCriteriaAmendRemarksQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+  # Returns detailed information about booking paxes amendment.
+  amendPaxes(criteria: HotelCriteriaAmendPaxesQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
 }
