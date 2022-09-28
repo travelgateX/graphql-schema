@@ -3,6 +3,6 @@ enum BuyerConnectionType {
 Legacy
 HotelX
 ChannelX
-B2B__Virtual_Agency_Tool_
+B2B_Virtual_Agency_Tool
 EasyConnect
 }

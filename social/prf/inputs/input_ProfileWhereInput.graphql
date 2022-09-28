@@ -15,4 +15,6 @@ input ProfileWhereInput {
   status: Status
   updatedAt: DateTimeFilter
   websiteUrl: NullableStringFilter
+  buyerTechPlatformOrgType: buyer_tech_solution_company_type
+  sellerTechPlatformOrgType: seller_tech_solution_company_type
 }
