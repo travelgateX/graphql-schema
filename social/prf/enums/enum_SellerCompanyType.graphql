@@ -1,13 +1,13 @@
 # Status of the profile
 enum SellerCompanyType {
-  Bedbank_wholesaler
-  Vacation_Rentals
-  OTA__Online_Travel_Agency_
-  Tour_Operator
-  Travel_Agency
-  Travel_Group
-  DMC__Destination_Management_Company_
-  Hotel_Chain
-  Independent_Hotel
-  Content_Provider
+BEDBANK_WHOLESALER
+VACATION_RENTALS
+OTA_ONLINE_TRAVEL_AGENCY
+TOUR_OPERATOR
+TRAVEL_AGENCY
+TRAVEL_GROUP
+DMC_DESTINATION_MANAGEMENT_COMPANY
+HOTEL_CHAIN
+INDEPENDENT_HOTEL
+CONTENT_PROVIDER
 }
