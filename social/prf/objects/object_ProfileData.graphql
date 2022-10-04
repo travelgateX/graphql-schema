@@ -21,7 +21,7 @@ type ProfileData{
   sellerIntegrationType: SellerIntegrationType
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
   sellerOrgType: SellerCompanyType
-  buyerIntegrationType: BuyerConnectionType
+  buyerIntegrationType: BuyerIntegrationType
   buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
   buyerOrgType: BuyerCompanyType
 }
