@@ -12,4 +12,10 @@ input ProfileCreateInput {
   websiteUrl: String
   buyerPartnerStatus: PartnerStatusType
   sellerPartnerStatus: PartnerStatusType
+  sellerIntegrationType: [SellerIntegrationType!],
+  sellerTechPlatformOrgType: SellerTechSolutionCompanyType,
+  sellerOrgType: SellerCompanyType,
+  buyerIntegrationType: [BuyerIntegrationType!],
+  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType,
+  buyerOrgType: BuyerCompanyType,
 }
