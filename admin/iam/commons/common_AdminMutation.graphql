@@ -7,6 +7,8 @@ extend type AdminMutation{
   createFolder(folder: CreateFolderInput!): Group!
   # Create member; requires specific group and role
   createMember(member: CreateMemberInput!) : Member!
+  # Send verification Email
+  sendVerificationEmail(member: SendVerificationEmailInput!) : Member!
   # Create group; group "owner" is optional
   createGroup(group: CreateGroupInput!): Group!
   # Update member additions or remove roles
