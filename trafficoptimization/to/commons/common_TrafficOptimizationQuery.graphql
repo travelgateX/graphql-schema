@@ -23,4 +23,11 @@ extend type TrafficOptimizationQuery{
     first:Int 
     after:String
   ): TrafficOptimizationHotelBlacklistConnection!
+
+    """
+    Return recommendations of Connections
+    """
+  allTrafficOptimizationAllAccessesRecommendations(
+    where:TrafficOptimizationAllAccessesRecommendationsWhereInput
+  ): TrafficOptimizationRecommendationsConnection!
 }
