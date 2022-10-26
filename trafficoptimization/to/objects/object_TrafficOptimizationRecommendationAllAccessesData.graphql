@@ -1,0 +1,6 @@
+type TrafficOptimizationRecommendationConnectionData {
+  organizationBuyer: TrafficOptimizationOrganization!
+  organizationSeller: TrafficOptimizationOrganization!
+  improvements: TrafficOptimizationImprovements!
+  improvementsByCriteria: [TrafficOptimizationImprovementsCriteria!]!
+}

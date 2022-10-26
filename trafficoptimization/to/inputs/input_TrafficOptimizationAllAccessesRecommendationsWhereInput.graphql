@@ -1,0 +1,6 @@
+input TrafficOptimizationAllAccessesRecommendationsWhereInput {
+  buyer_in:[ID!]
+  seller_in:[ID!]
+  criterias_in:[TrafficOptimizationCriteriaType!]
+  mode: ModeType!
+}
