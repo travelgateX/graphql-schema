@@ -29,5 +29,5 @@ extend type TrafficOptimizationQuery{
     """
   allTrafficOptimizationAllAccessesRecommendations(
     where:TrafficOptimizationAllAccessesRecommendationsWhereInput
-  ): TrafficOptimizationRecommendationsConnection!
+  ): TrafficOptimizationRecommendationsAllAccesses!
 }
