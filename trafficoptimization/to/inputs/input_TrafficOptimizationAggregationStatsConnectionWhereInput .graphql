@@ -1,5 +1,4 @@
 input TrafficOptimizationAggregationStatsConnectionWhereInput {
-  timeRange: TimeRangeInput!
   buyer_in:[ID!]
   seller_in:[ID!]
   access_in:[ID!]

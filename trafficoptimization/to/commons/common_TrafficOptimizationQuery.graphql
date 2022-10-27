@@ -36,5 +36,5 @@ extend type TrafficOptimizationQuery{
   """
   getTrafficOptimizationAggregationStats(
       where: TrafficOptimizationAggregationStatsConnectionWhereInput!
-    ) TrafficOptimizationStatsAggregationConnection!
+    ): TrafficOptimizationStatsAggregationConnection!
 }

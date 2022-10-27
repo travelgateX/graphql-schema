@@ -14,7 +14,7 @@ type TrafficOptimizationStatsAggregationData {
   " returned time value if groupByTime is used "
   time: DateTime
   " blacklist type if you group by BLACKLIST_TYPE"
-  blacklist_type: : BlacklistType
+  blacklist_type: BlacklistType
   " to get data deaggregate from this node "
   deaggregateData(where: TrafficOptimizationAggregationStatsConnectionWhereInput! groupBy: TrafficOptimizationStatsAggregationGroupByInput): TrafficOptimizationStatsAggregationConnection
 }
