@@ -1,7 +1,4 @@
 type TrafficOptimizationStatsAggregation {
-  code: ID!
   aggregationData: TrafficOptimizationStatsAggregationData
-  createdAt: DateTime!
-  updatedAt: DateTime!
   adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
 }
