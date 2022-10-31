@@ -12,4 +12,7 @@ extend type HotelXMutation {
 
   # Commits the previous quoted remarks amendment.
   amendRemarks(data: HotelCriteriaAmendRemarksCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+  # Commits the previous quoted paxes amendment.
+  amendPaxes(data: HotelCriteriaAmendPaxesCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
 }
