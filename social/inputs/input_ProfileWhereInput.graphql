@@ -13,8 +13,8 @@ input ProfileWhereInput {
   ownerCode: NullableStringFilter
   slug: StringFilter
   status: Status
+  buyerTechPlatformOrgType: buyer_tech_solution_company_type
+  sellerTechPlatformOrgType: seller_tech_solution_company_type
   updatedAt: DateTimeFilter
   websiteUrl: NullableStringFilter
-  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
-  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
 }

@@ -1,4 +1,3 @@
-"""ToDo: Add ProfileData to input"""
 input ProfileUpdateInput {
   Asset: AssetUpdateManyThroughUpdatingOtherSubentity
   classifications: ProfileCreateOrUpdateClassificationsInput
@@ -18,10 +17,10 @@ input ProfileUpdateInput {
   buyerLastBooking: Date
   sellerFirstBooking: Date
   sellerLastBooking: Date
-  sellerIntegrationType: [SellerIntegrationType!],
-  sellerTechPlatformOrgType: SellerTechSolutionCompanyType,
-  sellerOrgType: SellerCompanyType,
-  buyerIntegrationType: [BuyerIntegrationType!],
-  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType,
-  buyerOrgType: BuyerCompanyType,
+  sellerIntegrationType: [seller_integration_type!]
+  buyerIntegrationType: [buyer_integration_type!]
+  buyerOrgType: buyer_company_type
+  sellerOrgType: seller_company_type
+  buyerTechPlatformOrgType: buyer_tech_solution_company_type
+  sellerTechPlatformOrgType: seller_tech_solution_company_type
 }

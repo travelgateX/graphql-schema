@@ -1,8 +1,0 @@
-type SocialMutation {
-  createProfile(data: ProfileCreateInput!): Profile!
-  updateProfile(
-    data: ProfileUpdateInput!
-    where: ProfileWhereUniqueInput!
-  ): Profile!
-  deleteProfile(where: ProfileWhereUniqueInput!): Profile!
-}

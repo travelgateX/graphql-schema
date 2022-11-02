@@ -1,0 +1,12 @@
+type Mutation {
+  social: SocialMutation
+}
+
+type SocialMutation {
+  createProfile(data: ProfileCreateInput!): ProfileV2!
+  updateProfile(
+    data: ProfileUpdateInput!
+    where: ProfileWhereUniqueInput!
+  ): ProfileV2!
+  deleteProfile(where: ProfileWhereUniqueInput!): ProfileV2!
+}
