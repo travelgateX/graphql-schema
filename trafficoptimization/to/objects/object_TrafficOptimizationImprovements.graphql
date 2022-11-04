@@ -1,6 +1,4 @@
 type TrafficOptimizationImprovements {
-  totalHotels: Int!
-  totalSearches: Int!
   searchesBlocked: Int!
   hotelsBlocked: Int!
   searchesPercentage: Int!
