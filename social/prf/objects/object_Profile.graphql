@@ -1,7 +1,0 @@
-type Profile {
-  code: String!
-  profileData: ProfileData!
-  adviseMessage: [AdviseMessage!]
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}

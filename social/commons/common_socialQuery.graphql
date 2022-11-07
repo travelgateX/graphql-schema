@@ -1,0 +1,23 @@
+type Query {
+  social: SocialQuery
+}
+
+type SocialQuery {
+  profile(where: ProfileWhereUniqueInput!): ProfileV2!
+
+  allProfiles(
+    cursor: ProfileWhereUniqueInput
+    orderBy: [ProfileOrderByInput!]
+    skip: Int
+    take: Int
+    where: ProfileWhereInput
+  ): [Profile!]! @deprecated(reason: "Please use allProfilesV2 new version")
+
+  allProfilesV2(
+    cursor: ProfileWhereUniqueInput
+    orderBy: [ProfileOrderByInput!]
+    skip: Int
+    take: Int
+    where: ProfileWhereInput
+  ): ProfileConnection!
+}
