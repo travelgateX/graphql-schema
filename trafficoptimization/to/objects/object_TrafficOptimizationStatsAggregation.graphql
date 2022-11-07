@@ -1,0 +1,4 @@
+type TrafficOptimizationStatsAggregation {
+  aggregationData: TrafficOptimizationStatsAggregationData
+  adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
+}
