@@ -1,0 +1,5 @@
+input AddMemberToOrganizationInput {
+  member: ID!
+  orgCode: ID!
+  role: RoleMemberType
+}
