@@ -6,4 +6,5 @@ input AccessWhereInput {
   supplier_in: [ID!]
   provider_in: [ID]
   isActive: Boolean
+  includeArchived: Boolean
 }

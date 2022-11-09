@@ -7,4 +7,5 @@ input SupplierWhereInput {
     isActive: Boolean
     groupContent: ID
     serviceApi: ID
+    includeArchived: Boolean
 }
