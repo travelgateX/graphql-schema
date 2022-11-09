@@ -10,4 +10,6 @@ type Client implements Node{
   createdAt: DateTime!
   # Date updated
   updatedAt: DateTime!
+  # Client deleted date
+  deletedAt: DateTime
 }

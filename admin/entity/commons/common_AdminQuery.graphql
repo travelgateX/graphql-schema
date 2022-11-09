@@ -1,11 +1,29 @@
 # A Query is an entry point into the object graph.
 extend type AdminQuery {
   # Obtain a list of accesses for a filter
-  accesses(first: Int, last: Int, before: String, after:String, filter: AccessFilter): AccessConnection
+  accesses(
+    first: Int
+    last: Int
+    before: String
+    after: String
+    filter: AccessFilter
+  ): AccessConnection
   # Obtain all suppliers for a filter.
-  suppliers(first: Int, last: Int, before: String, after:String, filter: SupplierFilter): SupplierConnection
+  suppliers(
+    first: Int
+    last: Int
+    before: String
+    after: String
+    filter: SupplierFilter
+  ): SupplierConnection
   # Obtain all clients for a filter.
-  clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
+  clients(
+    first: Int
+    last: Int
+    before: String
+    after: String
+    filter: ClientFilter
+  ): ClientConnection
   # Obtain a ServiceAPI
   serviceApi(filter: ServiceApiFilter): ServiceApi
   # Obtain all Points of Sale for the filters
@@ -13,9 +31,18 @@ extend type AdminQuery {
   # Obtain all Profiles for the filters
   profiles(filter: ProfileFilter): ProfileConnection
   # Obtain a set of entities
-  entities(filter: EntityFilter): EntityConnection @deprecated(reason: "deprecated from 2019-08-21. Only for statsX product. Use client, supplier, accesess queries")
+  entities(filter: EntityFilter): EntityConnection
+    @deprecated(
+      reason: "deprecated from 2019-08-21. Only for statsX product. Use client, supplier, accesess queries"
+    )
   # Obtain all clients for a filter.
-  systems(first: Int, last: Int, before: String, after:String, filter: SystemFilter): SystemConnection
+  systems(
+    first: Int
+    last: Int
+    before: String
+    after: String
+    filter: SystemFilter
+  ): SystemConnection
   # Get supplier mantainer
   getSupplierMaintainer(supplierID: ID!): Member
   # Get provider mantainer
@@ -29,4 +56,81 @@ extend type AdminQuery {
   # Get HubProvider
   hubProviders(filter: HubProviderFilter): [HubProvider!]
 
+
+
+
+
+  """
+  EntitiesV2: Get unique Client
+  """
+  client(where: ClientWhereUniqueInput!): Client
+  """
+  EntitiesV2: Get Clients for a specific filter. If you are searching for groups or owner,
+  please use the queries clientsByGroupCodes or clientsByOwnerCodes.
+  This query does not resolve siblings in case of filtering by groups, use clientsByGroupCodes instead
+  """
+  allClients(
+    where: ClientWhereInput
+    orderBy: ClientOrderByInput
+  ): ClientConnection!
+  """
+  EntitiesV2: Get Clients for a specific list of owner codes
+  """
+  clientsByOwnerCodes(
+    ownerCodes: [ID!]!
+    orderBy: ClientOrderByInput
+  ): ClientConnection!
+  """
+  EntitiesV2: Get Clients for a specific list of group codes. Will returns clients from groups "siblings" too
+  """
+  clientsByGroupCodes(
+    groupCodes: [ID!]!
+    orderBy: ClientOrderByInput
+  ): ClientConnection!
+  """
+  EntitiesV2: Get Providers for a specific filter
+  """
+  allProviders(
+    where: ProviderWhereInput
+    orderBy: ProviderOrderByEnum
+  ): [Provider!]
+  """
+  EntitiesV2: Get a list of GroupContents stored in the database
+  """
+  allGroupContents(where: GroupContentWhereInput): [GroupContent!]
+  """
+  EntitiesV2: Get unique Supplier
+  """
+  supplier(where: SupplierWhereUniqueInput!): Supplier
+  """
+  EntitiesV2: Get Suppliers for a specific list of owner codes
+  """
+  suppliersByOwnerCodes(
+    ownerCodes: [ID!]!
+    orderBy: SupplierOrderByEnum
+  ): SupplierConnection!
+  """
+  EntitiesV2: Get Suppliers for a specific list of group codes
+  """
+  suppliersByGroupCodes(
+    groupCodes: [ID!]!
+    orderBy: SupplierOrderByEnum
+  ): SupplierConnection!
+  """
+  EntitiesV2: Get Suppliers for a specific list of provider codes
+  """
+  suppliersByProviderCodes(
+    providerCodes: [ID!]!
+    orderBy: SupplierOrderByEnum
+  ): SupplierConnection!
+
+  """
+  EntitiesV2: Get Suppliers for a specific filter. If you are searching for groups or owner,
+  please use the queries suppliersByGroupCodes or suppliersByOwnerCodes.
+  This query does not resolve siblings in case of filtering by groups, use suppliersByGroupCodes instead
+  """
+  allSuppliers(
+    where: SupplierWhereInput
+    orderBy: SupplierOrderByEnum
+  ): SupplierConnection!
 }
