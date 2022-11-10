@@ -1,0 +1,6 @@
+type CategoryConnection {
+  edges: [CategoryEdge]
+  pageInfo: PageInfo!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage]
+  totalCount: Int!
+}

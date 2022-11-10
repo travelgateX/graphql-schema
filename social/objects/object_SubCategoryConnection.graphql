@@ -1,0 +1,6 @@
+type SubCategoryConnection {
+  edges: [SubCategoryEdge]
+  pageInfo: PageInfo!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage]
+  totalCount: Int!
+}

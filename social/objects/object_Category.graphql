@@ -1,0 +1,7 @@
+type Category {
+  code: String!
+  categoryData: CategoryData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime
+  updatedAt: DateTime
+}

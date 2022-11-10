@@ -1,0 +1,5 @@
+input CategoryCreateInput {
+  code: String!
+  description: String
+  subCategory: [SubCategoryCreateInput!]!
+}

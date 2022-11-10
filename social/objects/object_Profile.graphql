@@ -19,10 +19,10 @@ type Profile {
   buyerLastBooking: Date
   sellerFirstBooking: Date
   sellerLastBooking: Date
-  sellerIntegrationType: [seller_integration_type!]
-  buyerIntegrationType: [buyer_integration_type!]
-  buyerOrgType: buyer_company_type
-  sellerOrgType: seller_company_type
-  buyerTechPlatformOrgType: buyer_tech_solution_company_type
-  sellerTechPlatformOrgType: seller_tech_solution_company_type
+  sellerIntegrationType: [SellerIntegrationType!]
+  buyerIntegrationType: [BuyerIntegrationType!]
+  buyerOrgType: BuyerCompanyType
+  sellerOrgType: SellerCompanyType
+  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
+  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
 }

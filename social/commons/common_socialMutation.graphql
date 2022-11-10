@@ -3,10 +3,24 @@ type Mutation {
 }
 
 type SocialMutation {
+  # Profiles
   createProfile(data: ProfileCreateInput!): ProfileV2!
-  updateProfile(
-    data: ProfileUpdateInput!
-    where: ProfileWhereUniqueInput!
-  ): ProfileV2!
+
+  updateProfile(data: ProfileUpdateInput!, where: ProfileWhereUniqueInput!): ProfileV2!
+
   deleteProfile(where: ProfileWhereUniqueInput!): ProfileV2!
+
+  # Categories
+  createCategory(data: CategoryCreateInput!): Category!
+
+  updateCategory(where: CategoryWhereUniqueInput!, data: CategoryUpdateInput!): Category!
+
+  deleteCategory(where: CategoryWhereUniqueInput!): Category!
+  
+  # SubCategories
+  createSubCategory(where: CategoryWhereUniqueInput!, data: SubCategoryCreateInput!): SubCategory!
+
+  updateSubCategory(where: SubCategoryWhereUniqueInput!, data: SubCategoryUpdateInput!): SubCategory!
+
+  deleteSubCategory(where: SubCategoryWhereUniqueInput!): SubCategory!
 }

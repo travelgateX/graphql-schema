@@ -1,0 +1,6 @@
+input SellerCategoryPropertiesInput {
+  # The profile's sellerCategory. The category introduced must be exists.
+  sellerCategory: String!
+  # The profile's sellerSubCategory. The subCategory introduced must be exists.
+  sellerSubCategory: String!
+}
