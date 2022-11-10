@@ -11,16 +11,16 @@ type SocialMutation {
   deleteProfile(where: ProfileWhereUniqueInput!): ProfileV2!
 
   # Categories
-  createCategory(data: CategoryCreateInput!): Category!
+  createCategory(data: CategoryCreateInput!): SocialCategory!
 
-  updateCategory(where: CategoryWhereUniqueInput!, data: CategoryUpdateInput!): Category!
+  updateCategory(where: CategoryWhereUniqueInput!, data: CategoryUpdateInput!): SocialCategory!
 
-  deleteCategory(where: CategoryWhereUniqueInput!): Category!
+  deleteCategory(where: CategoryWhereUniqueInput!): SocialCategory!
   
   # SubCategories
-  createSubCategory(where: CategoryWhereUniqueInput!, data: SubCategoryCreateInput!): SubCategory!
+  createSubCategory(where: CategoryWhereUniqueInput!, data: SubCategoryCreateInput!): SocialSubCategory!
 
-  updateSubCategory(where: SubCategoryWhereUniqueInput!, data: SubCategoryUpdateInput!): SubCategory!
+  updateSubCategory(where: SubCategoryWhereUniqueInput!, data: SubCategoryUpdateInput!): SocialSubCategory!
 
-  deleteSubCategory(where: SubCategoryWhereUniqueInput!): SubCategory!
+  deleteSubCategory(where: SubCategoryWhereUniqueInput!): SocialSubCategory!
 }

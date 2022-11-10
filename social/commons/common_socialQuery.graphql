@@ -23,7 +23,7 @@ type SocialQuery {
   ): ProfileConnection!
 
   # Categories
-  category(where: CategoryWhereUniqueInput!): Category!
+  category(where: CategoryWhereUniqueInput!): SocialCategory!
 
-  allCategories(where: CategoryWhereInput): CategoryConnection!
+  allCategories(where: CategoryWhereInput): SocialCategoryConnection!
 }
