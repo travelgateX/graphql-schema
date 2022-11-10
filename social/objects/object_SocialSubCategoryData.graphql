@@ -1,4 +1,4 @@
-type SubCategoryData {
+type SocialSubCategoryData {
     code: String!
     description: String
     defaultIsBuyer: Boolean!

@@ -1,5 +1,0 @@
-type CategoryData {
-    code: String!
-    description: String
-    subCategories: SubCategoryConnection!
-}

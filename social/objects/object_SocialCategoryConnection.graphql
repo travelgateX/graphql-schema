@@ -1,5 +1,5 @@
-type SubCategoryConnection {
-  edges: [SubCategoryEdge]
+type SocialCategoryConnection {
+  edges: [SocialCategoryEdge]
   pageInfo: PageInfo!
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage]
   totalCount: Int!

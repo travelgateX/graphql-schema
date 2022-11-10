@@ -1,4 +1,0 @@
-type CategoryEdge {
-  node: Category
-  cursor: String!
-}
