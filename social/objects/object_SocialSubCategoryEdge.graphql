@@ -1,4 +1,4 @@
 type SocialSubCategoryEdge {
-  node: SubCategory
+  node: SocialSubCategory
   cursor: String!
 }
