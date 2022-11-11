@@ -1,0 +1,7 @@
+input SubCategoryUpdateInput {
+  description: String
+  defaultIsBuyer: Boolean
+  defaultIsSeller: Boolean
+  defaultDemandBridge: Boolean
+  defaultSupplyBridge: Boolean
+}

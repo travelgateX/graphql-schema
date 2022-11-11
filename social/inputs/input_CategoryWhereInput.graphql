@@ -1,0 +1,6 @@
+input CategoryWhereInput {
+  AND: [CategoryWhereInput!]
+  NOT: [CategoryWhereInput!]
+  OR: [CategoryWhereInput!]
+  code: String
+}

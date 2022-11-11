@@ -19,4 +19,6 @@ input ProfileCreateInput {
   sellerOrgType: SellerCompanyType
   buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
+  buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
+  sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
 }
