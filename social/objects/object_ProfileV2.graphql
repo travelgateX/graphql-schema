@@ -1,0 +1,7 @@
+type ProfileV2 {
+  code: String!
+  profileData: ProfileData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime
+  updatedAt: DateTime
+}
