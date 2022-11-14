@@ -37,14 +37,14 @@ extend type HotelXQuery {
   runtimeConfiguration(supplierCode: ID!): HotelRuntimeConfiguration
 
   # Returns detailed information about booking remarks amendment.
-  amendRemarks(criteria: HotelCriteriaAmendRemarksQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+  quoteRemarksAmendment(criteria: HotelCriteriaAmendRemarksQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
 
   # Returns detailed information about booking paxes amendment.
-  amendPaxes(criteria: HotelCriteriaAmendPaxesQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+  quotePaxesAmendment(criteria: HotelCriteriaAmendPaxesQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
 
   # Returns detailed information about booking dates amendment.
-  amendDates(criteria: HotelCriteriaAmendDatesQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+  quoteDatesAmendment(criteria: HotelCriteriaAmendDatesQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
 
   # Returns detailed information about booking board amendment.
-  amendBoard(criteria: HotelCriteriaAmendBoardQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+  quoteBoardAmendment(criteria: HotelCriteriaAmendBoardQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
 }
