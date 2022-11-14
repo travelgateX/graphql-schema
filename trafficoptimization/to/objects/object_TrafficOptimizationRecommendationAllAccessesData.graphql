@@ -1,7 +1,7 @@
 type trafficOptimizationRecommendationAllAccessesData {
   organizationBuyer: TrafficOptimizationOrganization!
   organizationSeller: TrafficOptimizationOrganization!
-  connectionIntegrationType: String!
+  buyerIntegrationType: BuyerIntegrationType!
   generalMetrics: TrafficOptimizationGeneralMetrics!
   improvements: TrafficOptimizationImprovements!
   improvementsByCriteria: [TrafficOptimizationImprovementsCriteria!]!
