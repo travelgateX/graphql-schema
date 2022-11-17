@@ -1,4 +1,4 @@
-type trafficOptimizationRecommendationAllAccessesData {
+type TrafficOptimizationRecommendationAllAccessesData {
   organizationBuyer: TrafficOptimizationOrganization!
   organizationSeller: TrafficOptimizationOrganization!
   buyerIntegrationType: BuyerIntegrationType!
