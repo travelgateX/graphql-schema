@@ -1,4 +1,4 @@
-extend type AdminMutation{
+extend type AdminMutation {
   # Create organization. Require an user to be specified as the owner of the group.
   createOrganization(organization: CreateOrganizationInput!): Organization!
   # Suit Organization. Requires an existing organization and a specific template.
@@ -6,7 +6,9 @@ extend type AdminMutation{
   # Suit folder.Requires an existing folder and a template
   createFolder(folder: CreateFolderInput!): Group!
   # Create member; requires specific group and role
-  createMember(member: CreateMemberInput!) : Member!
+  createMember(member: CreateMemberInput!): Member!
+  # Send verification Email
+  sendVerificationEmail(member: SendVerificationEmailInput!): Member!
   # Create group; group "owner" is optional
   createGroup(group: CreateGroupInput!): Group!
   # Update member additions or remove roles
@@ -16,7 +18,7 @@ extend type AdminMutation{
   # Revoke permissions to member.
   revokePermissions(member: GrantPermissionsInput!): Member!
   # Clone member. Requires source and destination member.
-  clonePermissions(member: ClonePermissionsInput!) : Member!
+  clonePermissions(member: ClonePermissionsInput!): Member!
   # Update group additions or remove APIs
   updateGroup(group: UpdateGroupInput!): Group!
   # Delete a member from specific group
@@ -31,43 +33,52 @@ extend type AdminMutation{
   grantMacroPermissionsToMember(input: GrantMacroPermissionInput!): Member!
   # Revoke macro permission
   revokeMacroPermissionsFromMember(input: GrantMacroPermissionInput!): Member!
-  addContact(organizationCode:ID!,type:OrganizationContactType!,user:ID!):Organization!
-  deleteContact(organizationCode:ID!,user:ID!):Organization!
+  addContact(
+    organizationCode: ID!
+    type: OrganizationContactType!
+    user: ID!
+  ): Organization!
+  deleteContact(organizationCode: ID!, user: ID!): Organization!
   # Creates a Partner.
-  createPartner(
-    data: PartnerCreateInput!
-    ): Partner!
+  createPartner(data: PartnerCreateInput!): Partner!
   # Update a Partner.
   updatePartner(
     data: PartnerUpdateInput!
     where: PartnerWhereUniqueInput!
-    ): Partner!
+  ): Partner!
   # Delete a Partner, from all groups
-  deletePartner(
-    where: PartnerWhereUniqueInput!
-    ): Partner!
+  deletePartner(where: PartnerWhereUniqueInput!): Partner!
   # Add Partner to a group
   addPartnerToOrganization(
     #Organization->Code
     organizationCode: ID!
     where: PartnerWhereUniqueInput!
-    ):Partner!
+  ): Partner!
   # Delete Partner from a group
   deletePartnerFromOrganization(
     #Organization->Code
     organizationCode: ID!
     where: PartnerWhereUniqueInput!
-    ):Partner!
+  ): Partner!
   # set the primary Partner for an organizationCode
   setPrimaryPartner(
     #Organization->Code
     organizationCode: ID!
     where: PartnerWhereUniqueInput!
-    ): Partner!
+  ): Partner!
   #@intern
-  addAgent(PartnerCode:ID!,type:CustomerAgentType!,user:ID!):Partner!
+  addAgent(PartnerCode: ID!, type: CustomerAgentType!, user: ID!): Partner!
   #@intern
-  deleteAgent(PartnerCode:ID!,user:ID!):Partner!
+  deleteAgent(PartnerCode: ID!, user: ID!): Partner!
   # Sets FTP structure and send an email to the organization owner with the credentials.
-  initialOrganizationSetup(orgCode:ID!): Organization!
+  initialOrganizationSetup(orgCode: ID!): Organization!
+
+  # Adds a user to an organization with owner permissions.
+  addMemberToOrganization(input: AddMemberToOrganizationInput!): Member!
+  # Removes users from an organization. If it doesn't belongo to any more organizations it deletes the user.
+  removeMemberFromOrganization(
+    input: RemoveMemberFromOrganizationInput!
+  ): Member!
+  # Delete organization and related member roles.
+  deleteOrganization(organization: DeleteOrganizationInput!): Organization!
 }

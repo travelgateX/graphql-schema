@@ -41,4 +41,17 @@ extend type AdminMutation {
   updateHubUser(input: UpdateHubUserInput!): HubUser
   # Updates existing hubprovider. 
   updateHubProvider(input: UpdateHubProviderInput!): HubProvider
+  # EntitiesV2: SoftDelete Client. [WARNING] Only SuperAdmin users can delete
+  archiveClient(where: ClientWhereUniqueInput!): Client!
+  # EntitiesV2: Soft UnDelete Client. [WARNING] Only SuperAdmin users can delete
+  unArchiveClient(where: ClientWhereUniqueInput!): Client!
+  # EntitiesV2: SoftDelete Supplier. [WARNING] Only SuperAdmin users can delete
+  archiveSupplier(where: SupplierWhereUniqueInput!): Supplier!
+  # EntitiesV2: Soft UnDelete Supplier. [WARNING] Only SuperAdmin users can delete
+  unArchiveSupplier(where: SupplierWhereUniqueInput!): Supplier!
+  # EntitiesV2: SoftDelete Access. [WARNING] Only SuperAdmin users can delete
+  archiveAccess(where: AccessWhereUniqueInput!): Access!
+  # EntitiesV2: Soft UnDelete Access. [WARNING] Only SuperAdmin users can delete
+  unArchiveAccess(where: AccessWhereUniqueInput!): Access!
+
 }

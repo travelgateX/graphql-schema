@@ -1,0 +1,10 @@
+input TrafficOptimizationAggregationStatsConnectionWhereInput {
+  buyer_in:[ID!]
+  seller_in:[ID!]
+  access_in:[ID!]
+  supplier_in:[ID!]
+  mode: ModeType!
+  blacklist_type: BlacklistType
+  timeRange: TimeRangeInput!
+  groupBy: TrafficOptimizationStatsAggregationGroupByInput
+}

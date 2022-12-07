@@ -1,0 +1,6 @@
+type ProfileConnection {
+  edges: [ProfileEdge]
+  pageInfo: PageInfo!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage]
+  totalCount: Int!
+}

@@ -1,7 +1,0 @@
-# Status of the profile
-enum SellerTechSolutionCompanyType {
-  Tech_Platform
-  Channel_Manager
-  CRS__Central_Reservation_System_
-  PMS__Property_Management_System_
-}

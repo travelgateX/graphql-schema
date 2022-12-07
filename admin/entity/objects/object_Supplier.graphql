@@ -8,5 +8,7 @@ type Supplier implements Node {
   # Date created
   createdAt: DateTime!
   # Date updated
-  updatedAt: DateTime!
+  updatedAt: DateTime!    
+  # Supplier deleted date
+  deletedAt: DateTime
 }

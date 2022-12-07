@@ -1,0 +1,24 @@
+input ProfileCreateInput {
+  groupCode: String!
+  ownerCode: String!
+  Asset: AssetCreateManyAsSubEntityInput
+  classifications: ProfileCreateOrUpdateClassificationsInput
+  description: String
+  name: String
+  order: Float
+  slug: String
+  status: Status
+  websiteUrl: String
+  buyerPartnerStatus: PartnerStatusType
+  sellerPartnerStatus: PartnerStatusType
+  buyerOnboardingStart: Date
+  buyerOnboardingEnd: Date
+  sellerIntegrationType: [SellerIntegrationType!]
+  buyerIntegrationType: [BuyerIntegrationType!]
+  buyerOrgType: BuyerCompanyType
+  sellerOrgType: SellerCompanyType
+  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
+  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
+  buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
+  sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
+}

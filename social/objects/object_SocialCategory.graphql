@@ -1,0 +1,7 @@
+type SocialCategory {
+  code: String!
+  categoryData: SocialCategoryData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime
+  updatedAt: DateTime
+}

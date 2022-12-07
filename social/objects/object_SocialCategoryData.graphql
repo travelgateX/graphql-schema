@@ -1,0 +1,5 @@
+type SocialCategoryData {
+    code: String!
+    description: String
+    subCategories: SocialSubCategoryConnection!
+}

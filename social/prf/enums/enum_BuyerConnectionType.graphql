@@ -1,8 +1,0 @@
-# Status of the profile
-enum BuyerConnectionType {
-Legacy
-HotelX
-ChannelX
-B2B_Virtual_Agency_Tool
-EasyConnect
-}

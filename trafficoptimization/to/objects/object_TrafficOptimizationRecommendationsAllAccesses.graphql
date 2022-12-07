@@ -1,0 +1,5 @@
+type TrafficOptimizationRecommendationsAllAccesses {
+  edges: [TrafficOptimizationRecommendationsEdge]
+  totalCount: Int!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

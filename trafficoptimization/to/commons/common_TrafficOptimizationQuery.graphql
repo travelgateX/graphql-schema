@@ -23,4 +23,18 @@ extend type TrafficOptimizationQuery{
     first:Int 
     after:String
   ): TrafficOptimizationHotelBlacklistConnection!
+
+  """
+  Return recommendations of Connections
+  """
+  allTrafficOptimizationAllAccessesRecommendations(
+    where:TrafficOptimizationAllAccessesRecommendationsWhereInput
+  ): TrafficOptimizationRecommendationsAllAccesses!
+
+  """
+  	Returns the aggregated stats registered for a specified input (buyer, seller, access or a combination between these)
+  """
+  getTrafficOptimizationAggregationStats(
+      where: TrafficOptimizationAggregationStatsConnectionWhereInput!
+    ): TrafficOptimizationStatsAggregationConnection!
 }
