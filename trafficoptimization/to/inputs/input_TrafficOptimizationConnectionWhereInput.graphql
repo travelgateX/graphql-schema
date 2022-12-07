@@ -1,0 +1,31 @@
+input TrafficOptimizationConnectionWhereInput {
+  code: [ID!]
+
+  """
+  Buyer s organization code
+  """
+  organizationBuyerCode: ID
+
+  """
+  Seller s organization code
+  """
+  organizationSellerCode: ID
+
+  """
+  Seller or Buyer mode
+  """
+  mode: ModeType!
+
+  """
+  Traffic Optimization block traffic criteria
+  """
+  criterias: [TrafficOptimizationCriteriaType!]
+
+  isActiveOrganization: Boolean
+
+  isActiveConnection: Boolean
+
+  isActiveAccess: Boolean
+
+  accessCode_in: [ID!]
+}

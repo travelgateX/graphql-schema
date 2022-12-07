@@ -1,0 +1,5 @@
+type TrafficOptimizationRecommendationsEdge {
+  node: TrafficOptimizationRecommendation!
+  cursor: String!
+}
+

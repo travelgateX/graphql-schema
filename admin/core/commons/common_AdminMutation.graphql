@@ -1,4 +1,5 @@
 # The admin query root of TravelgateX's for implementing GraphQL mutations.
 type AdminMutation{
+   _ : Boolean
 
 }

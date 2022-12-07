@@ -5,13 +5,45 @@
   "main": "index.js",
   "author": "travelgateX",
   "license": "GPL-3.0",
-  "private": null,
-  "dependencies": {
-    "child_process": "^1.0.2",
-    "fs": "^0.0.1-security",
-    "graphql-mocker": "^1.3.3"
-  },
   "scripts": {
-    "test": "node index.js"
+    "test": "mocha --recursive --exit",
+    "test-coverage": "nyc --reporter=html mocha --recursive --exit",
+    "prettier:check": "prettier --check ."
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloodyrafo75/graphql-schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bloodyrafo75/graphql-schema/issues"
+  },
+  "homepage": "https://github.com/bloodyrafo75/graphql-schema#readme",
+
+
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged",
+        "pre-push": "npm run test"
+    }
+},
+
+  "lint-staged": {
+    "*.{graphql}": [
+        "prettier --write"
+        
+    ]
+},
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "graphql-tools": "^8.3.12",
+    "mocha": "^10.1.0",
+    "nyc": "^15.1.0",
+    "eslint": "^8.24.0",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "mercurius-integration-testing": "^5.0.0",
+    "prettier": "^2.7.1"
   }
 }

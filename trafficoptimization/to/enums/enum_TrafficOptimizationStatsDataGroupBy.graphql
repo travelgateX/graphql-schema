@@ -1,0 +1,7 @@
+enum TrafficOptimizationStatsDataGroupBy {
+  BUYER
+  SELLER
+  ACCESS
+  SUPPLIER
+  BLACKLIST_TYPE
+}

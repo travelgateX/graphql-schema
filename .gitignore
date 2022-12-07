@@ -7,7 +7,7 @@ schemaMock.graphql
 
 *.vscode
 merged_schema.graphql
-test
+
 
 # Logs
 logs

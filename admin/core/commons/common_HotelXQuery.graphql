@@ -1,3 +1,3 @@
-type HotelXQuery{
-
+type HotelXQuery {
+  _: Boolean
 }

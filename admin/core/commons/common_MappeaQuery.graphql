@@ -1,3 +1,3 @@
-type MappeaQuery{
-
+type MappeaQuery {
+  _: Boolean
 }

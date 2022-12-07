@@ -1,0 +1,10 @@
+input AccessCloneInput {
+  """
+  Access descriptive unique name of new access cloned
+  """
+  newName: String
+  """
+  Group code of the new access where to assign
+  """
+  destinationGroupCode: ID!
+}
