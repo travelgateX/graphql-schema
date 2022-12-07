@@ -1,19 +1,26 @@
-name: CI
- 
-on: [push]
- 
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
 jobs:
-  test:
-    name: Check Schema
+  build:
+
     runs-on: ubuntu-latest
- 
+
+    strategy:
+      matrix:
+        node-version: [17.x, 18.x, 19.x]
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
- 
-      - uses: kamilkisiela/graphql-inspector@master
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          name: Check Graphql
-          schema: 'master:schema.graphql'
-          annotations: true
-          fail-on-breaking: true
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
