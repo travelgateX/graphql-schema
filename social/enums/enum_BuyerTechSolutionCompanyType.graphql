@@ -1,4 +1,4 @@
 # Status of the profile
 enum BuyerTechSolutionCompanyType {
-  Tech_Platform
+  TECH_PLATFORM
 }

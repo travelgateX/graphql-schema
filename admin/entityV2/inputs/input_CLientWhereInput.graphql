@@ -5,4 +5,5 @@ input ClientWhereInput {
   owner_in: [ID!]
   name_in: [String!]
   isActive: Boolean
+  includeArchived: Boolean
 }

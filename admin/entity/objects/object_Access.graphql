@@ -10,4 +10,7 @@ type Access implements Node{
   createdAt: DateTime!
   # Date updated
   updatedAt: DateTime!
+  # Access deleted date
+  deletedAt: DateTime
+
 }

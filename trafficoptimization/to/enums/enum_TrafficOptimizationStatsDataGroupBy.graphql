@@ -1,4 +1,5 @@
-enum TrafficOptimizationStatsDataGroupBy {
+""" List of fields which can be grouped to show stats data """
+enum TrafficOptimizationStatsDataGroupBy{ 
   BUYER
   SELLER
   ACCESS

@@ -1,6 +1,6 @@
-
 enum BlacklistType {
   ALL_BLACKLISTED
   SOME_BLACKLISTED
   NO_BLACKLISTED
 }
+

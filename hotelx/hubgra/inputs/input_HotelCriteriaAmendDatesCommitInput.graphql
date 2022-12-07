@@ -1,0 +1,6 @@
+# Criteria of modify contains basic information to amend dates into a booking.
+input HotelCriteriaAmendDatesCommitInput {
+
+  # HotelX's amend booking reference (received in AmendDatesQuote response)
+  amendmentID: String!
+}

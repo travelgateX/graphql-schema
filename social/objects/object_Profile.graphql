@@ -1,14 +1,15 @@
-type ProfileData{
-  assets: [Asset!]
-  description: String
-  group: Group!
+type Profile {
+  profileData: ProfileData
   id: Int!
   name: String!
-  order: Float!
   owner: Organization!
-  slug: String!
-  classifications: [ProfileClassification!]
+  group: Group!
   status: Status!
+  order: Float!
+  slug: String!
+  assets: [Asset!]
+  description: String
+  classifications: [ProfileClassification!]
   websiteUrl: String
   buyerPartnerStatus: PartnerStatusType
   sellerPartnerStatus: PartnerStatusType
@@ -18,10 +19,10 @@ type ProfileData{
   buyerLastBooking: Date
   sellerFirstBooking: Date
   sellerLastBooking: Date
-  sellerIntegrationType: SellerIntegrationType
-  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
-  sellerOrgType: SellerCompanyType
-  buyerIntegrationType: BuyerConnectionType
-  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
+  sellerIntegrationType: [SellerIntegrationType!]
+  buyerIntegrationType: [BuyerIntegrationType!]
   buyerOrgType: BuyerCompanyType
+  sellerOrgType: SellerCompanyType
+  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
+  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
 }

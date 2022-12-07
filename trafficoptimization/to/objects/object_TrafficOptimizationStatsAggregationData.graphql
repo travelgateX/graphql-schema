@@ -1,41 +1,20 @@
 type TrafficOptimizationStatsAggregationData {
-  """
-  Number of hits
-  """
-  hits: Int!
-  """
-  Total time of hits
-  """
+  "number of hits "
+  hits:Int!
+  " total time of hits " 
   totalTime: Int!
-  """
-  Buyer returned if you group by BUYER_ORGANIZATION
-  """
-  buyer: Organization
-  """
-  Seller returned if you group by SELLER_ORGANIZATION
-  """
-  seller: Organization
-  """
-  Access returned if you group by ACCESS
-  """
-  access: Access
-  """
-  Supplier returned if you group by SUPPLIER
-  """
+  " buyer returned if you group by BUYER_ORGANIZATION "
+  buyer: Organization 
+  " seller returned if you group by SELLER_ORGANIZATION "
+  seller: Organization 
+  " access returned if you group by ACCESS "
+  access: Access 
+  " supplier returned if you group by SUPPLIER "
   supplier: Supplier
-  """
-  Returned time value if groupByTime is used
-  """
+  " returned time value if groupByTime is used "
   time: DateTime
-  """
-  Blacklist type if you group by BLACKLIST_TYPE
-  """
+  " blacklist type if you group by BLACKLIST_TYPE"
   blacklist_type: BlacklistType
-  """
-  To get data deaggregate from this node
-  """
-  deaggregateData(
-    where: TrafficOptimizationAggregationStatsConnectionWhereInput!
-    groupBy: TrafficOptimizationStatsAggregationGroupByInput
-  ): TrafficOptimizationStatsAggregationConnection
+  " to get data deaggregate from this node "
+  deaggregateData(where: TrafficOptimizationAggregationStatsConnectionWhereInput! groupBy: TrafficOptimizationStatsAggregationGroupByInput): TrafficOptimizationStatsAggregationConnection
 }
