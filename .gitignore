@@ -1,4 +1,4 @@
-./history
-./lh
+./.history
+./.lh
 ./.nyc_output
 node_modules
