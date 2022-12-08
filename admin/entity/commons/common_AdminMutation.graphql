@@ -1,7 +1,5 @@
 # Mutations are operations that change or update data on the server
 extend type AdminMutation {
-  #todo remove next line, just a workflow test.
-  pleaseFail(input: AccessPleaseFail): FailAccess!
   # Creates an Access
   createAccess(input: AccessInput!): Access
   # Updates an Access
