@@ -1,0 +1,6 @@
+input UserProfileCreateInput {
+  email: String!
+  firstName: String
+  lastName: String
+  onboardingProperties: UserOnboardingUpdateInput
+}

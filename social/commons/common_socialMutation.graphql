@@ -23,4 +23,9 @@ type SocialMutation {
   updateSubCategory(where: SubCategoryWhereUniqueInput!, data: SubCategoryUpdateInput!): SocialSubCategory!
 
   deleteSubCategory(where: SubCategoryWhereUniqueInput!): SocialSubCategory!
+
+  # UserProfile
+  createUserProfile(data: UserProfileCreateInput!): UserProfile!
+
+  updateUserProfile(where: UserProfileWhereUniqueInput!, data: UserProfileUpdateInput!): UserProfile!
 }

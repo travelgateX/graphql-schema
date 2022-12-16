@@ -24,12 +24,12 @@ type ProfileData {
   sellerOrgType: SellerCompanyType
   buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
+  buyerTechBridge: String
+  sellerTechBridge: String
   buyerCategory: String
   sellerCategory: String
   buyerSubCategory: String
   sellerSubCategory: String
-  isBuyer: Boolean
-  isSeller: Boolean
   isDemandBridge: Boolean
   isSupplyBridge: Boolean
 }
