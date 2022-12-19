@@ -26,4 +26,7 @@ type SocialQuery {
   category(where: CategoryWhereUniqueInput!): SocialCategory!
 
   allCategories(where: CategoryWhereInput): SocialCategoryConnection!
+
+  # UserProfile
+  userProfile(where: UserProfileWhereUniqueInput): UserProfile!
 }

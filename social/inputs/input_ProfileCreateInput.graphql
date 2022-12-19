@@ -19,6 +19,8 @@ input ProfileCreateInput {
   sellerOrgType: SellerCompanyType
   buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
+  buyerTechBridge: String
+  sellerTechBridge: String
   buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
 }

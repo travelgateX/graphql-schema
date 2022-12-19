@@ -23,10 +23,10 @@ input ProfileUpdateInput {
   sellerOrgType: SellerCompanyType
   buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
+  buyerTechBridge: String
+  sellerTechBridge: String
   buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
-  isBuyer: Boolean
-  isSeller: Boolean
   isDemandBridge: Boolean
   isSupplyBridge: Boolean
 }

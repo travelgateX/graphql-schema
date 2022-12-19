@@ -1,0 +1,6 @@
+input UserProfileUpdateInput {
+  email: String
+  firstName: String
+  lastName: String
+  onboardingProperties: UserOnboardingUpdateInput
+}
