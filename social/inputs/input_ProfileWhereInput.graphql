@@ -17,4 +17,8 @@ input ProfileWhereInput {
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
   updatedAt: DateTimeFilter
   websiteUrl: NullableStringFilter
+  buyerCategory: NullableStringFilter
+  sellerCategory: NullableStringFilter
+  isDemandBridge: Boolean
+  isSupplyBridge: Boolean
 }

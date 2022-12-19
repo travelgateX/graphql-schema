@@ -1,0 +1,7 @@
+type UserProfile {
+  code: String!
+  userProfileData: UserProfileData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime
+  updatedAt: DateTime
+}
