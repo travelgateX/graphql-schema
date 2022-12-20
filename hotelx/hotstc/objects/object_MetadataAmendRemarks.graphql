@@ -1,0 +1,6 @@
+type MetadataAmendBoard{
+
+    # Informs if the supplier allows to amend the remarks
+    allowsAmendRemarks:ReviewedBool!
+
+}
