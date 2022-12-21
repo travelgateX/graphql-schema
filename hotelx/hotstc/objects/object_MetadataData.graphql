@@ -18,6 +18,18 @@ type MetadataData{
     # Cancel metadata
     cancel:MetadataCancel!
 
+    # Amend Board metadata
+    amendBoard: MetadataAmendBoard
+
+    # Amend Dates metadata
+    amendDates: MetadataAmendDates
+
+    # Amend Paxes metadata
+    amendPaxes: MetadataAmendPaxes
+
+    # Amend Remarks metadata
+    amendRemarks: MetadataAmendRemarks
+
     # Contains information regarding Hotels, Hotels returns a list of hotels all information available (code, name,
     # address, phone, etc.) for each hotel. Return null is not implemented
     hotels: MetadataContent
