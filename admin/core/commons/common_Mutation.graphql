@@ -6,7 +6,7 @@ type Mutation {
   paymentX: PaymentXMutation
   logging: LoggingMutation
   activation: ActivationMutation
-  social: SocialMutation
+  """ social: SocialMutation """
   speed: SpeedMutation
   trafficOptimization: TrafficOptimizationMutation
 }

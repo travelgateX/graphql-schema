@@ -1,5 +1,5 @@
 # The query root of TravelgateX's GraphQL interface.
-type Query{
+type Query {
   # The admin query root of TravelgateX's for implementing GraphQL query.
   admin: AdminQuery
   # The hotelX product query root for implementing GraphQL query.
@@ -11,13 +11,12 @@ type Query{
   # The Stats product query root for implementing GraphQL query.
   stats: StatsQuery
   # The Insights product query root for implementing GraphQL query.
-  insights:InsightsQuery
+  insights: InsightsQuery
   # The Activation query root for implementing GraphQL query.
   activation: ActivationQuery
   # The Speed query root for implementing GraphQL query.
   speed: SpeedQuery
   # The Traffic Optimization query root for implementing GraphQL query.
   trafficOptimization: TrafficOptimizationQuery
-  # The Social query root for implementing GraphQL query.
-  social: SocialQuery
+  
 }

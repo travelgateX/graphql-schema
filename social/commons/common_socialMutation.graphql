@@ -1,4 +1,4 @@
-type Mutation {
+extend type Mutation {
   social: SocialMutation
 }
 

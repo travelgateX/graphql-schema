@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "SchemaTests",
   "version": "1.0.0",
   "description": "Test schemas",
   "main": "index.js",
@@ -8,8 +8,8 @@
   "scripts": {
     "test": "mocha --recursive --exit",
     "test-coverage": "nyc --reporter=html mocha --recursive --exit",
-    "prettier:check": "prettier --check ."
-
+    "prettier:check": "prettier --check .",
+    "validate": "graphql-schema-linter"
   },
   "repository": {
     "type": "git",
@@ -19,31 +19,18 @@
     "url": "https://github.com/bloodyrafo75/graphql-schema/issues"
   },
   "homepage": "https://github.com/bloodyrafo75/graphql-schema#readme",
-
-
-  "husky": {
-    "hooks": {
-        "pre-commit": "lint-staged",
-        "pre-push": "npm run test"
-    }
-},
-
-  "lint-staged": {
-    "*.{graphql}": [
-        "prettier --write"
-        
-    ]
-},
   "devDependencies": {
     "chai": "^4.3.7",
-    "graphql-tools": "^8.3.12",
-    "mocha": "^10.1.0",
-    "nyc": "^15.1.0",
     "eslint": "^8.24.0",
     "eslint-config-google": "^0.14.0",
-    "husky": "^8.0.1",
+    "graphql": "^16.6.0",
+    "graphql-schema-linter": "^3.0.1",
+    "graphql-tools": "^8.3.12",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "mercurius-integration-testing": "^5.0.0",
+    "mocha": "^10.1.0",
+    "nyc": "^15.1.0",
     "prettier": "^2.7.1"
   }
 }

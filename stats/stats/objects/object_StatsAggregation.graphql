@@ -1,5 +1,7 @@
-
-type StatsAggregation implements Node{
+type StatsAggregation implements Node {
+  code: ID!
   aggregationData: StatsAggregationData
-  adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
+  adviseMessage(level: AdviseMessageLevel): [AdviseMessage!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }

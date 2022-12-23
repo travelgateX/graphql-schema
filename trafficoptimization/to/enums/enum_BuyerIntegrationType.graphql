@@ -1,7 +1,0 @@
-enum BuyerIntegrationType {
-  LEGACY
-  HOTELX
-  CHANNELX
-  B2B_VIRTUAL_AGENCY_TOOL
-  EASY_CONNECT
-}
