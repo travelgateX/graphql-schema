@@ -1,7 +1,9 @@
 const fs = require("fs");
 
-const fullSchemaFileName ="/home/rafo/Descargas/graphql-schema/full_schema.graphql";
-fs.unlinkSync(fullSchemaFileName);
+const fullSchemaFileName = __dirname + "/full_schema.graphql";
+if (fs.existsSync(fullSchemaFileName)) {
+  fs.unlinkSync(fullSchemaFileName);
+}
 
 let schemaString = "";
 const filesCollection = getRecursiveFiles("./");
