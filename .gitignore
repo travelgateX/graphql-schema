@@ -2,3 +2,4 @@
 .lh
 .nyc_output
 node_modules
+full_schema.graphql

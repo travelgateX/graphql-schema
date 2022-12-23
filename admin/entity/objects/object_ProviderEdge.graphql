@@ -1,4 +1,0 @@
-type ProviderEdge {
-  cursor: String!
-  node: Provider
-}

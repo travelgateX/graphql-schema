@@ -1,4 +1,0 @@
-input ContextedCodeInput {
-    code: ID!
-    context: ID!
-}

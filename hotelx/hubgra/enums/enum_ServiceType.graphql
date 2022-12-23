@@ -1,5 +1,0 @@
-# Service Type
-enum ServiceType {
-  # A ticket or pass authorizing the holder to ski in a certain place or resort. Gross.
-  SKI_PASS
-}

@@ -1,4 +1,0 @@
-input UpdatePartnerInput{
-  name:String
-  fiendlyName: String
-}

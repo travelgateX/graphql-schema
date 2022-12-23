@@ -1,9 +1,0 @@
-# Data related to a connected user and its groups
-type ConnectUser {
-  # Unique connected user of a supplier
-  code: String!
-  # Indicates whether a connected user is active
-  isActive: Boolean!
-  # Connected user's related data based on its groups
-  connectUserGroups: [ConnectUserGroup!]
-}

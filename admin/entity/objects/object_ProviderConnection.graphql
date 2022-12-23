@@ -1,4 +1,0 @@
-type ProviderConnection {
-  edges: [ProviderEdge]
-  pageInfo: PageInfo!
-}

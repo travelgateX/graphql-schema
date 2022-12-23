@@ -1,5 +1,0 @@
-# Information required to store a mapping in TGX system
-input InscribeSetMappingInput {
-    # List of mappings to store in TGX system
-    supplierMappings : [SetSupplierMappingInput!]!
-}

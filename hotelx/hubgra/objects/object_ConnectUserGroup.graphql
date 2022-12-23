@@ -1,7 +1,0 @@
-# group related to a connect user
-type ConnectUserGroup {
-  # Group code of the group related to this connected user
-  groupCode: String!
-  # Indicates if the connect user is active for its connected user
-  isActive: Boolean!
-}
