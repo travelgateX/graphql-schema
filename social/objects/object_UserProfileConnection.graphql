@@ -1,6 +1,0 @@
-type UserProfileConnection {
-  edges: [UserProfileEdge]
-  pageInfo: PageInfo!
-  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage]
-  totalCount: Int!
-}

@@ -1,6 +1,0 @@
-enum EnvironmentType {
-  TEST
-  LOCAL
-  DEV
-  PROD
-}

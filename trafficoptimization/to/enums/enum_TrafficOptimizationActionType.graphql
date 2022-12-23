@@ -1,7 +1,0 @@
-enum TrafficOptimizationActionType {
-  # ACTIVATE traffic optimization.
-  ACTIVATE
-
-  # DEACTIVATE traffic optimization.
-  DEACTIVATE
-}

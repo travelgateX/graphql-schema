@@ -1,3 +1,0 @@
-input InscribeDeleteMappingInput {
-    supplierMappings : [DeleteSupplierMappingInput!]!
-}
