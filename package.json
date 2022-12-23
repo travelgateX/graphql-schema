@@ -1,5 +1,5 @@
 {
-  "name": "SchemaTests",
+  "name": "schema_test_validation",
   "version": "1.0.0",
   "description": "Test schemas",
   "main": "index.js",
