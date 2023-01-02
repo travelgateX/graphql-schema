@@ -1,0 +1,16 @@
+type TrafficOptimizationHotelStatsAggregationData {
+  "number of hits "
+  hotels:TrafficOptimizationHotelStats!
+  " buyer returned if you group by BUYER_ORGANIZATION "
+  buyer: Organization 
+  " seller returned if you group by SELLER_ORGANIZATION "
+  seller: Organization 
+  " access returned if you group by ACCESS "
+  access: Access 
+  " supplier returned if you group by SUPPLIER "
+  supplier: Supplier
+  " returned time value if groupByTime is used "
+  time: DateTime
+  " to get data deaggregate from this node "
+  deaggregateData(where: TrafficOptimizationAggregationHotelStatsConnectionWhereInput! groupBy: TrafficOptimizationStatsAggregationGroupByInput): TrafficOptimizationHotelStatsAggregationConnection
+}
