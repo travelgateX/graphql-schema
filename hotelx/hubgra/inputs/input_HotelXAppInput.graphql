@@ -1,4 +1,4 @@
-# Input that allows to send additional data to app
+# Input that allows to send additional data to app (currently only working on Book mutation)
 input HotelXAppInput {
     # Identifies the app
     where: HotelXAppWhereUniqueInput!
