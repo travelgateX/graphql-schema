@@ -1,0 +1,4 @@
+type TrafficOptimizationHotelStats {
+  hotelsIn: TrafficOptimizationHotelStatsData
+  hotelsOut: TrafficOptimizationHotelStatsData
+}
