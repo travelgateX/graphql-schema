@@ -1,0 +1,18 @@
+input SearchCriteriaCreateInput {
+  # Dinamyc Search Criteria's date
+  dinamycDates: SearchCriteriaDinamycDatesInput
+  # Static Search Criteria's date
+  staticDates: SearchCriteriaStaticDatesInput
+  # Hotel Codes
+  hotels: [String!]!
+  # Targeted zones, countries or point-ofsale-to be used in request. Example: "ES".
+  markets: [String!]!
+  # Currency fields have to be specified in ISO 4217 format with enclosing double quotes "EUR".
+  currency: String!
+  # For multi-room bookings, this array will contain multiple elements (rooms). For each room you have to specify its own occupancy.
+  occupancies: [RoomInput!]!
+  # Nationality of the guest (use ISO3166_1_alfa_2). Example: "ES".
+  nationality: Country!
+  # Language to be used in request
+  language: Language
+}

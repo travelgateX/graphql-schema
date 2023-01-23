@@ -1,0 +1,8 @@
+type SearchCriteriaMutation {
+  # CreateSearchCriteria mutation allows to create search criteria for a Supplier
+  createSearchCriteria(where: SupplierWhereUniqueInput!, data: [SearchCriteriaCreateInput!]!): SearchCriteriaConnection!
+  # UpdateSearchCriteria mutation allows to update a search criteria by Code
+  updateSearchCriteria(where: SearchCriteriaCodeWhereUniqueInput!, data: SearchCriteriaUpdateInput!): SearchCriteria!
+  # DeleteSearchCriteria mutation allows to delete search criteria by input
+  deleteSearchCriteria(where: SearchCriteriaWhereInput!): SearchCriteriaConnection!
+}

@@ -1,0 +1,4 @@
+input SearchCriteriaCodeWhereUniqueInput {
+  # Search Criteria's code
+  search: ID!
+}
