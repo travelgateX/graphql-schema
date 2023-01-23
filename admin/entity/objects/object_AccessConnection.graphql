@@ -1,4 +1,4 @@
-type AccessConnection{
+type AccessConnection {
   edges: [AccessEdge]
   pageInfo: PageInfo!
   # List of advise messages.

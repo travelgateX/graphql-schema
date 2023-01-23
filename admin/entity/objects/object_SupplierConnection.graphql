@@ -1,4 +1,4 @@
-type SupplierConnection{
+type SupplierConnection {
   edges: [SupplierEdge]
   pageInfo: PageInfo!
   # List of advise messages.

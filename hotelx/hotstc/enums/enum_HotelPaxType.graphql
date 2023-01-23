@@ -1,9 +1,8 @@
 # Define type of pax allowed
 enum HotelPaxType {
-    ADULT
+  ADULT
 
-    CHILD
+  CHILD
 
-    INFANT
+  INFANT
 }
-

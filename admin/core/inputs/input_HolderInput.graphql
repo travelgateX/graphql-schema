@@ -2,13 +2,13 @@
 input HolderInput {
   # The card holder's name
   name: String!
-  
+
   # The card holder's surname
   surname: String!
 
   # Holder’s title.
   title: PersonalTitleType
-  
+
   # Holder's contact info
   contactInfo: ContactInfoInput
 }

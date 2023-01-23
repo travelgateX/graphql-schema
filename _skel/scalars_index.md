@@ -1,14 +1,15 @@
 {
-  "title": "Scalars",
-  "pagetitle": null,
-  "description": "",
-  "weight": 3,
-  "icon": "fa-list-ol",
-  "alwaysopen": false
+"title": "Scalars",
+"pagetitle": null,
+"description": "",
+"weight": 3,
+"icon": "fa-list-ol",
+"alwaysopen": false
 }
 Scalars are _types_ of objects that are available in our schema (such as `String` or `Integer`). By defining scalars we make sure you can only enter or receive data that fits the objects in our data model.
 
 Each `Scalar` is described in the same way:
+
 - A short definition of the `Scalar`
 - An interactive GraphQL schema definition
 - A list of which objects require this `Scalar`

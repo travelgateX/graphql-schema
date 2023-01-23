@@ -1,4 +1,4 @@
-input HotelXFilterPluginTypeInput{
+input HotelXFilterPluginTypeInput {
   # The Step of the plugin to filter
   step: PluginStepType!
   # The Type of the plugin to filter

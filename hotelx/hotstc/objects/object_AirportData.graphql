@@ -1,11 +1,11 @@
 # Information about the airport
 type AirportData {
-    # Airport Code (IATA)
-    code: ID!
+  # Airport Code (IATA)
+  code: ID!
 
-    # The airport's name
-    name: String
+  # The airport's name
+  name: String
 
-    # The airport's location
-    location: Location
+  # The airport's location
+  location: Location
 }

@@ -1,4 +1,4 @@
-enum AlertBound{
+enum AlertBound {
   UPPER
   LOWER
   BOTH

@@ -1,5 +1,5 @@
 """
-Constraint suplementary to the passenger name. Examples: MR (Mister), MRS (Mistress), INF (Infant) CHD (Child)  
+Constraint suplementary to the passenger name. Examples: MR (Mister), MRS (Mistress), INF (Infant) CHD (Child)
 """
 enum TitleNameType {
   MR

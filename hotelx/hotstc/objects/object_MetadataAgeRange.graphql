@@ -1,9 +1,9 @@
 # Contain age range of the passenger
-type AgeRange{
-    # min age allowed
-    min: Int!
-    # max age allowed
-    max: Int!
-    # PaxType
-    type: HotelPaxType!
+type AgeRange {
+  # min age allowed
+  min: Int!
+  # max age allowed
+  max: Int!
+  # PaxType
+  type: HotelPaxType!
 }

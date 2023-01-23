@@ -1,12 +1,10 @@
-type MetadataCancel{
+type MetadataCancel {
+  # The supplier allows cancellation with supplier reference.
+  mutableBySupplierReference: ReviewedBool!
 
-    # The supplier allows cancellation with supplier reference.
-    mutableBySupplierReference:ReviewedBool!
+  # The supplier allows cancellation with client reference.
+  mutableByClientReference: ReviewedBool!
 
-    # The supplier allows cancellation with client reference.
-    mutableByClientReference:ReviewedBool!
-
-    # The supplier informs the cancellation price.
-    informPriceCancel:ReviewedBool
-
+  # The supplier informs the cancellation price.
+  informPriceCancel: ReviewedBool
 }

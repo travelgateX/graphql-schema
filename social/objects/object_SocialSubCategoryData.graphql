@@ -1,8 +1,8 @@
 type SocialSubCategoryData {
-    code: String!
-    description: String
-    defaultIsBuyer: Boolean!
-    defaultIsSeller: Boolean!
-    defaultDemandBridge: Boolean!
-    defaultSupplyBridge: Boolean!
+  code: String!
+  description: String
+  defaultIsBuyer: Boolean!
+  defaultIsSeller: Boolean!
+  defaultDemandBridge: Boolean!
+  defaultSupplyBridge: Boolean!
 }

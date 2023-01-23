@@ -1,13 +1,13 @@
 type Rule {
   # rule identifier
   id: String!
-  
+
   # rule name
   name: String
-  
+
   # type of the value
   type: MarkupRuleType!
-  
+
   # value applied by this rule
   value: Float!
 }

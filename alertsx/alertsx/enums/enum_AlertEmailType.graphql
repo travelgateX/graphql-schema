@@ -1,4 +1,4 @@
-enum AlertEmailType{
+enum AlertEmailType {
   BCC
   TO
 }

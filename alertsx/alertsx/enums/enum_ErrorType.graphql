@@ -1,4 +1,4 @@
-enum ErrorType{
+enum ErrorType {
   OK
   PROVIDER
   TIMEOUT

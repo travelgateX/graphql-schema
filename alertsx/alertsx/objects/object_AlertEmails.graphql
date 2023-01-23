@@ -1,5 +1,4 @@
 type AlertEmails {
-   isActive: Boolean!
-   email(type:AlertEmailType): [AlertEmail!]!
+  isActive: Boolean!
+  email(type: AlertEmailType): [AlertEmail!]!
 }
-

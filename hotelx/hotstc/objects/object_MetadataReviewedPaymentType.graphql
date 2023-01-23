@@ -1,8 +1,8 @@
 # Payment types accepted by the supplier.
-type ReviewedPaymentType{
-    # Last reviewed date
-    reviewDate:Date!
+type ReviewedPaymentType {
+  # Last reviewed date
+  reviewDate: Date!
 
-    # Indicates the types of payment suppoted
-    value: PaymentType!
+  # Indicates the types of payment suppoted
+  value: PaymentType!
 }

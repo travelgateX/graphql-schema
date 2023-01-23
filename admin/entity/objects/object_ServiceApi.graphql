@@ -1,11 +1,11 @@
 # Information related to a Service API
 type ServiceApi {
- # Service API ID
- code: ID!
- # Service API Name
- name: String!
- # Operations that a Service Api has
- operations: [ServiceOperation]
- # Errors
- error: [Error!]
+  # Service API ID
+  code: ID!
+  # Service API Name
+  name: String!
+  # Operations that a Service Api has
+  operations: [ServiceOperation]
+  # Errors
+  error: [Error!]
 }

@@ -1,6 +1,6 @@
 input ContactInfoInput {
-    # Email contact
-    email: Email
-    # Phone contact
-    phone: PhoneInput
+  # Email contact
+  email: Email
+  # Phone contact
+  phone: PhoneInput
 }

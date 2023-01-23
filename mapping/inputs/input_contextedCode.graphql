@@ -1,4 +1,4 @@
 input ContextedCodeInput {
-    code: ID!
-    context: ID!
+  code: ID!
+  context: ID!
 }

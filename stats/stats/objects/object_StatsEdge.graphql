@@ -1,4 +1,4 @@
-type StatsEdge{
+type StatsEdge {
   node: Stats
   cursor: String!
 }

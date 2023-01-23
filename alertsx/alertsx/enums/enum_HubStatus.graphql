@@ -1,4 +1,4 @@
-enum HubStatus{
+enum HubStatus {
   OK
   EXCEPTION
   TIMEOUT

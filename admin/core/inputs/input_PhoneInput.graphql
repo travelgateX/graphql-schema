@@ -1,7 +1,7 @@
 # Phone number accomplishing standard E.164 (Max. 15 digits) Example: +16175551212
 input PhoneInput {
-    # The combination of one, two or three digits identifying a specific country, countries in an integrated numbering plan, or a specific geographic area (1 to 3 digits)
-    countryCode: DialingCountryCode!
-    # identifies a subscriber for a particular global service
-    number: PhoneSubscriberNumber!
+  # The combination of one, two or three digits identifying a specific country, countries in an integrated numbering plan, or a specific geographic area (1 to 3 digits)
+  countryCode: DialingCountryCode!
+  # identifies a subscriber for a particular global service
+  number: PhoneSubscriberNumber!
 }

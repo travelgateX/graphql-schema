@@ -1,5 +1,5 @@
 type TrafficOptimizationStatsAggregationConnection {
-  totalCount:Int!
-  edges :[TrafficOptimizationStatsAggregationEdge!]
+  totalCount: Int!
+  edges: [TrafficOptimizationStatsAggregationEdge!]
   adviseMessage: [AdviseMessage!]
 }

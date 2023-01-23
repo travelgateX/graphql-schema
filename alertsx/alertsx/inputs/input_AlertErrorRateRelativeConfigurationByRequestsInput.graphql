@@ -3,11 +3,10 @@ input AlertErrorRateRelativeConfigurationByRequestsInput {
   toCheck: [Int!]
   "Error codes to compare. By defaults all traffic is compared"
   toCompare: [Int!]
- "Common configuration for requests window type"
+  "Common configuration for requests window type"
   windowing: AlertCommonByRequestsInput!
   "Common configuration alert"
   common: AlertCommonConfigurationInput!
   "Common configuration of relative mode type"
   relative: AlertCommonRelativeInput!
 }
- 

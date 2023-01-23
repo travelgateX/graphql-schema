@@ -1,4 +1,4 @@
 # Informs the  content information, return null if not implemented
-type MetadataContent{
-    languages: [ReviewedText!]!
+type MetadataContent {
+  languages: [ReviewedText!]!
 }

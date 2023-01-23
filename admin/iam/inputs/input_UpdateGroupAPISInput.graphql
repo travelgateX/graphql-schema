@@ -1,4 +1,4 @@
-input UpdateGroupAPISInput{
+input UpdateGroupAPISInput {
   api: [ID!]!
   group: ID!
 }

@@ -1,4 +1,4 @@
-type Entity implements Node{
+type Entity implements Node {
   code: ID!
   entity: EntityData
   # List of messages

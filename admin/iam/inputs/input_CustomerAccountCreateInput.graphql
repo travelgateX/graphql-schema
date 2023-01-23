@@ -1,6 +1,6 @@
-input PartnerCreateInput{
-  name:String!
+input PartnerCreateInput {
+  name: String!
   friendlyName: String
   #Default isActive=true
-  isActive:Boolean
+  isActive: Boolean
 }

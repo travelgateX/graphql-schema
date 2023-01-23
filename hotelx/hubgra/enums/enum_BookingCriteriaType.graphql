@@ -2,7 +2,7 @@
 enum BookingCriteriaType {
   # Search by date range
   DATES
-  
+
   # Search by reference codes
   REFERENCES
 }

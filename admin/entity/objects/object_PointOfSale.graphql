@@ -1,4 +1,4 @@
-type PointOfSale implements Node{
+type PointOfSale implements Node {
   code: ID!
   pointOfSaleData: PointOfSaleData
 

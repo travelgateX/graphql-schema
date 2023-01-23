@@ -1,6 +1,6 @@
 input AlertUpdatePriceRelativeConfigurationByRequestsInput {
   "Configuration of amount & commission values"
-  price:AlertUpdatePriceInput
+  price: AlertUpdatePriceInput
   "Common configuration for requests window type"
   windowing: AlertUpdateCommonByRequestsInput
   "Common configuration alert"

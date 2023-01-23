@@ -3,7 +3,7 @@ input BusinessRulesInput {
   # Options quota per search. Maximum numbers of options to be returned by the search query.
   # @deprecated(reason: "deprecated from 2019-12-04. This option will be only configurable by settings.")
   optionsQuota: Int
-  
+
   # Different business rules to filter the returned options.
   businessRulesType: BusinessRulesType
 }

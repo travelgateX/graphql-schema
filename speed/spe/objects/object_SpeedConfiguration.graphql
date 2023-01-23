@@ -1,5 +1,5 @@
 type SpeedConfiguration {
-    is_active: Boolean!
-    ttl: [SpeedTtl!]
-    rqMode: SpeedRQMode
+  is_active: Boolean!
+  ttl: [SpeedTtl!]
+  rqMode: SpeedRQMode
 }

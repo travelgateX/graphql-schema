@@ -1,4 +1,4 @@
-enum AlertSharedType{
+enum AlertSharedType {
   TGX
   GROUP
 }

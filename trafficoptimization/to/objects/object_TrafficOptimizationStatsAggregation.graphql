@@ -1,4 +1,4 @@
 type TrafficOptimizationStatsAggregation {
   aggregationData: TrafficOptimizationStatsAggregationData
-  adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
+  adviseMessage(level: AdviseMessageLevel): [AdviseMessage!]
 }

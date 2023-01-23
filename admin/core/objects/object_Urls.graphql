@@ -1,11 +1,11 @@
 # Url's
 type Urls {
   # Specific URL for Availability method.
-  search:         URI
+  search: URI
   # Specific URL for Reservation method.
-  quote:          URI
+  quote: URI
   # Specific URL for Valuation method.
-  book:           URI
+  book: URI
   # Supplier URL used for multiple methods.
-  generic:        URI
+  generic: URI
 }

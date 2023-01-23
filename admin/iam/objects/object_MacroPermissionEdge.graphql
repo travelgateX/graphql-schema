@@ -1,4 +1,4 @@
-type MacroPermissionEdge{
+type MacroPermissionEdge {
   node: MacroPermission
   cursor: String!
 }

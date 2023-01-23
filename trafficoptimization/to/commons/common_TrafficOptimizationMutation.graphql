@@ -1,56 +1,56 @@
-type TrafficOptimizationMutation{
-	"""
-  		Creates a new Traffic Optimization configuration for a given access
-  	"""
-	createTrafficOptimizationAccess(
-		data: TrafficOptimizationCreateAccessInput!
-	): TrafficOptimizationAccess
-	"""
-  		Activates the Traffic Optimization Tool for a given access
-  	"""  
-	activateTrafficOptimizationAccess(
-		where: TrafficOptimizationUpdateAccessWhereInput!,
-		data: TrafficOptimizationUpdateAccessDataInput!
-	): TrafficOptimizationAccess
-	"""
-  		Deactivates the Traffic Optimization Tool for a given access
-  	"""    
-	deactivateTrafficOptimizationAccess(
-		where: TrafficOptimizationUpdateAccessWhereInput!,
-		data: TrafficOptimizationUpdateAccessDataInput! 
-	): TrafficOptimizationAccess
-	"""
-  		Updates the Traffic Optimization criteria field for a given access
-  	""" 	
-    updateTrafficOptimizationAccessCriteria(
-		where: TrafficOptimizationUpdateAccessWhereInput!, 
-		data: TrafficOptimizationUpdateAccessCriteriaDataInput!
-	): TrafficOptimizationAccess
-	"""
-  		Creates a new Traffic Optimization configuration for all of the accesses of a given connection
-  	"""
-	createTrafficOptimizationAllAccesses(
-		data: TrafficOptimizationCreateAllAccessesInput!
-	): TrafficOptimizationConnection
-	"""
-  		Activates the Traffic Optimization Tool for all of the accesses of a given connection
-  	"""
-	activateTrafficOptimizationAllAccesses(
-		where: TrafficOptimizationUpdateAllAccessesWhereInput!,
-		data: TrafficOptimizationUpdateAllAccessesDataInput!
-	): TrafficOptimizationConnection
-	"""
-  		Deactivates the Traffic Optimization Tool for all of the accesses of a given connection
-  	"""
-	deactivateTrafficOptimizationAllAccesses(
-		where: TrafficOptimizationUpdateAllAccessesWhereInput!,
-		data: TrafficOptimizationUpdateAllAccessesDataInput!
-	): TrafficOptimizationConnection
-	"""
-  		Updates the Traffic Optimization criteria field for all of the accesses of a given connection
-  	""" 	
-    updateTrafficOptimizationAllAccessesCriteria(
-		where: TrafficOptimizationUpdateAllAccessesWhereInput!, 
-		data: TrafficOptimizationUpdateAllAccessesCriteriaDataInput!
-	): TrafficOptimizationConnection
+type TrafficOptimizationMutation {
+  """
+  Creates a new Traffic Optimization configuration for a given access
+  """
+  createTrafficOptimizationAccess(
+    data: TrafficOptimizationCreateAccessInput!
+  ): TrafficOptimizationAccess
+  """
+  Activates the Traffic Optimization Tool for a given access
+  """
+  activateTrafficOptimizationAccess(
+    where: TrafficOptimizationUpdateAccessWhereInput!
+    data: TrafficOptimizationUpdateAccessDataInput!
+  ): TrafficOptimizationAccess
+  """
+  Deactivates the Traffic Optimization Tool for a given access
+  """
+  deactivateTrafficOptimizationAccess(
+    where: TrafficOptimizationUpdateAccessWhereInput!
+    data: TrafficOptimizationUpdateAccessDataInput!
+  ): TrafficOptimizationAccess
+  """
+  Updates the Traffic Optimization criteria field for a given access
+  """
+  updateTrafficOptimizationAccessCriteria(
+    where: TrafficOptimizationUpdateAccessWhereInput!
+    data: TrafficOptimizationUpdateAccessCriteriaDataInput!
+  ): TrafficOptimizationAccess
+  """
+  Creates a new Traffic Optimization configuration for all of the accesses of a given connection
+  """
+  createTrafficOptimizationAllAccesses(
+    data: TrafficOptimizationCreateAllAccessesInput!
+  ): TrafficOptimizationConnection
+  """
+  Activates the Traffic Optimization Tool for all of the accesses of a given connection
+  """
+  activateTrafficOptimizationAllAccesses(
+    where: TrafficOptimizationUpdateAllAccessesWhereInput!
+    data: TrafficOptimizationUpdateAllAccessesDataInput!
+  ): TrafficOptimizationConnection
+  """
+  Deactivates the Traffic Optimization Tool for all of the accesses of a given connection
+  """
+  deactivateTrafficOptimizationAllAccesses(
+    where: TrafficOptimizationUpdateAllAccessesWhereInput!
+    data: TrafficOptimizationUpdateAllAccessesDataInput!
+  ): TrafficOptimizationConnection
+  """
+  Updates the Traffic Optimization criteria field for all of the accesses of a given connection
+  """
+  updateTrafficOptimizationAllAccessesCriteria(
+    where: TrafficOptimizationUpdateAllAccessesWhereInput!
+    data: TrafficOptimizationUpdateAllAccessesCriteriaDataInput!
+  ): TrafficOptimizationConnection
 }

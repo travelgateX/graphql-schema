@@ -1,4 +1,4 @@
-enum AlertWindowType{
+enum AlertWindowType {
   REQUESTS
   TIME
 }

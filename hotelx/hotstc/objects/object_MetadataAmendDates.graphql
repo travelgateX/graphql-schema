@@ -1,9 +1,7 @@
-type MetadataAmendDates{
+type MetadataAmendDates {
+  # Informs if the supplier allows to amend the check-in date
+  allowsAmendCheckIn: ReviewedBool!
 
-    # Informs if the supplier allows to amend the check-in date
-    allowsAmendCheckIn:ReviewedBool!
-
-    # Informs if the supplier allows to amend the check-out date
-    allowsAmendCheckOut:ReviewedBool!
-
+  # Informs if the supplier allows to amend the check-out date
+  allowsAmendCheckOut: ReviewedBool!
 }

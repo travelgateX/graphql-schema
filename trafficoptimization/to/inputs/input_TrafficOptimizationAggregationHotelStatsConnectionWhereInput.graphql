@@ -1,9 +1,9 @@
 input TrafficOptimizationAggregationHotelStatsConnectionWhereInput {
   timeRange: TimeRangeInput!
-  buyer_in:[ID!]
-  seller_in:[ID!]
-  access_in:[ID!]
-  supplier_in:[ID!]
+  buyer_in: [ID!]
+  seller_in: [ID!]
+  access_in: [ID!]
+  supplier_in: [ID!]
   mode: ModeType!
   groupBy: TrafficOptimizationStatsAggregationGroupByInput
 }

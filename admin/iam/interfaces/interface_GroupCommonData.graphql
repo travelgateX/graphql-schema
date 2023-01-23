@@ -1,14 +1,62 @@
-interface GroupCommonData{
+interface GroupCommonData {
   id: ID!
   code: ID!
   label: String
   type: GroupType!
   info: String
-  children(codes: [ID!], first: Int, last: Int, before: String, after:String, type: GroupType, codeStartsWith: String): GroupConnection  owner: Member
+  children(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+    type: GroupType
+    codeStartsWith: String
+  ): GroupConnection
+  owner: Member
   isEditable: Boolean!
-  members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
-  apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
-  accesses(accessID:[ID!],owner:[ID!],first: Int, last: Int, before: String, after:String): AccessConnection
-  suppliers(supplierID:[ID!], accessID:[ID!], owner:[ID!],serviceAPI:[ID!], isActive: Boolean, first: Int, last: Int, before: String, after:String): SupplierConnection
-  clients(clientID:[ID!],name:[ID!],owner:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
+  members(
+    codes: [ID!]
+    type: MemberType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): MemberConnection
+  apis(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): APIConnection
+  accesses(
+    accessID: [ID!]
+    owner: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): AccessConnection
+  suppliers(
+    supplierID: [ID!]
+    accessID: [ID!]
+    owner: [ID!]
+    serviceAPI: [ID!]
+    isActive: Boolean
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): SupplierConnection
+  clients(
+    clientID: [ID!]
+    name: [ID!]
+    owner: [ID!]
+    isActive: Boolean
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): ClientConnection
 }

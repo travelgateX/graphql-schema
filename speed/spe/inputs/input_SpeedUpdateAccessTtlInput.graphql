@@ -1,7 +1,7 @@
-input SpeedUpdateAccessTtlInput{
-    access: ID
-	code: ID
-	mode: ModeType!
-    ttl:	[SpeedTtlInput!]!
-	requestedBy: SpeedRequester!
+input SpeedUpdateAccessTtlInput {
+  access: ID
+  code: ID
+  mode: ModeType!
+  ttl: [SpeedTtlInput!]!
+  requestedBy: SpeedRequester!
 }

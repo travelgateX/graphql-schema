@@ -1,5 +1,5 @@
 # Occupancy Range definition
 type OccupancyRange {
-    min: Int
-    max: Int
+  min: Int
+  max: Int
 }

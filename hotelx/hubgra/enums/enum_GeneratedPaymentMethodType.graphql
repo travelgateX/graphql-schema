@@ -1,13 +1,8 @@
-
-# Indicates the payment method used. It depends of the configurated payments supplier. 
+# Indicates the payment method used. It depends of the configurated payments supplier.
 enum GeneratedPaymentMethodType {
   # The payment method is a generation of a virtual credit card to send to the supplier.
   VIRTUAL_CARD
-  
-  # The payment method is a wallet transaction. 
+
+  # The payment method is a wallet transaction.
   WALLET
-  
 }
-
-
-

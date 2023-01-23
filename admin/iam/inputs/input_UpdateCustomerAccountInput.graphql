@@ -1,4 +1,4 @@
-input UpdatePartnerInput{
-  name:String
+input UpdatePartnerInput {
+  name: String
   fiendlyName: String
 }

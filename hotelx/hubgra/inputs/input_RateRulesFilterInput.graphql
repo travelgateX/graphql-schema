@@ -2,7 +2,7 @@
 input RateRulesFilterInput {
   # if includes not nil: only options without rate rules and options with rate rules found in includes will be returned
   includes: [RateRulesType!]
-  
+
   # if excludes not nil: only options without rate rules and options with rate rules that haven't been sent in excludes will be returned
   excludes: [RateRulesType!]
 }

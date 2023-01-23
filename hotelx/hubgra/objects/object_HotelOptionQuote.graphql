@@ -2,10 +2,10 @@
 type HotelOptionQuote {
   # It is an unique identifier for the option. The id is used to make the book mutation, so it is important not to modify it by any reason.
   optionRefId: String!
-  
+
   # The possible values in status in response are Available (OK) or On Request (RQ).
   status: StatusType!
-  
+
   # Specifies the prices (Gross, Net and Amount) of the option returned.
   price: Price!
 
@@ -14,10 +14,10 @@ type HotelOptionQuote {
 
   # Specifies cancel policies of the option returned.
   cancelPolicy: CancelPolicy!
-  
+
   # Additional information about the option.
   remarks: String
-  
+
   # List of surcharges of the option returned.
   surcharges: [Surcharge!]
 
@@ -29,7 +29,7 @@ type HotelOptionQuote {
 
   # List of rooms of the option quoted.
   rooms: [RoomOptionQuote!]
-  
+
   # Indicates the payment type of the option quoted. Possible options: Merchant, Direct, Card Booking, Card check in and Mixed.
   paymentType: PaymentType!
 }

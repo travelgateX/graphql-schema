@@ -3,14 +3,12 @@
 [![Travis](https://api.travis-ci.org/travelgateX/graphql-schema.svg?branch=master)](https://travis-ci.org/travelgateX/graphql-schema)
 [![Slack](https://slack.travelgatex.com/badge.svg)](https://slack.travelgatex.com)
 
-
-
 ### Schema Graph
 
 https://api.travelgatex.com/voyager
 
-
 ### Get gateway schema Introspection
+
 ```sh
 curl \
     -X POST \

@@ -1,12 +1,12 @@
 """
 ## Recommendations Connection
 """
-type RecommendationsConnection{
-	edges: [RecommendationEdge]
-	#Indicates info about page
-	pageInfo: PageInfo!
-	#Identifies the total count of items in the connection.
-	totalCount: Int!
-	# List of advise messages
-	adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+type RecommendationsConnection {
+  edges: [RecommendationEdge]
+  #Indicates info about page
+  pageInfo: PageInfo!
+  #Identifies the total count of items in the connection.
+  totalCount: Int!
+  # List of advise messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }

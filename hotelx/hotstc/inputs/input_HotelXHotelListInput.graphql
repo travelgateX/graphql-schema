@@ -1,9 +1,9 @@
 input HotelXHotelListInput {
   # Indicates the access
-  access:     ID
+  access: ID
 
   # Search by hotel codes. These hotel codes are used to perform search.
-  hotelCodes:      [String!]
+  hotelCodes: [String!]
 
   # Search by hotel codes in supplier's context.
   supplierHotelCodes: [String!]
@@ -18,13 +18,13 @@ input HotelXHotelListInput {
   countries: [Country!]
 
   # Filter by supplier rank
-  ranks:      [Int!]
+  ranks: [Int!]
 
   # Maxium number of items per page
-  maxSize:       Int
+  maxSize: Int
 
   # The supplier's group. Only available if all permissions allowed
-  group:        ID
+  group: ID
 
   # The supplier's unique code
   supplierCode: ID

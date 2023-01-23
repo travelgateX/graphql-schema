@@ -2,22 +2,22 @@
 type DestinationData {
   # Destination Code
   code: ID!
-  
+
   # Indicates if you can search by destination
   available: Boolean!
-  
+
   # Returns destination leafs of the destination.
   destinationLeaf: [String!]
-  
+
   # Contains the destination name
   texts(languages: [Language!]): [Text!]!
-  
+
   # Closest destinations, indicates destinations in proximity
   closestDestinations: [String!]
-  
+
   # Parent destination code
   parent: String
-  
+
   # Indicates destination type, zone or city
   type: DestinationType
 }

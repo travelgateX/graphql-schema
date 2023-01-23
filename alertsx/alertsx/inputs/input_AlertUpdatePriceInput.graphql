@@ -4,7 +4,7 @@ input AlertUpdatePriceInput {
   "Low or greater values of amount/commission (value included) "
   range: AlertRangePrice
   "Value of amount price"
-  amount: Int 
+  amount: Int
   "Value of commission price"
   commission: Int
   "Amount can be checked by its total value or night"

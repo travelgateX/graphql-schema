@@ -1,4 +1,4 @@
-input HotelXPluginFilterInput{
+input HotelXPluginFilterInput {
   # Plugins to include (only these plugins will be executed)
   includes: [HotelXFilterPluginTypeInput!]
   # Plugins to exclude

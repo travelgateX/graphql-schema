@@ -2,7 +2,8 @@ type Provider implements Node {
   code: ID!
   providerData: ProviderData
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
-  error: [Error!] @deprecated(reason: "deprecated from 2019-01-01. Use adviseMessage instead")
+  error: [Error!]
+    @deprecated(reason: "deprecated from 2019-01-01. Use adviseMessage instead")
   createdAt: DateTime!
   updatedAt: DateTime!
 }

@@ -1,11 +1,11 @@
 """
 CriteriaType
 """
-enum CriteriaType { 
-	# Current Destination - Current Market
-	CurrentDestination_CurrentMarket
-	# Current Destination - New Market
-	CurrentDestination_NewMarket
-	# New Destination - Current Market
-	NewDestination_CurrentMarket
+enum CriteriaType {
+  # Current Destination - Current Market
+  CurrentDestination_CurrentMarket
+  # Current Destination - New Market
+  CurrentDestination_NewMarket
+  # New Destination - Current Market
+  NewDestination_CurrentMarket
 }

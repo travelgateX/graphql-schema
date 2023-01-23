@@ -2,7 +2,7 @@
 type Property {
   # Indicates property type
   name: String
-  
+
   # Indicates property type code
   code: String
 }

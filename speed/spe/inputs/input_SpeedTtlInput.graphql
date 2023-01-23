@@ -1,5 +1,5 @@
-input SpeedTtlInput {	
-    value:	Int!
-	from:	Int! 
-	to:		Int!
+input SpeedTtlInput {
+  value: Int!
+  from: Int!
+  to: Int!
 }

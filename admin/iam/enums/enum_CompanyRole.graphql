@@ -1,4 +1,4 @@
-enum CompanyRole{
+enum CompanyRole {
   ACCOUNT_MANAGER_BUYER
   ACCOUNT_MANAGER_SELLER
   BILLING_BUYER

@@ -1,6 +1,6 @@
-input SpeedUpdateAccessStatusInput{
-	access: ID
-	code: ID
-	mode: ModeType!
-	requestedBy: SpeedRequester!
+input SpeedUpdateAccessStatusInput {
+  access: ID
+  code: ID
+  mode: ModeType!
+  requestedBy: SpeedRequester!
 }

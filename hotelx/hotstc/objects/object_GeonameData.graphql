@@ -17,5 +17,4 @@ type GeonameData {
 
   # Geographical coordinates corresponding to a location.
   coordinates: Coordinates!
-
 }

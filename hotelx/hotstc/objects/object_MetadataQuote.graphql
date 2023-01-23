@@ -1,26 +1,25 @@
-type MetadataQuote{
+type MetadataQuote {
+  # Informs if the price is binding in Quote response.
+  informBindingPrice: ReviewedBool!
 
-    # Informs if the price is binding in Quote response.
-    informBindingPrice: ReviewedBool!
+  # The supplier can inform in Quote if the rate is non-refundable.
+  informNRFRate: ReviewedBool!
 
-    # The supplier can inform in Quote if the rate is non-refundable.
-    informNRFRate: ReviewedBool!
+  # Returns remarks.
+  informRemarks: ReviewedBool!
 
-    # Returns remarks.
-    informRemarks: ReviewedBool!
+  # Informs cancellation policies.
+  informCancelPolicies: ReviewedBool!
 
-    # Informs cancellation policies.
-    informCancelPolicies: ReviewedBool!
+  # Specifies if the supplier informs the cancel policies in free text.
+  informCancelPoliciesDescription: ReviewedBool!
 
-    # Specifies if the supplier informs the cancel policies in free text.
-    informCancelPoliciesDescription: ReviewedBool!
+  # Specifies the timezone in UTC in which the cancellation policies are located.
+  timeZone: ReviewedTimeZone!
 
-    # Specifies the timezone in UTC in which the cancellation policies are located.
-    timeZone:ReviewedTimeZone!
-    
-    # Informs if the supplier returns surcharges.
-    informSurcharges: ReviewedBool!
+  # Informs if the supplier returns surcharges.
+  informSurcharges: ReviewedBool!
 
-    # Informs if the supplier requires nationality
-    requiredNationality: ReviewedBool
+  # Informs if the supplier requires nationality
+  requiredNationality: ReviewedBool
 }

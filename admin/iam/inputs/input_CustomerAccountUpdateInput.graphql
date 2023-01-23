@@ -1,5 +1,5 @@
 input PartnerUpdateInput {
-  name:String
+  name: String
   friendlyName: String
-  isActive:Boolean
+  isActive: Boolean
 }

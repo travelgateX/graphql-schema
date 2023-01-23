@@ -39,7 +39,7 @@ extend type AdminMutation {
   createLegacyAccess(input: LegacyAccessInput!): LegacyAccess
   # Updates a HubUser.
   updateHubUser(input: UpdateHubUserInput!): HubUser
-  # Updates existing hubprovider. 
+  # Updates existing hubprovider.
   updateHubProvider(input: UpdateHubProviderInput!): HubProvider
   # EntitiesV2: SoftDelete Client. [WARNING] Only SuperAdmin users can delete
   archiveClient(where: ClientWhereUniqueInput!): Client!
@@ -53,5 +53,4 @@ extend type AdminMutation {
   archiveAccess(where: AccessWhereUniqueInput!): Access!
   # EntitiesV2: Soft UnDelete Access. [WARNING] Only SuperAdmin users can delete
   unArchiveAccess(where: AccessWhereUniqueInput!): Access!
-
 }

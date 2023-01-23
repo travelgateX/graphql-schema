@@ -1,6 +1,8 @@
-""" Group data by time """
-enum StatsTimeGroupBy{ 
-	MINUTE
+"""
+Group data by time
+"""
+enum StatsTimeGroupBy {
+  MINUTE
   HOUR
   DAY
   MONTH

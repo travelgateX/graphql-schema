@@ -1,27 +1,29 @@
-""" Filters able to retrieve stats """
-input StatsAggregationConnectionWhereInput{
-  " Retrieve data as a Buyer or as a Seller "  
+"""
+Filters able to retrieve stats
+"""
+input StatsAggregationConnectionWhereInput {
+  " Retrieve data as a Buyer or as a Seller "
   mode: ModeType!
-  " Input time "  
+  " Input time "
   timeRange: TimeRangeInput!
-  " List of buyer codes "  
-  buyer_in:[ID!]
-  " List of seller codes "  
-  seller_in:[ID!]
-  "  List of access codes "  
-  access_in:[ID!]
-  "  List of client codes "  
-  client_in:[ID!] 
+  " List of buyer codes "
+  buyer_in: [ID!]
+  " List of seller codes "
+  seller_in: [ID!]
+  "  List of access codes "
+  access_in: [ID!]
+  "  List of client codes "
+  client_in: [ID!]
   " List of supplier codes "
-  supplier_in:[ID!]
-  " List of operation codes "  
-  operation_in:[ID!]
-  " List of operation types "  
-  operationType_in:[OperationType!] 
-  " List of error codes "  
-  errorCode_in:[ID!]
-  " List of error types "  
-  errorType_in:[ID!]
-  " List of Traffic Type "  
-  trafficType_in:[TrafficType!]
+  supplier_in: [ID!]
+  " List of operation codes "
+  operation_in: [ID!]
+  " List of operation types "
+  operationType_in: [OperationType!]
+  " List of error codes "
+  errorCode_in: [ID!]
+  " List of error types "
+  errorType_in: [ID!]
+  " List of Traffic Type "
+  trafficType_in: [TrafficType!]
 }

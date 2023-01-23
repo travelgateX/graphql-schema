@@ -1,12 +1,12 @@
 type PartnerData {
   #parXYZ..
   code: ID!
-  name:String!
+  name: String!
   isActive: Boolean
   friendlyName: String
-  organizations:OrganizationConnection
+  organizations: OrganizationConnection
   # Differents agents from TravelgateX
-  agents:[CustomerAgent!]
+  agents: [CustomerAgent!]
   #contacts: MemberConnection
   #tag:[String!]
   #billingAccount:billingAccountConnection!

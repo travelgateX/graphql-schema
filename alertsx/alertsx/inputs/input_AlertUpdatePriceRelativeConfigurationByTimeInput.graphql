@@ -1,6 +1,6 @@
 input AlertUpdatePriceRelativeConfigurationByTimeInput {
   "Configuration of amount & commission values"
-  price:AlertUpdatePriceInput
+  price: AlertUpdatePriceInput
   "Common configuration for time window type"
   windowing: AlertUpdateCommonByTimeInput
   "Common configuration alert"

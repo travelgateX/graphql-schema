@@ -8,4 +8,3 @@ input AlertPriceRelativeConfigurationByRequestsInput {
   "Common configuration of relative mode type"
   relative: AlertCommonRelativeInput!
 }
-

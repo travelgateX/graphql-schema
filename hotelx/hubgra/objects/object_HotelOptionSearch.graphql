@@ -2,67 +2,67 @@
 type HotelOptionSearch implements BookableOptionSearch {
   # Supplier that offers this option.
   supplierCode: String!
-  
+
   # Access code of this option.
   accessCode: String!
-  
+
   # Market of this option.
   market: String @deprecated(reason: "deprecated from 2019-12-11.")
 
   # Markets of this option
   markets: [String!]!
-  
+
   # Code of the hotel in the context selected.
   hotelCode: String!
-  
+
   # Supplier's hotel code.
   hotelCodeSupplier: String!
-  
+
   # Name of the hotel.
   hotelName: String
-  
+
   # Code of the board in the context selected.
   boardCode: String!
-  
+
   # Supplier's board code.
   boardCodeSupplier: String!
-  
+
   # Indicates the payment type of the option returned. Possible options: Merchant, Direct, Card Booking, Card check in and Mixed.
   paymentType: PaymentType!
-  
+
   # The possible values in status in response are Available (OK) or On Request (RQ).
   status: StatusType!
-  
+
   # List of occupancies for the request
   occupancies: [Occupancy!]!
-  
+
   # List of rooms of the option returned.
   rooms: [Room!]!
-  
+
   # Specifies the prices (Gross, Net and Amount) of the option returned.
   price: Price!
-  
+
   # List of supplements of the option returned.
   supplements: [Supplement!]
-  
+
   # List of surcharges of the option returned.
   surcharges: [Surcharge!]
-  
+
   # Specifies rate rules of the option returned. Note: If the option does not have any rate rule, then the option is NORMAL rate.
   rateRules: [RateRulesType!]
-  
+
   # Specifies cancel policies of the option returned.
   cancelPolicy: CancelPolicy
-  
+
   # Additional information about the option.
   remarks: String
-  
+
   # Additional information about the option
   addOns: AddOns
 
   # Token for Deep Link
   token: String! @deprecated(reason: "deprecated from 2019-02-05.")
-  
+
   # It is an unique identifier for the option. The id is used to make the quote query, so it is important not to modify it by any reason.
   id: String!
 
@@ -70,6 +70,6 @@ type HotelOptionSearch implements BookableOptionSearch {
   # pleasant or comfortable for people, Examples include: swimming pools, shopping centers, etc.
   amenities: [Amenity!]
 
-   # RateRules contains all the rules that will be applied to book the option.
+  # RateRules contains all the rules that will be applied to book the option.
   rateRulesExtended: [HotelOptionRateRule!]
 }

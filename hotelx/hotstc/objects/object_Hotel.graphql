@@ -2,10 +2,10 @@
 type Hotel implements Node {
   # Hotel ID
   code: ID!
-  
+
   # Hotel data
   hotelData: HotelData
-  
+
   # Errors that abort services
   error: [AdviseMessage!] @deprecated(reason: "Deprecated from 2019-07-03")
 
@@ -14,7 +14,7 @@ type Hotel implements Node {
 
   # Date created
   createdAt: DateTime!
-  
+
   # Date updated
   updatedAt: DateTime!
 }

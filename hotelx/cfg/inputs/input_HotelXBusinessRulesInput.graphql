@@ -2,7 +2,7 @@
 input HotelXBusinessRulesInput {
   # Options quota per search. Maximum numbers of options to be returned by the search query.
   optionsQuota: Int!
-  
+
   # Different business rules to filter the returned options.
   businessRulesType: BusinessRulesType!
 }

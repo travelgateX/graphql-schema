@@ -1,10 +1,10 @@
 type Stat {
   # Start UTC
-  start:      DateTime!
-  
+  start: DateTime!
+
   # End UTC
-  end:        DateTime!
-  
+  end: DateTime!
+
   # Difference between start and end in miliseconds
-  duration:   Float
+  duration: Float
 }

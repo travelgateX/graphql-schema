@@ -1,5 +1,5 @@
 # Parameters Input.
-input ParameterInput {  
+input ParameterInput {
   # Contains the keyword/Id to identify a parameter.
   # This information is mandatory.
   key: String!

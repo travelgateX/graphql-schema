@@ -1,4 +1,4 @@
-input AlertCommonByRequestsInput{
- "minimum number of requests to check the alert"
+input AlertCommonByRequestsInput {
+  "minimum number of requests to check the alert"
   minNumberRequests: Int!
 }

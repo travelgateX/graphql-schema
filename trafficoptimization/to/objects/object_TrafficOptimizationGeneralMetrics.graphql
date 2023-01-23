@@ -1,4 +1,4 @@
 type TrafficOptimizationGeneralMetrics {
-    totalHotels: Int!
-    totalSearches: Int!
+  totalHotels: Int!
+  totalSearches: Int!
 }

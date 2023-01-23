@@ -1,16 +1,16 @@
 type HotelQuote implements Response {
   # Application stats in string format
   stats(token: String!): StatsRequest
-  
+
   # Data sent and received in the supplier's native format.
   auditData: AuditData
-  
+
   # Information about quote.
   optionQuote: HotelOptionQuote
-  
+
   # Errors that abort services
   errors: [Error!]
-  
+
   # Potentially harmful situations or errors, but ones that will not forcibly abort the service
   warnings: [Warning!]
 }

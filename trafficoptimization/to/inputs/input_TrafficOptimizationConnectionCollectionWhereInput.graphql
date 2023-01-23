@@ -18,5 +18,5 @@ input TrafficOptimizationConnectionConnectionWhereInput {
 
   isActiveAccess: Boolean
 
-  accessCode_in:[ID!]
+  accessCode_in: [ID!]
 }

@@ -1,14 +1,15 @@
 {
-  "title": "Interfaces",
-  "pagetitle": null,
-  "description": "",
-  "weight": 4,
-  "icon": "fa-window-restore",
-  "alwaysopen": false
+"title": "Interfaces",
+"pagetitle": null,
+"description": "",
+"weight": 4,
+"icon": "fa-window-restore",
+"alwaysopen": false
 }
 Interfaces are an abstract type that includes a certain set of fields that are grouped together. For example, our `AdviseMessage` interface requires the error code, error type and error description fields to be used together.
 
 Each `Interface` is described in the same way:
+
 - A short definition of the `Interface`
 - An interactive GraphQL schema definition
 - A list of all of the fields that are included in this `Interface` (remember, in GraphQL, ‘!’ indicates mandatory fields. Some interfaces have all fields mandatory and some have a mix of mandatory and optional fields)

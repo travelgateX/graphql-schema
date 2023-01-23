@@ -2,19 +2,19 @@
 type CancelPenalty {
   # Cancellation fees will be applicabled between this date and check-in date
   deadline: DateTime
-  
+
   # Specifies if the deadline has been taken from the seller’s response (false) or has been calculated by TravelgateX (true)
   isCalculatedDeadline: Boolean!
 
   # Cancellation fees applicable X number of hours before the check-in date
   hoursBefore: Int!
-  
+
   # Type of penalty; this can be Nights, Percent or Import
   penaltyType: CancelPenaltyType!
-  
+
   # Currency used in the cancellation policy
   currency: Currency!
-  
+
   # Value of the cancellation policy
   value: Float!
 }

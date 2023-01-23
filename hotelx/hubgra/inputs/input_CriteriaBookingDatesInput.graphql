@@ -2,11 +2,11 @@
 input CriteriaBookingDatesInput {
   # Type of date. Can be Arrival or Booking date.
   dateType: DateType!
-  
+
   # Start date.
   # Format: YYYY-MM-DD.
   start: Date!
-  
+
   # End date.
   # Format: YYYY-MM-DD.
   end: Date!

@@ -1,5 +1,5 @@
 input AlertRatiosInput {
- "Ratio to checked"
+  "Ratio to checked"
   check: AlertCheckRatio!
   "l2b ratio limit to be advised"
   l2b: Int

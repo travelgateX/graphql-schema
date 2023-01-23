@@ -1,4 +1,4 @@
-type ExternalMessage	{
+type ExternalMessage {
   # External Code
   code: String
   # External Message

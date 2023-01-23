@@ -1,6 +1,6 @@
 input ProviderCreateInput {
-    id: ID
-    code: ID!
-    name: String!
-    isActive: Boolean = true
+  id: ID
+  code: ID!
+  name: String!
+  isActive: Boolean = true
 }

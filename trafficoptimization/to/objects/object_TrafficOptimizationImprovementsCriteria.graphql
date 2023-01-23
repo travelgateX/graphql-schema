@@ -1,4 +1,4 @@
 type TrafficOptimizationImprovementsCriteria {
   criteria: TrafficOptimizationCriteriaType!
-  improvements : TrafficOptimizationImprovements!
+  improvements: TrafficOptimizationImprovements!
 }

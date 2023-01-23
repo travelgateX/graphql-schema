@@ -1,4 +1,4 @@
-type OrganizationContact{
-  type:OrganizationContactType!
-  user:Member!
+type OrganizationContact {
+  type: OrganizationContactType!
+  user: Member!
 }

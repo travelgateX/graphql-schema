@@ -1,10 +1,23 @@
-type ResourceData{
+type ResourceData {
   id: ID!
   code: ID!
   isEditable: Boolean!
   label: String
   # which API have asigned this resource?
-  apis(codes: [ID!],first: Int, last: Int, before: String, after:String): APIConnection
+  apis(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): APIConnection
   # which roles are asigned or are possibles in this resource?
-  roles(codes: [ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
+  roles(
+    codes: [ID!]
+    type: RoleType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): RoleConnection
 }

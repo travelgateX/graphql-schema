@@ -1,8 +1,8 @@
 # The card expiration date
-type PaymentXExpireDate{
+type PaymentXExpireDate {
   # Month MM
   month: Int!
-  
+
   # Year yy
   year: Int!
 }

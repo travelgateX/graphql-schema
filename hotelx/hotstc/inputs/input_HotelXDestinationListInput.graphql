@@ -1,13 +1,13 @@
 input HotelXDestinationListInput {
   # Indicates the access
-  access:     ID
+  access: ID
 
   # The supplier's group. Only available if all permissions allowed
-  group:        ID
-  
+  group: ID
+
   # Search by hotel codes
-  destinationCodes:      [String!]
-  
+  destinationCodes: [String!]
+
   # Maxium number of items per page
-  maxSize:       Int
+  maxSize: Int
 }

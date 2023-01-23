@@ -1,6 +1,6 @@
 # Contain text value and review date
-type ReviewedText{
-    reviewDate: Date!
+type ReviewedText {
+  reviewDate: Date!
 
-    value: String!
+  value: String!
 }

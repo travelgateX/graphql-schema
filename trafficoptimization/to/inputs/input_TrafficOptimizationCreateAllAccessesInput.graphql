@@ -1,6 +1,6 @@
-input TrafficOptimizationCreateAllAccessesInput{
-	organizationBuyerCode: ID!
-	organizationSellerCode: ID! 
-	mode: ModeType!
-	requestedBy: TrafficOptimizationRequester!
+input TrafficOptimizationCreateAllAccessesInput {
+  organizationBuyerCode: ID!
+  organizationSellerCode: ID!
+  mode: ModeType!
+  requestedBy: TrafficOptimizationRequester!
 }

@@ -1,4 +1,4 @@
-enum GroupTypeInput{
+enum GroupTypeInput {
   ROOT
   ORG
   GROUP

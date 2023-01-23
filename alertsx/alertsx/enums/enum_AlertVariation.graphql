@@ -1,4 +1,4 @@
-enum AlertVariation{
+enum AlertVariation {
   INCREASE
   DECREASE
   BOTH

@@ -1,2 +1,2 @@
 # The result could be one of these types
-union Connection = Supplier|Client|Access
+union Connection = Supplier | Client | Access

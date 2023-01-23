@@ -13,9 +13,32 @@ type MemberData {
   # CRM specific data
   crmData: CrmData
   # which groups the member is in?
-  groups(codes:[ID!],type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection
+  groups(
+    codes: [ID!]
+    type: GroupType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): GroupConnection
   # which roles the member has in?
-  roles(codes: [ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
-  organizationMemberRoles(orgCodes: [String!],roleCodes: [RoleMemberType!]): [OrganizationMemberRole!] 
-  macroPermissions(codes: [ID!], first: Int, last: Int, before: String, after:String): MacroPermissionsConnection
+  roles(
+    codes: [ID!]
+    type: RoleType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): RoleConnection
+  organizationMemberRoles(
+    orgCodes: [String!]
+    roleCodes: [RoleMemberType!]
+  ): [OrganizationMemberRole!]
+  macroPermissions(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): MacroPermissionsConnection
 }

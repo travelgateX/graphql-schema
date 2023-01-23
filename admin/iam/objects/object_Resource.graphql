@@ -1,5 +1,5 @@
 # Resources are those used in APIs and Products.
-type Resource implements Node{
+type Resource implements Node {
   code: ID!
   resourceData: ResourceData
   # List of advise messages.

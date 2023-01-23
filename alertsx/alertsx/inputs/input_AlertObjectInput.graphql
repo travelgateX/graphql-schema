@@ -1,6 +1,6 @@
 input AlertObjectInput {
- "object code"
+  "object code"
   code: ID!
   "Can be filtered traffic setting as inclusive or excludent"
   isInclusive: Boolean!
-} 
+}

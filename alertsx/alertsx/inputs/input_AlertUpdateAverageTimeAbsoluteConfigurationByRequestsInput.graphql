@@ -1,8 +1,8 @@
 input AlertUpdateAverageTimeAbsoluteConfigurationByRequestsInput {
   "Time value not allowed in miliseconds"
-  maxTime:Int
+  maxTime: Int
   "Average time value not allowed in miliseconds"
-  maxAverageTime:Int
+  maxAverageTime: Int
   "Number of requests with anomaly to set alert in ALERTING status"
   requestsToAlert: Int
   "Common configuration for requests window type"

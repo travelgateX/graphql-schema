@@ -1,5 +1,5 @@
 "Alert list"
-type AlertConnection{
+type AlertConnection {
   edges: [AlertEdge]
   pageInfo: PageInfo!
   totalCount: Int!

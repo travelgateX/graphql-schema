@@ -1,11 +1,11 @@
 # Metadata definition
 type MetadataConnection {
-    # contains informations of each metadata requested
-    edges: [MetadataEdge]
+  # contains informations of each metadata requested
+  edges: [MetadataEdge]
 
-    # List of messages, contain error message, such as invalid input, connection error
-    adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  # List of messages, contain error message, such as invalid input, connection error
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 
-    # Indicates info about page
-    pageInfo: PageInfo!
+  # Indicates info about page
+  pageInfo: PageInfo!
 }

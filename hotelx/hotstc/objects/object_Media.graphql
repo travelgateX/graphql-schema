@@ -2,19 +2,19 @@
 type Media {
   # Code.
   code: String
-  
+
   # Indicates the order priority.
   order: String
-  
+
   # Indicates the type of the media.
   type: ApplicationAreaType!
-  
+
   # Date updated.
   updatedAt: DateTime!
-  
+
   # Url.
   url: URI!
-  
+
   # Contains the descriptive.
   texts(languages: [Language!]): [Text!]
 }

@@ -2,7 +2,7 @@
 type Description {
   # Indicates type of description
   type: DescriptionType!
-  
+
   # Label
   texts: [Text!]
 }

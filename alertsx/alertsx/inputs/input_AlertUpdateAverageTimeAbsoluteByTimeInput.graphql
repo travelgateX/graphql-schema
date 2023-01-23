@@ -8,5 +8,3 @@ input AlertUpdateAverageTimeAbsoluteByTimeInput {
   "To enable or desable the alert"
   isActive: Boolean
 }
-
- 

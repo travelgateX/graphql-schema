@@ -1,4 +1,4 @@
-type HotelXUpdateStatus implements Node{
+type HotelXUpdateStatus implements Node {
   code: ID!
 
   # New value set

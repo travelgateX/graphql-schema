@@ -1,5 +1,4 @@
-
-type MappingInscription implements Node{
+type MappingInscription implements Node {
   # Internal TGX identificator
   code: ID!
   # Creation date of runtime configuration

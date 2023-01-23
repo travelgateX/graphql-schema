@@ -54,5 +54,5 @@ extend type AdminQuery {
   # Get HubUser
   hubUsers(filter: HubUsersFilter): [HubUser!]
   # Get HubProvider
-  hubProviders(filter: HubProviderFilter): [HubProvider!]  
+  hubProviders(filter: HubProviderFilter): [HubProvider!]
 }

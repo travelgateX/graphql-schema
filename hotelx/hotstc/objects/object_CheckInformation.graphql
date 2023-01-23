@@ -1,9 +1,9 @@
 type CheckInformation {
   # CheckIn instructions
-  instructions(languages: [Language!]):[Text!]
+  instructions(languages: [Language!]): [Text!]
 
   # CheckIn special instructions
-  specialInstructions(languages: [Language!]):[Text!]
+  specialInstructions(languages: [Language!]): [Text!]
 
   # Minimal age allowed for doing the checkin
   minAge: Int

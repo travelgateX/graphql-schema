@@ -4,7 +4,7 @@ input CreateClientInput {
   # Indicates whether a Client is active or inactive
   isActive: Boolean!
   # Group where the client will be assigned at first
-	group: String!
+  group: String!
   # Client owner
   owner: ID
 }

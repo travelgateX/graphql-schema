@@ -1,8 +1,8 @@
-input CreateMemberInput{
+input CreateMemberInput {
   member: ID
   info: String
   type: MemberType!
   group: ID!
-  role:  ID!
-  resources:  [ID!]!
+  role: ID!
+  resources: [ID!]!
 }

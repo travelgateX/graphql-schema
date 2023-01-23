@@ -1,45 +1,45 @@
-type TrafficOptimizationQuery{
+type TrafficOptimizationQuery {
   """
-    Return traffic optimization configuration
+  Return traffic optimization configuration
   """
   trafficOptimizationConnectionConnection(
     where: TrafficOptimizationConnectionConnectionWhereInput
   ): TrafficOptimizationConnectionConnection!
-  
-  """
-    Return blacklist hotels of Accesses
-  """
-  allTrafficOptimizationAccessHotelBlacklist(
-    where:TrafficOptimizationAccessHotelBlacklistWhereInput 
-    first:Int 
-    after:String
-  ):TrafficOptimizationHotelBlacklistConnection!
 
   """
-    Return blacklist hotels of Connections
+  Return blacklist hotels of Accesses
+  """
+  allTrafficOptimizationAccessHotelBlacklist(
+    where: TrafficOptimizationAccessHotelBlacklistWhereInput
+    first: Int
+    after: String
+  ): TrafficOptimizationHotelBlacklistConnection!
+
+  """
+  Return blacklist hotels of Connections
   """
   allTrafficOptimizationAllAccessesHotelBlacklist(
-    where:TrafficOptimizationAllAccessesHotelBlacklistWhereInput 
-    first:Int 
-    after:String
+    where: TrafficOptimizationAllAccessesHotelBlacklistWhereInput
+    first: Int
+    after: String
   ): TrafficOptimizationHotelBlacklistConnection!
 
   """
   Return recommendations of Connections
   """
   allTrafficOptimizationAllAccessesRecommendations(
-    where:TrafficOptimizationAllAccessesRecommendationsWhereInput
+    where: TrafficOptimizationAllAccessesRecommendationsWhereInput
   ): TrafficOptimizationRecommendationsAllAccesses!
 
   """
-  	Returns the aggregated stats registered for a specified input (buyer, seller, access or a combination between these)
+  Returns the aggregated stats registered for a specified input (buyer, seller, access or a combination between these)
   """
   getTrafficOptimizationAggregationStats(
-      where: TrafficOptimizationAggregationStatsConnectionWhereInput!
-    ): TrafficOptimizationStatsAggregationConnection!
+    where: TrafficOptimizationAggregationStatsConnectionWhereInput!
+  ): TrafficOptimizationStatsAggregationConnection!
 
   """
-  	Returns the aggregated hotel stats registered for a specified input (buyer, seller, access or a combination between these)
+  Returns the aggregated hotel stats registered for a specified input (buyer, seller, access or a combination between these)
   """
   getTrafficOptimizationAggregationHotelStats(
     where: TrafficOptimizationAggregationHotelStatsConnectionWhereInput!

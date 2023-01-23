@@ -11,4 +11,3 @@ type Alert implements Node {
   # Updated date
   updatedAt: DateTime!
 }
-

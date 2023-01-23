@@ -2,7 +2,7 @@
 input BookRoomInput {
   # The room's reference in the booking
   occupancyRefId: Int!
-  
+
   # The list or lists of paxes of the room
   paxes: [BookPaxInput!]!
 }

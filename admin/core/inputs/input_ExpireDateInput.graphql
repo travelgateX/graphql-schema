@@ -1,8 +1,8 @@
 # The card expiration date
-input ExpireDateInput{
+input ExpireDateInput {
   # Month MM
   month: Int!
-  
+
   # Year yy
   year: Int!
 }

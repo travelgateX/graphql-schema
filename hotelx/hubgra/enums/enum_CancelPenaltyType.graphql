@@ -2,10 +2,10 @@
 enum CancelPenaltyType {
   # Indicates the number of nights to be penalized.
   NIGHTS
-  
+
   # Indicates the percentage to pay based on the option price.
   PERCENT
-  
+
   # Indicates the exact amount payable.
   IMPORT
 }

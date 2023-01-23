@@ -3,10 +3,10 @@
 type Mapping {
   # Returns the differents group contexts, you can filter by some contexts.
   contexts(codes: [String!]): [MappingContext!]
-  
+
   # Errors that abort services
   errors: [Error!]
-  
+
   # Potentially harmful situations or errors that won't force the service to abort
   warnings: [Warning!]
 }

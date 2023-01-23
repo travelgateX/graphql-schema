@@ -1,3 +1,3 @@
-type MappeaMutation{
-_ : Boolean
+type MappeaMutation {
+  _: Boolean
 }

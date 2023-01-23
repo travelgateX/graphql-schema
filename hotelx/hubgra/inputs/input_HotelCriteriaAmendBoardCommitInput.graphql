@@ -1,7 +1,5 @@
 # Criteria of modify contains basic information to amend board into a booking.
 input HotelCriteriaAmendBoardCommitInput {
-
   # HotelX's amend booking reference (received in AmendBoardQuote response)
   amendmentID: String!
-
 }

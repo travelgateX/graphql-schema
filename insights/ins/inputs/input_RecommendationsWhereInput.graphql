@@ -2,9 +2,9 @@
 ## RECOMMENDATIONS // Where Input
 """
 input RecommendationsWhereInput {
-	requestMode: ModeType!
-	owner: ID!
-	marketCode_in: [String!]
-	countryCode_in: [String!]
-	criteria_in: [CriteriaType!]
-}	
+  requestMode: ModeType!
+  owner: ID!
+  marketCode_in: [String!]
+  countryCode_in: [String!]
+  criteria_in: [CriteriaType!]
+}

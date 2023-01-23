@@ -1,10 +1,10 @@
 {
-  "title": "Unions",
-  "pagetitle": null,
-  "description": "",
-  "weight": 7,
-  "icon": "fa-object-group",
-  "alwaysopen": false
+"title": "Unions",
+"pagetitle": null,
+"description": "",
+"weight": 7,
+"icon": "fa-object-group",
+"alwaysopen": false
 }
 Unions are _types_ of objects that are available in our schema
 

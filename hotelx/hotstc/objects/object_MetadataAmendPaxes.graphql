@@ -1,21 +1,19 @@
-type MetadataAmendPaxes{
+type MetadataAmendPaxes {
+  # Informs if the supplier allows to delete paxes
+  allowsDeletePaxes: ReviewedBool!
 
-    # Informs if the supplier allows to delete paxes
-    allowsDeletePaxes:ReviewedBool!
+  # Informs if the supplier allows to amend the pax age
+  allowsAmendAge: ReviewedBool!
 
-    # Informs if the supplier allows to amend the pax age
-    allowsAmendAge:ReviewedBool!
+  # Informs if the supplier allows to add paxes
+  allowsAddPaxes: ReviewedBool!
 
-    # Informs if the supplier allows to add paxes
-    allowsAddPaxes:ReviewedBool!
+  # Informs if the supplier allows to amend the personal title
+  allowsAmendPersonalTitle: ReviewedBool!
 
-    # Informs if the supplier allows to amend the personal title
-    allowsAmendPersonalTitle:ReviewedBool!
+  # Informs if the supplier allows to amend pax name
+  allowsAmendName: ReviewedBool!
 
-    # Informs if the supplier allows to amend pax name
-    allowsAmendName:ReviewedBool!
-
-    # Informs if the supplier allows to amend pax surname  
-    allowsAmendSurname:ReviewedBool!
-        
+  # Informs if the supplier allows to amend pax surname
+  allowsAmendSurname: ReviewedBool!
 }

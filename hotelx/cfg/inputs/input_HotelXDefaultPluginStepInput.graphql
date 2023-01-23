@@ -1,4 +1,4 @@
-input HotelXDefaultPluginStepInput{
+input HotelXDefaultPluginStepInput {
   step: PluginStepType!
   plugins: [HotelXDefaultPluginInput!]!
 }

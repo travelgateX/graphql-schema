@@ -2,27 +2,27 @@
 type Location {
   # Contains Hotel Address
   address: String
-  
+
   # Contains the city
   city: String
-  
+
   # Contains the zipCode.
   zipCode: String
-  
+
   # Country where is the Hotel.
   country: Country
 
   # Geographical coordinates corresponding to a location.
   coordinates: Coordinates
-  
+
   # Closest destination
   closestDestination: DestinationData
 
   #Airports
-  airports:[Airport!]
+  airports: [Airport!]
 
   # Detailed information about the destinations geonames
-  geoNames:[Geoname!]!
+  geoNames: [Geoname!]!
 
   # the state/province of the property
   state: State

@@ -1,16 +1,16 @@
 type StatTransaction {
   # Extra information about transaction.
-  reference:              String!
-  
+  reference: String!
+
   # Total transaction time
-  total:                  Stat!
-  
+  total: Stat!
+
   # Build request time
-  buildRequest:           Stat!
-  
+  buildRequest: Stat!
+
   # Worker connection time
-  workerCommunication:    Stat!
-  
+  workerCommunication: Stat!
+
   # Parse response time
-  parseResponse:          Stat!
+  parseResponse: Stat!
 }

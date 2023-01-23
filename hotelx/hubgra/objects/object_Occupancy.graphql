@@ -2,7 +2,7 @@
 type Occupancy {
   # Unique ID room in this option.
   id: Int!
-  
+
   # List of pax of this occupancy.
   paxes: [Pax!]!
 }

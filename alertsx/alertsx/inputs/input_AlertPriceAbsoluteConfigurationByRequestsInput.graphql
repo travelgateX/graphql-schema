@@ -3,6 +3,6 @@ input AlertPriceAbsoluteConfigurationByRequestsInput {
   price: AlertPriceInput!
   "Common configuration for requests window type"
   windowing: AlertCommonByRequestsInput!
- "Common configuration alert"
+  "Common configuration alert"
   common: AlertCommonConfigurationInput!
-}  
+}

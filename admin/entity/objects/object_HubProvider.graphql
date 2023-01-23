@@ -1,4 +1,4 @@
-type HubProvider implements Node{
+type HubProvider implements Node {
   code: ID!
   hubProviderData: HubProviderData
   # Errors that will lead the service to abort

@@ -6,5 +6,5 @@ input SupplierFilter {
   isPublic: Boolean
   serviceAPI: [Int]
   owner: [ID!]
-  providerID:[ID]
- }
+  providerID: [ID]
+}

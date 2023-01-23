@@ -1,5 +1,5 @@
 # Parameters for additional information for the supplier's configuration.
-type Parameter {  
+type Parameter {
   # Contains the keyword/Id to identify a parameter.
   # This information is mandatory.
   key: ID!

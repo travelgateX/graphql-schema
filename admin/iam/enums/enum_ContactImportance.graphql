@@ -1,4 +1,4 @@
-enum ContactImportance{
+enum ContactImportance {
   EXECUTION_LEVEL
   DECISION_MAKER
   PRIMARY

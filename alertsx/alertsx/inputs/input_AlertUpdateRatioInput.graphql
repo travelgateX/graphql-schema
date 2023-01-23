@@ -5,4 +5,4 @@ input AlertUpdateRatioInput {
   l2b: Int
   "conversion ratio limit to be advised"
   conversion: Int
-}  
+}

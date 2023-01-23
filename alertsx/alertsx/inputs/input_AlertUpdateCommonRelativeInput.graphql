@@ -1,4 +1,4 @@
-input AlertUpdateCommonRelativeInput{
-   "percentage to be considered status ALERTING"
-   percentageToAlert: Int
+input AlertUpdateCommonRelativeInput {
+  "percentage to be considered status ALERTING"
+  percentageToAlert: Int
 }

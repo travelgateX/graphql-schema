@@ -1,33 +1,31 @@
 input ThreeDomainSecurityInput {
+  # Three Domain Security Version
+  version: String
 
- # Three Domain Security Version
- version: String
+  # Universally unique transaction identifier assigned by the Directory Server (DS) to identify a single transaction.
+  DSTransactionID: String
 
- # Universally unique transaction identifier assigned by the Directory Server (DS) to identify a single transaction.
- DSTransactionID: String
+  # Transaction identifier resulting from authentication processing. Uniquely identifies a 3D Secure check request.
+  XID: String
 
- # Transaction identifier resulting from authentication processing. Uniquely identifies a 3D Secure check request.       
- XID: String
+  # Electronic Commerce Indicator
+  ECI: String
 
- # Electronic Commerce Indicator
- ECI: String 
+  # Cardholder Authentication Verification Value
+  CAVV: String
 
- # Cardholder Authentication Verification Value
- CAVV: String
+  # Payer Authentication Response. It is the response to the Payer Authentication Request. The Payer Authentication Response has an XML structure with the information from the response of the authentication, and it contains a digital certificate as a sign of authenticity.
+  payerResponse: String
 
- # Payer Authentication Response. It is the response to the Payer Authentication Request. The Payer Authentication Response has an XML structure with the information from the response of the authentication, and it contains a digital certificate as a sign of authenticity.
- payerResponse: String
+  # Payer Authentication Response status
+  payerResponseStatus: PayerResponseStatusType
 
- # Payer Authentication Response status
- payerResponseStatus: PayerResponseStatusType
+  # Result of enrollment status of the service request
+  cardEnrolledStatus: ThreeDSCardEnrolledStatusType
 
- # Result of enrollment status of the service request
- cardEnrolledStatus: ThreeDSCardEnrolledStatusType
+  # Merchant Name
+  merchantName: String
 
- # Merchant Name
- merchantName: String
-
- # Signature value 
- signatureStatus: ThreeDSSignatureStatusType
-
+  # Signature value
+  signatureStatus: ThreeDSSignatureStatusType
 }

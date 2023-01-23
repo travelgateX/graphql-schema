@@ -6,5 +6,3 @@ input AlertUpdatePriceAbsoluteConfigurationByTimeInput {
   "Common configuration alert"
   common: AlertUpdateCommonConfigurationInput
 }
-
-  

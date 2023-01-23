@@ -1,7 +1,7 @@
 type MandatoryFee {
   # Fee duration
   duration: String
-  # Native supplier Mandatry Fee  
+  # Native supplier Mandatry Fee
   mandatoryFeeCode: String!
   # Fee price
   price: PriceStatic!

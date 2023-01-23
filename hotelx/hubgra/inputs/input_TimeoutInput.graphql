@@ -1,10 +1,10 @@
 input TimeoutInput {
   # Milliseconds before the search connection is closed.
   search: Int!
-  
+
   # Milliseconds before the quote connection is closed.
   quote: Int!
-  
+
   # Milliseconds before the book connection is closed.
   book: Int!
 }

@@ -1,4 +1,4 @@
 enum SpeedRQMode {
-    STANDARD
-    FAST
+  STANDARD
+  FAST
 }

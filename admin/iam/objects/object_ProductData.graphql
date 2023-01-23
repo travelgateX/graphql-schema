@@ -1,9 +1,21 @@
-type ProductData{
+type ProductData {
   id: ID!
   code: ID!
   label: String
   # A Product has many APIs
-  apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
-  macroPermissions(codes: [ID!], first: Int, last: Int, before: String, after:String): MacroPermissionsConnection
+  apis(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): APIConnection
+  macroPermissions(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): MacroPermissionsConnection
   adviseMessageCatalog(level: [AdviseMessageLevel]): [AdviseMessage!]
 }

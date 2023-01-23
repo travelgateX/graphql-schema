@@ -1,15 +1,14 @@
 # Criteria of modify contains basic information to add remarks into a booking.
 input HotelCriteriaAmendPaxesQuoteInput {
-
   # The name of the access to use in the request.
   accessCode: String
-  
+
   # The language code.
   language: Language
-  
+
   # The hotel code.
   hotelCode: String
-  
+
   # Contains the client reference and/or supplier reference.
   reference: BookReferenceInput
 

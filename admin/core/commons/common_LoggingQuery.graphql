@@ -1,3 +1,3 @@
-type LoggingQuery{
-_ : Boolean
+type LoggingQuery {
+  _: Boolean
 }

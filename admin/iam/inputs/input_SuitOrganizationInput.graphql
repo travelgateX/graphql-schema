@@ -1,5 +1,5 @@
 input SuitOrganizationInput {
-    user: ID!
-    organization: ID!
-    template: OrganizationTemplate!
+  user: ID!
+  organization: ID!
+  template: OrganizationTemplate!
 }

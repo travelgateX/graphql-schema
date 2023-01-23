@@ -5,7 +5,7 @@ input AlertAverageTimeAbsoluteByRequestsInput {
   description: String
   "Configuration of the alert"
   configuration: AlertAverageTimeAbsoluteConfigurationByRequestsInput!
-   "To enable or desable the alert"
+  "To enable or desable the alert"
   isActive: Boolean!
   "groups where the alert is setted"
   group: ID!

@@ -2,22 +2,22 @@
 type HotelSearch implements Response {
   # Indicates the context of the response.
   context: String
-  
+
   # Application stats in string format
   stats(token: String!): StatsRequest
-  
+
   # Data sent and received in the supplier's native format.
   auditData: AuditData
-  
+
   # Request Criteria
   requestCriteria: CriteriaSearch
-  
+
   # List of options returned according to the request.
   options: [HotelOptionSearch!]
-  
+
   # Errors that abort services
   errors: [Error!]
-  
+
   # Potentially harmful situations or errors that won't force the service to abort
   warnings: [Warning!]
 }

@@ -1,15 +1,14 @@
 # Information about occupancy
 type OccupancyStatic {
+  # Occupancy Total Pax Range
+  total: OccupancyRange
 
-    # Occupancy Total Pax Range
-    total: OccupancyRange
+  # Occupancy Infants Pax Range
+  infants: OccupancyRange
 
-    # Occupancy Infants Pax Range
-    infants: OccupancyRange
+  # Occupancy Children Pax Range
+  children: OccupancyRange
 
-    # Occupancy Children Pax Range
-    children: OccupancyRange
-
-    # Occupancy Adults Pax Range
-    adults: OccupancyRange
+  # Occupancy Adults Pax Range
+  adults: OccupancyRange
 }

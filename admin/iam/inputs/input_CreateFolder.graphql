@@ -1,4 +1,4 @@
 input CreateFolderInput {
   orgCode: ID!
-  template: FolderTemplate! 
+  template: FolderTemplate!
 }

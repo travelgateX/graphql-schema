@@ -1,5 +1,5 @@
 # Groups are organized hierarchically.
-type Group implements Node{
+type Group implements Node {
   code: ID!
   groupData: GroupData
   # List of advise messages.

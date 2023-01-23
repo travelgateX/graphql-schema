@@ -32,15 +32,15 @@ type BookingDetail {
   """
   payable: String
   """
-  Quote Session id 
+  Quote Session id
   """
   sessionIdQuote: String
   """
-  Booking Session id 
+  Booking Session id
   """
   sessionIdBooking: String
   """
-  Cancel Session id 
+  Cancel Session id
   """
   sessionIdCancel: String
   """

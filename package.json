@@ -18,6 +18,6 @@
   "scripts": {
     "validate": "graphql-schema-linter",
     "prettier:check": "prettier --check .",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write --loglevel error ."
   }
 }

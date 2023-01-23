@@ -3,22 +3,41 @@ extend type HotelXQuery {
   boards(criteria: HotelXBoardQueryInput!, relay: RelayInput!): BoardConnection!
 
   # Query to obtain Categories
-  categories(criteria: HotelXCategoryQueryInput!, relay: RelayInput!): CategoryConnection!
+  categories(
+    criteria: HotelXCategoryQueryInput!
+    relay: RelayInput!
+  ): CategoryConnection!
 
-  
   # Query to obtain Hotels
-  hotels(criteria: HotelXHotelListInput!, relay: RelayInput!, token: String, filter: HotelXHotelFilterInput): HotelConnection!
+  hotels(
+    criteria: HotelXHotelListInput!
+    relay: RelayInput!
+    token: String
+    filter: HotelXHotelFilterInput
+  ): HotelConnection!
 
   # Query to obtain rooms
-  rooms(criteria: HotelXRoomQueryInput!, relay: RelayInput!, token: String): RoomConnection!
+  rooms(
+    criteria: HotelXRoomQueryInput!
+    relay: RelayInput!
+    token: String
+  ): RoomConnection!
 
   # Query to obtain Destinations
-  destinations(criteria: HotelXDestinationListInput!, relay: RelayInput!, token: String): DestinationConnection!
+  destinations(
+    criteria: HotelXDestinationListInput!
+    relay: RelayInput!
+    token: String
+  ): DestinationConnection!
 
-  
   # Returns hotels and destinations that contains the indicated text.
-  destinationSearcher(criteria: HotelXDestinationSearcherInput!): [DestinationSearchResult]!
+  destinationSearcher(
+    criteria: HotelXDestinationSearcherInput!
+  ): [DestinationSearchResult]!
 
   # Return a list of the available MealPlans, which will be used in the availability response.
-  metadata(criteria: HotelXMetadataQueryInput!, relay: RelayInput!): MetadataConnection!
+  metadata(
+    criteria: HotelXMetadataQueryInput!
+    relay: RelayInput!
+  ): MetadataConnection!
 }

@@ -1,66 +1,65 @@
 # MetadataData provides information about the metadata of the supplier so that it can be effectively configured.
-type MetadataData{
-    #Requested supplier code
-    supplierCode:ID!
+type MetadataData {
+  #Requested supplier code
+  supplierCode: ID!
 
-    # Search metadata
-    search:MetadataSearch!
+  # Search metadata
+  search: MetadataSearch!
 
-    # Quote metadata
-    quote:MetadataQuote!
+  # Quote metadata
+  quote: MetadataQuote!
 
-    # Book metadata
-    book:MetadataBook!
+  # Book metadata
+  book: MetadataBook!
 
-    # Booking metadata
-    booking:MetadataBooking!
+  # Booking metadata
+  booking: MetadataBooking!
 
-    # Cancel metadata
-    cancel:MetadataCancel!
+  # Cancel metadata
+  cancel: MetadataCancel!
 
-    # Amend Board metadata
-    amendBoard: MetadataAmendBoard
+  # Amend Board metadata
+  amendBoard: MetadataAmendBoard
 
-    # Amend Dates metadata
-    amendDates: MetadataAmendDates
+  # Amend Dates metadata
+  amendDates: MetadataAmendDates
 
-    # Amend Paxes metadata
-    amendPaxes: MetadataAmendPaxes
+  # Amend Paxes metadata
+  amendPaxes: MetadataAmendPaxes
 
-    # Amend Remarks metadata
-    amendRemarks: MetadataAmendRemarks
+  # Amend Remarks metadata
+  amendRemarks: MetadataAmendRemarks
 
-    # Contains information regarding Hotels, Hotels returns a list of hotels all information available (code, name,
-    # address, phone, etc.) for each hotel. Return null is not implemented
-    hotels: MetadataContent
+  # Contains information regarding Hotels, Hotels returns a list of hotels all information available (code, name,
+  # address, phone, etc.) for each hotel. Return null is not implemented
+  hotels: MetadataContent
 
-    # Contains information regarding Destinations, Destinations returns the supplier's destination list.
-    # Return null is not implemented
-    destinations: MetadataContent
+  # Contains information regarding Destinations, Destinations returns the supplier's destination list.
+  # Return null is not implemented
+  destinations: MetadataContent
 
-    # Contains information regarding Rooms, RoomList aims to return a list of rooms, their codes as well as descriptions.
-    # Return null is not implemented
-    rooms: MetadataContent
+  # Contains information regarding Rooms, RoomList aims to return a list of rooms, their codes as well as descriptions.
+  # Return null is not implemented
+  rooms: MetadataContent
 
-    # Contains information regarding Boards, Boards aims to return a list of the search boards,
-    # which will be used in the Search response. Return null is not implemented
-    boards: MetadataContent
+  # Contains information regarding Boards, Boards aims to return a list of the search boards,
+  # which will be used in the Search response. Return null is not implemented
+  boards: MetadataContent
 
-    # Contains information regarding Categories, Categories returns a list of categories (codes and descriptions)
-    # used in Hotels List. Return null is not implemented
-    categories: MetadataContent
+  # Contains information regarding Categories, Categories returns a list of categories (codes and descriptions)
+  # used in Hotels List. Return null is not implemented
+  categories: MetadataContent
 
-    # Contains information regarding Markets, Markets return a list of the available Markets, which will be
-    # used in the Search request. Return null is not implemented
-    markets: MetadataContent
+  # Contains information regarding Markets, Markets return a list of the available Markets, which will be
+  # used in the Search request. Return null is not implemented
+  markets: MetadataContent
 
-    # Contains information regarding Currencies, Currencies returns a list of currencies the supplier in booking flow.
-    # Return null is not implemented
-    currencies: MetadataContent
+  # Contains information regarding Currencies, Currencies returns a list of currencies the supplier in booking flow.
+  # Return null is not implemented
+  currencies: MetadataContent
 
-    # Contains information regarding Amenities, Amenities is defined as something intended to make life more
-    # pleasant or comfortable for people, Examples include: swimming pools, shopping centers, etc.
-    # Return null is not implemented
-    amenities: MetadataContent
-
+  # Contains information regarding Amenities, Amenities is defined as something intended to make life more
+  # pleasant or comfortable for people, Examples include: swimming pools, shopping centers, etc.
+  # Return null is not implemented
+  amenities: MetadataContent
 }

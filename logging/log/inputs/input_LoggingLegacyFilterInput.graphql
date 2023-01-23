@@ -1,6 +1,6 @@
 """
 Filters needed to do a search.
-From (Start date of search - YYYY-MM-DD HH:mm:ss), To (End date of search - YYYY-MM-DD HH:mm:ss), 
+From (Start date of search - YYYY-MM-DD HH:mm:ss), To (End date of search - YYYY-MM-DD HH:mm:ss),
 """
 input LoggingLegacyFilterInput {
   """

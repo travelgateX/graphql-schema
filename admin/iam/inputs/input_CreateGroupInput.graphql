@@ -1,4 +1,4 @@
-input CreateGroupInput{
+input CreateGroupInput {
   group: ID!
   type: GroupTypeInput!
   info: String

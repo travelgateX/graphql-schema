@@ -1,4 +1,4 @@
-type OperationData{
+type OperationData {
   id: ID!
   code: ID!
   label: String

@@ -1,7 +1,7 @@
 # Contain bool value and review date
-type ReviewedTimeZone{
-    # Last reviewed date
-    reviewDate: Date!
+type ReviewedTimeZone {
+  # Last reviewed date
+  reviewDate: Date!
 
-    value: TimeZoneType!
+  value: TimeZoneType!
 }

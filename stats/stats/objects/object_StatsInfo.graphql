@@ -6,11 +6,14 @@ type StatsInfo {
   # Total hits
   hits: Int64!
   # Average time (ms)
-  time: Int! @deprecated(reason: "deprecated from 2019-04-03. Added new fields averageTime and totalTime.")
+  time: Int!
+    @deprecated(
+      reason: "deprecated from 2019-04-03. Added new fields averageTime and totalTime."
+    )
   # Average time (ms)
   averageTime: Int64!
   # Total time (ms)
   totalTime: Int64!
   # Details about errors.
-  assets:[StatsAsset!]
+  assets: [StatsAsset!]
 }

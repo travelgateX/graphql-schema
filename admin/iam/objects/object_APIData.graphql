@@ -1,5 +1,5 @@
 #
-type APIData{
+type APIData {
   # API Code
   code: ID!
   # API ID
@@ -9,11 +9,32 @@ type APIData{
   # API label
   label: String
   # which groups are asigned this API?
-  groups(codes:[ID!],type: GroupType,first: Int, last: Int, before: String, after:String) : GroupConnection
+  groups(
+    codes: [ID!]
+    type: GroupType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): GroupConnection
   # which resources are asigned this API?
-  resources(codes: [ID!], first: Int, last: Int, before: String, after:String): ResourceConnection
+  resources(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): ResourceConnection
   # which operations are asigned this API?
-  operations(codes: [ID!], type: OperationType, types: [OperationType!], first: Int, last: Int, before: String, after:String): OperationConnection
+  operations(
+    codes: [ID!]
+    type: OperationType
+    types: [OperationType!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): OperationConnection
   # Advise messages catalog.
   adviseMessageCatalog(level: [AdviseMessageLevel]): [AdviseMessage!]
 }

@@ -1,11 +1,10 @@
 input PaymentXStoredCardIDInput {
-  
   # Asigned instance of PaymentX of the booked property.
-  instanceCode : ID
-  
+  instanceCode: ID
+
   # Indicates the code of the booked property
   pointOfSaleCode: ID
-  
+
   # Indicates the referece of the booking
   bookingReference: String
 

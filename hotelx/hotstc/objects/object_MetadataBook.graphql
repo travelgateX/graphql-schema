@@ -1,23 +1,23 @@
 # Return information about book
-type MetadataBook{
-    # Allows a margin stipulated by the client for booking with a higher price (delta).
-    allowsDeltaPrice: ReviewedBool!
+type MetadataBook {
+  # Allows a margin stipulated by the client for booking with a higher price (delta).
+  allowsDeltaPrice: ReviewedBool!
 
-    # Required data for all passengers (names and surnames).
-    requiredAllPassengers: ReviewedBool!
+  # Required data for all passengers (names and surnames).
+  requiredAllPassengers: ReviewedBool!
 
-    # Informs if the supplier allows send remarks.
-    allowsRemarks: ReviewedBool!
+  # Informs if the supplier allows send remarks.
+  allowsRemarks: ReviewedBool!
 
-    # Informs if the supplier billing code.
-    informBillingSupplier: ReviewedBool!
+  # Informs if the supplier billing code.
+  informBillingSupplier: ReviewedBool!
 
-    # Informs if the supplier returns the hotel reference number.
-    informHotelReference: ReviewedBool!
+  # Informs if the supplier returns the hotel reference number.
+  informHotelReference: ReviewedBool!
 
-    # The supplier informs the book price.
-    informPrice: ReviewedBool!
+  # The supplier informs the book price.
+  informPrice: ReviewedBool!
 
-    # Informs if the supplier requires nationality
-    requiredNationality: ReviewedBool
+  # Informs if the supplier requires nationality
+  requiredNationality: ReviewedBool
 }

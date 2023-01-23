@@ -2,7 +2,7 @@
 enum DateType {
   # Arrival Date
   ARRIVAL
-  
+
   # Booking Creation
   BOOKING
 }

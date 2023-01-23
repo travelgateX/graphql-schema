@@ -3,27 +3,27 @@ type CriteriaSearch {
   # Check-in date for booking
   # Format: YYYY-MM-DD
   checkIn: Date!
-  
+
   # Check-out, booking date
   # Format: YYYY-MM-DD
   checkOut: Date!
-  
+
   # Contains the list of hotels's ID
   hotels: [String!]!
-  
+
   # For multi-room bookings, this array will contain multiple elements (rooms).
   # For each room you have to specify its own occupancy.
   occupancies: [RoomCriteria!]!
-  
+
   # Language to be used in request
   language: Language
-  
+
   # Currency requested if supported by supplier
   currency: Currency
-  
+
   # Nationality of the guest (use ISO3166_1_alfa_2)
   nationality: Country
-  
+
   # Targeted zone, country or point-ofsale-to be used in request.
   market: String!
 }

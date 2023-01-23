@@ -1,4 +1,4 @@
-type GroupContentData   {
+type GroupContentData {
   id: ID!
   code: ID!
   context: Context!

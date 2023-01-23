@@ -1,5 +1,5 @@
 input AlertUpdateBoundsInput {
-   "Bound limits to be used"
+  "Bound limits to be used"
   bound: AlertBound
   "Upper bound limit"
   upperBound: Int

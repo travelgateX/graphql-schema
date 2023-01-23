@@ -1,4 +1,4 @@
-type StatsData{
+type StatsData {
   # Owner access
   access: Access!
   # Owner client
@@ -8,9 +8,16 @@ type StatsData{
   # To date of search
   to: DateTime!
   # Ratios details
-  ratios(trafficType:TrafficType!): Ratios! @deprecated(reason: "deprecated from 2019-04-08. Added hits fields to be able to calculate ratios at client side.")
+  ratios(trafficType: TrafficType!): Ratios!
+    @deprecated(
+      reason: "deprecated from 2019-04-08. Added hits fields to be able to calculate ratios at client side."
+    )
   # Stats information per operation
-  operations(type:[ServiceOperationType!]):[OperationDetailed!]
+  operations(type: [ServiceOperationType!]): [OperationDetailed!]
   # Summarized Stats
-  hits(trafficType:TrafficType!, statusType:StatsInfoTypes!, operationType:OperationType!): Int64!
+  hits(
+    trafficType: TrafficType!
+    statusType: StatsInfoTypes!
+    operationType: OperationType!
+  ): Int64!
 }

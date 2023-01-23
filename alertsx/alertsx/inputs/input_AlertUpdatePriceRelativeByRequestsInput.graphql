@@ -1,5 +1,5 @@
 input AlertUpdatePriceRelativeByRequestsInput {
-   "Name of the alert"
+  "Name of the alert"
   name: String
   "Description of the alert"
   description: String
@@ -8,4 +8,3 @@ input AlertUpdatePriceRelativeByRequestsInput {
   "To enable or desable the alert"
   isActive: Boolean
 }
-

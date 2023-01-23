@@ -1,4 +1,4 @@
 enum SupplierSearchByOptions {
-    ID
-    CODE
+  ID
+  CODE
 }

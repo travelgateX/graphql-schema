@@ -1,4 +1,4 @@
-enum AlertRangePrice{
+enum AlertRangePrice {
   LESS
   GREATER
 }

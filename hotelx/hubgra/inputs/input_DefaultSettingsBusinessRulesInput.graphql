@@ -2,7 +2,7 @@
 input DefaultSettingsBusinessRulesInput {
   # Options quota per availability; numbers of options based on availability
   optionsQuota: Int!
-  
+
   # Different business rules for filtering options that you are interested in
   businessRulesType: BusinessRulesType!
 }

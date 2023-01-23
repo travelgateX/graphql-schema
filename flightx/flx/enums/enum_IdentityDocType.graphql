@@ -1,5 +1,5 @@
 """
-The type of passenger identification document. Examples: NATIONAL_ID, PASSPORT 
+The type of passenger identification document. Examples: NATIONAL_ID, PASSPORT
 """
 enum IdentityDocType {
   NATIONAL_ID

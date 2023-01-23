@@ -1,7 +1,7 @@
 input AlertCommonByTimeInput {
   "Frequency of time in minutes in which the alert will be reviewed"
   periodicity: Int!
- 	"The time frame in minutes"
+  "The time frame in minutes"
   window: Int!
   "Minimum number of requests must be in window to check the alert"
   minNumberRequests: Int

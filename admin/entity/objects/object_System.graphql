@@ -1,5 +1,5 @@
 # System identifies who is making the request and holds the configuration assigned to it.
-type System implements Node{
+type System implements Node {
   code: ID!
   systemData: SystemData
   # Errors that abort services

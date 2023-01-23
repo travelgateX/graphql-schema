@@ -4,11 +4,12 @@ type Supplier implements Node {
   supplierData: SupplierData
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
   # Errors that abort services
-  error: [Error!] @deprecated(reason: "deprecated from 2019-01-01. Use adviseMessage instead")
+  error: [Error!]
+    @deprecated(reason: "deprecated from 2019-01-01. Use adviseMessage instead")
   # Date created
   createdAt: DateTime!
   # Date updated
-  updatedAt: DateTime!    
+  updatedAt: DateTime!
   # Supplier deleted date
   deletedAt: DateTime
 }

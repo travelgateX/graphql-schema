@@ -1,4 +1,4 @@
-enum AlertType{
+enum AlertType {
   ERROR_RATE
   AVERAGE_TIME
   PEAK_TRAFFIC

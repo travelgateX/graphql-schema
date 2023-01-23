@@ -1,10 +1,10 @@
 enum ConditionType {
-    # >=
-    GTE
-    # >
-    GT
-    # <=
-    LTE
-    # <
-    LT
+  # >=
+  GTE
+  # >
+  GT
+  # <=
+  LTE
+  # <
+  LT
 }

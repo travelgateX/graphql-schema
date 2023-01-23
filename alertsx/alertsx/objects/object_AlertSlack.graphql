@@ -1,7 +1,5 @@
 type AlertSlack {
-    isActive: Boolean!
-    webHook: String!
-    advancedOptions: AlertSlackAdvancedOptions
+  isActive: Boolean!
+  webHook: String!
+  advancedOptions: AlertSlackAdvancedOptions
 }
-
-

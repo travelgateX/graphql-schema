@@ -1,61 +1,143 @@
 # Mutations are operations that change or update data on the server
 extend type AdminMutation {
-  """EntitiesV2 Create provider"""
-  createProvider(data:ProviderCreateInput!): Provider!
-  """EntitiesV2 Delete provider"""
+  """
+  EntitiesV2 Create provider
+  """
+  createProvider(data: ProviderCreateInput!): Provider!
+  """
+  EntitiesV2 Delete provider
+  """
   deleteProvider(where: ProviderWhereUniqueInput!): Provider!
-  """EntitiesV2 Activate provider"""
+  """
+  EntitiesV2 Activate provider
+  """
   activateProvider(where: ProviderWhereUniqueInput!): Provider!
-  """EntitiesV2 Deactivate provider"""
+  """
+  EntitiesV2 Deactivate provider
+  """
   deactivateProvider(where: ProviderWhereUniqueInput!): Provider!
-  """EntitiesV2 Create group content"""
-  createGroupContent(data:GroupContentCreateInput!): GroupContent!
-  """EntitiesV2 Delete group content"""
-  deleteGroupContent(code:ID!): GroupContent!
-  """EntitiesV2 Create supplier"""
+  """
+  EntitiesV2 Create group content
+  """
+  createGroupContent(data: GroupContentCreateInput!): GroupContent!
+  """
+  EntitiesV2 Delete group content
+  """
+  deleteGroupContent(code: ID!): GroupContent!
+  """
+  EntitiesV2 Create supplier
+  """
   createSupplier(data: SupplierCreateInput!): Supplier!
-  """EntitiesV2 Grant supplier to group"""
-  grantSupplierToGroups(where: SupplierWhereUniqueInput!, groupCodes: [ID!]): Supplier!
-  """EntitiesV2 Remove/Revoke supplier from group"""
-  revokeSupplierFromGroups(where: SupplierWhereUniqueInput!, groupCodes: [ID!]): Supplier!
-  """EntitiesV2 Delete supplier"""
+  """
+  EntitiesV2 Grant supplier to group
+  """
+  grantSupplierToGroups(
+    where: SupplierWhereUniqueInput!
+    groupCodes: [ID!]
+  ): Supplier!
+  """
+  EntitiesV2 Remove/Revoke supplier from group
+  """
+  revokeSupplierFromGroups(
+    where: SupplierWhereUniqueInput!
+    groupCodes: [ID!]
+  ): Supplier!
+  """
+  EntitiesV2 Delete supplier
+  """
   deleteSupplier(where: SupplierWhereUniqueInput!): Supplier!
-  """EntitiesV2 Update supplier"""
-  updateSupplier(where: SupplierWhereUniqueInput!, data: SupplierUpdateInput!): Supplier!
-  """EntitiesV2 Activate supplier"""
+  """
+  EntitiesV2 Update supplier
+  """
+  updateSupplier(
+    where: SupplierWhereUniqueInput!
+    data: SupplierUpdateInput!
+  ): Supplier!
+  """
+  EntitiesV2 Activate supplier
+  """
   activateSupplier(where: SupplierWhereUniqueInput!): Supplier!
-  """EntitiesV2 Deactivate supplier"""
+  """
+  EntitiesV2 Deactivate supplier
+  """
   deactivateSupplier(where: SupplierWhereUniqueInput!): Supplier!
-  """Deletes an Access"""
+  """
+  Deletes an Access
+  """
   deleteAccess(where: AccessWhereUniqueInput!): Access!
-  """Clone an existing Access"""
+  """
+  Clone an existing Access
+  """
   cloneAccess(where: AccessWhereUniqueInput!, data: AccessCloneInput!): Access!
-  """Activate Access"""
+  """
+  Activate Access
+  """
   activateAccess(where: AccessWhereUniqueInput!): Access!
-  """Desactivate Access"""
+  """
+  Desactivate Access
+  """
   deactivateAccess(where: AccessWhereUniqueInput!): Access!
-  """Grants Access visibility to a group"""
-  grantAccessToGroups(where: AccessWhereUniqueInput!, groupCodes: [ID!]): Access!
-  """Revoke Access visibility to a group"""
-  revokeAccessFromGroups(where: AccessWhereUniqueInput!, groupCodes: [ID!]): Access!
-  """Set a shared Access"""
+  """
+  Grants Access visibility to a group
+  """
+  grantAccessToGroups(
+    where: AccessWhereUniqueInput!
+    groupCodes: [ID!]
+  ): Access!
+  """
+  Revoke Access visibility to a group
+  """
+  revokeAccessFromGroups(
+    where: AccessWhereUniqueInput!
+    groupCodes: [ID!]
+  ): Access!
+  """
+  Set a shared Access
+  """
   setAccessShared(where: AccessWhereUniqueInput!, sharedCode: ID!): Access!
-  """Remove a shared Access"""
+  """
+  Remove a shared Access
+  """
   removeAccessShared(where: AccessWhereUniqueInput!): Access!
-  """Set a master Access"""
+  """
+  Set a master Access
+  """
   setAccessMaster(where: AccessWhereUniqueInput!, masterCode: ID!): Access!
-  """Remove a master Access"""
+  """
+  Remove a master Access
+  """
   removeAccessMaster(where: AccessWhereUniqueInput!): Access!
-  """Add a parameter into "parameters" of an Access"""
-  appendAccessParameters(where: AccessWhereUniqueInput!, data: [ParameterInput!]!): Access!
-  """Delete a parameter into "parameters" of an Access"""
+  """
+  Add a parameter into "parameters" of an Access
+  """
+  appendAccessParameters(
+    where: AccessWhereUniqueInput!
+    data: [ParameterInput!]!
+  ): Access!
+  """
+  Delete a parameter into "parameters" of an Access
+  """
   deleteAccessParameters(where: AccessWhereUniqueInput!, keys: [ID!]!): Access!
-  """Add a market into "markets" of an Access"""
+  """
+  Add a market into "markets" of an Access
+  """
   appendAccessMarkets(where: AccessWhereUniqueInput!, data: [String!]!): Access!
-  """Delete a market into "markets" of an Access"""
+  """
+  Delete a market into "markets" of an Access
+  """
   deleteAccessMarkets(where: AccessWhereUniqueInput!, data: [String!]!): Access!
-  """Add a RateRule into "RateRules" of an Access"""
-  appendAccessRateRules(where: AccessWhereUniqueInput!, data: [RateRulesType!]!): Access!
-  """Delete a RateRule into "RateRules" of an Access"""
-  deleteAccessRateRules(where: AccessWhereUniqueInput!, data: [RateRulesType!]!): Access!
+  """
+  Add a RateRule into "RateRules" of an Access
+  """
+  appendAccessRateRules(
+    where: AccessWhereUniqueInput!
+    data: [RateRulesType!]!
+  ): Access!
+  """
+  Delete a RateRule into "RateRules" of an Access
+  """
+  deleteAccessRateRules(
+    where: AccessWhereUniqueInput!
+    data: [RateRulesType!]!
+  ): Access!
 }

@@ -1,7 +1,7 @@
 # Metadata Edge definition, list of metadata requested
 type MetadataEdge {
-    # contain information of each metadata requested
-    node: Metadata
-    # cursor to the next item, used for pagination
-    cursor: String!
+  # contain information of each metadata requested
+  node: Metadata
+  # cursor to the next item, used for pagination
+  cursor: String!
 }

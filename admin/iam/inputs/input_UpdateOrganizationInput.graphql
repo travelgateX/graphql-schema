@@ -1,8 +1,8 @@
 input UpdateOrganizationInput {
-    organization: ID!
-    label: String
-    owner: String
-    crmID: String
-    country: String
-    info: String
+  organization: ID!
+  label: String
+  owner: String
+  crmID: String
+  country: String
+  info: String
 }

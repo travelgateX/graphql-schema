@@ -1,4 +1,4 @@
-type GroupData implements GroupCommonData{
+type GroupData implements GroupCommonData {
   id: ID!
   code: ID!
   label: String
@@ -6,35 +6,136 @@ type GroupData implements GroupCommonData{
   info: String
   parent: Group
   # Only responses children.(non-hierarchically)
-  children(codes: [ID!], first: Int, last: Int, before: String, after:String, type: GroupType, codeStartsWith: String): GroupConnection
+  children(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+    type: GroupType
+    codeStartsWith: String
+  ): GroupConnection
   # Response all descendents groups nodes in this group (nom-hierarchically)
-  descendents(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String, codeStartsWith: String): GroupConnection
+  descendents(
+    codes: [ID!]
+    type: GroupType
+    first: Int
+    last: Int
+    before: String
+    after: String
+    codeStartsWith: String
+  ): GroupConnection
   # Response all parents groups nodes for this group (nom-hierarchically)
-  parents(codes: [ID!], codeStartsWith: String ,type: GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
+  parents(
+    codes: [ID!]
+    codeStartsWith: String
+    type: GroupType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): GroupConnection
   owner: Member
   isEditable: Boolean!
   productId: Int
   resourceId: Int
   # Sibilings of the group
-  siblings(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String, codeStartsWith: String): GroupConnection
+  siblings(
+    codes: [ID!]
+    type: GroupType
+    first: Int
+    last: Int
+    before: String
+    after: String
+    codeStartsWith: String
+  ): GroupConnection
   # Only responses members in this group
-  members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
+  members(
+    codes: [ID!]
+    type: MemberType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): MemberConnection
   #APIs assigned to this group. Products have APIs.
-  apis(codes: [ID!], first: Int, last: Int, before: String, after:String): APIConnection
+  apis(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): APIConnection
   # Responses all managed groups by this group.
-  managedGroups(group: [ID!], api: [ID!], resource:[ID!],role: [ID!], codes: [ID!], first: Int, last: Int, before: String, after:String): ManagedGroupConnection
+  managedGroups(
+    group: [ID!]
+    api: [ID!]
+    resource: [ID!]
+    role: [ID!]
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): ManagedGroupConnection
   # Response all members in this group's childrens (hierarchically),
-  allMembers(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection
+  allMembers(
+    codes: [ID!]
+    type: MemberType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): MemberConnection
   # Access resources in a group
-  accesses(accessID:[ID!],owner:[ID!],first: Int, last: Int, before: String, after:String): AccessConnection
+  accesses(
+    accessID: [ID!]
+    owner: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): AccessConnection
   # Supplier resources in a group
-  suppliers(supplierID:[ID!], accessID:[ID!], owner:[ID!],serviceAPI:[ID!], isActive: Boolean, first: Int, last: Int, before: String, after:String): SupplierConnection
+  suppliers(
+    supplierID: [ID!]
+    accessID: [ID!]
+    owner: [ID!]
+    serviceAPI: [ID!]
+    isActive: Boolean
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): SupplierConnection
   # Clients resources in a group
-  clients(clientID:[ID!],name:[ID!],owner:[ID!],isActive:Boolean, first: Int, last: Int, before: String, after:String): ClientConnection
+  clients(
+    clientID: [ID!]
+    name: [ID!]
+    owner: [ID!]
+    isActive: Boolean
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): ClientConnection
   # You can grant roles to members, which define the roles catalog for a group.
-  roles(codes:[ID!], type:RoleType, first: Int, last: Int, before: String, after:String): RoleConnection
+  roles(
+    codes: [ID!]
+    type: RoleType
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): RoleConnection
   # Obtain all Profiles
-  profiles(codes:[ID!],first: Int, last: Int, before: String, after:String): ProfileConnection
+  profiles(
+    codes: [ID!]
+    first: Int
+    last: Int
+    before: String
+    after: String
+  ): ProfileConnection
   isBuyer: Boolean!
   isSeller: Boolean!
 }

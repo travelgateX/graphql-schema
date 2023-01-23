@@ -1,5 +1,5 @@
 type TrafficOptimizationHotelStatsAggregationConnection {
-  totalCount:Int!
-  edges :[TrafficOptimizationHotelStatsAggregationEdge!]
+  totalCount: Int!
+  edges: [TrafficOptimizationHotelStatsAggregationEdge!]
   adviseMessage: [AdviseMessage!]
 }

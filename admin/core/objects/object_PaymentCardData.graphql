@@ -1,27 +1,25 @@
 # Contains the information of the Payment Card
 type PaymentCardData {
-    # Contains the payment card activation date
-    active: Date!
-  
-    # Contains credit card CVC
-    CVC: CVC!
+  # Contains the payment card activation date
+  active: Date!
 
-    # Contains the payment card expiration date
-    expire: Date!
+  # Contains credit card CVC
+  CVC: CVC!
 
-    # Contains owner's name
-    holder: Holder!
+  # Contains the payment card expiration date
+  expire: Date!
 
-    # Contains the generated card ID. It is provided by the third party supplier. 
-    id: ID!
+  # Contains owner's name
+  holder: Holder!
 
-    # Contains credit card number
-    number: CardNumber!
+  # Contains the generated card ID. It is provided by the third party supplier.
+  id: ID!
 
-    # Indicates the supplier or third party, responsible of the payment card's creation
-    supplier: Supplier! #@deprecated(reason: "deprecated from 2021-06-21.")
+  # Contains credit card number
+  number: CardNumber!
 
-    # Indicates the supported card type
-    type: PaymentCardType!
-
+  # Indicates the supplier or third party, responsible of the payment card's creation
+  supplier: Supplier! #@deprecated(reason: "deprecated from 2021-06-21.")
+  # Indicates the supported card type
+  type: PaymentCardType!
 }

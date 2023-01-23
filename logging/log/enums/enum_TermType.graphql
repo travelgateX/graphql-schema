@@ -1,4 +1,4 @@
 enum TermType {
-    # Total execution time
-    TEXECT
+  # Total execution time
+  TEXECT
 }

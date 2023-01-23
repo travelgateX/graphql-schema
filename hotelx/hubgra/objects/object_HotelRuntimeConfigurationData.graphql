@@ -1,6 +1,4 @@
 type HotelRuntimeConfigurationData {
-
-    # List of parameters that can be set in supplier's configuration (access)
-    hotelRuntimeParameters: [HotelRuntimeParameter!]!
-
+  # List of parameters that can be set in supplier's configuration (access)
+  hotelRuntimeParameters: [HotelRuntimeParameter!]!
 }

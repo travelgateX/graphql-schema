@@ -1,6 +1,4 @@
-type MetadataAmendBoard{
-
-    # Informs if the supplier allows to amend the board
-    allowsAmendBoard:ReviewedBool!
-
+type MetadataAmendBoard {
+  # Informs if the supplier allows to amend the board
+  allowsAmendBoard: ReviewedBool!
 }

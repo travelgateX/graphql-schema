@@ -1,4 +1,4 @@
-type Operation implements Node{
+type Operation implements Node {
   code: ID!
   operationData: OperationData
   # List of advise messages.

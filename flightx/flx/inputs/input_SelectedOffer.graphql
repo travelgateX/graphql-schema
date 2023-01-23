@@ -1,5 +1,5 @@
 """
-  Offer selected by the passenger for requesting an Order to be created.
+Offer selected by the passenger for requesting an Order to be created.
 """
 input SelectedOffer {
   offerCode: ID!

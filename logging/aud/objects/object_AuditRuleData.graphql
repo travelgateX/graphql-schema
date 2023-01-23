@@ -5,8 +5,8 @@ type AuditRuleData {
   owner: Organization
   client: Client
   supplier: Supplier
-	buyer: Organization
-	seller: Organization
+  buyer: Organization
+  seller: Organization
   error: AdviseMessage
   ttl: Int!
   remainingTTL: Int!

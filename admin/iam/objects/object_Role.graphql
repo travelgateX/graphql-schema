@@ -1,5 +1,5 @@
 # Permissions determine what operations are allowed on a resource
-type Role implements Node{
+type Role implements Node {
   code: ID!
   roleData: RoleData
   # List of advise messages.

@@ -19,7 +19,8 @@ type HotelData {
   categoryCode: String
 
   # Indicates property type
-  property: Property @deprecated(reason: "Deprecated from 2019-10-16. Redundant information")
+  property: Property
+    @deprecated(reason: "Deprecated from 2019-10-16. Redundant information")
 
   # Hotel chain code
   chainCode: String
@@ -46,7 +47,10 @@ type HotelData {
   medias: [Media!]
 
   # Descriptions
-  descriptions(types: [DescriptionType!], languages: [Language!]): [Description!]
+  descriptions(
+    types: [DescriptionType!]
+    languages: [Language!]
+  ): [Description!]
 
   # Rooms
   rooms: RoomConnection

@@ -9,11 +9,11 @@ type AlertData {
   "Indicates if the alert is being checked by the service."
   isActive: Boolean!
   "Records of each update made of the alert"
-  history( relay: RelayInput, filter: AlertFilterInput):AlertConnection!
+  history(relay: RelayInput, filter: AlertFilterInput): AlertConnection!
   "Member has edit the actual alert data"
   editor: Member!
   "Records of the last 10 events triggered"
-  events( relay: RelayInput, filter: AlertFilterInput):AlertEventConnection!
-   "Group where the alert is saved"
-   group: Group!
+  events(relay: RelayInput, filter: AlertFilterInput): AlertEventConnection!
+  "Group where the alert is saved"
+  group: Group!
 }

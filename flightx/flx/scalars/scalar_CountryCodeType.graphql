@@ -1,4 +1,4 @@
 """
-    ISO Country Code.
+ISO Country Code.
 """
 scalar CountryCodeType

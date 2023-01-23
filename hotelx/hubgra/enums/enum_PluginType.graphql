@@ -3,25 +3,25 @@ enum PluginType {
   # PRE_STEP is the first plugin that a step will execute, allows a full range of operations:
   # split arrays, join arrays, modify object values, add or remove object instances
   PRE_STEP
-  
+
   # HOTEL_MAP allows to match Seller and Buyer hotel codes based on contexts
   HOTEL_MAP
-  
+
   # BOARD_MAP allows to match Seller and Buyer board codes based on contexts
   BOARD_MAP
-  
+
   # ROOM_MAP allows to match Seller and Buyer room codes based on contexts
   ROOM_MAP
-  
+
   # CURRENCY_CONVERSION allows to match Seller and Buyer hotel codes based on contexts
   CURRENCY_CONVERSION
-  
+
   # MARKUP allows to apply markup over price
   MARKUP
-  
+
   # AGGREGATION allows to aggregate multiple supplier options
   AGGREGATION
-  
+
   # POST_STEP is the last plugin that a step will execute, allows a full range of operations:
   # split arrays, join arrays, modify object values, add or remove object instances
   POST_STEP
@@ -31,9 +31,9 @@ enum PluginType {
 
   # MARKETS_GROUP plugin allows the user to group the Search result by markets that share the same Options
   MARKETS_GROUP
-  
+
   # AMENITY_MAP allows to match Seller and Buyer amenities codes based on contexts
-  AMENITY_MAP 
+  AMENITY_MAP
 
   # PROMOTION_MAP allows to match Seller and Buyer promotion codes based on contexts
   PROMOTION_MAP

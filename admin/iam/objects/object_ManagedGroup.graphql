@@ -1,4 +1,4 @@
-type ManagedGroup implements Node{
+type ManagedGroup implements Node {
   code: ID!
   managedGroupData: ManagedGroupData
   # List of advise messages.

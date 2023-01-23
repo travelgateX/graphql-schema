@@ -1,88 +1,87 @@
 # Define type of time zones
 enum TimeZoneType {
-    UNKNOWN
-    
-    HOTEL_LOCAL_TIME
-    
-    # UTC-12
-    UTC_MINUS_12
+  UNKNOWN
 
-    # UTC-11
-    UTC_MINUS_11
-    
-    # UTC-10
-    UTC_MINUS_10
-    
-    # UTC-9
-    UTC_MINUS_9
-    
-    # UTC-8
-    UTC_MINUS_8
-    
-    # UTC-7
-    UTC_MINUS_7
-    
-    # UTC-6
-    UTC_MINUS_6
-    
-    # UTC-5
-    UTC_MINUS_5
-    
-    # UTC-4
-    UTC_MINUS_4
-    
-    # UTC-3
-    UTC_MINUS_3
-    
-    # UTC-2
-    UTC_MINUS_2
-    
-    # UTC-1
-    UTC_MINUS_1
-    
-    # UTC+0
-    UTC_0
-    
-    # UTC+1
-    UTC_1
-    
-    # UTC+2
-    UTC_2
-    
-    # UTC+3
-    UTC_3
-    
-    # UTC+4
-    UTC_4
-    
-    # UTC+5
-    UTC_5
-    
-    # UTC+6
-    UTC_6
-    
-    # UTC+7
-    UTC_7
-    
-    # UTC+8
-    UTC_8
-    
-    # UTC+9
-    UTC_9
-    
-    # UTC+10
-    UTC_10
-    
-    # UTC+11
-    UTC_11
-    
-    # UTC+12
-    UTC_12
-    
-    # UTC+13
-    UTC_13
-    
-    # UTC+14
-    UTC_14
+  HOTEL_LOCAL_TIME
+
+  # UTC-12
+  UTC_MINUS_12
+
+  # UTC-11
+  UTC_MINUS_11
+
+  # UTC-10
+  UTC_MINUS_10
+
+  # UTC-9
+  UTC_MINUS_9
+
+  # UTC-8
+  UTC_MINUS_8
+
+  # UTC-7
+  UTC_MINUS_7
+
+  # UTC-6
+  UTC_MINUS_6
+
+  # UTC-5
+  UTC_MINUS_5
+
+  # UTC-4
+  UTC_MINUS_4
+
+  # UTC-3
+  UTC_MINUS_3
+
+  # UTC-2
+  UTC_MINUS_2
+
+  # UTC-1
+  UTC_MINUS_1
+
+  # UTC+0
+  UTC_0
+
+  # UTC+1
+  UTC_1
+
+  # UTC+2
+  UTC_2
+
+  # UTC+3
+  UTC_3
+
+  # UTC+4
+  UTC_4
+
+  # UTC+5
+  UTC_5
+
+  # UTC+6
+  UTC_6
+
+  # UTC+7
+  UTC_7
+
+  # UTC+8
+  UTC_8
+
+  # UTC+9
+  UTC_9
+
+  # UTC+10
+  UTC_10
+
+  # UTC+11
+  UTC_11
+
+  # UTC+12
+  UTC_12
+
+  # UTC+13
+  UTC_13
+
+  # UTC+14
+  UTC_14
 }
-

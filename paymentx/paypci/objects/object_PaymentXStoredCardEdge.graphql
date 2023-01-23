@@ -1,4 +1,4 @@
-type PaymentXStoredCardEdge{
+type PaymentXStoredCardEdge {
   cursor: String!
   node: PaymentXStoredCard
 }

@@ -2,40 +2,40 @@
 input HotelSettingsInput {
   # Indicates the context of the I/O codes (hotel, board, room and rates)
   context: String
-  
+
   #Indicates if you want use context, or not, by default is true.
   #@deprecated(reason: "deprecated from 2017-12-12. Redundant.")
   useContext: Boolean
-  
+
   # This field is occurs only if the authorization header is of the type JWT.. It is used to change the user that has been set by default in the preload.
   #@deprecated(reason: "deprecated from 2018-03-19. Redundant.")
   connectUser: String
-  
+
   # Client name, this field is occurs only if the authorization header is of the type JWT.. It is used to change the user that has been set by default in the preload.
   client: ID
-  
+
   # Group whose resources want to be used
   group: ID
-  
+
   # Timeout in milliseconds that will be applied to the connection with supplier/s. If more than one supplier is requested, timeout will be applied to all suppliers and cut the connection with those suppliers that exceed this timeout. Travelgate will not close the connection with the client if this timeout is exceeded.
   timeout: Int
-  
+
   # Returns all the transactions exchanged with the supplier.
   auditTransactions: Boolean
-  
+
   # Business rules
   businessRules: BusinessRulesInput
-  
+
   # Array of suppliers. Each one contains its own code, settings and accesses.
   suppliers: [HotelXSupplierInput!]
-  
+
   # Array of plugins to execute.
   plugins: [PluginStepInput!]
 
   # This flag allows only the accesses checked as test. By default is production.
   testMode: Boolean
 
-  # Used to identify the origin of the request, this is only used in plugins. 
+  # Used to identify the origin of the request, this is only used in plugins.
   clientTokens: [String!]
 
   # Indicates if the book will be confirmed in 1 or 2 steps. It only should be used in Book.

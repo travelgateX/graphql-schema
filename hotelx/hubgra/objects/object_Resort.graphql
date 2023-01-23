@@ -2,10 +2,10 @@
 type Resort {
   # Specifies the resort code.
   code: String!
-  
+
   # Specifies the resort name.
   name: String
-  
+
   # Specifies the resort description.
   description: String
 }

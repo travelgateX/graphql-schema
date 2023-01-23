@@ -2,10 +2,10 @@
 input BookPaxInput {
   # Passenger first  name
   name: String!
-  
+
   # Passenger  last name
   surname: String!
-  
+
   # Passenger age on the day of check-in
   age: Int!
 

@@ -1,5 +1,4 @@
-type HotelRuntimeConfiguration implements Node{
-
+type HotelRuntimeConfiguration implements Node {
   # Internal TGX identificator
   code: ID!
 
@@ -14,5 +13,4 @@ type HotelRuntimeConfiguration implements Node{
 
   # List of messages
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
-
 }

@@ -1,4 +1,4 @@
-enum AlertGroups{
+enum AlertGroups {
   ACCESS
   CLIENT
   SUPPLIER

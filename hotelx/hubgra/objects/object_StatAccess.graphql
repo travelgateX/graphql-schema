@@ -1,31 +1,31 @@
 type StatAccess {
   # Access name
-  name:                   String!
-  
+  name: String!
+
   # Total access time
-  total:                  Stat!
-  
+  total: Stat!
+
   # Static configuration time
-  staticConfiguration:    Stat
-  
+  staticConfiguration: Stat
+
   # Number of hotels
-  hotels:                 Int!
-  
+  hotels: Int!
+
   # Number of zones
-  zones:                  Int!
-  
+  zones: Int!
+
   # Number of cities
-  cities:                 Int!
-  
+  cities: Int!
+
   # Access request time
-  requestAccess:          StatPlugin
-  
+  requestAccess: StatPlugin
+
   # Access response time
-  responseAccess:         StatPlugin
-  
+  responseAccess: StatPlugin
+
   # Detail transaction time
-  transactions:           [StatTransaction!]!
-  
+  transactions: [StatTransaction!]!
+
   # Plugin execution time
-  plugins:                [StatPlugin!]
+  plugins: [StatPlugin!]
 }

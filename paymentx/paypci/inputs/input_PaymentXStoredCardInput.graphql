@@ -1,32 +1,31 @@
 input PaymentXStoredCardInput {
-
   # Asigned instance of PaymentX of the booked property.
-  instanceCode : ID!
-    
+  instanceCode: ID!
+
   # Indicates the code of the booked property
   pointOfSaleCode: ID!
-  
+
   # Indicates the referece of the booking
   bookingReference: String!
-  
+
   # Check-out, booking date Format: YYYY-MM-DD
-  checkOut : Date
-  
+  checkOut: Date
+
   # Check-in, booking date Format: YYYY-MM-DD
-  checkIn : Date
+  checkIn: Date
 
   # Indicates the card type.
   cardType: String
-  
+
   # Contains owner's name
   holder: HolderInput
-  
+
   # Contains credit card number
   number: CardNumber!
-  
+
   # Contains credit card CVC
   CVC: CVC!
-  
+
   # Contains credit card expiration date
   expire: ExpireDateInput!
 }

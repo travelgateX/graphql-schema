@@ -1,7 +1,5 @@
 # Criteria of modify contains basic information to add remarks into a booking.
 input HotelCriteriaAmendPaxesCommitInput {
-
   # HotelX's amend booking reference (received in AmendPaxesQuote response)
   amendmentID: String!
-
 }

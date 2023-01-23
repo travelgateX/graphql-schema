@@ -1,10 +1,10 @@
 """
 Configuration of the request
 """
-input FlightSettingsInput{
-    supplierCode_in: [FlightSupplierInput!]
-    groupCode: ID
-    clientCode_in: ID
-    timeout: Int
-    auditTransactions: Boolean
+input FlightSettingsInput {
+  supplierCode_in: [FlightSupplierInput!]
+  groupCode: ID
+  clientCode_in: ID
+  timeout: Int
+  auditTransactions: Boolean
 }

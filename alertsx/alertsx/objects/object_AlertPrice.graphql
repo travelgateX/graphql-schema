@@ -1,11 +1,11 @@
- "Price contains the specific configuration for Price alert Type"
+"Price contains the specific configuration for Price alert Type"
 type AlertPrice {
   "Specify which field is goinf to be checked. Amount, commission or both"
   check: AlertCheckPrice!
   "Low or greater values of amount/commission (value included) "
   range: AlertRangePrice!
   "Value of amount price"
-  amount: Int 
+  amount: Int
   "Value of commission price"
   commission: Int
   "Used for check amount"

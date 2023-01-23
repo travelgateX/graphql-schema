@@ -1,4 +1,4 @@
 input GroupContentCreateInput {
-    code:ID!
-    contextCode:ID!
+  code: ID!
+  contextCode: ID!
 }

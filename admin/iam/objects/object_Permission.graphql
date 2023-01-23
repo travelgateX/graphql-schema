@@ -1,5 +1,5 @@
-type Permission{
+type Permission {
   role: Role!
-  resource:Resource!
+  resource: Resource!
   api: API!
 }

@@ -1,4 +1,4 @@
-enum StatsInfoTypes{
+enum StatsInfoTypes {
   ALL
   # Stats in OK state
   OK

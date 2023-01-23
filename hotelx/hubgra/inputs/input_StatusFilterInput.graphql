@@ -2,7 +2,7 @@
 input StatusFilterInput {
   # if includes not nil: only options with status found in includes will be returned
   includes: [StatusType!]
-  
-  # if excludes not nil: only options without status found in includes will be returned 
+
+  # if excludes not nil: only options without status found in includes will be returned
   excludes: [StatusType!]
 }

@@ -1,4 +1,4 @@
-enum GroupType{
+enum GroupType {
   ROOT
   ORG
   GROUP

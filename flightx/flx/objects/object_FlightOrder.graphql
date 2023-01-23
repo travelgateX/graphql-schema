@@ -1,5 +1,5 @@
 """
-A record of the agreement of one party with another to receive products and services under specified terms and conditions. 
+A record of the agreement of one party with another to receive products and services under specified terms and conditions.
 """
 type FlightOrder implements Node {
   code: ID!

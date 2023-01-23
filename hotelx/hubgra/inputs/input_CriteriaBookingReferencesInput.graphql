@@ -2,10 +2,10 @@
 input CriteriaBookingReferencesInput {
   # The hotel code.
   hotelCode: String!
-  
+
   # The requested currency. The API will convert to this currency if supplier returns a different one.
-  currency : Currency!
-  
+  currency: Currency!
+
   # Contains the client reference and/or supplier reference.
   references: [BookReferenceInput!]!
 }

@@ -1,10 +1,10 @@
-input UpdateGroupInput{
+input UpdateGroupInput {
   group: ID!
-	owner:  ID
+  owner: ID
   type: GroupTypeInput
-	info: String
+  info: String
   label: String
-  country:Country
+  country: Country
   isBuyer: Boolean
   isSeller: Boolean
 }

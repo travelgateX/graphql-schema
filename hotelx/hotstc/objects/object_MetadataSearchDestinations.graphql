@@ -1,11 +1,11 @@
 # Contains information regarding the destinations for Search request.
-type MetadataSearchDestinations{
-    # Maximum number of hotels that can be requested.
-    maxNumberHotels: ReviewedInt!
+type MetadataSearchDestinations {
+  # Maximum number of hotels that can be requested.
+  maxNumberHotels: ReviewedInt!
 
-    # Recomended number of hotels.
-    recommendedNumberHotels: ReviewedInt!   
-    
-    # Required all hotels from same destination
-    hotelSameDestinationRestriction: ReviewedBool!
+  # Recomended number of hotels.
+  recommendedNumberHotels: ReviewedInt!
+
+  # Required all hotels from same destination
+  hotelSameDestinationRestriction: ReviewedBool!
 }

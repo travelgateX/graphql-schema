@@ -1,5 +1,5 @@
 input ServiceApiFilter {
- ApiName: String
- OperationName: String
- OperationType: String
+  ApiName: String
+  OperationName: String
+  OperationType: String
 }

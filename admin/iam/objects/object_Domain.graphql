@@ -1,4 +1,4 @@
-type Domain implements Node{
+type Domain implements Node {
   code: ID!
   domainData: DomainData
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]

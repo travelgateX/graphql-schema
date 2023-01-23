@@ -27,7 +27,7 @@ input PaymentXStoredCardFilterInput {
   checkOut_gt: DateTime
   # All values greater than or equal the given value.
   checkOut_gte: DateTime
-  
+
   # All values with holder like the given value.
   holder_like: HolderInput
 }

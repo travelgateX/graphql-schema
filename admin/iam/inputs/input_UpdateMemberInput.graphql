@@ -1,8 +1,8 @@
-input UpdateMemberInput{
-   member: ID!
-   label: String!
-   isActive: Boolean!
-   firstName: String
-   lastName: String
-   crmData: CrmDataInput
+input UpdateMemberInput {
+  member: ID!
+  label: String!
+  isActive: Boolean!
+  firstName: String
+  lastName: String
+  crmData: CrmDataInput
 }

@@ -2,6 +2,6 @@
 type GroupAccess {
   # Group identifiers
   groupCodes: [String!]!
-  
+
   accesses: [Access!]
 }

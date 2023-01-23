@@ -2,7 +2,7 @@
 enum UnitTimeType {
   # Day
   DAY
-  
+
   # Hour
   HOUR
 }

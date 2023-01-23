@@ -1,4 +1,4 @@
-type APIConnection{
+type APIConnection {
   edges: [APIEdge]
   pageInfo: PageInfo!
 }

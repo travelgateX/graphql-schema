@@ -1,5 +1,5 @@
 # An APIs collection.
-type Product implements Node{
+type Product implements Node {
   code: ID!
   productData: ProductData!
   # List of advise messages.

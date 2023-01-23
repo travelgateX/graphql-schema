@@ -4,4 +4,4 @@ type Activation implements Node {
   createdAt: DateTime!
   updatedAt: DateTime!
   adviseMessage: [AdviseMessage]
-} 
+}

@@ -2,13 +2,13 @@
 type Contact {
   # Email
   email: String
-  
+
   # Telephone
   telephone: String
-  
+
   # Fax
   fax: String
-  
+
   # Web
   web: URI
 }

@@ -4,26 +4,26 @@ type Price implements Priceable {
   # Currency code indicating which currency should be paid.
   # This information is mandatory.
   currency: Currency!
-  
+
   # It indicates if the price indicated in the gross must be respected.
   # That is, the customer can not sell the room / option at a price lower than that established by the supplier.
   # This information is mandatory.
   binding: Boolean!
-  
+
   # Indicates the net price that the customer must pay to the supplier.
   # This information is mandatory.
   net: Float!
-  
+
   # Indicates the retail price that the supplier sells to the customer.
   gross: Float!
-  
+
   # Provides information about the currency of original, and its rate applied over the results returned by the Supplier.
   # This information is mandatory.
   exchange: Exchange!
-  
+
   # Informs markup applied over supplier price.
   markups: [Markup!]
-  
+
   # Indicates the minimum selling price it can be sold (determined by the seller)
   minimumSellingPrice: Float
 }

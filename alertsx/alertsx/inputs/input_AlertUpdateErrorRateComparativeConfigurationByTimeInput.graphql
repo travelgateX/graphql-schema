@@ -1,5 +1,5 @@
 input AlertUpdateErrorRateComparativeConfigurationByTimeInput {
-   "Error codes to check. By default all error codes are checked"
+  "Error codes to check. By default all error codes are checked"
   toCheck: [Int!]
   "Error codes to compare. By defaults all traffic is compared"
   toCompare: [Int!]
@@ -10,5 +10,3 @@ input AlertUpdateErrorRateComparativeConfigurationByTimeInput {
   "Common configuration of comparative mode type"
   comparative: AlertUpdateCommonComparativeInput
 }
-
- 

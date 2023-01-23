@@ -1,6 +1,6 @@
 input TimeRangeInput {
-    # Use 'now()' to query data with timestamps relative to the server’s current timestamp.
-    relative: RelativeInput
-    # Specify absolute time with date-time strings.
-    absolute: AbsoluteInput
+  # Use 'now()' to query data with timestamps relative to the server’s current timestamp.
+  relative: RelativeInput
+  # Specify absolute time with date-time strings.
+  absolute: AbsoluteInput
 }

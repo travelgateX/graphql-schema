@@ -1,7 +1,7 @@
 """
 Supplier to request
 """
-input FlightSupplierInput{
-    code: ID!
-    accessCode_in: [ID!]
+input FlightSupplierInput {
+  code: ID!
+  accessCode_in: [ID!]
 }

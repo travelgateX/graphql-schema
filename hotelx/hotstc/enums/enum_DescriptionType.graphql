@@ -2,28 +2,28 @@
 enum DescriptionType {
   # Additional Information
   ADDITIONAL
-  
+
   # Amenities
   AMENITY
-  
+
   # Activities
   ACTIVITY
-  
+
   # Restaurants
   RESTAURANT
-  
+
   # Rooms
   ROOM
-  
+
   # General
   GENERAL
-  
+
   # Pools
   POOL
-  
+
   # Locations
   LOCATION
-  
+
   # How to get
   HOW_TO_GET
 }

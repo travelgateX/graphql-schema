@@ -1,4 +1,4 @@
-type MemberConnection{
+type MemberConnection {
   edges: [MemberEdge]
   pageInfo: PageInfo!
   # List of advise messages.

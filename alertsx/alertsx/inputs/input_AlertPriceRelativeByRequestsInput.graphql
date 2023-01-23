@@ -10,6 +10,3 @@ input AlertPriceRelativeByRequestsInput {
   "groups where the alert is setted"
   group: ID!
 }
-
- 
-

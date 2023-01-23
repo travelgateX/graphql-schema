@@ -1,10 +1,10 @@
 input ClientWhereUniqueInput {
-    search: ID!
-    searchBy: ClientSearchByOptions!
+  search: ID!
+  searchBy: ClientSearchByOptions!
 }
 
 enum ClientSearchByOptions {
-    ID
-    CODE
-    NAME
+  ID
+  CODE
+  NAME
 }

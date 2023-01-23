@@ -1,5 +1,5 @@
 type SpeedAccessData {
-    code: ID!
-    access: Access!
-    configuration: SpeedConfiguration!
+  code: ID!
+  access: Access!
+  configuration: SpeedConfiguration!
 }

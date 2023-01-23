@@ -1,7 +1,6 @@
-
 input AbsoluteInput {
-    # From date of search
-    from: DateTime!
-    # To date of search
-    to: DateTime!
+  # From date of search
+  from: DateTime!
+  # To date of search
+  to: DateTime!
 }

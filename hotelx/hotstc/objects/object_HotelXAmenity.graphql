@@ -14,4 +14,3 @@ type HotelXAmenity implements Node {
   # Indicates the date of last update of the node
   updatedAt: DateTime!
 }
-

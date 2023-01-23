@@ -6,7 +6,7 @@ input VirtualCreditCardInput {
   # The date from when the card will no longer be chargeable.
   deactivationDate: Date
 
-  # The amount which can be charged to the card. 
+  # The amount which can be charged to the card.
   currentBalance: Float
 
   # The ISO currency code of the CurrentBalance.

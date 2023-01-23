@@ -1,48 +1,47 @@
 # Rate Rules
 enum RateRulesType {
-
   # NORMAL are options without RateRule.
   NORMAL
-  
+
   # The product can't be sold separately from another product attached to it, such as a flight.
   PACKAGE
-  
+
   # OLDER55 can only be sold to people who are 55 and older.
   OLDER55
-  
+
   # OLDER60 can only be sold to people who are 60 and older.
   OLDER60
-  
+
   # OLDER65 can only be sold to people who are 65 and older.
   OLDER65
-  
+
   # CANARY_RESIDENT is applicable to Canary Islands residents only.
   CANARY_RESIDENT
-  
+
   # BALEARIC_RESIDENT is applicable to Balearic Islands residents only.
   BALEARIC_RESIDENT
-  
+
   # LARGE_FAMILY is applicable to large families and is determined by each supplier.
   LARGE_FAMILY
-  
+
   # HONEYMOON is applicable to those who just got married and is determined by each supplier.
   HONEYMOON
-  
+
   # PUBLIC_SERVANT is applicable to public servants only.
   PUBLIC_SERVANT
-  
+
   # UNEMPLOYED is applicable to those without work.
   UNEMPLOYED
-  
+
   # NON_REFUNDABLE is applicable to non refundable options.
   NON_REFUNDABLE
-  
+
   # MOBILE are special rates confirmed by mobile phone.
   MOBILE
-  
+
   # WARRANTY is applicable to options with cancellation warranty.
   WARRANTY
-  
+
   # ESSENTIAL_WORKER are special hotel rates for essential workers.
   ESSENTIAL_WORKER
 
@@ -51,5 +50,4 @@ enum RateRulesType {
 
   # CUSTOM Custom rates
   CUSTOM
-
 }

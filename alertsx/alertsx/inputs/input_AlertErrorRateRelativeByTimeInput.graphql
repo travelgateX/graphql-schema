@@ -3,7 +3,7 @@ input AlertErrorRateRelativeByTimeInput {
   name: String
   "Description of the alert"
   description: String
-   "Configuration of the alert"
+  "Configuration of the alert"
   configuration: AlertErrorRateRelativeConfigurationByTimeInput!
   "To enable or desable the alert"
   isActive: Boolean!

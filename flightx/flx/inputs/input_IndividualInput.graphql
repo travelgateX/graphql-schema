@@ -9,8 +9,8 @@ input IndividualInput {
   IdentityDocID: String!
   IdentityDocTypeCode: IdentityDocType!
   CitizenshipCountryCode: CountryCodeType
-  ExpiryDate: DateTime 
+  ExpiryDate: DateTime
   IssueDate: DateTime
-  IssuingCountryCode: CountryCodeType 
+  IssuingCountryCode: CountryCodeType
   ResidenceCountryCode: CountryCodeType
 }

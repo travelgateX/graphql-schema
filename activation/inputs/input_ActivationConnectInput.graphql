@@ -1,5 +1,5 @@
 input ActivationConnectInput {
-  # Supplier configuration for this connection 
+  # Supplier configuration for this connection
   accessConfiguration: AccessInput!
   # Buyer's HotelX Instance code
   group: ID
@@ -9,4 +9,4 @@ input ActivationConnectInput {
   organizationBuyerCode: ID!
   # Indicates the search criteria that the validation process use to validate the activation
   criteriaSearches: [HotelCriteriaSearchInput!]
-} 
+}

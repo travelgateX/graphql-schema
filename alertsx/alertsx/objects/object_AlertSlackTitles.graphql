@@ -1,7 +1,4 @@
 type AlertSlackTitles {
-    ok: String
-    alerting: String
+  ok: String
+  alerting: String
 }
-
-
-

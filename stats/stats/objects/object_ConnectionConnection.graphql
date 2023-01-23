@@ -4,4 +4,3 @@ type ConnectionConnection {
   #List of advise messages.
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }
-

@@ -1,11 +1,11 @@
 # Information required to store a mapping in TGX system
 input DeleteSupplierMappingInput {
-    # entity whose the codes are identifiers
-    entity: MappingEntityType!
-    # supplier entity code
-    entityCode: ID! 
-    # supplier code
-    supplierCode: ID!
-    # mapping context to delete 
-    context: String!
+  # entity whose the codes are identifiers
+  entity: MappingEntityType!
+  # supplier entity code
+  entityCode: ID!
+  # supplier code
+  supplierCode: ID!
+  # mapping context to delete
+  context: String!
 }

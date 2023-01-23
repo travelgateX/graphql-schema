@@ -1,6 +1,6 @@
 input AlertUpdateNotificationsInput {
-    # email: Email
-    emails: AlertUpdateEmailsInput
-    # slack: Slack
-    slack: AlertUpdateSlackInput
+  # email: Email
+  emails: AlertUpdateEmailsInput
+  # slack: Slack
+  slack: AlertUpdateSlackInput
 }

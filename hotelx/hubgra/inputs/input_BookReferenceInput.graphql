@@ -2,10 +2,10 @@
 input BookReferenceInput {
   # The client's reference
   client: String
-  
+
   # The supplier's reference
   supplier: String
 
-  # Specific dates of booking. This field is mandatory for some suppliers. 
+  # Specific dates of booking. This field is mandatory for some suppliers.
   dates: BookReferenceDatesInput
 }

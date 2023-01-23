@@ -1,4 +1,4 @@
-enum AlertEventType{
+enum AlertEventType {
   OK
   ALERTING
 }

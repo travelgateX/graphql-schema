@@ -2,13 +2,13 @@
 enum PaymentType {
   # The payment is managed by the supplier.
   MERCHANT
-  
+
   # The payment is made straight to the actual payee, without sending it through an intermediary or a third party.
   DIRECT
-  
+
   # The payment is managed by the supplier. The payment is effectuated at the time of booking.
   CARD_BOOKING
-  
+
   # The payment is managed by the supplier. The payment is effectuated at check in in the hotel.
   CARD_CHECK_IN
 

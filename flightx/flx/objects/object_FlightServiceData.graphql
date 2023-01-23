@@ -6,5 +6,8 @@ type FlightServiceData {
   type: ID!
   description: String!
   pax: [FlightPax]!
-  segments(where: FlightSegmentWhereInput, orderBy: FlightSegmentOrderByInput): [FlightSegment!]!
+  segments(
+    where: FlightSegmentWhereInput
+    orderBy: FlightSegmentOrderByInput
+  ): [FlightSegment!]!
 }

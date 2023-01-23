@@ -2,7 +2,7 @@
 type Holder {
   # Holder's name
   name: String!
-  
+
   # Holder's surname
   surname: String!
 }

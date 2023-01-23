@@ -1,16 +1,17 @@
 {
-  "title": "Objects",
-  "pagetitle": null,
-  "description": "",
-  "weight": 2,
-  "icon": "fa-object-ungroup",
-  "alwaysopen": false
+"title": "Objects",
+"pagetitle": null,
+"description": "",
+"weight": 2,
+"icon": "fa-object-ungroup",
+"alwaysopen": false
 }
 Our `Object` pages describe every single resource, and field in our schema.
 
 You can access our `Schema` interactively in our [API Playground](https://api.travelgatex.com), but if you would like to understand each object’s properties, have a look at the relevant page here.
 
 Each object is described in the same way:
+
 - A short definition of the `Object`
 - An interactive GraphQL schema definition
 - A full list of all `Fields` in the object

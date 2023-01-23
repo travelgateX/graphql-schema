@@ -1,7 +1,7 @@
 # Contain bool value and review date
-type ReviewedBool{
-    # Last reviewed date
-    reviewDate: Date!
+type ReviewedBool {
+  # Last reviewed date
+  reviewDate: Date!
 
-    value: Boolean!
+  value: Boolean!
 }

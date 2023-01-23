@@ -2,7 +2,7 @@
 type Exchange {
   # Provide information about the currency of origin
   currency: Currency!
-  
+
   # Provides information about the rate applied over results
   rate: Float!
 }

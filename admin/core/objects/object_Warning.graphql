@@ -7,5 +7,5 @@ type Warning {
   type: String!
 
   # Warning description
-  description : String!
+  description: String!
 }

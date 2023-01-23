@@ -2,10 +2,10 @@
 type RoomStatic implements Node {
   # Room ID
   code: ID!
-  
+
   # Room data
   roomData: RoomData
-  
+
   # Errors that abort services.
   error: [Error!] @deprecated(reason: "Deprecated from 2019-07-03")
 
@@ -14,7 +14,7 @@ type RoomStatic implements Node {
 
   # Date created
   createdAt: DateTime!
-  
+
   # Date updated
   updatedAt: DateTime!
 }

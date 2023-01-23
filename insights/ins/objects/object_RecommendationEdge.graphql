@@ -2,6 +2,6 @@
 ## Recommendation Edge
 """
 type RecommendationEdge {
-	node: Recommendation
-	cursor: String!
+  node: Recommendation
+  cursor: String!
 }

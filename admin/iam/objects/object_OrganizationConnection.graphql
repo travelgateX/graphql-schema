@@ -1,4 +1,4 @@
-type OrganizationConnection{
+type OrganizationConnection {
   edges: [OrganizationEdge]
   pageInfo: PageInfo!
   # List of advise messages.

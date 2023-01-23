@@ -1,7 +1,7 @@
-type StatPlugin{
+type StatPlugin {
   # Plugin name
-  name:     String!
-  
+  name: String!
+
   # total plugin time
-  total:    Stat!
+  total: Stat!
 }

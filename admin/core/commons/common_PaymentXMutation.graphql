@@ -1,3 +1,3 @@
-type PaymentXMutation{
-_ : Boolean
+type PaymentXMutation {
+  _: Boolean
 }

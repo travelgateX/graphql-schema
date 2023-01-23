@@ -1,5 +1,4 @@
-
-enum ThreeDSSignatureStatusType{
+enum ThreeDSSignatureStatusType {
   # Signature of the payer response has been validated successfully
   SIGNATURE_VALIDATED
 

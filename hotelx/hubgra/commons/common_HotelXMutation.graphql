@@ -1,24 +1,50 @@
 extend type HotelXMutation {
   # Creates a new hotel booking consisting of an option of 1 or more rooms.
-  book(input: HotelBookInput!, settings: HotelSettingsInput, filter: HotelXFilterInput, appsInput: [HotelXAppInput!]): HotelBookPayload
+  book(
+    input: HotelBookInput!
+    settings: HotelSettingsInput
+    filter: HotelXFilterInput
+    appsInput: [HotelXAppInput!]
+  ): HotelBookPayload
 
   # Cancels an existing hotel booking consisting of an option of 1 or more rooms.
-  cancel(input: HotelCancelInput!, settings: HotelSettingsInput, filter: HotelXFilterInput, appsInput: [HotelXAppInput!]): HotelCancelPayload
-  
-  # Commits an existing booking
-  commit(input: HotelCommitInput!, settings: HotelSettingsInput): HotelCommitPayload
+  cancel(
+    input: HotelCancelInput!
+    settings: HotelSettingsInput
+    filter: HotelXFilterInput
+    appsInput: [HotelXAppInput!]
+  ): HotelCancelPayload
 
-  loadFile(input: String!): String! @deprecated(reason: "deprecated from 2018-06-06")
+  # Commits an existing booking
+  commit(
+    input: HotelCommitInput!
+    settings: HotelSettingsInput
+  ): HotelCommitPayload
+
+  loadFile(input: String!): String!
+    @deprecated(reason: "deprecated from 2018-06-06")
 
   # Commits the previous quoted remarks amendment.
-  amendRemarks(data: HotelCriteriaAmendRemarksCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
+  amendRemarks(
+    data: HotelCriteriaAmendRemarksCommitInput!
+    settings: HotelSettingsInput
+  ): HotelBookingAmend
 
   # Commits the previous quoted paxes amendment.
-  amendPaxes(data: HotelCriteriaAmendPaxesCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
+  amendPaxes(
+    data: HotelCriteriaAmendPaxesCommitInput!
+    settings: HotelSettingsInput
+  ): HotelBookingAmend
 
   # Commits the previous quoted dates amendment.
-  amendDates(data: HotelCriteriaAmendDatesCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
+  amendDates(
+    data: HotelCriteriaAmendDatesCommitInput!
+    settings: HotelSettingsInput
+  ): HotelBookingAmend
 
   # Commits the previous quoted board amendment.
-  amendBoard(data: HotelCriteriaAmendBoardCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
+  amendBoard(
+    data: HotelCriteriaAmendBoardCommitInput!
+    settings: HotelSettingsInput
+  ): HotelBookingAmend
 }

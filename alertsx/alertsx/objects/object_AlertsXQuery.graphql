@@ -1,5 +1,8 @@
 type AlertsXQuery {
- "Query to obtain Alerts"
-  alerts(relay:RelayInput ,filter: AlertFilterInput, criteria: AlertCriteriaInput): AlertConnection!
-  
+  "Query to obtain Alerts"
+  alerts(
+    relay: RelayInput
+    filter: AlertFilterInput
+    criteria: AlertCriteriaInput
+  ): AlertConnection!
 }

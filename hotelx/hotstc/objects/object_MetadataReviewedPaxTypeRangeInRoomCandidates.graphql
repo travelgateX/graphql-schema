@@ -1,9 +1,8 @@
 # Contains information about the age restrictions of the guests in a room.
-type ReviwedPaxTypeRangeInRoomCandidates{
-    # Last reviewed date
-    reviewDate:Date!
+type ReviwedPaxTypeRangeInRoomCandidates {
+  # Last reviewed date
+  reviewDate: Date!
 
-    # Guest restrictions for each candidate type in a room.
-    candidates:[MetadataCandidate!]!
-
+  # Guest restrictions for each candidate type in a room.
+  candidates: [MetadataCandidate!]!
 }

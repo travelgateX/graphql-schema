@@ -1,6 +1,5 @@
 # PaymentCard
 type PaymentCard implements Node {
-
   # Payment Card Unique id
   code: ID!
 
@@ -9,11 +8,10 @@ type PaymentCard implements Node {
 
   # Create date
   createdAt: DateTime!
-  
+
   # Update date
   updatedAt: DateTime!
-  
+
   # List of messages
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
-
 }

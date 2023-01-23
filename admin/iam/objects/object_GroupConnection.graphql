@@ -1,4 +1,4 @@
-type GroupConnection{
+type GroupConnection {
   edges: [GroupEdge]
   pageInfo: PageInfo!
   # List of advise messages.

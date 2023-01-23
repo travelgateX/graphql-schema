@@ -1,4 +1,4 @@
 type ActivationEdge {
   node: Activation
   cursor: String!
-} 
+}

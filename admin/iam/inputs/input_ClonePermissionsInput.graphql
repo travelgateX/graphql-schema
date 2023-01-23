@@ -1,4 +1,4 @@
-input ClonePermissionsInput{
+input ClonePermissionsInput {
   sourceMember: ID!
   destMember: ID!
 }

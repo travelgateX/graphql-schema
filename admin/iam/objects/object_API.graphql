@@ -1,4 +1,4 @@
-type API implements Node{
+type API implements Node {
   code: ID!
   apiData: APIData
   # List of advise messages.

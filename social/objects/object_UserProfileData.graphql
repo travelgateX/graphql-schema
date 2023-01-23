@@ -1,6 +1,6 @@
 type UserProfileData {
-    email: String!
-    firstName: String
-    lastName: String
-    onboardingProperties: UserOnboardingData
+  email: String!
+  firstName: String
+  lastName: String
+  onboardingProperties: UserOnboardingData
 }

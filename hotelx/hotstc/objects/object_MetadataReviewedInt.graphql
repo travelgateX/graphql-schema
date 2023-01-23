@@ -1,7 +1,7 @@
 # Contain int value and review date
-type ReviewedInt{
-    # Last reviewed date
-    reviewDate: Date!
+type ReviewedInt {
+  # Last reviewed date
+  reviewDate: Date!
 
-    value: Int!
+  value: Int!
 }

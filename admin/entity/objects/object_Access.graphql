@@ -1,5 +1,5 @@
 # An Access is a set of credentials and configuration in order to access the system of a Supplier.
-type Access implements Node{
+type Access implements Node {
   code: ID!
   accessData: AccessData
   # Errors that abort services
@@ -12,5 +12,4 @@ type Access implements Node{
   updatedAt: DateTime!
   # Access deleted date
   deletedAt: DateTime
-
 }

@@ -1,4 +1,4 @@
-type PartnerConnection{
+type PartnerConnection {
   edges: [PartnerEdge]
   pageInfo: PageInfo!
   # List of advise messages.

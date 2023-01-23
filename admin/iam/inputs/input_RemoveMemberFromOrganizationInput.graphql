@@ -1,4 +1,4 @@
 input RemoveMemberFromOrganizationInput {
-	member: ID!
-	orgCode: ID!
+  member: ID!
+  orgCode: ID!
 }

@@ -1,6 +1,6 @@
 input ProviderWhereInput {
-    id: ID
-    code: ID
-    name: String
-    isActive: Boolean
+  id: ID
+  code: ID
+  name: String
+  isActive: Boolean
 }
