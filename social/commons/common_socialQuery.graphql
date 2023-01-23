@@ -1,7 +1,3 @@
-type Query {
-  social: SocialQuery
-}
-
 type SocialQuery {
   # Profiles
   profile(where: ProfileWhereUniqueInput!): ProfileV2!

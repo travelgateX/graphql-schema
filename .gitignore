@@ -76,3 +76,8 @@ typings/
 /.idea/modules.xml
 /.idea/vcs.xml
 /.idea/workspace.xml
+
+
+.lh/
+.history/
+full_schema.graphql
