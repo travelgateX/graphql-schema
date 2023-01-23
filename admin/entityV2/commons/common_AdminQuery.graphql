@@ -7,7 +7,7 @@ extend type AdminQuery {
   """EntitiesV2 clientsByOwnerCodes query"""
   clientsByOwnerCodes(ownerCodes: [ID!]!, orderBy: ClientOrderByInput): ClientConnection!
   """EntitiesV2 clientsByGroupCodes query"""
-  clientsByGroupCodes(groupCodes: [ID!]!, orderBy: ClientOrderByInput): ClientC
+  clientsByGroupCodes(groupCodes: [ID!]!, orderBy: ClientOrderByInput): ClientConnection!
   """EntitiesV2 Get all providers"""
   allProviders(where: ProviderWhereInput, orderBy: ProviderOrderByEnum): [Provider!]
   """EntitiesV2 Get group contents"""

@@ -1,4 +1,4 @@
-extend type TrafficOptimizationQuery{
+type TrafficOptimizationQuery{
   """
     Return traffic optimization configuration
   """
