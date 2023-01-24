@@ -1,0 +1,5 @@
+# Contains tracing information.
+type HotelXTracing {
+  # Contains operation information.  
+  hotelXOperationSpan:          HotelXOperationSpan
+}

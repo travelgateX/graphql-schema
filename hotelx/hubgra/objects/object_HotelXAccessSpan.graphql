@@ -1,0 +1,11 @@
+# Contains operation information.
+type HotelXAccessSpan {
+  # Access span status
+  status: String
+
+  # Contains access information.
+  accessData:          AccessData
+
+  #Contains transaction information
+  hotelXTransactionSpan: [HotelXTransactionSpan]    
+}
