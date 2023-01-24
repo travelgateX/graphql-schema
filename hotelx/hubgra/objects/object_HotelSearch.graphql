@@ -20,4 +20,7 @@ type HotelSearch implements Response {
   
   # Potentially harmful situations or errors that won't force the service to abort
   warnings: [Warning!]
+
+  # Tracing information
+  hotelXTracing: HotelXTracing
 }
