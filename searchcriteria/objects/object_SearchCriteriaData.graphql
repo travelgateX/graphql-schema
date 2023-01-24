@@ -1,5 +1,7 @@
 type SearchCriteriaData {
   code: ID!
+  # Supplier Code owner of the Search Criteria
+  supplier: ID!
   # Dinamyc Search Criteria's date
   dinamycDates: SearchCriteriaDinamycDates
   # Static Search Criteria's date
