@@ -4,5 +4,5 @@ type SearchCriteriaMutation {
   # UpdateSearchCriteria mutation allows to update a search criteria by Code
   updateSearchCriteria(where: SearchCriteriaCodeWhereUniqueInput!, data: SearchCriteriaUpdateInput!): SearchCriteria!
   # DeleteSearchCriteria mutation allows to delete search criteria by input
-  deleteSearchCriteria(where: SearchCriteriaWhereInput!): SearchCriteriaConnection!
+  deleteSearchCriteria(where: SearchCriteriaCodeWhereInput!): SearchCriteriaConnection!
 }
