@@ -1,0 +1,5 @@
+input InternalExtendedInfoInput {
+  partnerImportance: PartnerImportanceType
+  marketplaceManager: ID
+  customerEngineer: ID
+}
