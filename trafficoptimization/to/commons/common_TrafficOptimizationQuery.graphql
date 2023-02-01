@@ -29,6 +29,7 @@ type TrafficOptimizationQuery{
   """
   allTrafficOptimizationAllAccessesRecommendations(
     where:TrafficOptimizationAllAccessesRecommendationsWhereInput
+    first:Int
   ): TrafficOptimizationRecommendationsAllAccesses!
 
   """
