@@ -2,7 +2,6 @@ enum GroupType{
   ROOT
   ORG
   GROUP
-  PROFILE
   TEAM
   FOLDER
   PRODUCT
