@@ -2,7 +2,6 @@ enum GroupTypeInput{
   ROOT
   ORG
   GROUP
-  PROFILE
   TEAM
   FOLDER
   PRODUCT
