@@ -29,4 +29,5 @@ input ProfileUpdateInput {
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
   isDemandBridge: Boolean
   isSupplyBridge: Boolean
+  internalExtendedInfoInput: InternalExtendedInfoInput
 }

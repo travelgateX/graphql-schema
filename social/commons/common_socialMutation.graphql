@@ -3,7 +3,7 @@ type SocialMutation {
   # Profiles
   createProfile(data: ProfileCreateInput!): ProfileV2!
 
-  updateProfile(data: ProfileUpdateInput!, where: ProfileWhereUniqueInput!): ProfileV2!
+  updateProfile(where: ProfileWhereUniqueInput!, data: ProfileUpdateInput!): ProfileV2!
 
   deleteProfile(where: ProfileWhereUniqueInput!): ProfileV2!
 
