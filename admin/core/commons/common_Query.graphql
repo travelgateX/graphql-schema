@@ -15,7 +15,7 @@ type Query{
   # The Activation query root for implementing GraphQL query.
   activation: ActivationQuery
   # The Speed query root for implementing GraphQL query.
-  speed: speedQuery
+  speed: SpeedQuery
   # The Traffic Optimization query root for implementing GraphQL query.
   trafficOptimization: TrafficOptimizationQuery
   # The Social query root for implementing GraphQL query.

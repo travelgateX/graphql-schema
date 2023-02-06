@@ -1,0 +1,10 @@
+input AccessWhereInput {
+  code_in: [ID!]
+  name_in: [String!]
+  group_in: [ID!]
+  owner_in: [ID!]
+  supplier_in: [ID!]
+  provider_in: [ID]
+  isActive: Boolean
+  includeArchived: Boolean
+}

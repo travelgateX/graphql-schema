@@ -1,0 +1,10 @@
+input SetSupplierMappingInput {
+    # entity whose the codes are identifiers
+    entity: MappingEntityType!
+    # supplier entity code
+    entityCode: ID! 
+    # supplier code
+    supplierCode: ID!
+    # list of mappings
+    mappings: [ContextedCodeInput!]!
+}

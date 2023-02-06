@@ -7,7 +7,7 @@ extend type AdminQuery {
   """EntitiesV2 clientsByOwnerCodes query"""
   clientsByOwnerCodes(ownerCodes: [ID!]!, orderBy: ClientOrderByInput): ClientConnection!
   """EntitiesV2 clientsByGroupCodes query"""
-  clientsByGroupCodes(groupCodes: [ID!]!, orderBy: ClientOrderByInput): ClientC
+  clientsByGroupCodes(groupCodes: [ID!]!, orderBy: ClientOrderByInput): ClientConnection!
   """EntitiesV2 Get all providers"""
   allProviders(where: ProviderWhereInput, orderBy: ProviderOrderByEnum): [Provider!]
   """EntitiesV2 Get group contents"""
@@ -22,4 +22,12 @@ extend type AdminQuery {
   suppliersByProviderCodes(providerCodes: [ID!]!, orderBy: SupplierOrderByEnum): SupplierConnection!
   """EntitiesV2 Get all suppliers"""
   allSuppliers(where: SupplierWhereInput orderBy: SupplierOrderByEnum): SupplierConnection!
+  """Obtain a list of accesses for a filter"""
+  allAccesses(first: Int, last: Int, before: String, after:String, where: AccessWhereInput, orderBy: AccessOrderByEnum): AccessConnection!
+  """Obtain a list of accessesByOwnerCodes for a filter"""
+  accessesByOwnerCodes(first: Int, last: Int, before: String, after:String, ownerCodes: [ID!]!, orderBy: AccessOrderByEnum): AccessConnection!
+  """Obtain a list of accessesByGroupCodes for a filter"""
+  accessesByGroupCodes(first: Int, last: Int, before: String, after:String, groupCodes: [ID!]!, orderBy: AccessOrderByEnum): AccessConnection!
+  """Obtain a single access using a filter"""
+  access(where: AccessWhereUniqueInput!): Access
 }

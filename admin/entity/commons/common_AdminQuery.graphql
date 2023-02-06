@@ -1,11 +1,29 @@
 # A Query is an entry point into the object graph.
 extend type AdminQuery {
   # Obtain a list of accesses for a filter
-  accesses(first: Int, last: Int, before: String, after:String, filter: AccessFilter): AccessConnection
+  accesses(
+    first: Int
+    last: Int
+    before: String
+    after: String
+    filter: AccessFilter
+  ): AccessConnection
   # Obtain all suppliers for a filter.
-  suppliers(first: Int, last: Int, before: String, after:String, filter: SupplierFilter): SupplierConnection
+  suppliers(
+    first: Int
+    last: Int
+    before: String
+    after: String
+    filter: SupplierFilter
+  ): SupplierConnection
   # Obtain all clients for a filter.
-  clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
+  clients(
+    first: Int
+    last: Int
+    before: String
+    after: String
+    filter: ClientFilter
+  ): ClientConnection
   # Obtain a ServiceAPI
   serviceApi(filter: ServiceApiFilter): ServiceApi
   # Obtain all Points of Sale for the filters
@@ -13,9 +31,18 @@ extend type AdminQuery {
   # Obtain all Profiles for the filters
   profiles(filter: ProfileFilter): ProfileConnection
   # Obtain a set of entities
-  entities(filter: EntityFilter): EntityConnection @deprecated(reason: "deprecated from 2019-08-21. Only for statsX product. Use client, supplier, accesess queries")
+  entities(filter: EntityFilter): EntityConnection
+    @deprecated(
+      reason: "deprecated from 2019-08-21. Only for statsX product. Use client, supplier, accesess queries"
+    )
   # Obtain all clients for a filter.
-  systems(first: Int, last: Int, before: String, after:String, filter: SystemFilter): SystemConnection
+  systems(
+    first: Int
+    last: Int
+    before: String
+    after: String
+    filter: SystemFilter
+  ): SystemConnection
   # Get supplier mantainer
   getSupplierMaintainer(supplierID: ID!): Member
   # Get provider mantainer
@@ -27,6 +54,5 @@ extend type AdminQuery {
   # Get HubUser
   hubUsers(filter: HubUsersFilter): [HubUser!]
   # Get HubProvider
-  hubProviders(filter: HubProviderFilter): [HubProvider!]
-
+  hubProviders(filter: HubProviderFilter): [HubProvider!]  
 }

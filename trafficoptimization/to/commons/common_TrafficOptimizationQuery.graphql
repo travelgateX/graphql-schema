@@ -1,4 +1,4 @@
-extend type TrafficOptimizationQuery{
+type TrafficOptimizationQuery{
   """
     Return traffic optimization configuration
   """
@@ -37,4 +37,26 @@ extend type TrafficOptimizationQuery{
   allTrafficOptimizationAccessHotelBlacklistStats(
     where: TrafficOptimizationAccessHotelBlacklistStatsWhereInput
   ): TrafficOptimizationStatsAccessHotelBlacklist!
+  
+  """
+  Return recommendations of Connections
+  """
+  allTrafficOptimizationAllAccessesRecommendations(
+    where:TrafficOptimizationAllAccessesRecommendationsWhereInput
+    first:Int
+  ): TrafficOptimizationRecommendationsAllAccesses!
+
+  """
+  	Returns the aggregated stats registered for a specified input (buyer, seller, access or a combination between these)
+  """
+  getTrafficOptimizationAggregationStats(
+      where: TrafficOptimizationAggregationStatsConnectionWhereInput!
+    ): TrafficOptimizationStatsAggregationConnection!
+
+  """
+  	Returns the aggregated hotel stats registered for a specified input (buyer, seller, access or a combination between these)
+  """
+  getTrafficOptimizationAggregationHotelStats(
+    where: TrafficOptimizationAggregationHotelStatsConnectionWhereInput!
+  ): TrafficOptimizationHotelStatsAggregationConnection!
 }

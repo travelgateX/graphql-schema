@@ -1,0 +1,22 @@
+type HotelBookingAmend implements Response {
+  # Application stats in string format
+  stats(token: String!): StatsRequest
+  
+  # Data sent and received in the supplier's native format.
+  auditData: AuditData
+  
+  # Details about amended booking
+  amendedBookingDetail: HotelBookingDetail
+
+  # Specifies the fee (Gross, Net and Amount) of the amendment fee.
+  amendFee: Price
+
+  # Errors that abort services
+  errors: [Error!]
+  
+  # Potentially harmful situations or errors, but ones that will not forcibly abort the service
+  warnings: [Warning!]
+
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

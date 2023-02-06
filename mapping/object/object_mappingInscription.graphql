@@ -1,0 +1,11 @@
+
+type MappingInscription implements Node{
+  # Internal TGX identificator
+  code: ID!
+  # Creation date of runtime configuration
+  createdAt: DateTime!
+  # Last time runtime of this supplier has been updated
+  updatedAt: DateTime!
+  # List of messages
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

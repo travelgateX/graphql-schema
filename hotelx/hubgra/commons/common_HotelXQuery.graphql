@@ -33,6 +33,18 @@ extend type HotelXQuery {
   # @deprecated(reason: "deprecated from 2019-09-10. not operating or being used")
   mapping(groupCode: String!): Mapping!
 
- # Returns information about how a supplier configuration must be filled in order to perform hotelX operations.
+  # Returns information about how a supplier configuration must be filled in order to perform hotelX operations.
   runtimeConfiguration(supplierCode: ID!): HotelRuntimeConfiguration
+
+  # Returns detailed information about booking remarks amendment.
+  quoteRemarksAmendment(criteria: HotelCriteriaAmendRemarksQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+  # Returns detailed information about booking paxes amendment.
+  quotePaxesAmendment(criteria: HotelCriteriaAmendPaxesQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+  # Returns detailed information about booking dates amendment.
+  quoteDatesAmendment(criteria: HotelCriteriaAmendDatesQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+  # Returns detailed information about booking board amendment.
+  quoteBoardAmendment(criteria: HotelCriteriaAmendBoardQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
 }

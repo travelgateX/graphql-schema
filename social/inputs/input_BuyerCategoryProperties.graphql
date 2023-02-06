@@ -1,0 +1,6 @@
+input BuyerCategoryPropertiesInput {
+  # The profile's buyerCategory. The category introduced must be exists.
+  buyerCategory: String!
+  # The profile's buyerSubCategory. The subCategory introduced must be exists.
+  buyerSubCategory: String!
+}

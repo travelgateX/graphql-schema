@@ -1,4 +1,6 @@
 type AccessData {
+  # Unique ID identifier
+  id: ID!
   # Access descriptive name
   name: String!
   # Indicates if Access is active

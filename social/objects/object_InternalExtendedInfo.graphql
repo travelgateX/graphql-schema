@@ -1,0 +1,5 @@
+type InternalExtendedInfo {
+  partnerImportance: PartnerImportanceType
+  marketplaceManager: ID
+  customerEngineer: ID
+}

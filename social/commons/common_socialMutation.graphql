@@ -1,0 +1,28 @@
+
+type SocialMutation {
+  # Profiles
+  createProfile(data: ProfileCreateInput!): ProfileV2!
+
+  updateProfile(where: ProfileWhereUniqueInput!, data: ProfileUpdateInput!): ProfileV2!
+
+  deleteProfile(where: ProfileWhereUniqueInput!): ProfileV2!
+
+  # Categories
+  createCategory(data: CategoryCreateInput!): SocialCategory!
+
+  updateCategory(where: CategoryWhereUniqueInput!, data: CategoryUpdateInput!): SocialCategory!
+
+  deleteCategory(where: CategoryWhereUniqueInput!): SocialCategory!
+  
+  # SubCategories
+  createSubCategory(where: CategoryWhereUniqueInput!, data: SubCategoryCreateInput!): SocialSubCategory!
+
+  updateSubCategory(where: SubCategoryWhereUniqueInput!, data: SubCategoryUpdateInput!): SocialSubCategory!
+
+  deleteSubCategory(where: SubCategoryWhereUniqueInput!): SocialSubCategory!
+
+  # UserProfile
+  createUserProfile(data: UserProfileCreateInput!): UserProfile!
+
+  updateUserProfile(where: UserProfileWhereUniqueInput!, data: UserProfileUpdateInput!): UserProfile!
+}

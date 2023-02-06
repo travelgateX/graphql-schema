@@ -1,0 +1,24 @@
+input ProfileWhereInput {
+  AND: [ProfileWhereInput!]
+  Asset: AssetFilter
+  NOT: [ProfileWhereInput!]
+  OR: [ProfileWhereInput!]
+  code: StringFilter
+  createdAt: DateTimeFilter
+  description: NullableStringFilter
+  groupCode: NullableStringFilter
+  id: IntFilter
+  name: StringFilter
+  order: FloatFilter
+  ownerCode: NullableStringFilter
+  slug: StringFilter
+  status: Status
+  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
+  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
+  updatedAt: DateTimeFilter
+  websiteUrl: NullableStringFilter
+  buyerCategory: NullableStringFilter
+  sellerCategory: NullableStringFilter
+  isDemandBridge: Boolean
+  isSupplyBridge: Boolean
+}
