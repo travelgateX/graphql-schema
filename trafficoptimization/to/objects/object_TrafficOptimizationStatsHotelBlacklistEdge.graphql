@@ -1,0 +1,4 @@
+type TrafficOptimizationStatsHotelBlacklistEdge {
+  node: TrafficOptimizationStatsHotelBlacklist
+  cursor: String!
+}
