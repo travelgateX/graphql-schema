@@ -1,0 +1,4 @@
+type TrafficOptimizationStatsHotelBlacklistAccess {
+  access: Access!
+  hotels: TrafficOptimizationHotelStatsData
+}
