@@ -1,10 +1,11 @@
 type UserOnboardingData {
     startedAt: Date
     finishedAt: Date
+    organizationCreated: Date
+    userDetailsFinishedAt: Date
     sqlStartedAt: Date
     sqlFinishedAt: Date
     sqlStatus: SqlStatusType
-    organizationCreated: Date
     billingAccountCreated: Date
     tcpId: Int
     annexBuyerId: Int
