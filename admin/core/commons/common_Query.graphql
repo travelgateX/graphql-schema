@@ -20,4 +20,6 @@ type Query{
   trafficOptimization: TrafficOptimizationQuery
   # The Social query root for implementing GraphQL query.
   social: SocialQuery
+  # The Search Criteria query root for implementing GraphQL query.
+  searchCriteria: SearchCriteriaQuery
 }

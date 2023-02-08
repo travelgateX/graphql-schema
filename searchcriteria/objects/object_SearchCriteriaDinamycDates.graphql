@@ -1,0 +1,6 @@
+type SearchCriteriaDinamycDates {
+  # Check-in date shift for booking. For example: 1 MONTH and 2 DAY
+  checkIn: [DateShift!]!
+  # Check-out date shift for booking. For example: 1 MONTH and 2 DAY
+  checkOut: [DateShift!]!
+}
