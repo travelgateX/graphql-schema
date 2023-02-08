@@ -1,0 +1,4 @@
+type SearchCriteriaEdge {
+  node: SearchCriteria
+  cursor: String!
+}

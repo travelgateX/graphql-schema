@@ -9,4 +9,5 @@ type Mutation {
   social: SocialMutation
   speed: SpeedMutation
   trafficOptimization: TrafficOptimizationMutation
+  searchCriteria: SearchCriteriaMutation
 }

@@ -1,0 +1,6 @@
+input SearchCriteriaWhereInput {
+  # Search Criteria's code
+  code_in: [ID!]
+  # Search Criteria's supplier code
+  supplier_in: [ID!]
+} 

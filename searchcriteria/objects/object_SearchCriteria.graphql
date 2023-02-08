@@ -1,0 +1,8 @@
+type SearchCriteria {
+  code: ID!
+  searchCriteriaData: SearchCriteriaData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  deletedAt: DateTime!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

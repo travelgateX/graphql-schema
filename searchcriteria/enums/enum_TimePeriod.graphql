@@ -1,0 +1,8 @@
+enum TimePeriod {
+  # A period of a year
+  YEAR
+  # A period of a month
+  MONTH
+  # A period of a day
+  DAY
+}

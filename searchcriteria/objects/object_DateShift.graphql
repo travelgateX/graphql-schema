@@ -1,0 +1,6 @@
+type DateShift {
+  # Period of time type
+  timePeriod: TimePeriod!
+  # Quantity
+  quantity: Int!
+}

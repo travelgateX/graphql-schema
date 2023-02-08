@@ -1,0 +1,4 @@
+type SearchCriteriaQuery{
+  # AllSearchCriteria query allows to return all search criterias filtered by input
+  allSearchCriteria(where: SearchCriteriaWhereInput!): SearchCriteriaConnection!
+}
