@@ -7,6 +7,7 @@ type ActivationData {
   status: ActivationStatus!
   # Informs if the content information has been downloaded correctly
   contentInfoDownloaded: Boolean!
+  certificationStatus: String
   createdAt: DateTime!
   updatedAt: DateTime!
 }
