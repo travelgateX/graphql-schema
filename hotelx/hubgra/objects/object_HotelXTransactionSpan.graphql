@@ -1,5 +1,7 @@
 # Supplier transaction
 type HotelXTransactionSpan {
   # Transaction status.
-  status:        String!
+  status: String!
+  # Elapsed time in milliseconds between send request to seller and receive response
+  duration: Int!
 }
