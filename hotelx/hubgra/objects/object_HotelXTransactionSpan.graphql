@@ -1,5 +1,5 @@
 # Supplier transaction
 type HotelXTransactionSpan {
   # Transaction status.
-  status:        String
+  status:        String!
 }

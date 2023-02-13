@@ -22,5 +22,5 @@ type HotelSearch implements Response {
   warnings: [Warning!]
 
   # Tracing information
-  hotelXTracing: HotelXTracing
+  tracing: HotelXTracing
 }
