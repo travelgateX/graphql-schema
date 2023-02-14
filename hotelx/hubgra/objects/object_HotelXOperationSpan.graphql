@@ -1,8 +1,7 @@
 # Contains operation information.
 type HotelXOperationSpan {
   # Operation span status
-  status: String
-  
+  status: String!
   # Contains access span information.
-  hotelXAccessSpan:          [HotelXAccessSpan]
+  accessSpans:          [HotelXAccessSpan!]
 }
