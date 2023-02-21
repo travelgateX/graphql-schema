@@ -1,0 +1,6 @@
+input InvitationCreateInput {
+    invitedBy: String!
+    orgCode: String!
+    role: String!
+    userEmail: String!
+}
