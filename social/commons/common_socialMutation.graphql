@@ -25,4 +25,9 @@ type SocialMutation {
   createUserProfile(data: UserProfileCreateInput!): UserProfile!
 
   updateUserProfile(where: UserProfileWhereUniqueInput!, data: UserProfileUpdateInput!): UserProfile!
+
+  # Invitations
+  createInvitation(data: InvitationCreateInput!): Invitation!
+
+  updateInvitation(where: InvitationWhereUniqueInput!, data: InvitationUpdateInput!): Invitation!
 }

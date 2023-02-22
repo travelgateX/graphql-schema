@@ -1,0 +1,7 @@
+type InvitationData {
+  id: ID!
+  userEmail: String
+  orgCode: String
+  role: String
+  invitedBy: String
+}

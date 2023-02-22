@@ -1,0 +1,6 @@
+type InvitationConnection {
+  edges: [InvitationEdge]
+  pageInfo: PageInfo!
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage]
+  totalCount: Int!
+}

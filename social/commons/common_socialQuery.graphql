@@ -25,4 +25,7 @@ type SocialQuery {
 
   # UserProfile
   userProfile(where: UserProfileWhereUniqueInput): UserProfile!
+  
+  # Invitations
+  invitations(where: InvitationWhereInput): InvitationConnection!
 }
