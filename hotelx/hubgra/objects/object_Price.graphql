@@ -11,6 +11,7 @@ type Price implements Priceable {
   binding: Boolean!
   
   # Indicates the net price that the customer must pay to the supplier.
+  # The net price is calculated by substrating the included surcharges from the gross price. (For calculation purposes only)
   # This information is mandatory.
   net: Float!
   
