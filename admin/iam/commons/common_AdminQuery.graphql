@@ -22,4 +22,6 @@ extend type AdminQuery{
       orderBy: PartnerOrderByInput
       relay: RelayInput
       ): PartnerConnection!
+
+  bearer: BearerData!
 }
