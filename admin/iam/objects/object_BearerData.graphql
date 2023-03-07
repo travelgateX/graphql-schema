@@ -1,0 +1,4 @@
+type BearerData {
+  jwt: String!
+  orgCode: String!
+}
