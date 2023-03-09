@@ -81,4 +81,8 @@ extend type AdminMutation {
   ): Member!
   # Delete organization and related member roles.
   deleteOrganization(organization: DeleteOrganizationInput!): Organization!
+  # Archive organization 
+  archiveOrganization(organization: DeleteOrganizationInput!): Organization!
+  # Unarchive organization 
+  unArchiveOrganization(organization: DeleteOrganizationInput!): Organization!
 }
