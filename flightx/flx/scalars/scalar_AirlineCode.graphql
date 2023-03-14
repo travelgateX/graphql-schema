@@ -1,4 +1,0 @@
-"""
-2-letters IATA airline code
-"""
-scalar AirlineCode

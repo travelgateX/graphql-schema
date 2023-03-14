@@ -1,7 +1,0 @@
-type Individual {
-  code: ID!
-  name: ProperNameType
-  surname: ProperNameType!
-  birthDate: DateTime
-  title: TitleNameType
-}

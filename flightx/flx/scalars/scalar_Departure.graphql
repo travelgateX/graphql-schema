@@ -1,4 +1,0 @@
-"""
-IATA defined code identifying a city or station.
-"""
-scalar Departure
