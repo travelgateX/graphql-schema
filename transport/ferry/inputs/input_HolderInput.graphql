@@ -1,5 +1,0 @@
-input HolderInput {
-  name: String
-  surname: String
-  contact: ContactInput
-}

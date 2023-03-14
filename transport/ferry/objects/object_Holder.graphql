@@ -1,5 +1,0 @@
-type Holder {
-  name: String
-  surname: String
-  contact: Contact
-}

@@ -5,4 +5,6 @@ type Holder {
   
   # Holder's surname
   surname: String!
+
+  contact: Contact
 }
