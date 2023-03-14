@@ -1,0 +1,4 @@
+enum PenaltyType {
+  FIXED
+  PERCENT
+}

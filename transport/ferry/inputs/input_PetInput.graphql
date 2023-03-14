@@ -1,0 +1,5 @@
+input PetInput {
+  index: Int!
+  """Pet weight in kilograms."""
+  weight: Int!
+}

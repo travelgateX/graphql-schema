@@ -1,0 +1,6 @@
+input TrailerInput {
+  """Trailer height in centimeters."""
+  height: Int!
+  """Trailer length in centimeters."""
+  length: Int!
+}

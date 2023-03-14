@@ -1,0 +1,6 @@
+input FerryQuoteWhereInput {
+  """Is the SearchToken returned in search response."""
+  searchToken: String
+  departureOfferCode: ID
+  returnOfferCode: ID = ""
+}

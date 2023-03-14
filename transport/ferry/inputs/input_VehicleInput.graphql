@@ -1,0 +1,10 @@
+input VehicleInput {
+  """Unique consecutive vehicle identifier in travel."""
+  index: Int!
+  """Vehicle Type Code. Needs Code Mapping."""
+  type: String
+  """Detailed vehicle characteristics."""
+  attributes: AttributesInput
+  """Number of vehicles with same Type and Attributes."""
+  count: Int! = 1
+}

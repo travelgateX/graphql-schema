@@ -1,0 +1,8 @@
+type CancelPolicy {
+  description: String
+  start: String
+  """When type is Fixed, the currency is defined in price."""
+  amount: Float!
+  """Fixed amount or Percentual from price."""
+  penaltyType: PenaltyType!
+}

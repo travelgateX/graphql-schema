@@ -1,0 +1,4 @@
+type Accommodation {
+  code: String
+  description: String
+}

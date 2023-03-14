@@ -1,0 +1,6 @@
+type Price {
+  net: Float!
+  gross: Float!
+  taxes: Float!
+  currency: String
+}

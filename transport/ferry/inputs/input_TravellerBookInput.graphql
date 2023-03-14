@@ -1,0 +1,4 @@
+input TravellerBookInput {
+  passengers: [PassengerBookInput]
+  vehicles: [VehicleBookInput]
+}

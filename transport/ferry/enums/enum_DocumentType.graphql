@@ -1,0 +1,6 @@
+enum DocumentType {
+  DNI
+  NIE
+  PASSPORT
+  OTHER
+}

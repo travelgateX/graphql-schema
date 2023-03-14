@@ -1,0 +1,16 @@
+type FerryOffer {
+  """Unique Identifier. Required to validate availability."""
+  code: ID
+  """Seller Identifier."""
+  sourceCode: ID
+  """Journey details."""
+  journey: Journey
+  """Seller defined rate category."""
+  rateType: Ratetype
+  """Seller defined rate category group."""
+  rateGroup: Rategroup
+  price: Price
+  """i.e. Seat, Cabin, etc."""
+  accommodation: Accommodation
+  cancelPolicies: [CancelPolicy]
+}
