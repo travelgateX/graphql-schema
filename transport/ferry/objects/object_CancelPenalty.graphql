@@ -1,0 +1,11 @@
+type CancelPenalty {
+  deadline: DateTime!
+  isCalculatedDeadline: Boolean!
+  hoursBefore: Int!
+  """Fixed amount or Percentual from price."""
+  penaltyType: CancelPenaltyType!
+  """When type is Fixed, the currency is defined in price."""
+  value: Float!
+  currency: String
+  description: String
+}

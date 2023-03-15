@@ -1,0 +1,4 @@
+enum CancelPenaltyType {
+  FIXED
+  PERCENT
+}

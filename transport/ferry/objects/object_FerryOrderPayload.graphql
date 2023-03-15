@@ -4,7 +4,7 @@ type FerryOrderPayload {
   departure: FerryOfferBook
   return: FerryOfferBook
   holder: Holder
-  cancelPolicies: [CancelPolicy]
+  cancelPolicy: CancelPolicy
   totalPrice: Price
   traveller: TravellerBook
 }

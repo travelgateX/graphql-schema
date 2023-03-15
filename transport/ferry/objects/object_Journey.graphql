@@ -1,5 +1,5 @@
 type Journey {
   """0 = Departure, 1 = Return"""
   index: Int!
-  segments: [Segment]
+  segments: [FerrySegment]
 }
