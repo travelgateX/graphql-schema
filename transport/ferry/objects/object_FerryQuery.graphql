@@ -1,5 +1,5 @@
 type FerryQuery {
-  search(
+  ferrySearch(
     where: FerrySearchWhereInput
     groupBy: FerrySearchGroupByInput
     """Returns the first _n_ elements from the list."""
@@ -12,7 +12,7 @@ type FerryQuery {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
-  ): SearchConnection
-  quote(where: FerryQuoteWhereInput): FerryQuotePayload
-  booking(where: FerryGetBookingWhereInput): FerryOrderPayload
+  ): FerrySearchConnection
+  ferryQuote(where: FerryQuoteWhereInput): FerryQuotePayload
+  ferryBooking(where: FerryGetBookingWhereInput): FerryOrderPayload
 }

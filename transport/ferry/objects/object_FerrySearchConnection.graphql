@@ -1,9 +1,9 @@
 """A connection to a list of items."""
-type SearchConnection {
+type FerrySearchConnection {
   """Information to aid in pagination."""
   pageInfo: PageInfo!
   """A list of edges."""
-  edges: [SearchEdge!]
+  edges: [FerrySearchEdge!]
   """A flattened list of the nodes."""
   nodes: [FerryOffer]
   """Identifies the total count of items in the connection."""

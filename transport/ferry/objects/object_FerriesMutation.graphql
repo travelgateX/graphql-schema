@@ -1,4 +1,0 @@
-type FerryMutation {
-  book(input: FerryBookInput): FerryOrderPayload
-  cancel(input: FerryCancelInput): FerryCancelPayload
-}
