@@ -1,5 +1,5 @@
 input PassengerBookInput {
-  """Unique identifier of the passenger in the collection."""
+  """Used to match with requested passengers in search."""
   index: Int!
   name: String
   surname: String

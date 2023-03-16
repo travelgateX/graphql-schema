@@ -1,5 +1,5 @@
 type PassengerBook {
-  """Unique identifier of the passenger in the collection."""
+  """Consecutive passenger index in travel."""
   index: Int!
   name: String
   surname: String
