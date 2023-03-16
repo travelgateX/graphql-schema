@@ -1,4 +1,4 @@
-type Attributes {
+type VehicleAttributes {
   brand: String
   model: String
   """Vehicle height in centimeters."""

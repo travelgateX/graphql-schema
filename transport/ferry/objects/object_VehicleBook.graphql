@@ -1,5 +1,5 @@
 type VehicleBook {
   type: String
-  attributes: Attributes
+  attributes: VehicleAttributes
   registration: String
 }

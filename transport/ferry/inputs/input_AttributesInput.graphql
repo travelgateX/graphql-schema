@@ -1,4 +1,4 @@
-input AttributesInput {
+input VehicleAttributesInput {
   brand: String
   model: String
   """Vehicle height in centimeters."""
