@@ -1,4 +1,0 @@
-type Segment {
-  departure: Destination
-  arrival: Destination
-}
