@@ -1,9 +1,0 @@
-type Price {
-  net: Decimal!
-  gross: Decimal!
-  currency: String
-  binding: Boolean!
-  exchange: Exchange
-  markups: [Markup]
-  minimumSellingPrice: Decimal!
-}

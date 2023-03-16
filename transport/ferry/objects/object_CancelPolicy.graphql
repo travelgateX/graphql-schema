@@ -1,4 +1,0 @@
-type CancelPolicy {
-  refundable: Boolean!
-  cancelPenalties: [CancelPenalty]
-}

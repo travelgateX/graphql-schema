@@ -1,5 +1,0 @@
-enum AdviseMessageLevel {
-  WARN
-  ERROR
-  INFO
-}

@@ -1,9 +1,0 @@
-type Markup {
-  channel: String
-  currency: String
-  binding: Boolean!
-  net: Decimal!
-  gross: Decimal!
-  exchange: Exchange
-  rules: [Rule]
-}

@@ -1,6 +1,0 @@
-type Rule {
-  id: String
-  name: String
-  markupRuleType: String
-  value: Decimal!
-}

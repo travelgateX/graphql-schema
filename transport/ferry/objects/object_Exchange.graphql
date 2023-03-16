@@ -1,4 +1,0 @@
-type Exchange {
-  currency: String
-  rate: Decimal!
-}
