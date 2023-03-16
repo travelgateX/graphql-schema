@@ -9,6 +9,6 @@ type FerryOfferData {
   rateGroup: Rategroup
   price: Price
   """i.e. Seat, Cabin, etc."""
-  accommodation: Accommodation
+  accommodation: FerryAccommodation
   cancelPolicy: CancelPolicy
 }

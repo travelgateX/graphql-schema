@@ -1,4 +1,4 @@
-type Accommodation {
+type FerryAccommodation {
   code: String
   description: String
 }

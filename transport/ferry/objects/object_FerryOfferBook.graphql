@@ -2,5 +2,5 @@ type FerryOfferBook {
   """Journey details."""
   journey: Journey
   """i.e. Seat, Cabin, etc."""
-  accommodation: Accommodation
+  accommodation: FerryAccommodation
 }
