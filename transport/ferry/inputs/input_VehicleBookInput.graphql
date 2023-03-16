@@ -1,3 +1,7 @@
 input VehicleBookInput {
+  """Used to match with requested vehicles in search."""
+  index: Int!
+
+  """Unique identifier of the vehicle."""
   registration: String
 }
