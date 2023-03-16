@@ -1,0 +1,5 @@
+type TravellerBook {
+  passengers: [PassengerBook]
+  vehicles: [VehicleBook]
+  pets: [Pet]
+}

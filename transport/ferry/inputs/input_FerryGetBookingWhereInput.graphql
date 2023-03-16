@@ -1,0 +1,3 @@
+input FerryGetBookingWhereInput {
+  locator: String
+}

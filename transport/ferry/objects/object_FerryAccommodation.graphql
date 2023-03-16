@@ -1,0 +1,4 @@
+type FerryAccommodation {
+  code: String
+  description: String
+}

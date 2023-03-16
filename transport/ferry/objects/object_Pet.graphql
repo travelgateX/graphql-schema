@@ -1,0 +1,5 @@
+type Pet {
+  index: Int!
+  """Pet weight in kilograms."""
+  weight: Int!
+}

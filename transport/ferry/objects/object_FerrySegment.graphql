@@ -1,0 +1,4 @@
+type FerrySegment {
+  departure: FerryLocation
+  arrival: FerryLocation
+}

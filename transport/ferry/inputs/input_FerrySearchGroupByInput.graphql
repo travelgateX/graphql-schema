@@ -1,0 +1,3 @@
+input FerrySearchGroupByInput {
+  type: FilterType!
+}

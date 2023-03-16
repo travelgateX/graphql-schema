@@ -1,0 +1,10 @@
+type FerryOrderPayload {
+  status: String
+  locator: String
+  departure: FerryOfferBook
+  return: FerryOfferBook
+  holder: Holder
+  cancelPolicy: CancelPolicy
+  totalPrice: Price
+  traveller: TravellerBook
+}

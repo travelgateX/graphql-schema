@@ -1,0 +1,11 @@
+input FerryBookInput {
+  """Token returned in Quote."""
+  quoteToken: String
+  """Selected departure offer code."""
+  departureOfferCode: ID
+  """Selected return offer code."""
+  returnOfferCode: ID
+  """Main passenger."""
+  holder: HolderInput
+  traveller: TravellerBookInput
+}

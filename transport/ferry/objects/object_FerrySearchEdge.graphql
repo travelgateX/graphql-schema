@@ -1,0 +1,7 @@
+"""An edge in a connection."""
+type FerrySearchEdge {
+  """A cursor for use in pagination."""
+  cursor: String!
+  """The item at the end of the edge."""
+  node: FerryOffer
+}

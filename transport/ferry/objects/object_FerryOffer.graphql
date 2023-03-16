@@ -1,0 +1,6 @@
+type FerryOffer {
+  adviseMessage: AdviseMessage
+  """Unique Identifier. Required to validate availability."""
+  code: ID
+  ferryOfferData: FerryOfferData
+}

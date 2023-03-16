@@ -1,0 +1,16 @@
+type PassengerBook {
+  """Consecutive passenger index in travel."""
+  index: Int!
+  name: String
+  surname: String
+  """Identification document number."""
+  documentNumber: String
+  """Passenger identification expiration date, ISO 8601 Format."""
+  documentExpiration: String
+  documentType: DocumentType!
+  gender: GenderType!
+  """Passenger birth day, ISO 8601 Format."""
+  birthDate: String
+  """Alpha 2 Code, ISO 3166-1 Format."""
+  nationality: String
+}

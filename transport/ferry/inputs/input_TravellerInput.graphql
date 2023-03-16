@@ -1,0 +1,12 @@
+input TravellerInput {
+  """
+  Discount Code. e.g. Large Family, Military, Senior, etc. Needs Code Mapping.
+  """
+  specialRateCode: String
+  """Passengers included in travel."""
+  passengers: [PassengerInput]
+  """Vehicules included in travel."""
+  vehicles: [VehicleInput]
+  """Pets included in travel."""
+  pets: [PetInput]
+}
