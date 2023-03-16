@@ -1,3 +1,0 @@
-type FlightXMutation {
-  book(data: FlightOrderCreateInput): FlightOrder
-}
