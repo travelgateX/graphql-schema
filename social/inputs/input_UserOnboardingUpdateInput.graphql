@@ -11,8 +11,12 @@ input UserOnboardingUpdateInput {
   annexBuyerId: Int
   annexSellerId: Int
   annexPlatformId: Int
+  annexPlatformBuyerId: Int
+  annexPlatformSellerId: Int
   tcpAcceptedAt: Date
   annexBuyerAcceptedAt: Date
   annexSellerAcceptedAt: Date
   annexPlatformAcceptedAt: Date
+  annexPlatformBuyerAcceptedAt: Date
+  annexPlatformSellerAcceptedAt: Date
 }
