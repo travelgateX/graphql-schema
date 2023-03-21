@@ -1,4 +1,4 @@
-type FerryQuery {
+type TransportQuery {
   ferrySearch(
     where: FerrySearchWhereInput
     groupBy: FerrySearchGroupByInput
