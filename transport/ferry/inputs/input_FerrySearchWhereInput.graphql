@@ -10,4 +10,6 @@ input FerrySearchWhereInput {
   traveller: TravellerInput
   """Route information."""
   journey: JourneyInput
+  """Unique identifiers of Access"""
+  accesses:[ID!]
 }
