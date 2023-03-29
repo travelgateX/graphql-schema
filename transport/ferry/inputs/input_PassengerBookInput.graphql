@@ -13,4 +13,6 @@ input PassengerBookInput {
   birthDate: String
   """Alpha 2 Code, ISO 3166-1 Format."""
   nationality: String
+  """The city where the passenger resides, Is mandatory to apply the resident discount"""
+  cityResident:String
 }
