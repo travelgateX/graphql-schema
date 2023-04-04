@@ -1,0 +1,4 @@
+﻿enum TripMode {
+    DEPARTING
+    RETURNING
+}
