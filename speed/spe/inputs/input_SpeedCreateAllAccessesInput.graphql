@@ -1,0 +1,7 @@
+input SpeedCreateAllAccessesInput{
+	mode: ModeType!
+	requestedBy: 	SpeedRequester!
+	rqMode:	SpeedRQMode!
+	orgBuyerCode: 	ID!
+	orgSellerCode: 	ID!
+}
