@@ -1,0 +1,4 @@
+type InsightsCountry {
+  countryType: InsightsCountryType!
+  countriesSortedByBookings: [String]!
+}

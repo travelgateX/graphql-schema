@@ -21,4 +21,8 @@ input ProfileWhereInput {
   sellerCategory: NullableStringFilter
   isDemandBridge: Boolean
   isSupplyBridge: Boolean
+  buyerPartnerStatus: PartnerStatusType
+  sellerPartnerStatus: PartnerStatusType
+  buyerInsightsCountriesInput: InsightsCountriesWhereInput
+  sellerInsightsCountriesInput: InsightsCountriesWhereInput
 }
