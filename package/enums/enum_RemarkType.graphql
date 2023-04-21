@@ -1,0 +1,7 @@
+﻿enum RemarkType{
+    IncludedService
+    NotIncludedService
+    ImportantNotes
+    GeneralNotes
+    TourItinerary
+}

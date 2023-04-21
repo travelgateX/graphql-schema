@@ -1,0 +1,5 @@
+﻿enum PackageDestinationType{
+    AIRPORT
+    TRAINSTATION
+    PORT
+}

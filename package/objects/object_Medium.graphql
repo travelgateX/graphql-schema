@@ -1,0 +1,4 @@
+﻿type Medium{
+    type:MediumType
+    url:String
+}

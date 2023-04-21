@@ -1,0 +1,5 @@
+﻿type Nights{
+    min:Int
+    max:Int
+    default:Int
+}
