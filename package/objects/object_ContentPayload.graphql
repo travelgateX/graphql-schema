@@ -9,7 +9,7 @@
     """Language code (ISO 639-1)"""
     language:String
     """Nights information"""
-    nights:Nights
+    nights:StayNightsRange
     """Package name"""
     name:String
     """Destination information"""

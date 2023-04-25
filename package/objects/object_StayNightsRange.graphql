@@ -1,4 +1,4 @@
-﻿type Nights{
+﻿type StayNightsRange{
     min:Int
     max:Int
     default:Int
