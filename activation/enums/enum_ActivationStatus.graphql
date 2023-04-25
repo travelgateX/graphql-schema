@@ -2,4 +2,5 @@ enum ActivationStatus {
   PENDING
   AVAILABLE
   MANUAL
+  PENDING_SELLER_RESOLUTION
 }
