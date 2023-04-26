@@ -8,6 +8,7 @@ type ActivationData {
   # Informs if the content information has been downloaded correctly
   contentInfoDownloaded: Boolean!
   certificationStatus: String!
+  editAccessAvailable: Boolean!
   issueID: ID
   createdAt: DateTime!
   updatedAt: DateTime!
