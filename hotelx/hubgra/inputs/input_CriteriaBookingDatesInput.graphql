@@ -5,9 +5,11 @@ input CriteriaBookingDatesInput {
   
   # Start date.
   # Format: YYYY-MM-DD.
+  # Start of date range
   start: Date!
   
   # End date.
   # Format: YYYY-MM-DD.
+  # End of date range
   end: Date!
 }
