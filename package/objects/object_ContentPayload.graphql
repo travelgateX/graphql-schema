@@ -11,7 +11,7 @@
   """
   supplier information
   """
-  supplier: Supplier
+  supplier: PackageSupplier
 
   """
   Language code (ISO 639-1)
