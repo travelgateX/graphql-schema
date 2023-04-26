@@ -4,4 +4,6 @@ input ProfileWhereUniqueInput {
   name: String
   slug: String
   ownerCode: String
+  buyerInsightsCountriesInput: InsightsCountriesWhereInput
+  sellerInsightsCountriesInput: InsightsCountriesWhereInput
 }

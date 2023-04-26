@@ -9,6 +9,7 @@ type ActivationData {
   contentInfoDownloaded: Boolean!
   certificationStatus: String!
   editAccessAvailable: Boolean!
+  issueID: ID
   createdAt: DateTime!
   updatedAt: DateTime!
 }

@@ -1,0 +1,7 @@
+input InsightsCountriesInput {
+  to: Date
+  from: Date
+  country: String!
+  numBookings: Int!
+  countryType: InsightsCountryType!
+}

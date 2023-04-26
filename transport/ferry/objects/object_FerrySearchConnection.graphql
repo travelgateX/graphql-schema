@@ -1,5 +1,6 @@
 """A connection to a list of items."""
 type FerrySearchConnection {
+  adviseMessages: [AdviseMessage]
   """Information to aid in pagination."""
   pageInfo: PageInfo!
   """A list of edges."""

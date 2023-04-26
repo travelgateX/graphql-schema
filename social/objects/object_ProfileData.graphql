@@ -35,4 +35,6 @@ type ProfileData {
   isDemandBridge: Boolean
   isSupplyBridge: Boolean
   internalExtendedInfo: InternalExtendedInfo
+  buyerInsightsCountries: [InsightsCountry]
+  sellerInsightsCountries: [InsightsCountry]
 }
