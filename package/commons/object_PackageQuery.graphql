@@ -1,3 +1,3 @@
 ﻿type PackageQuery {
-  packageContent(where: ContentWhereInput): ContentPayload
+  content(where: ContentWhereInput): ContentPayload
 }
