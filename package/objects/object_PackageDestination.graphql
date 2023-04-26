@@ -1,4 +1,4 @@
-﻿type PackageDestination{
-    iata:String
-    type:PackageDestinationType
+﻿type PackageDestination {
+  iata: String
+  type: PackageDestinationType
 }

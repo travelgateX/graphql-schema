@@ -1,4 +1,4 @@
-﻿enum ContentType{
-    PACKAGE
-    TOUR
+﻿enum ContentType {
+  PACKAGE
+  TOUR
 }

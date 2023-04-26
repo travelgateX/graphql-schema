@@ -1,4 +1,4 @@
-﻿type Medium{
-    type:MediumType
-    url:String
+﻿type Medium {
+  type: MediumType
+  url: String
 }

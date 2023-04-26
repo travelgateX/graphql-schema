@@ -1,3 +1,3 @@
 ﻿extend type Query {
-    package: PackageQuery
+  package: PackageQuery
 }

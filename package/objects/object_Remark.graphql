@@ -1,5 +1,5 @@
-﻿type Remark{
-    content:String
-    value:String
-    type:RemarkType
+﻿type Remark {
+  content: String
+  value: String
+  type: RemarkType
 }

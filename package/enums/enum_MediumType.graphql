@@ -1,4 +1,4 @@
-﻿enum MediumType{
-    IMAGE
-    VIDEO
+﻿enum MediumType {
+  IMAGE
+  VIDEO
 }
