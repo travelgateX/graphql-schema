@@ -1,5 +1,5 @@
 enum ProductType {
-  Accommodation
+  ACCOMMODATION
   FLIGHT
   INSURANCE
   ITINERARY
