@@ -1,0 +1,7 @@
+enum ProductType {
+  ACCOMMODATION
+  FLIGHT
+  INSURANCE
+  ITINERARY
+  TRANSFER
+}
