@@ -1,0 +1,6 @@
+type Accommodation {
+    cityCode:String!
+    hotelCode:String!
+    hotelName:String!
+    ref:String!
+}
