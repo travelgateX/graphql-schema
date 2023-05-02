@@ -1,0 +1,7 @@
+enum PackageBookStatus {
+  CANCELLED
+  OK
+  ON_REQUEST
+  PENDING_COMMIT
+  UNKNOWN
+}

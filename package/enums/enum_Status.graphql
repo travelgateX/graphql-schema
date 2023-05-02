@@ -1,0 +1,5 @@
+enum PackageStatus{
+    AVAILABLE
+    ON_REQUEST
+    UNAVAILABLE
+}

@@ -8,6 +8,6 @@ type BookPayload {
   price: PackagePrice
   quoteToken: String!
   remarks: [Remark!]
-  bookStatus: BookStatusType
+  bookStatus: PackageBookStatus
   transport: [Transport!]
 }

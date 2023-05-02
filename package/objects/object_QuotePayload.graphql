@@ -8,6 +8,6 @@ type QuotePayload {
   price: PackagePrice
   quoteToken: String!
   remarks: [Remark!]
-  status: Status
+  status: PackageStatus
   transport: [Transport!]
 }
