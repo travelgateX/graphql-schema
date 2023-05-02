@@ -1,5 +1,5 @@
-enum PackagePenaltyType{
-    AMOUNT
-    NIGHTS
-    PERCENTAGE
+enum PackagePenaltyType {
+  AMOUNT
+  NIGHTS
+  PERCENTAGE
 }

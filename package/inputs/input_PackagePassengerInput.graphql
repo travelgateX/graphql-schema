@@ -1,7 +1,7 @@
-input PackagePassengerInput{
-    documentNumber:String!
-    documentType:PackageDocumentType
-    name:String!
-    surname:String!
-    title:PackagePersonalTitleType
+input PackagePassengerInput {
+  documentNumber: String!
+  documentType: PackageDocumentType
+  name: String!
+  surname: String!
+  title: PackagePersonalTitleType
 }

@@ -1,6 +1,6 @@
-type ItineraryMap{
-    order:Int!
-    productToken:String!
-    ProductType:ProductType
-    startDay:Int!
+type ItineraryMap {
+  order: Int!
+  productToken: String!
+  ProductType: ProductType
+  startDay: Int!
 }

@@ -1,4 +1,4 @@
-input PackageContactInput{
-    email:String!
-    phone:String!
+input PackageContactInput {
+  email: String!
+  phone: String!
 }

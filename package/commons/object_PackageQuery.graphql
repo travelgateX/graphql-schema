@@ -1,4 +1,4 @@
 ﻿type PackageQuery {
-  quote(where:QuoteWhereInput):QuotePayload
+  quote(where: QuoteWhereInput): QuotePayload
   content(where: ContentWhereInput): ContentPayload
 }

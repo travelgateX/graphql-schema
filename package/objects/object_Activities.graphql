@@ -1,5 +1,5 @@
-type Activities{
-    description:String!
-    ref:String!
-    title:String!
+type Activities {
+  description: String!
+  ref: String!
+  title: String!
 }

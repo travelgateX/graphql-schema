@@ -1,5 +1,5 @@
-type Transport{
-    ref:String!
-    segments:[Segment!]!
-    transportType:TransportType
+type Transport {
+  ref: String!
+  segments: [Segment!]!
+  transportType: TransportType
 }
