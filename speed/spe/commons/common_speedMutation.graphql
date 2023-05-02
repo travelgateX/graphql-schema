@@ -4,7 +4,7 @@ type SpeedMutation{
 	deactivateSpeedAccess(where: SpeedUpdateAccessStatusInput!): SpeedAccess
 	updateSpeedAccessRqMode(where: SpeedUpdateAccessRqModeInput!): SpeedAccess
 	updateSpeedAccessTtl(where: SpeedUpdateAccessTtlInput!): SpeedAccess 
-	createSpeedAllAccesses(data: SpeedCreateAllAccessesInput!): SpeedConnection
+	createSpeedAllAccesses(data: SpeedCreateAllAccessesDataInput! where: SpeedCreateAllAccessesWhereInput!): SpeedConnection
 	activateSpeedAllAccesses(data: SpeedUpdateAllAccessesDataInput! where: SpeedUpdateAllAccessesWhereInput!):SpeedConnection
 	deactivateSpeedAllAccesses(data: SpeedUpdateAllAccessesDataInput! where: SpeedUpdateAllAccessesWhereInput!):SpeedConnection
 }
