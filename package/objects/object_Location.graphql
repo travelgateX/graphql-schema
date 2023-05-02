@@ -1,0 +1,4 @@
+type PackageLocation{
+    ref:String!
+    places:[Place!]!
+}

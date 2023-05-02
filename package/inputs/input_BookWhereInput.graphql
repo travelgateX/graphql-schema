@@ -1,5 +1,5 @@
 input BookWhereInput {
-  clientLocator: String!
+  clientLocator: String
   optionId: String!
   quoteToken: String!
   holder: PackageHolder

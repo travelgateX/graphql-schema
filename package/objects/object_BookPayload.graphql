@@ -1,9 +1,10 @@
 type BookPayload {
   accommodations: [Accommodation!]
-  activities: [Activities!]
+  activities: [Activity!]
   adviseMessages: [AdviseMessage]
   cancelPolicy: CancelPolicy
   itineraryMap: [ItineraryMap!]
+  locations: [Location!]
   optionId: String!
   price: PackagePrice
   quoteToken: String!
