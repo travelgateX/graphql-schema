@@ -2,6 +2,6 @@ type ItineraryMap {
   order: Int!
   productToken: String!
   ProductType: ProductType
-  ref:String!
+  ref: String!
   startDay: Int!
 }

@@ -1,6 +1,6 @@
-enum PlaceType{
-    AIRPORT
-    CITY
-    PORT
-    TRAIN_STATION
+enum PlaceType {
+  AIRPORT
+  CITY
+  PORT
+  TRAIN_STATION
 }
