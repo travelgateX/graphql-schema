@@ -2,6 +2,7 @@ type BookPayload {
   accommodations: [Accommodation!]
   activities: [Activity!]
   adviseMessages: [AdviseMessage]
+  bookReference: BookReference
   cancelPolicy: CancelPolicy
   itineraryMap: [ItineraryMap!]
   locations: [PackageLocation!]
