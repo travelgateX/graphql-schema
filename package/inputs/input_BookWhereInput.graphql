@@ -4,5 +4,5 @@ input BookWhereInput {
   quoteToken: String!
   holder: PackageHolder
   passengers: [PackagePassengerInput!]!
-  productToken: [String!]!
+  productTokens: [String!]!
 }
