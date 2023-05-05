@@ -1,4 +1,6 @@
 type FerryCancelPayload {
+
+  adviseMessages: [AdviseMessage]
   locator: String
   status: CancelStatus!
 }
