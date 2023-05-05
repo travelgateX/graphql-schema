@@ -1,0 +1,5 @@
+input PackageHolder {
+  name: String!
+  surname: String!
+  contact: PackageContactInput!
+}

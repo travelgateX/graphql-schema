@@ -1,0 +1,3 @@
+type PackageMutation {
+  book(where: BookWhereInput): BookPayload
+}

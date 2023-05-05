@@ -1,0 +1,7 @@
+type Segment {
+  arrival: DateTime!
+  departure: DateTime!
+  destination: String!
+  index: Int!
+  origin: String!
+}
