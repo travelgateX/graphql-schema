@@ -1,0 +1,4 @@
+type BookReference {
+  clientLocator: String!
+  supplierLocator: String!
+}

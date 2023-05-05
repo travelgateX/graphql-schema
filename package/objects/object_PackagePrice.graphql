@@ -1,0 +1,9 @@
+type PackagePrice {
+  currency: String!
+
+  binding: Boolean!
+
+  net: Float!
+
+  gross: Float!
+}

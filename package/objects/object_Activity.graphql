@@ -1,0 +1,5 @@
+type Activity {
+  description: String!
+  ref: String!
+  title: String!
+}

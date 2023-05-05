@@ -1,0 +1,6 @@
+enum TransportType {
+  BUS
+  FLIGHT
+  TRAIN
+  UNKNOWN
+}
