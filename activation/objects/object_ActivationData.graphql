@@ -10,7 +10,7 @@ type ActivationData {
   certificationStatus: String!
   editAccessAvailable: Boolean!
   issueID: ID
-  clientNames: [String!]
+  clientNames: [ID!]
   createdAt: DateTime!
   updatedAt: DateTime!
 }
