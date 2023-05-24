@@ -1,0 +1,4 @@
+input FavouritePartnerCreateInput {
+  email: String!
+  partnerCode: String!
+}
