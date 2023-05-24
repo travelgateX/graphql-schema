@@ -1,3 +1,3 @@
 input UserProfileWhereUniqueInput {
-  email: String!
+  email: ID!
 }

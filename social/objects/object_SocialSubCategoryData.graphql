@@ -1,5 +1,5 @@
 type SocialSubCategoryData {
-    code: String!
+    code: ID!
     description: String
     defaultIsBuyer: Boolean!
     defaultIsSeller: Boolean!

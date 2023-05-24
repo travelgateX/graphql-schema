@@ -1,4 +1,4 @@
 input FavouritePartnerWhereUniqueInput {
-  email: String!
-  partnerCode: String!
+  email: ID!
+  partnerCode: ID!
 }

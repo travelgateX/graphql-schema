@@ -1,6 +1,6 @@
 input ProfileCreateInput {
-  groupCode: String!
-  ownerCode: String!
+  groupCode: ID!
+  ownerCode: ID!
   Asset: AssetCreateManyAsSubEntityInput
   classifications: ProfileCreateOrUpdateClassificationsInput
   description: String

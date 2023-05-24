@@ -1,6 +1,6 @@
 input InvitationUpdateInput {
-    invitedBy: String
-    orgCode: String
+    invitedBy: ID
+    orgCode: ID
     role: String
-    userEmail: String
+    userEmail: ID
 }

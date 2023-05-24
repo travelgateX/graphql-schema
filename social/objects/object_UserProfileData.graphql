@@ -1,5 +1,5 @@
 type UserProfileData {
-  email: String!
+  email: ID!
   firstName: String
   lastName: String
   jobTitle: String
