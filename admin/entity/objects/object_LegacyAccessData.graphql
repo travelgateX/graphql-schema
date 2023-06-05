@@ -5,4 +5,9 @@ type LegacyAccessData {
   hubProvider: String!
   # Indicates if the relation is active
   isActive: Boolean!
+  """
+  Indicates if speed enabled
+  """
+  isActiveSpeed: Boolean!
+
 }
