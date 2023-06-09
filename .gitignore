@@ -81,3 +81,12 @@ typings/
 .lh/
 .history/
 full_schema.graphql
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/graphql-schema/v17/TestStore/0/testlog.manifest
+/.vs/graphql-schema/v17/TestStore/0/000.testlog
+/.vs/graphql-schema/v17/.suo
+/.vs/graphql-schema/FileContentIndex/455a2d6a-174c-4005-b380-0b7bb2e1759b.vsidx
+/.vs/graphql-schema/FileContentIndex/10f8110d-ff87-437b-9ec4-cc11f1954ece.vsidx
+/.vs/graphql-schema/FileContentIndex/09fb5257-fe84-4af1-b516-60dc29078603.vsidx
+*.vsidx
