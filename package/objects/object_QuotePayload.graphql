@@ -4,11 +4,17 @@ type QuotePayload {
   adviseMessages: [AdviseMessage]
   cancelPolicy: CancelPolicy
   itineraryMap: [ItineraryMap!]
-  locations: [PackageLocation!]
+  locations: [PackageLocations!]
+  origin: PackageLocation
+  destination: PackageLocation
   optionId: String!
   price: PackagePrice
   quoteToken: String!
+  refName: String
+  departureDate: String
+  returnDate: String
   remarks: [Remark!]
+  paxes: Paxes
   status: PackageStatus
   transport: [Transport!]
 }
