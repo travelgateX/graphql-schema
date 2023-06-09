@@ -7,20 +7,20 @@ type DefaultSettings {
   context: String
   
   # Language to be used in request
-  language: Language!
+  language: Language
   
   # Currency requested if supported by supplier
-  currency: Currency!
+  currency: Currency
   
   # Nationality of the guest (use ISO3166_1_alfa_2)
-  nationality: Country!
+  nationality: Country
   
   # Targeted zone, country or point-ofsale-to be used in request.
   market: String
   
   # Group of timeouts to be used in the differents services
-  timeouts: Timeout!
+  timeouts: Timeout
   
   # Business rules
-  businessRules: BusinessRules!
+  businessRules: BusinessRules
 }
