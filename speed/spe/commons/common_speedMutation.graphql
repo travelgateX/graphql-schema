@@ -1,7 +1,74 @@
 type SpeedMutation{
+	"""
+  		Creates a new Speed configuration for a given access
+  	"""
 	createSpeedAccess(where: SpeedCreateAccessInput!): SpeedAccess  
-	activateSpeedAccess(where: SpeedUpdateAccessStatusInput!): SpeedAccess  
-	deactivateSpeedAccess(where: SpeedUpdateAccessStatusInput!): SpeedAccess
-	updateSpeedAccessRqMode(where: SpeedUpdateAccessRqModeInput!): SpeedAccess
-	updateSpeedAccessTtl(where: SpeedUpdateAccessTtlInput!): SpeedAccess 
+	
+	"""
+  		Activates the Speed tool for a given access
+  	"""
+	activateSpeedAccess(
+		where: SpeedUpdateAccessStatusInput!
+	): SpeedAccess  
+	
+	"""
+  		Deactivates the Speed tool for a given access
+  	"""	
+	deactivateSpeedAccess(
+		where: SpeedUpdateAccessStatusInput!
+	): SpeedAccess
+	
+	"""
+  		Updates the Request Mode attribute for the Speed configuration for a given access
+  	"""	
+	updateSpeedAccessRqMode(
+		where: SpeedUpdateAccessRqModeInput!
+	): SpeedAccess
+	
+	"""
+  		Updates the TTL attribute for the Speed configuration for a given access
+  	"""	
+	updateSpeedAccessTtl(
+		where: SpeedUpdateAccessTtlInput!
+	): SpeedAccess 
+  	
+	"""
+  		Creates a new Speed configuration for a given connection between a buyer and a seller
+  	"""	
+	createSpeedAllAccesses(
+		data: SpeedCreateAllAccessesDataInput! 
+		where: SpeedCreateAllAccessesWhereInput!
+	): SpeedConnection
+  	
+	"""
+  		Activates the Speed tool for a given connection between a buyer and a seller
+  	"""	
+	activateSpeedAllAccesses(
+		data: SpeedUpdateAllAccessesDataInput! 
+		where: SpeedUpdateAllAccessesWhereInput!
+	):SpeedConnection
+  	
+	"""
+  		Deactivates the Speed tool for a given connection between a buyer and a seller
+  	"""	
+	deactivateSpeedAllAccesses(
+		data: SpeedUpdateAllAccessesDataInput! 
+		where: SpeedUpdateAllAccessesWhereInput!
+	):SpeedConnection
+
+  	"""
+  		Updates the Request Mode attribute for the Speed configuration for a given connection between a buyer and a seller
+  	"""
+	updateSpeedAllAccessesRqMode(
+		data: SpeedUpdateAllAccessesRqModeDataInput!
+		where: SpeedUpdateAllAccessesWhereInput!
+	):SpeedConnection
+
+  	"""
+  		Updates the TTL attribute for the Speed configuration for a given connection between a buyer and a seller
+  	"""
+	updateSpeedAllAccessesTtl(
+		data: SpeedUpdateAllAccessesTtlDataInput!
+		where: SpeedUpdateAllAccessesWhereInput!
+	):SpeedConnection
 }

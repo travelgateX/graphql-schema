@@ -1,0 +1,4 @@
+input SpeedUpdateAllAccessesWhereInput{
+	orgBuyerCode: 	ID!
+	orgSellerCode: 	ID!
+}
