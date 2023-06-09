@@ -1,3 +1,4 @@
 input QuoteWhereInput {
   optionId: String!
+  passengers: [Int!]
 }
