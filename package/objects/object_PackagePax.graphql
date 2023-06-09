@@ -1,0 +1,4 @@
+type PackagePax {
+    type: PaxType!
+    age: Int
+}

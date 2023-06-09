@@ -1,4 +1,6 @@
 type PackageLocation {
-  ref: String!
-  places: [Place!]!
+  iata: String!
+  providerCode: String!
+  name: String!
+  type: LocationType!
 }

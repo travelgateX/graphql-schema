@@ -1,0 +1,4 @@
+type PackageLocations {
+  ref: String!
+  places: [Place!]!
+}
