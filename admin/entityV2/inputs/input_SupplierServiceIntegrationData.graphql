@@ -1,0 +1,4 @@
+input  SupplierServiceIntegrationData{
+    type: ServiceIntegrationType
+    group: String
+}
