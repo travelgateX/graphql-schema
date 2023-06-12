@@ -1,8 +1,9 @@
 type UserProfileData {
-    email: String!
-    firstName: String
-    lastName: String
-    jobTitle: String
-    department: String
-    onboardingProperties: UserOnboardingData
+  email: ID!
+  firstName: String
+  lastName: String
+  jobTitle: String
+  department: String
+  favouritePartners: [OrganizationEdge]
+  onboardingProperties: UserOnboardingData
 }

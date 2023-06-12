@@ -1,4 +1,4 @@
 input SubCategoryWhereUniqueInput {
-  code: String!
-  categoryCode: String!
+  code: ID!
+  categoryCode: ID!
 }

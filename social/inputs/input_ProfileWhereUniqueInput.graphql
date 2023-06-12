@@ -1,9 +1,9 @@
 input ProfileWhereUniqueInput {
-  code: String
+  code: ID
   id: Int
   name: String
   slug: String
-  ownerCode: String
+  ownerCode: ID
   buyerInsightsCountriesInput: InsightsCountriesWhereInput
   sellerInsightsCountriesInput: InsightsCountriesWhereInput
 }

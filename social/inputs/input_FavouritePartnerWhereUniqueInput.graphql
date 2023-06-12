@@ -1,0 +1,4 @@
+input FavouritePartnerWhereUniqueInput {
+  email: ID!
+  partnerCode: ID!
+}

@@ -2,10 +2,10 @@ input ProfileUpdateInput {
   Asset: AssetUpdateManyThroughUpdatingOtherSubentity
   classifications: ProfileCreateOrUpdateClassificationsInput
   description: String
-  groupCode: String
+  groupCode: ID
   name: String
   order: Float
-  ownerCode: String
+  ownerCode: ID
   slug: String
   status: Status
   websiteUrl: String

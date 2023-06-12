@@ -1,4 +1,4 @@
 input InvitationWhereUniqueInput {
-  userEmail: String!
-  orgCode: String!
+  userEmail: ID!
+  orgCode: ID!
 }
