@@ -1,0 +1,4 @@
+type ServiceIntegrationData {
+    type: ServiceIntegrationType
+    group: String
+}

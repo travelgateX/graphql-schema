@@ -46,6 +46,8 @@ extend type AdminMutation {
   #Deactivate Speed   
   deactivateSpeedLegacy(where: LegacyAccessWhereUniqueInput!): LegacyAccess!
 
+  # EntitiesV2: set Service integration data for suppliers
+  setSupplierServiceIntegrationData(where: SupplierWhereUniqueInput!,data: SupplierServiceIntegrationData): Supplier!
 
   # EntitiesV2: SoftDelete Client. [WARNING] Only SuperAdmin users can delete
   archiveClient(where: ClientWhereUniqueInput!): Client!

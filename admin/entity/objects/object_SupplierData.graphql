@@ -24,4 +24,6 @@ type SupplierData{
   #clients(first: Int, last: Int, before: String, after:String, filter: ClientFilter): ClientConnection
   # Obtain its system.
   #system: System!
+
+  serviceIntegrationData: ServiceIntegrationData
 }
