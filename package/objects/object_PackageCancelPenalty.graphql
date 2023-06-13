@@ -1,15 +1,13 @@
 type PackageCancelPenalty {
+  currency: String!
+
   deadline: String!
-
-  isCalculatedDeadline: Boolean!
-
+  
+  description: String
+  
   hoursBefore: Int!
 
   penaltyType: PackagePenaltyType!
 
-  currency: String!
-
   value: Float!
-
-  description: String
 }

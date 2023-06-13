@@ -1,4 +1,4 @@
 type PackageSupplier {
   code: String
-  productType: ProductType
+  productType: String
 }
