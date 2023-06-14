@@ -4,10 +4,12 @@ type BookingPayload {
   adviseMessages: [AdviseMessage]
   bookReference: BookReference!
   cancelPolicy: CancelPolicy
+  destination: PackageLocation
   itineraryMap: [ItineraryMap]
   locations: [PackageLocation]
+  origin: PackageLocation
   price: PackagePrice
   remarks: [Remark]
   bookStatus: PackageBookStatus!
-  transport: [Transport!]
+  transports: [Transport!]
 }
