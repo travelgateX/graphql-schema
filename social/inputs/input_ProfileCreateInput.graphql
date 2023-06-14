@@ -1,6 +1,6 @@
 input ProfileCreateInput {
-  groupCode: ID!
-  ownerCode: ID!
+  groupCode: ID
+  ownerCode: ID
   Asset: AssetCreateManyAsSubEntityInput
   classifications: ProfileCreateOrUpdateClassificationsInput
   description: String
@@ -21,6 +21,7 @@ input ProfileCreateInput {
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
   buyerTechBridge: String
   sellerTechBridge: String
+  country: String
   buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
 }
