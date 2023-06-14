@@ -1,6 +1,6 @@
 type PackageLocation {
   iata: String!
-  providerCode: String!
   name: String!
+  providerCode: String!
   type: LocationType!
 }

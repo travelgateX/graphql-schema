@@ -1,0 +1,3 @@
+input BookingWhereInput {
+    bookReference: PackageBookReference!
+}

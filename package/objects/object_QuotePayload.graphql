@@ -16,5 +16,5 @@ type QuotePayload {
   remarks: [Remark!]
   paxes: Paxes
   status: PackageStatus
-  transport: [Transport!]
+  transports: [Transport!]
 }
