@@ -4,5 +4,5 @@ input PackagePassengerInput {
   name: String!
   surname: String!
   title: PackagePersonalTitleType
-  birthDate: String
+  birthDate: DateTime
 }
