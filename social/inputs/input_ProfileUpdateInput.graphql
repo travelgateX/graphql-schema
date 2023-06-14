@@ -27,6 +27,7 @@ input ProfileUpdateInput {
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
   buyerTechBridge: String
   sellerTechBridge: String
+  country: String
   buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
   isDemandBridge: Boolean
