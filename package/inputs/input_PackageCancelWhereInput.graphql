@@ -1,0 +1,3 @@
+input PackageCancelWhereInput {
+    reference: PackageBookReference!
+}

@@ -1,4 +1,5 @@
 input PackageHolder {
+  age: Int!
   name: String!
   surname: String!
   contact: PackageContactInput!

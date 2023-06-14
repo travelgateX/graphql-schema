@@ -1,0 +1,13 @@
+type BookingPayload {
+  accommodations: [Accommodation]
+  activities: [Activity]
+  adviseMessages: [AdviseMessage]
+  bookReference: BookReference!
+  cancelPolicy: CancelPolicy
+  itineraryMap: [ItineraryMap]
+  locations: [PackageLocation]
+  price: PackagePrice
+  remarks: [Remark]
+  bookStatus: PackageBookStatus!
+  transport: [Transport!]
+}
