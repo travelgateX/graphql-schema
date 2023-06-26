@@ -5,7 +5,7 @@ type Price implements Priceable {
   # This information is mandatory.
   currency: Currency!
   
-  # It indicates if the price indicated in the gross must be respected.
+  # It indicates if the price indicated in the gross must be respected. In case minimumSellingPrice is not empty, the binding indicates instead that the minimumSellingPrice must be respected.
   # That is, the customer can not sell the room / option at a price lower than that established by the supplier.
   # This information is mandatory.
   binding: Boolean!
