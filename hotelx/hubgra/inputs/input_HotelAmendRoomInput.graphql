@@ -1,0 +1,9 @@
+
+input HotelAmendRoomInput {
+    # Relates that room with a concrete occupancy
+    occupancyID: Int!
+    # Room code
+    code: String!
+    # The list or lists of paxes of the room
+    paxes: [BookPaxInput!]!
+}
