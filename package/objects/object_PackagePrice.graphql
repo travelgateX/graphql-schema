@@ -6,4 +6,8 @@ type PackagePrice {
   net: Float!
 
   gross: Float!
+
+  minimumSellingPrice: Float
+
+  nonCommissionablePrice: Float!
 }
