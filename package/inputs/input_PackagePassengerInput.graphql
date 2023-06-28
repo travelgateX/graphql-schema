@@ -1,6 +1,5 @@
 input PackagePassengerInput {
-  age: Int!
-  birthDate: DateTime
+  age: Int!  
   documentNumber: String!
   documentType: PackageDocumentType
   name: String!
