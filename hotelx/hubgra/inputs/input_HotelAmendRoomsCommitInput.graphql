@@ -1,0 +1,4 @@
+input HotelAmendRoomsCommitInput {
+  # HotelX's amend booking reference (received in AmendBoardQuote response)
+  amendmentID: String!
+}
