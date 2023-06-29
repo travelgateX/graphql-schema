@@ -4,6 +4,7 @@ type UserProfileData {
   lastName: String
   jobTitle: String
   department: String
+  headquarters: String
   favouritePartners: [OrganizationEdge]
   onboardingProperties: UserOnboardingData
 }
