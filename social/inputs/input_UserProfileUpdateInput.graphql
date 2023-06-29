@@ -4,5 +4,6 @@ input UserProfileUpdateInput {
   lastName: String
   jobTitle: String
   department: String
+  headquarters: String
   onboardingProperties: UserOnboardingUpdateInput
 }
