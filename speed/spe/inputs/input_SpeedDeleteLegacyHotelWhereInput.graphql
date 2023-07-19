@@ -1,0 +1,6 @@
+input SpeedDeleteLegacyHotelWhereInput{
+	user: 			ID!
+	supplier: 		ID!
+	hotel_in: 		[ID!]!
+}
+
