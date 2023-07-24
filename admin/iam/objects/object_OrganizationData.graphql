@@ -8,7 +8,7 @@ type OrganizationData implements GroupCommonData {
   # Only responses folders.(non-hierarchically)
   children(codes: [ID!], first: Int, last: Int, before: String, after:String, type: GroupType, codeStartsWith: String): GroupConnection
   # Response all descendents groups nodes in this group (nom-hierarchically)
-  descendents(codes: [ID!],type:GroupType, first: Int, last: Int, before: String, after:String, codeStartsWith: String): GroupConnection
+  descendents(codes: [ID!],type:GroupType, orderBy: OrderByDescendents, first: Int, last: Int, before: String, after:String, codeStartsWith: String): GroupConnection
   # Response all parents groups nodes for this group (nom-hierarchically)
   parents(codes: [ID!], type: GroupType, first: Int, last: Int, before: String, after:String): GroupConnection
   owner: Member!
