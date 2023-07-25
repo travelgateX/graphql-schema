@@ -1,0 +1,19 @@
+type SearchOption{
+  accommodations: [Accommodation!]
+  activities: [Activity!]
+  adviseMessages: [AdviseMessage]
+  category: Category!
+  departureDate: String
+  destination: PackageLocation
+  isAvailable: Boolean!
+  isRefundable: Boolean!
+  itineraryMap: [ItineraryMap!]
+  origin: PackageLocation
+  optionId: String!
+  rate: Rate!
+  refName: String
+  returnDate: String
+  supplier: String
+  supplierPackageCode: String
+  transports: [Transport!]
+}

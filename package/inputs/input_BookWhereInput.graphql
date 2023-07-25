@@ -3,7 +3,7 @@ input BookWhereInput {
   clientLocator: String
   optionId: String!
   quoteToken: String!
-  holder: PackageHolder
+  holder: PackageHolder!
   passengers: [PackagePassengerInput!]!
   productTokens: [String!]!
 }

@@ -2,4 +2,5 @@
   quote(where: QuoteWhereInput): QuotePayload
   content(where: ContentWhereInput): ContentPayload
   booking(where: BookingWhereInput): BookingPayload
+  search(where: SearchWhereInput): SearchPayload
 }

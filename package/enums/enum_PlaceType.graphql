@@ -1,5 +1,6 @@
 enum PlaceType {
   AIRPORT
+  BUS_STATION
   CITY
   PORT
   TRAIN_STATION
