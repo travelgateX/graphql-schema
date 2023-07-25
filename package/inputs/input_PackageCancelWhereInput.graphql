@@ -1,3 +1,4 @@
 input PackageCancelWhereInput {
+    access: String!
     reference: PackageBookReference!
 }

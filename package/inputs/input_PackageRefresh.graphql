@@ -1,0 +1,4 @@
+input PackageRefresh{
+    optionId: String
+    productId: String
+}

@@ -1,0 +1,6 @@
+type Rate{
+    currency: String!
+    baseAmount: Float!
+    nonCommissionablePriceAmount: Float!
+    paxes: Paxes
+}
