@@ -2,7 +2,7 @@ type SearchOption{
   accommodations: [Accommodation!]
   activities: [Activity!]
   adviseMessages: [AdviseMessage]
-  category: Category!
+  category: PackageCategory!
   departureDate: String
   destination: PackageLocation
   isAvailable: Boolean!

@@ -1,4 +1,4 @@
-type Category{
+type PackageCategory{
     code: String!
     name: String!
 }

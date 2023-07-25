@@ -1,4 +1,4 @@
 input SearchWhereInput {
   access: String!
-  searchCriteria: SearchCriteria!
+  searchCriteria: PackageSearchCriteria
 }
