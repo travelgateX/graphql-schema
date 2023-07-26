@@ -1,0 +1,4 @@
+input PackageBookReference {
+    clientLocator: String!
+    supplierLocator: String!
+}

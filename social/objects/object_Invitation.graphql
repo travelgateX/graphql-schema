@@ -1,0 +1,7 @@
+type Invitation {
+  code: ID!
+  invitationData: InvitationData
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime
+  updatedAt: DateTime
+}

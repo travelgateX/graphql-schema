@@ -1,0 +1,5 @@
+type TrafficOptimizationStatsHotelBlacklist {
+  seller: Organization
+  buyer: Organization
+  hotels: TrafficOptimizationHotelStatsData
+}

@@ -1,0 +1,5 @@
+enum ServiceIntegrationType {
+    SITH
+    WORKER
+    CONNECTORS
+}

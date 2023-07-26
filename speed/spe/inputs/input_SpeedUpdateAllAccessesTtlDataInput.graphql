@@ -1,0 +1,5 @@
+input SpeedUpdateAllAccessesTtlDataInput{
+	mode: ModeType!
+    ttl: [SpeedTtlInput!]!
+	requestedBy: SpeedRequester!
+}

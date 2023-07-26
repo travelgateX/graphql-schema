@@ -1,0 +1,8 @@
+input FerryQuoteWhereInput {
+  """Is the SearchToken returned in search response."""
+  searchToken: String
+  """To get resident rates."""
+  isResident: Boolean!
+  departureOfferCode: ID
+  returnOfferCode: ID = ""
+}

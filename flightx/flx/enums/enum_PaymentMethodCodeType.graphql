@@ -1,7 +1,0 @@
-"""
-The payment method type. Examples: Card, Cash.
-"""
-enum PaymentMethodCodeType {
-  CARD
-  CASH
-}

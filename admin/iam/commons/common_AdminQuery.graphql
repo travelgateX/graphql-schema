@@ -1,12 +1,12 @@
 extend type AdminQuery{
   # Organizations list; specify organization codes to filter organizations
-  organizations(codes: [ID!], domains: [DomainName!], label: String, contains: String, organizationType: OrganizationTypeInput, crmID: String, first: Int, last: Int, before: String, after: String, orderBy: OrganizationOrderByInput): OrganizationConnection!
+  organizations(codes: [ID!], domains: [DomainName!], label: String, contains: String, organizationType: OrganizationTypeInput, crmID: String, first: Int, last: Int, before: String, after: String, orderBy: OrganizationOrderByInput, isPublic: Boolean, partner: ID,includeArchived: Boolean): OrganizationConnection!
   # Product catalog; specify products codes to filter
   products(codes:[ID!],first: Int, last: Int, before: String, after:String): ProductConnection!
   # Members list; specify member codes to filter members.
-  members(codes:[ID!],type: MemberType,first: Int, last: Int, before: String, after:String) : MemberConnection!
+  members(codes:[ID!],type: MemberType,contains: String, groups_in:[ID!],  first: Int, last: Int, before: String, after:String) : MemberConnection!
   # Groups list; specify group codes to filter groups.
-  groups(codes:[ID!],contains: String, api:[ID!],codeStartsWith: String, type: GroupType,parentCode: ID,first: Int, last: Int, before: String, after:String) : GroupConnection!
+  groups(codes:[ID!],contains: String, api:[ID!],codeStartsWith: String, type: GroupType,parentCode: ID,first: Int, last: Int, before: String, after:String,includeArchived: Boolean) : GroupConnection!
   # Apis list; specify api codes to filter apis.
   apis(codes:[ID!],first: Int, last: Int, before: String, after:String) : APIConnection!
   # Resources list; specify resource codes to filter resources.
@@ -22,4 +22,6 @@ extend type AdminQuery{
       orderBy: PartnerOrderByInput
       relay: RelayInput
       ): PartnerConnection!
+
+  bearer: BearerData!
 }

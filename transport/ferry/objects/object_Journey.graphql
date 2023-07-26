@@ -1,0 +1,4 @@
+type Journey {
+    tripMode: TripMode!
+    segments: [FerrySegment]
+}

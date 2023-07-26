@@ -1,0 +1,4 @@
+type PackageMutation {
+  book(where: BookWhereInput): BookPayload
+  cancel(where: PackageCancelWhereInput): CancelPayload
+}

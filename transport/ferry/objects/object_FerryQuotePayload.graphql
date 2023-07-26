@@ -1,0 +1,7 @@
+type FerryQuotePayload {
+  adviseMessages: [AdviseMessage]
+  """Required to Book."""
+  quoteToken: String
+  departureOffer: FerryOffer
+  returnOffer: FerryOffer
+}

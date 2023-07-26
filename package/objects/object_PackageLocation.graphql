@@ -1,0 +1,6 @@
+type PackageLocation {
+  iata: String!
+  name: String!
+  providerCode: String!
+  type: LocationType!
+}

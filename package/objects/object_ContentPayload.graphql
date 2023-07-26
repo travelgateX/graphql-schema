@@ -1,0 +1,42 @@
+﻿type ContentPayload {
+  adviseMessages: [AdviseMessage]
+
+  """
+  Identifier code
+  """
+  packageCode: String
+
+  type: ContentType
+
+  """
+  supplier information
+  """
+  supplier: PackageSupplier
+
+  """
+  Language code (ISO 639-1)
+  """
+  language: String
+
+  """
+  Package name
+  """
+  name: String
+
+  """
+  Destination information
+  """
+  destination: PackageDestination
+
+  description: String
+
+  """
+  Available media collection
+  """
+  media: [Medium!]
+
+  """
+  Available remarks collection
+  """
+  remarks: [Remark!]
+}

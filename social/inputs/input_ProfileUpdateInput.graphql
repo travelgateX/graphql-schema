@@ -2,10 +2,10 @@ input ProfileUpdateInput {
   Asset: AssetUpdateManyThroughUpdatingOtherSubentity
   classifications: ProfileCreateOrUpdateClassificationsInput
   description: String
-  groupCode: String
+  groupCode: ID
   name: String
   order: Float
-  ownerCode: String
+  ownerCode: ID
   slug: String
   status: Status
   websiteUrl: String
@@ -13,6 +13,8 @@ input ProfileUpdateInput {
   sellerPartnerStatus: PartnerStatusType
   buyerOnboardingStart: Date
   buyerOnboardingEnd: Date
+  sellerOnboardingStart: Date
+  sellerOnboardingEnd: Date
   buyerFirstBooking: Date
   buyerLastBooking: Date
   sellerFirstBooking: Date
@@ -25,8 +27,12 @@ input ProfileUpdateInput {
   sellerTechPlatformOrgType: SellerTechSolutionCompanyType
   buyerTechBridge: String
   sellerTechBridge: String
+  country: String
   buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
   isDemandBridge: Boolean
   isSupplyBridge: Boolean
+  internalExtendedInfoInput: InternalExtendedInfoInput  
+  buyerInsightsCountriesInput: [InsightsCountriesInput]
+  sellerInsightsCountriesInput: [InsightsCountriesInput]
 }

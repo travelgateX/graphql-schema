@@ -1,0 +1,6 @@
+type Trailer {
+  """Trailer height in centimeters."""
+  height: Int!
+  """Trailer length in centimeters."""
+  length: Int!
+}

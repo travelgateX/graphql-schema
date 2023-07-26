@@ -1,0 +1,4 @@
+input SpeedUpdateAllAccessesDataInput{
+	mode: ModeType!
+	requestedBy: 	SpeedRequester!
+}

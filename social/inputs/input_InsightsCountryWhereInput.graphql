@@ -1,0 +1,6 @@
+input InsightsCountriesWhereInput {
+  to: Date!
+  from: Date!
+  countries: [String]
+  countryType: InsightsCountryType
+}

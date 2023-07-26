@@ -1,0 +1,5 @@
+type CancelPayload {
+    adviseMessages: [AdviseMessage]
+    bookReference: BookReference
+    bookStatus: PackageBookStatus
+}

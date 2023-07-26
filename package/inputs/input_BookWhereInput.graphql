@@ -1,0 +1,9 @@
+input BookWhereInput {
+  access: String!
+  clientLocator: String
+  optionId: String!
+  quoteToken: String!
+  holder: PackageHolder!
+  passengers: [PackagePassengerInput!]!
+  productTokens: [String!]!
+}

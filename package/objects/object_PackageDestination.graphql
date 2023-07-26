@@ -1,0 +1,4 @@
+﻿type PackageDestination {
+  iata: String
+  type: PackageDestinationType
+}

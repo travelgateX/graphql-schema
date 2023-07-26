@@ -63,7 +63,7 @@ type HotelOptionSearch implements BookableOptionSearch {
   # Token for Deep Link
   token: String! @deprecated(reason: "deprecated from 2019-02-05.")
   
-  # It is an unique identifier for the option. The id is used to make the quote query, so it is important not to modify it by any reason.
+  # OptionRefID is a unique identifier assigned to each option, which is necessary for performing the Quote Query. It should not be modified and should not be used externally, as it is an internal system identifier.
   id: String!
 
   # Option level amenities. Contains information regarding Amenities, Amenities is defined as something intended to make life more

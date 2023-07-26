@@ -1,5 +1,0 @@
-type FlightOrderItemData {
-  code: ID!
-  price: FlightPrice!
-  service: [FlightService!]
-}

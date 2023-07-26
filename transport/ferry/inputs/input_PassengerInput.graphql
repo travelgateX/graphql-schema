@@ -1,0 +1,5 @@
+input PassengerInput {
+  """Unique consecutive passenger identifier in travel."""
+  index: Int!
+  age: Int!
+}

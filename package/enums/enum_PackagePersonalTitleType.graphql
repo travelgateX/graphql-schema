@@ -1,0 +1,6 @@
+enum PackagePersonalTitleType {
+  MISS
+  MR
+  MRS
+  MS
+}

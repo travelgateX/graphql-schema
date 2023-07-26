@@ -1,0 +1,13 @@
+type PackagePrice {
+  currency: String!
+
+  binding: Boolean!
+
+  net: Float!
+
+  gross: Float!
+
+  minimumSellingPrice: Float
+
+  nonCommissionablePrice: Float!
+}

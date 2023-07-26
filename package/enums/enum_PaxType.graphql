@@ -1,0 +1,7 @@
+enum PaxType
+{
+    ADT
+    CHD
+    INF
+    SEN
+}

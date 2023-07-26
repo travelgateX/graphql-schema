@@ -1,6 +1,9 @@
 input UserProfileUpdateInput {
-  email: String
+  email: ID
   firstName: String
   lastName: String
+  jobTitle: String
+  department: String
+  headquarters: String
   onboardingProperties: UserOnboardingUpdateInput
 }

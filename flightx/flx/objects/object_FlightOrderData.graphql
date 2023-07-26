@@ -1,9 +1,0 @@
-type FlightOrderData {
-  code: ID!
-  status: FlightTicketStatusCode!
-  tickets: [FlightTicket]
-  supplier: Supplier!
-  bookingRefIDs: [String]
-  orderItems: [FlightOrderItem!]
-  totalPrice: FlightPrice!
-}

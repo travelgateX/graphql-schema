@@ -17,4 +17,7 @@ type CancelPenalty {
   
   # Value of the cancellation policy
   value: Float!
+
+  # Supplier description
+  description: String
 }

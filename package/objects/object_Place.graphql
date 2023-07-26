@@ -1,0 +1,5 @@
+type Place {
+  code: String!
+  name: String!
+  type: PlaceType!
+}

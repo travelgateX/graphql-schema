@@ -1,0 +1,10 @@
+type VehicleAttributes {
+  brand: String
+  model: String
+  """Vehicle height in centimeters."""
+  height: Int!
+  """Vehicle length in centimeters."""
+  length: Int!
+  """Optional trailer characteristics."""
+  trailer: Trailer
+}

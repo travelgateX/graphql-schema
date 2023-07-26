@@ -1,0 +1,4 @@
+type TrafficOptimizationStatsAccessHotelBlacklist {
+  edges:[TrafficOptimizationStatsHotelBlacklistAccessEdge]
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

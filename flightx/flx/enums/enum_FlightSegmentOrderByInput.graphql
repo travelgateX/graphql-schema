@@ -1,4 +1,0 @@
-enum FlightSegmentOrderByInput {
-  date_ASC
-  date_DESC
-}

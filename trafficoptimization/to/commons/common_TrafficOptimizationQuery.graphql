@@ -25,6 +25,20 @@ type TrafficOptimizationQuery{
   ): TrafficOptimizationHotelBlacklistConnection!
 
   """
+    Return all unique blacklist hotels of Connections
+  """
+  allTrafficOptimizationAllAccessesHotelBlacklistStats(
+    where: TrafficOptimizationAllAccessesHotelBlacklistStatsWhereInput
+  ): TrafficOptimizationStatsAllAccessesHotelBlacklist!
+
+  """
+    Return all unique blacklist hotels of accesses
+  """
+  allTrafficOptimizationAccessHotelBlacklistStats(
+    where: TrafficOptimizationAccessHotelBlacklistStatsWhereInput
+  ): TrafficOptimizationStatsAccessHotelBlacklist!
+  
+  """
   Return recommendations of Connections
   """
   allTrafficOptimizationAllAccessesRecommendations(

@@ -1,0 +1,8 @@
+input VehicleInput {
+  """Consecutive vehicle index in travel."""
+  index: Int!
+  """Vehicle Type Code. Needs Code Mapping."""
+  type: String
+  """Detailed vehicle characteristics."""
+  attributes: VehicleAttributesInput
+}

@@ -47,4 +47,7 @@ extend type HotelXQuery {
 
   # Returns detailed information about booking board amendment.
   quoteBoardAmendment(criteria: HotelCriteriaAmendBoardQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+    # Returns detailed information about booking rooms amendment 
+  quoteRoomsAmendment(criteria: HotelCriteriaAmendRoomsQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
 }

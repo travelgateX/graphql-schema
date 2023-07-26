@@ -2,23 +2,18 @@
 # If you are using our Hotelx locator (bookingID) you don't need to indicate any of the other fields
 input HotelCriteriaBookingInput {
   # Name of the access that have to use in the request. Necessary if your search if by references or by dates.
-  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   accessCode: String
   
   # The language code.
-  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   language: Language
   
   # The search type criteria. Necessary if your search if by references or by dates.
-  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   typeSearch: BookingCriteriaType
   
   # The references criteria.
-  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   references: CriteriaBookingReferencesInput
   
   # The dates criteria.
-  # @deprecated(reason: "deprecated from 2020-02-20. Use bookingID instead).
   dates: CriteriaBookingDatesInput
 
   # HotelX's booking reference

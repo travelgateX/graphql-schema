@@ -41,6 +41,14 @@ extend type AdminMutation {
   updateHubUser(input: UpdateHubUserInput!): HubUser
   # Updates existing hubprovider. 
   updateHubProvider(input: UpdateHubProviderInput!): HubProvider
+  #Activate Speed
+  activateSpeedLegacy(where: LegacyAccessWhereUniqueInput!): LegacyAccess!
+  #Deactivate Speed   
+  deactivateSpeedLegacy(where: LegacyAccessWhereUniqueInput!): LegacyAccess!
+
+  # EntitiesV2: set Service integration data for suppliers
+  setSupplierServiceIntegrationData(where: SupplierWhereUniqueInput!,data: SupplierServiceIntegrationData): Supplier!
+
   # EntitiesV2: SoftDelete Client. [WARNING] Only SuperAdmin users can delete
   archiveClient(where: ClientWhereUniqueInput!): Client!
   # EntitiesV2: Soft UnDelete Client. [WARNING] Only SuperAdmin users can delete

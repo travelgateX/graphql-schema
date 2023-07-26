@@ -22,7 +22,7 @@ type Reference {
   # "I" => (issued): The operator called the hotel, but there are issues. Maybe the hotel is closed, maybe natural disater situations are alerted for the check in date, etc.
   hotelConfirmationNumberStatus: String 
 
-  # HotelX's booking reference. It is an unique identifier for the book. The id is used to make the cancel mutation and booking query, so it is important not to modify it by any reason.
+  # HotelX's booking reference. The BookingID is a unique identifier for each reservation that can be used to perform Booking and Cancel Queries in the system. It is not recommended to modify or use this value externally, although it may be useful for identifying and managing reservations within the system. It is important to note that the BookingID value should not be interpreted in any other way beyond its use within the system.
   bookingID: String
 
   # HotelX's amend booking reference

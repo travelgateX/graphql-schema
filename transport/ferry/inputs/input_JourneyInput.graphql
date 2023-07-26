@@ -1,0 +1,12 @@
+input JourneyInput {
+  """Departure Date, ISO 8601 Format."""
+  departure: String
+  """Return Date, ISO 8601 Format."""
+  return: String
+  """Departure Location, needs Code Mapping."""
+  originCode: ID
+  """Arrival Location, needs Code Mapping."""
+  destinationCode: ID
+  """Open-Jaw support, needs Code Mapping."""
+  alternativeReturnCode: ID
+}

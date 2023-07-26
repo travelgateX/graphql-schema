@@ -1,0 +1,4 @@
+type TransportMutation {
+  ferryBook(input: FerryBookInput): FerryOrderPayload
+  ferryCancel(input: FerryCancelInput): FerryCancelPayload
+}

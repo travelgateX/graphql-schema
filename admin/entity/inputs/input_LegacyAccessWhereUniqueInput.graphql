@@ -1,0 +1,6 @@
+input LegacyAccessWhereUniqueInput {
+  # hubUser
+  client: String!
+  # hubProvider
+  supplier: String!
+}

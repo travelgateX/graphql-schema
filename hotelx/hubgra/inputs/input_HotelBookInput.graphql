@@ -1,6 +1,6 @@
 # Criteria of book.
 input HotelBookInput {
-  # Option ID
+    # OptionRefID is a unique identifier assigned to each option, which is necessary for performing the Quote Query. It is important to note that this identifier should not be modified or used externally, as it is an internal system identifier. Additionally, it is crucial to understand that the OptionRefID value should not be interpreted in any other way beyond its use within the system.
   optionRefId: String!
   
   # Language to be used in request

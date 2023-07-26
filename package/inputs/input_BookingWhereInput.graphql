@@ -1,0 +1,4 @@
+input BookingWhereInput {
+    access: String!
+    bookReference: PackageBookReference!
+}

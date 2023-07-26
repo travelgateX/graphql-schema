@@ -1,0 +1,18 @@
+input PassengerBookInput {
+  """Used to match with requested passengers in search."""
+  index: Int!
+  name: String
+  surname: String
+  """Identification document number."""
+  documentNumber: String
+  """Passenger identification expiration date, ISO 8601 Format."""
+  documentExpiration: String
+  documentType: DocumentType!
+  gender: GenderType!
+  """Passenger birth day, ISO 8601 Format."""
+  birthDate: String
+  """Alpha 2 Code, ISO 3166-1 Format."""
+  nationality: String
+  """The city where the passenger resides, Is mandatory to apply the resident discount"""
+  cityResident:String
+}

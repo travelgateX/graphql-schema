@@ -1,0 +1,15 @@
+"""Search Input"""
+input FerrySearchWhereInput {
+  """
+  Used to find the Buyer mapped code from a Seller code in Buyer/Seller Code Mapping.
+  """
+  context: String
+  """Alphabetic Code ISO 4217."""
+  currency: String
+  """Customer information."""
+  traveller: TravellerInput
+  """Route information."""
+  journey: JourneyInput
+  """Unique identifiers of Access"""
+  accesses:[ID!]
+}

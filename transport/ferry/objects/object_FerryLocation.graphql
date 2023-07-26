@@ -1,0 +1,6 @@
+type FerryLocation {
+  """Date, ISO 8601 Format."""
+  when: String
+  """SeaPort/Location Identifier, needs Code Mapping."""
+  locationCode: ID
+}

@@ -1,0 +1,6 @@
+input TrafficOptimizationAccessHotelBlacklistStatsWhereInput {
+  mode: ModeType!
+  buyer_in:[ID!]
+  seller_in:[ID!]
+  access_in:[ID!]
+}

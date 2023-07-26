@@ -1,0 +1,6 @@
+type SearchCriteriaStaticDates {
+  # Check-in date for booking Format: YYYY-MM-DD
+  checkIn: Date!
+  # Check-out, booking date Format: YYYY-MM-DD
+  checkOut: Date!
+}

@@ -1,0 +1,7 @@
+enum LocationType
+{
+    AIRPORT
+    BUSSTATION
+    PORT
+    TRAINSTATION
+}

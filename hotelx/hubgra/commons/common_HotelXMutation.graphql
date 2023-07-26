@@ -21,4 +21,7 @@ extend type HotelXMutation {
 
   # Commits the previous quoted board amendment.
   amendBoard(data: HotelCriteriaAmendBoardCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+  # Commits the previous quoted rooms amendment
+  amendRooms(data: HotelAmendRoomsCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
 }

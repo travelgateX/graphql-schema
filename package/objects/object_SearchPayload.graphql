@@ -1,0 +1,4 @@
+type SearchPayload {
+  adviseMessages: [AdviseMessage]
+  options: [SearchOption]
+}

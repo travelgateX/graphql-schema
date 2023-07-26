@@ -1,0 +1,6 @@
+enum ProductType {
+  ACCOMMODATION
+  ACTIVITY
+  INSURANCE
+  TRANSPORT
+}

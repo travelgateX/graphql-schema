@@ -1,0 +1,5 @@
+input QuoteWhereInput {
+  access: String!
+  optionId: String!
+  passengers: [Int!]
+}

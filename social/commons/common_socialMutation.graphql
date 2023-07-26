@@ -3,7 +3,7 @@ type SocialMutation {
   # Profiles
   createProfile(data: ProfileCreateInput!): ProfileV2!
 
-  updateProfile(data: ProfileUpdateInput!, where: ProfileWhereUniqueInput!): ProfileV2!
+  updateProfile(where: ProfileWhereUniqueInput!, data: ProfileUpdateInput!): ProfileV2!
 
   deleteProfile(where: ProfileWhereUniqueInput!): ProfileV2!
 
@@ -25,4 +25,14 @@ type SocialMutation {
   createUserProfile(data: UserProfileCreateInput!): UserProfile!
 
   updateUserProfile(where: UserProfileWhereUniqueInput!, data: UserProfileUpdateInput!): UserProfile!
+
+  # Invitations
+  createInvitation(data: InvitationCreateInput!): Invitation!
+
+  updateInvitation(where: InvitationWhereUniqueInput!, data: InvitationUpdateInput!): Invitation!
+
+  # FavouritePartner
+  createFavouritePartner(data: FavouritePartnerCreateInput): Organization!
+
+  deleteFavouritePartner(where: FavouritePartnerWhereUniqueInput): Organization!
 }

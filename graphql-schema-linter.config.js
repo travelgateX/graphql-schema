@@ -53,7 +53,7 @@ function getRecursiveFiles(dirname) {
 }
 
 module.exports = {
-  rules: ["defined-types-are-used"],
+  rules: ["defined-types-are-used"],  
   schemaPaths: schemaPaths,
   //customRulePaths: ['path/to/my/custom/rules/*.js'],
   rulesOptions: {},
