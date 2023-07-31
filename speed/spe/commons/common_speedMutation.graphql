@@ -3,7 +3,6 @@ type SpeedMutation{
   		Creates a new Speed configuration for a given access
   	"""
 	createSpeedAccess(where: SpeedCreateAccessInput!): SpeedAccess  
-	
 	"""
   		Activates the Speed tool for a given access
   	"""
@@ -71,4 +70,9 @@ type SpeedMutation{
 		data: SpeedUpdateAllAccessesTtlDataInput!
 		where: SpeedUpdateAllAccessesWhereInput!
 	):SpeedConnection
+	
+	"""
+  	Deletes hotels of a given user and supplier
+	"""
+	deleteSpeedLegacyHotel( where: SpeedDeleteLegacyHotelWhereInput!):[AdviseMessage!]
 }
