@@ -1,4 +1,6 @@
 type Transport {
+  baggageIncluded: Boolean!
+  baggageDescription: String!
   ref: String!
   segments: [Segment!]!
   transportType: TransportType
