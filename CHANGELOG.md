@@ -1,3 +1,7 @@
+## 2023-08-02
+
+🛑  Deprecated field `geoNames` as `@deprecated(reason: "Deprecated from 2023-04-18")`
+
 ## 2018-07-25
 
 🛑  Input field `HotelSettingsInput.group` changed type from `String` to `ID`
