@@ -22,7 +22,7 @@ type Location {
   airports:[Airport!]
 
   # Detailed information about the destinations geonames
-  geoNames:[Geoname!]!
+  geoNames:[Geoname!]! @deprecated(reason: "Deprecated from 2023-04-18")
 
   # the state/province of the property
   state: State
