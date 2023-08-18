@@ -10,4 +10,5 @@ enum StatsDataGroupBy{
   TRAFFIC_TYPE
   ERROR_CODE
   ERROR_TYPE
+  API
 }
