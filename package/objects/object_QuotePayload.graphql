@@ -4,7 +4,7 @@ type QuotePayload {
   adviseMessages: [AdviseMessage]
   cancelPolicy: CancelPolicy
   itineraryMap: [ItineraryMap!]
-  locations: [PackageLocations!]
+  locations: [PackageLocations]
   origin: PackageLocation
   destination: PackageLocation
   optionId: String!
