@@ -4,4 +4,5 @@ type Segment {
   destination: String!
   index: Int!
   origin: String!
+  transportCode: String
 }
