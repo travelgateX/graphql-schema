@@ -2,7 +2,9 @@
 type CancelPolicy {
   # Indicates if the option is refundable or non-refundable
   refundable: Boolean!
-  
+
   # List of cancellation penalties
   cancelPenalties: [CancelPenalty!]
+
+  description: String
 }
