@@ -6,7 +6,7 @@ type BookPayload {
   cancelPolicy: CancelPolicy
   destination: PackageLocation
   itineraryMap: [ItineraryMap!]
-  locations: [PackageLocation]
+  locations: [PackageLocation!]
   optionId: String!
   origin: PackageLocation
   price: PackagePrice

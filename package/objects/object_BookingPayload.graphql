@@ -6,7 +6,7 @@ type BookingPayload {
   cancelPolicy: CancelPolicy
   destination: PackageLocation
   itineraryMap: [ItineraryMap]
-  locations: [PackageLocation]
+  locations: [PackageLocation!]
   origin: PackageLocation
   price: PackagePrice
   remarks: [Remark]
