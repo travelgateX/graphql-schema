@@ -1,0 +1,12 @@
+enum PaymentCardStatus {
+    # the payment card status is created
+    CREATED
+    # the payment card status is canceled
+    CANCELED
+    # the payment card is expired
+    EXPIRED
+    # the payment card is active
+    ACTIVE
+    # the payment card status is unknown
+    UNKNOWN
+}

@@ -24,4 +24,6 @@ type PaymentCardData {
     # Indicates the supported card type
     type: PaymentCardType!
 
+    # Indicates the credit card status
+    status: PaymentCardStatus
 }
