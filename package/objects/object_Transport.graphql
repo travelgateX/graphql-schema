@@ -2,6 +2,6 @@ type Transport {
   baggageIncluded: Boolean!
   baggageDescription: String
   ref: String!
-  segments: [Segment!]!
+  segments: [Segment!]
   transportType: TransportType
 }

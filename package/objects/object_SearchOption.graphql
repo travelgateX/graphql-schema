@@ -8,7 +8,7 @@ type SearchOption{
   isAvailable: Boolean!
   isRefundable: Boolean!
   itineraryMap: [ItineraryMap!]
-  locations: [PackageLocations]
+  locations: [PackageLocations!]
   origin: PackageLocation
   optionId: String!
   rate: Rate!
