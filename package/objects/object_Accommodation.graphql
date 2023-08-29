@@ -1,7 +1,7 @@
 type Accommodation {
   boardCode: String!
   boardName: String!
-  cityCode: String!
+  cityCode: String
   hotelCode: String!
   hotelName: String!
   ref: String!
