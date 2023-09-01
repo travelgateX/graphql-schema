@@ -3,7 +3,7 @@ type BookingPayload {
   activities: [Activity]
   adviseMessages: [AdviseMessage]
   bookReference: BookReference!
-  cancelPolicy: CancelPolicy
+  cancelPolicy: PackageCancelPolicy
   destination: PackageLocation
   itineraryMap: [ItineraryMap]
   locations: [PackageLocation!]
