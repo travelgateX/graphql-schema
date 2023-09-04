@@ -1,4 +1,6 @@
 type PackageCategory{
+    """ Code of package category """
     code: String!
+    """ Name of package category """
     name: String!
 }

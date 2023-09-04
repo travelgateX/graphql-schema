@@ -1,4 +1,6 @@
 ﻿type PackageDestination {
+  """ Iata of the destination """
   iata: String
+  """ Destination type (Airport, Train station...) """
   type: PackageDestinationType
 }
