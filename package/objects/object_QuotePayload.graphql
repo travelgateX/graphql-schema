@@ -1,20 +1,38 @@
 type QuotePayload {
+  """ List of accommodations """
   accommodations: [Accommodation!]
+  """ List of activities for the option """
   activities: [Activity!]
+  """ List of errors """
   adviseMessages: [AdviseMessage]
+  """ Cancel policies thast apply to the option """
   cancelPolicy: PackageCancelPolicy
+  """ Schedule of transports/activities/accommodations of the option """
   itineraryMap: [ItineraryMap!]
+  """ Locations where the pacakge will take place """
   locations: [PackageLocations!]
+  """ Origin of the package """
   origin: PackageLocation
+  """ Destination of the package """
   destination: PackageLocation
+  """ Id for this option, can and most likely will differ from the one received on search """
   optionId: String!
+  """ Price applied to the option """
   price: PackagePrice
+  """ Token used to confirm the option """
   quoteToken: String!
+  """ Used to specify some key information of the package (few providers use this) """
   refName: String
+  """ Date of departure for the option """
   departureDate: String
+  """ Date of return for the option """
   returnDate: String
+  """ list of remarks for the option """
   remarks: [Remark!]
+  """ Paxes for the option """
   paxes: Paxes
+  """ Status of the package (Available, On_Request...) """
   status: PackageStatus
+  """ List of transports included in the booking """
   transports: [Transport!]
 }
