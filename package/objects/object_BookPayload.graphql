@@ -1,7 +1,7 @@
 type BookPayload {
   """ List of accommodations """
   accommodations: [Accommodation!]
-  """ List of activities for the option """
+  """ List of activities for the booking """
   activities: [Activity!]
   """ List of errors """
   adviseMessages: [AdviseMessage]
@@ -9,20 +9,26 @@ type BookPayload {
   bookReference: BookReference
   """ Cancel policies thast apply to the booking """
   cancelPolicy: PackageCancelPolicy
+  """ Date of departure for the option """
+  departureDate: String
+  """ Date of return for the option """
+  returnDate: String
   """ Destination of the package """
   destination: PackageLocation
-  """ Schedule of transports/activities/accommodations of the option """
+  """ Schedule of transports/activities/accommodations of the booking """
   itineraryMap: [ItineraryMap!]
   """ Locations where the pacakge will take place """
   locations: [PackageLocation!]
   """ Origin of the package """
   origin: PackageLocation
+  """ Paxes for the option """
+  paxes: Paxes
   """ Price applied to the booking """
   price: PackagePrice
   """ Remarks of the booking """
   remarks: [Remark!]
   """ Status of the booking (OK, Cancelled...) """
   bookStatus: PackageBookStatus
-  """ List of transports included in the booking (may not be specified in this query) """
+  """ List of transports included in the booking """
   transports: [Transport!]
 }

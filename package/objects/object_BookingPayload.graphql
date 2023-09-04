@@ -7,6 +7,10 @@ type BookingPayload {
   adviseMessages: [AdviseMessage]
   """ Client and supplier locators of the booking """
   bookReference: BookReference!
+  """ Date of departure for the option (may not be specified in this query) """
+  departureDate: String
+  """ Date of return for the option (may not be specified in this query) """
+  returnDate: String
   """ Cancel policies thast apply to the booking """
   cancelPolicy: PackageCancelPolicy
   """ Destination of the package """
@@ -17,6 +21,8 @@ type BookingPayload {
   locations: [PackageLocation!]
   """ Origin of the package """
   origin: PackageLocation
+  """ Paxes for the option """
+  paxes: Paxes
   """ Price applied to the booking """
   price: PackagePrice
   """ Remarks of the booking (may not be specified in this query) """
