@@ -7,7 +7,7 @@ type SearchOption{
   adviseMessages: [AdviseMessage]
   """ Category of the package """
   category: PackageCategory!
-  """ Date of departure for the option """
+  """ Date of departure for the option received in standard ISO 8601 """
   departureDate: String
   """ Destination of the package """
   destination: PackageLocation
@@ -27,7 +27,7 @@ type SearchOption{
   rate: Rate!
   """ Used to specify some key information of the package (few providers use this) """
   refName: String
-  """ Date of return for the option """
+  """ Date of return for the option received in standard ISO 8601 """
   returnDate: String
   """ Supplier to whom this option belongs to """
   supplier: String

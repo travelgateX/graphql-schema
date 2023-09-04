@@ -1,7 +1,7 @@
 ﻿type PackageQuery {
   """ Query to retreive the lastest conditions for the option """
   quote(where: QuoteWhereInput): QuotePayload
-  """ Query to retreive the static information of a package ""
+  """ Query to retreive the static information of a package """
   content(where: ContentWhereInput): ContentPayload
   """ Query to retreive the information of an existing booking """
   booking(where: BookingWhereInput): BookingPayload

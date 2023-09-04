@@ -1,5 +1,5 @@
 type PackagePrice {
-  """ Currency used for the package """
+  """ Currency used for the package received in standard ISO 4217 """
   currency: String!
   """ Specifies if the price is binding or not """
   binding: Boolean!

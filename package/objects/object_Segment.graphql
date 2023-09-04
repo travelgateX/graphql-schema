@@ -1,7 +1,7 @@
 type Segment {
-  """ Arrival Time of the transport segment """
+  """ Arrival date of the transport segment received in standard ISO 8601 """
   arrival: DateTime!
-  """ Departure Time of the transport segment """
+  """ Departure date of the transport segment received in standard ISO 8601 """
   departure: DateTime!
   """ Destination of the segment """
   destination: String!

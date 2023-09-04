@@ -9,9 +9,9 @@ type BookPayload {
   bookReference: BookReference
   """ Cancel policies thast apply to the booking """
   cancelPolicy: PackageCancelPolicy
-  """ Date of departure for the option """
+  """ Date of departure for the option received in standard ISO 8601 """
   departureDate: String
-  """ Date of return for the option """
+  """ Date of return for the option received in standard ISO 8601 """
   returnDate: String
   """ Destination of the package """
   destination: PackageLocation

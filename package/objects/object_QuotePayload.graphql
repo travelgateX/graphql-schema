@@ -15,7 +15,7 @@ type QuotePayload {
   origin: PackageLocation
   """ Destination of the package """
   destination: PackageLocation
-  """ Id for this option, can and most likely will differ from the one received on search """
+  """ Id for this option, could be different to received from search"""
   optionId: String!
   """ Price applied to the option """
   price: PackagePrice
@@ -23,9 +23,9 @@ type QuotePayload {
   quoteToken: String!
   """ Used to specify some key information of the package (few providers use this) """
   refName: String
-  """ Date of departure for the option """
+  """ Date of departure for the option received in standard ISO 8601 """
   departureDate: String
-  """ Date of return for the option """
+  """ Date of return for the option received in standard ISO 8601 """
   returnDate: String
   """ list of remarks for the option """
   remarks: [Remark!]

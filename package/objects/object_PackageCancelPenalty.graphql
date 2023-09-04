@@ -1,5 +1,5 @@
 type PackageCancelPenalty {
-  """ Currency used for penalty """
+  """ Currency used for penalty received in standard ISO 4217 """
   currency: String!
   """ End date where the penalty applies """
   deadline: String!

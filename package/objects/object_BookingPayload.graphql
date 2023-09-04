@@ -7,9 +7,9 @@ type BookingPayload {
   adviseMessages: [AdviseMessage]
   """ Client and supplier locators of the booking """
   bookReference: BookReference!
-  """ Date of departure for the option (may not be specified in this query) """
+  """ Date of departure for the option received in standard ISO 8601 (may not be specified in this query) """
   departureDate: String
-  """ Date of return for the option (may not be specified in this query) """
+  """ Date of return for the option received in standard ISO 8601 (may not be specified in this query) """
   returnDate: String
   """ Cancel policies thast apply to the booking """
   cancelPolicy: PackageCancelPolicy
