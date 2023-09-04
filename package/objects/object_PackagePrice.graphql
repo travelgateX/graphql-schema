@@ -1,13 +1,14 @@
 type PackagePrice {
+  """ Currency used for the package """
   currency: String!
-
+  """ Specifies if the price is binding or not """
   binding: Boolean!
-
+  """ Net price """
   net: Float!
-
+  """ Gross price """
   gross: Float!
-
+  """ Minimum price the option can be sold at """
   minimumSellingPrice: Float
-
+  """ Price that is not commsissionable """
   nonCommissionablePrice: Float!
 }
