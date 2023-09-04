@@ -1,8 +1,14 @@
 type Segment {
+  """ Arrival Time of the transport segment """
   arrival: DateTime!
+  """ Departure Time of the transport segment """
   departure: DateTime!
+  """ Destination of the segment """
   destination: String!
+  """ Index (order) of the segment """
   index: Int!
+  """ Origin of the segment """
   origin: String!
+  """ Code of the transport for the segment """
   transportCode: String
 }

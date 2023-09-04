@@ -1,4 +1,6 @@
 type PackageSupplier {
+  """ Supplier code (CDV, NWB, TMN...) """
   code: String
+  """ Type of the product specified by the provider """ 
   productType: String
 }
