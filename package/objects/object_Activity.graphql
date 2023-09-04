@@ -1,5 +1,8 @@
 type Activity {
+  """ Description of the activity """
   description: String!
+  """ ref to see where it belongs in the itinerary map (if necessary/specified) """
   ref: String!
+  """ Title of the activity """
   title: String!
 }
