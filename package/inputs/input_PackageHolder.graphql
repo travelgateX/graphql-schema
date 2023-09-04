@@ -1,6 +1,10 @@
 input PackageHolder {
+  """ Age of the holder """
   age: Int!
+  """ Name of the holder """ 
   name: String!
+  """ Surname of the holder """
   surname: String!
+  """ Contact information of the holder """
   contact: PackageContactInput!
 }

@@ -1,4 +1,6 @@
 input PackageContactInput {
+  """ Email to contact de holder of the booking """
   email: String!
+  """ Phone to contact de holder of the booking """
   phone: String!
 }

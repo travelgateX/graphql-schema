@@ -1,9 +1,16 @@
 input BookWhereInput {
+  """ String that represents the connection with a supplier it will be given to you (can be TEST or PRO)"""
   access: String!
+  """ Client locator to be sent to the provider (in case said supplier accepts it) """
   clientLocator: String
+  """ The optionID received in the Quote Query as it has refreshed information """
   optionId: String!
+  """ The quote token received in the Quote Query """
   quoteToken: String!
+  """ Information of the passenger that holds the booking (has to be complementary to the first passenger) """
   holder: PackageHolder!
+  """ Information of each passenger for the booking (holder included and has to be the first one) """
   passengers: [PackagePassengerInput!]!
+  """ String list of tokens that are received in the itinerary map from quote """
   productTokens: [String!]!
 }
