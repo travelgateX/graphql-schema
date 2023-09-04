@@ -1,5 +1,8 @@
 type CancelPayload {
+    """ List of errors """
     adviseMessages: [AdviseMessage]
+    """ Client and supplier locators of the booking """
     bookReference: BookReference
+    """ Status of the booking (OK, Cancelled...) """
     bookStatus: PackageBookStatus
 }
