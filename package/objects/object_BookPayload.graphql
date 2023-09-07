@@ -18,7 +18,7 @@ type BookPayload {
   """ Schedule of transports/activities/accommodations of the booking """
   itineraryMap: [ItineraryMap!]
   """ Locations where the pacakge will take place """
-  locations: [PackageLocation!]
+  locations: [PackageLocations!]
   """ Origin of the package """
   origin: PackageLocation
   """ Paxes for the option """
