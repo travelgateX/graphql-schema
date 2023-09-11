@@ -1,5 +1,8 @@
 ﻿type Remark {
+  """ Description/message of the remark """
   content: String
+  """ Value to specify restrictions or similar like age """
   value: String
+  """ Remark type (INCLUDED_SERVICE, NOT_INCLUDED_SERVICE) """
   type: RemarkType
 }

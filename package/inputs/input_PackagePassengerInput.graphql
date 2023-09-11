@@ -1,8 +1,14 @@
 input PackagePassengerInput {
+  """ Passenger age """
   age: Int!  
+  """ Number of the identity document """
   documentNumber: String!
+  """ Type of identity document (ID_CARD, PASSPORT)"""
   documentType: PackageDocumentType
+  """ Passenger Name """
   name: String!
+  """ Passenger Surname """
   surname: String!
+  """ Passenger personal title (MR, MRS...) """
   title: PackagePersonalTitleType
 }

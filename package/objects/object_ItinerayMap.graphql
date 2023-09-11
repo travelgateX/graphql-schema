@@ -1,7 +1,12 @@
 type ItineraryMap {
+  """ Indicates de chronological order of each entry """
   order: Int!
+  """ Product token that will be used in Book (may not be received in search) """
   productToken: String!
+  """ Type of the product (Transport, accomodation...) """
   productType: ProductType
+  """ Ref to identify the entry in it's specified List (Accommodations, Transports...) """
   ref: String!
+  """ Day where activity will take place """
   startDay: Int!
 }

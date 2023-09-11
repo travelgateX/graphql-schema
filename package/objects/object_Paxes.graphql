@@ -1,3 +1,4 @@
 type Paxes {
+    """ List of passengers """
     pax: [PackagePax]
 }

@@ -1,6 +1,10 @@
 type Rate{
+    """ Currency used for the option received in standard ISO 4217 """
     currency: String!
+    """ Base prie for the option"""
     baseAmount: Float!
+    """ Price that is not commsissionable """
     nonCommissionablePriceAmount: Float!
+    """ Paxes applying to this price and option """
     paxes: Paxes
 }

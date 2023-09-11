@@ -1,42 +1,22 @@
 ﻿type ContentPayload {
+  """ List of errors """
   adviseMessages: [AdviseMessage]
-
-  """
-  Identifier code
-  """
+  """ Identifier code """
   packageCode: String
-
+  """ Specifies if it's a package or a tour"""
   type: ContentType
-
-  """
-  supplier information
-  """
+  """ supplier information """
   supplier: PackageSupplier
-
-  """
-  Language code (ISO 639-1)
-  """
+  """ Language code (ISO 639-1) """
   language: String
-
-  """
-  Package name
-  """
+  """ Package name """
   name: String
-
-  """
-  Destination information
-  """
+  """ Destination information """
   destination: PackageDestination
-
+  """ Package description """
   description: String
-
-  """
-  Available media collection
-  """
+  """ List of available media """
   media: [Medium!]
-
-  """
-  Available remarks collection
-  """
+  """ List of remarks for the product """
   remarks: [Remark!]
 }

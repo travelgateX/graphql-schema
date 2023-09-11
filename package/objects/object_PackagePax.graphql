@@ -1,4 +1,6 @@
 type PackagePax {
+    """ Type of the passenger (ADT, CHD) """
     type: PaxType!
+    """ Age of the passenger """
     age: Int
 }

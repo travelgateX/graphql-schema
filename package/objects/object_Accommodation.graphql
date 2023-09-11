@@ -1,10 +1,18 @@
 type Accommodation {
+  """ Board code assigned to the accommodation """
   boardCode: String!
+  """ Board name assigned to the accommodation """ 
   boardName: String!
+  """ City code where the accommodation belongs to """
   cityCode: String
+  """ Code of the accommodation """
   hotelCode: String!
+  """ name of the accommodation """
   hotelName: String!
+  """ ref to see where it belongs in the itinerary map (if necessary) """
   ref: String!
+  """ Code of the room assigned to the accommodation """
   roomCode: String!
+  """ name of the room assigned to the accommodation """
   roomName: String!
 }

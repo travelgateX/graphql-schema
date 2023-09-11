@@ -1,20 +1,38 @@
 type SearchOption{
+  """ List of accommodations """
   accommodations: [Accommodation!]
+  """ List of activities for the option """
   activities: [Activity!]
+  """ List of errors """
   adviseMessages: [AdviseMessage]
+  """ Category of the package """
   category: PackageCategory!
+  """ Date of departure for the option received in standard ISO 8601 """
   departureDate: String
+  """ Destination of the package """
   destination: PackageLocation
+  """ Specifies if the option is available """
   isAvailable: Boolean!
+  """ Specifies if the option is refundable """
   isRefundable: Boolean!
+  """ Schedule of transports/activities/accommodations of the option """
   itineraryMap: [ItineraryMap!]
+  """ Locations where the pacakge will take place """
   locations: [PackageLocations!]
+  """ Origin of the package """
   origin: PackageLocation
+  """ Id for this option used for quote """
   optionId: String!
+  """ Base rate of the option as at this stage the price is no yet clearly specified """
   rate: Rate!
+  """ Used to specify some key information of the package (few providers use this) """
   refName: String
+  """ Date of return for the option received in standard ISO 8601 """
   returnDate: String
+  """ Supplier to whom this option belongs to """
   supplier: String
+  """ Code of the product to search its static information or use the search with it """
   supplierPackageCode: String
+  """ List of transports included in the booking """
   transports: [Transport!]
 }
