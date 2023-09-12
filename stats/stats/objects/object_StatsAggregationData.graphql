@@ -25,6 +25,8 @@ errorType: ID
 trafficType: TrafficType
 " returned time value if groupByTime is used "
 time: DateTime
+"api code returned if you groupBy API"
+api: API
 " to get data deaggregate from this node "
 deaggregateData( where: StatsAggregationConnectionWhereInput! groupBy: StatsAggregationConnectionGroupByInput! ): StatsAggregationConnection
 }

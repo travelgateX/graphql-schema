@@ -1,4 +1,6 @@
 type SearchPayload {
+  """ List of errors """
   adviseMessages: [AdviseMessage]
+  """ List of options that fit the criteria """
   options: [SearchOption]
 }

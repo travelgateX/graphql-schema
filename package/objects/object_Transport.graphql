@@ -1,7 +1,12 @@
 type Transport {
+  """ Indicates if the baggage is included """
   baggageIncluded: Boolean!
-  baggageDescription: String!
+  """ Description of the baggage usually indicating limits to it """
+  baggageDescription: String
+  """ ref to see where it belongs in the itinerary map (if necessary) """
   ref: String!
-  segments: [Segment!]!
+  """ List of segments that the transport has """ 
+  segments: [Segment!]
+  """ Indicates which type of transport it is (Flight, train) """
   transportType: TransportType
 }

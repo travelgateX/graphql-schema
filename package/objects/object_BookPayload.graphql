@@ -1,17 +1,34 @@
 type BookPayload {
+  """ List of accommodations """
   accommodations: [Accommodation!]
+  """ List of activities for the booking """
   activities: [Activity!]
+  """ List of errors """
   adviseMessages: [AdviseMessage]
+  """ Client and supplier locators of the booking """
   bookReference: BookReference
-  cancelPolicy: CancelPolicy
+  """ Cancel policies thast apply to the booking """
+  cancelPolicy: PackageCancelPolicy
+  """ Date of departure for the option received in standard ISO 8601 """
+  departureDate: String
+  """ Date of return for the option received in standard ISO 8601 """
+  returnDate: String
+  """ Destination of the package """
   destination: PackageLocation
+  """ Schedule of transports/activities/accommodations of the booking """
   itineraryMap: [ItineraryMap!]
-  locations: [PackageLocation!]
-  optionId: String!
+  """ Locations where the pacakge will take place """
+  locations: [PackageLocations!]
+  """ Origin of the package """
   origin: PackageLocation
+  """ Paxes for the option """
+  paxes: Paxes
+  """ Price applied to the booking """
   price: PackagePrice
-  quoteToken: String!
+  """ Remarks of the booking """
   remarks: [Remark!]
+  """ Status of the booking (OK, Cancelled...) """
   bookStatus: PackageBookStatus
+  """ List of transports included in the booking """
   transports: [Transport!]
 }

@@ -1,4 +1,6 @@
 type PackageMutation {
+  """ Mutation to confirm an option """
   book(where: BookWhereInput): BookPayload
+  """ Mutation to cancel a confirmed booking """
   cancel(where: PackageCancelWhereInput): CancelPayload
 }

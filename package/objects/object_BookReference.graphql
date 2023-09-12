@@ -1,4 +1,6 @@
 type BookReference {
+  """ Client locator to identify a booking """
   clientLocator: String!
+  """ Supplier locator to identify a booking """
   supplierLocator: String!
 }

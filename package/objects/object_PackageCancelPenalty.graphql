@@ -1,13 +1,14 @@
 type PackageCancelPenalty {
+  """ Currency used for penalty received in standard ISO 4217 """
   currency: String!
-
+  """ End date where the penalty applies """
   deadline: String!
-  
+  """ Description of the penalty """
   description: String
-  
+  """ Hours before the penalty starts applying """
   hoursBefore: Int!
-
+  """ Type of penalty (amount, nights...) """
   penaltyType: PackagePenaltyType!
-
+  """ value of the penalty taking in account which type of penalty is """
   value: Float!
 }

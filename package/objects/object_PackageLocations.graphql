@@ -1,4 +1,6 @@
 type PackageLocations {
+  """ ref to see where it belongs in the itinerary map (if necessary) """
   ref: String!
+  """ List of places for this location """
   places: [Place!]!
 }

@@ -1,7 +1,14 @@
 type Segment {
+  """ Arrival date of the transport segment received in standard ISO 8601 """
   arrival: DateTime!
+  """ Departure date of the transport segment received in standard ISO 8601 """
   departure: DateTime!
+  """ Destination of the segment """
   destination: String!
+  """ Index (order) of the segment """
   index: Int!
+  """ Origin of the segment """
   origin: String!
+  """ Code of the transport for the segment """
+  transportCode: String
 }

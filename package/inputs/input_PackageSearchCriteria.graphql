@@ -1,3 +1,4 @@
 input PackageSearchCriteria {
+  """ Node to specify optionID/Supplier package code to refresh those options """
   refresh: PackageRefresh
 }

@@ -1,3 +1,4 @@
 ﻿input ContentWhereInput {
+  """ string that represents the static info from each package """
   packageCode: String!
 }

@@ -18,4 +18,7 @@ input HotelCriteriaAmendBoardQuoteInput {
 
   # Board to amend into the booking
   board: String!
+
+  # Board name to amend into the booking
+  boardName: String
 }

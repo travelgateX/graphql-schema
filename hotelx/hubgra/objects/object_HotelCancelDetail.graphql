@@ -14,4 +14,7 @@ type HotelCancelDetail {
   
   # Information about the booking.
   booking: HotelBookingDetail
+
+  # Specifies the information about the payment generated at Book step. 
+  paymentInfo: GeneratedPaymentInfo
 }

@@ -1,4 +1,6 @@
 input PackageRefresh{
+    """ OptionID you wish to search again to get recent info """
     optionId: String
+    """ The supplier package code you wish to search to get a batch of options of that supplier package code """
     productId: String
 }

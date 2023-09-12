@@ -1,6 +1,10 @@
 type PackageLocation {
+  """ Iata of the location """
   iata: String!
+  """ Name of the location """
   name: String!
+  """ Code that the provider specifies for this location usually in case a IATA does not apply """
   providerCode: String!
+  """ Location type (Airport, Train station...) """
   type: LocationType!
 }

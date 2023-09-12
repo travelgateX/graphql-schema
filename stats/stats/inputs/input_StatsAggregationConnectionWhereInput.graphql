@@ -24,4 +24,6 @@ input StatsAggregationConnectionWhereInput{
   errorType_in:[ID!]
   " List of Traffic Type "  
   trafficType_in:[TrafficType!]
+  " List of Api code "
+  api_in: [ID!]
 }

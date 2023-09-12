@@ -1,5 +1,8 @@
 type Place {
+  """ Code of the place """
   code: String!
+  """ Name of the place """
   name: String!
+  """ Place type (Airport, Train station, city) """
   type: PlaceType!
 }

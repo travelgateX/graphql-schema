@@ -1,4 +1,6 @@
 ﻿type Medium {
+  """ Type of media (Image, Video) """
   type: MediumType
+  """ Url to access The Media """
   url: String
 }
