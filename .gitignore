@@ -90,5 +90,3 @@ full_schema.graphql
 /.vs/graphql-schema/FileContentIndex/10f8110d-ff87-437b-9ec4-cc11f1954ece.vsidx
 /.vs/graphql-schema/FileContentIndex/09fb5257-fe84-4af1-b516-60dc29078603.vsidx
 *.vsidx
-000.testlog
-testlog.manifest
