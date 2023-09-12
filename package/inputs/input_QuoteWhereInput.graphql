@@ -4,5 +4,5 @@ input QuoteWhereInput {
   """ optionID for which you want to make a quote """ 
   optionId: String!
   """ passengers List of passengers included in reservation """
-  passengers : [int!]!
+  passengers : [int!]
 }
