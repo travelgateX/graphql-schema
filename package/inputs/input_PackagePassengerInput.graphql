@@ -1,6 +1,8 @@
 input PackagePassengerInput {
   """ Passenger age """
   age: Int!  
+  """ Date of birth for the specified passenger """
+  birthDate: DateTime
   """ Number of the identity document """
   documentNumber: String!
   """ Type of identity document (ID_CARD, PASSPORT)"""
