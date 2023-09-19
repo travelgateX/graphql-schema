@@ -1,0 +1,8 @@
+type StatsRealTimeRangeData{
+  # real 'from' datetime 
+  from:  DateTime
+  # real 'to' datetime
+  to: DateTime
+}
+
+

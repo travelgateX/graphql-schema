@@ -1,0 +1,6 @@
+input StatsRealTimeRangeWhereInput{
+  " Input time "  
+  timeRange: TimeRangeInput!
+  " Time aggregation "
+  groupByTime: StatsTimeGroupBy
+}

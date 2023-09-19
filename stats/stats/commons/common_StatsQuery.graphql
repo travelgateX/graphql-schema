@@ -5,4 +5,6 @@ extend type StatsQuery{
   getActiveConnection(filter: ActiveFilterInput!): ConnectionConnection!
   """ Query to retrieve Stats Aggregated """
   getAggregationStats(where: StatsAggregationConnectionWhereInput! groupBy:StatsAggregationConnectionGroupByInput!): StatsAggregationConnection!
+  """ Query to retrieve Real Time Range will be return according to TimeRange input"""
+  getRealTimeRangeStats(where: StatsRealTimeRangeWhereInput!): StatsRealTimeRange!
 }

@@ -1,0 +1,5 @@
+type StatsRealTimeRange{
+  realTimeRangeData: StatsRealTimeRangeData
+  adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
+}
+
