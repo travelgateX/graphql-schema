@@ -28,8 +28,8 @@ input ProfileUpdateInput {
   buyerTechBridge: String
   sellerTechBridge: String
   country: String
-  crm_id: String
-  main_markets: [String]
+  crmId: String
+  mainMarkets: [String!]
   buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
   isDemandBridge: Boolean
