@@ -22,6 +22,8 @@ input ProfileCreateInput {
   buyerTechBridge: String
   sellerTechBridge: String
   country: String
+  crmId: String!
+  mainMarkets: [String!]
   buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
 }

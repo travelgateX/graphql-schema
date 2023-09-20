@@ -8,6 +8,8 @@ type ProfileData {
   slug: String!
   assets: [Asset!]
   country: String
+  crmId: String
+  mainMarkets: [String!]
   description: String
   classifications: [ProfileClassification!]
   websiteUrl: String
