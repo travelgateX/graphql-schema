@@ -10,5 +10,5 @@ type FerryOfferData {
   price: Price
   """i.e. Seat, Cabin, etc."""
   accommodation: FerryAccommodation
-  cancelPolicy: CancelPolicy
+  cancelPolicy: FerryCancelPolicy
 }
