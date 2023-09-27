@@ -1,0 +1,7 @@
+""" Information about a policy cancellation. """
+type FerryCancelPolicy {
+  """ Indicates if the option is refundable or non-refundable """
+  refundable: Boolean!
+  """ List of cancellation penalties """
+  cancelPenalties: [FerryCancelPenalty!]
+}
