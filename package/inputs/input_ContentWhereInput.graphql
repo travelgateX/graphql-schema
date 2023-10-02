@@ -1,4 +1,6 @@
 ﻿input ContentWhereInput {
-  """ string that represents the static info from each package """
+   """ Node that represents the configuration for an specified request"""
+   settings: PackageInputSettings!
+   """ string that represents the static info from each package """
   packageCode: String!
 }
