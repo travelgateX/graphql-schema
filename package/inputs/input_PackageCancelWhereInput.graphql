@@ -1,6 +1,7 @@
 input PackageCancelWhereInput {
-    """ String that represents the connection with a supplier it will be given to you (can be TEST or PRO)"""
-    access: String!
+
+    """ Node that represents the configuration for an specified request"""
+    settings: PackageInputSettings!
     """ Node that contains the client and supplier reference of a booking """
     reference: PackageBookReference!
 }

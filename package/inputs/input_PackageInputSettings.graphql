@@ -1,0 +1,6 @@
+input PackageInputSettings {
+    """ String that represents the connection with a supplier it will be given to you (can be TEST or PRO)"""
+    access: String!
+    """ String that represents the id for a client given"""
+    clientId: String!
+}
