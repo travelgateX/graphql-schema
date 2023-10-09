@@ -5,7 +5,9 @@ type SocialMutation {
 
   updateProfile(where: ProfileWhereUniqueInput!, data: ProfileUpdateInput!): ProfileV2!
 
-  deleteProfile(where: ProfileWhereUniqueInput!): ProfileV2!
+  archiveProfile(where: ProfileWhereUniqueInput!): ProfileV2!
+
+  unarchiveProfile(where: ProfileWhereUniqueInput!): ProfileV2!
 
   # Categories
   createCategory(data: CategoryCreateInput!): SocialCategory!
@@ -25,6 +27,10 @@ type SocialMutation {
   createUserProfile(data: UserProfileCreateInput!): UserProfile!
 
   updateUserProfile(where: UserProfileWhereUniqueInput!, data: UserProfileUpdateInput!): UserProfile!
+
+  archiveUserProfile(where: UserProfileWhereUniqueInput!): UserProfile!
+
+  unarchiveUserProfile(where: UserProfileWhereUniqueInput!): UserProfile!
 
   # Invitations
   createInvitation(data: InvitationCreateInput!): Invitation!
