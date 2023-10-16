@@ -6,6 +6,15 @@ type HotelXAccessSpan {
   # Contains access information.
   access:          Access!
 
+  # Num hotels requested
+  hotelsRequested: Int
+
+  # Num hotels returned
+  hotelsReturned: Int
+
+  # Num hotels returned after roomDescription plugin filtering
+  hotelsReturnedAfterRoomDescFilter: Int
+
   # Contains transaction information
   transactionSpans: [HotelXTransactionSpan!]    
 }
