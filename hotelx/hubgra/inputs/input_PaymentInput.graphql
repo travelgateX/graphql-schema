@@ -1,0 +1,4 @@
+input PaymentInput {
+    type: PaymentType!
+    paymentCard :PaymentCardInput
+}

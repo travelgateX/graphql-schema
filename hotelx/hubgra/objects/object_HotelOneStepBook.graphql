@@ -1,0 +1,5 @@
+type HotelOneStepBook {
+    booking: HotelBookingDetail
+
+    adviseMessage:[AdviseMessage!] #AdviseMessage
+}

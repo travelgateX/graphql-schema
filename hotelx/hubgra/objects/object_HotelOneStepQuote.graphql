@@ -1,0 +1,6 @@
+type HotelOneStepQuote {
+    optionQuote:HotelOptionQuote
+    adviseMessage:[AdviseMessage!] #AdviseMessage
+}
+
+

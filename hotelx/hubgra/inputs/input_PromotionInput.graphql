@@ -1,0 +1,7 @@
+input PromotionInput {
+    code :String!
+    name :String
+    supplierCode: String
+    start :String
+    end :String
+}

@@ -1,0 +1,14 @@
+type RoomOneStepOptionQuote {
+
+    occupancyRefId :ID!
+    #ID reference to the occupancy
+
+    code: String!
+    #Indicates the room code
+
+    supplierCode: String!
+    # Supplier s room code.
+
+    description: String
+    #  Description about the room
+}
