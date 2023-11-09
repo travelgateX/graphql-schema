@@ -1,3 +1,5 @@
 input FerryGetBookingWhereInput {
   locator: String
+  """ Node that represents the configuration for an specified request"""
+  inputSettings: FerryInputSettings!
 }

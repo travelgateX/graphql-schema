@@ -4,5 +4,7 @@ input FerryQuoteWhereInput {
   """To get resident rates."""
   isResident: Boolean!
   departureOfferCode: ID
-  returnOfferCode: ID = ""
+  returnOfferCode: ID = ""  
+  """ Node that represents the configuration for an specified request"""
+  inputSettings: FerryInputSettings!
 }

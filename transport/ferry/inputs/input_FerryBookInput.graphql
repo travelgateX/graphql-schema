@@ -8,4 +8,6 @@ input FerryBookInput {
   """Main passenger."""
   holder: HolderInput
   traveller: TravellerBookInput
+  """ Node that represents the configuration for an specified request"""
+  inputSettings: FerryInputSettings!
 }
