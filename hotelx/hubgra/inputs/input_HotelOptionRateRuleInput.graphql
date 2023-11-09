@@ -1,0 +1,6 @@
+input HotelOptionRateRuleInput {
+    # Rate rule type
+    type: RateRulesType!
+    # Rates applied to the option
+    rates: [HotelOptionRateInput!]
+}

@@ -1,0 +1,8 @@
+enum ComparisonField {
+    BOARD
+    CANCEL_POLICY
+    RATE_PLAN
+    RATE_RULES_EXTENDED
+    SURCHARGES
+    SUPPLEMENTS
+}

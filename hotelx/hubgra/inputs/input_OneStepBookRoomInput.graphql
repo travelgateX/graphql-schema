@@ -1,0 +1,12 @@
+input OneStepBookRoomInput {
+    # The room's reference in the booking
+    occupancyRefId: Int!
+
+    #Room code
+    code: String!
+
+    promotions:[PromotionInput!]
+
+    # The list or lists of paxes of the room
+    paxes: [BookPaxInput!]!
+}

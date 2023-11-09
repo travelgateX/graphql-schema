@@ -1,0 +1,6 @@
+input HotelFilterInput {
+    access: ID!
+
+    #Input type to specify fields that must be excluded from comparison. If the list is empty, all fields will be compared.
+    excludeComparisonFields: [ComparisonField]
+}

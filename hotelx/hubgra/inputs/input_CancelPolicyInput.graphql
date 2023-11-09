@@ -1,0 +1,8 @@
+# Information about a policy cancellation.
+input CancelPolicyInput {
+    # Indicates if the option is refundable or non-refundable
+    refundable: Boolean!
+
+    # List of cancellation penalties
+    cancelPenalties: [CancelPenaltyInput!]
+}
