@@ -11,5 +11,7 @@ input FerrySearchWhereInput {
   """Route information."""
   journey: JourneyInput
   """Unique identifiers of Access"""
-  accesses:[ID!]
+  accesses:[ID!]    
+  """ Node that represents the configuration for an specified request"""
+  inputSettings: FerryInputSettings!
 }
