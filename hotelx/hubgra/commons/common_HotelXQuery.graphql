@@ -50,4 +50,7 @@ extend type HotelXQuery {
 
     # Returns detailed information about booking rooms amendment 
   quoteRoomsAmendment(criteria: HotelCriteriaAmendRoomsQuoteInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+  # Effortlessly make a quote in just one straightforward process
+  oneStepQuote(input: HotelOneStepQuoteInput! settings: HotelSettingsInput! filter: HotelFilterInput!): HotelOneStepQuote!
 }

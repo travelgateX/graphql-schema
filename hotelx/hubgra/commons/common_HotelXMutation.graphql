@@ -24,4 +24,7 @@ extend type HotelXMutation {
 
   # Commits the previous quoted rooms amendment
   amendRooms(data: HotelAmendRoomsCommitInput!, settings: HotelSettingsInput): HotelBookingAmend
+
+  # Effortlessly make a reservation in just one straightforward process
+  oneStepBook(input: HotelOneStepBookInput!, settings: HotelSettingsInput!,filter: HotelFilterInput!): HotelOneStepBook!
 }
