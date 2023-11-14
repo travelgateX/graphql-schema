@@ -12,7 +12,7 @@ input HotelOneStepQuoteInput {
 
     occupancies: [RoomInput!]!
 
-    # Rooms within this option.
+    # Rooms within the option.
     rooms: [OneStepBookRoomInput!]
 
     # Supplier's board code.
