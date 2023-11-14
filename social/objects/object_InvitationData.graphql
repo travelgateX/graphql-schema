@@ -1,7 +1,0 @@
-type InvitationData {
-  id: ID!
-  userEmail: ID
-  orgCode: ID
-  role: String
-  invitedBy: ID
-}

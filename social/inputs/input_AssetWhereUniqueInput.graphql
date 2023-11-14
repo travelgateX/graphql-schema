@@ -1,4 +1,0 @@
-input AssetWhereUniqueInput {
-  handle: String
-  id: Int
-}

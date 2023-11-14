@@ -1,4 +1,0 @@
-type InvitationEdge {
-  node: Invitation
-  cursor: String!
-}

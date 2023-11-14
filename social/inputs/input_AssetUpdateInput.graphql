@@ -1,3 +1,0 @@
-input AssetUpdateInput {
-  name: String!
-}

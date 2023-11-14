@@ -1,7 +1,0 @@
-# You only can save one of each type
-enum AssetType {
-  BANNER
-  DOCUMENT
-  ICON
-  LOGO
-}
