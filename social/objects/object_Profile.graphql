@@ -1,30 +1,7 @@
 type Profile {
+  code: ID!
   profileData: ProfileData
-  id: Int!
-  name: String!
-  owner: Organization!
-  group: Group!
-  status: Status!
-  order: Float!
-  slug: String!
-  assets: [Asset!]
-  description: String
-  classifications: [ProfileClassification!]
-  websiteUrl: String
-  buyerPartnerStatus: PartnerStatusType
-  sellerPartnerStatus: PartnerStatusType
-  buyerOnboardingStart: Date
-  buyerOnboardingEnd: Date
-  sellerOnboardingStart: Date
-  sellerOnboardingEnd: Date
-  buyerFirstBooking: Date
-  buyerLastBooking: Date
-  sellerFirstBooking: Date
-  sellerLastBooking: Date
-  sellerIntegrationType: [SellerIntegrationType!]
-  buyerIntegrationType: [BuyerIntegrationType!]
-  buyerOrgType: BuyerCompanyType
-  sellerOrgType: SellerCompanyType
-  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
-  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+  createdAt: DateTime
+  updatedAt: DateTime
 }

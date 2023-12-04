@@ -3,9 +3,6 @@ input UserOnboardingUpdateInput {
   finishedAt: Date
   organizationCreated: Date
   userDetailsFinishedAt: Date
-  sqlStartedAt: Date
-  sqlFinishedAt: Date
-  sqlStatus: SqlStatusType
   billingAccountCreated: Date
   tcpId: String
   annexBuyerId: String

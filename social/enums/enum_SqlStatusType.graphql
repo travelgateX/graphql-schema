@@ -1,5 +1,0 @@
-enum SqlStatusType {
-  PENDING
-  OK
-  NOK
-}

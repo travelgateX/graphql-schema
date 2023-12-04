@@ -1,9 +1,0 @@
-input AssetCreateThroughCreatingOtherSubentity {
-  handle: String!
-  height: Float
-  mimeType: String!
-  name: String
-  size: Float!
-  type: AssetType!
-  width: Float
-}

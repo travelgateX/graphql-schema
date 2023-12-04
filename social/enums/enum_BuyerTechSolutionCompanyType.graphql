@@ -1,4 +1,0 @@
-# Status of the profile
-enum BuyerTechSolutionCompanyType {
-  TECH_PLATFORM
-}

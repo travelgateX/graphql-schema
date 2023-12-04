@@ -1,40 +1,42 @@
 input ProfileUpdateInput {
-  Asset: AssetUpdateManyThroughUpdatingOtherSubentity
-  classifications: ProfileCreateOrUpdateClassificationsInput
-  description: String
-  groupCode: ID
-  name: String
-  order: Float
-  ownerCode: ID
-  slug: String
   status: Status
+  name: String
+  crmId: String
+  ownerCode: ID
+  groupCode: ID
+  logoUrl: String
   websiteUrl: String
-  buyerPartnerStatus: PartnerStatusType
-  sellerPartnerStatus: PartnerStatusType
+  description: String
+  mainMarkets: [String]
+
   buyerOnboardingStart: Date
   buyerOnboardingEnd: Date
-  sellerOnboardingStart: Date
-  sellerOnboardingEnd: Date
   buyerFirstBooking: Date
   buyerLastBooking: Date
+  buyerIntegrationType: [buyer_integration_type!]
+  buyerPartnerStatus: PartnerStatusType
+  buyerTechBridge: String
+
+  sellerOnboardingStart: Date
+  sellerOnboardingEnd: Date
   sellerFirstBooking: Date
   sellerLastBooking: Date
-  sellerIntegrationType: [SellerIntegrationType!]
-  buyerIntegrationType: [BuyerIntegrationType!]
-  buyerOrgType: BuyerCompanyType
-  sellerOrgType: SellerCompanyType
-  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
-  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
-  buyerTechBridge: String
+  sellerIntegrationType: [seller_integration_type!]
+  sellerPartnerStatus: PartnerStatusType
   sellerTechBridge: String
+
   country: String
-  crmId: String
-  mainMarkets: [String!]
+
+  # Categories fields
   buyerCategoryPropertiesInput: BuyerCategoryPropertiesInput
   sellerCategoryPropertiesInput: SellerCategoryPropertiesInput
   isDemandBridge: Boolean
   isSupplyBridge: Boolean
-  internalExtendedInfoInput: InternalExtendedInfoInput  
+
+  # InternalExtendedInfo fields
+  internalExtendedInfoInput: InternalExtendedInfoInput
+
+  # InsightsCountry fields
   buyerInsightsCountriesInput: [InsightsCountriesInput]
   sellerInsightsCountriesInput: [InsightsCountriesInput]
 }

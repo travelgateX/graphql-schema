@@ -1,43 +1,44 @@
 type ProfileData {
-  id: Int!
+  status: Status!
   name: String!
+  slug: String!
+  crmId: String
   owner: Organization!
   group: Group!
-  status: Status!
-  order: Float!
-  slug: String!
-  assets: [Asset!]
   country: String
-  crmId: String
-  mainMarkets: [String!]
-  description: String
-  classifications: [ProfileClassification!]
+  logoUrl: String
   websiteUrl: String
-  buyerPartnerStatus: PartnerStatusType
-  sellerPartnerStatus: PartnerStatusType
+  description: String
+  mainMarkets: [String]
+
   buyerOnboardingStart: Date
   buyerOnboardingEnd: Date
-  sellerOnboardingStart: Date
-  sellerOnboardingEnd: Date
   buyerFirstBooking: Date
   buyerLastBooking: Date
+  buyerIntegrationType: [buyer_integration_type!]
+  buyerPartnerStatus: PartnerStatusType
+  buyerTechBridge: String
+
+  sellerOnboardingStart: Date
+  sellerOnboardingEnd: Date
   sellerFirstBooking: Date
   sellerLastBooking: Date
-  sellerIntegrationType: [SellerIntegrationType!]
-  buyerIntegrationType: [BuyerIntegrationType!]
-  buyerOrgType: BuyerCompanyType
-  sellerOrgType: SellerCompanyType
-  buyerTechPlatformOrgType: BuyerTechSolutionCompanyType
-  sellerTechPlatformOrgType: SellerTechSolutionCompanyType
-  buyerTechBridge: String
+  sellerIntegrationType: [seller_integration_type!]
+  sellerPartnerStatus: PartnerStatusType
   sellerTechBridge: String
+
+  # Categories fields added
   buyerCategory: String
   sellerCategory: String
   buyerSubCategory: String
   sellerSubCategory: String
   isDemandBridge: Boolean
   isSupplyBridge: Boolean
+
+  # Added node to set all InternalExtendedInfo fields
   internalExtendedInfo: InternalExtendedInfo
+
+  # Added node to manage the countries with each profiles works
   buyerInsightsCountries: [InsightsCountry]
   sellerInsightsCountries: [InsightsCountry]
 }

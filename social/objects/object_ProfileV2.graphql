@@ -1,7 +1,0 @@
-type ProfileV2 {
-  code: ID!
-  profileData: ProfileData
-  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
-  createdAt: DateTime
-  updatedAt: DateTime
-}

@@ -1,23 +1,9 @@
 input ProfileOrderByInput {
-  apiTypes: SortOrder
-  buyerCategories: SortOrder
-  classifications: SortOrder
-  clientCodes: SortOrder
-  code: SortOrder
-  createdAt: SortOrder
-  description: SortOrder
-  groupCode: SortOrder
-  id: SortOrder
-  name: SortOrder
-  order: SortOrder
-  ownerCode: SortOrder
-  partnerCategories: SortOrder
-  sellerCategories: SortOrder
-  sellerIntegrationTypes: SortOrder
-  slug: SortOrder
   status: SortOrder
-  supplierCodes: SortOrder
-  types: SortOrder
+  name: SortOrder
+  ownerCode: SortOrder
+  groupCode: SortOrder
+  
+  createdAt: SortOrder
   updatedAt: SortOrder
-  websiteUrl: SortOrder
 }
