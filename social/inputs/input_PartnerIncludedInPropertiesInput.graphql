@@ -1,0 +1,5 @@
+input PartnersIncludedInInput {
+  orgCode: ID!
+  jobTittle: String
+  department: String
+}

@@ -1,0 +1,5 @@
+input PartnersIncludedInInput {
+  add: [PartnerIncludedInPropertiesInput]
+  update: [PartnerIncludedInPropertiesInput]
+  delete: [PartnerIncludedInPropertiesInput]
+}
