@@ -1,0 +1,5 @@
+input PartnerIncludedInPropertiesInput {
+  orgCode: ID!
+  jobTittle: String
+  department: String
+}

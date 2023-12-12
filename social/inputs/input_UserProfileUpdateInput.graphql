@@ -6,4 +6,5 @@ input UserProfileUpdateInput {
   department: String
   headquarters: String
   onboardingProperties: UserOnboardingUpdateInput
+  partnersIncludedInInput: PartnersIncludedInInput
 }

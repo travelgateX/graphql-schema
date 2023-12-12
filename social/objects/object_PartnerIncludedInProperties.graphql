@@ -1,0 +1,5 @@
+type PartnerIncludedInProperties {
+  organization: Organization!
+  jobTitle: String
+  department: String
+}

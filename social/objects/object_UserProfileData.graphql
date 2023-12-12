@@ -7,4 +7,5 @@ type UserProfileData {
   headquarters: String
   favouritePartners: [OrganizationEdge]
   onboardingProperties: UserOnboardingData
+  partnersIncludedIn: [PartnerIncludedInProperties!]
 }
