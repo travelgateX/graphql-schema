@@ -1,5 +1,5 @@
 input PartnerIncludedInPropertiesInput {
   orgCode: ID!
-  jobTittle: String
+  jobTitle: String
   department: String
 }
