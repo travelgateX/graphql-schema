@@ -32,11 +32,6 @@ type SocialMutation {
 
   unarchiveUserProfile(where: UserProfileWhereUniqueInput!): UserProfile!
 
-  # Invitations
-  createInvitation(data: InvitationCreateInput!): Invitation!
-
-  updateInvitation(where: InvitationWhereUniqueInput!, data: InvitationUpdateInput!): Invitation!
-
   # FavouritePartner
   createFavouritePartner(data: FavouritePartnerCreateInput): Organization!
 
