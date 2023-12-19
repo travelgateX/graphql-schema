@@ -53,4 +53,7 @@ extend type HotelXQuery {
 
   # Effortlessly make a quote in just one straightforward process
   oneStepQuote(input: HotelOneStepQuoteInput! settings: HotelSettingsInput! filter: HotelFilterInput!): HotelOneStepQuote!
+
+  # Gets the information from HotelX certification of a partner
+  certifications(data: CertificationReadInput!): CertificationConnection!
 }

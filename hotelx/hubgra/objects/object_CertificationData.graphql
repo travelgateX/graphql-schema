@@ -1,0 +1,6 @@
+type CertificationData {
+  code: ID!
+  certified: Boolean!
+  # List of validations necessary to certificate.
+  validations: [Validation!]
+}

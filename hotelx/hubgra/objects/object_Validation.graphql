@@ -1,0 +1,8 @@
+type Validation {
+  # Indicates the current status of the validation
+  status: ValidationStatusType!
+  # Indicates the scenario being validated
+  scenario: String!
+  # Indicates the error if the validation has failed
+  error: String
+}
