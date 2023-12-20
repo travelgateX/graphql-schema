@@ -3,6 +3,6 @@ type Validation {
   status: ValidationStatusType!
   # Indicates the scenario being validated
   scenario: String!
-  # Indicates the error if the validation has failed
-  error: String
+  # Indicates the errors that caused the validation to fail
+  error: [String!]
 }
