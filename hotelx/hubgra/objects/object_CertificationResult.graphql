@@ -1,0 +1,6 @@
+type CertificationResult {
+  # It tells if the certification has been initiated
+  written: Boolean!
+  # List of advise messages.
+  adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
+}

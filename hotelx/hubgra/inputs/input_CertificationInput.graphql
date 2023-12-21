@@ -1,4 +1,4 @@
-input CertificationReadInput {
+input CertificationInput {
   # Buyer's organization code
   organizationCode: ID!
 }
