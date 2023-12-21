@@ -3,6 +3,5 @@ type TrafficOptimizationConnection {
   trafficOptimizationConnectionData: TrafficOptimizationConnectionData
   createdAt: DateTime!
   updatedAt: DateTime!
-  historicalActions: TrafficOptimizationHistoricalActions
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }

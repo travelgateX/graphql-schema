@@ -3,5 +3,5 @@ type TrafficOptimizationHistoricalAction{
   actionType: TrafficOptimizationActionType!
   requestedBy: TrafficOptimizationRequester!
   modifiedBy: String!
-  criterias: [TrafficOptimizationCriteriaType!]!
+  criterias: [TrafficOptimizationCriteriaType!]
 }

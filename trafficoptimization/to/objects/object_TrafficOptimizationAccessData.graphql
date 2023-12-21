@@ -1,5 +1,6 @@
 type TrafficOptimizationAccessData {
   code: ID!
+  historicalActions: TrafficOptimizationHistoricalActions
   configuration: TrafficOptimizationConfiguration!
   access: Access!
 }
