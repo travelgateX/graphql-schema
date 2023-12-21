@@ -4,4 +4,13 @@ enum TrafficOptimizationActionType {
 
   # DEACTIVATE traffic optimization.
   DEACTIVATE
+
+  # CREATE traffic optimization.
+  CREATE
+
+  # UPDATE traffic optimization.
+  UPDATE
+
+  # CRITERIA for traffic optimization.
+  CRITERIA
 }
