@@ -3,5 +3,6 @@ type TrafficOptimizationAccess {
   trafficOptimizationAccessData: TrafficOptimizationAccessData
   createdAt: DateTime!
   updatedAt: DateTime!
+  allHistoricalActions: TrafficOptimizationHistoricalActions
   adviseMessage(level: [AdviseMessageLevel]): [AdviseMessage!]
 }

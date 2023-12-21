@@ -1,0 +1,7 @@
+type TrafficOptimizationHistoricalAction{
+  date: DateTime!
+  action: String!
+  requestedBy: TrafficOptimizationRequester!
+  member: String!
+  criterias: [TrafficOptimizationCriteriaType!]!
+}
