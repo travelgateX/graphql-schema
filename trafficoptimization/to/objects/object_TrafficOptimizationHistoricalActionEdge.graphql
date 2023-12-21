@@ -1,4 +1,7 @@
-type TrafficOptimizationHistoricalActions{
-  totalCount: Int!
-  edges: [TrafficOptimizationHistoricalAction]
+type TrafficOptimizationHistoricalAction{
+  date: DateTime!
+  action: String!
+  requestedBy: TrafficOptimizationRequester!
+  member: String!
+  criterias: [TrafficOptimizationCriteriaType!]!
 }
