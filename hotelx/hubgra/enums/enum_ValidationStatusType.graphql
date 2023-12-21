@@ -1,0 +1,5 @@
+enum ValidationStatusType {
+  PENDING
+  OK
+  ERROR
+}

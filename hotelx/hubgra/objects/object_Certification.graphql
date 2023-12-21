@@ -1,0 +1,8 @@
+type Certification {
+  code: ID!
+  certificationData: CertificationData
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  # List of advise messages.
+  adviseMessage: [AdviseMessage!]
+}

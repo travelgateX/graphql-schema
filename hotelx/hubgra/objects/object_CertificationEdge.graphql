@@ -1,0 +1,4 @@
+type CertificationEdge {
+  node: Certification
+  cursor: String!
+}
