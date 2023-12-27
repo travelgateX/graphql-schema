@@ -27,4 +27,7 @@ extend type HotelXMutation {
 
   # Effortlessly make a reservation in just one straightforward process
   oneStepBook(input: HotelOneStepBookInput!, settings: HotelSettingsInput!,filter: HotelFilterInput!): HotelOneStepBook!
+
+  # Initiates a HotelX certification of a partner
+  certification(data: CertificationInput!): CertificationResult
 }

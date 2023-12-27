@@ -55,5 +55,5 @@ extend type HotelXQuery {
   oneStepQuote(input: HotelOneStepQuoteInput! settings: HotelSettingsInput! filter: HotelFilterInput!): HotelOneStepQuote!
 
   # Gets the information from HotelX certification of a partner
-  certifications(data: CertificationReadInput!): CertificationConnection!
+  certifications(data: CertificationInput!): CertificationConnection!
 }
