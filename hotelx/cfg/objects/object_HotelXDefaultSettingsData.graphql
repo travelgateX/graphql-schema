@@ -21,4 +21,6 @@ type HotelXDefaultSettingsData {
   cache: [String!]
   # Default plugins
   plugins: [HotelXDefaultPluginStep!]
+  # Default personal title
+  title: PersonalTitleType
 }

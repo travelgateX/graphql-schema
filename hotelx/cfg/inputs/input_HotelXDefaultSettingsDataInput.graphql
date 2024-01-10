@@ -20,4 +20,6 @@ input HotelXDefaultSettingsDataInput {
   defaultAccesses: [ID!]
   # Indica
   defaultPlugins: [HotelXDefaultPluginStepInput!]
+  # Default personal title
+  title: PersonalTitleType
 }
