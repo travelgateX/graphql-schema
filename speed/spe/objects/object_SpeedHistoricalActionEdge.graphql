@@ -1,0 +1,8 @@
+type SpeedHistoricalAction{
+  date:		 	DateTime!
+  actionType: 	SpeedActionType!
+  requestedBy: 	SpeedRequester!
+  modifiedBy: 	String!
+  ttl: 			[SpeedTtl!]
+  rqMode: 		SpeedRQMode
+}

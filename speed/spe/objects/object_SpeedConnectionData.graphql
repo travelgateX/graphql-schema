@@ -3,5 +3,6 @@ type SpeedConnectionData{
     buyer: SpeedOrganization! 
     seller: SpeedOrganization! 
     accesses: SpeedAccessCollection
+    historicalActions: SpeedHistoricalActions
     configuration: SpeedConfiguration!
 }

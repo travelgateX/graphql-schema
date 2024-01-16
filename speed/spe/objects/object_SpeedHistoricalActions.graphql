@@ -1,0 +1,4 @@
+type SpeedHistoricalActions{
+  totalCount: Int!
+  edges: [SpeedHistoricalAction]
+}

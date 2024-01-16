@@ -1,0 +1,6 @@
+enum SpeedActionType {
+    ACTIVATE
+    DEACTIVATE
+    TTL_UPDATE
+    RQM_UPDATE
+}
