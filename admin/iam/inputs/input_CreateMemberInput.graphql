@@ -5,4 +5,5 @@ input CreateMemberInput{
   group: ID!
   role:  ID!
   resources:  [ID!]!
+  password:  String
 }
