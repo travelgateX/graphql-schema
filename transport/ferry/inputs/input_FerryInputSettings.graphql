@@ -1,4 +1,5 @@
 input FerryInputSettings {
     """ String that represents the id for a client given"""
     clientId: String!
+    context: String!
 }
