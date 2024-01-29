@@ -16,7 +16,7 @@ input HotelOneStepQuoteInput {
     rooms: [OneStepBookRoomInput!]
 
     # Supplier's board code.
-    board: String!
+    board: String
 
     # Language to be used in request
     language: String
@@ -40,7 +40,7 @@ input HotelOneStepQuoteInput {
     nationality: String
 
     # Specifies the cancel policies that the option booked must have.
-    cancelPolicy: CancelPolicyInput!
+    cancelPolicy: CancelPolicyInput
 
 
     # Targeted zone, country or point-of-sale to be used in request.
