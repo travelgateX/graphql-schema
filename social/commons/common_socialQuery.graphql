@@ -25,4 +25,6 @@ type SocialQuery {
 
   # UserProfile
   userProfile(where: UserProfileWhereUniqueInput): UserProfile!
+
+  allUserProfiles(where: UserProfileWhereInput): UserProfileConnection!
 }
