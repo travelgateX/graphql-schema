@@ -3,6 +3,6 @@ type SpeedConnectionData{
     buyer: SpeedOrganization! 
     seller: SpeedOrganization! 
     accesses: SpeedAccessCollection
-    historicalActions: SpeedHistoricalActions
+    historicalActions(where: HistoricalActionsWhereInput ): SpeedHistoricalActions
     configuration: SpeedConfiguration!
 }
