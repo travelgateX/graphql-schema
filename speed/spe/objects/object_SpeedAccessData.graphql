@@ -1,6 +1,6 @@
 type SpeedAccessData {
     code: ID!
     access: Access!
-    historicalActions: SpeedHistoricalActions
+    historicalActions(where: HistoricalActionsWhereInput ): SpeedHistoricalActions
     configuration: SpeedConfiguration!
 }
