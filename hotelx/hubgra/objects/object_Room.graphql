@@ -43,6 +43,6 @@ type Room {
   # pleasant or comfortable for people, Examples include: swimming pools, shopping centers, etc.
   amenities: [Amenity!]
 
-  # Specifies cancel policies of the option returned.
+  # Specifies cancel policies of this room.
   cancelPolicy: CancelPolicy
 }
