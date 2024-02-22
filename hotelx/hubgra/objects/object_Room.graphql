@@ -36,10 +36,13 @@ type Room {
   # List of surcharges of the option returned.
   surcharges: [Surcharge!]
 
-  # List of features of this room 
+  # List of features of this room
   features: [Feature!]
 
   # Room level amenities. Contains information regarding Amenities, Amenities is defined as something intended to make life more
   # pleasant or comfortable for people, Examples include: swimming pools, shopping centers, etc.
   amenities: [Amenity!]
+
+  # Specifies cancel policies of this room.
+  cancelPolicy: CancelPolicy
 }
