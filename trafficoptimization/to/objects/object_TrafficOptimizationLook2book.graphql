@@ -1,0 +1,4 @@
+type Look2book{
+  hits : ID
+  improvementPercentage: ID
+}

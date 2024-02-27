@@ -1,0 +1,5 @@
+type TrafficOptimizationAggregationPerformanceStatsConnection {
+  totalCount:Int!
+  edges :[TrafficOptimizationPerformanceStatsEdge!]
+  adviseMessage: [AdviseMessage!]
+}
