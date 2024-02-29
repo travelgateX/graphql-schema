@@ -1,0 +1,4 @@
+type TrafficOptimizationPerformanceStats {
+  performanceData: PerformanceData
+  adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
+}

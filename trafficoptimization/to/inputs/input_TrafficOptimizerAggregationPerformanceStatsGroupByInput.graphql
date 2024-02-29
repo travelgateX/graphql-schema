@@ -1,0 +1,6 @@
+input TrafficOptimizerAggregationPerformanceStatsGroupByInput{
+  " To group by data "
+  data: [TrafficOptimizationPerformanceDataGroupBy!]
+  " To group data by time "
+  time: StatsTimeGroupBy
+}

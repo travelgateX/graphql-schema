@@ -1,0 +1,9 @@
+input TrafficOptimizationAggregationPerformanceStatsWhereInput {
+  mode: ModeType!
+  buyer_in:[ID!]
+  seller_in:[ID!]
+  supplier_in:[ID!]
+  access_in:[ID!]
+  timeRange: TimeRangeInput!
+  groupBy: TrafficOptimizerAggregationPerformanceStatsGroupByInput
+}
