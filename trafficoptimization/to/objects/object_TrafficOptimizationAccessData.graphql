@@ -1,6 +1,6 @@
 type TrafficOptimizationAccessData {
   code: ID!
-  historicalActions: TrafficOptimizationHistoricalActions
+  historicalActions(where: HistoricalActionsWhereInput): TrafficOptimizationHistoricalActions
   configuration: TrafficOptimizationConfiguration!
   access: Access!
 }
