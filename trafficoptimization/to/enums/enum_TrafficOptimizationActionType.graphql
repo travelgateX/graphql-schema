@@ -9,8 +9,5 @@ enum TrafficOptimizationActionType {
   CREATE
 
   # UPDATE traffic optimization.
-  UPDATE
-
-  # CRITERIA for traffic optimization.
-  CRITERIA
+  UPDATE_CRITERIA
 }
