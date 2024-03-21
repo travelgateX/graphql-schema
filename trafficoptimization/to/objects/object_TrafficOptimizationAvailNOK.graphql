@@ -1,4 +1,5 @@
 type AvailNOK{
-  hits: ID
-  improvementPercentage: ID
+  hits: Int
+  percentage: Float
+  improvementPercentage: Float
 }
