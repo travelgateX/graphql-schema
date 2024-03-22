@@ -2,6 +2,7 @@ type PerformanceData {
   buyer: Organization
   seller: Organization
   access: Access
+  supplier: Supplier
   look2book: Look2book
   availNOK: AvailNOK
   adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
