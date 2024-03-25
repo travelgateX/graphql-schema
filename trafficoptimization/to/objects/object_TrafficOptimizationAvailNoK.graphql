@@ -1,4 +1,4 @@
-type AvailNOK{
+type AvailNoK{
   hits: Int
   percentage: Float
   improvementPercentage: Float
