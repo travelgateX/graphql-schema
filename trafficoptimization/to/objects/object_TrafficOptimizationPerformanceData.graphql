@@ -4,6 +4,6 @@ type PerformanceData {
   access: Access
   supplier: Supplier
   look2book: Look2book
-  availNOK: AvailNOK
+  availNoK: AvailNoK
   adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
 }
