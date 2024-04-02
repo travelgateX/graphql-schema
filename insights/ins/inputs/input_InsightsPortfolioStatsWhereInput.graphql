@@ -1,0 +1,14 @@
+input InsightsPortfolioStatsWhereInput{
+  " Retrieve data as a Buyer or as a Seller "  
+  mode: ModeType!
+  " Input time "  
+  timeRange: TimeRangeInput!
+  " List of buyer codes "  
+  buyer_in:[ID!]
+  " List of seller codes "  
+  seller_in:[ID!]
+  " List of supplier codes "
+  supplier_in:[ID!]
+  " List of status "  
+  status_in:[InsightsPortfolioStatus!]
+}
