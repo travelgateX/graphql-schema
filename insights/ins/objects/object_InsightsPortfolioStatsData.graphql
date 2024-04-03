@@ -1,0 +1,16 @@
+type InsightsPortfolioStatsData {
+" buyer code "
+buyer: Organization!
+" seller code"
+seller: Organization!
+" supplier code "
+supplier: Supplier!
+" date of the last day aggregation "
+date: DateTime!
+"number of hotels "
+hotels:Int!
+" status  "
+status: InsightsPortfolioStatus!
+" ratio of hotels status vs total hotels"
+ratio: Float!
+}

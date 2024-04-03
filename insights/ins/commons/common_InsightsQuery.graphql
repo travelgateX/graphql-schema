@@ -30,5 +30,7 @@ extend type InsightsQuery {
 	groupBy: [RecommendationsGroupByInput!]!
 	limit:   Int
 	relay:   RelayInput): RecommendationsConnection 
-  
+
+  """ Query to retrieve Portfolio stats by connection """
+  getPortfolioStats(where: InsightsPortfolioStatsWhereInput!): InsightsPortfolioStatsConnection!
 }

@@ -1,0 +1,4 @@
+type InsightsPortfolioStats{
+  portfolioStatsData: InsightsPortfolioStatsData
+  adviseMessage(level:AdviseMessageLevel):[AdviseMessage!]
+}

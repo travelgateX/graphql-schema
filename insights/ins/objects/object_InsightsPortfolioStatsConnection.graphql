@@ -1,0 +1,5 @@
+type InsightsPortfolioStatsConnection{
+  totalCount:Int!
+  edges :[InsightsPortfolioStatsEdge!]
+  adviseMessage: [AdviseMessage!]
+}
