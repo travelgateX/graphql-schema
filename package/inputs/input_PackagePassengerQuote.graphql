@@ -1,0 +1,4 @@
+input PackagePassengerQuote{
+  """ Passenger age """
+  age: Int!  
+}
