@@ -1,0 +1,10 @@
+type FerryCalendarPayLoadData {
+ """Accommodation details"""
+ accommodations: [FerryAccommodation]
+ """Boat information"""
+  boatName: String
+  """Journey details"""
+  journey: Journey
+  
+ 
+}

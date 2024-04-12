@@ -15,4 +15,5 @@ type TransportQuery {
   ): FerrySearchConnection
   ferryQuote(where: FerryQuoteWhereInput): FerryQuotePayload
   ferryBooking(where: FerryGetBookingWhereInput): FerryOrderPayload
+  ferryCalendar(where: FerryCalendarWhereInput): FerryCalendarConnection
 }
