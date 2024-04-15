@@ -1,0 +1,9 @@
+input FerryCalendarWhereInput {
+   """Unique identifiers of Access"""
+  accesses:[ID!]   
+  context: String 
+  """Month to find"""
+  monthFilter: Int!
+   """ Node that represents the configuration for an specified request"""
+  inputSettings: FerryInputSettings!
+}

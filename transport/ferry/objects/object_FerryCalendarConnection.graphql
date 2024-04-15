@@ -1,0 +1,12 @@
+"""A connection to a list of items."""
+type FerryCalendarConnection {
+  adviseMessages: [AdviseMessage]
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+  """A list of edges."""
+  edges: [FerryCalendarEdge!]
+  """A flattened list of the nodes."""
+  nodes: [FerryCalendarPayload]
+  """Identifies the total count of items in the connection."""
+  totalCount: Int!
+}

@@ -1,0 +1,7 @@
+type FerryCalendarPayload {
+ """Seller identifier"""
+  sourceCode: ID
+  """Routes related to current supplier"""
+  routesData: [FerryCalendarPayLoadData]
+ 
+}
