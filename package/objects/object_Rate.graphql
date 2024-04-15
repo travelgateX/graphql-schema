@@ -8,5 +8,5 @@ type Rate{
     """ Paxes applying to this price and option """
     paxes: Paxes
     """ Rooms applying to the option """
-    rooms: [Room]
+    rooms: [PackageRoom]
 }

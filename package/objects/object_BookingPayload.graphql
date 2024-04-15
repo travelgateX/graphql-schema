@@ -24,7 +24,7 @@ type BookingPayload {
   """ Paxes for the option """
   paxes: Paxes
   """ Rooms applying to the option """
-    rooms: [Room]
+  rooms: [PackageRoom]
   """ Price applied to the booking """
   price: PackagePrice
   """ Remarks of the booking (may not be specified in this query) """
