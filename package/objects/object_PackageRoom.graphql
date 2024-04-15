@@ -1,0 +1,6 @@
+type PackageRoom{
+    """ List of possible accomodations for this option """
+    accomodationRefs: [String]
+    """ List of passengers for the room """
+    pax: [PackagePax]
+}

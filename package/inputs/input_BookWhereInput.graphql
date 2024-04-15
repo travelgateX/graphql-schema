@@ -13,4 +13,6 @@ input BookWhereInput {
   passengers: [PackagePassengerInput!]!
   """ String list of tokens that are received in the itinerary map from quote """
   productTokens: [String!]!
+  """  List of rooms including pax info """
+  rooms : [RoomBook]
 }
