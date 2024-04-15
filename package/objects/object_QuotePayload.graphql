@@ -31,6 +31,8 @@ type QuotePayload {
   remarks: [Remark!]
   """ Paxes for the option """
   paxes: Paxes
+  """ Rooms applying to the option """
+    rooms: [PackageRoom]
   """ Status of the package (Available, On_Request...) """
   status: PackageStatus
   """ List of transports included in the booking """

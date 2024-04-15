@@ -5,4 +5,6 @@ input QuoteWhereInput {
   optionId: String!
   """ passengers List of passengers included in reservation """
   passengers : [Int!]
+  """ Rooms including the number of paxes in each one """
+  rooms : [RoomQuote]
 }

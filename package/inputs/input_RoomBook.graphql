@@ -1,0 +1,4 @@
+input RoomBook {
+  """ Information of each passenger for the room """
+  passengers: [PackagePassengerInput!]!
+}

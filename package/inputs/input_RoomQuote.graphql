@@ -1,0 +1,4 @@
+input RoomQuote {
+  """ Information of each passenger for the room """
+  passengers: [PackagePassengerQuote]
+}
