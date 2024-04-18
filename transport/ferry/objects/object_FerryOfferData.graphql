@@ -8,6 +8,7 @@ type FerryOfferData {
   """Seller defined rate category group."""
   rateGroup: Rategroup
   price: Price
+  residentPrice: Price
   """i.e. Seat, Cabin, etc."""
   accommodation: FerryAccommodation
   cancelPolicy: FerryCancelPolicy
