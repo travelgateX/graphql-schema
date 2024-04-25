@@ -1,4 +1,4 @@
-""" Constraint supplementary to an individual name specifically for the package API"""
+""" Constraint supplementary to an individual name specifically for Package API project """
 enum PackagePersonalTitleType {
   """ To refer to a single woman """
   MISS
