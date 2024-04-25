@@ -2,6 +2,7 @@ type FerryOrderPayload {
   adviseMessages: [AdviseMessage]
   status: String
   locator: String
+  supplierLocator: String
   departure: FerryOfferBook
   return: FerryOfferBook
   holder: Holder
