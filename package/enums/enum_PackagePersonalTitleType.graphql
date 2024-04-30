@@ -1,6 +1,11 @@
+""" Constraint supplementary to an individual name specifically for Package API project """
 enum PackagePersonalTitleType {
+  """ To refer to a single woman """
   MISS
+  """ To refer to a man not knowing if he's married or single """
   MR
+  """ To refer to a married woman """
   MRS
+  """ To refer to a woman not knowing if she's married or single """
   MS
 }
