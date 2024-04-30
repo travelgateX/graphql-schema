@@ -2,6 +2,8 @@ type FerryOrderPayload {
   adviseMessages: [AdviseMessage]
   status: String
   locator: String
+  """Locator without encoding"""
+  supplierLocator: String
   departure: FerryOfferBook
   return: FerryOfferBook
   holder: Holder
