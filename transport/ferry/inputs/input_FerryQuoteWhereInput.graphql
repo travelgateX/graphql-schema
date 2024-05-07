@@ -6,5 +6,7 @@ input FerryQuoteWhereInput {
   departureOfferCode: ID
   returnOfferCode: ID = ""  
   """ Node that represents the configuration for an specified request"""
-  inputSettings: FerryInputSettings!
+  inputSettings: FerryInputSettings!,
+  """To indicate the number of passengers who are going to use ferryBus by segment."""
+  ferryBusSegment: [Int!]
 }
