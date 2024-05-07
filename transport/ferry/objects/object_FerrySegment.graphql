@@ -1,4 +1,6 @@
 type FerrySegment {
   departure: FerryLocation
   arrival: FerryLocation
+  availableFerryBus: Boolean,
+  paxesFerryBus: Int
 }
