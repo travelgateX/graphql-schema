@@ -10,6 +10,8 @@ enum StatsInfoTypes{
   COMMUNICATION
   # Stats in NOK state caused by HUB issues
   HUB
+  # Stats in NOK state caused by SCHEDULER causes
+  SCHEDULER
   # Stats in NOK state caused by other causes
   OTHER
 }
