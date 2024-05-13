@@ -2,5 +2,7 @@ type FerrySegment {
   departure: FerryLocation
   arrival: FerryLocation
   availableFerryBus: Boolean,
+  carrierCode: String,
+  carrierTransportCode: String,
   paxesFerryBus: Int
 }
