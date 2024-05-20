@@ -4,5 +4,5 @@ type FerryOfferBook {
   """i.e. Seat, Cabin, etc."""
   accommodation: FerryAccommodation
   """ Seller defined rate category """
-  rateType: RateType
+  rateType: Ratetype
 }
