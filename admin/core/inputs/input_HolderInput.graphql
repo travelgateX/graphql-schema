@@ -11,4 +11,7 @@ input HolderInput {
   
   # Holder's contact info
   contactInfo: ContactInfoInput
+
+  # If passenger have a fidelity card
+  fidelityCard: String
 }
