@@ -2,7 +2,7 @@ type Profile {
   profileData: ProfileData
   id: Int!
   name: String!
-  owner: Organization!
+  owner: Organizations!
   group: Group!
   status: Status!
   order: Float!
