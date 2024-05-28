@@ -20,6 +20,9 @@ input HotelSettingsInput {
   # Timeout in milliseconds that will be applied to the connection with supplier/s. If more than one supplier is requested, timeout will be applied to all suppliers and cut the connection with those suppliers that exceed this timeout. Travelgate will not close the connection with the client if this timeout is exceeded.
   timeout: Int
   
+  # Milliseconds before the operation is cancelled. This is a hard limit that, when reached, will result in the operation being cancelled by our system.
+  operationTimeout: Int
+
   # Returns all the transactions exchanged with the supplier.
   auditTransactions: Boolean
   
