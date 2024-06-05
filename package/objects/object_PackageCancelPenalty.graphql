@@ -3,6 +3,8 @@ type PackageCancelPenalty {
   currency: String!
   """ End date where the penalty applies """
   deadline: String!
+  """ Init date where the penalty applies """
+  startDate: String!
   """ Description of the penalty """
   description: String
   """ Hours before the penalty starts applying """
