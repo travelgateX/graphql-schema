@@ -49,5 +49,11 @@ input HotelOneStepBookInput {
 
     payment: PaymentInput!
 
-    holder:HolderInput!
+    holder: HolderInput!
+
+    # DeltaPrice represents the allowable price variation between the quote and book methods set by the client.
+    # If the new price exceeds this limit, an error will be returned.
+    # If DeltaPrice is not provided a default value of 0 is assumed.
+    # This means the process will continue if the new price is lower or equal to the price shown in the valuation.
+    deltaPrice: DeltaPriceInput
 }
