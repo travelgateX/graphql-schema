@@ -1,0 +1,538 @@
+type Query {
+  bookingsBuyer(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingBuyerStatusChoices): BookingBuyerTypeConnection
+  bookingBuyer(
+    """The ID of the object"""
+    id: ID!
+  ): BookingBuyerType
+  bookingsSeller(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingSellerStatusChoices): BookingSellerTypeConnection
+  bookingSeller(
+    """The ID of the object"""
+    id: ID!
+  ): BookingSellerType
+  bookingsTravelgate(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingTravelgateStatusChoices): BookingTravelgateTypeConnection
+  bookingTravelgate(
+    """The ID of the object"""
+    id: ID!
+  ): BookingTravelgateType
+  _debug: DjangoDebug
+}
+
+type BookingBuyerTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [BookingBuyerTypeEdge]!
+}
+
+"""
+The Relay compliant `PageInfo` type, containing data necessary to paginate this connection.
+"""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+"""A Relay edge containing a `BookingBuyerType` and its cursor."""
+type BookingBuyerTypeEdge {
+  """The item at the end of the edge"""
+  node: BookingBuyerType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type BookingBuyerType implements Node {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  buyerReference: String
+  sellerReference: String
+  status: BookingsBookingBuyerStatusChoices!
+  cancellationData: CancellationDataType
+  anomalies: [BookingAnomalyType!]!
+  hotel: HotelType
+  cancellationPolicy: CancellationPolicyType
+  rooms: [RoomType!]!
+
+  """The ID of the object"""
+  id: ID!
+  netPayable: NetPayable
+}
+
+"""An object with an ID"""
+interface Node {
+  """The ID of the object"""
+  id: ID!
+}
+
+"""
+The `DateTime` scalar type represents a DateTime
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar DateTime
+
+"""An enumeration."""
+enum BookingsBookingBuyerStatusChoices {
+  """Confirmed"""
+  CONFIRMED
+
+  """On Request"""
+  ON_REQUEST
+
+  """Cancelled"""
+  CANCELLED
+
+  """Unknown"""
+  UNKNOWN
+}
+
+type CancellationDataType {
+  canceledAt: DateTime
+  netPayable: NetPayable
+}
+
+type NetPayable {
+  amount: Float
+  currency: String
+}
+
+type BookingAnomalyType {
+  createdAt: DateTime!
+  differences: JSONString!
+  resolved: Boolean!
+}
+
+"""
+Allows use of a JSON String for input / output from the GraphQL schema.
+
+Use of this type is *not recommended* as you lose the benefits of having a defined, static
+schema (one of the key benefits of GraphQL).
+"""
+scalar JSONString
+
+type HotelType {
+  """Unique code from the seller"""
+  codeSeller: String!
+
+  """Unique code from the buyer"""
+  codeBuyer: String
+  name: String!
+  address: String!
+
+  """ISO 3166-1 alpha-2 code"""
+  country: String!
+  coordinates: Coordinates
+}
+
+type Coordinates {
+  latitude: Float
+  longitude: Float
+}
+
+type CancellationPolicyType {
+  name: String
+  refundable: Boolean!
+  penalties: [CancellationPolicyPenaltyType!]!
+}
+
+type CancellationPolicyPenaltyType {
+  value: Decimal!
+
+  """ISO 4217 code"""
+  currency: String!
+  deadline: DateTime!
+}
+
+"""The `Decimal` scalar type represents a python Decimal."""
+scalar Decimal
+
+type RoomType {
+  checkIn: Date!
+  checkOut: Date!
+  guests: [GuestType]
+  room: RoomInfoType
+  board: BoardInfoType
+}
+
+"""
+The `Date` scalar type represents a Date
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar Date
+
+type GuestType {
+  age: Int
+}
+
+type RoomInfoType {
+  codeSeller: String
+  codeBuyer: String
+  description: String
+}
+
+type BoardInfoType {
+  codeSeller: String
+  codeBuyer: String
+  description: String
+}
+
+type BookingSellerTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [BookingSellerTypeEdge]!
+}
+
+"""A Relay edge containing a `BookingSellerType` and its cursor."""
+type BookingSellerTypeEdge {
+  """The item at the end of the edge"""
+  node: BookingSellerType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type BookingSellerType implements Node {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  buyerReference: String
+  sellerReference: String
+  status: BookingsBookingSellerStatusChoices!
+  cancellationData: CancellationDataType
+  anomalies: [BookingAnomalyType!]!
+  hotel: HotelType
+  cancellationPolicy: CancellationPolicyType
+  rooms: [RoomType!]!
+
+  """The ID of the object"""
+  id: ID!
+  netPayable: NetPayable
+}
+
+"""An enumeration."""
+enum BookingsBookingSellerStatusChoices {
+  """Confirmed"""
+  CONFIRMED
+
+  """On Request"""
+  ON_REQUEST
+
+  """Cancelled"""
+  CANCELLED
+
+  """Unknown"""
+  UNKNOWN
+}
+
+type BookingTravelgateTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [BookingTravelgateTypeEdge]!
+}
+
+"""A Relay edge containing a `BookingTravelgateType` and its cursor."""
+type BookingTravelgateTypeEdge {
+  """The item at the end of the edge"""
+  node: BookingTravelgateType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type BookingTravelgateType implements Node {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  buyerReference: String
+  sellerReference: String
+  status: BookingsBookingTravelgateStatusChoices!
+  cancellationData: CancellationDataType
+  anomalies: [BookingAnomalyType!]!
+  hotel: HotelType
+  cancellationPolicy: CancellationPolicyType
+  rooms: [RoomType!]!
+
+  """The ID of the object"""
+  id: ID!
+  netPayable: NetPayable
+}
+
+"""An enumeration."""
+enum BookingsBookingTravelgateStatusChoices {
+  """Confirmed"""
+  CONFIRMED
+
+  """On Request"""
+  ON_REQUEST
+
+  """Cancelled"""
+  CANCELLED
+
+  """Unknown"""
+  UNKNOWN
+}
+
+"""Debugging information for the current query."""
+type DjangoDebug {
+  """Executed SQL queries for this API query."""
+  sql: [DjangoDebugSQL]
+
+  """Raise exceptions for this API query."""
+  exceptions: [DjangoDebugException]
+}
+
+"""Represents a single database query made to a Django managed DB."""
+type DjangoDebugSQL {
+  """The type of database being used (e.g. postrgesql, mysql, sqlite)."""
+  vendor: String!
+
+  """The Django database alias (e.g. 'default')."""
+  alias: String!
+
+  """The actual SQL sent to this database."""
+  sql: String
+
+  """Duration of this database query in seconds."""
+  duration: Float!
+
+  """The raw SQL of this query, without params."""
+  rawSql: String!
+
+  """JSON encoded database query parameters."""
+  params: String!
+
+  """Start time of this database query."""
+  startTime: Float!
+
+  """Stop time of this database query."""
+  stopTime: Float!
+
+  """Whether this database query took more than 10 seconds."""
+  isSlow: Boolean!
+
+  """Whether this database query was a SELECT."""
+  isSelect: Boolean!
+
+  """Postgres transaction ID if available."""
+  transId: String
+
+  """Postgres transaction status if available."""
+  transStatus: String
+
+  """Postgres isolation level if available."""
+  isoLevel: String
+
+  """Postgres connection encoding if available."""
+  encoding: String
+}
+
+"""Represents a single exception raised."""
+type DjangoDebugException {
+  """The class of the exception"""
+  excType: String!
+
+  """The message of the exception"""
+  message: String!
+
+  """The stack trace"""
+  stack: String!
+}
+
+type Mutation {
+  bookingCreateBuyer(input: BookingCreateBuyerMutationInput!): BookingCreateBuyerMutationPayload
+  bookingUpdateBuyer(input: BookingUpdateBuyerMutationInput!): BookingUpdateBuyerMutationPayload
+  bookingCancelBuyer(input: BookingCancelBuyerMutationInput!): BookingCancelBuyerMutationPayload
+  bookingCreateSeller(input: BookingCreateSellerMutationInput!): BookingCreateSellerMutationPayload
+  bookingUpdateSeller(input: BookingUpdateSellerMutationInput!): BookingUpdateSellerMutationPayload
+  bookingCancelSeller(input: BookingCancelSellerMutationInput!): BookingCancelSellerMutationPayload
+  _debug: DjangoDebug
+}
+
+type BookingCreateBuyerMutationPayload {
+  booking: BookingBuyerType
+  clientMutationId: String
+}
+
+input BookingCreateBuyerMutationInput {
+  buyerReference: String!
+  sellerReference: String
+  sellerIdentity: SellerIdentityInput!
+  reservation: ReservationCreateInput!
+  clientMutationId: String
+}
+
+input SellerIdentityInput {
+  internal: String
+  travelgate: TravelgateSellerIdentityInput
+}
+
+input TravelgateSellerIdentityInput {
+  supplierCode: String!
+}
+
+input ReservationCreateInput {
+  createdAt: DateTime!
+  status: String!
+  netPayable: NetPayableInput!
+  id: ID
+  hotel: HotelInput
+  cancellationPolicy: CancellationPolicyInput
+  rooms: [RoomInput]
+}
+
+input NetPayableInput {
+  amount: Decimal!
+  currency: String!
+}
+
+input HotelInput {
+  codeSeller: String!
+  name: String
+  address: String
+  city: String
+  country: String
+  phone: String
+  email: String
+  website: String
+  coordinates: CoordinatesInput
+}
+
+input CoordinatesInput {
+  latitude: Decimal!
+  longitude: Decimal!
+}
+
+input CancellationPolicyInput {
+  refundable: Boolean!
+  penalties: [CancellationPolicyPenaltiesInput]
+}
+
+input CancellationPolicyPenaltiesInput {
+  value: Decimal!
+  currency: String!
+  deadline: String!
+}
+
+input RoomInput {
+  checkIn: Date!
+  checkOut: Date!
+  board: BoardDataInput
+  room: RoomDataInput
+  guests: [GuestDataInput]
+}
+
+input BoardDataInput {
+  codeSeller: String!
+  description: String
+}
+
+input RoomDataInput {
+  codeSeller: String!
+  description: String
+}
+
+input GuestDataInput {
+  age: Int!
+}
+
+type BookingUpdateBuyerMutationPayload {
+  booking: BookingBuyerType
+  clientMutationId: String
+}
+
+input BookingUpdateBuyerMutationInput {
+  buyerReference: String!
+  sellerReference: String
+  sellerIdentity: SellerIdentityInput!
+  reservation: ReservationUpdateInput!
+  clientMutationId: String
+}
+
+input ReservationUpdateInput {
+  updatedAt: DateTime!
+  status: String!
+  netPayable: NetPayableInput!
+  id: ID
+  hotel: HotelInput
+  cancellationPolicy: CancellationPolicyInput
+  rooms: [RoomInput]
+}
+
+type BookingCancelBuyerMutationPayload {
+  booking: BookingBuyerType
+  clientMutationId: String
+}
+
+input BookingCancelBuyerMutationInput {
+  buyerReference: String!
+  sellerReference: String
+  sellerIdentity: SellerIdentityInput!
+  reservation: ReservationCancelInput!
+  clientMutationId: String
+}
+
+input ReservationCancelInput {
+  canceledAt: DateTime!
+  netPayable: NetPayableInput!
+}
+
+type BookingCreateSellerMutationPayload {
+  booking: BookingSellerType
+  clientMutationId: String
+}
+
+input BookingCreateSellerMutationInput {
+  buyerReference: String!
+  sellerReference: String!
+  buyerIdentity: BuyerIdentityInput!
+  reservation: ReservationCreateInput!
+  clientMutationId: String
+}
+
+input BuyerIdentityInput {
+  internal: String
+  travelgate: TravelgateBuyerIdentityInput
+}
+
+input TravelgateBuyerIdentityInput {
+  clientCode: String!
+}
+
+type BookingUpdateSellerMutationPayload {
+  booking: BookingSellerType
+  clientMutationId: String
+}
+
+input BookingUpdateSellerMutationInput {
+  buyerReference: String!
+  sellerReference: String!
+  buyerIdentity: BuyerIdentityInput!
+  reservation: ReservationUpdateInput!
+  clientMutationId: String
+}
+
+type BookingCancelSellerMutationPayload {
+  booking: BookingSellerType
+  clientMutationId: String
+}
+
+input BookingCancelSellerMutationInput {
+  buyerReference: String!
+  sellerReference: String!
+  buyerIdentity: BuyerIdentityInput!
+  reservation: ReservationCancelInput!
+  clientMutationId: String
+}
