@@ -79,4 +79,12 @@ input LoggingLegacyFilterInput {
   Filter of the execution time
   """
   rangeFilters: [RangeFilter!]
+  """
+  List of buyer codes
+  """
+    buyerCodes: [ID!]
+  """
+  List of seller codes
+  """
+  sellerCodes: [ID!]
 }
