@@ -45,4 +45,7 @@ type Room {
 
   # Specifies cancel policies of this room.
   cancelPolicy: CancelPolicy
+
+  # Additional information about the room.
+  remarks: String
 }
