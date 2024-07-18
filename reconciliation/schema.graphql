@@ -1,28 +1,27 @@
 type Query {
-  bookingsBuyer(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingBuyerStatusChoices): BookingBuyerTypeConnection
+  bookingsBuyer(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingBuyerStatusChoices): ReconBookingBuyerConnection
   bookingBuyer(
     """The ID of the object"""
     id: ID!
-  ): BookingBuyerType
-  bookingsSeller(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingSellerStatusChoices): BookingSellerTypeConnection
+  ): ReconBookingBuyer
+  bookingsSeller(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingSellerStatusChoices): ReconBookingSellerConnection
   bookingSeller(
     """The ID of the object"""
     id: ID!
-  ): BookingSellerType
-  bookingsTravelgate(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingTravelgateStatusChoices): BookingTravelgateTypeConnection
+  ): ReconBookingSeller
+  bookingsTravelgate(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingTravelgateStatusChoices): ReconBookingTravelgateConnection
   bookingTravelgate(
     """The ID of the object"""
     id: ID!
-  ): BookingTravelgateType
-  _debug: DjangoDebug
+  ): ReconBookingTravelgate
 }
 
-type BookingBuyerTypeConnection {
+type ReconBookingBuyerConnection {
   """Pagination data for this connection."""
   pageInfo: PageInfo!
 
   """Contains the nodes in this connection."""
-  edges: [BookingBuyerTypeEdge]!
+  edges: [ReconBookingBuyerEdge]!
 }
 
 """
@@ -42,36 +41,30 @@ type PageInfo {
   endCursor: String
 }
 
-"""A Relay edge containing a `BookingBuyerType` and its cursor."""
-type BookingBuyerTypeEdge {
+"""A Relay edge containing a `ReconBookingBuyer` and its cursor."""
+type ReconBookingBuyerEdge {
   """The item at the end of the edge"""
-  node: BookingBuyerType
+  node: ReconBookingBuyer
 
   """A cursor for use in pagination"""
   cursor: String!
 }
 
-type BookingBuyerType implements Node {
+type ReconBookingBuyer {
   createdAt: DateTime!
   updatedAt: DateTime!
   buyerReference: String
   sellerReference: String
   status: BookingsBookingBuyerStatusChoices!
-  cancellationData: CancellationDataType
-  anomalies: [BookingAnomalyType!]!
-  hotel: HotelType
-  cancellationPolicy: CancellationPolicyType
-  rooms: [RoomType!]!
+  cancellationData: ReconCancellationData
+  anomalies: [ReconBookingAnomaly!]!
+  hotel: ReconHotel
+  cancellationPolicy: ReconCancellationPolicy
+  rooms: [ReconRoom!]!
 
   """The ID of the object"""
   id: ID!
-  netPayable: NetPayable
-}
-
-"""An object with an ID"""
-interface Node {
-  """The ID of the object"""
-  id: ID!
+  netPayable: ReconNetPayable
 }
 
 """
@@ -96,17 +89,17 @@ enum BookingsBookingBuyerStatusChoices {
   UNKNOWN
 }
 
-type CancellationDataType {
+type ReconCancellationData {
   canceledAt: DateTime
-  netPayable: NetPayable
+  netPayable: ReconNetPayable
 }
 
-type NetPayable {
+type ReconNetPayable {
   amount: Float
   currency: String
 }
 
-type BookingAnomalyType {
+type ReconBookingAnomaly {
   createdAt: DateTime!
   differences: JSONString!
   resolved: Boolean!
@@ -120,7 +113,8 @@ schema (one of the key benefits of GraphQL).
 """
 scalar JSONString
 
-type HotelType {
+"""Hotel information"""
+type ReconHotel {
   """Unique code from the seller"""
   codeSeller: String!
 
@@ -131,21 +125,21 @@ type HotelType {
 
   """ISO 3166-1 alpha-2 code"""
   country: String!
-  coordinates: Coordinates
+  coordinates: ReconCoordinates
 }
 
-type Coordinates {
+type ReconCoordinates {
   latitude: Float
   longitude: Float
 }
 
-type CancellationPolicyType {
+type ReconCancellationPolicy {
   name: String
   refundable: Boolean!
-  penalties: [CancellationPolicyPenaltyType!]!
+  penalties: [ReconCancellationPolicyPenalty!]!
 }
 
-type CancellationPolicyPenaltyType {
+type ReconCancellationPolicyPenalty {
   value: Decimal!
 
   """ISO 4217 code"""
@@ -156,12 +150,12 @@ type CancellationPolicyPenaltyType {
 """The `Decimal` scalar type represents a python Decimal."""
 scalar Decimal
 
-type RoomType {
+type ReconRoom {
   checkIn: Date!
   checkOut: Date!
-  guests: [GuestType]
-  room: RoomInfoType
-  board: BoardInfoType
+  guests: [ReconGuest]
+  room: ReconRoomInfo
+  board: ReconBoardInfo
 }
 
 """
@@ -171,54 +165,54 @@ value as specified by
 """
 scalar Date
 
-type GuestType {
+type ReconGuest {
   age: Int
 }
 
-type RoomInfoType {
+type ReconRoomInfo {
   codeSeller: String
   codeBuyer: String
   description: String
 }
 
-type BoardInfoType {
+type ReconBoardInfo {
   codeSeller: String
   codeBuyer: String
   description: String
 }
 
-type BookingSellerTypeConnection {
+type ReconBookingSellerConnection {
   """Pagination data for this connection."""
   pageInfo: PageInfo!
 
   """Contains the nodes in this connection."""
-  edges: [BookingSellerTypeEdge]!
+  edges: [ReconBookingSellerEdge]!
 }
 
-"""A Relay edge containing a `BookingSellerType` and its cursor."""
-type BookingSellerTypeEdge {
+"""A Relay edge containing a `ReconBookingSeller` and its cursor."""
+type ReconBookingSellerEdge {
   """The item at the end of the edge"""
-  node: BookingSellerType
+  node: ReconBookingSeller
 
   """A cursor for use in pagination"""
   cursor: String!
 }
 
-type BookingSellerType implements Node {
+type ReconBookingSeller {
   createdAt: DateTime!
   updatedAt: DateTime!
   buyerReference: String
   sellerReference: String
   status: BookingsBookingSellerStatusChoices!
-  cancellationData: CancellationDataType
-  anomalies: [BookingAnomalyType!]!
-  hotel: HotelType
-  cancellationPolicy: CancellationPolicyType
-  rooms: [RoomType!]!
+  cancellationData: ReconCancellationData
+  anomalies: [ReconBookingAnomaly!]!
+  hotel: ReconHotel
+  cancellationPolicy: ReconCancellationPolicy
+  rooms: [ReconRoom!]!
 
   """The ID of the object"""
   id: ID!
-  netPayable: NetPayable
+  netPayable: ReconNetPayable
 }
 
 """An enumeration."""
@@ -236,38 +230,38 @@ enum BookingsBookingSellerStatusChoices {
   UNKNOWN
 }
 
-type BookingTravelgateTypeConnection {
+type ReconBookingTravelgateConnection {
   """Pagination data for this connection."""
   pageInfo: PageInfo!
 
   """Contains the nodes in this connection."""
-  edges: [BookingTravelgateTypeEdge]!
+  edges: [ReconBookingTravelgateEdge]!
 }
 
-"""A Relay edge containing a `BookingTravelgateType` and its cursor."""
-type BookingTravelgateTypeEdge {
+"""A Relay edge containing a `ReconBookingTravelgate` and its cursor."""
+type ReconBookingTravelgateEdge {
   """The item at the end of the edge"""
-  node: BookingTravelgateType
+  node: ReconBookingTravelgate
 
   """A cursor for use in pagination"""
   cursor: String!
 }
 
-type BookingTravelgateType implements Node {
+type ReconBookingTravelgate {
   createdAt: DateTime!
   updatedAt: DateTime!
   buyerReference: String
   sellerReference: String
   status: BookingsBookingTravelgateStatusChoices!
-  cancellationData: CancellationDataType
-  anomalies: [BookingAnomalyType!]!
-  hotel: HotelType
-  cancellationPolicy: CancellationPolicyType
-  rooms: [RoomType!]!
+  cancellationData: ReconCancellationData
+  anomalies: [ReconBookingAnomaly!]!
+  hotel: ReconHotel
+  cancellationPolicy: ReconCancellationPolicy
+  rooms: [ReconRoom!]!
 
   """The ID of the object"""
   id: ID!
-  netPayable: NetPayable
+  netPayable: ReconNetPayable
 }
 
 """An enumeration."""
@@ -285,72 +279,6 @@ enum BookingsBookingTravelgateStatusChoices {
   UNKNOWN
 }
 
-"""Debugging information for the current query."""
-type DjangoDebug {
-  """Executed SQL queries for this API query."""
-  sql: [DjangoDebugSQL]
-
-  """Raise exceptions for this API query."""
-  exceptions: [DjangoDebugException]
-}
-
-"""Represents a single database query made to a Django managed DB."""
-type DjangoDebugSQL {
-  """The type of database being used (e.g. postrgesql, mysql, sqlite)."""
-  vendor: String!
-
-  """The Django database alias (e.g. 'default')."""
-  alias: String!
-
-  """The actual SQL sent to this database."""
-  sql: String
-
-  """Duration of this database query in seconds."""
-  duration: Float!
-
-  """The raw SQL of this query, without params."""
-  rawSql: String!
-
-  """JSON encoded database query parameters."""
-  params: String!
-
-  """Start time of this database query."""
-  startTime: Float!
-
-  """Stop time of this database query."""
-  stopTime: Float!
-
-  """Whether this database query took more than 10 seconds."""
-  isSlow: Boolean!
-
-  """Whether this database query was a SELECT."""
-  isSelect: Boolean!
-
-  """Postgres transaction ID if available."""
-  transId: String
-
-  """Postgres transaction status if available."""
-  transStatus: String
-
-  """Postgres isolation level if available."""
-  isoLevel: String
-
-  """Postgres connection encoding if available."""
-  encoding: String
-}
-
-"""Represents a single exception raised."""
-type DjangoDebugException {
-  """The class of the exception"""
-  excType: String!
-
-  """The message of the exception"""
-  message: String!
-
-  """The stack trace"""
-  stack: String!
-}
-
 type Mutation {
   bookingCreateBuyer(input: BookingCreateBuyerMutationInput!): BookingCreateBuyerMutationPayload
   bookingUpdateBuyer(input: BookingUpdateBuyerMutationInput!): BookingUpdateBuyerMutationPayload
@@ -358,11 +286,10 @@ type Mutation {
   bookingCreateSeller(input: BookingCreateSellerMutationInput!): BookingCreateSellerMutationPayload
   bookingUpdateSeller(input: BookingUpdateSellerMutationInput!): BookingUpdateSellerMutationPayload
   bookingCancelSeller(input: BookingCancelSellerMutationInput!): BookingCancelSellerMutationPayload
-  _debug: DjangoDebug
 }
 
 type BookingCreateBuyerMutationPayload {
-  booking: BookingBuyerType
+  booking: ReconBookingBuyer
   clientMutationId: String
 }
 
@@ -449,7 +376,7 @@ input GuestDataInput {
 }
 
 type BookingUpdateBuyerMutationPayload {
-  booking: BookingBuyerType
+  booking: ReconBookingBuyer
   clientMutationId: String
 }
 
@@ -472,7 +399,7 @@ input ReservationUpdateInput {
 }
 
 type BookingCancelBuyerMutationPayload {
-  booking: BookingBuyerType
+  booking: ReconBookingBuyer
   clientMutationId: String
 }
 
@@ -490,7 +417,7 @@ input ReservationCancelInput {
 }
 
 type BookingCreateSellerMutationPayload {
-  booking: BookingSellerType
+  booking: ReconBookingSeller
   clientMutationId: String
 }
 
@@ -512,7 +439,7 @@ input TravelgateBuyerIdentityInput {
 }
 
 type BookingUpdateSellerMutationPayload {
-  booking: BookingSellerType
+  booking: ReconBookingSeller
   clientMutationId: String
 }
 
@@ -525,7 +452,7 @@ input BookingUpdateSellerMutationInput {
 }
 
 type BookingCancelSellerMutationPayload {
-  booking: BookingSellerType
+  booking: ReconBookingSeller
   clientMutationId: String
 }
 
