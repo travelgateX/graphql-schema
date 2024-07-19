@@ -1,4 +1,8 @@
 type Query {
+  reconciliation: ReconciliationQuery
+}
+
+type ReconciliationQuery {
   bookingsBuyer(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingBuyerStatusChoices): ReconBookingBuyerConnection
   bookingBuyer(
     """The ID of the object"""
@@ -66,6 +70,7 @@ type ReconBookingBuyer {
   id: ID!
   netPayable: ReconNetPayable
 }
+
 
 """
 The `DateTime` scalar type represents a DateTime
@@ -280,6 +285,10 @@ enum BookingsBookingTravelgateStatusChoices {
 }
 
 type Mutation {
+  reconciliation: ReconciliationMutation
+}
+
+type ReconciliationMutation {
   bookingCreateBuyer(input: BookingCreateBuyerMutationInput!): BookingCreateBuyerMutationPayload
   bookingUpdateBuyer(input: BookingUpdateBuyerMutationInput!): BookingUpdateBuyerMutationPayload
   bookingCancelBuyer(input: BookingCancelBuyerMutationInput!): BookingCancelBuyerMutationPayload
