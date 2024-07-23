@@ -71,7 +71,6 @@ type ReconBookingBuyer {
   netPayable: ReconNetPayable
 }
 
-
 """
 The `DateTime` scalar type represents a DateTime
 value as specified by
@@ -305,36 +304,36 @@ type BookingCreateBuyerMutationPayload {
 input BookingCreateBuyerMutationInput {
   buyerReference: String!
   sellerReference: String
-  sellerIdentity: SellerIdentityInput!
-  reservation: ReservationCreateInput!
+  sellerIdentity: ReconSellerIdentityInput!
+  reservation: ReconReservationCreateInput!
   clientMutationId: String
 }
 
-input SellerIdentityInput {
+input ReconSellerIdentityInput {
   internal: String
-  travelgate: TravelgateSellerIdentityInput
+  travelgate: ReconTravelgateSellerIdentityInput
 }
 
-input TravelgateSellerIdentityInput {
+input ReconTravelgateSellerIdentityInput {
   supplierCode: String!
 }
 
-input ReservationCreateInput {
+input ReconReservationCreateInput {
   createdAt: DateTime!
   status: String!
-  netPayable: NetPayableInput!
+  netPayable: ReconNetPayableInput!
   id: ID
-  hotel: HotelInput
-  cancellationPolicy: CancellationPolicyInput
-  rooms: [RoomInput]
+  hotel: ReconHotelInput
+  cancellationPolicy: ReconCancellationPolicyInput
+  rooms: [ReconRoomInput]
 }
 
-input NetPayableInput {
+input ReconNetPayableInput {
   amount: Decimal!
   currency: String!
 }
 
-input HotelInput {
+input ReconHotelInput {
   codeSeller: String!
   name: String
   address: String
@@ -343,31 +342,31 @@ input HotelInput {
   phone: String
   email: String
   website: String
-  coordinates: CoordinatesInput
+  coordinates: ReconCoordinatesInput
 }
 
-input CoordinatesInput {
+input ReconCoordinatesInput {
   latitude: Decimal!
   longitude: Decimal!
 }
 
-input CancellationPolicyInput {
+input ReconCancellationPolicyInput {
   refundable: Boolean!
-  penalties: [CancellationPolicyPenaltiesInput]
+  penalties: [ReconCancellationPolicyPenaltiesInput]
 }
 
-input CancellationPolicyPenaltiesInput {
+input ReconCancellationPolicyPenaltiesInput {
   value: Decimal!
   currency: String!
   deadline: String!
 }
 
-input RoomInput {
+input ReconRoomInput {
   checkIn: Date!
   checkOut: Date!
   board: BoardDataInput
-  room: RoomDataInput
-  guests: [GuestDataInput]
+  room: ReconRoomDataInput
+  guests: [ReconGuestDataInput]
 }
 
 input BoardDataInput {
@@ -375,12 +374,12 @@ input BoardDataInput {
   description: String
 }
 
-input RoomDataInput {
+input ReconRoomDataInput {
   codeSeller: String!
   description: String
 }
 
-input GuestDataInput {
+input ReconGuestDataInput {
   age: Int!
 }
 
@@ -392,19 +391,19 @@ type BookingUpdateBuyerMutationPayload {
 input BookingUpdateBuyerMutationInput {
   buyerReference: String!
   sellerReference: String
-  sellerIdentity: SellerIdentityInput!
-  reservation: ReservationUpdateInput!
+  sellerIdentity: ReconSellerIdentityInput!
+  reservation: ReconReservationUpdateInput!
   clientMutationId: String
 }
 
-input ReservationUpdateInput {
+input ReconReservationUpdateInput {
   updatedAt: DateTime!
   status: String!
-  netPayable: NetPayableInput!
+  netPayable: ReconNetPayableInput!
   id: ID
-  hotel: HotelInput
-  cancellationPolicy: CancellationPolicyInput
-  rooms: [RoomInput]
+  hotel: ReconHotelInput
+  cancellationPolicy: ReconCancellationPolicyInput
+  rooms: [ReconRoomInput]
 }
 
 type BookingCancelBuyerMutationPayload {
@@ -415,14 +414,14 @@ type BookingCancelBuyerMutationPayload {
 input BookingCancelBuyerMutationInput {
   buyerReference: String!
   sellerReference: String
-  sellerIdentity: SellerIdentityInput!
-  reservation: ReservationCancelInput!
+  sellerIdentity: ReconSellerIdentityInput!
+  reservation: ReconReservationCancelInput!
   clientMutationId: String
 }
 
-input ReservationCancelInput {
+input ReconReservationCancelInput {
   canceledAt: DateTime!
-  netPayable: NetPayableInput!
+  netPayable: ReconNetPayableInput!
 }
 
 type BookingCreateSellerMutationPayload {
@@ -433,18 +432,22 @@ type BookingCreateSellerMutationPayload {
 input BookingCreateSellerMutationInput {
   buyerReference: String!
   sellerReference: String!
-  buyerIdentity: BuyerIdentityInput!
-  reservation: ReservationCreateInput!
+  buyerIdentity: ReconBuyerIdentityInput!
+  reservation: ReconReservationCreateInput!
   clientMutationId: String
 }
 
-input BuyerIdentityInput {
+input ReconBuyerIdentityInput {
+  """Internal buyer code - user for buyers outside of Travelgate."""
   internal: String
-  travelgate: TravelgateBuyerIdentityInput
+
+  """Either 'client_code' or 'buyer_org_code' must be provided."""
+  travelgate: ReconTravelgateBuyerIdentityInput
 }
 
-input TravelgateBuyerIdentityInput {
-  clientCode: String!
+input ReconTravelgateBuyerIdentityInput {
+  clientCode: String
+  buyerOrgCode: String
 }
 
 type BookingUpdateSellerMutationPayload {
@@ -455,8 +458,8 @@ type BookingUpdateSellerMutationPayload {
 input BookingUpdateSellerMutationInput {
   buyerReference: String!
   sellerReference: String!
-  buyerIdentity: BuyerIdentityInput!
-  reservation: ReservationUpdateInput!
+  buyerIdentity: ReconBuyerIdentityInput!
+  reservation: ReconReservationUpdateInput!
   clientMutationId: String
 }
 
@@ -468,7 +471,7 @@ type BookingCancelSellerMutationPayload {
 input BookingCancelSellerMutationInput {
   buyerReference: String!
   sellerReference: String!
-  buyerIdentity: BuyerIdentityInput!
-  reservation: ReservationCancelInput!
+  buyerIdentity: ReconBuyerIdentityInput!
+  reservation: ReconReservationCancelInput!
   clientMutationId: String
 }
