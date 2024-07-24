@@ -1,0 +1,477 @@
+type Query {
+  reconciliation: ReconciliationQuery
+}
+
+type ReconciliationQuery {
+  bookingsBuyer(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingBuyerStatusChoices): ReconBookingBuyerConnection
+  bookingBuyer(
+    """The ID of the object"""
+    id: ID!
+  ): ReconBookingBuyer
+  bookingsSeller(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingSellerStatusChoices): ReconBookingSellerConnection
+  bookingSeller(
+    """The ID of the object"""
+    id: ID!
+  ): ReconBookingSeller
+  bookingsTravelgate(offset: Int, before: String, after: String, first: Int, last: Int, buyerReference: String, sellerReference: String, status: BookingsBookingTravelgateStatusChoices): ReconBookingTravelgateConnection
+  bookingTravelgate(
+    """The ID of the object"""
+    id: ID!
+  ): ReconBookingTravelgate
+}
+
+type ReconBookingBuyerConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [ReconBookingBuyerEdge]!
+}
+
+"""
+The Relay compliant `PageInfo` type, containing data necessary to paginate this connection.
+"""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+"""A Relay edge containing a `ReconBookingBuyer` and its cursor."""
+type ReconBookingBuyerEdge {
+  """The item at the end of the edge"""
+  node: ReconBookingBuyer
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type ReconBookingBuyer {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  buyerReference: String
+  sellerReference: String
+  status: BookingsBookingBuyerStatusChoices!
+  cancellationData: ReconCancellationData
+  anomalies: [ReconBookingAnomaly!]!
+  hotel: ReconHotel
+  cancellationPolicy: ReconCancellationPolicy
+  rooms: [ReconRoom!]!
+
+  """The ID of the object"""
+  id: ID!
+  netPayable: ReconNetPayable
+}
+
+"""
+The `DateTime` scalar type represents a DateTime
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar DateTime
+
+"""An enumeration."""
+enum BookingsBookingBuyerStatusChoices {
+  """Confirmed"""
+  CONFIRMED
+
+  """On Request"""
+  ON_REQUEST
+
+  """Cancelled"""
+  CANCELLED
+
+  """Unknown"""
+  UNKNOWN
+}
+
+type ReconCancellationData {
+  canceledAt: DateTime
+  netPayable: ReconNetPayable
+}
+
+type ReconNetPayable {
+  amount: Float
+  currency: String
+}
+
+type ReconBookingAnomaly {
+  createdAt: DateTime!
+  differences: JSONString!
+  resolved: Boolean!
+}
+
+"""
+Allows use of a JSON String for input / output from the GraphQL schema.
+
+Use of this type is *not recommended* as you lose the benefits of having a defined, static
+schema (one of the key benefits of GraphQL).
+"""
+scalar JSONString
+
+"""Hotel information"""
+type ReconHotel {
+  """Unique code from the seller"""
+  codeSeller: String!
+
+  """Unique code from the buyer"""
+  codeBuyer: String
+  name: String!
+  address: String!
+
+  """ISO 3166-1 alpha-2 code"""
+  country: String!
+  coordinates: ReconCoordinates
+}
+
+type ReconCoordinates {
+  latitude: Float
+  longitude: Float
+}
+
+type ReconCancellationPolicy {
+  name: String
+  refundable: Boolean!
+  penalties: [ReconCancellationPolicyPenalty!]!
+}
+
+type ReconCancellationPolicyPenalty {
+  value: Decimal!
+
+  """ISO 4217 code"""
+  currency: String!
+  deadline: DateTime!
+}
+
+"""The `Decimal` scalar type represents a python Decimal."""
+scalar Decimal
+
+type ReconRoom {
+  checkIn: Date!
+  checkOut: Date!
+  guests: [ReconGuest]
+  room: ReconRoomInfo
+  board: ReconBoardInfo
+}
+
+"""
+The `Date` scalar type represents a Date
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar Date
+
+type ReconGuest {
+  age: Int
+}
+
+type ReconRoomInfo {
+  codeSeller: String
+  codeBuyer: String
+  description: String
+}
+
+type ReconBoardInfo {
+  codeSeller: String
+  codeBuyer: String
+  description: String
+}
+
+type ReconBookingSellerConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [ReconBookingSellerEdge]!
+}
+
+"""A Relay edge containing a `ReconBookingSeller` and its cursor."""
+type ReconBookingSellerEdge {
+  """The item at the end of the edge"""
+  node: ReconBookingSeller
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type ReconBookingSeller {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  buyerReference: String
+  sellerReference: String
+  status: BookingsBookingSellerStatusChoices!
+  cancellationData: ReconCancellationData
+  anomalies: [ReconBookingAnomaly!]!
+  hotel: ReconHotel
+  cancellationPolicy: ReconCancellationPolicy
+  rooms: [ReconRoom!]!
+
+  """The ID of the object"""
+  id: ID!
+  netPayable: ReconNetPayable
+}
+
+"""An enumeration."""
+enum BookingsBookingSellerStatusChoices {
+  """Confirmed"""
+  CONFIRMED
+
+  """On Request"""
+  ON_REQUEST
+
+  """Cancelled"""
+  CANCELLED
+
+  """Unknown"""
+  UNKNOWN
+}
+
+type ReconBookingTravelgateConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [ReconBookingTravelgateEdge]!
+}
+
+"""A Relay edge containing a `ReconBookingTravelgate` and its cursor."""
+type ReconBookingTravelgateEdge {
+  """The item at the end of the edge"""
+  node: ReconBookingTravelgate
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type ReconBookingTravelgate {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  buyerReference: String
+  sellerReference: String
+  status: BookingsBookingTravelgateStatusChoices!
+  cancellationData: ReconCancellationData
+  anomalies: [ReconBookingAnomaly!]!
+  hotel: ReconHotel
+  cancellationPolicy: ReconCancellationPolicy
+  rooms: [ReconRoom!]!
+
+  """The ID of the object"""
+  id: ID!
+  netPayable: ReconNetPayable
+}
+
+"""An enumeration."""
+enum BookingsBookingTravelgateStatusChoices {
+  """Confirmed"""
+  CONFIRMED
+
+  """On Request"""
+  ON_REQUEST
+
+  """Cancelled"""
+  CANCELLED
+
+  """Unknown"""
+  UNKNOWN
+}
+
+type Mutation {
+  reconciliation: ReconciliationMutation
+}
+
+type ReconciliationMutation {
+  bookingCreateBuyer(input: BookingCreateBuyerMutationInput!): BookingCreateBuyerMutationPayload
+  bookingUpdateBuyer(input: BookingUpdateBuyerMutationInput!): BookingUpdateBuyerMutationPayload
+  bookingCancelBuyer(input: BookingCancelBuyerMutationInput!): BookingCancelBuyerMutationPayload
+  bookingCreateSeller(input: BookingCreateSellerMutationInput!): BookingCreateSellerMutationPayload
+  bookingUpdateSeller(input: BookingUpdateSellerMutationInput!): BookingUpdateSellerMutationPayload
+  bookingCancelSeller(input: BookingCancelSellerMutationInput!): BookingCancelSellerMutationPayload
+}
+
+type BookingCreateBuyerMutationPayload {
+  booking: ReconBookingBuyer
+  clientMutationId: String
+}
+
+input BookingCreateBuyerMutationInput {
+  buyerReference: String!
+  sellerReference: String
+  sellerIdentity: ReconSellerIdentityInput!
+  reservation: ReconReservationCreateInput!
+  clientMutationId: String
+}
+
+input ReconSellerIdentityInput {
+  internal: String
+  travelgate: ReconTravelgateSellerIdentityInput
+}
+
+input ReconTravelgateSellerIdentityInput {
+  supplierCode: String!
+}
+
+input ReconReservationCreateInput {
+  createdAt: DateTime!
+  status: String!
+  netPayable: ReconNetPayableInput!
+  id: ID
+  hotel: ReconHotelInput
+  cancellationPolicy: ReconCancellationPolicyInput
+  rooms: [ReconRoomInput]
+}
+
+input ReconNetPayableInput {
+  amount: Decimal!
+  currency: String!
+}
+
+input ReconHotelInput {
+  codeSeller: String!
+  name: String
+  address: String
+  city: String
+  country: String
+  phone: String
+  email: String
+  website: String
+  coordinates: ReconCoordinatesInput
+}
+
+input ReconCoordinatesInput {
+  latitude: Decimal!
+  longitude: Decimal!
+}
+
+input ReconCancellationPolicyInput {
+  refundable: Boolean!
+  penalties: [ReconCancellationPolicyPenaltiesInput]
+}
+
+input ReconCancellationPolicyPenaltiesInput {
+  value: Decimal!
+  currency: String!
+  deadline: String!
+}
+
+input ReconRoomInput {
+  checkIn: Date!
+  checkOut: Date!
+  board: BoardDataInput
+  room: ReconRoomDataInput
+  guests: [ReconGuestDataInput]
+}
+
+input BoardDataInput {
+  codeSeller: String!
+  description: String
+}
+
+input ReconRoomDataInput {
+  codeSeller: String!
+  description: String
+}
+
+input ReconGuestDataInput {
+  age: Int!
+}
+
+type BookingUpdateBuyerMutationPayload {
+  booking: ReconBookingBuyer
+  clientMutationId: String
+}
+
+input BookingUpdateBuyerMutationInput {
+  buyerReference: String!
+  sellerReference: String
+  sellerIdentity: ReconSellerIdentityInput!
+  reservation: ReconReservationUpdateInput!
+  clientMutationId: String
+}
+
+input ReconReservationUpdateInput {
+  updatedAt: DateTime!
+  status: String!
+  netPayable: ReconNetPayableInput!
+  id: ID
+  hotel: ReconHotelInput
+  cancellationPolicy: ReconCancellationPolicyInput
+  rooms: [ReconRoomInput]
+}
+
+type BookingCancelBuyerMutationPayload {
+  booking: ReconBookingBuyer
+  clientMutationId: String
+}
+
+input BookingCancelBuyerMutationInput {
+  buyerReference: String!
+  sellerReference: String
+  sellerIdentity: ReconSellerIdentityInput!
+  reservation: ReconReservationCancelInput!
+  clientMutationId: String
+}
+
+input ReconReservationCancelInput {
+  canceledAt: DateTime!
+  netPayable: ReconNetPayableInput!
+}
+
+type BookingCreateSellerMutationPayload {
+  booking: ReconBookingSeller
+  clientMutationId: String
+}
+
+input BookingCreateSellerMutationInput {
+  buyerReference: String!
+  sellerReference: String!
+  buyerIdentity: ReconBuyerIdentityInput!
+  reservation: ReconReservationCreateInput!
+  clientMutationId: String
+}
+
+input ReconBuyerIdentityInput {
+  """Internal buyer code - user for buyers outside of Travelgate."""
+  internal: String
+
+  """Either 'client_code' or 'buyer_org_code' must be provided."""
+  travelgate: ReconTravelgateBuyerIdentityInput
+}
+
+input ReconTravelgateBuyerIdentityInput {
+  clientCode: String
+  buyerOrgCode: String
+}
+
+type BookingUpdateSellerMutationPayload {
+  booking: ReconBookingSeller
+  clientMutationId: String
+}
+
+input BookingUpdateSellerMutationInput {
+  buyerReference: String!
+  sellerReference: String!
+  buyerIdentity: ReconBuyerIdentityInput!
+  reservation: ReconReservationUpdateInput!
+  clientMutationId: String
+}
+
+type BookingCancelSellerMutationPayload {
+  booking: ReconBookingSeller
+  clientMutationId: String
+}
+
+input BookingCancelSellerMutationInput {
+  buyerReference: String!
+  sellerReference: String!
+  buyerIdentity: ReconBuyerIdentityInput!
+  reservation: ReconReservationCancelInput!
+  clientMutationId: String
+}
