@@ -12,8 +12,11 @@ type Room {
   # Supplier's room code.
   supplierCode: String!
 
-  # Description about the room
+  # Description about the room. This field can be mapped.
   description: String
+
+  # Description about the room in supplier's context.
+  descriptionSupplier: String
 
   # Identifies if the room is refundable or not.
   refundable: Boolean
