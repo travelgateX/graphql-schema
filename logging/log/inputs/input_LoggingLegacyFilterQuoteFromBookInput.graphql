@@ -1,0 +1,9 @@
+input LoggingLegacyFilterQuoteFromBookInput {
+    from: DateTime
+    to: DateTime
+    sessionID: String
+    buyerCode: ID
+    sellerCode: ID
+    requestMode: ModeType!
+    apiCode: ID!
+}
